@@ -1,0 +1,5 @@
+stage,release_point,sps_customers_listed,sps_divisions_whole,sps_jobs_per_week_12m,sps_jobs_per_week_last8w,sh_customers,sh_top_items,sh_lines_per_week,sh_orders_per_week_window,sh_customer_orders_per_week_last8w,dash_calls_1min_median,dash_calls_1min_p95,dash_calls_1min_max,dash_calls_2min_median,dash_calls_2min_p95,dash_calls_2min_max,dash_calls_5min_median,dash_calls_5min_p95,dash_calls_5min_max
+S1,demo week,27,PSU; RWU; PCU/MOBA cups; MOBA Punching; Lids; Plates; Cake wrappers; FPP; DPU,33.9,36.2,7,20,576,252,121,3073,3287,3889,1618,1804,2423,745,906,1538
+S2,Sunday 1,31,PSU; RWU; PCU/MOBA cups; MOBA Punching; Lids; Plates; Cake wrappers; FPP; DPU; SHPS; CPU,51.8,55.9,22,50,929,368,196,3115,3344,4613,1651,1853,3147,776,950,2262
+S3,Sunday 2,61,PSU; RWU; PCU/MOBA cups; MOBA Punching; Lids; Plates; Cake wrappers; FPP; DPU; SHPS; CPU,57.1,62.2,26,100,1132,431,212,3154,3406,4755,1690,1903,3281,811,1010,2389
+S4,Sunday 3,0,OPD; SHPS; PSU; RWU; PCU/MOBA cups; CPU; MOBA Punching; Lids; FPP; DPU; Plates; Cake wrappers,71.6,72.6,1166,200,1741,596,598,3283,3585,6149,1805,2068,4644,913,1145,3732

@@ -1,0 +1,558 @@
+{
+ "so-list": {
+  "title": "Sales Orders | Zoho Inventory",
+  "url": "https://inventory.zoho.com/app/843825512#/salesorders",
+  "ember": true,
+  "header": [
+   {
+    "tag": "header",
+    "id": "top-band",
+    "cls": " top-band unified-top-band d-print-none",
+    "test": null,
+    "text": "Inventory\n Smart Packaging Solutions (Pv"
+   },
+   {
+    "tag": "div",
+    "id": null,
+    "cls": "fill list-header topgrad d-print-none",
+    "test": null,
+    "text": "All Sales Orders \nView Order Stats\nNew"
+   },
+   {
+    "tag": "div",
+    "id": "list-filter",
+    "cls": "fill list-header topgrad d-print-none",
+    "test": null,
+    "text": "All Sales Orders \nView Order Stats\nNew"
+   },
+   {
+    "tag": "table",
+    "id": "vertically-scrolled-table",
+    "cls": "table zi-table table-hover freezed-columns-table",
+    "test": null,
+    "text": "DATE\n\t\nSALES ORDER#\n\t\nREFERENCE#\n\t\nCUSTO"
+   },
+   {
+    "tag": "div",
+    "id": null,
+    "cls": "header d-flex align-items-center justify-content-between",
+    "test": null,
+    "text": ""
+   },
+   {
+    "tag": "div",
+    "id": null,
+    "cls": "mc22a33edb_wms_menu_header",
+    "test": null,
+    "text": "AbdulAvailable"
+   }
+  ],
+  "tables": [
+   {
+    "tag": "table",
+    "id": "vertically-scrolled-table",
+    "cls": "table zi-table table-hover freezed-columns-table",
+    "test": null,
+    "text": "DATE\n\t\nSALES ORDER#\n\t\nREFERENCE#\n\t\nCUSTO"
+   }
+  ],
+  "rows": 200,
+  "testIds": [],
+  "sidepanels": [
+   {
+    "tag": "div",
+    "id": null,
+    "cls": " slide-sidebar-right",
+    "test": null,
+    "text": ""
+   },
+   {
+    "tag": "div",
+    "id": null,
+    "cls": " slide-sidebar-right",
+    "test": null,
+    "text": ""
+   },
+   {
+    "tag": "nav",
+    "id": "main-nav-tab",
+    "cls": "noscroll-x tab-column main-tab-column d-print-none",
+    "test": null,
+    "text": "Home\nItems\nInventory\n59\nSales\nCustomers\n"
+   },
+   {
+    "tag": "div",
+    "id": null,
+    "cls": "product-content-container rhs-sidebar-available",
+    "test": null,
+    "text": "All Sales Orders \nView Order Stats\nNew\n\t"
+   },
+   {
+    "tag": "div",
+    "id": null,
+    "cls": "rhs-sidebar d-print-none noscroll-x ",
+    "test": null,
+    "text": ""
+   },
+   {
+    "tag": "div",
+    "id": null,
+    "cls": "rhs-sidebar-wrapper d-flex flex-column body",
+    "test": null,
+    "text": ""
+   }
+  ],
+  "apiCalls": [
+   "GET https://inventory.zoho.com/api/v1/customviews?entity_type=salesorder&organization_id=ORG",
+   "GET https://inventory.zoho.com/api/v1/salesorders?page=1&usestate=true&organization_id=ORG",
+   "GET https://inventory.zoho.com/api/v1/meta/datetemplates?organization_id=ORG",
+   "GET https://inventory.zoho.com/api/v1/customfields?entity=salesorder&organization_id=ORG"
+  ]
+ },
+ "packages": {
+  "title": "Packages | Zoho Inventory",
+  "url": "https://inventory.zoho.com/app/843825512#/packages",
+  "ember": true,
+  "header": [
+   {
+    "tag": "header",
+    "id": "top-band",
+    "cls": " top-band unified-top-band d-print-none",
+    "test": null,
+    "text": "Inventory\n Smart Packaging Solutions (Pv"
+   },
+   {
+    "tag": "div",
+    "id": "list-filter",
+    "cls": "fill list-header topgrad d-print-none",
+    "test": null,
+    "text": "All Packages\nNew"
+   },
+   {
+    "tag": "div",
+    "id": null,
+    "cls": "fill list-header",
+    "test": null,
+    "text": "Packages, Not Shipped"
+   },
+   {
+    "tag": "div",
+    "id": null,
+    "cls": "kanban-header font-large not-shipped-header outward-arrow",
+    "test": null,
+    "text": "Packages, Not Shipped"
+   },
+   {
+    "tag": "div",
+    "id": null,
+    "cls": "fill list-header",
+    "test": null,
+    "text": "Shipped Packages"
+   },
+   {
+    "tag": "div",
+    "id": null,
+    "cls": "kanban-header font-large shipped-header outward-arrow",
+    "test": null,
+    "text": "Shipped Packages"
+   }
+  ],
+  "tables": [],
+  "rows": 0,
+  "testIds": [],
+  "sidepanels": [
+   {
+    "tag": "nav",
+    "id": "main-nav-tab",
+    "cls": "noscroll-x tab-column main-tab-column d-print-none",
+    "test": null,
+    "text": "Home\nItems\nInventory\n59\nAssemblies\n \nInv"
+   },
+   {
+    "tag": "div",
+    "id": null,
+    "cls": "product-content-container rhs-sidebar-available",
+    "test": null,
+    "text": "All Packages\nNew\nPackages, Not Shipped\n2"
+   },
+   {
+    "tag": "div",
+    "id": null,
+    "cls": "rhs-sidebar d-print-none noscroll-x ",
+    "test": null,
+    "text": ""
+   },
+   {
+    "tag": "div",
+    "id": null,
+    "cls": "rhs-sidebar-wrapper d-flex flex-column body",
+    "test": null,
+    "text": ""
+   },
+   {
+    "tag": "button",
+    "id": "e6403fe2-83d7-4bb2-8946-be2cfecf1b79",
+    "cls": "icon-button rhs-sidebar-pin-button d-flex align-items-center",
+    "test": null,
+    "text": ""
+   },
+   {
+    "tag": "div",
+    "id": "rhs-menu-bar",
+    "cls": "body rhs-sidebar-menu",
+    "test": null,
+    "text": ""
+   }
+  ],
+  "apiCalls": [
+   "GET https://inventory.zoho.com/api/v1/customviews?entity_type=package&organization_id=ORG",
+   "GET https://inventory.zoho.com/api/v1/packages?page=1&usestate=true&organization_id=ORG",
+   "GET https://inventory.zoho.com/api/v1/customfields?entity=package&organization_id=ORG",
+   "GET https://inventory.zoho.com/api/v1/packages?filter_by=Status.NotShipped&per_page=20&organization_id=ORG",
+   "GET https://inventory.zoho.com/api/v1/packages?filter_by=Status.Shipped&per_page=20&organization_id=ORG",
+   "GET https://inventory.zoho.com/api/v1/packages?filter_by=Status.Delivered&per_page=20&organization_id=ORG"
+  ]
+ },
+ "shipments": {
+  "title": "Shipments | Zoho Inventory",
+  "url": "https://inventory.zoho.com/app/843825512#/shipments",
+  "ember": true,
+  "header": [
+   {
+    "tag": "header",
+    "id": "top-band",
+    "cls": " top-band unified-top-band d-print-none",
+    "test": null,
+    "text": "Inventory\n Smart Packaging Solutions (Pv"
+   },
+   {
+    "tag": "div",
+    "id": "list-filter",
+    "cls": "fill list-header topgrad d-print-none",
+    "test": null,
+    "text": "All Shipments \nView EasyPost Usage\nNew"
+   },
+   {
+    "tag": "div",
+    "id": null,
+    "cls": "action-header ps-6",
+    "test": null,
+    "text": "Filter By :   \nType:  All"
+   },
+   {
+    "tag": "table",
+    "id": "vertically-scrolled-table",
+    "cls": "table zi-table table-hover freezed-columns-table",
+    "test": null,
+    "text": "DATE\n\t\nSHIPMENT ORDER#\n\t\nCUSTOMER NAME\n\t"
+   },
+   {
+    "tag": "div",
+    "id": null,
+    "cls": "header d-flex align-items-center justify-content-between",
+    "test": null,
+    "text": ""
+   },
+   {
+    "tag": "div",
+    "id": null,
+    "cls": "mc22a33edb_wms_menu_header",
+    "test": null,
+    "text": "AbdulAvailable"
+   }
+  ],
+  "tables": [
+   {
+    "tag": "table",
+    "id": "vertically-scrolled-table",
+    "cls": "table zi-table table-hover freezed-columns-table",
+    "test": null,
+    "text": "DATE\n\t\nSHIPMENT ORDER#\n\t\nCUSTOMER NAME\n\t"
+   }
+  ],
+  "rows": 25,
+  "testIds": [],
+  "sidepanels": [
+   {
+    "tag": "nav",
+    "id": "main-nav-tab",
+    "cls": "noscroll-x tab-column main-tab-column d-print-none",
+    "test": null,
+    "text": "Home\nItems\nInventory\n59\nAssemblies\n \nInv"
+   },
+   {
+    "tag": "div",
+    "id": null,
+    "cls": "product-content-container rhs-sidebar-available",
+    "test": null,
+    "text": "All Shipments \nView EasyPost Usage\nNew\nF"
+   },
+   {
+    "tag": "div",
+    "id": null,
+    "cls": "rhs-sidebar d-print-none noscroll-x ",
+    "test": null,
+    "text": ""
+   },
+   {
+    "tag": "div",
+    "id": null,
+    "cls": "rhs-sidebar-wrapper d-flex flex-column body",
+    "test": null,
+    "text": ""
+   },
+   {
+    "tag": "button",
+    "id": "e6403fe2-83d7-4bb2-8946-be2cfecf1b79",
+    "cls": "icon-button rhs-sidebar-pin-button d-flex align-items-center",
+    "test": null,
+    "text": ""
+   },
+   {
+    "tag": "div",
+    "id": "rhs-menu-bar",
+    "cls": "body rhs-sidebar-menu",
+    "test": null,
+    "text": ""
+   }
+  ],
+  "apiCalls": [
+   "GET https://inventory.zoho.com/api/v1/customviews?entity_type=shipment_order&organization_id=ORG",
+   "GET https://inventory.zoho.com/api/v1/shipmentorders?page=1&usestate=true&organization_id=ORG",
+   "GET https://inventory.zoho.com/api/v1/customfields?entity=shipment_order&organization_id=ORG"
+  ]
+ },
+ "items": {
+  "title": "Items | Zoho Inventory",
+  "url": "https://inventory.zoho.com/app/843825512#/inventory/product/variantslist?filter_by=ItemType.Sales&per_page=200&sort_column=name&sort_order=A",
+  "ember": true,
+  "header": [
+   {
+    "tag": "header",
+    "id": "top-band",
+    "cls": " top-band unified-top-band d-print-none",
+    "test": null,
+    "text": "Inventory\n Smart Packaging Solutions (Pv"
+   },
+   {
+    "tag": "div",
+    "id": "list-filter",
+    "cls": "fill list-header topgrad d-print-none",
+    "test": null,
+    "text": "Sales \n \nNew"
+   },
+   {
+    "tag": "div",
+    "id": null,
+    "cls": "header d-flex align-items-center justify-content-between",
+    "test": null,
+    "text": ""
+   },
+   {
+    "tag": "div",
+    "id": null,
+    "cls": "mc22a33edb_wms_menu_header",
+    "test": null,
+    "text": "AbdulAvailable"
+   },
+   {
+    "tag": "div",
+    "id": null,
+    "cls": "mc22a33edb_wms_cliq_header",
+    "test": null,
+    "text": "AbdulAvailable"
+   },
+   {
+    "tag": "div",
+    "id": null,
+    "cls": "wms_notebook_header",
+    "test": null,
+    "text": "Notebook"
+   }
+  ],
+  "tables": [
+   {
+    "tag": "table",
+    "id": "vertically-scrolled-table",
+    "cls": "table zi-table table-hover freezed-columns-table",
+    "test": null,
+    "text": "NAME\n\t\nSKU\n\t\nREORDER LEVEL\n\t\n\t\n1000ml Kr"
+   }
+  ],
+  "rows": 200,
+  "testIds": [],
+  "sidepanels": [
+   {
+    "tag": "nav",
+    "id": "main-nav-tab",
+    "cls": "noscroll-x tab-column main-tab-column d-print-none",
+    "test": null,
+    "text": "Home\nItems\nItems\n \nComposite Items\n \nPri"
+   },
+   {
+    "tag": "div",
+    "id": null,
+    "cls": "product-content-container rhs-sidebar-available",
+    "test": null,
+    "text": "Sales \n \nNew\n\t\nNAME\n\t\nSKU\n\t\nREORDER LEVE"
+   },
+   {
+    "tag": "div",
+    "id": null,
+    "cls": "rhs-sidebar d-print-none noscroll-x ",
+    "test": null,
+    "text": ""
+   },
+   {
+    "tag": "div",
+    "id": null,
+    "cls": "rhs-sidebar-wrapper d-flex flex-column body",
+    "test": null,
+    "text": ""
+   },
+   {
+    "tag": "button",
+    "id": "e6403fe2-83d7-4bb2-8946-be2cfecf1b79",
+    "cls": "icon-button rhs-sidebar-pin-button d-flex align-items-center",
+    "test": null,
+    "text": ""
+   },
+   {
+    "tag": "div",
+    "id": "rhs-menu-bar",
+    "cls": "body rhs-sidebar-menu",
+    "test": null,
+    "text": ""
+   }
+  ],
+  "apiCalls": [
+   "GET https://inventory.zoho.com/api/v1/customviews?entity_type=item&organization_id=ORG",
+   "GET https://inventory.zoho.com/api/v1/items?page=1&usestate=true&organization_id=ORG",
+   "GET https://inventory.zoho.com/api/v1/customfields?entity=item&organization_id=ORG"
+  ]
+ },
+ "so-detail": {
+  "title": "JOBORDER-08824 | Sales Orders | Zoho Inventory",
+  "url": "https://inventory.zoho.com/app/843825512#/salesorders/4892105000113720004?filter_by=Status.All&per_page=200&sort_column=created_time&sort_order=D",
+  "ember": true,
+  "header": [
+   {
+    "tag": "header",
+    "id": "top-band",
+    "cls": " top-band unified-top-band d-print-none",
+    "test": null,
+    "text": "Inventory\n Smart Packaging Solutions (Pv"
+   },
+   {
+    "tag": "div",
+    "id": null,
+    "cls": "fill list-header topgrad d-print-none",
+    "test": null,
+    "text": "All Sales Orders"
+   },
+   {
+    "tag": "div",
+    "id": "list-filter",
+    "cls": "fill list-header d-print-none",
+    "test": null,
+    "text": "All Sales Orders"
+   },
+   {
+    "tag": "table",
+    "id": "vertically-scrolled-table",
+    "cls": "table zi-table table-hover freezed-columns-table",
+    "test": null,
+    "text": "LKR67,175.64\nStandard Holdings (Pvt) Ltd"
+   },
+   {
+    "tag": "div",
+    "id": null,
+    "cls": "d-flex details-header fill header",
+    "test": null,
+    "text": "JOBORDER-08824"
+   },
+   {
+    "tag": "div",
+    "id": null,
+    "cls": "page-header-title mw-600 text-truncate text-neutral-1900",
+    "test": null,
+    "text": "JOBORDER-08824"
+   }
+  ],
+  "tables": [
+   {
+    "tag": "table",
+    "id": "vertically-scrolled-table",
+    "cls": "table zi-table table-hover freezed-columns-table",
+    "test": null,
+    "text": "LKR67,175.64\nStandard Holdings (Pvt) Ltd"
+   },
+   {
+    "tag": "table",
+    "id": null,
+    "cls": "table zi-table details-page-table so-details-table",
+    "test": null,
+    "text": "ITEMS & DESCRIPTION\tORDERED\tWAREHOUSE NA"
+   },
+   {
+    "tag": "table",
+    "id": null,
+    "cls": "table table-no-border outline-table",
+    "test": null,
+    "text": "Order Received from\t\n:  \nStandard Holdin"
+   }
+  ],
+  "rows": 212,
+  "testIds": [],
+  "sidepanels": [
+   {
+    "tag": "div",
+    "id": null,
+    "cls": " slide-sidebar-right",
+    "test": null,
+    "text": ""
+   },
+   {
+    "tag": "div",
+    "id": null,
+    "cls": " slide-sidebar-right",
+    "test": null,
+    "text": ""
+   },
+   {
+    "tag": "div",
+    "id": null,
+    "cls": " slide-sidebar-right",
+    "test": null,
+    "text": ""
+   },
+   {
+    "tag": "div",
+    "id": null,
+    "cls": " slide-sidebar-right",
+    "test": null,
+    "text": ""
+   },
+   {
+    "tag": "nav",
+    "id": "main-nav-tab",
+    "cls": "noscroll-x tab-column main-tab-column d-print-none",
+    "test": null,
+    "text": "Home\nItems\nInventory\n59\nSales\nCustomers\n"
+   },
+   {
+    "tag": "div",
+    "id": null,
+    "cls": "product-content-container rhs-sidebar-available",
+    "test": null,
+    "text": "All Sales Orders \n\t\nLKR67,175.64\nStandar"
+   }
+  ],
+  "apiCalls": [
+   "GET https://inventory.zoho.com/api/v1/salesorders?page=1&usestate=true&organization_id=ORG",
+   "GET https://inventory.zoho.com/api/v1/customfields?entity=salesorder&organization_id=ORG",
+   "GET https://inventory.zoho.com/api/v1/salesorders/4892105000113720004?include=html&organization_id=ORG",
+   "GET https://inventory.zoho.com/api/v1/chatlets?entity_type=salesorder&entity_id=4892105000113720004&organization_id=ORG"
+  ]
+ }
+}

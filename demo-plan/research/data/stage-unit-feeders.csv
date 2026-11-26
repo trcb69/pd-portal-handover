@@ -1,0 +1,49 @@
+stage,unit,jobs_per_week_12m,jobs_per_week_last8w,all_jobs_per_week_12m,flag,top_customers,top_items_from_SH_logged_jobs
+S1,OPD,6.5,5.8,27.1,,TACO BELL (69) | Kiri Kopi (50) | Street Burger (Private) Limited (38),
+S1,SHPS,4.6,3.5,20.2,,Blends (53) | MY PIZZA (24) | Malu Poke (23),
+S1,PSU,6.1,4.8,6.1,,,Paper White Straw 6mm x 20cm (Packed) (141) | Paper Straw White 6mm X 20cm  SPS (57) | Paper Straw White 8mm X 20cm SPS (41)
+S1,RWU,4.5,5.4,4.5,,,Chefs Choice Cling Film 45cmX300m (21) (96) | ST-Cling Film 45cmX600m (83) | Chefs Choice Cling Film 45cmX600m (21) (17)
+S1,PCU/MOBA cups,6.3,5.4,6.3,,Street Barista Crew (9) | Kai Coffee (8) | Marriott (7),SH-8oz D/Wall Kraft Paper Cup (22) | BG - 12oz S/Wall White Paper Cup (16) | BG - 8oz D/Wall Kraft Paper Cup (13)
+S1,CPU,2.2,8.6,3.6,thin (one of the two averages <3/week),Spar SL (Private ) Limited (84) | Keells Super (23) | RADH (6),
+S1,MOBA Punching,2.0,2.4,2.0,,CAFE 173 (13) | THOMA (9) | Chef Master Resturant (6),
+S1,Lids,0.7,0.0,0.7,STARVED (<1/week),Manzo Restaurant (1),SH-Black (Plastic Lid – PS6) for 8oz Paper Cup (M) (24) | SH-Black Lid for 8oz Paper Cup (M) (7) | SH-White Lid for 8oz Paper Cup (M) (3)
+S1,FPP,0.5,0.5,0.5,STARVED (<1/week),Montado (Pvt) Ltd (6) | Skinny Tom's Deli (2) | The Lamprais (1),FP - Sugar Sachet Brown (Pillow) (4) | SH-FPP - Sugar Sachet White (Pillow) (4) | FP-Sugar Sachet White (Pillow) (The Valampuri) (4)
+S1,DPU,0.4,0.0,0.4,STARVED (<1/week),Bohemian Quest (6) | Chill Restaurant (2) | Titos (2),DP-1200ml AF Container Lid-(Manzo Restaurant) (2) | DP-900ml AF Container Lid-(Manzo Restaurant) (1) | DP-Burger Pouch 18x18cm(Shenangians Irish) (1)
+S1,Plates,0.1,0.0,0.1,STARVED (<1/week),,SH - Paper Plate 7 Inch (4) | SH - Paper Plate 9 Inch (2)
+S1,Cake wrappers,0.1,0.0,0.1,STARVED (<1/week),,SH-Brown Cup Cake Liner 10.5cm (2) | SH-White Round Cup Cake Wrapper 14cm (2) | SH-Brown Cup Cake Liner 9.5cm (1)
+S2,OPD,7.3,6.2,27.1,,TACO BELL (69) | Kiri Kopi (50) | Street Burger (Private) Limited (38),
+S2,SHPS,20.2,17.6,20.2,,Blends (53) | MY PIZZA (24) | Malu Poke (23),CP-Kraft Paper Bag with Rope Handle (XL) 340x330x160mm (Best Compliments) (2) | CP- Pizza Box 25x25x4cm (Hideaway Restaurant) (1) | CP-12oz Pp cup (360ml)(SEGAFREDO) (1)
+S2,PSU,6.1,4.8,6.1,,,Paper White Straw 6mm x 20cm (Packed) (141) | Paper Straw White 6mm X 20cm  SPS (57) | Paper Straw White 8mm X 20cm SPS (41)
+S2,RWU,4.5,5.4,4.5,,,Chefs Choice Cling Film 45cmX300m (21) (96) | ST-Cling Film 45cmX600m (83) | Chefs Choice Cling Film 45cmX600m (21) (17)
+S2,PCU/MOBA cups,6.3,5.4,6.3,,Street Barista Crew (9) | Kai Coffee (8) | Marriott (7),SH-8oz D/Wall Kraft Paper Cup (22) | BG - 12oz S/Wall White Paper Cup (16) | BG - 8oz D/Wall Kraft Paper Cup (13)
+S2,CPU,3.6,13.6,3.6,,Spar SL (Private ) Limited (84) | Keells Super (23) | Laksala Super Trade Centre (8),PACKSERV - Dental Kit (Kraft) - Toothpaste 6grm/Plastic Toothbrush - Kit Packing (4) | PACKSERV - Dental Kit (Kraft) - Toothpaste 6grm/Wooden Toothbrush - Kit Packing (3) | PACKSERV - 450ml Aluminium Foil Container with Lid (10Pcs Packing) (3)
+S2,MOBA Punching,2.0,2.4,2.0,,CAFE 173 (13) | THOMA (9) | Chef Master Resturant (6),
+S2,Lids,0.7,0.0,0.7,STARVED (<1/week),Manzo Restaurant (1),SH-Black (Plastic Lid – PS6) for 8oz Paper Cup (M) (24) | SH-Black Lid for 8oz Paper Cup (M) (7) | SH-White Lid for 8oz Paper Cup (M) (3)
+S2,FPP,0.5,0.5,0.5,STARVED (<1/week),Montado (Pvt) Ltd (6) | Skinny Tom's Deli (2) | The Lamprais (1),FP - Sugar Sachet Brown (Pillow) (4) | SH-FPP - Sugar Sachet White (Pillow) (4) | FP-Sugar Sachet White (Pillow) (The Valampuri) (4)
+S2,DPU,0.4,0.0,0.4,STARVED (<1/week),Bohemian Quest (6) | Chill Restaurant (2) | Titos (2),DP-1200ml AF Container Lid-(Manzo Restaurant) (2) | DP-900ml AF Container Lid-(Manzo Restaurant) (1) | DP-Burger Pouch 18x18cm(Shenangians Irish) (1)
+S2,Plates,0.1,0.0,0.1,STARVED (<1/week),,SH - Paper Plate 7 Inch (4) | SH - Paper Plate 9 Inch (2)
+S2,Cake wrappers,0.1,0.0,0.1,STARVED (<1/week),,SH-Brown Cup Cake Liner 10.5cm (2) | SH-White Round Cup Cake Wrapper 14cm (2) | SH-Brown Cup Cake Liner 9.5cm (1)
+S3,OPD,12.6,12.6,27.1,,TACO BELL (69) | Kiri Kopi (50) | Street Burger (Private) Limited (38),
+S3,SHPS,20.2,17.6,20.2,,Blends (53) | MY PIZZA (24) | Malu Poke (23),CP-Kraft Paper Bag with Rope Handle (XL) 340x330x160mm (Best Compliments) (2) | CP- Pizza Box 25x25x4cm (Hideaway Restaurant) (1) | CP-12oz Pp cup (360ml)(SEGAFREDO) (1)
+S3,PSU,6.1,4.8,6.1,,,Paper White Straw 6mm x 20cm (Packed) (141) | Paper Straw White 6mm X 20cm  SPS (57) | Paper Straw White 8mm X 20cm SPS (41)
+S3,RWU,4.5,5.4,4.5,,,Chefs Choice Cling Film 45cmX300m (21) (96) | ST-Cling Film 45cmX600m (83) | Chefs Choice Cling Film 45cmX600m (21) (17)
+S3,PCU/MOBA cups,6.3,5.4,6.3,,Street Barista Crew (9) | Kai Coffee (8) | Marriott (7),SH-8oz D/Wall Kraft Paper Cup (22) | BG - 12oz S/Wall White Paper Cup (16) | BG - 8oz D/Wall Kraft Paper Cup (13)
+S3,CPU,3.6,13.6,3.6,,Spar SL (Private ) Limited (84) | Keells Super (23) | Laksala Super Trade Centre (8),PACKSERV - Dental Kit (Kraft) - Toothpaste 6grm/Plastic Toothbrush - Kit Packing (4) | PACKSERV - Dental Kit (Kraft) - Toothpaste 6grm/Wooden Toothbrush - Kit Packing (3) | PACKSERV - 450ml Aluminium Foil Container with Lid (10Pcs Packing) (3)
+S3,MOBA Punching,2.0,2.4,2.0,,CAFE 173 (13) | THOMA (9) | Chef Master Resturant (6),
+S3,Lids,0.7,0.0,0.7,STARVED (<1/week),Manzo Restaurant (1),SH-Black (Plastic Lid – PS6) for 8oz Paper Cup (M) (24) | SH-Black Lid for 8oz Paper Cup (M) (7) | SH-White Lid for 8oz Paper Cup (M) (3)
+S3,FPP,0.5,0.5,0.5,STARVED (<1/week),Montado (Pvt) Ltd (6) | Skinny Tom's Deli (2) | The Lamprais (1),FP - Sugar Sachet Brown (Pillow) (4) | SH-FPP - Sugar Sachet White (Pillow) (4) | FP-Sugar Sachet White (Pillow) (The Valampuri) (4)
+S3,DPU,0.4,0.0,0.4,STARVED (<1/week),Bohemian Quest (6) | Chill Restaurant (2) | Titos (2),DP-1200ml AF Container Lid-(Manzo Restaurant) (2) | DP-900ml AF Container Lid-(Manzo Restaurant) (1) | DP-Burger Pouch 18x18cm(Shenangians Irish) (1)
+S3,Plates,0.1,0.0,0.1,STARVED (<1/week),,SH - Paper Plate 7 Inch (4) | SH - Paper Plate 9 Inch (2)
+S3,Cake wrappers,0.1,0.0,0.1,STARVED (<1/week),,SH-Brown Cup Cake Liner 10.5cm (2) | SH-White Round Cup Cake Wrapper 14cm (2) | SH-Brown Cup Cake Liner 9.5cm (1)
+S4,OPD,27.1,23.0,27.1,,TACO BELL (69) | Kiri Kopi (50) | Street Burger (Private) Limited (38),SH Kraft Double Cup Holder With Coating (12) | SH-Kraft Tray 700ml (12) | SH-White Greaseproof Paper 15x13 inches (11)
+S4,SHPS,20.2,17.6,20.2,,Blends (53) | MY PIZZA (24) | Malu Poke (23),CP-Kraft Paper Bag with Rope Handle (XL) 340x330x160mm (Best Compliments) (2) | CP- Pizza Box 25x25x4cm (Hideaway Restaurant) (1) | CP-12oz Pp cup (360ml)(SEGAFREDO) (1)
+S4,PSU,6.1,4.8,6.1,,,Paper White Straw 6mm x 20cm (Packed) (141) | Paper Straw White 6mm X 20cm  SPS (57) | Paper Straw White 8mm X 20cm SPS (41)
+S4,RWU,4.5,5.4,4.5,,,Chefs Choice Cling Film 45cmX300m (21) (96) | ST-Cling Film 45cmX600m (83) | Chefs Choice Cling Film 45cmX600m (21) (17)
+S4,PCU/MOBA cups,6.3,5.4,6.3,,Street Barista Crew (9) | Kai Coffee (8) | Marriott (7),SH-8oz D/Wall Kraft Paper Cup (22) | BG - 12oz S/Wall White Paper Cup (16) | BG - 8oz D/Wall Kraft Paper Cup (13)
+S4,CPU,3.6,13.6,3.6,,Spar SL (Private ) Limited (84) | Keells Super (23) | Laksala Super Trade Centre (8),PACKSERV - Dental Kit (Kraft) - Toothpaste 6grm/Plastic Toothbrush - Kit Packing (4) | PACKSERV - Dental Kit (Kraft) - Toothpaste 6grm/Wooden Toothbrush - Kit Packing (3) | PACKSERV - 450ml Aluminium Foil Container with Lid (10Pcs Packing) (3)
+S4,MOBA Punching,2.0,2.4,2.0,,CAFE 173 (13) | THOMA (9) | Chef Master Resturant (6),
+S4,Lids,0.7,0.0,0.7,STARVED (<1/week),Manzo Restaurant (1),SH-Black (Plastic Lid – PS6) for 8oz Paper Cup (M) (24) | SH-Black Lid for 8oz Paper Cup (M) (7) | SH-White Lid for 8oz Paper Cup (M) (3)
+S4,FPP,0.5,0.5,0.5,STARVED (<1/week),Montado (Pvt) Ltd (6) | Skinny Tom's Deli (2) | The Lamprais (1),FP - Sugar Sachet Brown (Pillow) (4) | SH-FPP - Sugar Sachet White (Pillow) (4) | FP-Sugar Sachet White (Pillow) (The Valampuri) (4)
+S4,DPU,0.4,0.0,0.4,STARVED (<1/week),Bohemian Quest (6) | Chill Restaurant (2) | Titos (2),DP-1200ml AF Container Lid-(Manzo Restaurant) (2) | DP-900ml AF Container Lid-(Manzo Restaurant) (1) | DP-Burger Pouch 18x18cm(Shenangians Irish) (1)
+S4,Plates,0.1,0.0,0.1,STARVED (<1/week),,SH - Paper Plate 7 Inch (4) | SH - Paper Plate 9 Inch (2)
+S4,Cake wrappers,0.1,0.0,0.1,STARVED (<1/week),,SH-Brown Cup Cake Liner 10.5cm (2) | SH-White Round Cup Cake Wrapper 14cm (2) | SH-Brown Cup Cake Liner 9.5cm (1)

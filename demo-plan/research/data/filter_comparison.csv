@@ -1,0 +1,8 @@
+filter,sps_job_orders_covered_12m,sps_share_12m,sps_jobs_per_week,note,calls_1min_A_median,calls_1min_A_p95,calls_1min_A_max,calls_5min_A_median,calls_5min_A_p95,calls_5min_A_max
+"(a) 8 key customers, header rule (free at list)",260,0.07,5.0,list row carries cf_order_received_from; no extra calls to decide,2964,3139,3512,656,785,1057
+(a2) 8 key customers incl. lines logged as SH (needs detail of every SH-logged SO),263,0.071,5.1,detail needed for all SH-logged SOs to learn the owner,3127,3389,5046,779,975,2673
+"(b) top-50 items (in-sample), item known only from detail",825,0.222,15.9,list row has no lines: detail for every SO unless a Zoho item filter works (V-check),3283,3585,6149,913,1145,3732
+(b2) top-100 items (in-sample),1119,0.3,21.5,same,3283,3585,6149,913,1145,3732
+(c) key customers + top-50 items,1001,0.269,19.2,same,3283,3585,6149,913,1145,3732
+(d) key customers + whole PSU and RWU,810,0.218,15.6,both parts are list-row fields,3011,3203,3631,690,840,1296
+(e) full sync,3724,1.0,71.6,,3283,3585,6149,913,1145,3732

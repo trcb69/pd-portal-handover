@@ -1,0 +1,16 @@
+# Order Portal S0 — code review (21 Oct 2026): BLOCK
+
+Repo `/root/dev/order-portal`, `feature/s0-foundation`, 04fecd8..c18b382. 120/120 tests pass; tests unedited and honest.
+
+## Blocking
+- **B1** History never finishes; SO mirror freezes; items never sync (`server/services/sps-sync.js:76-84,117-121,144`; `server/services/budget.js:22-26`). Lists all pages before details and restarts from page 1 each cycle; allowance ~3.7 calls/cycle; `read_cap_reached` stops the cycle so `items` never runs. Measured: ~637 SOs/day, items 0 until day 3; ~8,600 SPS job orders → ~12–14 days. Fix: steady lane starts at "now" on first run; history as a resumable backfill with a persisted cursor, details page by page; history stop = deferral (items still run); harness test (items on day 1, noon change within one cycle, monotonic history, no repeated pages).
+- **B2** Mirror drops S1 fields (`001-schema.sql:30-36`, `sps-sync.js:88-98`): add `sps_salesorders` (so_id, number, date, customer_id, cf_order_received_from, reference_number, cf_job_no, status, cf_portal_ref, modified_at, detail_json); per-line tag, project_id, detail_json; raw item JSON + division tag / cf_bu / unit / sku / image_document_id in `sps_items`. Do it in 001 now (never applied).
+- **B3** `clearRestorePending` compares completion time; spec §7.5 / AC46 require a run that STARTED after the flag (`restore-pending.js:26-27`; tests `test/restore-pending.test.js:7,98` encode the misreading). Fix: store the completed run's start time; compare > set_at; test a run that started before and ended after.
+
+## Warnings
+W1 one bad SO blocks later details and grows the window (`sps-sync.js:85-101`) → per-SO quarantine table, skip after 3 hits, run still ok, count in health · W2 deleted items never inactive (`:104-114`) → nightly id sweep in the history lane · W3 `.env` from cwd (`cli/restore-pending.js:3`, `server/app.js:1`) → path from ROOT · W4 CLI creates an empty DB (`cli/restore-pending.js:28`, `db/open.js:6-7`) → `fileMustExist` + schema check · W5 no first-admin path → `npm run create-admin` offline CLI (audited, must_reset) · W6 PORTAL_INSTANCE defaults to dev in production; `-` allowed (`config.js:43-44`) → required in production, no `-`, match on `${instance}-` · W7 lease stuck 10 min after restart (`startup.js:16-27`, `sps-sync.js:32-38`) → clear at prepareDatabase, release at shutdown · W8 tests for line deletion and partial detail failure · W9 write/approval/upload limits → S1 entry criterion (LATER.md).
+
+## Nits
+N1 refuse WRITE_RESERVE ≥ cap (`config.js:75-76`) · N2 bad item modified time → bad() (`sps-sync.js:70`) · N3 `app.use('/api', requireAuth)` explicitly (`create-app.js:34`, `routes/auth.js:61`) · N4 Zoho client singleton for the 50/min throttle (`zoho/client.js:10-13`) · N5 warn on .sql files the migration pattern rejects (`migrate.js:11`) · N6 test helper migrations path from import.meta.url (`test/helpers/db.js:6`) · N7 limiter on /auth/password.
+
+Verified clean: transactional audit (AC72), append-only triggers, migration runner, auth chain (AC3–AC8b), Zoho client (AC47, AC50), lease/watermark/stale/image cap/portal ref/single instance/no secrets (AC51–AC54b, AC73, AC74), joint-demo §2 deltas.

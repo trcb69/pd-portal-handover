@@ -1,0 +1,101 @@
+rank,Product ID,item,kind,unit,lines,orders,qty,scope,ranked_by
+1,4845836000000277823,Wooden Spoon 16cm,bought-in,nos,261,261,155050.0,all kinds,lines
+2,4845836000000282775,Aluminium Lava Cake Cup,bought-in,Nos,192,192,112201.0,all kinds,lines
+3,4845836000000246215,Paper White Straw 6mm x 20cm (Packed),made-for-stock (SPS),pcs,128,128,127500.0,all kinds,lines
+4,4845836000000277788,Wooden  Fork 16cm,bought-in,nos,123,122,75250.0,all kinds,lines
+5,4845836000000277508,Chefs Choice Cling Film 45cmX300m (21),made-for-stock (SPS),rl,112,112,5438.0,all kinds,lines
+6,4845836000000282880,450ml AF Container - 8342,bought-in,Nos,112,112,38000.0,all kinds,lines
+7,4845836000018707360,Lid For 450ml AF Container - 8342,customized,Nos,111,111,37000.0,all kinds,lines
+8,4845836000000282670,750ml AF Container - 8389,bought-in,Nos,95,95,56752.0,all kinds,lines
+9,4845836000018707185,Lid For 750ml AF Container - 8389,customized,Nos,91,91,55052.0,all kinds,lines
+10,4845836000000277438,ST-Cling Film 45cmX600m,made-for-stock (SPS),rl,89,89,611.0,all kinds,lines
+11,4845836000000245059,Chefs Choice BP 45cmX100m,bought-in,rl,76,76,279.0,all kinds,lines
+12,4845836000020692434,Screen Frame Exposing Only,bought-in,nos,70,69,111.0,all kinds,lines
+13,4845836000000520254,SH-Black (Plastic Lid – PS6) for 8oz Paper Cup (M),customized,nos,61,61,48439.0,all kinds,lines
+14,4845836000018945320,Black Vinyl Disposable Powder Free Gloves-Large,bought-in,PACK,59,59,882.0,all kinds,lines
+15,4845836000000249856,Boufant Hair Net Blue,bought-in,pcs,57,56,49900.0,all kinds,lines
+16,4845836000000279183,Flat Lid for 12 / 16 /22 Oz Plastic Cups,bought-in,nos,52,52,55759.0,all kinds,lines
+17,4845836000000523750,SP - 700ML Kraft Box (Pizza),customized,nos,51,51,2800.0,all kinds,lines
+18,4845836000000264557,SH Kraft Box Plain 900ml (165x115x50)mm,customized,nos,51,51,22680.0,all kinds,lines
+19,4845836000000278973,12Oz Plastic Cup (350ml),bought-in,nos,51,51,26800.0,all kinds,lines
+20,4845836000000279008,Dome Lid for 12Oz PP Cup(350ml),bought-in,nos,50,50,23552.0,all kinds,lines
+1,4845836000000275236,Wooden Popstick 114mm,bought-in,nos,8,8,1008950.0,all kinds,quantity (piece-unit items only)
+2,4845836000000277753,Wooden Yogurt Spoon,bought-in,nos,6,6,306350.0,all kinds,quantity (piece-unit items only)
+3,4845836000000272062,Cake Cup 14cm-White,made-for-stock (SPS),Nos,3,3,250000.0,all kinds,quantity (piece-unit items only)
+4,4845836000000271852,Cake Cup 7.5cm-Brown,bought-in,Nos,6,6,206000.0,all kinds,quantity (piece-unit items only)
+5,4845836000000246040,Flexible White Straw 6mm x 24cm,bought-in,pcs,39,39,197904.0,all kinds,quantity (piece-unit items only)
+6,4845836000000277823,Wooden Spoon 16cm,bought-in,nos,261,261,155050.0,all kinds,quantity (piece-unit items only)
+7,4845836000000246215,Paper White Straw 6mm x 20cm (Packed),made-for-stock (SPS),pcs,128,128,127500.0,all kinds,quantity (piece-unit items only)
+8,4845836000000282775,Aluminium Lava Cake Cup,bought-in,Nos,192,192,112201.0,all kinds,quantity (piece-unit items only)
+9,4845836000000247053,Paper White Straw 6mm x 20cm SPS,made-for-stock (SPS),pcs,32,31,101605.0,all kinds,quantity (piece-unit items only)
+10,4845836000000277788,Wooden  Fork 16cm,bought-in,nos,123,122,75250.0,all kinds,quantity (piece-unit items only)
+11,4845836000000281015,80ml Transparent Container + Connected Lid,bought-in,nos,45,45,63350.0,all kinds,quantity (piece-unit items only)
+12,4845836000000249891,Boufant Hair Net Black,bought-in,pcs,33,33,61500.0,all kinds,quantity (piece-unit items only)
+13,4845836000000282670,750ml AF Container - 8389,bought-in,Nos,95,95,56752.0,all kinds,quantity (piece-unit items only)
+14,4845836000000271747,Tulip Cake Cup 15x15cm/Brown,bought-in,Nos,13,13,56406.0,all kinds,quantity (piece-unit items only)
+15,4845836000000279183,Flat Lid for 12 / 16 /22 Oz Plastic Cups,bought-in,nos,52,52,55759.0,all kinds,quantity (piece-unit items only)
+16,4845836000018707185,Lid For 750ml AF Container - 8389,customized,Nos,91,91,55052.0,all kinds,quantity (piece-unit items only)
+17,4845836000027368110,Tulip Cake Cup 12x12cm/D.Brown,bought-in,Nos,6,6,55006.0,all kinds,quantity (piece-unit items only)
+18,4845836000130266676,White Paper Rope Handle for Paper Bag,bought-in,Pcs,2,2,50000.0,all kinds,quantity (piece-unit items only)
+19,4845836000000249856,Boufant Hair Net Blue,bought-in,pcs,57,56,49900.0,all kinds,quantity (piece-unit items only)
+20,4845836000000520254,SH-Black (Plastic Lid – PS6) for 8oz Paper Cup (M),customized,nos,61,61,48439.0,all kinds,quantity (piece-unit items only)
+1,4845836000018707360,Lid For 450ml AF Container - 8342,customized,Nos,111,111,37000.0,customized,lines
+2,4845836000018707185,Lid For 750ml AF Container - 8389,customized,Nos,91,91,55052.0,customized,lines
+3,4845836000000520254,SH-Black (Plastic Lid – PS6) for 8oz Paper Cup (M),customized,nos,61,61,48439.0,customized,lines
+4,4845836000000523750,SP - 700ML Kraft Box (Pizza),customized,nos,51,51,2800.0,customized,lines
+5,4845836000000264557,SH Kraft Box Plain 900ml (165x115x50)mm,customized,nos,51,51,22680.0,customized,lines
+6,4845836000000264592,SH Kraft Box Plain 1200ml (180x120x50)mm,customized,nos,49,49,19365.0,customized,lines
+7,4845836000018707821,Lid For 1200ml AF Container -83120,customized,Nos,36,36,25175.0,customized,lines
+8,4845836000000286041,8oz Kraft Double Wall Cup,customized,Nos,34,34,30026.0,customized,lines
+9,4845836000018713538,Clear Pet Lid For 500/750/1000ml Kraft Paper RND Container,customized,Nos,30,30,14550.0,customized,lines
+10,4845836000018758049,Lid For 1900ml AF Container - 83185,customized,Nos,28,28,8400.0,customized,lines
+1,4845836000018707185,Lid For 750ml AF Container - 8389,customized,Nos,91,91,55052.0,customized,quantity (piece-unit items only)
+2,4845836000000520254,SH-Black (Plastic Lid – PS6) for 8oz Paper Cup (M),customized,nos,61,61,48439.0,customized,quantity (piece-unit items only)
+3,4845836000018707360,Lid For 450ml AF Container - 8342,customized,Nos,111,111,37000.0,customized,quantity (piece-unit items only)
+4,4845836000000286041,8oz Kraft Double Wall Cup,customized,Nos,34,34,30026.0,customized,quantity (piece-unit items only)
+5,4845836000000523263,Burger Bag Wax Coated (Street Burger),customized,nos,3,3,26000.0,customized,quantity (piece-unit items only)
+6,4845836000018707821,Lid For 1200ml AF Container -83120,customized,Nos,36,36,25175.0,customized,quantity (piece-unit items only)
+7,4845836000000259444,SP-Burger Pouch (Street Burger),customized,nos,3,3,25000.0,customized,quantity (piece-unit items only)
+8,4845836000000264557,SH Kraft Box Plain 900ml (165x115x50)mm,customized,nos,51,51,22680.0,customized,quantity (piece-unit items only)
+9,4845836000000285309,Paper Cup 150ml White,customized,Nos,14,14,22350.0,customized,quantity (piece-unit items only)
+10,4845836000000527363,CP-16Oz Plastic Cup (Street Burger),customized,nos,2,2,20000.0,customized,quantity (piece-unit items only)
+1,4845836000000246215,Paper White Straw 6mm x 20cm (Packed),made-for-stock (SPS),pcs,128,128,127500.0,made-for-stock (SPS),lines
+2,4845836000000277508,Chefs Choice Cling Film 45cmX300m (21),made-for-stock (SPS),rl,112,112,5438.0,made-for-stock (SPS),lines
+3,4845836000000277438,ST-Cling Film 45cmX600m,made-for-stock (SPS),rl,89,89,611.0,made-for-stock (SPS),lines
+4,4845836000000286111,12oz Kraft Double Wall Cup,made-for-stock (SPS),Nos,33,33,15425.0,made-for-stock (SPS),lines
+5,4845836000000247053,Paper White Straw 6mm x 20cm SPS,made-for-stock (SPS),pcs,32,31,101605.0,made-for-stock (SPS),lines
+6,4845836000000246320,Flexible White Straw 6mm x 24cm (Packed),made-for-stock (SPS),pcs,16,15,43300.0,made-for-stock (SPS),lines
+7,4845836000000248770,Pizza Box 30 x 30 x 4cm (12 inch),made-for-stock (SPS),nos,16,16,5995.0,made-for-stock (SPS),lines
+8,4845836000000246145,Paper White Straw 8mm x 20cm SPS,made-for-stock (SPS),pcs,13,13,21505.0,made-for-stock (SPS),lines
+9,4845836000000277403,ST-Cling Film 45cmX300m,made-for-stock (SPS),rl,11,11,107.0,made-for-stock (SPS),lines
+10,4845836000000253544,Kraft Paper Bag (S) 240x140x80mm,made-for-stock (SPS),Nos,11,11,4094.0,made-for-stock (SPS),lines
+1,4845836000000272062,Cake Cup 14cm-White,made-for-stock (SPS),Nos,3,3,250000.0,made-for-stock (SPS),quantity (piece-unit items only)
+2,4845836000000246215,Paper White Straw 6mm x 20cm (Packed),made-for-stock (SPS),pcs,128,128,127500.0,made-for-stock (SPS),quantity (piece-unit items only)
+3,4845836000000247053,Paper White Straw 6mm x 20cm SPS,made-for-stock (SPS),pcs,32,31,101605.0,made-for-stock (SPS),quantity (piece-unit items only)
+4,4845836000000246320,Flexible White Straw 6mm x 24cm (Packed),made-for-stock (SPS),pcs,16,15,43300.0,made-for-stock (SPS),quantity (piece-unit items only)
+5,4845836000000246145,Paper White Straw 8mm x 20cm SPS,made-for-stock (SPS),pcs,13,13,21505.0,made-for-stock (SPS),quantity (piece-unit items only)
+6,4845836000000286111,12oz Kraft Double Wall Cup,made-for-stock (SPS),Nos,33,33,15425.0,made-for-stock (SPS),quantity (piece-unit items only)
+7,4845836000088386162,4508856 Plastic Cup 12Oz-350ML,made-for-stock (SPS),Nos,5,5,11000.0,made-for-stock (SPS),quantity (piece-unit items only)
+8,4845836000088386127,4508857 Plastic Dome Lid 12Oz-350ML,made-for-stock (SPS),Nos,4,4,9000.0,made-for-stock (SPS),quantity (piece-unit items only)
+9,4845836000000246827,Paper Black Straw 6mm x 20cm (Packed),made-for-stock (SPS),pcs,6,6,8500.0,made-for-stock (SPS),quantity (piece-unit items only)
+10,4845836000133253625,SH-White Greaseproof Paper 15x13 inches,made-for-stock (SPS),pcs,7,7,6200.0,made-for-stock (SPS),quantity (piece-unit items only)
+1,4845836000000277823,Wooden Spoon 16cm,bought-in,nos,261,261,155050.0,bought-in,lines
+2,4845836000000282775,Aluminium Lava Cake Cup,bought-in,Nos,192,192,112201.0,bought-in,lines
+3,4845836000000277788,Wooden  Fork 16cm,bought-in,nos,123,122,75250.0,bought-in,lines
+4,4845836000000282880,450ml AF Container - 8342,bought-in,Nos,112,112,38000.0,bought-in,lines
+5,4845836000000282670,750ml AF Container - 8389,bought-in,Nos,95,95,56752.0,bought-in,lines
+6,4845836000000245059,Chefs Choice BP 45cmX100m,bought-in,rl,76,76,279.0,bought-in,lines
+7,4845836000020692434,Screen Frame Exposing Only,bought-in,nos,70,69,111.0,bought-in,lines
+8,4845836000018945320,Black Vinyl Disposable Powder Free Gloves-Large,bought-in,PACK,59,59,882.0,bought-in,lines
+9,4845836000000249856,Boufant Hair Net Blue,bought-in,pcs,57,56,49900.0,bought-in,lines
+10,4845836000000279183,Flat Lid for 12 / 16 /22 Oz Plastic Cups,bought-in,nos,52,52,55759.0,bought-in,lines
+1,4845836000000275236,Wooden Popstick 114mm,bought-in,nos,8,8,1008950.0,bought-in,quantity (piece-unit items only)
+2,4845836000000277753,Wooden Yogurt Spoon,bought-in,nos,6,6,306350.0,bought-in,quantity (piece-unit items only)
+3,4845836000000271852,Cake Cup 7.5cm-Brown,bought-in,Nos,6,6,206000.0,bought-in,quantity (piece-unit items only)
+4,4845836000000246040,Flexible White Straw 6mm x 24cm,bought-in,pcs,39,39,197904.0,bought-in,quantity (piece-unit items only)
+5,4845836000000277823,Wooden Spoon 16cm,bought-in,nos,261,261,155050.0,bought-in,quantity (piece-unit items only)
+6,4845836000000282775,Aluminium Lava Cake Cup,bought-in,Nos,192,192,112201.0,bought-in,quantity (piece-unit items only)
+7,4845836000000277788,Wooden  Fork 16cm,bought-in,nos,123,122,75250.0,bought-in,quantity (piece-unit items only)
+8,4845836000000281015,80ml Transparent Container + Connected Lid,bought-in,nos,45,45,63350.0,bought-in,quantity (piece-unit items only)
+9,4845836000000249891,Boufant Hair Net Black,bought-in,pcs,33,33,61500.0,bought-in,quantity (piece-unit items only)
+10,4845836000000282670,750ml AF Container - 8389,bought-in,Nos,95,95,56752.0,bought-in,quantity (piece-unit items only)

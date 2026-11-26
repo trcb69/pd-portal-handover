@@ -1,0 +1,15 @@
+cf_manufacturing_division,cf_order_type,n,pkg_median,ship_median
+Customized Packing Unit (CPU),Customized Order,136,1.8,3.1
+Customized Packing Unit (CPU),Ex Stock,1,0.0,0.0
+Digital Printing Unit (DPU),Customized Order,21,0.0,0.0
+Food Product Processing (FPP),Customized Order,7,2.8,4.1
+Food Product Processing (FPP),Ex Stock,13,6.2,6.3
+MOBA Punching Unit,Customized Order,95,17.2,17.9
+Offset Printing Division (OPD),Customized Order,1012,16.9,17.0
+Offset Printing Division (OPD),Ex Stock,4,0.0,0.0
+Paper Cup Lid Unit,Customized Order,2,0.2,0.2
+Paper Cup Lid Unit,Ex Stock,10,0.0,0.1
+Paper Cup Unit (PCU),Customized Order,239,17.3,17.8
+Paper Straw Unit (PSU),Ex Stock,304,0.0,0.9
+Rewinding Unit (RWU),Ex Stock,233,0.0,0.1
+Screen Printing Division (SHPS),Customized Order,1019,4.2,5.2

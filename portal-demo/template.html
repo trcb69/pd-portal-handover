@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Customized Order Portal Demo</title>
+<style>
+:root{--navy:#1F3A5F;--teal:#1B7F8C;--bg:#F4F7F9;--card:#fff;--line:#D5E0E5;--ink:#1c2a35;--mute:#5d7080;--ok:#1e8a4c;--warn:#b7791f;--bad:#b03a2e;--chip:#E6F2F4}
+*{box-sizing:border-box}body{margin:0;font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+header{background:var(--navy);color:#fff;padding:12px 20px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+header h1{font-size:18px;margin:0}header .tag{background:var(--teal);border-radius:10px;padding:2px 9px;font-size:12px}
+nav{margin-left:auto;display:flex;gap:6px}nav button{background:transparent;color:#cfe3e8;border:1px solid #4a6a8e;border-radius:6px;padding:6px 12px;cursor:pointer;font-size:13px}
+nav button.on{background:#fff;color:var(--navy);font-weight:600}
+main{max-width:1100px;margin:0 auto;padding:16px}
+.banner{background:#FFF7E0;border:1px solid #F0D58A;color:#6b4e00;border-radius:8px;padding:8px 12px;margin-bottom:14px;font-size:13px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:14px}
+.card h2{margin:0 0 10px;font-size:15px;color:var(--navy)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+label{display:block;font-size:12px;color:var(--mute);margin-bottom:3px;font-weight:600}
+input,select,textarea{width:100%;padding:8px 9px;border:1px solid var(--line);border-radius:6px;font:inherit;background:#fff;color:var(--ink)}
+input:focus,select:focus{outline:2px solid var(--teal);border-color:var(--teal)}
+input[readonly]{background:#f2f6f8}
+.sug{position:relative}.list{position:absolute;z-index:10;left:0;right:0;top:100%;background:#fff;border:1px solid var(--teal);border-radius:6px;max-height:300px;overflow:auto;box-shadow:0 6px 18px rgba(0,0,0,.12)}
+.list div{padding:7px 10px;cursor:pointer;border-bottom:1px solid #eef3f5}.list div:hover,.list div.hl{background:var(--chip)}
+.list small{color:var(--mute);display:block}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}.chip{background:var(--chip);border:1px solid #c5e0e4;border-radius:12px;padding:2px 10px;font-size:12px}
+.chip b{color:var(--teal)}
+.pre{font-size:11px;color:var(--teal);font-weight:600;margin-left:6px}
+.note{font-size:12px;color:var(--mute);margin-top:4px}
+button.p{background:var(--teal);color:#fff;border:0;border-radius:6px;padding:9px 16px;cursor:pointer;font-weight:600;font-size:14px}
+button.p:disabled{background:#9db8bd;cursor:not-allowed}button.s{background:#fff;border:1px solid var(--teal);color:var(--teal);border-radius:6px;padding:7px 12px;cursor:pointer}
+button.g{background:var(--ok);color:#fff;border:0;border-radius:6px;padding:11px 20px;font-size:15px;font-weight:700;cursor:pointer}button.g:disabled{background:#a9c9b6}
+table{width:100%;border-collapse:collapse;font-size:13px}th{background:var(--navy);color:#fff;text-align:left;padding:6px 8px}td{padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+.hide{display:none}.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.right{margin-left:auto}
+.badge{display:inline-block;border-radius:10px;padding:1px 9px;font-size:12px;font-weight:600}.b-new{background:#e5f0ff;color:#1f4f9a}.b-ok{background:#dff3e7;color:var(--ok)}.b-w{background:#fdf0d4;color:var(--warn)}
+pre{background:#0f2133;color:#cfe8ee;padding:12px;border-radius:8px;overflow:auto;font-size:12px;max-height:340px}
+.empty{color:var(--mute);text-align:center;padding:24px}
+.step{display:inline-block;background:var(--navy);color:#fff;border-radius:50%;width:22px;height:22px;text-align:center;line-height:22px;font-size:12px;margin-right:6px}
+.vgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.mini{font-size:12px}.ghost{color:var(--mute)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media(max-width:800px){.cols{grid-template-columns:1fr}}
+</style></head><body>
+<header><h1>Customized Order Portal</h1><span class="tag">demo v1.0 beta</span><span class="tag" style="background:#3b5b82" title="Reads come from a browser pull every 5 minutes; only the sales order is written through the API">data pulled every 5 min (demo: export of 16 Sep)</span>
+<nav><button id="nSales" class="on">Sales person</button><button id="nMgr">Production manager <span id="qc"></span></button><button id="nMap">Field map</button></nav></header>
+<main>
+<div class="banner">Demo only. Nothing is sent to Zoho. Items, customers, prices and quantities come from the SPS order export of 16 Sep 2026 (last 12 months, __NITEMS__ customized items). Internal use: it shows real last-order prices.</div>
+
+<section id="vSales">
+<div class="card"><div class="row"><div style="min-width:240px"><label>Signed in as (sales person)</label><select id="who"></select></div>
+<div><label>&nbsp;</label><label style="display:flex;gap:6px;align-items:center;font-weight:400"><input type="checkbox" id="mine" style="width:auto" checked> Show only items mapped to me <span class="ghost" id="mineN"></span></label></div></div></div>
+
+<div class="card"><h2><span class="step">1</span>Order line</h2>
+<div class="grid"><div class="sug"><label>Item (type the name, size or customer)</label><input id="q" autocomplete="off" placeholder="e.g. 12oz coffee manor, pizza box, pouch"><div class="list hide" id="ql"></div></div>
+<div class="sug"><label>Customer (end customer)</label><input id="cq" autocomplete="off" placeholder="Select the item first" disabled><div class="list hide" id="cl"></div></div></div>
+<div class="row mini" style="margin-top:6px"><a href="#" id="lnC">Customer not in the list? Add a new customer</a><span class="ghost">|</span><a href="#" id="lnI">Item not found? Request a new item</a></div>
+<div class="note" id="hint">Nothing else is shown until you pick an item. After you pick an item and a customer, the form fills itself from the last order.</div>
+
+<div id="detail" class="hide">
+<hr style="border:0;border-top:1px solid var(--line);margin:14px 0">
+<div class="row"><b id="iname"></b><span class="badge b-new hide" id="newcust">New customer for this item</span><span class="ghost mini" id="isku"></span></div>
+<div class="chips" id="chips"></div>
+<div id="variants" class="hide"><h2 style="margin-top:12px">Other versions of this product <span class="ghost mini">(same product, other size or colour)</span></h2><div class="vgrid" id="vg"></div><div class="note" id="vnote"></div></div>
+<div id="lastbox" class="hide" style="margin-top:12px"><h2>Previous orders (this customer)</h2><div id="lastt"></div></div>
+
+<h2 style="margin-top:14px">Order details <span class="ghost mini">(<span class="pre">pre-filled</span> = from the last order, you can change it)</span></h2>
+<div class="grid">
+<div><label>Quantity <span id="pq"></span></label><input id="qty" type="number" min="1"></div>
+<div><label>Unit</label><input id="unit" readonly></div>
+<div><label>Unit price (LKR) <span id="pp"></span></label><input id="price" type="number" step="0.01" min="0"></div>
+<div><label>Required by</label><input id="due" type="date"></div>
+<div><label>Job nature <span id="pn"></span></label><select id="nat"><option>Reorder</option><option>New Order</option><option>Reorder With New Design</option><option>Rework</option></select></div>
+<div><label>Artwork <span id="pa"></span></label><select id="art"><option>Available</option><option>Not Available</option><option>Not Applicable</option></select></div>
+<div id="wDye"><label>Dye cutter <span id="pd"></span></label><select id="dye"><option>Available</option><option>Not Available</option></select></div>
+<div id="wScr"><label>Screen / plate <span id="ps"></span></label><select id="scr"><option>Available</option><option>Not Available</option><option>Not Applicable</option></select></div>
+</div>
+<div style="margin-top:10px"><label>Notes for production (optional)</label><textarea id="notes" rows="2" placeholder="Special request, delivery place, colour ..."></textarea></div>
+<div class="note" id="showhide"></div>
+<div class="row" style="margin-top:12px"><button class="p" id="addl">Add line to order</button><button class="s" id="clr">Clear</button></div>
+</div></div>
+
+
+<div class="card hide" id="pCust"><h2>New customer <span class="ghost mini">(the end customer on the order, plus who is invoiced)</span></h2>
+<div class="grid"><div class="sug"><label>Customer / outlet name (as printed on the item)</label><input id="ncName" autocomplete="off" placeholder="e.g. Cafe Ora Hikkaduwa"></div>
+<div class="sug"><label>Invoiced to (billing customer in SH Zoho)</label><input id="ncBill" autocomplete="off" placeholder="type to search 2,698 SH customers"><div class="list hide" id="ncBl"></div></div></div>
+<div id="ncDup" class="note"></div>
+<div id="ncNewBill" class="hide"><h2 style="margin-top:12px">New SH billing customer request <span class="ghost mini">(sent to the customer-master team; the SPS order does not wait for it)</span></h2>
+<div class="grid"><div><label>Legal / invoice name</label><input id="nbName"></div><div><label>Type</label><select id="nbType"><option>Company (Pvt) Ltd</option><option>Cash customer ("Cash - Name")</option><option>Individual</option></select></div>
+<div><label>Business unit</label><select id="nbBU"><option>FD</option><option>SD</option><option>GD</option></select></div><div><label>Sales person <span class="pre">pre-filled</span></label><input id="nbSP" readonly></div>
+<div><label>Payment type</label><select id="nbPay"><option>Online Payment</option><option>PD Cheque</option><option>Cash Payment</option><option>Cheque on Delivery</option></select></div>
+<div><label>VAT status</label><select id="nbVat"><option>Tax Inclusive</option><option>VAT</option><option>SVAT</option><option>EXM</option><option>NA</option></select></div>
+<div><label>VAT / SVAT number (if any)</label><input id="nbVn"></div><div><label>Phone</label><input id="nbPh"></div><div><label>Email</label><input id="nbEm"></div>
+<div style="grid-column:1/-1"><label>Billing and delivery address</label><input id="nbAd"></div></div>
+<div class="note">Credit limit and payment terms are set by finance, not by sales. Zoho fields filled for 99.8% of existing customers: VAT status, VAT / SVAT number, salesperson, BU.</div></div>
+<div class="row" style="margin-top:10px"><label style="display:flex;gap:6px;align-items:center;font-weight:400" id="ncDiffW" class="hide"><input type="checkbox" id="ncDiff" style="width:auto"> This is a different customer from the ones above</label><button class="p" id="ncSave">Save customer</button><button class="s" id="ncCancel">Cancel</button><span class="note" id="ncMsg"></span></div></div>
+
+<div class="card hide" id="pItem"><h2>Request a new item <span class="ghost mini">(production creates it in Zoho; you can order it straight away and the order waits)</span></h2>
+<div class="row" style="margin-bottom:8px"><label style="display:flex;gap:6px;font-weight:400"><input type="radio" name="nim" value="copy" checked style="width:auto"> Copy an existing product for a new customer or size <span class="pre">62% of new items</span></label><label style="display:flex;gap:6px;font-weight:400"><input type="radio" name="nim" value="new" style="width:auto"> Brand-new product</label></div>
+<div id="niCopy"><div class="sug" style="max-width:520px"><label>Product to copy</label><input id="niBase" autocomplete="off" placeholder="type the product, e.g. 12oz paper cup"><div class="list hide" id="niBl"></div></div><div id="niBom"></div></div>
+<div id="niNew" class="hide"><div class="grid"><div><label>Product type</label><select id="nnKind"><option>Paper cup</option><option>Plastic cup</option><option>Food box</option><option>Pizza box</option><option>Paper bag</option><option>Pouch</option><option>Container with lid</option><option>Sticker / label</option><option>Wrap / greaseproof</option><option>Other</option></select></div>
+<div><label>Size / dimensions</label><input id="nnSize" placeholder="e.g. 12x12x1.75 inch or 16oz"></div><div><label>Material</label><input id="nnMat" placeholder="e.g. Kraft board 300gsm, PE coated"></div>
+<div><label>Print colours / finish</label><input id="nnCol" placeholder="e.g. 2 colour, matt lamination"></div><div><label>Artwork file</label><input id="nnArt" type="file"></div><div><label>Sample needed?</label><select id="nnSmp"><option>No</option><option>Yes, before production</option></select></div></div></div>
+<div class="grid" style="margin-top:10px"><div><label>For customer (brand tag in the name)</label><input id="niTag"></div><div><label>New size (if it differs)</label><input id="niSize"></div><div><label>Expected first order qty</label><input id="niQty" type="number"></div><div><label>Needed by</label><input id="niDue" type="date"></div></div>
+<div style="margin-top:8px"><label>Name that will be created in Zoho</label><input id="niName" readonly><div class="note" id="niDup"></div></div>
+<div style="margin-top:8px"><label>Notes</label><textarea id="niNotes" rows="2"></textarea></div>
+<div class="row" style="margin-top:10px"><label style="display:flex;gap:6px;align-items:center;font-weight:400"><input type="checkbox" id="niAdd" checked style="width:auto"> Add it to my order now (the order waits until the item exists)</label><button class="p" id="niSave">Send item request</button><button class="s" id="niCancel">Cancel</button><span class="note" id="niMsg"></span></div></div>
+<div class="card"><h2><span class="step">2</span>Order to send <span class="ghost mini" id="oc"></span></h2>
+<div id="cart"><div class="empty">No lines yet.</div></div>
+<div class="grid" style="margin-top:10px"><div><label>SH sales order / reference (optional)</label><input id="ref" placeholder="e.g. HNTSO260936305"></div></div>
+<div class="row" style="margin-top:12px"><button class="p" id="send" disabled>Send to production</button><span class="note" id="sendmsg"></span></div></div>
+</section>
+
+<section id="vMgr" class="hide">
+<div class="cols"><div class="card"><h2>Incoming orders <span class="ghost mini">(appear instantly when sales sends)</span></h2><div id="queue"><div class="empty">No orders yet. Send one from the Sales person tab.</div></div>
+<div class="row" style="margin-top:8px"><button class="s" id="seed">Add 3 sample orders</button><button class="s" id="wipe">Clear all</button></div></div>
+<div class="card" id="mgrDetail"><div class="empty">Select an order on the left.</div></div></div>
+<div class="card"><h2>Requests <span class="ghost mini">(new customers for the SH customer-master team, new items for production)</span></h2><div id="reqs"><div class="empty">None.</div></div></div>
+</section>
+
+<section id="vMap" class="hide">
+<div class="card"><h2>What the data says each order needs</h2><div id="mapbody"></div></div></section>
+</main>
+<script>
+const D=/*DATA*/;
+const $=s=>document.querySelector(s);const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmt=n=>n==null||n===''?'':Number(n).toLocaleString('en-US',{maximumFractionDigits:2});
+const MD={'Offset Printing Division (OPD)':{dye:1,scr:1},'Screen Printing Division (SHPS)':{dye:1,scr:1},'Paper Cup Unit (PCU)':{dye:1},'MOBA Punching Unit':{dye:1},'Customized Packing Unit (CPU)':{dye:1},'Digital Printing Unit (DPU)':{},'Food Product Processing (FPP)':{dye:1}};
+let store;try{store=window.localStorage;store.getItem('x')}catch(e){store=null}
+const mem={};const ls={get:k=>{try{return store?JSON.parse(store.getItem(k)||'null'):mem[k]||null}catch(e){return mem[k]||null}},set:(k,v)=>{try{store?store.setItem(k,JSON.stringify(v)):mem[k]=v}catch(e){mem[k]=v}}};
+let cur=null,curC='',cart=[],orders=ls.get('copd_orders')||[],selOrder=null;
+// ---- tabs
+function tab(n){['Sales','Mgr','Map'].forEach(x=>{$('#v'+x).classList.toggle('hide',x!==n);$('#n'+x).classList.toggle('on',x===n)});if(n==='Mgr')renderMgr()}
+$('#nSales').onclick=()=>tab('Sales');$('#nMgr').onclick=()=>tab('Mgr');$('#nMap').onclick=()=>tab('Map');
+// ---- who
+D.sps.forEach(s=>$('#who').insertAdjacentHTML('beforeend',`<option>${esc(s)}</option>`));
+function mineCount(){const n=D.items.filter(i=>i.sp===$('#who').value).length;$('#mineN').textContent=`(${n} of ${D.items.length})`}
+$('#who').onchange=()=>{mineCount();reset()};$('#mine').onchange=()=>{$('#q').dispatchEvent(new Event('input'))};mineCount();
+// ---- item search
+const words=s=>s.toLowerCase().replace(/[^a-z0-9]+/g,' ').trim().split(' ').filter(Boolean);
+D.items.forEach(i=>i._s=(i.n+' '+(i.sku||'')+' '+Object.keys(i.c).join(' ')).toLowerCase().replace(/[^a-z0-9]+/g,' '));
+let hl=-1,hits=[];
+$('#q').addEventListener('input',()=>{const w=words($('#q').value);const L=$('#ql');if(!w.length){L.classList.add('hide');return}
+ const mine=$('#mine').checked,who=$('#who').value;
+ hits=D.items.filter(i=>(!mine||i.sp===who)&&w.every(x=>i._s.includes(x))).sort((a,b)=>b.ln-a.ln).slice(0,12);hl=-1;
+ L.innerHTML=hits.length?hits.map((i,k)=>`<div data-k="${k}">${esc(i.n)}<small>${i.ln} orders in 12 months${i.sp&&i.sp!==who?' | '+esc(i.sp):''}${i.t?' | '+esc(i.t):''}</small></div>`).join(''):'<div class="ghost">No item found. Untick "only items mapped to me" to search all items.</div>';
+ L.classList.remove('hide')});
+$('#q').addEventListener('keydown',e=>{const L=$('#ql');if(e.key==='ArrowDown'||e.key==='ArrowUp'){hl=Math.max(0,Math.min(hits.length-1,hl+(e.key==='ArrowDown'?1:-1)));[...L.children].forEach((c,k)=>c.classList.toggle('hl',k===hl));e.preventDefault()}else if(e.key==='Enter'&&hits[Math.max(hl,0)]){pickItem(hits[Math.max(hl,0)]);e.preventDefault()}});
+$('#ql').addEventListener('mousedown',e=>{const d=e.target.closest('[data-k]');if(d)pickItem(hits[+d.dataset.k])});
+document.addEventListener('click',e=>{if(!e.target.closest('.sug'))document.querySelectorAll('.list').forEach(l=>l.classList.add('hide'))});
+function reset(){cur=null;curC='';$('#q').value='';$('#cq').value='';$('#cq').disabled=true;$('#cq').placeholder='Select the item first';$('#detail').classList.add('hide');$('#hint').classList.remove('hide')}
+$('#clr').onclick=reset;
+function pickItem(i){cur=i;curC='';$('#q').value=i.n;$('#ql').classList.add('hide');$('#cq').disabled=false;$('#cq').value='';$('#cq').placeholder='Select or type the customer';$('#hint').textContent='Now pick the customer. Previous price and quantity will fill in.';
+ // default customer: the most recent buyer
+ const cs=Object.entries(i.c).sort((a,b)=>b[1].d.localeCompare(a[1].d));
+ $('#detail').classList.add('hide');if(cs.length===1)pickCust(cs[0][0]);else $('#cq').focus()}
+// ---- customer search
+let chits=[];
+function custList(){const w=words($('#cq').value);const mine=Object.entries(cur.c).sort((a,b)=>b[1].d.localeCompare(a[1].d)).map(([c,v])=>({c,v,own:1}));
+ const set=new Set(mine.map(x=>x.c));const other=D.cust.filter(c=>!set.has(c)).map(c=>({c,v:null,own:0}));
+ chits=[...mine,...other].filter(x=>words(x.c).length&&w.every(t=>x.c.toLowerCase().includes(t))).slice(0,12);
+ let h=chits.map((x,k)=>`<div data-k="${k}">${esc(x.c)}<small>${x.v?`ordered this item ${x.v.n}x, last ${x.v.d}`:'new customer for this item (no price history)'}</small></div>`).join('');
+ const t=$('#cq').value.trim();if(t&&!chits.some(x=>x.c.toLowerCase()===t.toLowerCase()))h+=`<div data-new="1">Use "${esc(t)}" as a new customer<small>type in the full name; price and quantity stay empty</small></div>`;
+ $('#cl').innerHTML=h||'<div class="ghost">No match.</div>';$('#cl').classList.remove('hide')}
+$('#cq').addEventListener('input',()=>cur&&custList());$('#cq').addEventListener('focus',()=>cur&&custList());
+$('#cl').addEventListener('mousedown',e=>{const d=e.target.closest('div[data-k],div[data-new]');if(!d)return;pickCust(d.dataset.new?$('#cq').value.trim():chits[+d.dataset.k].c)});
+// ---- fill
+const sel=(id,v)=>{const e=$(id);if(v&&![...e.options].some(o=>o.value===v||o.text===v))e.add(new Option(v));if(v)e.value=v};
+function pre(id,on){$(id).innerHTML=on?'<span class="pre">pre-filled</span>':''}
+function pickCust(c){curC=c;$('#cq').value=c;$('#cl').classList.add('hide');$('#hint').classList.add('hide');
+ const v=cur.c[c],L=v||cur.l,has=!!v;
+ $('#detail').classList.remove('hide');$('#iname').textContent=cur.n;$('#isku').textContent=cur.sku?'SKU '+cur.sku:'';$('#newcust').classList.toggle('hide',has);
+ $('#chips').innerHTML=Object.entries(cur.a).map(([k,x])=>`<span class="chip">${esc(k)}: <b>${esc(x)}</b></span>`).join('')+(cur.t?`<span class="chip">Brand tag: <b>${esc(cur.t)}</b></span>`:'')+`<span class="chip">Made by: <b>${esc(L.mdiv||cur.l.mdiv)}</b></span>`;
+ // variants
+ const sib=D.items.filter(x=>x.id!==cur.id&&x.f===cur.f&&x.t===cur.t);
+ $('#variants').classList.toggle('hide',!sib.length);
+ if(sib.length){const keys=[...new Set([cur,...sib].flatMap(x=>Object.keys(x.a)))].filter(k=>new Set([cur,...sib].map(x=>x.a[k]||'')).size>1);
+  $('#vg').innerHTML=sib.slice(0,8).map(x=>`<div class="card" style="margin:0;padding:8px;cursor:pointer" data-v="${x.id}"><b class="mini">${esc(keys.map(k=>x.a[k]||'-').join(' / ')||x.n)}</b><div class="ghost mini">${esc(x.n)}</div><div class="mini">last: ${fmt(x.l.q)} ${esc(x.un)} @ ${fmt(x.l.p)}</div></div>`).join('');
+  $('#vnote').textContent=`Differs by: ${keys.join(', ')||'name only'}. Click one to switch; its own previous price and quantity are loaded.`;
+  $('#vg').querySelectorAll('[data-v]').forEach(e=>e.onclick=()=>{const t=D.items.find(x=>x.id===e.dataset.v);const keepC=curC;cur=t;$('#q').value=t.n;pickCust(keepC)})}
+ // previous orders
+ $('#lastbox').classList.toggle('hide',!has);
+ if(has)$('#lastt').innerHTML=`<table><tr><th>Last order</th><th>Quantity</th><th>Unit price</th><th>Job nature</th><th>Base material</th><th>Times ordered</th></tr><tr><td>${esc(v.d)}</td><td>${fmt(v.q)} ${esc(v.unit||cur.un)}</td><td>${fmt(v.p)}</td><td>${esc(v.nat)}</td><td>${esc(v.base)}</td><td>${v.n}</td></tr></table>`;
+ $('#qty').value=has?v.q:(cur.mq||'');$('#unit').value=cur.un||L.unit;$('#price').value=has?v.p:(cur.l.p||'');
+ pre('#pq',has);pre('#pp',has);pre('#pn',has);pre('#pa',has);pre('#pd',has);pre('#ps',has);
+ sel('#nat',has?'Reorder':'New Order');if(has&&v.nat)sel('#nat',v.nat);
+ sel('#art',L.art||'Available');sel('#dye',L.dye?L.dye.replace('Avaialble','Available'):'Available');sel('#scr',L.scr||'Available');
+ const m=MD[L.mdiv||cur.l.mdiv]||{};$('#wDye').classList.toggle('hide',!m.dye);$('#wScr').classList.toggle('hide',!m.scr);
+ $('#showhide').textContent=`Shown for ${L.mdiv||cur.l.mdiv}: artwork${m.dye?', dye cutter':''}${m.scr?', screen / plate':''}. Hidden for this division: ${[!m.dye&&'dye cutter',!m.scr&&'screen / plate'].filter(Boolean).join(', ')||'none'}. Material, division and job number are set by production.`;
+ const t=new Date();t.setDate(t.getDate()+(has?10:14));$('#due').value=t.toISOString().slice(0,10);$('#notes').value='';
+}
+// ---- cart
+function renderCart(){$('#oc').textContent=cart.length?`(${cart.length} line${cart.length>1?'s':''})`:'';
+ $('#cart').innerHTML=cart.length?`<table><tr><th>Item</th><th>Customer</th><th>Qty</th><th>Price</th><th>Required</th><th>Job</th><th></th></tr>${cart.map((l,k)=>`<tr><td>${esc(l.name)}</td><td>${esc(l.cust)}</td><td>${fmt(l.qty)} ${esc(l.unit)}</td><td>${fmt(l.price)}</td><td>${esc(l.due)}</td><td>${esc(l.nat)}</td><td><button class="s" data-r="${k}">Remove</button></td></tr>`).join('')}</table>`:'<div class="empty">No lines yet.</div>';
+ $('#cart').querySelectorAll('[data-r]').forEach(b=>b.onclick=()=>{cart.splice(+b.dataset.r,1);renderCart()});$('#send').disabled=!cart.length}
+$('#addl').onclick=()=>{if(!cur||!curC)return;const qty=+$('#qty').value;if(!(qty>0)){$('#qty').focus();return}
+ const v=cur.c[curC],L=v||cur.l;
+ cart.push({id:cur.id,name:cur.n,cust:curC,newcust:!v,qty,unit:$('#unit').value,price:+$('#price').value||0,due:$('#due').value,nat:$('#nat').value,art:$('#art').value,dye:$('#wDye').classList.contains('hide')?'':$('#dye').value,scr:$('#wScr').classList.contains('hide')?'':$('#scr').value,notes:$('#notes').value,
+  mdiv:L.mdiv||cur.l.mdiv,div:L.div||cur.l.div,base:L.base||cur.l.base,oth:L.oth||'',typ:L.typ||'Customized Order'});renderCart();reset()};
+$('#send').onclick=()=>{const o={no:'ORD-'+String(orders.length+1).padStart(4,'0'),by:$('#who').value,at:new Date().toISOString().slice(0,16).replace('T',' '),ref:$('#ref').value,lines:cart,status:'New'};
+ orders.push(o);ls.set('copd_orders',orders);cart=[];renderCart();$('#ref').value='';$('#sendmsg').textContent=`${o.no} sent. It is now on the production manager screen.`;qc()}
+function qc(){const n=orders.filter(o=>o.status==='New').length;$('#qc').textContent=n?`(${n})`:''}
+// ---- manager
+function renderMgr(){qc();renderReqs();$('#queue').innerHTML=orders.length?`<table><tr><th>Order</th><th>From</th><th>Lines</th><th>Status</th></tr>${orders.map((o,k)=>`<tr style="cursor:pointer" data-o="${k}"><td><b>${o.no}</b><div class="ghost mini">${o.at}</div></td><td>${esc(o.by)}</td><td>${o.lines.length}</td><td><span class="badge ${o.status==='New'?'b-w':'b-ok'}">${o.status==='New'?(o.lines.some(l=>l.pending)?'Waiting for item':'New'):'SO created'}</span></td></tr>`).join('')}</table>`:'<div class="empty">No orders yet. Send one from the Sales person tab.</div>';
+ $('#queue').querySelectorAll('[data-o]').forEach(r=>r.onclick=()=>{selOrder=+r.dataset.o;mgrDetail()});if(selOrder!=null&&orders[selOrder])mgrDetail()}
+function opts(arr,v){const a=[...new Set([v,...arr].filter(Boolean))];return a.map(x=>`<option ${x===v?'selected':''}>${esc(x)}</option>`).join('')}
+function mgrDetail(){const o=orders[selOrder];const done=o.status!=='New';
+ $('#mgrDetail').innerHTML=`<h2>${o.no} <span class="ghost mini">from ${esc(o.by)}${o.ref?' | SH ref '+esc(o.ref):''}</span></h2>`+o.lines.map((l,k)=>`<div class="card" style="background:#fafcfd"><b>${esc(l.name)}</b> <span class="ghost">for ${esc(l.cust)}</span>${l.newcust?' <span class="badge b-new">new customer</span>':''}
+ <div class="mini">${fmt(l.qty)} ${esc(l.unit)} | price ${fmt(l.price)} | required ${esc(l.due)} | ${esc(l.nat)} | artwork ${esc(l.art)}${l.dye?' | dye '+esc(l.dye):''}${l.scr?' | screen '+esc(l.scr):''}${l.notes?' | note: '+esc(l.notes):''}</div>
+ <div class="grid" style="margin-top:8px"><div><label>Manufacturing division <span class="pre">pre-filled</span></label><select data-k="${k}" data-f="mdiv" ${done?'disabled':''}>${opts(Object.keys(MD),l.mdiv)}</select></div>
+ <div><label>Base material <span class="pre">pre-filled</span></label><select data-k="${k}" data-f="base" ${done?'disabled':''}>${opts(D.mats,l.base)}</select></div>
+ <div><label>Additional material</label><select data-k="${k}" data-f="oth" ${done?'disabled':''}><option value=""></option>${opts(D.oth,l.oth)}</select></div>
+ <div><label>Order type</label><select data-k="${k}" data-f="typ" ${done?'disabled':''}>${opts(['Customized Order','Ex Stock','Make to Order (MTO)','Internal SH Order'],l.typ)}</select></div></div></div>`).join('')+
+ (done?`<div class="badge b-ok" style="font-size:14px">Sales order ${o.so} created in Zoho (simulated)</div><h2 style="margin-top:12px">Payload that would be written</h2><pre>${esc(JSON.stringify(payload(o),null,1))}</pre>`:`<div class="row"><button class="g" id="mk" ${o.lines.some(l=>l.pending)?'disabled':''}>Create SO in Zoho</button>${o.lines.some(l=>l.pending)?'<span class="note">Waiting: create the requested item first (Requests card below).</span>':''}<span class="note">The only write to Zoho. One click creates the sales order from the lines above (simulated here).</span></div>`);
+ $('#mgrDetail').querySelectorAll('select[data-k]').forEach(s=>s.onchange=()=>{o.lines[+s.dataset.k][s.dataset.f]=s.value;ls.set('copd_orders',orders)});
+ const mk=$('#mk');if(mk)mk.onclick=()=>{o.status='SO created';o.so='JOBORDER-'+(9000+selOrder+Math.floor(Math.random()*90));ls.set('copd_orders',orders);renderMgr()}}
+function payload(o){return{customer_name:'Standard Holdings (Pvt) Ltd',salesperson_name:'Internal for SH',date:o.at.slice(0,10),delivery_method:'INTERNAL',custom_fields:{'CF.SH Sales Order Ref':o.ref||o.no,'CF.Job No':o.so},
+ line_items:o.lines.map(l=>({item_id:l.id,name:l.name,quantity:l.qty,rate:l.price,unit:l.unit,warehouse:'SPS Work In Progress',division:l.div,expected_shipment_date:l.due,
+ custom_fields:{'CF.Order Received from':l.cust,'CF.Order Type':l.typ,'CF.Manufacturing Division':l.mdiv,'CF.Job Nature':l.nat,'CF.Base Material to be Used':l.base,'CF.Additional Other Material to be Used':l.oth,'CF.Artwork Availability':l.art,'CF.Dye Cutter Availability':l.dye,'CF.Screen / Plate Available':l.scr}}))}}
+$('#seed').onclick=()=>{const pk=D.items.filter(i=>Object.keys(i.c).length).sort((a,b)=>b.ln-a.ln).slice(2,40);[0,7,15].forEach((x,n)=>{const i=pk[x],c=Object.keys(i.c)[0],v=i.c[c];
+ orders.push({no:'ORD-'+String(orders.length+1).padStart(4,'0'),by:D.sps[n%D.sps.length],at:'2026-10-18 09:'+(10+n*7),ref:'',status:'New',lines:[{id:i.id,name:i.n,cust:c,newcust:false,qty:v.q,unit:i.un,price:v.p,due:'2026-11-01',nat:v.nat||'Reorder',art:v.art||'Available',dye:v.dye||'',scr:v.scr||'',notes:'',mdiv:v.mdiv,div:v.div,base:v.base,oth:v.oth,typ:v.typ||'Customized Order'}]})});ls.set('copd_orders',orders);renderMgr()};
+$('#wipe').onclick=()=>{orders=[];selOrder=null;ls.set('copd_orders',orders);$('#mgrDetail').innerHTML='<div class="empty">Select an order on the left.</div>';renderMgr()};
+// ---- field map
+$('#mapbody').innerHTML=`<p>From the 7,715 order lines on customized items in the 16 Sep export. Zoho item variants are not used (0 items), so each size or colour is its own item; the portal groups them by product name.</p>
+<table><tr><th>Field (Zoho)</th><th>Who fills it</th><th>When shown</th><th>Pre-filled from</th><th>Filled in the data</th></tr>
+<tr><td>Item, quantity, unit, price</td><td>Sales</td><td>Quantity, unit, price after item + customer</td><td>Last order for this item and customer</td><td>100%</td></tr>
+<tr><td>CF.Order Received from (end customer)</td><td>Sales</td><td>Always</td><td>Customers who ordered the item</td><td>100% (626 names)</td></tr>
+<tr><td>Required by (Expected Shipment Date)</td><td>Sales</td><td>After item</td><td>Today + 10 days (reorder) or 14 (new)</td><td>65%</td></tr>
+<tr><td>CF.Job Nature</td><td>Sales</td><td>After item + customer</td><td>Reorder if the customer has ordered it, else New Order</td><td>97% (Reorder 72%, New 24%)</td></tr>
+<tr><td>CF.Artwork Availability</td><td>Sales confirms</td><td>Always after item</td><td>Last order</td><td>100%</td></tr>
+<tr><td>CF.Dye Cutter Availability</td><td>Sales confirms</td><td>OPD, PCU, MOBA, CPU, FPP</td><td>Last order</td><td>100%</td></tr>
+<tr><td>CF.Screen / Plate Available</td><td>Sales confirms</td><td>OPD, SHPS</td><td>Last order</td><td>100%</td></tr>
+<tr><td>CF.Manufacturing Division, Division</td><td>Production (pre-filled)</td><td>Manager screen</td><td>Item's usual division</td><td>100% / 86%</td></tr>
+<tr><td>CF.Base Material to be Used</td><td>Production (pre-filled)</td><td>Manager screen</td><td>Last order of the item (353 different materials in use)</td><td>100%</td></tr>
+<tr><td>CF.Additional Other Material</td><td>Production</td><td>Manager screen</td><td>Last order</td><td>6% (mostly OPD inks)</td></tr>
+<tr><td>CF.Order Type</td><td>Production</td><td>Manager screen</td><td>Customized Order (95%)</td><td>100%</td></tr>
+<tr><td>CF.Job No, CF.SH Sales Order Ref</td><td>System / production</td><td>On create</td><td>Job number generated; SH ref typed by sales if they have one</td><td>100%</td></tr>
+<tr><td>Customer / Sales person on the SPS SO</td><td>System</td><td>Hidden</td><td>Always Standard Holdings (Pvt) Ltd / Internal for SH</td><td>99.97%</td></tr>
+<tr><td>CF.Clickup Link</td><td>Dropped</td><td>-</td><td>Only 14% filled; the portal replaces it</td><td>14%</td></tr></table>`;
+
+// ================= new customer / new item =================
+let reqs=ls.get('copd_reqs')||{c:[],i:[]};const saveR=()=>ls.set('copd_reqs',reqs);
+const norm=s=>words(s).filter(w=>!['pvt','ltd','private','limited','the','co','lanka','sri','cash','tc'].includes(w)).join(' ');
+function sim(a,b){const A=new Set(norm(a).split(' ').filter(Boolean)),B=new Set(norm(b).split(' ').filter(Boolean));if(!A.size||!B.size)return 0;let n=0;A.forEach(x=>B.has(x)&&n++);return n/Math.max(A.size,B.size)}
+const show=(id,on)=>$(id).classList.toggle('hide',!on);
+$('#lnC').onclick=e=>{e.preventDefault();show('#pCust',1);show('#pItem',0);$('#nbSP').value=$('#who').value;$('#ncName').value=$('#cq').value||'';ncDup();$('#ncName').focus()};
+$('#lnI').onclick=e=>{e.preventDefault();show('#pItem',1);show('#pCust',0);$('#niTag').value=curC||$('#cq').value||'';niName();$('#niBase').value=cur?cur.n:'';if(cur)niPick(cur)};
+$('#ncCancel').onclick=()=>show('#pCust',0);$('#niCancel').onclick=()=>show('#pItem',0);
+let ncMatches=[];
+function ncDup(){const n=$('#ncName').value.trim();ncMatches=[];if(n.length>=3){const pool=[...D.cust.map(c=>[c,'end customer']),...reqs.c.map(r=>[r.name,'new, pending'])];ncMatches=pool.map(([c,k])=>[c,k,sim(n,c)]).filter(x=>x[2]>=0.6).sort((a,b)=>b[2]-a[2]).slice(0,5)}
+ $('#ncDup').innerHTML=ncMatches.length?`<b style="color:var(--warn)">Possible duplicates:</b> ${ncMatches.map(m=>`${esc(m[0])} <span class="ghost">(${m[1]})</span> <a href="#" data-use="${esc(m[0])}">use this</a>`).join(' | ')}`:(n.length>=3?'<span style="color:var(--ok)">No similar customer found.</span>':'');
+ show('#ncDiffW',ncMatches.length>0)}
+$('#ncName').oninput=ncDup;$('#ncDup').addEventListener('click',e=>{const a=e.target.closest('[data-use]');if(a){e.preventDefault();show('#pCust',0);if(cur)pickCust(a.dataset.use)}});
+let bhits=[];
+$('#ncBill').oninput=()=>{const w=words($('#ncBill').value);if(!w.length){show('#ncBl',0);return}bhits=D.bill.filter(b=>w.every(x=>b[0].toLowerCase().includes(x))).slice(0,10);
+ $('#ncBl').innerHTML=bhits.map((b,k)=>`<div data-k="${k}">${esc(b[0])}<small>sales: ${esc(b[1]||'-')} | BU ${esc(b[2]||'-')}</small></div>`).join('')+'<div data-new="1">Not in Zoho yet: request a new SH customer<small>opens the customer-master request fields</small></div>';show('#ncBl',1)};
+$('#ncBl').addEventListener('mousedown',e=>{const d=e.target.closest('div');if(!d)return;if(d.dataset.new){show('#ncNewBill',1);$('#nbName').value=$('#ncName').value;$('#ncBill').value='(new SH customer requested)'}else{const b=bhits[+d.dataset.k];$('#ncBill').value=b[0];show('#ncNewBill',0)}show('#ncBl',0)});
+$('#ncSave').onclick=()=>{const n=$('#ncName').value.trim();if(!n){$('#ncMsg').textContent='Enter the customer name.';return}if(ncMatches.length&&!$('#ncDiff').checked){$('#ncMsg').textContent='Similar customers exist. Use one, or tick "different customer".';return}
+ const nb=!$('#ncNewBill').classList.contains('hide');const r={id:'C'+(reqs.c.length+1),name:n,billing:$('#ncBill').value,newBilling:nb?{name:$('#nbName').value||n,type:$('#nbType').value,bu:$('#nbBU').value,sp:$('#nbSP').value,pay:$('#nbPay').value,vat:$('#nbVat').value,vn:$('#nbVn').value,ph:$('#nbPh').value,em:$('#nbEm').value,ad:$('#nbAd').value}:null,by:$('#who').value,status:'Pending'};
+ reqs.c.push(r);saveR();D.cust.unshift(n);show('#pCust',0);if(cur){$('#cq').disabled=false;pickCust(n)}$('#hint').textContent='';$('#sendmsg').textContent=`Customer "${n}" saved${nb?' and a new SH billing customer was requested':''}. You can order for it now.`};
+// ---- new item
+let niBase=null,nmode='copy';
+document.querySelectorAll('input[name=nim]').forEach(r=>r.onchange=()=>{nmode=r.value;show('#niCopy',nmode==='copy');show('#niNew',nmode==='new');niName()});
+let nbhits=[];
+$('#niBase').oninput=()=>{const w=words($('#niBase').value);if(!w.length){show('#niBl',0);return}nbhits=D.items.filter(i=>w.every(x=>i._s.includes(x))).sort((a,b)=>b.ln-a.ln).slice(0,10);$('#niBl').innerHTML=nbhits.map((i,k)=>`<div data-k="${k}">${esc(i.n)}<small>${i.ln} orders in 12 months</small></div>`).join('');show('#niBl',1)};
+$('#niBl').addEventListener('mousedown',e=>{const d=e.target.closest('[data-k]');if(d){niPick(nbhits[+d.dataset.k]);show('#niBl',0)}});
+function niPick(i){niBase=i;$('#niBase').value=i.n;$('#niSize').value='';
+ $('#niBom').innerHTML=`<div class="chips">${Object.entries(i.a).map(([k,x])=>`<span class="chip">${esc(k)}: <b>${esc(x)}</b></span>`).join('')}<span class="chip">Made by: <b>${esc(i.l.mdiv)}</b></span></div><div class="note">Recipe (BOM) copied from this product, ${i.b.length} lines. Production checks the quantities before creating the item.</div>
+ <table class="mini"><tr><th>Component</th><th>Qty per piece</th><th>Unit</th><th>Type</th></tr>${i.b.slice(0,14).map(b=>`<tr><td>${esc(b[0])}</td><td>${b[1]}</td><td>${esc(b[2])}</td><td>${b[3]?'cost (labour, power)':'material'}</td></tr>`).join('')}</table>`;niName()}
+['#niTag','#niSize','#nnSize','#nnMat','#nnKind','#nnCol'].forEach(s=>$(s).addEventListener('input',niName));
+function niName(){let nm='';const tag=$('#niTag').value.trim();
+ if(nmode==='copy'&&niBase){let b=niBase.n.replace(/\s*\([^()]*\)\s*$/,'');const sz=$('#niSize').value.trim();if(sz&&niBase.a.Size)b=b.replace(niBase.a.Size.split(' / ')[0],sz);else if(sz)b+=' '+sz;nm=b+(tag?` (${tag})`:'')}
+ else if(nmode==='new'){nm=`SP-${$('#nnSize').value.trim()} ${$('#nnMat').value.trim()} ${$('#nnKind').value}`.replace(/\s+/g,' ').trim()+(tag?` (${tag})`:'')}
+ $('#niName').value=nm;const k=norm(nm),dup=nm&&D.items.find(i=>norm(i.n)===k);
+ $('#niDup').innerHTML=dup?`<b style="color:var(--bad)">This item already exists:</b> ${esc(dup.n)} <a href="#" id="useDup">order that one instead</a>`:(nm?'<span style="color:var(--ok)">No item with this name yet.</span>':'')}
+$('#niDup').addEventListener('click',e=>{if(e.target.id==='useDup'){e.preventDefault();const k=norm($('#niName').value),d=D.items.find(i=>norm(i.n)===k);show('#pItem',0);pickItem(d)}});
+$('#niSave').onclick=()=>{const nm=$('#niName').value.trim();if(!nm||$('#niDup').innerText.includes('already exists')){$('#niMsg').textContent=nm?'That name exists. Order the existing item.':'Pick a product to copy or fill the product fields.';return}
+ const r={id:'I'+(reqs.i.length+1),mode:nmode,name:nm,base:niBase&&nmode==='copy'?niBase.id:'',bom:nmode==='copy'&&niBase?niBase.b.map(x=>[...x]):[],mdiv:niBase&&nmode==='copy'?niBase.l.mdiv:'',unit:niBase?niBase.un:'pcs',
+  tag:$('#niTag').value,qty:+$('#niQty').value||0,due:$('#niDue').value,notes:$('#niNotes').value,spec:nmode==='new'?{kind:$('#nnKind').value,size:$('#nnSize').value,mat:$('#nnMat').value,col:$('#nnCol').value,art:$('#nnArt').files[0]?.name||'',sample:$('#nnSmp').value}:null,by:$('#who').value,status:'Requested',zid:''};
+ reqs.i.push(r);saveR();
+ if($('#niAdd').checked){cart.push({id:'PENDING:'+r.id,name:nm+'  [item requested]',cust:curC||$('#niTag').value,newcust:!curC,qty:r.qty||1,unit:r.unit,price:0,due:r.due,nat:'New Order',art:'Not Available',dye:'',scr:'',notes:r.notes,mdiv:r.mdiv,div:'',base:'',oth:'',typ:'Customized Order',pending:r.id});renderCart()}
+ show('#pItem',0);$('#sendmsg').textContent=`Item request ${r.id} sent to production${$('#niAdd').checked?' and added to your order (it waits for the item)':''}.`};
+// ---- manager: requests
+function renderReqs(){const el=$('#reqs');if(!reqs.c.length&&!reqs.i.length){el.innerHTML='<div class="empty">None.</div>';return}
+ let h='';if(reqs.c.length)h+=`<h2 style="font-size:13px">New customers</h2><table><tr><th>Customer</th><th>Invoiced to</th><th>By</th><th>Status</th><th></th></tr>${reqs.c.map((r,k)=>`<tr><td><b>${esc(r.name)}</b></td><td>${r.newBilling?`<span class="badge b-new">new SH customer</span> ${esc(r.newBilling.name)}<div class="ghost mini">${esc(r.newBilling.type)} | BU ${r.newBilling.bu} | ${esc(r.newBilling.sp)} | ${esc(r.newBilling.pay)} | VAT ${esc(r.newBilling.vat)} ${esc(r.newBilling.vn)}</div>`:esc(r.billing||'-')}</td><td>${esc(r.by)}</td><td><span class="badge ${r.status==='Pending'?'b-w':'b-ok'}">${r.status}</span></td><td>${r.status==='Pending'&&r.newBilling?`<button class="s" data-cd="${k}">Mark created in SH Zoho</button>`:''}</td></tr>`).join('')}</table>`;
+ if(reqs.i.length)h+=`<h2 style="font-size:13px;margin-top:12px">New items</h2>`+reqs.i.map((r,k)=>`<div class="card" style="background:#fafcfd"><div class="row"><b>${esc(r.name)}</b><span class="badge ${r.status==='Requested'?'b-w':'b-ok'}">${r.status==='Requested'?'Waiting for item':'Item created'}${r.zid?' '+r.zid:''}</span><span class="ghost mini">${r.mode==='copy'?'copy of an existing product':'brand-new product'} | by ${esc(r.by)}${r.qty?' | first order '+fmt(r.qty):''}${r.due?' | by '+esc(r.due):''}</span></div>
+ ${r.spec?`<div class="mini">Spec: ${esc(r.spec.kind)}, ${esc(r.spec.size)}, ${esc(r.spec.mat)}, ${esc(r.spec.col)}${r.spec.art?', artwork '+esc(r.spec.art):''}, sample: ${esc(r.spec.sample)}</div>`:''}${r.notes?`<div class="mini">Note: ${esc(r.notes)}</div>`:''}
+ ${r.status==='Requested'?`<div class="grid" style="margin-top:8px"><div><label>Item name</label><input data-ik="${k}" data-f="name" value="${esc(r.name)}"></div><div><label>Business unit (BU)</label><select data-ik="${k}" data-f="bu">${D.meta.bu.map(b=>`<option>${esc(b[0])}</option>`).join('')}</select></div><div><label>Finished-good nature</label><select data-ik="${k}" data-f="nat"><option>NA</option>${D.meta.nat.filter(x=>x!=='NA').map(x=>`<option>${esc(x)}</option>`).join('')}</select></div><div><label>Unit</label><select data-ik="${k}" data-f="unit">${opts(D.meta.unit,r.unit)}</select></div><div><label>Manufacturing division</label><select data-ik="${k}" data-f="mdiv">${opts(Object.keys(MD),r.mdiv)}</select></div></div>
+ <div class="note">Fixed on creation: Finished Good Type = Customized, sub-category follows the BU (SHP gives FG SHP, PACPRO gives FG PACPRO and so on), item type composite. ${r.bom.length?`Recipe: ${r.bom.length} lines copied; edit quantities in Zoho or here.`:'No recipe yet: costing builds it.'}</div>
+ ${r.bom.length?`<table class="mini"><tr><th>Component</th><th>Qty</th><th>Unit</th></tr>${r.bom.slice(0,16).map((b,j)=>`<tr><td>${esc(b[0])}</td><td><input type="number" step="any" style="width:110px" data-ik="${k}" data-b="${j}" value="${b[1]}"></td><td>${esc(b[2])}</td></tr>`).join('')}</table>`:''}
+ <div class="row" style="margin-top:8px"><button class="g" data-ic="${k}">Create item in Zoho</button><span class="note">API write: creates the composite item with the recipe. Price comes from costing, not from sales.</span></div>`:''}</div>`).join('');
+ el.innerHTML=h;
+ el.querySelectorAll('[data-cd]').forEach(b=>b.onclick=()=>{reqs.c[+b.dataset.cd].status='Created';saveR();renderReqs()});
+ el.querySelectorAll('input[data-ik],select[data-ik]').forEach(x=>x.onchange=()=>{const r=reqs.i[+x.dataset.ik];if(x.dataset.b!==undefined)r.bom[+x.dataset.b][1]=+x.value;else r[x.dataset.f]=x.value;saveR()});
+ el.querySelectorAll('[data-ic]').forEach(b=>b.onclick=()=>{const r=reqs.i[+b.dataset.ic];r.status='Created';r.zid='4892105000'+String(900000+Math.floor(Math.random()*99999));saveR();
+  D.items.unshift({id:r.zid,n:r.name,sku:'',sp:r.by,cu:'',un:r.unit,ln:0,mq:r.qty||0,a:{},f:'',t:r.tag,l:{d:'',q:'',p:'',base:'',oth:'',art:'Available',dye:'',scr:'',nat:'New Order',typ:'Customized Order',mdiv:r.mdiv,div:'',unit:r.unit},c:{},b:r.bom,_s:r.name.toLowerCase().replace(/[^a-z0-9]+/g,' ')});
+  orders.forEach(o=>o.lines.forEach(l=>{if(l.pending===r.id){l.id=r.zid;l.name=r.name;delete l.pending}}));ls.set('copd_orders',orders);renderMgr()})}
+renderCart();qc();
+</script></body></html>

@@ -1,0 +1,5 @@
+lines,lines_share,orders,orders_share,lines_per_week,orders_per_week,kinds,customized_lines_per_week,stage,sh_customers,top_items,customer_orders_per_week_12m,customer_orders_per_week_last8w
+2385,0.301,1046,0.4,576.0,252.0,"{'bought-in': 1335, 'customized': 550, 'made-for-stock (SPS)': 353, 'unknown source': 142, 'unmatched': 5}",133.0,S1,7,20,110.0,121.0
+3847,0.486,1525,0.583,929.0,368.0,"{'bought-in': 2416, 'customized': 780, 'made-for-stock (SPS)': 419, 'unknown source': 147, 'unmatched': 53, 'service': 32}",188.0,S2,22,50,173.0,196.0
+4688,0.592,1786,0.682,1132.0,431.0,"{'bought-in': 3178, 'customized': 826, 'made-for-stock (SPS)': 450, 'unknown source': 147, 'unmatched': 55, 'service': 32}",199.0,S3,26,100,186.0,212.0
+7214,0.911,2471,0.944,1741.0,596.0,"{'bought-in': 5034, 'customized': 1175, 'made-for-stock (SPS)': 572, 'unknown source': 254, 'service': 97, 'unmatched': 82}",284.0,S4,1166,200,542.0,598.0

@@ -1,0 +1,213 @@
+
+<!-- ============ PAGE 1 ============ -->
+<section class="page">
+<header class="hd"><div class="brand"><i>I</i>IT<span>Conduit</span></div><div class="meta">21 Oct 2026 · Order Portal + Production Dashboard</div></header>
+<div class="hero">
+  <div>
+    <p class="eyebrow">Joint demo plan · both systems, every kind of item, live data</p>
+    <h1>Both systems in one demo <em>by about 12 Nov</em></h1>
+    <p class="sub">I checked where both builds stand, mapped how every kind of item moves from order to dispatch, analysed recent sales, and wrote a joint demo spec with safe defaults for the open questions. After the demo, the scope widens and one update ships every Sunday for four weeks.</p>
+  </div>
+  <div class="stamp"><small>Demo window</small><b>6–17 Nov</b></div>
+</div>
+<div class="tiles four">
+  <div class="tile"><b>~640</b><span>SH orders a week (+11% on the previous 3 months)</span></div>
+  <div class="tile"><b>~72</b><span>SPS job orders a week, about 12 every working day</span></div>
+  <div class="tile"><b>69 / 17 / 8%</b><span>of SH order lines: bought-in / customized / made-for-stock</span></div>
+  <div class="tile"><b class="red">19%</b><span>of SH orders mix customized and bought-in lines</span></div>
+</div>
+
+<div class="sec"><h2>Where the two builds stand</h2><small>first plan of 28 Sep vs today</small></div>
+<table class="rep">
+<colgroup><col style="width:190px"><col style="width:80px"><col></colgroup>
+<thead><tr><th>Piece</th><th>Status</th><th>Where it stands on 21 Oct</th></tr></thead>
+<tbody>
+<tr><td>Dashboard: Zoho sync, jobs, ticks, Send next, admin</td><td><span class="st done">built</span></td><td>Server built 9 Oct. On the clean 9 Oct code 357 of 425 tests pass and 31 fail (17 with the unsaved sign-in work); the causes are being diagnosed tonight before any fix.</td></tr>
+<tr><td>Dashboard: screens for managers</td><td><span class="st no">not yet</span></td><td>The web app is a placeholder page. The 17 Oct demo date in the October plan was missed.</td></tr>
+<tr><td>Order Portal</td><td><span class="st part">spec ready</span></td><td>Spec READY for its first two parts (foundation + order → production → approval); no code yet.</td></tr>
+<tr><td>Live Zoho access (SPS)</td><td><span class="st part">in progress</span></td><td>Signed in as itexe@ on 21 Oct; the read-only key is being created by you now.</td></tr>
+<tr><td>Public, approval-only website</td><td><span class="st chg">designed</span></td><td>Email code + admin approval + saved browser; two security reviews done; final fixes before it is built (v0.3).</td></tr>
+</tbody></table>
+<p class="note"><b>Why the first plan slipped:</b> the dashboard scope grew from "view only" to the full release in one step (8 Oct), the design went onto a browser add-on, and the live Zoho key was never created. The server work is real and tested; the screens are what is missing. The joint demo fixes this by building the two screen sets in parallel.</p>
+<footer class="ft"><span>Joint demo plan · page 1</span><span>Prepared by Abdul Hadhee | IT Executive</span></footer>
+</section>
+
+<!-- ============ PAGE 2 ============ -->
+<section class="page">
+<header class="hd"><div class="brand"><i>I</i>IT<span>Conduit</span></div><div class="meta">21 Oct 2026 · Order Portal + Production Dashboard</div></header>
+<div class="sec"><h2>Every item, start to end</h2><small>three kinds of item, one order screen</small></div>
+
+<div class="flowlabel">Customized (made to order by SPS) — 12–17% of SH lines</div>
+<div class="lane">
+  <div class="b blu"><b>Portal order</b>sales person</div><div class="ar">→</div>
+  <div class="b blu"><b>Decide</b>Rizwan's team: production</div><div class="ar">→</div>
+  <div class="b blu"><b>Accept + approve</b>coordinator, manager, Job No</div><div class="ar">→</div>
+  <div class="b dark"><b>SPS job order</b>in Zoho</div><div class="ar">→</div>
+  <div class="b grn"><b>Dashboard</b>MacPro → PackPro → … ticks from Zoho</div><div class="ar">→</div>
+  <div class="b"><b>SPS → SH invoice</b>stock at Kohalwila</div>
+</div>
+<div class="flowlabel">Made-for-stock by SPS (straws, cling film, plain cups) — 8%</div>
+<div class="lane">
+  <div class="b blu"><b>Portal order</b>sales person</div><div class="ar">→</div>
+  <div class="b blu"><b>Decide</b>from stock</div><div class="ar">→</div>
+  <div class="b"><b>Pick at Kohalwila</b>in Zoho</div><div class="ar">→</div>
+  <div class="b"><b>Top-up job</b>Ex Stock job order (PSU, RWU…)</div><div class="ar">→</div>
+  <div class="b grn"><b>Dashboard</b>the unit's My jobs</div>
+</div>
+<div class="flowlabel">Bought-in (import or local supplier, resold) — 69%</div>
+<div class="lane">
+  <div class="b blu"><b>Portal order</b>sales person</div><div class="ar">→</div>
+  <div class="b blu"><b>Decide</b>from stock, or "to purchase"</div><div class="ar">→</div>
+  <div class="b"><b>Purchase order</b>purchasing (local ~8 days, import ~37)</div><div class="ar">→</div>
+  <div class="b"><b>Receive</b>GRN at Kohalwila</div><div class="ar">→</div>
+  <div class="b"><b>Pick</b>in Zoho</div>
+</div>
+<div class="flowlabel">All three end the same way — the goods gatepass project (after 25 Nov)</div>
+<div class="lane">
+  <div class="b"><b>SH sales order</b></div><div class="ar">→</div><div class="b"><b>Pick list</b></div><div class="ar">→</div><div class="b"><b>Package</b></div><div class="ar">→</div><div class="b"><b>Shipment</b></div><div class="ar">→</div><div class="b"><b>Invoice</b></div><div class="ar">→</div><div class="b"><b>Gate pass</b>today in ClickUp</div>
+</div>
+<p class="note"><b>Blue</b> = the Order Portal · <b>green</b> = the Production Dashboard · <b>black</b> = Zoho. Today nothing links an SH order to the SPS job that makes it; the portal writes that link (Portal Ref) on every job order it creates. v0.1 shows the customized path end to end; the stock and to-purchase choices per line arrive in v0.2.</p>
+<footer class="ft"><span>Joint demo plan · page 2</span><span>Prepared by Abdul Hadhee | IT Executive</span></footer>
+</section>
+
+<!-- ============ PAGE 3 ============ -->
+<section class="page">
+<header class="hd"><div class="brand"><i>I</i>IT<span>Conduit</span></div><div class="meta">21 Oct 2026 · Order Portal + Production Dashboard</div></header>
+<div class="sec"><h2>What the recent data says</h2><small>saved Zoho exports to 18 Oct; quantities and counts, no money figures</small></div>
+<div class="two">
+  <div class="col" style="border:1px solid var(--line)"><h3>Trends</h3><ul>
+    <li>SH orders: about 2,900 a month since June; Jun–Aug 2026 is <b>+11%</b> on Mar–May and <b>+28%</b> on Jun–Aug 2025.</li>
+    <li>SPS job orders: 250–340 a month; last 8 weeks 72.6 a week (customized 57, ex-stock 10, internal SH 5).</li>
+    <li><b>Ex-stock job orders halved</b> from Sep 2025, while "Internal SH Order" rose from about 3 to 32 a month.</li>
+    <li><b>CPU woke up in July 2026</b> (0–3 a month → about 60), almost all Spar and Keells packing.</li>
+  </ul></div>
+  <div class="col" style="border:1px solid var(--line)"><h3>Highest sellers (SH, 4 weeks)</h3><ul>
+    <li>Wooden Spoon 16cm (261 lines) · Aluminium Lava Cake Cup (192) · Paper White Straw 6mm (128) · Wooden Fork (123) · 450ml AF Container (112).</li>
+    <li>Top 20 items = 24% of lines; top 100 = 48%.</li>
+    <li>SPS customized items are a long tail: no item has more than 14 job-order lines a year.</li>
+  </ul></div>
+</div>
+<div class="sec"><h2>Key customers</h2><small>your 8, in your order</small></div>
+<table class="rep">
+<colgroup><col style="width:150px"><col style="width:120px"><col style="width:170px"><col></colgroup>
+<thead><tr><th>Customer</th><th>SPS job orders (12 m)</th><th>Made at</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>Pizza Hut + Taco Bell</td><td>6 + 69</td><td>OPD (PackPro, MacPro)</td><td>One SH account (Gamma): 372 SH orders in 4 weeks, all three kinds, 31% mixed, 92% picked at Kohalwila.</td></tr>
+<tr><td>Keells</td><td>39</td><td>CPU, OPD</td><td>Lumpy: 0–15 lines a month.</td></tr>
+<tr><td>Spar</td><td>98</td><td>CPU, OPD</td><td>2 lines in the 6 months before July, 95 since (packing at CPU).</td></tr>
+<tr><td>Street Burger</td><td>38</td><td>OPD</td><td>Down 26% on the previous 6 months.</td></tr>
+<tr><td>Norfolk</td><td>—</td><td>—</td><td>SH customer only.</td></tr>
+<tr><td>Marriott Weligama / Courtyard</td><td>4 / 6</td><td>OPD</td><td>Courtyard has no SH account.</td></tr>
+</tbody></table>
+<p class="note"><b>Rising fast:</b> KARABU and MY PIZZA (SPS); Hotel Developers Lanka, Mr. Burger and Serenia (SH). <b>Load for the systems:</b> SH creates about 122 orders a working day (peak 230), about 15 in the busiest hour; SPS about 12 job orders a day (busiest 33). Customized jobs take a median 10.9 days to the first package. Die cutter is "Not Available" on 22% of customized orders at order time, artwork on 9%. Account matches are my reading — please confirm.</p>
+<footer class="ft"><span>Joint demo plan · page 3</span><span>Prepared by Abdul Hadhee | IT Executive</span></footer>
+</section>
+
+<!-- ============ PAGE 4 ============ -->
+<section class="page">
+<header class="hd"><div class="brand"><i>I</i>IT<span>Conduit</span></div><div class="meta">21 Oct 2026 · Order Portal + Production Dashboard</div></header>
+<div class="sec"><h2>The filter: focus, not API saving</h2><small>honest finding</small></div>
+<p class="note">The full sync already fits SPS's limit of 7,500 calls a day: polling every 2 minutes uses about 1,800 a day (worst day about 4,700). A customer filter saves almost nothing, because most calls are the list checks. So I protect the limit with a <b>2-minute poll and a 4,500 cap</b>, and use your customer and unit lists to decide <b>which jobs the screens show</b> — the demo stays focused and every unit gets real jobs.</p>
+
+<div class="sec"><h2>Four stages over the demo month</h2><small>jobs a week each unit will see (12-month average)</small></div>
+<table class="rep">
+<colgroup><col style="width:150px"><col style="width:90px"><col style="width:90px"><col style="width:90px"><col style="width:90px"><col></colgroup>
+<thead><tr><th>Unit</th><th>S1 demo week</th><th>S2 Sunday 1</th><th>S3 Sunday 2</th><th>S4 Sunday 3</th><th>Fed by</th></tr></thead>
+<tbody>
+<tr><td><b>OPD</b> (MacPro, PackPro)</td><td>6.5</td><td>7.3</td><td>12.6</td><td>27.1</td><td>Taco Bell, Kiri Kopi, Street Burger…</td></tr>
+<tr><td><b>Screen printing</b></td><td>4.6</td><td>20.2</td><td>20.2</td><td>20.2</td><td>Blends, MY PIZZA, Malu Poke…</td></tr>
+<tr><td><b>Paper straws</b></td><td>6.1</td><td>6.1</td><td>6.1</td><td>6.1</td><td>whole unit (stock builds)</td></tr>
+<tr><td><b>Rewinding</b></td><td>4.5</td><td>4.5</td><td>4.5</td><td>4.5</td><td>whole unit (cling film)</td></tr>
+<tr><td><b>Paper cups</b></td><td>6.3</td><td>6.3</td><td>6.3</td><td>6.3</td><td>whole unit</td></tr>
+<tr><td><b>CPU</b></td><td>2.2</td><td>3.6</td><td>3.6</td><td>3.6</td><td>Spar, Keells</td></tr>
+<tr><td><b>MOBA punching</b></td><td>2.0</td><td>2.0</td><td>2.0</td><td>2.0</td><td>whole unit</td></tr>
+<tr><td>Lids · FPP · DPU · plates · cake wrappers</td><td>1.8</td><td>1.8</td><td>1.8</td><td>1.8</td><td>whole units — <b>thin at any stage</b></td></tr>
+<tr><td><b>All shown</b></td><td><b>~34</b></td><td><b>~52</b></td><td><b>~57</b></td><td><b>~72</b></td><td>S4 = everything</td></tr>
+</tbody></table>
+<p class="note"><b>Stage 1 lists:</b> 27 SPS customers (your key customers + 6 OPD and 12 screen-printing feeders) and whole units Straws, Rewinding, Cups, Punching and the small units. Lists live in <code>research/data/stage-*.csv</code>. Jobs made by the portal, and jobs someone has already moved, always show. <b>For the COO:</b> every unit with volume has real jobs from week one; lids, FPP, DPU, plates and cake wrappers have about 2 jobs a week together, and the demo says so plainly instead of adding fake jobs.</p>
+<footer class="ft"><span>Joint demo plan · page 4</span><span>Prepared by Abdul Hadhee | IT Executive</span></footer>
+</section>
+
+<!-- ============ PAGE 5 ============ -->
+<section class="page">
+<header class="hd"><div class="brand"><i>I</i>IT<span>Conduit</span></div><div class="meta">21 Oct 2026 · Order Portal + Production Dashboard</div></header>
+<div class="sec"><h2>Versions: what each update adds</h2><small>dates are "not before"; each waits on what is listed</small></div>
+<table class="rep">
+<colgroup><col style="width:92px"><col style="width:76px"><col><col><col style="width:150px"></colgroup>
+<thead><tr><th>Version</th><th>Not before</th><th>Order Portal</th><th>Production Dashboard</th><th>Waits on</th></tr></thead>
+<tbody>
+<tr><td><b>v0.1 Demo</b> (private, demo copy)</td><td>6–17 Nov<br>target 12 Nov</td><td>Order → decide (per order) → production queue → accept → approve + Job No → exact job-order preview</td><td>My jobs on live data (stage 1), strip, ready-to-run chips, Job card, Send next, Unassigned</td><td>Zoho read key; portal Zoho set-up; who manages each unit; demo logins; 17 tests</td></tr>
+<tr><td>Sun 15 Nov</td><td>—</td><td colspan="2">Review of the demo week; widen to stage 2. No new release.</td><td>—</td></tr>
+<tr><td><b>v0.2</b></td><td>Sun 22 Nov</td><td><b>Each line decided on its own</b>; bought-in and made-for-stock lines; "to purchase" list</td><td>Send several at once, attention order, customer search, history drawer, GM view</td><td>its own spec review</td></tr>
+<tr><td><b>v0.3 Public</b></td><td>Sun 29 Nov</td><td colspan="2">Approval-only website under standard-holdings.lk for both: company email → code → you approve the browser → saved, 0 clicks daily. Real use starts on a fresh database (the demo copy is set aside).</td><td>security fixes approved; yes to one mail library; DNS; a sending mailbox</td></tr>
+<tr><td><b>v0.4 Live writes</b></td><td>Sun 6 Dec</td><td>Real job orders for one division (OPD); live Kohalwila stock in the decide screen</td><td>Wait-time flags; routes confirmed with the managers</td><td>portal Zoho checks; managers' answers</td></tr>
+<tr><td><b>v0.5 All units</b></td><td>Sun 13 Dec</td><td>All divisions; new item, new customer, images, weekly report</td><td>All units and pairs</td><td>open portal questions</td></tr>
+<tr><td><b>v1.0 Full</b></td><td>set at the v0.5 review</td><td>Daily use by sales and Rizwan's team</td><td>Hand-over to goods gatepass; stores receive step</td><td>goods gatepass project</td></tr>
+</tbody></table>
+
+<div class="sec"><h2>Every Sunday after the demo</h2><small>about 2–3 hours</small></div>
+<div class="lane">
+  <div class="b"><b>1 · Check the week</b>sync health, calls used, jobs per unit, problems</div><div class="ar">→</div>
+  <div class="b"><b>2 · Widen the stage</b>or hold if anything looks wrong</div><div class="ar">→</div>
+  <div class="b grn"><b>3 · Release</b>what is ready; you deploy</div><div class="ar">→</div>
+  <div class="b blu"><b>4 · Plan + test next</b>specs, your questions for Monday</div>
+</div>
+
+<div class="sec"><h2>The demo walkthrough</h2><small>about 20 minutes</small></div>
+<ol class="note" style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:3px">
+  <li><b>Portal:</b> a Taco Bell food wrap order → production → OPD accepts → manager approves → the exact job order appears (writes stay off).</li>
+  <li><b>A two-kind order:</b> two customized lines + PSU straws. It goes to production; the straw line is handed back and filled from stock. A real 6-line Gamma order with bought-in lines is shown on a slide — those lines come in v0.2.</li>
+  <li><b>Dashboard, live:</b> this week's real jobs for stage 1 — ready-to-run chips, Job card, Send next MacPro → PackPro, and real jobs that ticked Packed, Checked and Invoiced by themselves.</li>
+  <li><b>The hand-over, demo morning:</b> one real job order labelled "TEST – do not produce" is created by the portal, appears on the dashboard within 2 minutes, and is deleted right after the demo; writes go back off.</li>
+</ol>
+<footer class="ft"><span>Joint demo plan · page 5</span><span>Prepared by Abdul Hadhee | IT Executive</span></footer>
+</section>
+
+<!-- ============ PAGE 6 ============ -->
+<section class="page">
+<header class="hd"><div class="brand"><i>I</i>IT<span>Conduit</span></div><div class="meta">21 Oct 2026 · Order Portal + Production Dashboard</div></header>
+<div class="sec"><h2>Building v0.1</h2><small>two builds side by side · working days, Saturday half day · an estimate, not a promise</small></div>
+<table class="rep">
+<colgroup><col style="width:150px"><col><col style="width:70px"></colgroup>
+<thead><tr><th>Track</th><th>Steps</th><th>Days</th></tr></thead>
+<tbody>
+<tr><td><b>A · Order Portal</b></td><td>Foundation (login, roles, admin, Zoho read sync, budget, audit) → order to approval with the job-order preview; tests first; reviews per part</td><td>9–14</td></tr>
+<tr><td><b>B · Dashboard</b></td><td>Fix the failing tests → ready-to-run chips + set-up (MacPro first, Stripping) → Portal Ref column + stage filter → My jobs screen</td><td>7.5–11</td></tr>
+<tr><td><b>C · Gates</b></td><td>Code, security and database reviews; first deploy of both; the test job order on the demo morning</td><td>3.5–5.5</td></tr>
+<tr><td></td><td><b>Total (A and B together, then C)</b></td><td><b>13–20.5</b></td></tr>
+</tbody></table>
+<p class="note">From Thu 22 Oct: earliest about Fri 6 Nov, latest about Tue 17 Nov. <b>Target Thu 12 Nov — no slack;</b> a Poya holiday moves it later. Live data flows from Mon 9 Nov. <b>Check points</b> Mon 2 Nov and Fri 6 Nov: if missed, the portal shows test data and the joint walkthrough moves to Sun 22 Nov. Work before v0.3 is practice data.</p>
+
+<div class="sec"><h2>Honestly: is it a good, low-click flow?</h2><small>my view</small></div>
+<div class="two">
+  <div class="col good"><h3>Right</h3><ul>
+    <li>Zoho does most of the ticking: ready-to-run, packed, checked, invoiced need 0 clicks.</li>
+    <li>A hand-over is 2 clicks; a job card 1. Approved browsers will need no daily login (v0.3).</li>
+    <li>One order screen for every kind of item, with the SH-to-SPS link written automatically.</li>
+    <li>Every assumption is a setting, so the open answers don't block the demo.</li>
+  </ul></div>
+  <div class="col bad"><h3>Still weak</h3><ul>
+    <li>Send next is a manual click by the unit; the floor hands jobs over through logistics. If nobody clicks, the screen drifts.</li>
+    <li>4 paper forms stay on paper; routes are guesses until the managers confirm them.</li>
+    <li>Per-line decisions (needed for 19% of orders) wait for v0.2.</li>
+    <li>Thin units will look nearly empty.</li>
+  </ul></div>
+</div>
+
+<div class="sec"><h2>Reviews and what I need from you</h2><small>red = blocks v0.1</small></div>
+<table class="rep">
+<colgroup><col style="width:200px"><col style="width:130px"><col></colgroup>
+<tbody>
+<tr><td>Joint demo spec, rounds 1–2</td><td><span class="st no">BLOCK, BLOCK</span></td><td>Round 1: 7 findings → the reviewer's simpler design. Round 2: design accepted, 4 text fixes (one new column, where the filter sits, test-order timing, demo database).</td></tr>
+<tr><td>Joint demo spec, round 3</td><td><span class="st done">APPROVED</span></td><td>Approved with 3 text fixes (all applied): how the test order's "not found" answer is recorded, the demo database file and its archive at v0.3, migration numbering. Build started 21 Oct night.</td></tr>
+<tr><td>Website sign-in (v0.3)</td><td><span class="st part">in review</span></td><td>Two security rounds passed with changes; plan-critic fixes listed; built in v0.3.</td></tr>
+</tbody></table>
+<div class="asks" style="margin-top:4px">
+  <div class="ask must"><b>1 · SPS read key</b>Finish the Self Client and tell me "Saved" — I then check it reads SmartPack.</div>
+  <div class="ask must"><b>2 · Portal Zoho set-up</b>A write key (kept off) and the "Portal Ref" field before the rehearsal.</div>
+  <div class="ask"><b>3 · Key-customer accounts</b>Confirm Gamma = Pizza Hut + Taco Bell, Jaykay = Keells, Weligama Hotel Properties = Marriott Weligama.</div>
+  <div class="ask"><b>4 · Who manages each unit + demo logins</b>Confirm the manager/coordinator pairs (cups and Stripping are my guesses) and the names for the demo logins. The unsaved "Sign in with Zoho" code in the dashboard: whose? I park it on its own branch.</div>
+</div>
+<footer class="ft"><span>Joint demo plan · page 6</span><span>Prepared by Abdul Hadhee | IT Executive</span></footer>
+</section>
+</body></html>

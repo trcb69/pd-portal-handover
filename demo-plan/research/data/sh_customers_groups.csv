@@ -1,0 +1,1560 @@
+customer_name,orders_12m,orders_last6m,orders_prev6m,months_last6,ratio,group,cashlike
+Gamma Pizzakraft Lanka (Pvt) Ltd,4490,2392.0,2098.0,7.0,1.140133460438513,key,False
+Spar SL (Private ) Limited,497,274.0,223.0,7.0,1.2286995515695067,key,False
+SH Printing Services,410,165.0,245.0,7.0,0.673469387755102,,True
+Smart Packaging Solutions (Pvt) Ltd-Retail,397,179.0,218.0,7.0,0.8211009174311926,,True
+Kelaniya Warehouse (Consumption),387,211.0,176.0,7.0,1.1988636363636365,,True
+Smart Pack Internal Sales,364,174.0,190.0,7.0,0.9157894736842105,,True
+Standard Holdings Lab,359,208.0,151.0,7.0,1.3774834437086092,,True
+Jaykay Marketing Services (Pvt) Ltd,357,109.0,248.0,7.0,0.43951612903225806,key,False
+Smart Packaging Solutions - South Retail,306,255.0,51.0,7.0,5.0,,True
+Staff  Sales,298,153.0,145.0,7.0,1.0551724137931036,,True
+Tharindu JBJ Creations (PVT) Ltd,296,132.0,164.0,7.0,0.8048780487804879,also high volume,False
+Shangri-La Hotels Lanka (Pvt) Ltd,289,141.0,148.0,7.0,0.9527027027027027,also high volume,False
+Mas Active (PVT) Ltd- MAS Kreeda,284,128.0,156.0,7.0,0.8205128205128205,also high volume,False
+KDU Adventures (Pvt) Ltd,284,135.0,149.0,7.0,0.9060402684563759,also high volume,False
+Expo Industrial Engineering Pvt Ltd,266,118.0,148.0,7.0,0.7972972972972973,also high volume,False
+Antler Fabric Printers (Pvt) Ltd,248,127.0,121.0,7.0,1.0495867768595042,also high volume,False
+Trade Receivables - Retail Chain,247,3.0,244.0,2.0,0.012295081967213115,,True
+Screen Line (Pvt) Ltd,233,142.0,91.0,7.0,1.5604395604395604,also high volume,False
+Welcomehotels Lanka Pvt Ltd,222,111.0,111.0,7.0,1.0,also high volume,False
+Weligama Hotel Properties Limited,214,108.0,106.0,7.0,1.0188679245283019,key,False
+Regal Image International (PVT) Ltd,212,114.0,98.0,7.0,1.163265306122449,also high volume,False
+Jk Garments (PVT) Ltd,209,95.0,114.0,7.0,0.8333333333333334,also high volume,False
+Hi Fashion Holdings Pvt Ltd,187,98.0,89.0,7.0,1.101123595505618,also high volume,False
+Cash Customer Central,187,59.0,128.0,6.0,0.4609375,,True
+Waterfront Properties (Private) Limited,181,99.0,82.0,7.0,1.2073170731707317,also high volume,False
+Fusion Apparel Pvt Ltd,175,74.0,101.0,7.0,0.7326732673267327,,False
+Rich Color Exports (PVT) Ltd,173,95.0,78.0,7.0,1.2179487179487178,,False
+Dasis Printers (Pvt) Ltd,171,77.0,94.0,7.0,0.8191489361702128,,False
+Hotel Developers Lanka Limited,167,109.0,58.0,7.0,1.8793103448275863,rising fast,False
+Sino Lanka Hotels Galle (Pvt) Ltd,159,97.0,62.0,7.0,1.564516129032258,,False
+Sahana United Group (Pvt) Ltd,147,76.0,71.0,7.0,1.0704225352112675,,False
+Cash Customer South - Shiraz,141,14.0,127.0,4.0,0.11023622047244094,,True
+Cash Customer - Abdul Azeez,138,12.0,126.0,3.0,0.09523809523809523,,True
+Carlos Embellishers (PVT) Ltd,136,47.0,89.0,7.0,0.5280898876404494,,False
+Union Residencies (Pvt) Ltd,130,56.0,74.0,7.0,0.7567567567567568,,False
+Colombo City Centre (Pvt) Ltd,129,66.0,63.0,7.0,1.0476190476190477,,False
+Cash Customer - Shafraz Thariq,129,1.0,128.0,1.0,0.0078125,,True
+Lalan Rubbers (PVT) Ltd,124,51.0,73.0,7.0,0.6986301369863014,,False
+Jay Jay Mills Lanka (PVT) Ltd,122,58.0,64.0,7.0,0.90625,,False
+Kanoka International (PVT) Ltd,113,56.0,57.0,7.0,0.9824561403508771,,False
+Next Manufacturing (PVT) Ltd,113,58.0,55.0,7.0,1.0545454545454545,,False
+Mr. Burger,112,74.0,38.0,7.0,1.9473684210526316,rising fast,False
+Serenia Ltd,110,69.0,41.0,7.0,1.6829268292682926,rising fast,False
+The Six Villas (Pvt) Ltd,107,49.0,58.0,7.0,0.8448275862068966,,False
+Mas Active (PVT) Ltd-(Shadowline),106,40.0,66.0,7.0,0.6060606060606061,,False
+Samudra Beach Resorts (Pvt) Ltd,106,45.0,61.0,7.0,0.7377049180327869,,False
+Perera & Sons Bakers (Pvt) Ltd,105,46.0,59.0,7.0,0.7796610169491526,,False
+Cash Customer South - Nimal,105,13.0,92.0,5.0,0.14130434782608695,,True
+Street Burger (Private) Limited,105,42.0,63.0,7.0,0.6666666666666666,key,False
+The Dutch Burgher Union of Ceylon,104,48.0,56.0,7.0,0.8571428571428571,,False
+Tasty Caterers,102,56.0,46.0,7.0,1.2173913043478262,,False
+Wild Beach Resorts (Pvt) Ltd,102,45.0,57.0,7.0,0.7894736842105263,,False
+Yala Village (Private) Limited,99,48.0,51.0,7.0,0.9411764705882353,,False
+Sri Daran Stores,96,49.0,47.0,7.0,1.0425531914893618,,False
+Cash Customer - Aadil Asmath,93,12.0,81.0,5.0,0.14814814814814814,,True
+Waters Edge Limited,89,41.0,48.0,7.0,0.8541666666666666,,False
+Cash Customer - Adnan Iqbal,87,7.0,80.0,5.0,0.0875,,True
+Araliya Unawatuna Beach Hotel (Private) Limited,87,42.0,45.0,7.0,0.9333333333333333,,False
+Shangri-La Investments Lanka (Pvt) Ltd,86,42.0,44.0,7.0,0.9545454545454546,,False
+Chanas Restaurant,85,47.0,38.0,7.0,1.236842105263158,,False
+Rodrigo B.C.W.P.S,84,57.0,27.0,7.0,2.111111111111111,,False
+Lanka Premier Foods (Pvt) Ltd,83,46.0,37.0,7.0,1.2432432432432432,,False
+Monarch Imperial (Pvt) Ltd,82,41.0,41.0,7.0,1.0,,False
+Loan Given - Tharindu JBJ Creations (PVT) Ltd,80,36.0,44.0,7.0,0.8181818181818182,,False
+Mr.Wijesinghe,79,41.0,38.0,7.0,1.0789473684210527,,False
+Techspace (Pvt) Ltd,79,26.0,53.0,7.0,0.49056603773584906,,False
+Flemingo Retail And Hospitality Services (Pvt) Ltd,76,32.0,44.0,7.0,0.7272727272727273,,False
+Scope Entertainment (Pvt) Ltd,76,38.0,38.0,7.0,1.0,,False
+Dipped Products PLC,75,32.0,43.0,6.0,0.7441860465116279,,False
+Fab Foods (Pvt) Ltd,75,54.0,21.0,7.0,2.5714285714285716,,False
+Trans Asia Hotels PLC,75,31.0,44.0,7.0,0.7045454545454546,,False
+Plates and Flavours (Pvt) Ltd,74,13.0,61.0,6.0,0.21311475409836064,,False
+Family Chef Bakers,74,30.0,44.0,7.0,0.6818181818181818,,False
+The Kingsbury PLC,74,31.0,43.0,6.0,0.7209302325581395,,False
+Omega Line Ltd.,73,44.0,29.0,6.0,1.5172413793103448,,False
+Sponge Pastry Shop (Pvt) Ltd,73,39.0,34.0,6.0,1.1470588235294117,,False
+Loan Given - JK Garment Pvt Ltd,72,34.0,38.0,7.0,0.8947368421052632,,False
+R Pac Printcare Lanka (PVT) Ltd,72,45.0,27.0,7.0,1.6666666666666667,,False
+Topaz Hotels (Pvt) Ltd,72,37.0,35.0,7.0,1.0571428571428572,,False
+Ranaviru Warehouse (Consumption),72,39.0,33.0,7.0,1.1818181818181819,,False
+Food Holicks Lanka (Pvt) Ltd,71,32.0,39.0,7.0,0.8205128205128205,,False
+Serendib Impex FZ-LLC,70,29.0,41.0,7.0,0.7073170731707317,,False
+Sol Trim International (PVT) Ltd,70,29.0,41.0,7.0,0.7073170731707317,,False
+Lebanan Chef (Pvt) Ltd,69,13.0,56.0,3.0,0.23214285714285715,,False
+Helanet International (PVT) Ltd,69,29.0,40.0,7.0,0.725,,False
+The Coconut Plantation Villa (Pvt) Ltd.,68,25.0,43.0,7.0,0.5813953488372093,,False
+Barbeque Nation Lanka Pvt Ltd,68,37.0,31.0,7.0,1.1935483870967742,,False
+International Trimmings & Labels Lanka (PVT) Ltd,67,32.0,35.0,7.0,0.9142857142857143,,False
+Softlogic City Hotels (Pvt) Ltd,66,5.0,61.0,1.0,0.08196721311475409,,False
+Pepermint Cafe (Private) Limited,66,35.0,31.0,7.0,1.1290322580645162,,False
+Bake My Day (Pvt) Limited,66,25.0,41.0,7.0,0.6097560975609756,,False
+Basilur Holdings (Private) Limited,65,32.0,33.0,7.0,0.9696969696969697,,False
+Bavarian Barn Restaurent (Pvt) Ltd,65,26.0,39.0,7.0,0.6666666666666666,,False
+Maze Grill,65,25.0,40.0,6.0,0.625,,False
+Cash Customer Central- Ziyard,64,0.0,64.0,0.0,0.0,,True
+Dufry Shops Colombo Ltd,63,29.0,34.0,6.0,0.8529411764705882,,False
+Aitken Spence Printing and Packaging (Pvt) Ltd,61,28.0,33.0,6.0,0.8484848484848485,,False
+LA Forteresse (Pvt) Ltd,61,25.0,36.0,6.0,0.6944444444444444,,False
+Kalutara Luxury Hotel & Resort (Private) Limited,60,24.0,36.0,7.0,0.6666666666666666,,False
+Mas Capital (PVT) Ltd,60,40.0,20.0,7.0,2.0,,False
+Trimex Foods SL Pvt Ltd,60,26.0,34.0,7.0,0.7647058823529411,,False
+Aqua Dynamics (Pvt) Ltd,60,31.0,29.0,6.0,1.0689655172413792,,False
+U & S Print City,59,28.0,31.0,5.0,0.9032258064516129,,False
+Tango Restaurant (Pvt) Ltd,59,34.0,25.0,7.0,1.36,,False
+Royal Colombo Golf Club,59,34.0,25.0,7.0,1.36,,False
+Ace Exports Pvt Ltd,58,28.0,30.0,7.0,0.9333333333333333,,False
+Southern Fried Chicken (Pvt) Ltd,57,26.0,31.0,7.0,0.8387096774193549,,False
+Color Imprint (Pvt) Ltd,57,28.0,29.0,7.0,0.9655172413793104,,False
+Ceysand Resorts Ltd,56,28.0,28.0,7.0,1.0,,False
+Lanka Hotels & Residencies (Pvt) Ltd,56,47.0,9.0,7.0,5.222222222222222,,False
+Cash Customer - Shafraz,56,0.0,56.0,0.0,0.0,,True
+Finagle Lanka (Pvt) Ltd,55,39.0,16.0,7.0,2.4375,,False
+Sino Lanka Properties Two Pvt Ltd,55,34.0,21.0,7.0,1.619047619047619,,False
+Winil Holdings Pvt Ltd,55,26.0,29.0,7.0,0.896551724137931,,False
+SkinnyTom's Deli,55,27.0,28.0,7.0,0.9642857142857143,,False
+Bam Exports (Pvt) Ltd,55,35.0,20.0,6.0,1.75,,False
+Packmart ( Kandy ),55,27.0,28.0,7.0,0.9642857142857143,,False
+Asian Hotels & Properties PLC,55,29.0,26.0,6.0,1.1153846153846154,,False
+Mjf Exports (Pvt) Ltd,55,22.0,33.0,7.0,0.6666666666666666,,False
+Surface Design (PVT) Ltd,55,16.0,39.0,4.0,0.41025641025641024,,False
+PT MAS Arya Indonesia,54,26.0,28.0,7.0,0.9285714285714286,,False
+Ceccato  Colombo  (Pvt) Ltd,53,26.0,27.0,7.0,0.9629629629629629,,False
+Starbeans Ceylon (Private) Limited,53,24.0,29.0,7.0,0.8275862068965517,,False
+Plan B Weligama,52,19.0,33.0,7.0,0.5757575757575758,,False
+Dutch Lanka Pastry & Bakers Pvt Ltd,52,26.0,26.0,6.0,1.0,,False
+Fire Plate (Pvt) Ltd,51,25.0,26.0,6.0,0.9615384615384616,,False
+Green Grass Hotel & Restaurent Pvt Ltd,51,28.0,23.0,7.0,1.2173913043478262,,False
+Sasha Foods,50,27.0,23.0,7.0,1.173913043478261,,False
+Galle Heritage Lanka (Pvt) Ltd,50,24.0,26.0,7.0,0.9230769230769231,,False
+Sensa Solutions Lanka Pvt Ltd,50,47.0,3.0,5.0,15.666666666666666,,False
+South Asia Textiles Limited,50,23.0,27.0,7.0,0.8518518518518519,,False
+Chandrasiri & Sons (Pvt) Ltd,49,23.0,26.0,7.0,0.8846153846153846,,False
+Ranjanas Holdings,49,20.0,29.0,7.0,0.6896551724137931,,False
+Colour Plus Printing Systems (PVT) Ltd,48,15.0,33.0,6.0,0.45454545454545453,,False
+Star Leisure (Pvt) Ltd,48,24.0,24.0,6.0,1.0,,False
+Pier Piri (Nemula Gardens),48,21.0,27.0,7.0,0.7777777777777778,,False
+John Keells CG Auto Pvt Ltd,48,27.0,21.0,6.0,1.2857142857142858,,False
+Cyril Rodrigo Restaurent Ltd,47,30.0,17.0,7.0,1.7647058823529411,,False
+Ceylon Hospitals PLC,47,25.0,22.0,6.0,1.1363636363636365,,False
+Pedlars Inn Cafe Pvt Ltd,46,24.0,22.0,7.0,1.0909090909090908,,False
+LA PLAYA Hiriketiya - Cash,46,16.0,30.0,7.0,0.5333333333333333,,True
+Bondville (Pvt) Ltd,46,26.0,20.0,7.0,1.3,,False
+Cape Weligama (Pvt) Ltd,46,14.0,32.0,6.0,0.4375,,False
+R N R Trading International Pvt Ltd,45,15.0,30.0,7.0,0.5,,False
+Loan Given - Screen Line,45,26.0,19.0,7.0,1.368421052631579,,False
+P.H. Resorts (Pvt) Ltd,44,23.0,21.0,7.0,1.0952380952380953,,False
+Hotel North Gate (Pvt) Ltd,44,19.0,25.0,7.0,0.76,,False
+Indra Hotels & Resorts Kandy Pvt Ltd,44,17.0,27.0,6.0,0.6296296296296297,,False
+Cannys,44,23.0,21.0,7.0,1.0952380952380953,,False
+Malu Poke,44,16.0,28.0,6.0,0.5714285714285714,,False
+Grub Street (Pvt) Ltd,43,26.0,17.0,6.0,1.5294117647058822,,False
+Aida The Queen Palace,43,33.0,10.0,7.0,3.3,,False
+Stretchline (PVT) Ltd,43,19.0,24.0,7.0,0.7916666666666666,,False
+Ranmal Holiday Resort (Private) Limited,42,17.0,25.0,6.0,0.68,,False
+Icon Hotels (Pvt) Ltd,42,19.0,23.0,7.0,0.8260869565217391,,False
+Walgama Bake House (Pvt) Ltd,41,20.0,21.0,7.0,0.9523809523809523,,False
+Aromystique (Private) Limited,41,23.0,18.0,7.0,1.2777777777777777,,False
+Union Resorts Private Ltd,41,25.0,16.0,7.0,1.5625,,False
+Sino Lanka Hotels Colombo (Pvt) Ltd,40,19.0,21.0,7.0,0.9047619047619048,,False
+Colombo Swimming Club,40,11.0,29.0,5.0,0.3793103448275862,,False
+Beruwala Holiday Resorts (Pvt) Ltd,40,23.0,17.0,7.0,1.3529411764705883,,False
+Serendib Holdings Kenya EPZ Limited,40,16.0,24.0,6.0,0.6666666666666666,,False
+Tealuscious Pvt Ltd,40,21.0,19.0,7.0,1.105263157894737,,False
+Minimalist,39,17.0,22.0,7.0,0.7727272727272727,,False
+Cash Customer Ranaviru,38,37.0,1.0,6.0,37.0,,True
+Terrace Green Hotel,38,13.0,25.0,4.0,0.52,,False
+Masterbaker Lanka (Pvt) Ltd,38,23.0,15.0,7.0,1.5333333333333334,,False
+Orit Apparels Lanka (PVT) Ltd,38,24.0,14.0,7.0,1.7142857142857142,,False
+Mr. Hashan,38,17.0,21.0,5.0,0.8095238095238095,,False
+Bluehaven Services (Private) Limited,38,18.0,20.0,6.0,0.9,,False
+Montado (Pvt) Ltd,37,24.0,13.0,5.0,1.8461538461538463,,False
+Mosvold Lanka Villas (Pvt) Ltd,37,5.0,32.0,4.0,0.15625,,False
+Nayomi Sweets,37,13.0,24.0,5.0,0.5416666666666666,,False
+Stay Ceylon Pvt Ltd,36,12.0,24.0,5.0,0.5,,False
+Laksala Super Trade Centre,36,22.0,14.0,6.0,1.5714285714285714,,False
+The Lighthouse Hotel PLC,36,24.0,12.0,7.0,2.0,,False
+Grand Pharo City Hotel (Pvt) Ltd,36,18.0,18.0,7.0,1.0,,False
+The Aquaculture Lifestyle Group Pvt Ltd,36,14.0,22.0,7.0,0.6363636363636364,,False
+Loan Given - Expo Industrial Engineering Pvt Ltd,36,18.0,18.0,5.0,1.0,,False
+C M Partners Pvt Ltd,36,18.0,18.0,7.0,1.0,,False
+Silueta (Pvt) Ltd,36,17.0,19.0,6.0,0.8947368421052632,,False
+Sea Fair Supermarket (Pvt) Ltd,35,14.0,21.0,6.0,0.6666666666666666,,False
+Marine Drive Hotels (Pvt) Ltd,35,13.0,22.0,7.0,0.5909090909090909,,False
+Dots Ceylon Hotels (Pvt) Ltd,35,13.0,22.0,7.0,0.5909090909090909,,False
+SkyFi (Private) Limited,35,15.0,20.0,6.0,0.75,,False
+Print World Alpha Pvt Ltd,35,18.0,17.0,7.0,1.0588235294117647,,False
+Print Xcel Packaging Pvt Ltd,35,21.0,14.0,6.0,1.5,,False
+The Garden Fushion,35,5.0,30.0,3.0,0.16666666666666666,,False
+Loan Given - Carlos Embellishers (PVT) Ltd,34,6.0,28.0,3.0,0.21428571428571427,,False
+Norfolk Foods (Pvt) Ltd,34,13.0,21.0,7.0,0.6190476190476191,key,False
+D. Samson Industries (D.S.I),34,17.0,17.0,6.0,1.0,,False
+Sancity Hotels and Properties Limited,34,16.0,18.0,6.0,0.8888888888888888,,False
+Savonmark Plastic (PVT) Ltd,34,12.0,22.0,6.0,0.5454545454545454,,False
+Lanka Island Resorts Limited,34,15.0,19.0,7.0,0.7894736842105263,,False
+Rui Inn Pvt Ltd,34,20.0,14.0,6.0,1.4285714285714286,,False
+Park Street Social (Pvt) Ltd,34,17.0,17.0,6.0,1.0,,False
+Abeyrama Trade Center,34,15.0,19.0,6.0,0.7894736842105263,,False
+Barista Coffee Lanka (Pvt) Ltd,34,21.0,13.0,6.0,1.6153846153846154,,False
+N.O.H Hotel (Pvt) Ltd,34,12.0,22.0,6.0,0.5454545454545454,,False
+Juice Life,33,15.0,18.0,6.0,0.8333333333333334,,False
+Bubbluscious,33,14.0,19.0,4.0,0.7368421052631579,,False
+Saracawatta (Private) Limited,33,16.0,17.0,6.0,0.9411764705882353,,False
+Dutch Cafe,33,10.0,23.0,6.0,0.43478260869565216,,False
+Aitken Spence Hotel Managements (Pvt) Ltd,33,17.0,16.0,6.0,1.0625,,False
+Wickramasinghe Food City (Private) Limited,33,14.0,19.0,6.0,0.7368421052631579,,False
+Sofia Colombo (Pvt) Ltd,33,14.0,19.0,7.0,0.7368421052631579,,False
+Alumka Food Cabin B Pkt Ltd,33,20.0,13.0,7.0,1.5384615384615385,,False
+Champions Table Pvt Ltd,33,16.0,17.0,6.0,0.9411764705882353,,False
+J F & I Packaging (Private) Limited,32,24.0,8.0,7.0,3.0,,False
+Little Lion Associates (Pvt) Ltd,32,16.0,16.0,6.0,1.0,,False
+Asol Screen Printing,32,18.0,14.0,7.0,1.2857142857142858,,False
+Four Peak Ventures (Pvt) Ltd,32,17.0,15.0,6.0,1.1333333333333333,,False
+New Kumara Traders,32,10.0,22.0,6.0,0.45454545454545453,,False
+Toast  Pvt Ltd,32,12.0,20.0,7.0,0.6,,False
+Negombo Beach Resorts (Pvt) Ltd,32,19.0,13.0,7.0,1.4615384615384615,,False
+Ayla Cafe,32,15.0,17.0,7.0,0.8823529411764706,,False
+Hikkaduwa Holiday Resorts (Pvt) Ltd,32,16.0,16.0,6.0,1.0,,False
+Ibsons Choice Cafe Pvt Ltd,32,19.0,13.0,6.0,1.4615384615384615,,False
+We Flow Pvt Ltd,31,20.0,11.0,7.0,1.8181818181818181,,False
+Grand Monarch (Pvt) Ltd,31,18.0,13.0,6.0,1.3846153846153846,,False
+Food Studio (Private) Limited,31,16.0,15.0,7.0,1.0666666666666667,,False
+Indiaan Summer (Pvt) Ltd,31,23.0,8.0,5.0,2.875,,False
+V T B Sun Pvt Ltd,31,18.0,13.0,7.0,1.3846153846153846,,False
+Ultra Textile Printing (PVT) Ltd,31,10.0,21.0,5.0,0.47619047619047616,,False
+Pastel Hotels (Pvt) Ltd,31,14.0,17.0,6.0,0.8235294117647058,,False
+Trischel Fabric (PVT) Ltd,31,19.0,12.0,6.0,1.5833333333333333,,False
+Hermitage Resorts Pvt Ltd,31,17.0,14.0,7.0,1.2142857142857142,,False
+Sunshith printway (PVT) Ltd,31,14.0,17.0,5.0,0.8235294117647058,,False
+N J's Confectionery (PVT) Ltd,31,17.0,14.0,7.0,1.2142857142857142,,False
+Master Woven Lanka Label (PVT) Ltd,31,13.0,18.0,6.0,0.7222222222222222,,False
+Shady Lane Mirissa,31,13.0,18.0,6.0,0.7222222222222222,,False
+V C Villas and Resorts (Private) Limited,31,20.0,11.0,7.0,1.8181818181818181,,False
+Bubble Lovers Pvt Ltd,31,15.0,16.0,6.0,0.9375,,False
+Mandalas Cafe - TC,30,13.0,17.0,6.0,0.7647058823529411,,False
+Roots Global (Pvt) Ltd,30,13.0,17.0,6.0,0.7647058823529411,,False
+Hotel Maradha (Pvt) Ltd,30,11.0,19.0,5.0,0.5789473684210527,,False
+Paradise Road Galleries (Pvt) Ltd,30,15.0,15.0,7.0,1.0,,False
+Savinda Graphic Systems (Pvt) Ltd,30,19.0,11.0,5.0,1.7272727272727273,,False
+Pearl Line,30,8.0,22.0,4.0,0.36363636363636365,,False
+Arabian Knights,30,16.0,14.0,7.0,1.1428571428571428,,False
+Dumbara Hotels (Pvt) Ltd,30,15.0,15.0,6.0,1.0,,False
+Just Brew IT (Pvt) Limited,30,11.0,19.0,5.0,0.5789473684210527,,False
+Koddithuwakku  Enterprises,30,14.0,16.0,6.0,0.875,,False
+Yala Properties (Pvt) Ltd,29,14.0,15.0,6.0,0.9333333333333333,,False
+Sanu City Centre,29,15.0,14.0,6.0,1.0714285714285714,,False
+Java Lounge (Pvt) Ltd,29,17.0,12.0,7.0,1.4166666666666667,,False
+Vidu Polythene - TC,29,12.0,17.0,6.0,0.7058823529411765,,False
+Stevo's Kitchen Pvt Ltd,29,15.0,14.0,6.0,1.0714285714285714,,False
+Bravo Lanka (Pvt) Ltd,29,16.0,13.0,7.0,1.2307692307692308,,False
+Ramsel Holdings (Pvt) Ltd.,28,17.0,11.0,7.0,1.5454545454545454,,False
+Cash Customer Kohalwila,28,26.0,2.0,7.0,13.0,,True
+Mr Damith - TC,28,23.0,5.0,7.0,4.6,,False
+Bally's Limited,28,21.0,7.0,7.0,3.0,,False
+Care Label Industries (PVT) Ltd,28,17.0,11.0,6.0,1.5454545454545454,,False
+Kandalama Hotels (Pvt) Ltd,28,14.0,14.0,6.0,1.0,,False
+Uni Tag Industries (PVT) Ltd,28,15.0,13.0,7.0,1.1538461538461537,,False
+Soo Ceylon (Pvt.) Ltd.,28,13.0,15.0,6.0,0.8666666666666667,,False
+Gayan Trading,28,9.0,19.0,6.0,0.47368421052631576,,False
+Gunasiri Printers and Publishers (Private) Limited,28,13.0,15.0,4.0,0.8666666666666667,,False
+Apparel Services Lanka Pvt Ltd,27,19.0,8.0,6.0,2.375,,False
+Hayleys Fabric PLC,27,20.0,7.0,6.0,2.857142857142857,,False
+Macksons Properties (Pvt) Ltd,27,4.0,23.0,2.0,0.17391304347826086,,False
+New Premathilaka Stores,27,12.0,15.0,6.0,0.8,,False
+Mr Sahan,27,20.0,7.0,6.0,2.857142857142857,,False
+Dolphin Hotels PLC,27,11.0,16.0,6.0,0.6875,,False
+Birds Resort (Pvt) Ltd,27,11.0,16.0,4.0,0.6875,,False
+Kulupana Holdings (Pvt) Ltd,27,10.0,17.0,6.0,0.5882352941176471,,False
+L.G.J Traders (Pvt) Ltd,27,9.0,18.0,5.0,0.5,,False
+Temple Tree Induruwa (Pvt) Ltd,27,10.0,17.0,7.0,0.5882352941176471,,False
+Grand Highway Resort,27,11.0,16.0,6.0,0.6875,,False
+Dinnovation (Pvt) Ltd,26,14.0,12.0,7.0,1.1666666666666667,,False
+"Top Form Brassiere (Maesot) Co., Ltd",26,8.0,18.0,2.0,0.4444444444444444,,False
+Jubilant Foodworks Lanka Pvt Ltd,26,16.0,10.0,6.0,1.6,,False
+Mr. Ruwan – Cash,26,16.0,10.0,7.0,1.6,,True
+Rainbow Traders,26,7.0,19.0,5.0,0.3684210526315789,,False
+Central Showroom Walking Customer,26,23.0,3.0,4.0,7.666666666666667,,True
+Loan Given - Antler Fabric,26,15.0,11.0,7.0,1.3636363636363635,,False
+Choy's,26,16.0,10.0,6.0,1.6,,False
+Hameediya Stores (Pvt) Ltd,25,15.0,10.0,6.0,1.5,,False
+APG Investment Group (Pvt) Ltd,25,9.0,16.0,7.0,0.5625,,False
+Halcyon Concepts (Private) Limited,25,14.0,11.0,6.0,1.2727272727272727,,False
+A.L Ice Pvt Ltd,25,17.0,8.0,7.0,2.125,,False
+The Golden Ridge Hotel (Pvt) Ltd,25,12.0,13.0,4.0,0.9230769230769231,,False
+MAS Innovation Pvt Ltd,25,23.0,2.0,7.0,11.5,,False
+Mad Moose (Pvt) Ltd,25,19.0,6.0,7.0,3.1666666666666665,,False
+Tissa Polythene Centre,25,13.0,12.0,6.0,1.0833333333333333,,False
+F.H.Associate & Co (Pvt) Ltd,25,19.0,6.0,5.0,3.1666666666666665,,False
+Ambasewana Bakery & Restaurent,24,11.0,13.0,7.0,0.8461538461538461,,False
+Minutes.Lk Retail Printing,24,11.0,13.0,5.0,0.8461538461538461,,False
+Glasgow Hotel (Pvt) Ltd,24,16.0,8.0,7.0,2.0,,False
+Texo (Private) Limited,24,8.0,16.0,4.0,0.5,,False
+Cloud Ivy (Pvt) Ltd,24,4.0,20.0,2.0,0.2,,False
+Kandy Walk Inn Ltd,24,10.0,14.0,6.0,0.7142857142857143,,True
+Inqube Solutions (Pvt) Ltd,24,14.0,10.0,5.0,1.4,,False
+House of Acessories (PVT) Ltd,24,10.0,14.0,6.0,0.7142857142857143,,False
+Sweet Chilli Foods (Pvt) Ltd,23,11.0,12.0,6.0,0.9166666666666666,,False
+M.H Kader-Mirissa,23,9.0,14.0,5.0,0.6428571428571429,,False
+Clear Point Restaurant and Super,23,18.0,5.0,6.0,3.6,,False
+Lantern Boutique Hotel,23,7.0,16.0,4.0,0.4375,,False
+Kalupahana Stores-Maharagama,23,8.0,15.0,5.0,0.5333333333333333,,False
+Wildish (Pvt) Ltd,23,10.0,13.0,5.0,0.7692307692307693,,False
+Cafe Mamba Coffee's,22,4.0,18.0,3.0,0.2222222222222222,,False
+Galle Fort Hotel (Pvt) Ltd,22,11.0,11.0,6.0,1.0,,False
+Rainco (Pvt) Ltd,22,15.0,7.0,6.0,2.142857142857143,,False
+Thai Shack Colombo 5 (Pvt) Ltd,22,6.0,16.0,5.0,0.375,,False
+Loan Given - Mas Active Kreeda,22,13.0,9.0,5.0,1.4444444444444444,,False
+Tharindi Trade Centre,22,10.0,12.0,5.0,0.8333333333333334,,False
+Khayaban Restaurant (Pvt) Ltd,22,6.0,16.0,5.0,0.375,,False
+Asons Limited (D),22,11.0,11.0,7.0,1.0,,False
+Apero (Pvt) Ltd,22,8.0,14.0,5.0,0.5714285714285714,,False
+Artreum Leisure Pvt Ltd - Kai Colombo,22,17.0,5.0,6.0,3.4,,False
+Mellow Restaurant & Bar - TC,22,13.0,9.0,6.0,1.4444444444444444,,False
+Taru Villas (Pvt) Ltd,22,9.0,13.0,5.0,0.6923076923076923,,False
+Austin-Davies (Private) Limited,22,8.0,14.0,6.0,0.5714285714285714,,False
+Cash - Grand Gastrobar,22,10.0,12.0,5.0,0.8333333333333334,,True
+The Pan Restaurent (Pvt) Ltd,21,6.0,15.0,3.0,0.4,,False
+Galle Face Hotel 1994 (Pvt) Ltd,21,14.0,7.0,5.0,2.0,,False
+Raffles Consolidated (Pvt) Ltd,21,4.0,17.0,2.0,0.23529411764705882,,False
+Waters Edge Recreations Limited,21,12.0,9.0,6.0,1.3333333333333333,,False
+Cash- Pabasara Distributor,21,10.0,11.0,7.0,0.9090909090909091,,True
+DPL Universal Gloves LTD,21,10.0,11.0,5.0,0.9090909090909091,,False
+City Cake,21,7.0,14.0,4.0,0.5,,False
+The Establishment Pvt Ltd,21,8.0,13.0,6.0,0.6153846153846154,,False
+Colombo Chill Pvt Ltd,21,18.0,3.0,6.0,6.0,,False
+Manamperi Hotel and Resort (Pvt) Ltd,21,9.0,12.0,7.0,0.75,,False
+Trinco Holiday Resorts (Pvt) Ltd,21,12.0,9.0,7.0,1.3333333333333333,,False
+Deltanos (Pvt) Ltd,21,8.0,13.0,6.0,0.6153846153846154,,False
+Salt Collective (Private) Limited,21,6.0,15.0,4.0,0.4,,False
+TC-Selani Cafe,21,12.0,9.0,6.0,1.3333333333333333,,False
+TC- Pettah Essence Suppliers,21,18.0,3.0,6.0,6.0,,False
+Janalanka Textiles-Bandarawela,21,5.0,16.0,4.0,0.3125,,False
+Tangalle Property (Pvt) Ltd,21,10.0,11.0,6.0,0.9090909090909091,,False
+Ozone Coatings Pvt Ltd,21,4.0,17.0,3.0,0.23529411764705882,,False
+Shiyam Motors (Pvt) Ltd,21,5.0,16.0,5.0,0.3125,,False
+Bondscreen Holdings (Pvt) Ltd,21,17.0,4.0,6.0,4.25,,False
+Hotel Grand Serendib (Pvt) Ltd,21,12.0,9.0,5.0,1.3333333333333333,,False
+Ranjan Super (Pvt) Ltd,21,8.0,13.0,4.0,0.6153846153846154,,False
+Hotel Finominal,21,8.0,13.0,6.0,0.6153846153846154,,False
+Airport Garden Hotel (Pvt) Ltd,21,11.0,10.0,6.0,1.1,,False
+Golden Pearl Beach Resort (Pvt) Ltd,21,10.0,11.0,6.0,0.9090909090909091,,False
+Asoka Traders,20,11.0,9.0,5.0,1.2222222222222223,,False
+Gourmet CBP,20,10.0,10.0,6.0,1.0,,False
+Fort Chambers Galle (Pvt) Ltd,20,8.0,12.0,6.0,0.6666666666666666,,False
+Bees Bakers (Pvt) Ltd,20,9.0,11.0,6.0,0.8181818181818182,,False
+Fire Plate Restaurant Kundasala (Pvt) Ltd,20,11.0,9.0,6.0,1.2222222222222223,,False
+Open Rice,20,7.0,13.0,4.0,0.5384615384615384,,False
+Star Textile Processing Industries (Pvt) Ltd,20,12.0,8.0,6.0,1.5,,False
+Rajarata Clothing(Cash),20,12.0,8.0,4.0,1.5,,True
+Loan given - Jay Jay Mills Lanka Pvt Ltd,20,17.0,3.0,5.0,5.666666666666667,,False
+Sun Screen (PVT) Ltd,20,4.0,16.0,2.0,0.25,,False
+Jungle Beach Resort (Pvt) Limited,20,16.0,4.0,5.0,4.0,,False
+The Bakers Paradise,20,12.0,8.0,6.0,1.5,,False
+Kognoscenti (Private) Limited,20,9.0,11.0,6.0,0.8181818181818182,,False
+The Heritage Galle Fort (Pvt) Ltd,20,10.0,10.0,6.0,1.0,,False
+Chandra Stores-Hambantota,20,8.0,12.0,5.0,0.6666666666666666,,False
+Soy Foods MFG Limited,19,8.0,11.0,3.0,0.7272727272727273,,False
+Kahabath Gedara,19,9.0,10.0,5.0,0.9,,False
+Pintanna Oud Oil Pvt Ltd,19,8.0,11.0,5.0,0.7272727272727273,,False
+Tea Avenue (Pvt) Ltd,19,9.0,10.0,4.0,0.9,,False
+Mas Fabrics (Pvt) Ltd,19,0.0,19.0,0.0,0.0,,False
+Bodyline (Pvt) Limited,19,1.0,18.0,1.0,0.05555555555555555,,False
+Manjal Hotels & Restaurants Pvt Ltd,19,5.0,14.0,4.0,0.35714285714285715,,False
+Maxim Impressions Lanka (PVT) Ltd,19,6.0,13.0,4.0,0.46153846153846156,,False
+Uga Escapes Yala Pvt Ltd,19,3.0,16.0,3.0,0.1875,,False
+Dutchmans Street Cafe & Restaurant,19,5.0,14.0,5.0,0.35714285714285715,,False
+Aitken Spence Hotel Holdings Ltd,19,10.0,9.0,6.0,1.1111111111111112,,False
+Rosen Enterprises (Pvt) Ltd,19,13.0,6.0,7.0,2.1666666666666665,,False
+Crab Corp (Private) Limited,19,13.0,6.0,6.0,2.1666666666666665,,False
+Teejay Lanka Prints (PVT) Ltd,19,11.0,8.0,5.0,1.375,,False
+Glaze Gallery (Pvt) Ltd,18,14.0,4.0,7.0,3.5,,False
+Yara Galle Fort (Pvt) Ltd,18,5.0,13.0,4.0,0.38461538461538464,,False
+Jayawardena Holdings (Pvt) Ltd,18,12.0,6.0,6.0,2.0,,False
+Hethersett Hotels Ltd,18,10.0,8.0,6.0,1.25,,False
+Ahangama Sliders (Pvt) Ltd,18,1.0,17.0,1.0,0.058823529411764705,,False
+Surp Integrated Pvt Ltd,18,9.0,9.0,4.0,1.0,,False
+Ruhunu Glass,18,10.0,8.0,6.0,1.25,,False
+Cliftex Industries Limited,18,11.0,7.0,6.0,1.5714285714285714,,False
+The Cake Factory Colombo Pvt Ltd,18,11.0,7.0,5.0,1.5714285714285714,,False
+Habarana Walk Inn Ltd,18,10.0,8.0,6.0,1.25,,True
+Pettah Polythene Centre-TC,18,9.0,9.0,5.0,1.0,,False
+Sushikai Pvt Ltd,18,13.0,5.0,7.0,2.6,,False
+Bizone -Galle,18,5.0,13.0,4.0,0.38461538461538464,,False
+Ashraf Haji,18,0.0,18.0,0.0,0.0,,False
+Welikala Holdings (Pvt) Ltd,18,9.0,9.0,5.0,1.0,,False
+New Hardware Traders,18,8.0,10.0,6.0,0.8,,False
+Cash - Dine Divine Restaurant,18,17.0,1.0,7.0,17.0,,True
+Softlogic Restaurents (Pvt) Ltd,18,9.0,9.0,6.0,1.0,,False
+Nagoya Japanese Restuarant,17,10.0,7.0,6.0,1.4285714285714286,,False
+Silkfive (Pvt) Ltd,17,0.0,17.0,0.0,0.0,,False
+U.T.M.T Resort (Pvt) Ltd,17,4.0,13.0,4.0,0.3076923076923077,,False
+Dig in Dessert,17,11.0,6.0,6.0,1.8333333333333333,,False
+Nimal Hypermart (Pvt) Ltd,17,8.0,9.0,5.0,0.8888888888888888,,False
+Loan Given - Techspace (PVT) Ltd,17,8.0,9.0,5.0,0.8888888888888888,,False
+Delight Bakers & Sweet House (Pvt) Ltd,17,10.0,7.0,4.0,1.4285714285714286,,False
+Divine Apparels,17,3.0,14.0,3.0,0.21428571428571427,,False
+Kmix Garments,17,5.0,12.0,3.0,0.4166666666666667,,False
+Continental Food Products Pvt Ltd,17,13.0,4.0,7.0,3.25,,False
+D S K Beach Resort Pvt Ltd,17,11.0,6.0,5.0,1.8333333333333333,,False
+Mama'S Brownie,17,9.0,8.0,5.0,1.125,,False
+Swell Shacks Private Ltd,17,8.0,9.0,4.0,0.8888888888888888,,False
+Cash -Adra Restaurant,17,5.0,12.0,4.0,0.4166666666666667,,True
+Dodunduwa watta (Pvt) Ltd,17,6.0,11.0,5.0,0.5454545454545454,,False
+R.M.A. Leather Trading Company Pvt Ltd,17,12.0,5.0,6.0,2.4,,False
+Chinese Dragon Cafe (Pvt) Ltd,17,17.0,0.0,6.0,,,False
+The Kandy Hotels Co. (1938) PLC,17,14.0,3.0,6.0,4.666666666666667,,False
+L K Surf Adventures (Private) Limited,17,7.0,10.0,4.0,0.7,,False
+Naturub Exports International (PVT) Ltd,17,11.0,6.0,5.0,1.8333333333333333,,False
+Secret Alley Pvt Ltd,17,16.0,1.0,6.0,16.0,,False
+Ayurveda Paragon Pvt Ltd,17,7.0,10.0,6.0,0.7,,False
+Gamage Polythene Corner,17,9.0,8.0,4.0,1.125,,False
+O 2 Store (Pvt) Ltd,17,3.0,14.0,2.0,0.21428571428571427,,False
+Pizza Italiano Ragama,17,7.0,10.0,4.0,0.7,,False
+Asha Leisure Groups (Pvt) Ltd,17,17.0,0.0,4.0,,,False
+2020 Holdings (Private) Limited,17,5.0,12.0,5.0,0.4166666666666667,,False
+Zylan Group International (Pvt) Ltd,17,8.0,9.0,6.0,0.8888888888888888,,False
+C.P.G Hospitality (Pvt) Ltd,16,10.0,6.0,6.0,1.6666666666666667,,False
+Cafe Plus,16,11.0,5.0,7.0,2.2,,False
+Ceylon Sliders (Pvt) Ltd.,16,8.0,8.0,4.0,1.0,,False
+Cash - Tharindu Washing Pvt Ltd,16,16.0,0.0,4.0,,,True
+Nook Dynamics (Pvt) Ltd,16,10.0,6.0,5.0,1.6666666666666667,,False
+South Beach Weligama Properties Pvt Ltd,16,9.0,7.0,3.0,1.2857142857142858,,False
+Janaka Printers (PVT) Ltd,16,8.0,8.0,6.0,1.0,,False
+Negombo Hotels Limited,16,8.0,8.0,4.0,1.0,,False
+Paradise Road Tintagel Colombo (Pvt) Ltd,16,8.0,8.0,6.0,1.0,,False
+Asons Bangladesh (Pvt) Ltd,16,12.0,4.0,6.0,3.0,,False
+Nihonbashi (Pvt) Ltd,16,16.0,0.0,7.0,,,False
+Golden Island Hospitality (Pvt) Ltd,16,9.0,7.0,5.0,1.2857142857142858,,False
+D Chem Paints,16,3.0,13.0,2.0,0.23076923076923078,,False
+Momos Restuarant (Avante Group (Pvt) Ltd),16,16.0,0.0,5.0,,,False
+Suriya Luxury Resorts (Pvt) Ltd - TC,16,7.0,9.0,6.0,0.7777777777777778,,False
+Madonna Ahangama,16,3.0,13.0,3.0,0.23076923076923078,,False
+Print Care Universal (Pvt) Ltd,16,15.0,1.0,5.0,15.0,,False
+KTK Traders,16,9.0,7.0,4.0,1.2857142857142858,,False
+Habarana Lodge Limited,15,11.0,4.0,6.0,2.75,,False
+Coffee Up Pvt Ltd,15,3.0,12.0,3.0,0.25,,False
+Cafe Kandy Road (Pvt) Ltd,15,8.0,7.0,7.0,1.1428571428571428,,False
+Cash -  Coffee Luv,15,15.0,0.0,7.0,,,True
+Hirohama Ceylon (Pvt) Ltd,15,7.0,8.0,4.0,0.875,,False
+Chai by Safi Boy,15,12.0,3.0,7.0,4.0,,False
+Sarathchandra Home Centre,15,8.0,7.0,4.0,1.1428571428571428,,False
+Dickwella Resorts (Pvt) Ltd,15,8.0,7.0,4.0,1.1428571428571428,,False
+Damn Fine Coffee Pvt Ltd,15,8.0,7.0,6.0,1.1428571428571428,,False
+Luva Printing - TC,15,9.0,6.0,5.0,1.5,,False
+Kiyota Coffee Company (Pvt) Ltd,15,8.0,7.0,5.0,1.1428571428571428,,False
+South Coast Hospitality (Pvt) Ltd,15,7.0,8.0,4.0,0.875,,False
+Fresh Harvest Private Limited,15,14.0,1.0,5.0,14.0,,False
+Smart Visse Kade,15,6.0,9.0,4.0,0.6666666666666666,,False
+Unawatuna Boutique Resort (Pvt) Ltd,15,9.0,6.0,7.0,1.5,,False
+Ancore Techwear Private Limited,15,15.0,0.0,4.0,,,False
+Wild Coast Lodge (Pvt) Ltd,15,4.0,11.0,4.0,0.36363636363636365,,False
+Shore To Shore (PVT) Ltd,15,10.0,5.0,5.0,2.0,,False
+Tangerine Beach Hotels PLC,15,3.0,12.0,2.0,0.25,,False
+Ruhunu Hospital (Pvt) Ltd,15,8.0,7.0,6.0,1.1428571428571428,,False
+Srilankan Catering Pvt Ltd,15,14.0,1.0,6.0,14.0,,False
+Colombo Coffee Company (Pvt) Ltd,14,4.0,10.0,3.0,0.4,,False
+The Weligama Cliff Management Company Pvt Ltd,14,12.0,2.0,7.0,6.0,,False
+Canadian Tourism And Hospitality Institute,14,14.0,0.0,6.0,,,False
+Khety Trading,14,7.0,7.0,5.0,1.0,,False
+Miss.Menaka - TC,14,5.0,9.0,2.0,0.5555555555555556,,False
+Cash Customer Haleelullah,14,7.0,7.0,3.0,1.0,,True
+Tableau (PVT) Ltd,14,4.0,10.0,3.0,0.4,,False
+TC - D And D S Bio Holdings (pvt) Ltd,14,13.0,1.0,5.0,13.0,,False
+SKD Printers,14,12.0,2.0,5.0,6.0,,False
+D & H Trading Private Limited,14,7.0,7.0,6.0,1.0,,False
+Sameera Polythene,14,6.0,8.0,3.0,0.75,,False
+Tea Trails (Private) Limited,14,5.0,9.0,4.0,0.5555555555555556,,False
+Tropical Sun Management Pvt Ltd,14,3.0,11.0,2.0,0.2727272727272727,,False
+Vijay Associates,14,5.0,9.0,4.0,0.5555555555555556,,False
+Asaya Sands (Pvt) Ltd,14,8.0,6.0,4.0,1.3333333333333333,,False
+Penta Pizza,14,5.0,9.0,3.0,0.5555555555555556,,False
+Riccorn Leather,14,6.0,8.0,3.0,0.75,,False
+Island Tea Company,14,6.0,8.0,4.0,0.75,,False
+Soleray Engineering,14,12.0,2.0,5.0,6.0,,False
+Gills Hospitality Pvt Ltd,14,14.0,0.0,6.0,,,False
+Daawindaas Enterprises (Private) Limited,14,6.0,8.0,5.0,0.75,,False
+Unichela (Pvt) Ltd,14,10.0,4.0,5.0,2.5,,False
+Coreworks Trading Pvt Ltd,14,7.0,7.0,4.0,1.0,,False
+Rajahs Restaurant,14,5.0,9.0,5.0,0.5555555555555556,,False
+Weera Industries (PVT) Ltd (D),13,9.0,4.0,4.0,2.25,,False
+Wins Management (Private) Limited,13,6.0,7.0,4.0,0.8571428571428571,,False
+UFO Coffee Shop - Cash,13,1.0,12.0,1.0,0.08333333333333333,,True
+Zoco Jaffna - TC,13,7.0,6.0,5.0,1.1666666666666667,,False
+Cash - Pizza Hub,13,6.0,7.0,5.0,0.8571428571428571,,True
+Sozo International Company (PVT) Ltd,13,2.0,11.0,2.0,0.18181818181818182,,False
+Bellagio Limited,13,8.0,5.0,5.0,1.6,,False
+Natural Creations Lanka (Pvt) Ltd,13,10.0,3.0,5.0,3.3333333333333335,,False
+Janani Essence Mart - TC,13,8.0,5.0,5.0,1.6,,False
+Barnes Cafe (Pvt) Ltd,13,5.0,8.0,3.0,0.625,,False
+Sea Food Club,13,5.0,8.0,3.0,0.625,,False
+Hogwarts Cafe,13,4.0,9.0,3.0,0.4444444444444444,,False
+I.D.S Global (PVT) Ltd,13,10.0,3.0,3.0,3.3333333333333335,,False
+Hotel Chandrika Pvt Ltd,13,13.0,0.0,4.0,,,False
+Hotel Supplier Nuwara Eliya -TC,13,10.0,3.0,6.0,3.3333333333333335,,False
+Jetwing Ayurveda Pvt Ltd,13,6.0,7.0,5.0,0.8571428571428571,,False
+Eco Transfer Prints (PVT) Ltd,13,8.0,5.0,3.0,1.6,,False
+Royal Rest House,13,7.0,6.0,6.0,1.1666666666666667,,False
+M R S International (Pvt) Ltd,13,8.0,5.0,6.0,1.6,,False
+TC-Selani Hotel,13,4.0,9.0,4.0,0.4444444444444444,,False
+The Cielo Hirikatiya Pvt Ltd,13,9.0,4.0,5.0,2.25,,False
+Blackpool Holdings (Pvt) Ltd,13,9.0,4.0,4.0,2.25,,False
+Lakshmi Garment Pvt Ltd,13,10.0,3.0,6.0,3.3333333333333335,,False
+Serendib Hotels PLC,13,4.0,9.0,3.0,0.4444444444444444,,False
+Dinemore (Pvt) Ltd,13,5.0,8.0,4.0,0.625,,False
+Synergy 2 (Pvt) Ltd,13,5.0,8.0,3.0,0.625,,False
+Mas Udyat India Pvt Ltd,13,7.0,6.0,5.0,1.1666666666666667,,False
+Bokbok Pvt Ltd,13,8.0,5.0,6.0,1.6,,False
+Sun Leather,13,5.0,8.0,2.0,0.625,,False
+Printerline screen printing,13,4.0,9.0,3.0,0.4444444444444444,,False
+Teafin (Pvt) Ltd -Nine Skies,13,2.0,11.0,2.0,0.18181818181818182,,False
+Popo Global (Pvt) Ltd,13,8.0,5.0,5.0,1.6,,False
+Highscene Limited,12,10.0,2.0,4.0,5.0,,False
+Navik Mills Pvt Ltd,12,7.0,5.0,3.0,1.4,,False
+Zippi - Cash,12,0.0,12.0,0.0,0.0,,True
+A.M.Leather,12,4.0,8.0,3.0,0.5,,False
+Vally Stores,12,4.0,8.0,3.0,0.5,,False
+North Manufacturing Pvt Ltd,12,7.0,5.0,4.0,1.4,,False
+Janitha Bakers Pvt Ltd,12,4.0,8.0,3.0,0.5,,False
+Polythene Centre-Matara,12,6.0,6.0,6.0,1.0,,False
+Rolex's Bake Mart,12,6.0,6.0,5.0,1.0,,False
+Sun Tan Beach Resorts Limited,12,7.0,5.0,5.0,1.4,,False
+Disara Graphics (PVT) Ltd - Cash,12,5.0,7.0,3.0,0.7142857142857143,,True
+Black Honey Operations (Pvt) Ltd,12,3.0,9.0,3.0,0.3333333333333333,,False
+Shakthi Garments - Cash,12,11.0,1.0,2.0,11.0,,True
+Print Express Lanka (Pvt) Ltd,12,12.0,0.0,6.0,,,False
+Flash Healt Pvt Ltd,12,12.0,0.0,5.0,,,False
+BMV Sun Pvt Ltd,12,12.0,0.0,5.0,,,False
+Ocean Lanka (Pvt) Ltd,12,6.0,6.0,4.0,1.0,,False
+The Golden Crown Hotel (Pvt) Ltd,12,2.0,10.0,2.0,0.2,,False
+Ceylon City Mart,12,6.0,6.0,3.0,1.0,,False
+MHM Silva & Sons,12,6.0,6.0,4.0,1.0,,False
+Gallopes Trading,12,2.0,10.0,2.0,0.2,,False
+Tear Drop Holidays (Pvt) Ltd,12,6.0,6.0,6.0,1.0,,False
+Kixi Cafe,12,8.0,4.0,3.0,2.0,,False
+Seashells Hotel Ltd,12,4.0,8.0,3.0,0.5,,False
+Property Finance & Investment Kandy (Pvt) Ltd,12,12.0,0.0,5.0,,,False
+Trickledown (Pvt) Ltd- D,12,6.0,6.0,4.0,1.0,,False
+Artisan Diletto (Private) Limited,11,0.0,11.0,0.0,0.0,,False
+ARK Foods Pvt Ltd,11,5.0,6.0,5.0,0.8333333333333334,,False
+A Plus Biriyani,11,8.0,3.0,4.0,2.6666666666666665,,False
+Yu Cafe,11,4.0,7.0,3.0,0.5714285714285714,,False
+Global Dining Pvt Ltd,11,4.0,7.0,3.0,0.5714285714285714,,False
+Architectural Interiors Export Ltd,11,3.0,8.0,3.0,0.375,,False
+Nilaveli Beach Hotels Pvt Ltd,11,8.0,3.0,3.0,2.6666666666666665,,False
+Jerash Garments & Fashions Mfg Co. Ltd,11,3.0,8.0,3.0,0.375,,False
+Indochine Apparel PLC,11,8.0,3.0,4.0,2.6666666666666665,,False
+New Central Essence,11,11.0,0.0,6.0,,,False
+Cash - The Fat Crab Pvt Ltd,11,11.0,0.0,4.0,,,True
+Papa Jeevz,11,2.0,9.0,2.0,0.2222222222222222,,False
+Screen Fashion - TC,11,6.0,5.0,4.0,1.2,,False
+Musaeus College,11,6.0,5.0,4.0,1.2,,False
+Bolagala Floating Resort Pvt Ltd,11,6.0,5.0,4.0,1.2,,False
+Sandeepa Printing Services - TC,11,9.0,2.0,5.0,4.5,,False
+The Trees Cafe,11,4.0,7.0,3.0,0.5714285714285714,,False
+Thinnaveli Property Developers (Pvt) Ltd,11,5.0,6.0,4.0,0.8333333333333334,,False
+Cash Customers,11,1.0,10.0,1.0,0.1,,True
+Cafe Ivy (Pvt) Ltd,11,11.0,0.0,4.0,,,False
+Cafe Culture,11,3.0,8.0,3.0,0.375,,False
+Kotuwa Kade (Pvt) Ltd.,11,7.0,4.0,5.0,1.75,,False
+The Grand Surf Hotel Pvt Ltd,11,11.0,0.0,5.0,,,False
+HASITHA BATADUWA,10,5.0,5.0,4.0,1.0,,False
+Yara Nuwara Eliya (Pvt) Ltd,10,6.0,4.0,4.0,1.5,,False
+Ranjan Lanka (Pvt) Ltd,10,4.0,6.0,2.0,0.6666666666666666,,False
+Lasan Trade Centre,10,4.0,6.0,3.0,0.6666666666666666,,False
+Canterbury Hotels Pvt Ltd,10,5.0,5.0,4.0,1.0,,False
+Kimchii Korean Restaurant - TC,10,5.0,5.0,5.0,1.0,,False
+L.G.J. Super Centre (Pvt) Ltd,10,5.0,5.0,5.0,1.0,,False
+Global Sports Lanka (Pvt) Ltd.,10,6.0,4.0,4.0,1.5,,False
+Chathuranga Bake House,10,3.0,7.0,3.0,0.42857142857142855,,False
+Color4 (Pvt) Ltd,10,10.0,0.0,4.0,,,False
+Nerox Paint,10,4.0,6.0,3.0,0.6666666666666666,,False
+New Dunhinda Apparels (Pvt) Ltd,10,5.0,5.0,3.0,1.0,,False
+Fashion Leather,10,1.0,9.0,1.0,0.1111111111111111,,False
+Pagoma Food Mall (Pvt) Ltd,10,7.0,3.0,4.0,2.3333333333333335,,False
+Sea View Clay House Hiriketiya - Cash,10,6.0,4.0,4.0,1.5,,True
+Festa Bakers,10,2.0,8.0,2.0,0.25,,False
+Cash - Lashien Printing,10,9.0,1.0,4.0,9.0,,True
+Salt House,10,2.0,8.0,1.0,0.25,,False
+Cash - Madhawa Printing,10,7.0,3.0,4.0,2.3333333333333335,,True
+R & A Apparel,10,6.0,4.0,2.0,1.5,,False
+Cash - Pounders Pvt Ltd,10,3.0,7.0,2.0,0.42857142857142855,,True
+Piyasiri Stores Matara,10,5.0,5.0,4.0,1.0,,False
+ONK Tangalle Pvt Ltd,10,6.0,4.0,5.0,1.5,,False
+Royal Palms Beach Hotels PLC,10,5.0,5.0,4.0,1.0,,False
+Barakath Traders,10,3.0,7.0,3.0,0.42857142857142855,,False
+Cash -Amma Nissa Catering,10,10.0,0.0,4.0,,,True
+Spartan Ventures Pvt Ltd,10,5.0,5.0,4.0,1.0,,False
+Momo Cafe (Pvt) Ltd,10,5.0,5.0,5.0,1.0,,False
+Moments,10,1.0,9.0,1.0,0.1111111111111111,,False
+St Anthonys Cake Center,10,5.0,5.0,5.0,1.0,,False
+Solis Tourist Rest (Private) Limited,10,1.0,9.0,1.0,0.1111111111111111,,False
+Trinity Multi Traders,10,2.0,8.0,2.0,0.25,,False
+Eden Hotel Lanka PLC,10,2.0,8.0,2.0,0.25,,False
+Sheriff Stores,10,5.0,5.0,5.0,1.0,,False
+Kai Products Pvt Ltd,10,7.0,3.0,6.0,2.3333333333333335,,False
+Meet and Eat,10,5.0,5.0,3.0,1.0,,False
+Blue Oceanic Beach Hotel (Pvt) Ltd,10,6.0,4.0,3.0,1.5,,False
+Thinesh Bake House,10,5.0,5.0,3.0,1.0,,False
+C B L Foods International (Private) Limited,10,5.0,5.0,5.0,1.0,,False
+D P L Sports Gloves (Pvt) Ltd,10,2.0,8.0,2.0,0.25,,False
+Cash - Temple Brew Coffee,10,10.0,0.0,4.0,,,True
+T&FG – Timex Garments,9,5.0,4.0,1.0,1.25,,False
+Jagro  Foods (Private) Limited,9,2.0,7.0,2.0,0.2857142857142857,,False
+Bay Vista Hotel (Pvt) Ltd,9,8.0,1.0,5.0,8.0,,False
+Huejay International Multiflora (Private) Limited,9,3.0,6.0,2.0,0.5,,False
+Bake House Kandy (private) limited,9,1.0,8.0,1.0,0.125,,False
+Bevito (Pvt) Ltd,9,4.0,5.0,3.0,0.8,,False
+Nora,9,4.0,5.0,3.0,0.8,,False
+New Baby Mart,9,7.0,2.0,4.0,3.5,,False
+Victoria Stores -Kandy,9,6.0,3.0,3.0,2.0,,False
+Wild and the Sage - Cash,9,0.0,9.0,0.0,0.0,,True
+Akreech Leisure Pvt Ltd,9,5.0,4.0,3.0,1.25,,False
+Plastic Emporium,9,3.0,6.0,2.0,0.5,,False
+Pitstop Cafe & Restaurant (Pvt) Ltd,9,3.0,6.0,3.0,0.5,,False
+Cash - Shree Sai Foods Lanka Pvt Ltd,9,8.0,1.0,5.0,8.0,,True
+Oxley Threads Lanka (PVT) Ltd,9,6.0,3.0,3.0,2.0,,False
+Cash Customer - Kamal,9,6.0,3.0,3.0,2.0,,True
+Naran Clothing - TC,9,7.0,2.0,5.0,3.5,,False
+Eam Maliban Textile (PVT) Ltd,9,6.0,3.0,4.0,2.0,,False
+The Base Project Pvt Ltd,9,6.0,3.0,3.0,2.0,,False
+Ani Villas Dickwella Pvt Ltd,9,3.0,6.0,3.0,0.5,,False
+CIB Garments,9,9.0,0.0,3.0,,,False
+Classic Impressions Pvt Ltd,9,9.0,0.0,2.0,,,False
+Chef Master Resturant,9,6.0,3.0,4.0,2.0,,False
+Cafe Amakie Kurunegela,9,5.0,4.0,4.0,1.25,,False
+The Bayleaf Pvt Ltd,9,0.0,9.0,0.0,0.0,,False
+Cooper Enterprise (Private) Limited,9,2.0,7.0,2.0,0.2857142857142857,,False
+Reecha Organic Farm Pvt Ltd,9,2.0,7.0,2.0,0.2857142857142857,,False
+Rathna Sweet House,9,2.0,7.0,2.0,0.2857142857142857,,False
+Classic Fashion Apparel Industry Ltd Co,9,1.0,8.0,1.0,0.125,,False
+One Ocean Port City (Pvt) Ltd,9,7.0,2.0,3.0,3.5,,False
+Maxco Packaging,9,4.0,5.0,4.0,0.8,,False
+Midas Safety Ceylon (Pvt) Ltd,9,7.0,2.0,5.0,3.5,,False
+Banana Leaf Restaurant - TC,9,6.0,3.0,6.0,2.0,,False
+The Tuna & The Crab (Pvt) Ltd,9,4.0,5.0,4.0,0.8,,False
+Cash -Unique Printing,9,9.0,0.0,4.0,,,True
+Cash - Darshana Printers,9,9.0,0.0,3.0,,,True
+Loan Given - Hi Fashion Holdings Pvt Ltd,9,7.0,2.0,5.0,3.5,,False
+Welisara Screen Printers,8,2.0,6.0,2.0,0.3333333333333333,,False
+Cash - MPS Galle,8,8.0,0.0,5.0,,,True
+Riyal & Sons,8,4.0,4.0,4.0,1.0,,False
+Fits Aviation (Pvt) Ltd,8,2.0,6.0,1.0,0.3333333333333333,,False
+Duni's Hoppers,8,0.0,8.0,0.0,0.0,,False
+ChicKing Srilanka,8,8.0,0.0,2.0,,,False
+Crust Pizzeria (Pvt) Ltd,8,8.0,0.0,3.0,,,False
+Ceyvista Leisure (Pvt) Ltd,8,6.0,2.0,4.0,3.0,,False
+Ceylon Stories Gallery Cafe (Pvt) Ltd,8,5.0,3.0,4.0,1.6666666666666667,,False
+Cinnamon Hotel Management Ltd.,8,3.0,5.0,3.0,0.6,,False
+Arachchi Restaurant,8,4.0,4.0,4.0,1.0,,False
+Rancrisp Marketing (Pvt) Ltd,8,4.0,4.0,3.0,1.0,,False
+Kreemi Dairy Products,8,5.0,3.0,4.0,1.6666666666666667,,False
+S M Farook - TC,8,1.0,7.0,1.0,0.14285714285714285,,False
+Hotel White House,8,4.0,4.0,2.0,1.0,,False
+Printology & Packaging Pvt Ltd,8,1.0,7.0,1.0,0.14285714285714285,,False
+Pettah Essence Suppliers,8,8.0,0.0,5.0,,,False
+Cash - Stay Golden Restaurant Arugambay,8,8.0,0.0,5.0,,,True
+Cash - Sopp,8,7.0,1.0,4.0,7.0,,True
+Kandoori - Cash,8,2.0,6.0,2.0,0.3333333333333333,,True
+Brandix Intimates Center,8,8.0,0.0,3.0,,,False
+DNS Holdings International (Pvt) Ltd,8,7.0,1.0,5.0,7.0,,False
+Teardrop Estates (Pvt.) Ltd,8,2.0,6.0,2.0,0.3333333333333333,,False
+Teejay Lanka PLC,8,6.0,2.0,3.0,3.0,,False
+Cafe One Love Pvt Ltd,8,7.0,1.0,3.0,7.0,,False
+"Little bang kitchen, Ahangama - TC",8,5.0,3.0,4.0,1.6666666666666667,,False
+Cash - Arambaya Hotel,8,8.0,0.0,4.0,,,True
+Mandara Resort (Pvt) Ltd,8,7.0,1.0,6.0,7.0,,False
+Delicious Concepts (Pvt) Ltd,8,4.0,4.0,4.0,1.0,,False
+Lets Travel Resort (Private) Limited,8,3.0,5.0,3.0,0.6,,False
+Suisse Hotel Kandy (Pvt) Ltd,8,6.0,2.0,4.0,3.0,,False
+Bossm 99 Stores,8,4.0,4.0,4.0,1.0,,False
+Lunu Bay Weligama,8,3.0,5.0,3.0,0.6,,False
+Mr.Zoeb (Royal Sweet Mart),8,4.0,4.0,3.0,1.0,,False
+Monella Pizza,8,4.0,4.0,4.0,1.0,,False
+Cash - Zion Lanka Trading Pvt Ltd,8,8.0,0.0,4.0,,,True
+Sirilak Super (Pvt) Ltd,8,4.0,4.0,4.0,1.0,,False
+Cash - Bm Poly Bag,8,8.0,0.0,4.0,,,True
+Nidro Supply (Pvt) Ltd,8,7.0,1.0,5.0,7.0,,False
+Sidney Apparels,8,2.0,6.0,2.0,0.3333333333333333,,False
+Needle Craft For Clothing Industry,8,1.0,7.0,1.0,0.14285714285714285,,False
+Rajeswary and Sons Pvt Ltd- G R Plaza,7,7.0,0.0,2.0,,,False
+Lanka Naigai Pvt Ltd,7,3.0,4.0,2.0,0.75,,False
+Kandyan Resort (Pvt) Ltd,7,5.0,2.0,4.0,2.5,,False
+Laya Safari Army Welfare Holiday Resort,7,2.0,5.0,2.0,0.4,,False
+Cook Nook By Vilo,7,2.0,5.0,2.0,0.4,,False
+Antlers Clothing Pvt Ltd,7,0.0,7.0,0.0,0.0,,False
+The Lanka Hospitals Corporation PLC,7,4.0,3.0,2.0,1.3333333333333333,,False
+Abdul Azeez Brothers (Pvt) Ltd,7,7.0,0.0,4.0,,,False
+Chill Monkey Pvt Ltd,7,7.0,0.0,3.0,,,False
+The Kottu Factory,7,4.0,3.0,3.0,1.3333333333333333,,False
+Hemas Hospitals (Pvt) Ltd,7,4.0,3.0,4.0,1.3333333333333333,,False
+TC - KMP Restaurant,7,2.0,5.0,1.0,0.4,,False
+M M R Investments Pvt Ltd,7,3.0,4.0,3.0,0.75,,False
+Trendy Connections (PVT) Ltd,7,3.0,4.0,2.0,0.75,,False
+D Lounge Cafe & Restaurant,7,5.0,2.0,3.0,2.5,,False
+Brand View Labels Lanka (Pvt) Ltd,7,4.0,3.0,4.0,1.3333333333333333,,False
+Taprobane Plantations Ltd,7,7.0,0.0,3.0,,,False
+"New Wimala Trade Centre
+",7,4.0,3.0,3.0,1.3333333333333333,,False
+Jetwing City Pvt Ltd,7,5.0,2.0,3.0,2.5,,False
+Elevate Impact Pvt Ltd,7,2.0,5.0,1.0,0.4,,False
+Meori,7,1.0,6.0,1.0,0.16666666666666666,,False
+Muthu Bar - Cash,7,1.0,6.0,1.0,0.16666666666666666,,True
+Cash -Nihal Family Restaurant,7,7.0,0.0,3.0,,,True
+Meed Hood,7,7.0,0.0,5.0,,,False
+D M Interior Studio Pvt Ltd,7,7.0,0.0,3.0,,,False
+Loan Given - R Pac Printcare,7,3.0,4.0,3.0,0.75,,False
+Loan Given - Fusion Apparel Pvt Ltd,7,1.0,6.0,1.0,0.16666666666666666,,False
+Nayana Ranjanee Sale Pola,7,5.0,2.0,5.0,2.5,,False
+Fair View Hotel (Pvt) Ltd,7,4.0,3.0,4.0,1.3333333333333333,,False
+Turyaa (Private) LImited,7,1.0,6.0,1.0,0.16666666666666666,,False
+New Mac Mart - TC,7,5.0,2.0,3.0,2.5,,False
+Infinite Trading Company Pvt Ltd,7,5.0,2.0,3.0,2.5,,False
+Bashini Super Market,7,4.0,3.0,3.0,1.3333333333333333,,False
+VTB Sun Pvt Ltd - Vavuniya,7,7.0,0.0,3.0,,,False
+United Creations L.L.C,7,1.0,6.0,1.0,0.16666666666666666,,False
+Cash - Grind Colombo,7,7.0,0.0,5.0,,,True
+Singai Resturant - TC,7,4.0,3.0,3.0,1.3333333333333333,,False
+Sisila Lanka (Pvt) Ltd,7,4.0,3.0,3.0,1.3333333333333333,,False
+Ulagalla Walawwa Resort (Pvt) Ltd,7,1.0,6.0,1.0,0.16666666666666666,,False
+GTC Converters,7,2.0,5.0,2.0,0.4,,False
+Full Moon Garden Hotel (Pvt) Ltd,7,0.0,7.0,0.0,0.0,,False
+Cash - Pizza Hub Akurana,7,7.0,0.0,3.0,,,True
+G.M.T.Sorabora Village Hotel (Pvt) Ltd,7,3.0,4.0,3.0,0.75,,False
+Fun Bun Pvt Ltd,7,7.0,0.0,3.0,,,False
+Northern Packaging,7,7.0,0.0,3.0,,,False
+Safety Sure Pvt Ltd,7,7.0,0.0,5.0,,,False
+Purple Line Bakers,7,7.0,0.0,5.0,,,False
+Prym Intimates Lanka Pvt Ltd,7,3.0,4.0,3.0,0.75,,False
+Vannistar Pvt Ltd,7,7.0,0.0,4.0,,,False
+Weligama Bay Resort,6,1.0,5.0,1.0,0.2,,False
+Vally Mohammed iqbal,6,2.0,4.0,2.0,0.5,,False
+VV Mart & Construction,6,2.0,4.0,2.0,0.5,,False
+Grand Laksiri International (Pvt) Ltd,6,4.0,2.0,3.0,2.0,,False
+Harpo's Pizza Nugegoda (Pvt) Ltd,6,2.0,4.0,1.0,0.5,,False
+Gurusinghe Enterprises,6,3.0,3.0,3.0,1.0,,False
+Attha's Restaurant,6,4.0,2.0,4.0,2.0,,False
+Beach & Bliss - Mirissa Hotel _TC,6,4.0,2.0,3.0,2.0,,False
+Biriyani Darbar,6,3.0,3.0,3.0,1.0,,False
+Thoma - TC,6,3.0,3.0,3.0,1.0,,False
+Broil Yard (Private) Limited,6,6.0,0.0,4.0,,,False
+Tharanka Lanka Enterprises (Pvt) Ltd,6,2.0,4.0,2.0,0.5,,False
+CIC Seeds Pvt Ltd,6,2.0,4.0,1.0,0.5,,False
+Cafe On The Eighteenth,6,6.0,0.0,5.0,,,False
+Cash - A.H.M. Cake Puttalam,6,6.0,0.0,6.0,,,True
+Cash - Acropol Restaurant,6,6.0,0.0,3.0,,,True
+Cash - Cake Flavour,6,6.0,0.0,3.0,,,True
+TC - KIKU Colombo,6,4.0,2.0,3.0,2.0,,False
+THE BITTERS BUREAU (PVT) LTD,6,3.0,3.0,3.0,1.0,,False
+Teddies Ahangama - Rooftop Cafe - TC,6,5.0,1.0,5.0,5.0,,False
+Healthy & Tasty (Private) Limited,6,6.0,0.0,4.0,,,False
+Hikkaduwa Beach Resort PLC,6,6.0,0.0,4.0,,,False
+Sampath Grandeur,6,1.0,5.0,1.0,0.2,,False
+Ruhunu Pub & Resort (Pvt) Ltd,6,6.0,0.0,3.0,,,False
+Expoceylon Pharmaceuticals (Pvt) Ltd,6,3.0,3.0,2.0,1.0,,False
+Cash - Julee cafe,6,5.0,1.0,3.0,5.0,,True
+Cash - Coffee Story Cafe & Bistro,6,5.0,1.0,5.0,5.0,,True
+Loan Given - ITL,6,3.0,3.0,1.0,1.0,,False
+Lanka Hotels & Travels Pvt Ltd,6,3.0,3.0,3.0,1.0,,False
+Deck 99 Pvt Ltd,6,1.0,5.0,1.0,0.2,,False
+Crepe Runner (Private) Limited,6,3.0,3.0,3.0,1.0,,False
+Koggala Beach Hotel Ltd,6,2.0,4.0,1.0,0.5,,False
+DINESH (NXT),6,3.0,3.0,2.0,1.0,,False
+Workwear Lanka (Pvt) Ltd,6,0.0,6.0,0.0,0.0,,False
+A&M Food Company (Private) Limited,6,6.0,0.0,5.0,,,False
+A-Zone Pvt Ltd (C07462019),6,3.0,3.0,2.0,1.0,,False
+Mony & Company,6,3.0,3.0,3.0,1.0,,False
+Doner & Durum (Pvt) Ltd,6,0.0,6.0,0.0,0.0,,False
+Fancy House-Horana,6,3.0,3.0,3.0,1.0,,False
+OH Bakers Pvt) Ltd,6,2.0,4.0,1.0,0.5,,False
+Noor Fancy,6,2.0,4.0,2.0,0.5,,False
+New Victoria Plastic,6,3.0,3.0,3.0,1.0,,False
+Cash - The Grand Riverston Hotel Pvt Ltd,6,6.0,0.0,4.0,,,True
+Cash - The Brownie Station,6,6.0,0.0,4.0,,,True
+New Asian Accessories (Pvt) Ltd.,6,0.0,6.0,0.0,0.0,,False
+N.A.Chemicals,6,1.0,5.0,1.0,0.2,,False
+Mr. Niyas - Cash,6,2.0,4.0,2.0,0.5,,True
+Moochies Weligama - TC,6,3.0,3.0,3.0,1.0,,False
+E-Screen Systems (Pvt) Ltd,6,4.0,2.0,2.0,2.0,,False
+Cash - Salty Swamis,6,5.0,1.0,4.0,5.0,,True
+Pottuvil Point (Pvt) Ltd,6,2.0,4.0,2.0,0.5,,False
+Jaffna Authentic Cuisine - TC,6,2.0,4.0,1.0,0.5,,False
+Rainbow Plastics-Panadura,6,3.0,3.0,2.0,1.0,,False
+Ramada- Colombo,6,3.0,3.0,3.0,1.0,,False
+Dessert Spoon - TC,6,3.0,3.0,3.0,1.0,,False
+Loan Given - MAS Active (OLD),6,0.0,6.0,0.0,0.0,,False
+Loan Given -  South Asia,6,1.0,5.0,1.0,0.2,,False
+Loan Given - Asons Limited,6,3.0,3.0,2.0,1.0,,False
+Loan Given - Regal Image,6,4.0,2.0,3.0,2.0,,False
+Ruhunu Products - TC,5,3.0,2.0,3.0,1.5,,False
+Sanushi Reception Hall,5,3.0,2.0,3.0,1.5,,False
+Samanthas Bake House,5,3.0,2.0,3.0,1.5,,False
+Sky30Restaurant(Pvt)Ltd,5,5.0,0.0,3.0,,,False
+Sinhara Company Pvt Ltd,5,5.0,0.0,2.0,,,False
+Smart Holding (Pvt) Ltd,5,0.0,5.0,0.0,0.0,,False
+Samson Manufactures Pvt Ltd,5,4.0,1.0,3.0,4.0,,False
+Cash - Lakmali Trading,5,5.0,0.0,4.0,,,True
+Seed Cafe (Pvt) Ltd,5,4.0,1.0,4.0,4.0,,False
+Cash - Jaya Printing Solutions Pvt Ltd,5,4.0,1.0,3.0,4.0,,True
+Sasoba Trade Centre,5,3.0,2.0,3.0,1.5,,False
+Cash - Araliya Creation,5,2.0,3.0,2.0,0.6666666666666666,,True
+Sunshine Bakery (Pvt) Ltd,5,5.0,0.0,3.0,,,False
+TUV Rheinland Vietnam Co Lrs,5,2.0,3.0,2.0,0.6666666666666666,,False
+TC - Bubble Bear,5,1.0,4.0,1.0,0.25,,False
+Cash - C & K Printers,5,5.0,0.0,3.0,,,True
+The Bamboo Garden (Pvt) Ltd,5,4.0,1.0,4.0,4.0,,False
+Fox Resorts (Pvt) Ltd - TC,5,3.0,2.0,3.0,1.5,,False
+Gills Food Product Pvt Ltd,5,4.0,1.0,4.0,4.0,,False
+Burleys,5,4.0,1.0,2.0,4.0,,False
+Thisara Trade Cente,5,3.0,2.0,2.0,1.5,,False
+Brandix Apparel Solutions Limited,5,5.0,0.0,3.0,,,False
+Shoematik,5,0.0,5.0,0.0,0.0,,False
+Cash - Colombo Steak house,5,5.0,0.0,4.0,,,True
+Ferola Holding Lanka Pvt Ltd,5,3.0,2.0,3.0,1.5,,False
+Freshnet Pvt Ltd,5,2.0,3.0,2.0,0.6666666666666666,,False
+Cash - Eleven Restaurant,5,5.0,0.0,3.0,,,True
+Marnie International Pvt Ltd,5,5.0,0.0,2.0,,,False
+Cash -Orbit 88,5,5.0,0.0,3.0,,,True
+N Flash Super Detergent,5,5.0,0.0,3.0,,,False
+Moochies Cafe & Rooftop - TC,5,2.0,3.0,2.0,0.6666666666666666,,False
+Pegasus Hotels of Ceylon PLC,5,1.0,4.0,1.0,0.25,,False
+Cash - Poly world,5,5.0,0.0,4.0,,,True
+Riverside Cabanas - TC,5,3.0,2.0,2.0,1.5,,False
+Roughstone (Pvt) Ltd,5,3.0,2.0,3.0,1.5,,False
+Cash - Nimro Hotel Supplier,5,5.0,0.0,3.0,,,True
+Cash - P & L Labels,5,5.0,0.0,5.0,,,True
+Rajarata Hotels Ltd,5,2.0,3.0,2.0,0.6666666666666666,,False
+Cash - Mr Kumara,5,5.0,0.0,3.0,,,True
+Cash - Radical,5,5.0,0.0,4.0,,,True
+Cash - Senvia Studio,5,5.0,0.0,2.0,,,True
+MC Queens Desserts,5,5.0,0.0,5.0,,,False
+Cash Customer - Prasanna,5,0.0,5.0,0.0,0.0,,True
+Linea Aqua,5,1.0,4.0,1.0,0.25,,False
+Loan Given - Omega Line (PVT) Ltd,5,5.0,0.0,5.0,,,False
+Cash- Sumith Kitchen Mirissa,5,4.0,1.0,4.0,4.0,,True
+Maliban Wovens Pvt Ltd,5,4.0,1.0,3.0,4.0,,False
+Cash- Cafe Kumbuk,5,3.0,2.0,2.0,1.5,,True
+MAS Intimates Kenya EPZ Limited,5,3.0,2.0,2.0,1.5,,False
+MAS AYATHI,5,5.0,0.0,2.0,,,False
+M.Y.M Muhlar & Sons,5,3.0,2.0,2.0,1.5,,False
+Coho Corporation (Private) Limited,5,5.0,0.0,3.0,,,False
+Colombo Dyes & Chemicals,5,2.0,3.0,2.0,0.6666666666666666,,False
+La Creme Ceylon (Pvt) Ltd,5,3.0,2.0,1.0,1.5,,False
+Central Warehouse (Consumption),5,4.0,1.0,4.0,4.0,,False
+Kaduwela Picture Palace,5,2.0,3.0,2.0,0.6666666666666666,,False
+K.A.Chinnaiyyah,5,1.0,4.0,1.0,0.25,,False
+Kandy Uni Pvt Ltd,5,2.0,3.0,2.0,0.6666666666666666,,False
+Viyara Printers - TC,5,3.0,2.0,3.0,1.5,,False
+Royal Fernwood Porcelain Limited,4,0.0,4.0,0.0,0.0,,False
+Cash - Milano Bakers,4,4.0,0.0,2.0,,,True
+Lada Trade Centre,4,2.0,2.0,2.0,1.0,,False
+La brasserie,4,4.0,0.0,3.0,,,False
+Grecha Lounge Bar - Cash,4,0.0,4.0,0.0,0.0,,True
+Coral Sands Hotel (Pvt) Ltd,4,3.0,1.0,2.0,3.0,,False
+Color Max (Pvt) Ltd,4,3.0,1.0,3.0,3.0,,False
+Kebab Restaurant Belihuloya,4,4.0,0.0,3.0,,,False
+Ratna Cafe & Bake House - TC,4,3.0,1.0,3.0,3.0,,False
+Cash - Mr. Suneka,4,3.0,1.0,3.0,3.0,,True
+Cash - Mr Raja,4,4.0,0.0,3.0,,,True
+S&G,4,1.0,3.0,1.0,0.3333333333333333,,False
+F T Y Manufacturing Pvt Ltd,4,4.0,0.0,2.0,,,False
+Rainbow Leathers - TC,4,1.0,3.0,1.0,0.3333333333333333,,False
+Queensbury Hospitals (Pvt) Ltd,4,4.0,0.0,2.0,,,False
+Cash - Kai Havelock,4,4.0,0.0,3.0,,,True
+Cash - Natural Eats (Pvt) Ltd,4,4.0,0.0,3.0,,,True
+Sanjula Traders & Baby Care,4,2.0,2.0,2.0,1.0,,False
+Cash - J M J C DISANAYAKA,4,4.0,0.0,3.0,,,True
+Cash - Qcumber cafe,4,4.0,0.0,1.0,,,True
+Chiking Lanka Private Ltd,4,4.0,0.0,1.0,,,False
+Beach View Guest House,4,0.0,4.0,0.0,0.0,,False
+Gurusinghe Multi Corner,4,2.0,2.0,2.0,1.0,,False
+Atlas Axillia Co. Pvt Ltd,4,2.0,2.0,2.0,1.0,,False
+Associated Resort Developers (Pvt) Ltd,4,0.0,4.0,0.0,0.0,,False
+Lankem Robbialac,4,2.0,2.0,2.0,1.0,,False
+Laksela LifeStyle (Pvt) Ltd,4,3.0,1.0,2.0,3.0,,False
+Cash - Polyzone,4,4.0,0.0,3.0,,,True
+PINETREE CO LTD,4,4.0,0.0,2.0,,,False
+Cash - SRH PRINT WORKS,4,4.0,0.0,1.0,,,True
+Cash - Riyal Trading Jaffna,4,3.0,1.0,3.0,3.0,,True
+Smoothie Bun - Cash,4,3.0,1.0,3.0,3.0,,True
+Cash - Heaven de Fountain,4,4.0,0.0,4.0,,,True
+Cash - Haze Artware,4,4.0,0.0,2.0,,,True
+Janalanka Holdings-Pettah,4,3.0,1.0,3.0,3.0,,False
+Lime & Salt Restaurant Tangalle,4,2.0,2.0,1.0,1.0,,False
+Bee corporation (Pvt) Ltd,4,3.0,1.0,3.0,3.0,,False
+Jaindi Export (Pvt) Ltd,4,4.0,0.0,2.0,,,False
+Jagro (Private) Limited,4,4.0,0.0,4.0,,,False
+J T L S Gelato Pvt Ltd,4,3.0,1.0,3.0,3.0,,False
+Pack Mart Paper Products (Pvt) Ltd,4,3.0,1.0,2.0,3.0,,False
+Cash - Sweet vibes,4,3.0,1.0,2.0,3.0,,True
+Orion Inmotion (Pvt) Ltd,4,1.0,3.0,1.0,0.3333333333333333,,False
+Cash - Street barista crew,4,4.0,0.0,3.0,,,True
+Cash - Sphinx Industries,4,4.0,0.0,4.0,,,True
+Cash - South East Cafe (Pvt) Ltd,4,4.0,0.0,2.0,,,True
+Cash - Good Kitchen Batigama,4,2.0,2.0,1.0,1.0,,True
+Speed Lanka Labels Pvt Ltd,4,4.0,0.0,1.0,,,False
+Cash - Treats,4,4.0,0.0,4.0,,,True
+Cash-Mr Jifry,4,2.0,2.0,2.0,1.0,,True
+Cash-Dream life Science (Pvt)Ltd,4,4.0,0.0,3.0,,,True
+Cafe Noir Pvt Ltd,4,2.0,2.0,2.0,1.0,,False
+Top Printers,4,3.0,1.0,2.0,3.0,,False
+Brandix Essentials Centre,4,1.0,3.0,1.0,0.3333333333333333,,False
+Bokka - TC,4,2.0,2.0,2.0,1.0,,False
+Cash - Diwerse Gift Studio & Cafe,4,4.0,0.0,4.0,,,True
+Cash - Chai Leaves & Juice Lounge,4,4.0,0.0,2.0,,,True
+Cash - Bite My Rice,4,4.0,0.0,2.0,,,True
+Cash - Wishque (Pvt) Ltd,4,4.0,0.0,3.0,,,True
+Super Savings.Lk,4,2.0,2.0,2.0,1.0,,False
+Cash -Ling,4,4.0,0.0,2.0,,,True
+Cash -PAPRICO RESTAURANT,4,4.0,0.0,3.0,,,True
+Cash -  Espresso Coffee Italiano Sigiriya,4,3.0,1.0,2.0,3.0,,True
+Mambos hotel,4,1.0,3.0,1.0,0.3333333333333333,,False
+Cash - Alpha Global Suppliers Pvt Ltd,4,4.0,0.0,4.0,,,True
+Cash -  Muscle Bay,4,4.0,0.0,3.0,,,True
+Lucky Industries Pvt Ltd,4,2.0,2.0,1.0,1.0,,False
+Caffco Cafe,4,3.0,1.0,3.0,3.0,,False
+Bumblebee Hotel,4,4.0,0.0,2.0,,,False
+The German Bakery,4,2.0,2.0,2.0,1.0,,False
+Tezlaa Global Ventures (Pvt) Ltd,4,4.0,0.0,1.0,,,False
+Loan Given - Orit Apparels (PVT) Ltd,4,4.0,0.0,2.0,,,False
+Mackworld Organization Pvt Ltd,4,0.0,4.0,0.0,0.0,,False
+MOND - Cash,4,0.0,4.0,0.0,0.0,,True
+Cash- Keshavi Marketing,4,4.0,0.0,2.0,,,True
+Upcountry brothers (pvt) ltd,4,4.0,0.0,1.0,,,False
+Bacuzzi at Hiriketiyah -,4,4.0,0.0,1.0,,,False
+A Baur & Co Pvt Ltd,4,3.0,1.0,2.0,3.0,,False
+Aks Bag Centre - TC,4,1.0,3.0,1.0,0.3333333333333333,,False
+Aitken Spence Hotels Limited,4,1.0,3.0,1.0,0.3333333333333333,,False
+Agnus Hotel (Pvt) Ltd,4,1.0,3.0,1.0,0.3333333333333333,,False
+A Shop,4,4.0,0.0,1.0,,,False
+Royal Holiday Hotels & Resorts Pvt Ltd,3,3.0,0.0,3.0,,,False
+Rotex Lanka,3,0.0,3.0,0.0,0.0,,False
+Richard Trading Co (Pvt) Ltd,3,3.0,0.0,1.0,,,False
+Zimbar Restaurant (Pvt) Ltd,3,3.0,0.0,1.0,,,False
+Rendila Plastic (Pvt) Ltd,3,2.0,1.0,2.0,2.0,,False
+Eurofins Modern Testing Services Lanka Pvt Ltd,3,0.0,3.0,0.0,0.0,,False
+Aloka Enterprises (Private) Limited,3,1.0,2.0,1.0,0.5,,False
+Uga Escapes Negombo (Pvt) Ltd,3,1.0,2.0,1.0,0.5,,False
+Colombo essence house,3,3.0,0.0,3.0,,,False
+Pussalla Meat Producers (Pvt) Ltd,3,1.0,2.0,1.0,0.5,,False
+Printer Line Screen Printing - Cash,3,3.0,0.0,3.0,,,True
+Prestige Graphics (Pvt) Ltd,3,0.0,3.0,0.0,0.0,,False
+Raja & the Whales,3,0.0,3.0,0.0,0.0,,False
+Cash- Mr Nishantha Rajagiriya,3,2.0,1.0,2.0,2.0,,True
+Cash- Daal Pizza,3,3.0,0.0,2.0,,,True
+Geetha Stores - Anuradhapura,3,1.0,2.0,1.0,0.5,,False
+CS Paints,3,3.0,0.0,3.0,,,False
+The First Resort Pvt Ltd,3,2.0,1.0,2.0,2.0,,False
+The Cake Factory,3,2.0,1.0,2.0,2.0,,False
+M.L.S Trinco,3,1.0,2.0,1.0,0.5,,False
+M.A.M Houseware,3,2.0,1.0,2.0,2.0,,False
+Cash - Lakmuthu Traders,3,3.0,0.0,2.0,,,True
+Cash - Ladla,3,3.0,0.0,2.0,,,True
+Cash - Koffen (Pvt) Ltd,3,3.0,0.0,1.0,,,True
+Cash - Kai Beach Club Pvt Ltd -Kai Ahangama,3,3.0,0.0,2.0,,,True
+Pine Tree Company for Textile Manufacturing PSC,3,3.0,0.0,2.0,,,False
+Cash - Persian Kitchen (BBQ),3,3.0,0.0,3.0,,,True
+Cash - Pedlar's Corner Cafe,3,1.0,2.0,1.0,0.5,,True
+Cash - KOKO Beach Club,3,3.0,0.0,3.0,,,True
+The Heritage Boutique Hotels (Pvt) Ltd,3,1.0,2.0,1.0,0.5,,False
+Cash Customer - The Deli Station,3,3.0,0.0,2.0,,,True
+Cash -  Kopify (Pvt) Ltd,3,3.0,0.0,3.0,,,True
+Cash -  Funnycook,3,3.0,0.0,3.0,,,True
+The Bakeware Store,3,3.0,0.0,2.0,,,False
+Tharindu Textile Printers Kenya EPZ Limited,3,0.0,3.0,0.0,0.0,,False
+Loan Given - Rich Color Exports (PVT) Ltd,3,2.0,1.0,1.0,2.0,,False
+Machine Maintenance Department,3,1.0,2.0,1.0,0.5,,False
+Cash - Jaymor Holdings,3,3.0,0.0,2.0,,,True
+Cash - J. Sampath,3,3.0,0.0,2.0,,,True
+Dumbara Natural Foods (Pvt) Ltd,3,3.0,0.0,3.0,,,False
+Cash - Ramen Izakaya Makotoya,3,3.0,0.0,3.0,,,True
+Cash - Print art,3,3.0,0.0,3.0,,,True
+Damsath Enterprises,3,3.0,0.0,1.0,,,False
+Joshua's Tree,3,1.0,2.0,1.0,0.5,,False
+Cash-The Elephant Mount Family Restaurant,3,3.0,0.0,3.0,,,True
+Hello Beirut (Pvt) Ltd,3,2.0,1.0,2.0,2.0,,False
+Cash Han Gook Gwan (Pvt) Ltd,3,3.0,0.0,3.0,,,True
+Cash Customer: Mr.Malindu,3,3.0,0.0,3.0,,,True
+Cash -Jata Brew,3,3.0,0.0,2.0,,,True
+Marzook,3,0.0,3.0,0.0,0.0,,False
+M. Ravindu Niwarthana Peiris,3,3.0,0.0,1.0,,,False
+Loan given - Bondville (Pvt) Ltd,3,1.0,2.0,1.0,0.5,,False
+Loan Given - Texo (Private) Limited,3,2.0,1.0,2.0,2.0,,False
+Cake Art by New Abeysinghe Stores,3,2.0,1.0,2.0,2.0,,False
+Satlo Industries (Pvt) Ltd,3,2.0,1.0,1.0,2.0,,False
+Sherwood Holidays Ltd,3,1.0,2.0,1.0,0.5,,False
+Cash - Rohitha,3,3.0,0.0,3.0,,,True
+Tasz Holdings (Pvt) Ltd,3,0.0,3.0,0.0,0.0,,False
+Cash - BARBEQUE HOUSE,3,3.0,0.0,1.0,,,True
+Cash - Amra leaf Restaurant - Negombo,3,3.0,0.0,3.0,,,True
+Jay Jay Textiles Lanka Pvt Ltd,3,3.0,0.0,2.0,,,False
+Enzi House Of Packagein,3,1.0,2.0,1.0,0.5,,False
+Hidramani Discovery Lab,3,3.0,0.0,2.0,,,False
+Sisira Stores,3,0.0,3.0,0.0,0.0,,False
+Loan Given - Jay Jay Textile Pvt Ltd,3,3.0,0.0,2.0,,,False
+UGA Escapes Colombo (Pvt) Ltd,3,0.0,3.0,0.0,0.0,,False
+U H E Exports Pvt Ltd,3,1.0,2.0,1.0,0.5,,False
+Ismail Sons,3,3.0,0.0,2.0,,,False
+Cash - Red Chilli Hotel & Bake House,3,3.0,0.0,2.0,,,True
+Paradise Resort Pasikudah (Private) Limited,3,3.0,0.0,2.0,,,False
+Cash - Sun Heat Trading,3,2.0,1.0,1.0,2.0,,True
+Outshine Printers - Cash,3,0.0,3.0,0.0,0.0,,True
+South Showroom Walking Customer,3,3.0,0.0,1.0,,,True
+Sudha's Eatery - TC,3,0.0,3.0,0.0,0.0,,False
+TREATOO LAKE RESORT,3,3.0,0.0,2.0,,,False
+TC-Gami Japanese Restaurant,3,2.0,1.0,2.0,2.0,,False
+TC - Pettha Fancy,3,2.0,1.0,2.0,2.0,,False
+TC - Dutch Bank Trinco,3,2.0,1.0,1.0,2.0,,False
+TC - Cafe Francais,3,1.0,2.0,1.0,0.5,,False
+Softlogic Healthy Concepts (Pvt)Ltd,3,1.0,2.0,1.0,0.5,,False
+Cash - Emily's,3,3.0,0.0,3.0,,,True
+Cash - EL ES EM ES Enterprises Pvt Ltd,3,3.0,0.0,3.0,,,True
+Cash - E House,3,3.0,0.0,3.0,,,True
+Nisaco,3,1.0,2.0,1.0,0.5,,False
+Thiwanka Printers,3,3.0,0.0,1.0,,,False
+The Wave Beach Rstaurant,3,3.0,0.0,2.0,,,False
+Nimal Stores Wholesalers Pvt Ltd,3,3.0,0.0,2.0,,,False
+Cash - Drive one (Pvt) Ltd,3,3.0,0.0,3.0,,,True
+Gafe (Pvt) Ltd,3,2.0,1.0,2.0,2.0,,False
+Cash - The Lake Hotel & Resort,3,3.0,0.0,2.0,,,True
+Nadee Super Center,3,1.0,2.0,1.0,0.5,,False
+Flavory,3,3.0,0.0,2.0,,,False
+First Step Babywear Lanka (Pvt) Ltd,3,0.0,3.0,0.0,0.0,,False
+Cash - Celestial Tea Co,3,2.0,1.0,1.0,2.0,,True
+Cash - Bubble Tea shop Airport,3,3.0,0.0,3.0,,,True
+Double Cheese,3,2.0,1.0,1.0,2.0,,False
+Dinara Wijethunge,3,3.0,0.0,2.0,,,False
+New Jilan Center,3,0.0,3.0,0.0,0.0,,False
+Cash - Up Hills,3,3.0,0.0,2.0,,,True
+Sticks and Co,3,0.0,3.0,0.0,0.0,,False
+Cash - Dammika Bakers,3,3.0,0.0,2.0,,,True
+Cash - Daily Dough,3,3.0,0.0,2.0,,,True
+Cash - City Tea Stores,3,3.0,0.0,2.0,,,True
+Modele Group,3,3.0,0.0,2.0,,,False
+International Trimmings & Labels india (Pvt) Ltd,3,2.0,1.0,2.0,2.0,,False
+Cash - Moochies Ahangama,3,3.0,0.0,2.0,,,True
+Cash - Mok Ventures,3,3.0,0.0,2.0,,,True
+Lagoona Restaurant,3,3.0,0.0,3.0,,,False
+LR Lifefstyle Collective Pvt Limited,3,1.0,2.0,1.0,0.5,,False
+Kusang Lanka (Pvt) Ltd,3,2.0,1.0,2.0,2.0,,False
+Globeactive Leisure (Pvt) Ltd,3,3.0,0.0,2.0,,,False
+City Cycle House Pvt Ltd,3,2.0,1.0,2.0,2.0,,False
+Unsung - TC,3,2.0,1.0,1.0,2.0,,False
+Aysha Book Shop,3,2.0,1.0,1.0,2.0,,False
+Asahi Dyes And Chemicals SL Company Pvt Ltd,3,3.0,0.0,2.0,,,False
+Visse Kade,3,1.0,2.0,1.0,0.5,,False
+Curry Plate Restaurant Pvt Ltd,3,3.0,0.0,2.0,,,False
+Unawatuna Properties (Pvt) Ltd,3,1.0,2.0,1.0,0.5,,False
+Kannangara Trade Center,2,0.0,2.0,0.0,0.0,,False
+Cash - Little Star - Mount Lavinia,2,2.0,0.0,2.0,,,True
+Aida Holdings,2,0.0,2.0,0.0,0.0,,False
+Vision Care Optical Services (Pvt) Ltd - TC,2,2.0,0.0,2.0,,,False
+Ammamma Foods (Pvt) Ltd - TC,2,0.0,2.0,0.0,0.0,,False
+Ana International,2,2.0,0.0,2.0,,,False
+As King Burger,2,2.0,0.0,2.0,,,False
+Union Resorts & Spas (Pvt) Ltd,2,2.0,0.0,1.0,,,False
+Universal Labels (PVT) Ltd,2,2.0,0.0,2.0,,,False
+Vanni Inn (Pvt)) Ltd,2,2.0,0.0,1.0,,,False
+Colombo Court Hotel (Pvt) Ltd,2,0.0,2.0,0.0,0.0,,False
+Kubera Laxmiy Enterprise (Pvt) Ltd,2,2.0,0.0,2.0,,,False
+La Prestige - TC,2,0.0,2.0,0.0,0.0,,False
+Qick Food,2,2.0,0.0,1.0,,,False
+Indian Spice Kitchen (Pvt) Ltd,2,0.0,2.0,0.0,0.0,,False
+Ishara Traders -Panadura,2,0.0,2.0,0.0,0.0,,False
+Eskimo,2,2.0,0.0,1.0,,,False
+Ultra Textile Fashion (PVT) Ltd,2,1.0,1.0,1.0,1.0,,False
+Moksha Innovation,2,1.0,1.0,1.0,1.0,,False
+Cash - Wink & Sip,2,1.0,1.0,1.0,1.0,,True
+Cash - Chola Cafe,2,2.0,0.0,2.0,,,True
+Cash - Cloe Cafe Pvt Ltd,2,1.0,1.0,1.0,1.0,,True
+Cash - Crave & Crumb Pvt Ltd,2,2.0,0.0,1.0,,,True
+Star Garment (Pvt) Ltd,2,2.0,0.0,2.0,,,False
+Nawaloka Medicare (Pvt) Ltd,2,0.0,2.0,0.0,0.0,,False
+Nesan - TC,2,1.0,1.0,1.0,1.0,,False
+Mr Lalantha - TC,2,0.0,2.0,0.0,0.0,,False
+Cash - Yamato Japanese Restaurant,2,2.0,0.0,1.0,,,True
+Cash -Bismillah Bakery & Restaurant,2,2.0,0.0,2.0,,,True
+Cash - Bubblees.lk,2,2.0,0.0,2.0,,,True
+Cash - Bunch Cafe,2,2.0,0.0,2.0,,,True
+Fernan-Dough Artisan Breads,2,0.0,2.0,0.0,0.0,,False
+Mr.Ijaz,2,0.0,2.0,0.0,0.0,,False
+Nathan Stores,2,1.0,1.0,1.0,1.0,,False
+Cash - The Legends Lounge,2,2.0,0.0,2.0,,,True
+Mr. Ashoka - Cash,2,2.0,0.0,2.0,,,True
+Hiroyoshi Hanajima Hotel (Pvt) Ltd,2,0.0,2.0,0.0,0.0,,False
+Honey Bubbles Cafe,2,1.0,1.0,1.0,1.0,,False
+Hotel E V A Lanka Pvt Ltd,2,0.0,2.0,0.0,0.0,,False
+Hotels Colombo (1963) Limited,2,2.0,0.0,1.0,,,False
+Fashion Leather Trading Pvt Ltd,2,1.0,1.0,1.0,1.0,,False
+Cash - Dhanuka Rajapaksha,2,2.0,0.0,2.0,,,True
+Cash - Taste of Taprobane,2,2.0,0.0,2.0,,,True
+Cash - Thanjai virunthu,2,2.0,0.0,2.0,,,True
+Cash - The Hill Club,2,2.0,0.0,1.0,,,True
+Loan Given - Mas Active Shadowline,2,1.0,1.0,1.0,1.0,,False
+Cash-Sip & Go Coffee Cart,2,2.0,0.0,1.0,,,True
+Total Ceylon Investment (Pvt) Ltd,2,0.0,2.0,0.0,0.0,,False
+Cafe Management Services Pvt Ltd - TC,2,1.0,1.0,1.0,1.0,,False
+Cash-Hang Loose Arugam Bay,2,2.0,0.0,2.0,,,True
+Cash-Humans Negombo,2,2.0,0.0,2.0,,,True
+Cash-Piccadily parlor,2,2.0,0.0,2.0,,,True
+Developed Technologies,2,2.0,0.0,2.0,,,False
+Cash - Shangrela Beach Resort,2,2.0,0.0,1.0,,,True
+Cash - East Lanka Pvt ltd (Eastern Marketing),2,2.0,0.0,2.0,,,True
+Cash - Epic,2,1.0,1.0,1.0,1.0,,True
+Cash - Executive chef,2,2.0,0.0,1.0,,,True
+Cash -Tradis holding Pvt Ltd,2,2.0,0.0,2.0,,,True
+Mega Pack Trading Company (Pvt) Ltd.,2,0.0,2.0,0.0,0.0,,False
+Meraki - TC,2,1.0,1.0,1.0,1.0,,False
+Millennium Super Center,2,2.0,0.0,2.0,,,False
+Cash -Mr. Zaheer ahamed,2,2.0,0.0,2.0,,,True
+TC - Aikya Marketing,2,1.0,1.0,1.0,1.0,,False
+TC - Haraj Market Pvt Ltd,2,1.0,1.0,1.0,1.0,,False
+Cash - Adikted Burgers (Pvt) Limited,2,2.0,0.0,2.0,,,True
+Cash - Aga Surf View,2,1.0,1.0,1.0,1.0,,True
+Cash - Airport City Family Restaurant,2,2.0,0.0,2.0,,,True
+South Warehouse (Consumption),2,2.0,0.0,2.0,,,False
+Cash - Gold Rich Graphics,2,2.0,0.0,2.0,,,True
+Noralia Garment Trims and Accessories Co.,2,0.0,2.0,0.0,0.0,,False
+J H P Lanka (Private) Limited,2,1.0,1.0,1.0,1.0,,False
+JUNGKWANG INC. CO LTD,2,2.0,0.0,1.0,,,False
+Bio Extracts (Pvt) Ltd,2,1.0,1.0,1.0,1.0,,False
+Bam Export Services (PVT) Ltd,2,1.0,1.0,1.0,1.0,,False
+Bans Fashion Factory,2,1.0,1.0,1.0,1.0,,False
+Bayside Breeze - Cash,2,0.0,2.0,0.0,0.0,,True
+Tush Entertainments (Pvt) Ltd,2,2.0,0.0,2.0,,,False
+C & P Imports Pvt Ltd,2,0.0,2.0,0.0,0.0,,False
+The Ruin (Beach Club) Hiriketiya -TC,2,1.0,1.0,1.0,1.0,,False
+Crystal Art,2,2.0,0.0,1.0,,,False
+Leo Printer (PVT) Ltd - Cash,2,0.0,2.0,0.0,0.0,,True
+Lilac Paint,2,1.0,1.0,1.0,1.0,,False
+Loan Given - Aqua Dynamic Pvt Ltd,2,2.0,0.0,2.0,,,False
+Cash - Sharma Print,2,2.0,0.0,1.0,,,True
+Cash - Shehan Danushka,2,2.0,0.0,1.0,,,True
+Cash - Shima Guni Beach Club,2,2.0,0.0,2.0,,,True
+Sky Breeze - Cash,2,0.0,2.0,0.0,0.0,,True
+Cash - Dee Dee Combine (Pvt.) Ltd.,2,2.0,0.0,2.0,,,True
+Seedevi Family Restaurant,2,1.0,1.0,1.0,1.0,,False
+Hidramani Mercury Apparel (PVT) Ltd,2,0.0,2.0,0.0,0.0,,False
+Cash - Al Bite Restaurant,2,2.0,0.0,2.0,,,True
+Cash -Mr.Akram,2,2.0,0.0,2.0,,,True
+Jay Jay Textiles PLC (Ethipoia),2,0.0,2.0,0.0,0.0,,False
+Dilarareception Hall Restaurant,2,2.0,0.0,2.0,,,False
+Cash - Beemark Holdings Pvt Ltd,2,2.0,0.0,1.0,,,True
+Cash  Customer  - Mustafa Burani,2,2.0,0.0,1.0,,,True
+Sweet Brew Cafe,2,2.0,0.0,2.0,,,False
+Dress Works Colombo Pvt Ltd,2,0.0,2.0,0.0,0.0,,False
+Cash -Paan bar,2,2.0,0.0,2.0,,,True
+Seedevi Stores,2,0.0,2.0,0.0,0.0,,False
+E D P U K Wijesiri - Print Care Solution,2,0.0,2.0,0.0,0.0,,False
+Cash - S Ramzi,2,1.0,1.0,1.0,1.0,,True
+Cash - Sanjeewa Fernando,2,2.0,0.0,1.0,,,True
+Cash - Sanka Enter prices,2,2.0,0.0,2.0,,,True
+P.M.David Silva & Sons - Cash,2,1.0,1.0,1.0,1.0,,True
+Seenco Corporation (Pvt) Ltd,2,2.0,0.0,2.0,,,False
+Selena Grocery & Book Shop,2,2.0,0.0,2.0,,,False
+Sigiriya King's Resort Pvt Ltd,2,2.0,0.0,2.0,,,False
+Simply Fresh Food Company (Pvt) Ltd,2,0.0,2.0,0.0,0.0,,False
+Sinhalese Sports Club,2,0.0,2.0,0.0,0.0,,False
+Cash - Fusion Printers,2,2.0,0.0,2.0,,,True
+Scope Cinemas Pvt Ltd,2,0.0,2.0,0.0,0.0,,False
+Brine -TC,2,1.0,1.0,1.0,1.0,,False
+Buddies & Co (Pvt) Ltd,2,1.0,1.0,1.0,1.0,,False
+Cai Yun Trading (Hong Kong) Limited,2,2.0,0.0,2.0,,,False
+M A C Traders,2,1.0,1.0,1.0,1.0,,False
+Management & General Investment Combine (Pvt) Ltd,2,2.0,0.0,1.0,,,False
+Marawila Resort PLC,2,0.0,2.0,0.0,0.0,,False
+Cash -  NGM HOTEL & BAKERS,2,2.0,0.0,2.0,,,True
+Cash - Print Care Solutions,2,2.0,0.0,2.0,,,True
+Lanka Minerals & Chemicals Pvt Ltd,2,1.0,1.0,1.0,1.0,,False
+Antler General Industries (Pvt) Ltd,2,1.0,1.0,1.0,1.0,,False
+Global Consumer Products (Pvt) Ltd,2,2.0,0.0,1.0,,,False
+Cash-Vimoos cafe,2,2.0,0.0,2.0,,,True
+Dakshina Lanka Sarwa Sela,2,0.0,2.0,0.0,0.0,,False
+Bee Kitchen,2,0.0,2.0,0.0,0.0,,False
+Cash - RTS Hidellana Tea Factory Pvt Ltd,2,2.0,0.0,2.0,,,True
+Fortune Premier Pvt Ltd,2,2.0,0.0,1.0,,,False
+Tefron Ltd.,2,2.0,0.0,2.0,,,False
+Thakshila Food House,2,1.0,1.0,1.0,1.0,,False
+The Bakeware store,2,2.0,0.0,2.0,,,False
+Cafe Ora Hikkaduwa - TC,2,0.0,2.0,0.0,0.0,,False
+The Lampraise Restaurant & Resort Pvt Ltd,2,1.0,1.0,1.0,1.0,,False
+The Quartz 2nd 14 - TC,2,1.0,1.0,1.0,1.0,,False
+The Ranch Cafe,2,2.0,0.0,2.0,,,False
+Cash - Jollybeez,2,1.0,1.0,1.0,1.0,,True
+Cash - Setline Screen Printing,2,2.0,0.0,2.0,,,True
+Cash - Kitchen J By Janu,2,2.0,0.0,2.0,,,True
+Cash - Koha Surf Lounge,2,2.0,0.0,2.0,,,True
+Excel Restaurants (Pvt) Ltd,2,0.0,2.0,0.0,0.0,,False
+Eye Screen Printed Productions - Cash,2,1.0,1.0,1.0,1.0,,True
+R.F. Food Services & Catering Concepts (Pvt) Ltd,2,1.0,1.0,1.0,1.0,,False
+R.M.A Trading Company,2,0.0,2.0,0.0,0.0,,False
+Arthurs's Pizza Havelock Pvt Ltd,2,0.0,2.0,0.0,0.0,,False
+MAALU MAALU PASSEKUDAH (PVT) LTD,2,2.0,0.0,2.0,,,False
+Cash-Adra Tea (pvt) Ltd,2,2.0,0.0,1.0,,,True
+Cake O Clock,2,0.0,2.0,0.0,0.0,,False
+The English Cake Company (Pvt) Ltd,2,0.0,2.0,0.0,0.0,,False
+C.T.O -Ottamavady,2,1.0,1.0,1.0,1.0,,False
+CASH-Shine Creations,2,2.0,0.0,1.0,,,True
+Cash- Artreum Concepts Pvt Ltd -Kai Weligama,2,2.0,0.0,1.0,,,True
+RAGHA ICE CREAM & CAFE ( PVT) LTD,2,2.0,0.0,1.0,,,False
+Rainwear Pvt Ltd,2,0.0,2.0,0.0,0.0,,False
+FRONTIER  CAPITAL LANKA (PVT) LTD,2,2.0,0.0,2.0,,,False
+S H S Universe (Private) Limited,2,0.0,2.0,0.0,0.0,,False
+Cash - Madeena Beach Restaurant,2,2.0,0.0,2.0,,,True
+Cash - Malay Hotel,2,2.0,0.0,1.0,,,True
+Cash - Mr Rohana,2,1.0,1.0,1.0,1.0,,True
+Cash - Mr. Charles,2,2.0,0.0,2.0,,,True
+Cash - My Coffee,2,2.0,0.0,2.0,,,True
+Regals -Gampola,2,1.0,1.0,1.0,1.0,,False
+Critco (Pvt) Ltd,2,2.0,0.0,1.0,,,False
+Alankulama Bakers Pvt Ltd,2,1.0,1.0,1.0,1.0,,False
+ATG Ceylon Pvt Ltd,2,1.0,1.0,1.0,1.0,,False
+cash - The Emperor Restaurant & Pub,2,2.0,0.0,2.0,,,True
+Royal Avenue Hotel (Pvt) Ltd,2,0.0,2.0,0.0,0.0,,False
+York Hotel Management Services Ltd,2,1.0,1.0,1.0,1.0,,False
+Cash - Liquati,2,2.0,0.0,2.0,,,True
+A.K.A Wadood & Sons - Cash,1,0.0,1.0,0.0,0.0,,True
+Wislo Lanka Pvt Ltd-Cash,1,0.0,1.0,0.0,0.0,,True
+Xintiandi food city (pvt) Ltd (Cash bill),1,1.0,0.0,1.0,,,True
+YGGO SAS,1,1.0,0.0,1.0,,,False
+Arthur's Pizza Kotte Pvt Ltd,1,0.0,1.0,0.0,0.0,,False
+Unilever,1,0.0,1.0,0.0,0.0,,False
+BONDTEX,1,1.0,0.0,1.0,,,False
+Ayana Sea - Cash,1,1.0,0.0,1.0,,,True
+Green Paradise Pvt Ltd,1,1.0,0.0,1.0,,,False
+LAUGFS Supermarket (Private) limited,1,0.0,1.0,0.0,0.0,,False
+LGJ Trade Centre,1,0.0,1.0,0.0,0.0,,False
+Lanka Leather Fashions,1,1.0,0.0,1.0,,,False
+Anca Printing & Packaging,1,1.0,0.0,1.0,,,False
+Anudan Holdings Pvt Ltd,1,1.0,0.0,1.0,,,False
+Asons (Pvt) Ltd (C),1,0.0,1.0,0.0,0.0,,False
+Audrey Care (Pvt) Ltd,1,1.0,0.0,1.0,,,False
+HNB Training Center,1,1.0,0.0,1.0,,,False
+HOTEL DE UNCLES,1,0.0,1.0,0.0,0.0,,False
+HY Packaging (Pvt)Ltd,1,1.0,0.0,1.0,,,False
+Hanwella Rubber Products Limited,1,1.0,0.0,1.0,,,False
+Hassan Fabrics,1,1.0,0.0,1.0,,,False
+Hassan Traders,1,1.0,0.0,1.0,,,False
+Glo Ultra Technologies Pvt Ltd,1,0.0,1.0,0.0,0.0,,False
+Trexon Apparel (Pvt) Ltd,1,1.0,0.0,1.0,,,False
+Triton Freight (Pvt) Ltd,1,1.0,0.0,1.0,,,False
+Cash - Maheshi,1,1.0,0.0,1.0,,,True
+Cash - Mr Sadun Aloka,1,1.0,0.0,1.0,,,True
+Cash - Mrs. Gooneratne,1,1.0,0.0,1.0,,,True
+Cash - N&N international.,1,1.0,0.0,1.0,,,True
+Cash - NH Bentota Ceysand Resorts,1,1.0,0.0,1.0,,,True
+Cash - Naga Market,1,1.0,0.0,1.0,,,True
+Range Apparel Solutions Pvt Ltd,1,1.0,0.0,1.0,,,False
+Cash - Piccadilly Parlour Trincomalee,1,1.0,0.0,1.0,,,True
+Cash - Miso,1,1.0,0.0,1.0,,,True
+Integra (Pvt) Ltd,1,1.0,0.0,1.0,,,False
+International Brands Ceylon (Private) Ltd,1,1.0,0.0,1.0,,,False
+Ireasha Graphics,1,1.0,0.0,1.0,,,False
+Isabella Pvt Ltd,1,0.0,1.0,0.0,0.0,,False
+Resto Apri (Pvt) Ltd,1,0.0,1.0,0.0,0.0,,False
+Revon Bakers,1,0.0,1.0,0.0,0.0,,False
+Rizwan Thihariya Printing,1,0.0,1.0,0.0,0.0,,False
+Qwik Brew Cafe Pvt Ltd,1,0.0,1.0,0.0,0.0,,False
+R. S. W. Trading PVT LTD,1,1.0,0.0,1.0,,,False
+Rajawella Holdings Limited,1,0.0,1.0,0.0,0.0,,False
+Rajendra Store,1,0.0,1.0,0.0,0.0,,False
+Cash - Mr Berry,1,1.0,0.0,1.0,,,True
+Cash - Mr Chinthaka,1,1.0,0.0,1.0,,,True
+Print USA (Private) Limited,1,1.0,0.0,1.0,,,False
+FINE SCAN IMAGE INTERNATIONAL (PVT) LTD,1,1.0,0.0,1.0,,,False
+Ruhunu Bake House,1,1.0,0.0,1.0,,,False
+Rune Ladies,1,0.0,1.0,0.0,0.0,,False
+Rustic Roast Pvt Ltd,1,1.0,0.0,1.0,,,False
+S.T.C Traders,1,0.0,1.0,0.0,0.0,,False
+SA Coating,1,0.0,1.0,0.0,0.0,,False
+SAF Screen Tech(College of Screen Printing),1,1.0,0.0,1.0,,,False
+SML Dual Plast (Pvt) Ltd,1,1.0,0.0,1.0,,,False
+Safepak Ltd,1,0.0,1.0,0.0,0.0,,False
+Cash - Nethmira Fashion,1,1.0,0.0,1.0,,,True
+Cash - Nevi’s Coffee.,1,1.0,0.0,1.0,,,True
+Cash - Nihla’s Sports & Fancy,1,1.0,0.0,1.0,,,True
+Cash - Nyne Hotels (Pvt) Ltd,1,1.0,0.0,1.0,,,True
+Cash - Only Biriyani,1,1.0,0.0,1.0,,,True
+Cash - PALMERO ECO RESORT,1,1.0,0.0,1.0,,,True
+Cash - Pattipola livestock pvt ltd,1,1.0,0.0,1.0,,,True
+Cash - Peperonio & Co Family Restaurant,1,1.0,0.0,1.0,,,True
+Penguin Itiredi Kade,1,0.0,1.0,0.0,0.0,,False
+Cash - Kele resorts pvt LTd,1,1.0,0.0,1.0,,,True
+Cash - Kinross Dental Care,1,1.0,0.0,1.0,,,True
+Cash - Layer 3,1,1.0,0.0,1.0,,,True
+Cash - Le café french bakery,1,1.0,0.0,1.0,,,True
+Cash - Leading Hub,1,0.0,1.0,0.0,0.0,,True
+Saru Exports (PVT) LTD,1,1.0,0.0,1.0,,,False
+Expo Printers (Pvt) Ltd,1,0.0,1.0,0.0,0.0,,False
+Cash - Rao,1,1.0,0.0,1.0,,,True
+Portside Perk (Pvt) Ltd,1,0.0,1.0,0.0,0.0,,False
+Java Chocolate Heaven Pvt Ltd,1,0.0,1.0,0.0,0.0,,False
+D’Soul (Pvt) Ltd - TC,1,0.0,1.0,0.0,0.0,,False
+Cash - Horana New Rexine Center,1,1.0,0.0,1.0,,,True
+Cash - Hotel Bridge View,1,1.0,0.0,1.0,,,True
+Cash - Hyve Deserts Pvt Ltd,1,1.0,0.0,1.0,,,True
+Cash - Ibson's choice 3.0 PVT Ltd,1,1.0,0.0,1.0,,,True
+Cash - Imandi cake,1,1.0,0.0,1.0,,,True
+Cash - Indian Store,1,1.0,0.0,1.0,,,True
+Cash - J A I Ruwan Tushara.,1,1.0,0.0,1.0,,,True
+Cash - K M Akram,1,1.0,0.0,1.0,,,True
+Cash - Kafe Athreya,1,1.0,0.0,1.0,,,True
+Cash - Kafola & Kafoga Company (Pvt) Ltd,1,1.0,0.0,1.0,,,True
+Cash - Nami Cafe,1,1.0,0.0,1.0,,,True
+Cash - Negombo General Hospital,1,1.0,0.0,1.0,,,True
+"Cash - Rupas beach hotel,",1,1.0,0.0,1.0,,,True
+Cash - SOMASIRI SUPERMARKET,1,1.0,0.0,1.0,,,True
+Cash - Sarita de Fonseka,1,1.0,0.0,1.0,,,True
+PDK Holdings (Pvt) Ltd,1,0.0,1.0,0.0,0.0,,False
+Silk Cafe Resto By Gees,1,0.0,1.0,0.0,0.0,,False
+Silver Star Paint,1,1.0,0.0,1.0,,,False
+Cash - Fonseka & Sons,1,1.0,0.0,1.0,,,True
+Cash - GKUC Coffee Factory,1,1.0,0.0,1.0,,,True
+Cash - Gami Japanese restaurant,1,1.0,0.0,1.0,,,True
+Cash - Gape House Hirikatiya,1,1.0,0.0,1.0,,,True
+Cash - Hello Machan Restaurant,1,1.0,0.0,1.0,,,True
+Pinnacle Boutique Apartment Villas (Pvt) Ltd,1,1.0,0.0,1.0,,,False
+Cash - Pizza House,1,1.0,0.0,1.0,,,True
+Cash - Queen Brownie Private Limited,1,1.0,0.0,1.0,,,True
+Cash - R. Apoorwa Enterprises,1,1.0,0.0,1.0,,,True
+Cash - Ransen Graphics (Pvt) Ltd,1,0.0,1.0,0.0,0.0,,True
+Orchid Ceylon,1,1.0,0.0,1.0,,,False
+Cash - Swift Aroma Pvt Ltd,1,1.0,0.0,1.0,,,True
+PRIYANKARA HOTELS (PVT) LTD,1,1.0,0.0,1.0,,,False
+Cash - Regal Burger – Arugambay,1,1.0,0.0,1.0,,,True
+Famous Deluxe Int'l inc.,1,1.0,0.0,1.0,,,False
+Cash - Grabbit - Wake & Bake,1,1.0,0.0,1.0,,,True
+Cash - Grean Tulsi Restaurant,1,1.0,0.0,1.0,,,True
+Cash - H.N.Jayasekera,1,0.0,1.0,0.0,0.0,,True
+Cash - Hela Platters,1,0.0,1.0,0.0,0.0,,True
+Smeralda Travels And Tours Pvt Ltd,1,1.0,0.0,1.0,,,False
+Cash - Deon Printers Welampitiya,1,0.0,1.0,0.0,0.0,,True
+Cash - Devika Stores,1,0.0,1.0,0.0,0.0,,True
+Sede Paa (Pvt)Ltd,1,1.0,0.0,1.0,,,False
+Eagles' Lakeside Banquet & Convention Hall,1,1.0,0.0,1.0,,,False
+Cash - Roots branding solutions,1,1.0,0.0,1.0,,,True
+Cash - Rozana Rauff,1,1.0,0.0,1.0,,,True
+Cash - The Bakerchik Collection,1,0.0,1.0,0.0,0.0,,True
+Cash - The Banquet Company,1,1.0,0.0,1.0,,,True
+New Window Fashion Pvt Ltd,1,0.0,1.0,0.0,0.0,,False
+Cash - Shadow  Shine,1,1.0,0.0,1.0,,,True
+Cash - Torpedo,1,1.0,0.0,1.0,,,True
+Cash - Trueblue Activation Pvt Ltd,1,1.0,0.0,1.0,,,True
+Cash - Durata Pvt Ltd (Saffron Beach Hotel),1,1.0,0.0,1.0,,,True
+Sparking Ventures,1,0.0,1.0,0.0,0.0,,False
+Spizzerts - Cash,1,0.0,1.0,0.0,0.0,,True
+Cash - Glass Pack Kandy,1,1.0,0.0,1.0,,,True
+Cash - Silver Aisle,1,1.0,0.0,1.0,,,True
+Cash - Siva Flowers Wedding,1,1.0,0.0,1.0,,,True
+Cash - Squeeze Me - Ahangama,1,1.0,0.0,1.0,,,True
+Cash - Starbeans Coffee,1,0.0,1.0,0.0,0.0,,True
+Cash - Studio eye,1,1.0,0.0,1.0,,,True
+Nozomi Restaurant (Pvt) Ltd,1,0.0,1.0,0.0,0.0,,False
+Cash - Urban oven,1,1.0,0.0,1.0,,,True
+Cash - Velavann super market,1,1.0,0.0,1.0,,,True
+Cash - Vintage Restaurant,1,1.0,0.0,1.0,,,True
+Cash - Whiterose Breeze Bay Pvt Ltd,1,1.0,0.0,1.0,,,True
+Cash - Wickrama Printing - Kottawa,1,0.0,1.0,0.0,0.0,,True
+Cash - Wijesiri Hotel & Bakers,1,1.0,0.0,1.0,,,True
+Mr. Pradeep Kumara,1,1.0,0.0,1.0,,,False
+Cash - Ceylon Nuts,1,1.0,0.0,1.0,,,True
+Cash - Chamila Weerasinghe,1,1.0,0.0,1.0,,,True
+Frozen Mee-Kiri (PVT) LTD,1,1.0,0.0,1.0,,,False
+G L APPAREL SERVICES (PVT) LTD,1,1.0,0.0,1.0,,,False
+Hotel Colombo (1963) Ltd,1,1.0,0.0,1.0,,,False
+Fashion House,1,0.0,1.0,0.0,0.0,,False
+Cash - T M Traders,1,0.0,1.0,0.0,0.0,,True
+Cash - Tarragon 94,1,1.0,0.0,1.0,,,True
+Cash - Thalsevana army welfare resort,1,1.0,0.0,1.0,,,True
+Nadimala Traders (Pvt) Ltd.,1,0.0,1.0,0.0,0.0,,False
+National Essence Suppliers,1,1.0,0.0,1.0,,,False
+Nature Trails Boutique Hotel,1,1.0,0.0,1.0,,,False
+Naturub Accessories Bangladesh (Pvt) Ltd,1,1.0,0.0,1.0,,,False
+Cash - The Souffle,1,1.0,0.0,1.0,,,True
+Flow Cafe Weligama - Cash,1,0.0,1.0,0.0,0.0,,True
+Cash - Cheese Lovers,1,1.0,0.0,1.0,,,True
+Cash - City Coolbar & Restaurant,1,1.0,0.0,1.0,,,True
+Cash - Cookiora,1,1.0,0.0,1.0,,,True
+Cash - Crisppi Fried Chicken,1,1.0,0.0,1.0,,,True
+Cash - Daikon restaurant,1,1.0,0.0,1.0,,,True
+Stallion knitting Pvt.,1,1.0,0.0,1.0,,,False
+Star Labels Pvt Ltd,1,1.0,0.0,1.0,,,False
+Cash - Twisca Flavors,1,1.0,0.0,1.0,,,True
+Cash - U K T Hatton,1,1.0,0.0,1.0,,,True
+Cash - Universal Textile Printers,1,1.0,0.0,1.0,,,True
+Cash -Cuisine Colombo pvt ltd,1,1.0,0.0,1.0,,,True
+Cash -DMed dental clinic,1,1.0,0.0,1.0,,,True
+Cash -GS Restaurant Katunayaka,1,1.0,0.0,1.0,,,True
+Motel Vintage,1,1.0,0.0,1.0,,,False
+Dinemore Kandy (Private) Ltd,1,1.0,0.0,1.0,,,False
+Supiri Wine Stores,1,1.0,0.0,1.0,,,False
+Cash - Blue Cafe,1,0.0,1.0,0.0,0.0,,True
+Cash - BrewSymphony (PVT) Ltd,1,1.0,0.0,1.0,,,True
+Cash - Bubbles & Beyond,1,0.0,1.0,0.0,0.0,,True
+Cash - Bubblish,1,0.0,1.0,0.0,0.0,,True
+Cash - C F L Agro Lanka Pvt Ltd,1,1.0,0.0,1.0,,,True
+Cash - Cafe Lavia,1,1.0,0.0,1.0,,,True
+Cash - Café Français,1,1.0,0.0,1.0,,,True
+Multy Carpet Corner,1,1.0,0.0,1.0,,,False
+NW Logistics & Managment Private Ltd,1,1.0,0.0,1.0,,,False
+Nadeekas - Nawalapitiya,1,0.0,1.0,0.0,0.0,,False
+Cash -Salty Sand  Ja ela,1,1.0,0.0,1.0,,,True
+Cash -Shanghai Terrace,1,1.0,0.0,1.0,,,True
+Cash -Sweet Whispers,1,1.0,0.0,1.0,,,True
+Merhaba Twisting Scoops (Pvt) Ltd,1,0.0,1.0,0.0,0.0,,False
+Mithran Hardware,1,1.0,0.0,1.0,,,False
+Cash -Little Hut Restaurant,1,1.0,0.0,1.0,,,True
+TC - Chillz,1,0.0,1.0,0.0,0.0,,False
+TC - Nizhal Restaurant,1,0.0,1.0,0.0,0.0,,False
+TC -Bodleo,1,0.0,1.0,0.0,0.0,,False
+Sunny Side Up-Cash,1,0.0,1.0,0.0,0.0,,True
+Cash - fusion14,1,1.0,0.0,1.0,,,True
+Cash -Apsara Chandrasekera(Vegi Pot),1,0.0,1.0,0.0,0.0,,True
+Cash -Banana Surf Camp,1,1.0,0.0,1.0,,,True
+Cash -Books and beans,1,1.0,0.0,1.0,,,True
+Cash -Ceylon kahawa cafe,1,1.0,0.0,1.0,,,True
+"Cash -Coffee Brew,k",1,1.0,0.0,1.0,,,True
+Jayaweera Screen House,1,1.0,0.0,1.0,,,False
+Jerry’s cream house - Cash,1,1.0,0.0,1.0,,,True
+Jetwing Hotels Ltd,1,1.0,0.0,1.0,,,False
+Jie Xin Trading Limited,1,1.0,0.0,1.0,,,False
+Magic Pack Industries,1,0.0,1.0,0.0,0.0,,False
+Cash -Worga Natural Pvt Ltd,1,1.0,0.0,1.0,,,True
+Cash - Aprota & Pabra (Pvt) Ltd,1,1.0,0.0,1.0,,,True
+Cash - Beach Club Induruwa,1,1.0,0.0,1.0,,,True
+Cash - Bert & Belle Pvt Ltd,1,1.0,0.0,1.0,,,True
+Cash - Bing Chun Galle,1,1.0,0.0,1.0,,,True
+Cash - Biriyaniwala,1,1.0,0.0,1.0,,,True
+Taru Management Private Limited,1,1.0,0.0,1.0,,,False
+Tea Plus LK (Pvt) Ltd,1,1.0,0.0,1.0,,,False
+Cash - Central  Hardware,1,1.0,0.0,1.0,,,True
+T.C.T Multy Trade Centre,1,0.0,1.0,0.0,0.0,,False
+Dr Marcus International Pvt Ltd.,1,1.0,0.0,1.0,,,False
+Mas Active (PVT) Ltd,1,0.0,1.0,0.0,0.0,,False
+Mas Al Safi Apparel Manufacturing LLC Jordan,1,0.0,1.0,0.0,0.0,,False
+Cash Customer: Mr.Suchira Sandaruwan.,1,1.0,0.0,1.0,,,True
+Cash -  The Good Farmer,1,1.0,0.0,1.0,,,True
+Cash - - Ranreka Traders,1,1.0,0.0,1.0,,,True
+Cash - A & M Cupcake,1,1.0,0.0,1.0,,,True
+Cash - A P G M Ranasinghe,1,1.0,0.0,1.0,,,True
+Hemas Manufacturing,1,0.0,1.0,0.0,0.0,,False
+Hideaway Resort Pvt Ltd - Cash,1,1.0,0.0,1.0,,,True
+Gamini Print House + Ja ela - TC,1,0.0,1.0,0.0,0.0,,False
+Gamma Chemicals,1,1.0,0.0,1.0,,,False
+Cash - Alata,1,1.0,0.0,1.0,,,True
+Cash -Nadha,1,1.0,0.0,1.0,,,True
+Cash -Next Multy Shop,1,1.0,0.0,1.0,,,True
+East West Foods (Pvt) Ltd,1,0.0,1.0,0.0,0.0,,False
+Jaya Solutions,1,1.0,0.0,1.0,,,False
+MAS Matrix,1,1.0,0.0,1.0,,,False
+MJF Branding,1,0.0,1.0,0.0,0.0,,False
+MMS Biz,1,0.0,1.0,0.0,0.0,,False
+Loan Given - Silueta (PVT) Ltd,1,1.0,0.0,1.0,,,False
+Fort Chambers (Pvt) Ltd,1,1.0,0.0,1.0,,,False
+Cash - AN Sweet Frosting Hub,1,1.0,0.0,1.0,,,True
+Cash - Aadiv’s Restaurant,1,1.0,0.0,1.0,,,True
+Cafe aroma inn kandy pvt ltd,1,1.0,0.0,1.0,,,False
+Cafe on the 5th Private Limited,1,1.0,0.0,1.0,,,False
+Cash -  Lumora Moments,1,1.0,0.0,1.0,,,True
+Cash -Zen Sips,1,1.0,0.0,1.0,,,True
+Cash -adroit Graphic Private Limited,1,1.0,0.0,1.0,,,True
+Cash Act9 matcha pvt Ltd,1,1.0,0.0,1.0,,,True
+Cash Customer - Sanmik Foods (Pvt) Ltd,1,1.0,0.0,1.0,,,True
+Martex M F G (Pvt) Ltd,1,1.0,0.0,1.0,,,False
+Martket Textile,1,1.0,0.0,1.0,,,False
+M & L Industries Pvt Ltd,1,0.0,1.0,0.0,0.0,,False
+M R C Embroidery (Pvt) Ltd,1,1.0,0.0,1.0,,,False
+MAS Intimate Fashions India,1,1.0,0.0,1.0,,,False
+Loan Given - Matex,1,0.0,1.0,0.0,0.0,,False
+Loan Given - Naturub Exports International (PVT) Ltd,1,1.0,0.0,1.0,,,False
+Cakeinabox By Safna,1,1.0,0.0,1.0,,,False
+The Bavarian Restaurant Management Pvt Ltd,1,1.0,0.0,1.0,,,False
+The Commons Coffee Company Pvt Ltd,1,0.0,1.0,0.0,0.0,,False
+The Element Cluster (Pvt) Ltd,1,1.0,0.0,1.0,,,False
+The Feast,1,1.0,0.0,1.0,,,False
+Cafe 1959,1,1.0,0.0,1.0,,,False
+Gelco (Pvt) Ltd,1,1.0,0.0,1.0,,,False
+Glamourtex,1,1.0,0.0,1.0,,,False
+Cash Malay Fast Foods (Pvt)LTD,1,1.0,0.0,1.0,,,True
+Cash- Kalothata Grand Hotel,1,0.0,1.0,0.0,0.0,,True
+Cash- Males Place Pizza,1,0.0,1.0,0.0,0.0,,True
+Cash-HVH Instant Hotel Solutions,1,1.0,0.0,1.0,,,True
+Cash-Kiyaso Restaurant,1,1.0,0.0,1.0,,,True
+Cash-Laksiri jayakody,1,1.0,0.0,1.0,,,True
+Cash-Matcha 19c’,1,1.0,0.0,1.0,,,True
+Cash-Nainativu Hindu cultural Development society,1,1.0,0.0,1.0,,,True
+Cash-Pandanus Beach Resort & Spa,1,1.0,0.0,1.0,,,True
+Cash-R&B Guest House,1,1.0,0.0,1.0,,,True
+Deep Corner,1,0.0,1.0,0.0,0.0,,False
+Delmon Hospitality (pvt) ltd,1,1.0,0.0,1.0,,,False
+The Lankan Standard Pvt Ltd,1,1.0,0.0,1.0,,,False
+Brightex Industries Pvt Ltd.,1,1.0,0.0,1.0,,,False
+Brizo Paradiso Pvt Ltd,1,1.0,0.0,1.0,,,False
+Bubblucious Mini (Private) Limited,1,0.0,1.0,0.0,0.0,,False
+Butter Boutique Pvt Ltd,1,0.0,1.0,0.0,0.0,,False
+Lost Planet Midigama - TC,1,0.0,1.0,0.0,0.0,,False
+Loulou Lane,1,0.0,1.0,0.0,0.0,,False
+Cup Couture,1,1.0,0.0,1.0,,,False
+Leader Marketing,1,1.0,0.0,1.0,,,False
+Loan Given - Bam Exports (Pvt) Ltd,1,0.0,1.0,0.0,0.0,,False
+Loan Given - I D S Global (Pvt)Ltd,1,1.0,0.0,1.0,,,False
+Loan Given - Mas Fabric Pvt Ltd,1,0.0,1.0,0.0,0.0,,False
+Cash-Raveesha perera,1,1.0,0.0,1.0,,,True
+Cash-Sri Rajaganapathi Food Manufacture (Pvt) Ltd,1,1.0,0.0,1.0,,,True
+The Wolverine Hub,1,1.0,0.0,1.0,,,False
+Tissa Wawu Hotel Pvt Ltd,1,1.0,0.0,1.0,,,False
+Bohemian Quest Pvt Ltd,1,1.0,0.0,1.0,,,False
+Brandix Apparel Pvt Ltd,1,1.0,0.0,1.0,,,False
+Brandix Fast Fashion-Awissawella,1,1.0,0.0,1.0,,,False
+Torta - Cash,1,1.0,0.0,1.0,,,True
+Trendy Spendy Fashion,1,1.0,0.0,1.0,,,False
+Cafe Omeili,1,1.0,0.0,1.0,,,False
+Cash-Berrylips,1,1.0,0.0,1.0,,,True
+Cash-TENNESSEE FAST FOOD,1,1.0,0.0,1.0,,,True
+Cash-Wild bee hostel,1,1.0,0.0,1.0,,,True
+Cash-Zomoto,1,1.0,0.0,1.0,,,True
+Cauldron & Co. (Pvt) Ltd,1,0.0,1.0,0.0,0.0,,False
+Lankinmo Washing - TC,1,0.0,1.0,0.0,0.0,,False
+Jordanian Egyptian Co Ltd. For Medical Devices & Cosmetics,1,1.0,0.0,1.0,,,False
+Kamu Machan - TC,1,0.0,1.0,0.0,0.0,,False
+Daya Traders - Galle,1,1.0,0.0,1.0,,,False
+Cheflife cake shop,1,1.0,0.0,1.0,,,False
+Kottu Creed - TC,1,0.0,1.0,0.0,0.0,,False
+Bentota Management (Pvt) Ltd,1,0.0,1.0,0.0,0.0,,False
+Beruwala Resort PLC,1,0.0,1.0,0.0,0.0,,False
+Best Bond Pvt Ltd,1,0.0,1.0,0.0,0.0,,False
+Best Food Marketing Pvt Ltd,1,0.0,1.0,0.0,0.0,,False
+The Sri Lanka Inst. Of Textile & Apparel,1,0.0,1.0,0.0,0.0,,False
+Dial Textile Industries (Pvt) Ltd,1,1.0,0.0,1.0,,,False
+Apex Stationeries (D),1,1.0,0.0,1.0,,,False
+Zaad Curtain,1,1.0,0.0,1.0,,,False
+ARLO'S HOPPERS,1,1.0,0.0,1.0,,,False
+Araliya Green City Pvt Ltd,1,0.0,1.0,0.0,0.0,,False
+"Al Jazeera Printing Press Co, LLC",1,1.0,0.0,1.0,,,False
+Al Masira For Textile Manufacturing LLC,1,1.0,0.0,1.0,,,False
+Alpha Chem (Pvt) Ltd,1,1.0,0.0,1.0,,,False
+Amagi Lagoon Resort & Spa (Pvt) Ltd,1,1.0,0.0,1.0,,,False
+A T M Marketing - TC,1,1.0,0.0,1.0,,,False
+Wine Connection (Pvt) Ltd,1,0.0,1.0,0.0,0.0,,False
+Yarl Beach Hotel & Restaurant (Pvt) Ltd,1,0.0,1.0,0.0,0.0,,False
+Curry King (Pvt) Ltd,1,0.0,1.0,0.0,0.0,,False
+Critco Lanka Pvt Ltd,1,1.0,0.0,1.0,,,False
+Climax Printing Solution,1,1.0,0.0,1.0,,,False
+Coco  And Date-Cash,1,0.0,1.0,0.0,0.0,,True
+Great Wall Restaurant Pvt Ltd,1,0.0,1.0,0.0,0.0,,False
+Cash - Lil Miss Gelato (Pvt) Ltd,1,1.0,0.0,1.0,,,True
+Cash - Little Ceylon Pvt Limited,1,1.0,0.0,1.0,,,True
+Cash - Lusaro screen printing,1,1.0,0.0,1.0,,,True
+Cash - MCM Printers,1,1.0,0.0,1.0,,,True
+Cash - MM'S Crepes,1,1.0,0.0,1.0,,,True
+Cash - Mr Heshan Negombo,1,0.0,1.0,0.0,0.0,,True
+Cash - Mr Jazeer,1,1.0,0.0,1.0,,,True
+Cash - Mr Manjula,1,1.0,0.0,1.0,,,True
+Ashari (Pvt) Ltd,1,1.0,0.0,1.0,,,False
+Vel Cakes - TC,1,1.0,0.0,1.0,,,False
+Vesna Lanka Pvt Ltd,1,0.0,1.0,0.0,0.0,,False
+Vijitha Cake,1,0.0,1.0,0.0,0.0,,False
+Wakkumbura Industrial Tech Co Pvt Ltd,1,1.0,0.0,1.0,,,False
+Waqas Traders,1,1.0,0.0,1.0,,,False
+Warehouse Sports Bar & Grill (Pvt) Ltd,1,0.0,1.0,0.0,0.0,,False
+Waskaduwa Beach Resort PLC,1,0.0,1.0,0.0,0.0,,False

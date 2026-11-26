@@ -1,0 +1,74 @@
+stage,side,name,role
+S1,SPS (cf_order_received_from),PIZZA HUT,key
+S1,SPS (cf_order_received_from),TACO BELL,key
+S1,SPS (cf_order_received_from),Keells Super,key
+S1,SPS (cf_order_received_from),Spar SL (Private ) Limited,key
+S1,SPS (cf_order_received_from),Street Burger (Private) Limited,key
+S1,SPS (cf_order_received_from),MARRIOTT WELIGAMA,key
+S1,SPS (cf_order_received_from),Courtyard by Marriott,key
+S1,SPS (cf_order_received_from),Colombo Courtyard (Pvt) Ltd,key
+S1,SPS (cf_order_received_from),Gamma Pizzakraft Lanka (Pvt) Ltd,key
+S1,SPS (cf_order_received_from),Kiri Kopi,OPD feeder
+S1,SPS (cf_order_received_from),Titos,OPD feeder
+S1,SPS (cf_order_received_from),KARABU,OPD feeder
+S1,SPS (cf_order_received_from),Finagle Lanka (Pvt) Ltd,OPD feeder
+S1,SPS (cf_order_received_from),RADH,OPD feeder
+S1,SPS (cf_order_received_from),Thai Shack,OPD feeder
+S1,SPS (cf_order_received_from),Blends,SHPS feeder
+S1,SPS (cf_order_received_from),MY PIZZA,SHPS feeder
+S1,SPS (cf_order_received_from),Malu Poke,SHPS feeder
+S1,SPS (cf_order_received_from),Mandalas Cafe,SHPS feeder
+S1,SPS (cf_order_received_from),Angel Beach Hotel,SHPS feeder
+S1,SPS (cf_order_received_from),Beldon,SHPS feeder
+S1,SPS (cf_order_received_from),Riff Hikkaduwa,SHPS feeder
+S1,SPS (cf_order_received_from),Skinny Tom's Deli,SHPS feeder
+S1,SPS (cf_order_received_from),Dinemore (Pvt) Ltd,SHPS feeder
+S1,SPS (cf_order_received_from),Canterbury Golf Club,SHPS feeder
+S1,SPS (cf_order_received_from),BYD,SHPS feeder
+S1,SPS (cf_order_received_from),Araliya Unawatuna Beach Hotel (Private) Limited,SHPS feeder
+S1,SPS (whole division),PSU,division
+S1,SPS (whole division),RWU,division
+S1,SPS (whole division),PCU/MOBA cups,division
+S1,SPS (whole division),MOBA Punching,division
+S1,SPS (whole division),Lids,division
+S1,SPS (whole division),Plates,division
+S1,SPS (whole division),Cake wrappers,division
+S1,SPS (whole division),FPP,division
+S1,SPS (whole division),DPU,division
+S2,SPS (cf_order_received_from),MBC,also high volume / rising
+S2,SPS (cf_order_received_from),Double Tree Hilton,also high volume / rising
+S2,SPS (cf_order_received_from),CAFE 173,also high volume / rising
+S2,SPS (cf_order_received_from),Flamingo,also high volume / rising
+S2,SPS (whole division),SHPS,division
+S2,SPS (whole division),CPU,division
+S3,SPS (cf_order_received_from),Chanas Restaurant,OPD top-30 other
+S3,SPS (cf_order_received_from),Hilton Weerawila,OPD top-30 other
+S3,SPS (cf_order_received_from),Tasty Caterers,OPD top-30 other
+S3,SPS (cf_order_received_from),CRESCENT,OPD top-30 other
+S3,SPS (cf_order_received_from),Kaffi,OPD top-30 other
+S3,SPS (cf_order_received_from),ITC,OPD top-30 other
+S3,SPS (cf_order_received_from),Wildore,OPD top-30 other
+S3,SPS (cf_order_received_from),Sahana United Group (Pvt) Ltd,OPD top-30 other
+S3,SPS (cf_order_received_from),CHILLIS,OPD top-30 other
+S3,SPS (cf_order_received_from),Bokka,OPD top-30 other
+S3,SPS (cf_order_received_from),Sheraton,OPD top-30 other
+S3,SPS (cf_order_received_from),Wok to Walk,OPD top-30 other
+S3,SPS (cf_order_received_from),Shangrila,OPD top-30 other
+S3,SPS (cf_order_received_from),Tea Avenue (Pvt) Ltd,OPD top-30 other
+S3,SPS (cf_order_received_from),Dutch Lanka Pastry & Bakers,OPD top-30 other
+S3,SPS (cf_order_received_from),The Trees Cafe,OPD top-30 other
+S3,SPS (cf_order_received_from),Grillo's Company,OPD top-30 other
+S3,SPS (cf_order_received_from),SALEM RR BIRIYANI,OPD top-30 other
+S3,SPS (cf_order_received_from),ROYAL SWEET MART,OPD top-30 other
+S3,SPS (cf_order_received_from),Montado (Pvt) Ltd,OPD top-30 other
+S3,SPS (cf_order_received_from),Shangrila Colombo,OPD top-30 other
+S3,SPS (cf_order_received_from),The Lamprais,OPD top-30 other
+S3,SPS (cf_order_received_from),Wildish PVT LTD,OPD top-30 other
+S3,SPS (cf_order_received_from),HILTON YALA,OPD top-30 other
+S3,SPS (cf_order_received_from),Barakath Traders,OPD top-30 other
+S3,SPS (cf_order_received_from),Meraki,OPD top-30 other
+S3,SPS (cf_order_received_from),Teddies,OPD top-30 other
+S3,SPS (cf_order_received_from),Vanni inn,OPD top-30 other
+S3,SPS (cf_order_received_from),Arachchi Restaurant,OPD top-30 other
+S3,SPS (cf_order_received_from),Pounders Burgers,OPD top-30 other
+S4,SPS (whole division),OPD,division

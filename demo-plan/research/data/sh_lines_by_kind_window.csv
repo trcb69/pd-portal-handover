@@ -1,0 +1,13 @@
+month_part,kind,lines,orders,quantity_sum_mixed_units
+2026-09 (19-30 Sep),bought-in,1943,801,1167193.0
+2026-09 (19-30 Sep),customized,494,257,353239.0
+2026-09 (19-30 Sep),made-for-stock (SPS),226,184,347977.0
+2026-09 (19-30 Sep),service,23,15,4958.0
+2026-09 (19-30 Sep),unknown source,106,38,279692.0
+2026-09 (19-30 Sep),unmatched,26,15,13884.8
+2026-10 (1-17 Oct),bought-in,3537,1372,3401978.915
+2026-10 (1-17 Oct),customized,852,475,577756.0
+2026-10 (1-17 Oct),made-for-stock (SPS),398,328,356961.0
+2026-10 (1-17 Oct),service,86,38,49089.0
+2026-10 (1-17 Oct),unknown source,158,68,180884.26
+2026-10 (1-17 Oct),unmatched,74,25,7072.67

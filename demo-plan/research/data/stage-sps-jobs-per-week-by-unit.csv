@@ -1,0 +1,53 @@
+stage,when,division,jobs_per_week_12m,jobs_per_week_last8w,all_jobs_per_week_12m,all_jobs_per_week_last8w,share_of_division_12m
+S1,demo week,OPD,6.5,5.8,27.1,23.0,0.24
+S1,demo week,SHPS,4.6,3.5,20.2,17.6,0.23
+S1,demo week,PSU,6.1,4.8,6.1,4.8,1.0
+S1,demo week,RWU,4.5,5.4,4.5,5.4,1.0
+S1,demo week,PCU/MOBA cups,6.3,5.4,6.3,5.4,1.0
+S1,demo week,CPU,2.2,8.6,3.6,13.6,0.61
+S1,demo week,MOBA Punching,2.0,2.4,2.0,2.4,1.0
+S1,demo week,Lids,0.7,0.0,0.7,0.0,1.0
+S1,demo week,FPP,0.5,0.5,0.5,0.5,1.0
+S1,demo week,DPU,0.4,0.0,0.4,0.0,1.0
+S1,demo week,Plates,0.1,0.0,0.1,0.0,1.0
+S1,demo week,Cake wrappers,0.1,0.0,0.1,0.0,1.0
+S1,demo week,ALL,33.9,36.2,71.6,72.6,0.47
+S2,Sunday 1,OPD,7.3,6.2,27.1,23.0,0.27
+S2,Sunday 1,SHPS,20.2,17.6,20.2,17.6,1.0
+S2,Sunday 1,PSU,6.1,4.8,6.1,4.8,1.0
+S2,Sunday 1,RWU,4.5,5.4,4.5,5.4,1.0
+S2,Sunday 1,PCU/MOBA cups,6.3,5.4,6.3,5.4,1.0
+S2,Sunday 1,CPU,3.6,13.6,3.6,13.6,1.0
+S2,Sunday 1,MOBA Punching,2.0,2.4,2.0,2.4,1.0
+S2,Sunday 1,Lids,0.7,0.0,0.7,0.0,1.0
+S2,Sunday 1,FPP,0.5,0.5,0.5,0.5,1.0
+S2,Sunday 1,DPU,0.4,0.0,0.4,0.0,1.0
+S2,Sunday 1,Plates,0.1,0.0,0.1,0.0,1.0
+S2,Sunday 1,Cake wrappers,0.1,0.0,0.1,0.0,1.0
+S2,Sunday 1,ALL,51.8,55.9,71.6,72.6,0.72
+S3,Sunday 2,OPD,12.6,12.6,27.1,23.0,0.47
+S3,Sunday 2,SHPS,20.2,17.6,20.2,17.6,1.0
+S3,Sunday 2,PSU,6.1,4.8,6.1,4.8,1.0
+S3,Sunday 2,RWU,4.5,5.4,4.5,5.4,1.0
+S3,Sunday 2,PCU/MOBA cups,6.3,5.4,6.3,5.4,1.0
+S3,Sunday 2,CPU,3.6,13.6,3.6,13.6,1.0
+S3,Sunday 2,MOBA Punching,2.0,2.4,2.0,2.4,1.0
+S3,Sunday 2,Lids,0.7,0.0,0.7,0.0,1.0
+S3,Sunday 2,FPP,0.5,0.5,0.5,0.5,1.0
+S3,Sunday 2,DPU,0.4,0.0,0.4,0.0,1.0
+S3,Sunday 2,Plates,0.1,0.0,0.1,0.0,1.0
+S3,Sunday 2,Cake wrappers,0.1,0.0,0.1,0.0,1.0
+S3,Sunday 2,ALL,57.1,62.2,71.6,72.6,0.8
+S4,Sunday 3,OPD,27.1,23.0,27.1,23.0,1.0
+S4,Sunday 3,SHPS,20.2,17.6,20.2,17.6,1.0
+S4,Sunday 3,PSU,6.1,4.8,6.1,4.8,1.0
+S4,Sunday 3,RWU,4.5,5.4,4.5,5.4,1.0
+S4,Sunday 3,PCU/MOBA cups,6.3,5.4,6.3,5.4,1.0
+S4,Sunday 3,CPU,3.6,13.6,3.6,13.6,1.0
+S4,Sunday 3,MOBA Punching,2.0,2.4,2.0,2.4,1.0
+S4,Sunday 3,Lids,0.7,0.0,0.7,0.0,1.0
+S4,Sunday 3,FPP,0.5,0.5,0.5,0.5,1.0
+S4,Sunday 3,DPU,0.4,0.0,0.4,0.0,1.0
+S4,Sunday 3,Plates,0.1,0.0,0.1,0.0,1.0
+S4,Sunday 3,Cake wrappers,0.1,0.0,0.1,0.0,1.0
+S4,Sunday 3,ALL,71.6,72.6,71.6,72.6,1.0

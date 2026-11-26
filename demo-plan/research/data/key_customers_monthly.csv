@@ -1,0 +1,249 @@
+customer,month,sps_lines,sps_job_orders,sh_orders
+Pizza Hut,2024-04,0,0,223
+Pizza Hut,2024-05,0,0,174
+Pizza Hut,2024-06,0,0,181
+Pizza Hut,2024-07,0,0,197
+Pizza Hut,2024-08,0,0,203
+Pizza Hut,2024-09,0,0,195
+Pizza Hut,2024-10,0,0,181
+Pizza Hut,2024-11,0,0,168
+Pizza Hut,2024-12,0,0,238
+Pizza Hut,2025-01,0,0,196
+Pizza Hut,2025-02,2,1,198
+Pizza Hut,2025-03,2,2,205
+Pizza Hut,2025-04,1,1,225
+Pizza Hut,2025-05,0,0,187
+Pizza Hut,2025-06,0,0,194
+Pizza Hut,2025-07,1,1,201
+Pizza Hut,2025-08,2,1,209
+Pizza Hut,2025-09,0,0,298
+Pizza Hut,2025-10,0,0,279
+Pizza Hut,2025-11,0,0,276
+Pizza Hut,2025-12,0,0,333
+Pizza Hut,2026-01,4,2,453
+Pizza Hut,2026-02,0,0,364
+Pizza Hut,2026-03,2,1,372
+Pizza Hut,2026-04,1,1,371
+Pizza Hut,2026-05,0,0,351
+Pizza Hut,2026-06,1,1,411
+Pizza Hut,2026-07,0,0,447
+Pizza Hut,2026-08,0,0,396
+Pizza Hut,2026-09,0,0,297
+Pizza Hut,2026-10,1,1,0
+Taco Bell,2024-04,12,12,223
+Taco Bell,2024-05,11,10,174
+Taco Bell,2024-06,11,11,181
+Taco Bell,2024-07,7,7,197
+Taco Bell,2024-08,0,0,203
+Taco Bell,2024-09,7,6,195
+Taco Bell,2024-10,0,0,181
+Taco Bell,2024-11,8,5,168
+Taco Bell,2024-12,2,2,238
+Taco Bell,2025-01,12,9,196
+Taco Bell,2025-02,0,0,198
+Taco Bell,2025-03,9,6,205
+Taco Bell,2025-04,16,9,225
+Taco Bell,2025-05,0,0,187
+Taco Bell,2025-06,11,8,194
+Taco Bell,2025-07,1,1,201
+Taco Bell,2025-08,7,5,209
+Taco Bell,2025-09,9,8,298
+Taco Bell,2025-10,13,9,279
+Taco Bell,2025-11,8,4,276
+Taco Bell,2025-12,5,3,333
+Taco Bell,2026-01,14,10,453
+Taco Bell,2026-02,0,0,364
+Taco Bell,2026-03,15,9,372
+Taco Bell,2026-04,10,5,371
+Taco Bell,2026-05,4,2,351
+Taco Bell,2026-06,12,9,411
+Taco Bell,2026-07,7,5,447
+Taco Bell,2026-08,5,3,396
+Taco Bell,2026-09,7,7,297
+Taco Bell,2026-10,3,3,0
+Keells,2024-04,10,10,51
+Keells,2024-05,8,8,18
+Keells,2024-06,21,20,8
+Keells,2024-07,4,3,19
+Keells,2024-08,2,2,15
+Keells,2024-09,0,0,13
+Keells,2024-10,2,2,7
+Keells,2024-11,1,1,16
+Keells,2024-12,1,1,32
+Keells,2025-01,1,1,5
+Keells,2025-02,3,2,8
+Keells,2025-03,0,0,4
+Keells,2025-04,1,1,12
+Keells,2025-05,2,2,6
+Keells,2025-06,2,1,5
+Keells,2025-07,2,2,4
+Keells,2025-08,4,2,6
+Keells,2025-09,3,2,6
+Keells,2025-10,3,2,6
+Keells,2025-11,2,2,3
+Keells,2025-12,2,1,6
+Keells,2026-01,2,2,56
+Keells,2026-02,2,1,167
+Keells,2026-03,4,2,13
+Keells,2026-04,6,4,3
+Keells,2026-05,0,0,21
+Keells,2026-06,0,0,35
+Keells,2026-07,10,10,11
+Keells,2026-08,0,0,13
+Keells,2026-09,15,15,21
+Keells,2026-10,0,0,0
+Spar,2024-04,6,6,18
+Spar,2024-05,4,4,32
+Spar,2024-06,12,12,29
+Spar,2024-07,1,1,19
+Spar,2024-08,6,6,15
+Spar,2024-09,1,1,16
+Spar,2024-10,3,2,14
+Spar,2024-11,4,2,10
+Spar,2024-12,3,3,32
+Spar,2025-01,6,4,15
+Spar,2025-02,1,1,12
+Spar,2025-03,0,0,9
+Spar,2025-04,0,0,9
+Spar,2025-05,0,0,21
+Spar,2025-06,3,2,11
+Spar,2025-07,2,1,17
+Spar,2025-08,1,1,20
+Spar,2025-09,0,0,25
+Spar,2025-10,0,0,22
+Spar,2025-11,0,0,30
+Spar,2025-12,2,1,40
+Spar,2026-01,0,0,45
+Spar,2026-02,0,0,48
+Spar,2026-03,6,3,51
+Spar,2026-04,2,2,41
+Spar,2026-05,2,2,53
+Spar,2026-06,0,0,39
+Spar,2026-07,36,30,41
+Spar,2026-08,38,38,49
+Spar,2026-09,22,22,28
+Spar,2026-10,0,0,0
+Street Burger,2024-04,26,26,13
+Street Burger,2024-05,13,11,13
+Street Burger,2024-06,13,12,8
+Street Burger,2024-07,9,6,19
+Street Burger,2024-08,2,1,10
+Street Burger,2024-09,10,5,13
+Street Burger,2024-10,7,4,15
+Street Burger,2024-11,3,3,13
+Street Burger,2024-12,3,3,29
+Street Burger,2025-01,9,7,11
+Street Burger,2025-02,4,3,20
+Street Burger,2025-03,5,4,31
+Street Burger,2025-04,9,4,15
+Street Burger,2025-05,7,4,13
+Street Burger,2025-06,0,0,13
+Street Burger,2025-07,6,3,8
+Street Burger,2025-08,2,2,6
+Street Burger,2025-09,3,3,11
+Street Burger,2025-10,8,7,14
+Street Burger,2025-11,2,2,9
+Street Burger,2025-12,3,1,11
+Street Burger,2026-01,3,2,11
+Street Burger,2026-02,8,6,8
+Street Burger,2026-03,0,0,8
+Street Burger,2026-04,8,5,10
+Street Burger,2026-05,1,1,7
+Street Burger,2026-06,4,2,7
+Street Burger,2026-07,3,3,6
+Street Burger,2026-08,0,0,5
+Street Burger,2026-09,5,5,3
+Street Burger,2026-10,4,4,0
+Norfolk,2024-04,0,0,2
+Norfolk,2024-05,0,0,2
+Norfolk,2024-06,0,0,2
+Norfolk,2024-07,0,0,1
+Norfolk,2024-08,0,0,2
+Norfolk,2024-09,0,0,2
+Norfolk,2024-10,0,0,3
+Norfolk,2024-11,0,0,2
+Norfolk,2024-12,0,0,1
+Norfolk,2025-01,0,0,1
+Norfolk,2025-02,0,0,5
+Norfolk,2025-03,0,0,3
+Norfolk,2025-04,0,0,0
+Norfolk,2025-05,0,0,2
+Norfolk,2025-06,0,0,3
+Norfolk,2025-07,0,0,2
+Norfolk,2025-08,0,0,6
+Norfolk,2025-09,0,0,6
+Norfolk,2025-10,0,0,5
+Norfolk,2025-11,0,0,1
+Norfolk,2025-12,0,0,3
+Norfolk,2026-01,0,0,6
+Norfolk,2026-02,0,0,3
+Norfolk,2026-03,0,0,3
+Norfolk,2026-04,0,0,1
+Norfolk,2026-05,0,0,1
+Norfolk,2026-06,0,0,1
+Norfolk,2026-07,0,0,2
+Norfolk,2026-08,0,0,4
+Norfolk,2026-09,0,0,2
+Norfolk,2026-10,0,0,0
+Marriott Weligama,2024-04,0,0,25
+Marriott Weligama,2024-05,0,0,15
+Marriott Weligama,2024-06,0,0,14
+Marriott Weligama,2024-07,0,0,10
+Marriott Weligama,2024-08,1,1,19
+Marriott Weligama,2024-09,0,0,9
+Marriott Weligama,2024-10,0,0,18
+Marriott Weligama,2024-11,1,1,13
+Marriott Weligama,2024-12,0,0,14
+Marriott Weligama,2025-01,0,0,19
+Marriott Weligama,2025-02,0,0,21
+Marriott Weligama,2025-03,0,0,18
+Marriott Weligama,2025-04,0,0,27
+Marriott Weligama,2025-05,0,0,13
+Marriott Weligama,2025-06,0,0,12
+Marriott Weligama,2025-07,0,0,16
+Marriott Weligama,2025-08,1,1,18
+Marriott Weligama,2025-09,0,0,12
+Marriott Weligama,2025-10,0,0,13
+Marriott Weligama,2025-11,2,1,16
+Marriott Weligama,2025-12,0,0,22
+Marriott Weligama,2026-01,1,1,27
+Marriott Weligama,2026-02,0,0,15
+Marriott Weligama,2026-03,0,0,19
+Marriott Weligama,2026-04,2,1,18
+Marriott Weligama,2026-05,2,1,18
+Marriott Weligama,2026-06,0,0,16
+Marriott Weligama,2026-07,0,0,16
+Marriott Weligama,2026-08,0,0,21
+Marriott Weligama,2026-09,0,0,12
+Marriott Weligama,2026-10,0,0,0
+Courtyard Marriott,2024-04,0,0,0
+Courtyard Marriott,2024-05,2,2,0
+Courtyard Marriott,2024-06,1,1,0
+Courtyard Marriott,2024-07,4,4,0
+Courtyard Marriott,2024-08,0,0,0
+Courtyard Marriott,2024-09,1,1,0
+Courtyard Marriott,2024-10,2,1,0
+Courtyard Marriott,2024-11,0,0,0
+Courtyard Marriott,2024-12,0,0,0
+Courtyard Marriott,2025-01,3,2,0
+Courtyard Marriott,2025-02,0,0,0
+Courtyard Marriott,2025-03,0,0,0
+Courtyard Marriott,2025-04,3,3,0
+Courtyard Marriott,2025-05,0,0,0
+Courtyard Marriott,2025-06,2,1,0
+Courtyard Marriott,2025-07,6,2,0
+Courtyard Marriott,2025-08,0,0,0
+Courtyard Marriott,2025-09,0,0,0
+Courtyard Marriott,2025-10,1,1,0
+Courtyard Marriott,2025-11,0,0,0
+Courtyard Marriott,2025-12,4,3,0
+Courtyard Marriott,2026-01,0,0,0
+Courtyard Marriott,2026-02,2,1,0
+Courtyard Marriott,2026-03,0,0,0
+Courtyard Marriott,2026-04,0,0,0
+Courtyard Marriott,2026-05,0,0,0
+Courtyard Marriott,2026-06,0,0,0
+Courtyard Marriott,2026-07,0,0,0
+Courtyard Marriott,2026-08,2,1,0
+Courtyard Marriott,2026-09,0,0,0
+Courtyard Marriott,2026-10,0,0,0

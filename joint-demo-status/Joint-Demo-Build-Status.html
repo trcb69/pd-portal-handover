@@ -1,0 +1,260 @@
+<title>Joint Demo Build Status</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one column. Summary first, then the build tree (root → 5 branches → leaves), then the road to the demo date, then the next moves. */
+:root{
+  --bg:#f5f7fb; --panel:#ffffff; --ink:#14223a; --muted:#5a6a84; --line:#d5dceb; --navy:#1d3a6e; --accent:#2f6fd6;
+  --done:#1f8a5b; --done-bg:#e3f4ec; --work:#2f6fd6; --work-bg:#e5eefc; --todo:#6b778c; --todo-bg:#eef1f6;
+  --wait:#a8650a; --wait-bg:#fdf1dc; --block:#c03a3a; --block-bg:#fbe6e6;
+  --display:"Barlow Semi Condensed","Arial Narrow",system-ui,sans-serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1726; --panel:#16213a; --ink:#e4eaf5; --muted:#9aa8c2; --line:#2a3757; --navy:#9dbcf2; --accent:#6fa0f0;
+  --done:#5fcf98; --done-bg:#16352a; --work:#7fb0ff; --work-bg:#1a2c4f; --todo:#a3aec2; --todo-bg:#222d45;
+  --wait:#f0b55a; --wait-bg:#3a2d14; --block:#ff8a8a; --block-bg:#3d1d22; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1726; --panel:#16213a; --ink:#e4eaf5; --muted:#9aa8c2; --line:#2a3757; --navy:#9dbcf2; --accent:#6fa0f0;
+  --done:#5fcf98; --done-bg:#16352a; --work:#7fb0ff; --work-bg:#1a2c4f; --todo:#a3aec2; --todo-bg:#222d45;
+  --wait:#f0b55a; --wait-bg:#3a2d14; --block:#ff8a8a; --block-bg:#3d1d22; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 48px}
+.wrap{max-width:980px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;color:var(--navy);letter-spacing:.01em}
+h1{font-size:2.1rem;line-height:1.1}
+h2{font-size:1.45rem}
+.eyebrow{font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.lede{color:var(--muted);max-width:68ch;margin:6px 0 0}
+code,.mono{font-family:var(--mono);font-size:.82em}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+
+/* summary strip */
+.summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.stat b{font-family:var(--display);font-size:1.9rem;line-height:1;font-variant-numeric:tabular-nums}
+.stat span{color:var(--muted);font-size:.85rem}
+.stat.alert b{color:var(--block)}
+.stat.okay b{color:var(--done)}
+.stat.date b{color:var(--navy)}
+@media (max-width:720px){.summary{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:.82rem;color:var(--muted)}
+.pill{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:.7rem;font-weight:500;letter-spacing:.04em;text-transform:uppercase;
+  padding:2px 8px;border-radius:99px;white-space:nowrap;border:1px solid transparent}
+.pill::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.done{color:var(--done);background:var(--done-bg)}
+.work{color:var(--work);background:var(--work-bg)}
+.todo{color:var(--todo);background:var(--todo-bg)}
+.wait{color:var(--wait);background:var(--wait-bg)}
+.block{color:var(--block);background:var(--block-bg);border-color:var(--block)}
+
+/* tree */
+.root{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;background:var(--navy);color:var(--bg);border-radius:10px;padding:14px 18px}
+.root h2{color:var(--bg);font-size:1.35rem}
+.root .mono{opacity:.85}
+.tree{list-style:none;margin:0;padding:0 0 0 18px;border-left:2px solid var(--line);display:flex;flex-direction:column;gap:16px;margin-left:22px;padding-top:16px}
+.branch{position:relative}
+.branch::before{content:"";position:absolute;left:-18px;top:22px;width:16px;border-top:2px solid var(--line)}
+.bhead{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.bhead h3{font-size:1.15rem}
+.bhead .where{font-family:var(--mono);font-size:.74rem;color:var(--muted);flex-basis:100%}
+.meter{flex:1 1 140px;min-width:120px;max-width:220px;height:8px;border-radius:99px;background:var(--todo-bg);overflow:hidden;display:flex}
+.meter i{display:block;height:100%}
+.meter .d{background:var(--done)} .meter .w{background:var(--work)}
+.count{font-family:var(--mono);font-size:.75rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.leaves{list-style:none;margin:8px 0 0 18px;padding:0 0 0 18px;border-left:2px dashed var(--line);display:flex;flex-direction:column;gap:6px}
+.leaf{position:relative;display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 10px;align-items:start;padding:6px 0}
+.leaf::before{content:"";position:absolute;left:-18px;top:16px;width:14px;border-top:2px dashed var(--line)}
+.leaf .pill{margin-top:2px;min-width:92px;justify-content:flex-start}
+.leaf p{margin:0;min-width:0}
+.leaf small{display:block;color:var(--muted);font-size:.84rem}
+.leaf.crit p>strong{color:var(--block)}
+
+/* road */
+.road{overflow-x:auto}
+.road svg{display:block;min-width:720px;width:100%;height:auto}
+.road text{font-family:var(--body);fill:var(--ink)}
+.road .sm{font-size:11px;fill:var(--muted)}
+.road .mono{font-family:var(--mono);font-size:11px;fill:var(--muted)}
+.fallback{margin:10px 0 0;color:var(--muted);font-size:.88rem}
+
+/* next */
+.next{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:720px){.next{grid-template-columns:1fr}}
+.next ol{margin:10px 0 0;padding-left:1.3em;display:flex;flex-direction:column;gap:8px}
+.next li{padding-left:2px}
+.next li small{display:block;color:var(--muted)}
+.foot{color:var(--muted);font-size:.8rem;border-top:1px solid var(--line);padding-top:12px;display:flex;flex-direction:column;gap:4px}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Build status · Wednesday 28 October 2026</div>
+    <h1>Joint demo v0.1: Order Portal + Production Dashboard</h1>
+    <p class="lede">Most of the build is done. Both apps and the demo gateway are built and reviewed, and the SPS read key works against live Zoho. What's left before the demo: a test that follows one order across both apps, the final reviews, the start-up package for you, and the warm-up run.</p>
+  </header>
+
+  <section class="summary" aria-label="Summary">
+    <div class="stat date"><b>Mon 9 Nov</b><span>target demo · latest Thu 12 Nov</span></div>
+    <div class="stat okay"><b>451 / 451</b><span>portal tests pass (order flow + SH stock + SH item import)</span></div>
+    <div class="stat okay"><b>26 / 26</b><span>browser tests pass, incl. the cross-app run (dashboard unit 453 pass / 0 fail)</span></div>
+    <div class="stat alert"><b>Fri 30 Oct</b><span>warm-up: you start both apps so the dashboard loads ≥3 days of history</span></div>
+  </section>
+
+  <div class="legend" aria-label="Legend">
+    <span class="pill done">Done</span>
+    <span class="pill work">In progress</span>
+    <span class="pill todo">To do</span>
+    <span class="pill wait">Needs you</span>
+    <span class="pill block">Blocks the demo</span>
+  </div>
+
+  <section aria-label="Build tree">
+    <div class="root">
+      <h2>v0.1 Joint demo</h2>
+      <span class="mono">order → decide → production queue → approve → DEMO job order → dashboard My jobs</span>
+    </div>
+
+    <ul class="tree">
+      <li class="branch">
+        <div class="bhead">
+          <h3>Plan and design</h3>
+          <div class="meter" aria-hidden="true"><i class="d" style="width:100%"></i></div>
+          <span class="count">4 of 4 done</span>
+          <span class="where">wiki/specs/2026-10-24-joint-demo-v0-1-rev4-demo-first.md (worktree pd-demo-plan)</span>
+        </div>
+        <ul class="leaves">
+          <li class="leaf"><span class="pill done">Done</span><p>Demo-first spec Rev 4 approved<small>Live reads from SPS (API) and SH (signed-in browser, read-only), sharing the load. Writes go only to a stand-in Zoho.</small></p></li>
+          <li class="leaf"><span class="pill done">Done</span><p>UI direction picked: Calm cards<small>Used for both apps.</small></p></li>
+          <li class="leaf"><span class="pill done">Done</span><p>Demo gateway approved (24 Oct)<small>Local stand-in on 127.0.0.1:4850. Retired at v0.5.</small></p></li>
+          <li class="leaf"><span class="pill done">Done</span><p>§22 SH item import added (Rev 4.10)<small>Plan review APPROVE-WITH-CHANGES; all changes applied.</small></p></li>
+        </ul>
+      </li>
+
+      <li class="branch">
+        <div class="bhead">
+          <h3>A · Order Portal</h3>
+          <div class="meter" aria-hidden="true"><i class="d" style="width:100%"></i></div>
+          <span class="count">5 of 5 done</span>
+          <span class="where">/root/dev/order-portal-s1 · branch feature/s1-demo · port 4800</span>
+        </div>
+        <ul class="leaves">
+          <li class="leaf"><span class="pill done">Done</span><p>S0 base: login, roles, admin data, health, read-only SPS sync, audit log<small>Code review APPROVE-WITH-NITS.</small></p></li>
+          <li class="leaf"><span class="pill done">Done</span><p>S1 order flow and screens<small>New order → stock or production → production queue → accept → manager approve + Job No → DEMO job order to the stand-in. Safe resends, 5-minute confirm loop, daily call budgets.</small></p></li>
+          <li class="leaf"><span class="pill done">Done</span><p>SH stock reader (signed-in browser, read-only)<small>GET only, ≥1.2 s apart, ≤40 per cycle, ≤6,000 a day. It stops on its own if signed out or slowed down.</small></p></li>
+          <li class="leaf"><span class="pill done">Done</span><p>S1 reviews and fix pass<small>Code APPROVE-WITH-NITS · security PASS-WITH-CHANGES (fixed) · migration APPROVE-WITH-CHANGES (fixed). 13 fix commits.</small></p></li>
+          <li class="leaf"><span class="pill done">Done</span><p>SH item import command (so Decide can show SH stock)<small>Code review APPROVE-WITH-NITS, security PASS-WITH-CHANGES; all fixed. 451/451 twice (f43a0d7).</small></p></li>
+        </ul>
+      </li>
+
+      <li class="branch">
+        <div class="bhead">
+          <h3>G · Demo gateway (stand-in Zoho)</h3>
+          <div class="meter" aria-hidden="true"><i class="d" style="width:100%"></i></div>
+          <span class="count">3 of 3 done</span>
+          <span class="where">/root/dev/order-portal-gateway · branch feature/demo-gateway · 127.0.0.1:4850</span>
+        </div>
+        <ul class="leaves">
+          <li class="leaf"><span class="pill done">Done</span><p>Read pass-through to live SPS + sandbox for DEMO job orders<small>279/279 tests. Review APPROVE (65c72b6).</small></p></li>
+          <li class="leaf"><span class="pill done">Done</span><p>SPS read key in place (27 Oct)<small>Start-up check OK, 3 read scopes, live read returned page 1.</small></p></li>
+          <li class="leaf"><span class="pill done">Done</span><p>Demo page for the later steps (Bundled, Packed, Shipped, Invoiced)</p></li>
+        </ul>
+      </li>
+
+      <li class="branch">
+        <div class="bhead">
+          <h3>B · Production Dashboard</h3>
+          <div class="meter" aria-hidden="true"><i class="d" style="width:100%"></i></div>
+          <span class="count">4 of 4 done</span>
+          <span class="where">/root/dev/production-dashboard-v01 · branch feature/joint-demo-v0.1 · port 4300</span>
+        </div>
+        <ul class="leaves">
+          <li class="leaf"><span class="pill done">Done</span><p>My jobs page in Calm cards<small>Document strip, Job card tick, Send next, ready-to-run chips, Open/All, DEMO chip, admin Unassigned list.</small></p></li>
+          <li class="leaf"><span class="pill done">Done</span><p>Set-up script with undo<small>MacPro first, Stripping unit, families, steps, lid routes.</small></p></li>
+          <li class="leaf"><span class="pill done">Done</span><p>Gateway settings + DEMO MODE health line + tunnel-only start checks</p></li>
+          <li class="leaf"><span class="pill done">Done</span><p>Reviews and nits pass<small>Re-review APPROVE-WITH-NITS (7e17118).</small></p></li>
+        </ul>
+      </li>
+
+      <li class="branch">
+        <div class="bhead">
+          <h3>C · Cross-app test, start-up package, warm-up</h3>
+          <div class="meter" aria-hidden="true"><i class="d" style="width:60%"></i></div>
+          <span class="count">3 of 5 done</span>
+          <span class="where">dashboard repo test/e2e/joint-demo.spec.js</span>
+        </div>
+        <ul class="leaves">
+          <li class="leaf"><span class="pill done">Done</span><p>Cross-app test: a portal order becomes a DEMO job in the dashboard's My jobs<small>All three apps run together on test data: 7 of 7 steps pass (DEMO chip, Job No, TACO BELL, MacPro route, Job card tick, Send next, Packed → Shipped → Invoiced). Browser tests 26/26, dashboard unit tests 453 pass / 0 fail.</small></p></li>
+          <li class="leaf"><span class="pill done">Done</span><p>Final review of the cross-app test<small>APPROVE-WITH-NITS, all fixed. Browser tests 26/26 (5e8bbb6).</small></p></li>
+          <li class="leaf"><span class="pill done">Done</span><p>Start-up package for you<small>Security check PASS-WITH-CHANGES, fixes applied. Unit owners and coordinators filled in (28 Oct).Pinned /root/demo checkouts, PM2 commands, app settings, SH item import step, browser-sharing rule.</small></p></li>
+          <li class="leaf crit"><span class="pill block">Blocks demo</span><p><strong>Warm-up, by you, Fri 30 Oct</strong><small>Start the three demo processes from the package. The dashboard needs ≥3 days to load history before the demo.</small></p></li>
+          <li class="leaf"><span class="pill todo">To do</span><p>Rehearsal with 3 sample orders</p></li>
+        </ul>
+      </li>
+
+      <li class="branch">
+        <div class="bhead">
+          <h3>D · Inputs from you</h3>
+          <div class="meter" aria-hidden="true"><i class="d" style="width:50%"></i></div>
+          <span class="count">2 of 4 done</span>
+          <span class="where">spec §9 preconditions</span>
+        </div>
+        <ul class="leaves">
+          <li class="leaf"><span class="pill done">Done</span><p>P1 SPS read key (27 Oct)</p></li>
+          <li class="leaf"><span class="pill done">Done</span><p>UI direction and gateway approval (24 Oct)</p></li>
+          <li class="leaf"><span class="pill wait">Needs you</span><p>P4 names: demo accounts and who runs each unit<small>Needed for the rehearsal.</small></p></li>
+          <li class="leaf"><span class="pill wait">Needs you</span><p>P3 key-customer account names for the filter</p></li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section class="panel" aria-label="Road to the demo">
+    <h2>Road to the demo</h2>
+    <p class="lede">The build side is nearly done. The warm-up on Fri 30 Oct is the next fixed date: if it slips, the demo slips by the same amount.</p>
+    <div class="road">
+      <svg viewBox="0 0 760 190" role="img" aria-label="Timeline from 24 October to 12 November with check points">
+        <line x1="30" y1="90" x2="730" y2="90" stroke="var(--line)" stroke-width="4" stroke-linecap="round"/>
+        <rect x="177" y="44" width="185" height="14" rx="7" fill="var(--work-bg)" stroke="var(--work)"/>
+        <text x="181" y="38" class="sm">Cross-app test + final reviews</text>
+        <rect x="251" y="112" width="258" height="14" rx="7" fill="var(--wait-bg)" stroke="var(--wait)"/>
+        <text x="255" y="142" class="sm">Warm-up: history loads (≥3 days)</text>
+        <rect x="509" y="112" width="110" height="14" rx="7" fill="var(--work-bg)" stroke="var(--work)"/>
+        <text x="513" y="142" class="sm">Rehearsal</text>
+        <g><circle cx="30" cy="90" r="6" fill="var(--done)"/><text x="30" y="172" text-anchor="middle" class="mono">Sat 24 Oct</text><text x="30" y="186" text-anchor="middle" class="sm">plan approved</text></g>
+        <g><circle cx="177" cy="90" r="7" fill="var(--accent)"/><text x="177" y="172" text-anchor="middle" class="mono">Wed 28 Oct</text><text x="177" y="186" text-anchor="middle" class="sm">today</text></g>
+        <g><circle cx="251" cy="90" r="8" fill="var(--block)"/><text x="259" y="80" text-anchor="start" class="mono">Fri 30 Oct</text><text x="268" y="172" text-anchor="middle" class="sm">warm-up starts</text></g>
+        <g><rect x="609" y="80" width="20" height="20" rx="4" transform="rotate(45 619 90)" fill="var(--done)"/><text x="619" y="172" text-anchor="middle" class="mono">Mon 9 Nov</text><text x="619" y="186" text-anchor="middle" class="sm">target demo</text></g>
+        <g><circle cx="730" cy="90" r="6" fill="var(--todo)"/><text x="726" y="172" text-anchor="end" class="mono">Thu 12 Nov</text><text x="726" y="186" text-anchor="end" class="sm">latest</text></g>
+      </svg>
+    </div>
+  </section>
+
+  <section class="next" aria-label="Next moves">
+    <div class="panel">
+      <h2>You, this week</h2>
+      <ol>
+        <li><strong>Run the warm-up on Fri 30 Oct</strong> from the start-up package<small>run-package/RUNBOOK.md: every command, what to expect, and what to do if it fails.</small></li>
+        <li><strong>Send the rest</strong>: sales accounts, key customers (P3), and the Zoho Division option name for Rewinding</li>
+        <li><strong>Keep the rizwan@ browser signed in</strong><small>The SH stock reader uses it read-only and never signs out.</small></li>
+      </ol>
+    </div>
+    <div class="panel">
+      <h2>Build, in order</h2>
+      <ol>
+        <li>Add Rewinding to the portal once its Zoho option name is known</li>
+        <li>Start-up package for you (before Fri 30 Oct)</li>
+        <li>Rehearsal with 3 sample orders</li>
+      </ol>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <span>Sources: test runs on 27–28 Oct in all three repos, git logs, spec Rev 4.10, review verdicts. Dates are estimates, not promises.</span>
+    <span>Prepared by Abdul Hadhee | IT Executive</span>
+  </footer>
+</div>

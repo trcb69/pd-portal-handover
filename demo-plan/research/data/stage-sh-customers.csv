@@ -1,0 +1,28 @@
+stage,sh_customer,role
+S1,Gamma Pizzakraft Lanka (Pvt) Ltd,key customer account
+S1,Jaykay Marketing Services (Pvt) Ltd,key customer account
+S1,Keells Super,key customer account
+S1,Spar SL (Private ) Limited,key customer account
+S1,Street Burger (Private) Limited,key customer account
+S1,Norfolk Foods (Pvt) Ltd,key customer account
+S1,Weligama Hotel Properties Limited,key customer account
+S2,Tharindu JBJ Creations (PVT) Ltd,also high volume
+S2,Shangri-La Hotels Lanka (Pvt) Ltd,also high volume
+S2,Mas Active (PVT) Ltd- MAS Kreeda,also high volume
+S2,KDU Adventures (Pvt) Ltd,also high volume
+S2,Expo Industrial Engineering Pvt Ltd,also high volume
+S2,Antler Fabric Printers (Pvt) Ltd,also high volume
+S2,Screen Line (Pvt) Ltd,also high volume
+S2,Welcomehotels Lanka Pvt Ltd,also high volume
+S2,Regal Image International (PVT) Ltd,also high volume
+S2,Jk Garments (PVT) Ltd,also high volume
+S2,Hi Fashion Holdings Pvt Ltd,also high volume
+S2,Waterfront Properties (Private) Limited,also high volume
+S2,Hotel Developers Lanka Limited,rising fast
+S2,Mr. Burger,rising fast
+S2,Serenia Ltd,rising fast
+S3,Fusion Apparel Pvt Ltd,orders >=150/yr (external)
+S3,Rich Color Exports (PVT) Ltd,orders >=150/yr (external)
+S3,Dasis Printers (Pvt) Ltd,orders >=150/yr (external)
+S3,Sino Lanka Hotels Galle (Pvt) Ltd,orders >=150/yr (external)
+S4,all other external SH customers,everything except cash/walk-in and internal accounts

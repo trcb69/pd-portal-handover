@@ -1,0 +1,51 @@
+rank,item_id,item,kind,unit,qty_12m,months_sold,scope
+1,4845836000000275236,Wooden Popstick 114mm,bought-in,nos,3746204.0,12,all kinds
+2,4845836000000277823,Wooden Spoon 16cm,bought-in,nos,2142736.0,12,all kinds
+3,4845836000000246215,Paper White Straw 6mm x 20cm (Packed),made-for-stock (SPS),pcs,2068036.0,12,all kinds
+4,4845836000000247053,Paper White Straw 6mm x 20cm SPS,made-for-stock (SPS),pcs,1978562.0,12,all kinds
+5,4845836000000246040,Flexible White Straw 6mm x 24cm,bought-in,pcs,1750664.0,12,all kinds
+6,4845836000000282775,Aluminium Lava Cake Cup,bought-in,Nos,1413721.0,12,all kinds
+7,4845836000041805059,Juice Straw - 116604,unknown source,nos,1123000.0,12,all kinds
+8,4845836000000277788,Wooden  Fork 16cm,bought-in,nos,1055483.0,12,all kinds
+9,4845836000041820151,Paper Cup - JK3101,unknown source,nos,1040000.0,12,all kinds
+10,4845836000000272062,Cake Cup 14cm-White,made-for-stock (SPS),Nos,960000.0,10,all kinds
+11,4845836000018707185,Lid For 750ml AF Container - 8389,customized,Nos,937493.0,12,all kinds
+12,4845836000000282670,750ml AF Container - 8389,bought-in,Nos,928818.0,12,all kinds
+13,4845836000000272307,Cake Cup 11.5cm-White,bought-in,Nos,884800.0,11,all kinds
+14,4845836000000274760,Wooden Stirrer 14cm,bought-in,nos,837171.0,12,all kinds
+15,4845836000000282985,900ml AF Container - 8319,bought-in,Nos,831999.0,12,all kinds
+16,4845836000018707511,Lid For 900ml AF Container - 8319,bought-in,Nos,829437.0,12,all kinds
+17,4845836000014529326,Wooden Spoon 16CM - 122266,unknown source,nos,738000.0,11,all kinds
+18,4845836000000249856,Boufant Hair Net Blue,bought-in,pcs,675231.0,12,all kinds
+19,4845836000000278973,12Oz Plastic Cup (350ml),bought-in,nos,673499.0,12,all kinds
+20,4845836000014529442,16CM Wooden Fork-120393,unknown source,nos,634000.0,12,all kinds
+1,4845836000018707185,Lid For 750ml AF Container - 8389,customized,Nos,937493.0,12,customized
+2,4845836000000520254,SH-Black (Plastic Lid – PS6) for 8oz Paper Cup (M),customized,nos,529029.0,12,customized
+3,4845836000018707360,Lid For 450ml AF Container - 8342,customized,Nos,458338.0,12,customized
+4,4845836000000286041,8oz Kraft Double Wall Cup,customized,Nos,453761.0,12,customized
+5,4845836000000283090,700ml AF Round Container,customized,Nos,418238.0,12,customized
+6,4845836000000264557,SH Kraft Box Plain 900ml (165x115x50)mm,customized,nos,305284.0,12,customized
+7,4845836000000523263,Burger Bag Wax Coated (Street Burger),customized,nos,302080.0,12,customized
+8,4845836000000259444,SP-Burger Pouch (Street Burger),customized,nos,259600.0,11,customized
+9,4845836000000257478,SP-Kraft Food Wrap(10 X 10 ) (Taco Bell),customized,nos,241791.0,12,customized
+10,4845836000018707821,Lid For 1200ml AF Container -83120,customized,Nos,235367.0,12,customized
+1,4845836000000246215,Paper White Straw 6mm x 20cm (Packed),made-for-stock (SPS),pcs,2068036.0,12,made-for-stock (SPS)
+2,4845836000000247053,Paper White Straw 6mm x 20cm SPS,made-for-stock (SPS),pcs,1978562.0,12,made-for-stock (SPS)
+3,4845836000000272062,Cake Cup 14cm-White,made-for-stock (SPS),Nos,960000.0,10,made-for-stock (SPS)
+4,4845836000000246320,Flexible White Straw 6mm x 24cm (Packed),made-for-stock (SPS),pcs,393689.0,12,made-for-stock (SPS)
+5,4845836000000272097,Cake Cup 10.5cm-Brown,made-for-stock (SPS),Nos,343200.0,10,made-for-stock (SPS)
+6,4845836000000246145,Paper White Straw 8mm x 20cm SPS,made-for-stock (SPS),pcs,328753.0,12,made-for-stock (SPS)
+7,4845836000000286111,12oz Kraft Double Wall Cup,made-for-stock (SPS),Nos,206620.0,12,made-for-stock (SPS)
+8,4845836000000253789,Kraft Paper Bag (M) 280x180x120mm,made-for-stock (SPS),Nos,121983.0,12,made-for-stock (SPS)
+9,4845836000000253544,Kraft Paper Bag (S) 240x140x80mm,made-for-stock (SPS),Nos,119575.0,12,made-for-stock (SPS)
+10,4845836000000246075,Paper White Straw 8mm x 25cm SPS,made-for-stock (SPS),pcs,93347.0,12,made-for-stock (SPS)
+1,4845836000000275236,Wooden Popstick 114mm,bought-in,nos,3746204.0,12,bought-in
+2,4845836000000277823,Wooden Spoon 16cm,bought-in,nos,2142736.0,12,bought-in
+3,4845836000000246040,Flexible White Straw 6mm x 24cm,bought-in,pcs,1750664.0,12,bought-in
+4,4845836000000282775,Aluminium Lava Cake Cup,bought-in,Nos,1413721.0,12,bought-in
+5,4845836000000277788,Wooden  Fork 16cm,bought-in,nos,1055483.0,12,bought-in
+6,4845836000000282670,750ml AF Container - 8389,bought-in,Nos,928818.0,12,bought-in
+7,4845836000000272307,Cake Cup 11.5cm-White,bought-in,Nos,884800.0,11,bought-in
+8,4845836000000274760,Wooden Stirrer 14cm,bought-in,nos,837171.0,12,bought-in
+9,4845836000000282985,900ml AF Container - 8319,bought-in,Nos,831999.0,12,bought-in
+10,4845836000018707511,Lid For 900ml AF Container - 8319,bought-in,Nos,829437.0,12,bought-in

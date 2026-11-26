@@ -1,0 +1,5 @@
+cf_order_type,n,pkg_median,pkg_p80,ship_n,ship_median,ship_p80
+Customized Order,2531,10.9,22.9,2531,11.1,23.0
+Ex Stock,565,0.0,0.1,563,0.7,2.0
+Internal SH Order,374,7.1,32.7,374,7.8,33.2
+Make to Order (MTO),6,0.4,2.8,6,1.7,2.8

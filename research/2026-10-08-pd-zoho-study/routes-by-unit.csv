@@ -1,0 +1,1540 @@
+unit,item,item_id,route,step_no,steps_total,role_in_route,so_count,order_lines,line_tags
+PackPro,SP-Kraft Food Wrap(10 X 10 ) (Taco Bell),4892105000000297923,PackPro,1,1,only unit,10,15,OPD - PackPro Unit:11;OPD - MacPro Unit:4
+PackPro,SP-Small White Wrapper (Taco Bell),4892105000000297950,PackPro,1,1,only unit,10,15,OPD - PackPro Unit:11;OPD - MacPro Unit:4
+PackPro,SP-Kraft Food Wrap (12 X 12 ) (Taco Bell),4892105000000297896,PackPro,1,1,only unit,9,15,OPD - PackPro Unit:12;OPD - MacPro Unit:3
+PackPro,SP-Budget Box (Wok To Walk)-(SHA125),4892105000000546162,PackPro,1,1,only unit,8,12,OPD - PackPro Unit:8;OPD - MacPro Unit:4
+PackPro,SH Kraft Double Cup Holder With Coating,4892105000003883071,PackPro,1,1,only unit,7,12,OPD - PackPro Unit:9;OPD - MacPro Unit:3
+PackPro,SP-Sub.Chopstic pouch(Riff Hikkaduwa),4892105000004146095,PackPro,1,1,only unit,7,12,OPD - PackPro Unit:10;OPD - MacPro Unit:2
+PackPro,SH-Kraft Tray 700ml,4892105000004239145,PackPro,1,1,only unit,6,12,OPD - PackPro Unit:10;OPD - MacPro Unit:2
+PackPro,PACKSERV - 750ml Aluminium Foil Container with Lid (10Pcs Packing),4892105000110658805,PackPro > CPU,1,2,first,10,11,Customized Packing Unit:11
+PackPro,SH-White Greaseproof Paper 15x13 inches,4892105000068650745,PackPro,1,1,only unit,7,11,OPD - PackPro Unit:11
+PackPro,SP-White Greaseproof Paper 20cm x 20cm (Koha Surf Lounge),4892105000056438001,PackPro,1,1,only unit,6,11,OPD - PackPro Unit:8;OPD - MacPro Unit:3
+PackPro,PACKSERV - 450ml Aluminium Foil Container with Lid (10Pcs Packing),4892105000110658771,PackPro > CPU,1,2,first,10,10,Customized Packing Unit:10
+PackPro,SP-White Greaseproof Paper 12 x 8 Inch (Sahana Group),4892105000064367085,PackPro,1,1,only unit,6,10,OPD - PackPro Unit:8;OPD - MacPro Unit:2
+PackPro,SP-White Greaseproofpaper 480X375mm (Zippi),4892105000065961741,PackPro,1,1,only unit,6,10,OPD - PackPro Unit:7;OPD - MacPro Unit:3
+PackPro,SP- Kraft Cooki Bag(Doubletree Hilton),4892105000000298769,PackPro,1,1,only unit,6,10,OPD - PackPro Unit:8;OPD - MacPro Unit:2
+PackPro,SP-Taco Bell Wings Box (4.5 x 3.2 x 1.5),4892105000004629492,PackPro,1,1,only unit,5,10,OPD - MacPro Unit:6;OPD - PackPro Unit:4
+PackPro,SP-Food Wrap 40x45cm (Arachchi Restaurant  Anuradhapura),4892105000003569027,PackPro,1,1,only unit,5,10,OPD - PackPro Unit:10
+PackPro,PACKSERV - 660ml Aluminium Foil Container with Lid (10Pcs Packing),4892105000110658788,PackPro > CPU,1,2,first,8,9,Customized Packing Unit:9
+PackPro,SP-White Greaseproof Paper 5x5Inch (Kiri Kopi),4892105000064976121,PackPro,1,1,only unit,7,9,OPD - PackPro Unit:7;OPD - MacPro Unit:2
+PackPro,SP-Fries Pouch 3x3.75x2.5Inch (Street Burger),4892105000045976092,PackPro,1,1,only unit,6,9,OPD - PackPro Unit:6;OPD - MacPro Unit:3
+PackPro,SP-Takeaway Box(9X7X2.75)(Tasty),4892105000000298934,PackPro,1,1,only unit,6,9,OPD - PackPro Unit:8;OPD - MacPro Unit:1
+PackPro,SP-Kraft Paper Bag with Rope Handle 32x25x11cm (Flamingo),4892105000002496137,PackPro,1,1,only unit,6,9,OPD - PackPro Unit:7;OPD - MacPro Unit:2
+PackPro,SP-Crunchwrap Pouch 7.5x6.5 Inch (Taco Bell),4892105000067992879,PackPro,1,1,only unit,6,9,OPD - PackPro Unit:9
+PackPro,SH- Kraft Cake Box (170x145x50)mm (SHA014),4892105000004441285,PackPro,1,1,only unit,5,9,OPD - PackPro Unit:7;OPD - MacPro Unit:2
+PackPro,SP-White Paper Bag (L) 300X275X160mm With Die Cut Handle (Thai Shack),4892105000013824080,PackPro,1,1,only unit,5,9,OPD - PackPro Unit:7;OPD - MacPro Unit:2
+PackPro,SP-Kraft Double Cup Holder (Tea Avenue),4892105000067680789,PackPro,1,1,only unit,5,9,OPD - PackPro Unit:7;OPD - MacPro Unit:2
+PackPro,SP-Taco Liner 6 x 6 Inch (Mukund Hospitality-Chili's),4892105000000625431,PackPro,1,1,only unit,5,9,OPD - PackPro Unit:9
+PackPro,PACKSERV - 1200ml Aluminium Foil Container with Lid (10Pcs Packing),4892105000110658847,PackPro > CPU,1,2,first,8,8,Customized Packing Unit:8
+PackPro,PACKSERV - 430ml Aluminium Foil Round Container with Lid (10Pcs Packing),4892105000110658909,PackPro > CPU,1,2,first,7,8,Customized Packing Unit:8
+PackPro,PACKSERV - 1400ml Aluminium Foil Round Container with Lid (10Pcs Packing),4892105000110658943,PackPro > CPU,1,2,first,7,8,Customized Packing Unit:8
+PackPro,SP- Tray Liner 8'x12'(Chilis),4892105000000545945,PackPro,1,1,only unit,6,8,OPD - PackPro Unit:6;OPD - MacPro Unit:2
+PackPro,SP-Kraft Paper Bag (L) 300X275X160mm With Die Cut Handle (Pappa Rich),4892105000011133001,SHPS > PackPro,2,2,last,6,8,OPD - PackPro Unit:6;OPD - MacPro Unit:2
+PackPro,SP-White Greaseproof Paper 19x8.5Inch (Kiri Kopi),4892105000064976201,PackPro,1,1,only unit,6,8,OPD - PackPro Unit:6;OPD - MacPro Unit:2
+PackPro,SP-Burger Bag Wax Coated (Street Burger),4892105000000458005,PackPro,1,1,only unit,6,8,OPD - PackPro Unit:7;OPD - MacPro Unit:1
+PackPro,SP-Kraft Paper Bag With Code (Shangrilla),4892105000000298909,PackPro,1,1,only unit,6,8,OPD - PackPro Unit:6;OPD - MacPro Unit:2
+PackPro,SP-Fries Paper Pouch (Street Burger),4892105000000298654,PackPro,1,1,only unit,6,8,OPD - PackPro Unit:7;OPD - MacPro Unit:1
+PackPro,SH-Pizza Box 33 x 33 x 4cm (13 inch),4892105000000298349,PackPro,1,1,only unit,5,8,OPD - PackPro Unit:5;OPD - MacPro Unit:3
+PackPro,SP-Kraft Paper Bag (S) 12x9x3.8cm (Crescent),4892105000005116196,PackPro,1,1,only unit,5,8,OPD - PackPro Unit:7;OPD - MacPro Unit:1
+PackPro,SP-Take Away Box 8x7x3 inch (Hotel Dolphin),4892105000000298980,PackPro,1,1,only unit,5,8,OPD - PackPro Unit:6;OPD - MacPro Unit:2
+PackPro,SP-12/16oz Corrugated Sleeve(Kaffi),4892105000006784144,SHPS > PackPro,2,2,last,5,8,OPD - PackPro Unit:7;OPD - MacPro Unit:1
+PackPro,SP-Kraft Cookie Bag (Marriott),4892105000000625516,PackPro,1,1,only unit,5,8,OPD - PackPro Unit:6;OPD - MacPro Unit:2
+PackPro,SP- Kraft Box (170X145X50)mm-Treats,4892105000000298161,PackPro,1,1,only unit,4,8,OPD - PackPro Unit:6;OPD - MacPro Unit:2
+PackPro,SP-Sandwich Take Away Box With Window (Titos),4892105000002490201,PackPro,1,1,only unit,4,8,OPD - MacPro Unit:4;OPD - PackPro Unit:4
+PackPro,SP-Kraft Double Cup Holder (Kiri Kopi),4892105000063401805,PackPro,1,1,only unit,4,8,OPD - PackPro Unit:6;OPD - MacPro Unit:2
+PackPro,SP-Fries Liner (Chillis),4892105000000545773,PackPro,1,1,only unit,4,8,OPD - PackPro Unit:7;OPD - MacPro Unit:1
+PackPro,SP-White Paper(Cinnamon Twist pouch) (Taco Bell),4892105000000298723,PackPro,1,1,only unit,7,7,OPD - PackPro Unit:5;OPD - MacPro Unit:2
+PackPro,PACKSERV - 250ml Aluminium Foil Container with Lid (10pcs Packing),4892105000110658748,PackPro > CPU,1,2,first,7,7,Customized Packing Unit:7
+PackPro,SP-Kraft Food Wrap (Quesadilla Pouch) (Taco Bell),4892105000000298700,PackPro,1,1,only unit,6,7,OPD - PackPro Unit:5;OPD - MacPro Unit:2
+PackPro,PACKSERV - 1900ml Aluminium Foil Container with Lid (10Pcs Packing),4892105000110658875,PackPro > CPU,1,2,first,6,7,Customized Packing Unit:7
+PackPro,SP-Big Bell Box (Taco Bell),4892105000004676121,PackPro,1,1,only unit,5,7,OPD - PackPro Unit:4;OPD - MacPro Unit:3
+PackPro,SH Food Wrap 40x45cm,4892105000000545702,PackPro,1,1,only unit,5,7,OPD - PackPro Unit:5;OPD - MacPro Unit:2
+PackPro,SP-White Greaseproof Paper 7x7Inch (Kiri Kopi),4892105000064976168,PackPro,1,1,only unit,5,7,OPD - PackPro Unit:5;OPD - MacPro Unit:2
+PackPro,SP-8oz Corrugated Sleeve(Kaffi),4892105000006784085,SHPS > PackPro,2,2,last,5,7,OPD - PackPro Unit:6;OPD - MacPro Unit:1
+PackPro,SH-White Greaseproof Paper 12x14 inches,4892105000064272419,PackPro,1,1,only unit,5,7,OPD - PackPro Unit:5;OPD - MacPro Unit:2
+PackPro,SH-Pizza Box 30 x 30 x 4cm (12 inch),4892105000000297977,PackPro,1,1,only unit,5,7,OPD - PackPro Unit:5;OPD - MacPro Unit:2
+PackPro,SH Kraft Cake Box (145X145X90)mm 013,4892105000003993442,PackPro,1,1,only unit,5,7,OPD - PackPro Unit:7
+PackPro,SH-Smart Tag Sticker,4892105000063619216,PackPro,1,1,only unit,4,7,OPD - PackPro Unit:4;OPD - MacPro Unit:3
+PackPro,SH Kraft Box (215X145X60)mm SHA023,4892105000000298186,PackPro,1,1,only unit,4,7,OPD - PackPro Unit:5;OPD - MacPro Unit:2
+PackPro,SP-White Grease Proof Paper 28X38cm (Wildish),4892105000003379101,PackPro,1,1,only unit,4,7,OPD - PackPro Unit:6;OPD - MacPro Unit:1
+PackPro,SP-Kraft Paper Bag (M) 280x180x120mm (Pounders),4892105000065425120,PackPro,1,1,only unit,4,7,OPD - MacPro Unit:4;OPD - PackPro Unit:3
+PackPro,SP-White Paper Bag 145x90x270mm(Canterbury Golf Club),4892105000002291142,PackPro,1,1,only unit,4,7,OPD - PackPro Unit:4;OPD - MacPro Unit:3
+PackPro,SP-Bottle Tag(Hilton Weeravila),4892105000002431071,PackPro,1,1,only unit,4,7,OPD - PackPro Unit:6;OPD - MacPro Unit:1
+PackPro,SP-White Grease Proof Paper 28X38cm (Radicle),4892105000034791104,PackPro,1,1,only unit,4,7,OPD - PackPro Unit:6;OPD - MacPro Unit:1
+PackPro,SP-Kraft Paper Bag with Rope Handle 170x235x70mm (98 Acres),4892105000067008415,PackPro,1,1,only unit,4,7,OPD - PackPro Unit:5;OPD - MacPro Unit:2
+PackPro,SP-Breakfast Box (Marriott Weligama),4892105000002430178,PackPro,1,1,only unit,4,7,OPD - PackPro Unit:5;OPD - MacPro Unit:2
+PackPro,SP-Kraft Paper Bag 300x275x160mm With Die Cut Handle (MBC),4892105000029091111,PackPro,1,1,only unit,4,7,OPD - PackPro Unit:5;OPD - MacPro Unit:2
+PackPro,SP-White Box 4x8x6 cm (Shangrila Colombo),4892105000000299239,PackPro,1,1,only unit,4,7,OPD - PackPro Unit:7
+PackPro,SP-Kraft Paper Bag With Rope Handle 10x8x3.5inches (Yala Resort),4892105000004530319,PackPro,1,1,only unit,4,7,OPD - PackPro Unit:7
+PackPro,SP-E Flute Tray 14 x 11 x 2.5 Inch(Tasty Caters),4892105000000298420,PackPro,1,1,only unit,5,6,(none):3;OPD - PackPro Unit:3
+PackPro,SH-White Greaseproof Paper 12x12 inches,4892105000064272164,PackPro,1,1,only unit,5,6,OPD - PackPro Unit:6
+PackPro,SP-Kraft Food Wrap (Chocodilla Pouch) (Taco Bell),4892105000000543896,PackPro,1,1,only unit,4,6,OPD - MacPro Unit:3;OPD - PackPro Unit:3
+PackPro,SH Kraft Box Plain 900ml (110x150x45)mm,4892105000000201452,PackPro,1,1,only unit,4,6,OPD - MacPro Unit:3;OPD - PackPro Unit:3
+PackPro,SP-Kraft Food Wrap (Value Menu Pouch) (Taco Bell),4892105000003700001,PackPro,1,1,only unit,4,6,OPD - PackPro Unit:4;OPD - MacPro Unit:2
+PackPro,SP-Bottle Sticker (Radh),4892105000003094001,PackPro,1,1,only unit,4,6,OPD - MacPro Unit:3;OPD - PackPro Unit:3
+PackPro,SP-Taco Sleeve  5.4X6.7Inch (Taco Bell),4892105000100484942,PackPro,1,1,only unit,4,6,OPD - PackPro Unit:6
+PackPro,SP-Kraft Paper Bag With Die Cut Handle  (M) 280mmx180mmx120mm (Kiri kopi With Girl),4892105000045482313,PackPro,1,1,only unit,3,6,OPD - PackPro Unit:4;OPD - MacPro Unit:2
+PackPro,SP-White Box 8x6x4cm (Anantara Resort) Tangalle,4892105000003325735,PackPro,1,1,only unit,3,6,OPD - PackPro Unit:4;OPD - MacPro Unit:2
+PackPro,SP-Paper Bag With Rope (L) (Barakah),4892105000002433054,PackPro,1,1,only unit,3,6,OPD - PackPro Unit:4;OPD - MacPro Unit:2
+PackPro,SP-Food Wrap 20X15 Inch (Malu Poke),4892105000063713401,PackPro,1,1,only unit,3,6,OPD - PackPro Unit:4;OPD - MacPro Unit:2
+PackPro,SP-White Greaseproof Paper 25cmX20cm (Bokka-Yellow),4892105000067603125,PackPro,1,1,only unit,3,6,OPD - PackPro Unit:4;OPD - MacPro Unit:2
+PackPro,SH-Kraft Single Cup Holder,4892105000004293393,PackPro,1,1,only unit,3,6,OPD - PackPro Unit:6
+PackPro,SP-Kraft Paper Bag with Rope Handle (M) 280x180x120mm (Karabu),4892105000011664367,PackPro,1,1,only unit,3,6,OPD - PackPro Unit:6
+PackPro,SP-White Greaseproof Paper 20.32cmx20.32cm (Sky Breeze),4892105000068248316,PackPro,1,1,only unit,3,6,OPD - PackPro Unit:6
+PackPro,SP-Coaster 3.5 Diameter(Hilton Weeravila),4892105000000543506,PackPro,1,1,only unit,3,6,OPD - PackPro Unit:6
+PackPro,SH-White Greaseproof Paper 6x8 inches,4892105000064272266,PackPro,1,1,only unit,3,6,OPD - PackPro Unit:6
+PackPro,SP-Kraft Box With Window 7x7x15cm (Skinny Tom's Deli),4892105000000298397,PackPro,1,1,only unit,3,6,OPD - PackPro Unit:6
+PackPro,SP-White Greaseproof Paper 38cmx41cm (Sridaran Stores),4892105000063284844,PackPro,1,1,only unit,3,6,OPD - PackPro Unit:6
+PackPro,SP-Kraft Box (170X145X50)mm (Maze Grill),4892105000064998937,PackPro,1,1,only unit,3,6,OPD - PackPro Unit:4;OPD - MacPro Unit:2
+PackPro,SP-Kraft Sandwich Box(Dutch Lanka),4892105000002748319,PackPro,1,1,only unit,3,6,OPD - PackPro Unit:6
+PackPro,SH-Kraft Tray 1200ml,4892105000004301205,PackPro,1,1,only unit,3,6,OPD - PackPro Unit:6
+PackPro,SP-White Greaseproof Paper 8X10 Inch (Finagle),4892105000101076493,PackPro,1,1,only unit,3,6,OPD - PackPro Unit:6
+PackPro,SP-White Box (150x100x90)mm (Finagle),4892105000101133098,PackPro,1,1,only unit,3,6,OPD - PackPro Unit:6
+PackPro,SH-Super Pack Cling Film 45cm x 20.4m,4892105000064873645,PackPro > RWU,1,2,first,5,5,Rewinding Unit:5
+PackPro,SP-White Paper Bag With Paper Rope Handle 320x260x140mm (Hilton Weerawila),4892105000000546094,PackPro,1,1,only unit,4,5,OPD - PackPro Unit:4;OPD - MacPro Unit:1
+PackPro,SP-White Greaseproof Paper 11x15Inch (Mama's Pot Bakery),4892105000064976011,PackPro,1,1,only unit,4,5,OPD - MacPro Unit:3;OPD - PackPro Unit:2
+PackPro,SP-Burger Pouch (Street Burger),4892105000000298372,PackPro,1,1,only unit,4,5,OPD - PackPro Unit:4;OPD - MacPro Unit:1
+PackPro,SP-16oz plastic Cup With Sticker (Karabu),4892105000012013162,PackPro,1,1,only unit,4,5,OPD - PackPro Unit:4;OPD - MacPro Unit:1
+PackPro,SH-White Greaseproof Paper 14x16 inches,4892105000064272470,PackPro,1,1,only unit,4,5,OPD - PackPro Unit:3;OPD - MacPro Unit:2
+PackPro,SP-Kraft Paper Bag 220x380 mm With Die Cut Handle (Beldon),4892105000063695360,PackPro,1,1,only unit,4,5,OPD - PackPro Unit:4;OPD - MacPro Unit:1
+PackPro,SP-Kraft Box 4x4x2 Inch With Window (Karabu),4892105000013824353,PackPro,1,1,only unit,4,5,OPD - PackPro Unit:5
+PackPro,SP-Submarine Box 12 x 3.5 x 3inch(NGB),4892105000002433108,PackPro,1,1,only unit,4,5,OPD - PackPro Unit:5
+PackPro,SH-White Greaseproof Paper 14x14 inches,4892105000064272215,PackPro,1,1,only unit,4,5,OPD - PackPro Unit:5
+PackPro,SP-Kraft Box+Window (165X105X50)mm (Karabu),4892105000013824422,PackPro,1,1,only unit,4,5,OPD - PackPro Unit:5
+PackPro,SP-Kraft Paper Bag With Die Cut Handle 14x7x3Inch(Grillos),4892105000005104547,PackPro,1,1,only unit,4,5,OPD - PackPro Unit:5
+PackPro,SP-White Lunch Box 170X145X50mm(Chanas ),4892105000003652085,PackPro,1,1,only unit,4,5,OPD - PackPro Unit:5
+PackPro,SP-Kraft Donut box 6.5x8x2 (L) (Spar),4892105000003057368,PackPro,1,1,only unit,4,5,OPD - PackPro Unit:5
+PackPro,SP-Kraft Box+Window (165X105X50)mm SHA008 (Spar),4892105000003057225,PackPro,1,1,only unit,4,5,OPD - PackPro Unit:5
+PackPro,SP-Cinnamon Roll Box Small (Tasty),4892105000002828589,PackPro,1,1,only unit,3,5,OPD - PackPro Unit:4;OPD - MacPro Unit:1
+PackPro,SP- Sandwich Box (Grand Bell Hotel),4892105000001538091,PackPro,1,1,only unit,3,5,OPD - PackPro Unit:4;OPD - MacPro Unit:1
+PackPro,SH-Kraft Tray 900ml,4892105000004301148,PackPro,1,1,only unit,3,5,OPD - PackPro Unit:3;OPD - MacPro Unit:2
+PackPro,SH Kraft Sandwich Box,4892105000003993578,PackPro,1,1,only unit,3,5,OPD - PackPro Unit:4;OPD - MacPro Unit:1
+PackPro,SP-White Box 900ml (165x115x50)mm (Biriyaniwala),4892105000064491186,PackPro,1,1,only unit,3,5,OPD - MacPro Unit:3;OPD - PackPro Unit:2
+PackPro,SH - Kraft Box Plain 1200ml (180x120x50)mm,4892105000003649151,PackPro,1,1,only unit,3,5,(none):2;MOBA Punching Unit:2;OPD - PackPro Unit:1
+PackPro,SP-Dine In Tray 16 x 16cm (Street Burger ),4892105000003158316,PackPro,1,1,only unit,3,5,OPD - PackPro Unit:4;OPD - MacPro Unit:1
+PackPro,SP-Kraft Box+Window 11x18x7cm (Skinny Tom's Deli),4892105000000546503,PackPro,1,1,only unit,3,5,OPD - PackPro Unit:4;OPD - MacPro Unit:1
+PackPro,SP-Kraft Paper Cake Bag with Rope Handle 13 x 13 x 13Inch (Pizza Hub),4892105000063713548,PackPro,1,1,only unit,3,5,OPD - PackPro Unit:3;OPD - MacPro Unit:2
+PackPro,"Sub.Wooden Spoon 16cm Pouch (8""X2"") (Keells)",4892105000000544949,PackPro,1,1,only unit,3,5,OPD - PackPro Unit:4;OPD - MacPro Unit:1
+PackPro,SP-White Cookie Box 8.5x4.5x4.5 Inch (The Double Tree),4892105000063228327,PackPro,1,1,only unit,3,5,OPD - PackPro Unit:3;OPD - MacPro Unit:2
+PackPro,SP-Kraft Box 170x145x50mm(Momo Cafe),4892105000000299214,PackPro,1,1,only unit,3,5,OPD - PackPro Unit:3;OPD - MacPro Unit:2
+PackPro,SP-White Greaseproof Paper 15cmX15cm (Bokka-Red),4892105000067603068,PackPro,1,1,only unit,3,5,OPD - PackPro Unit:4;OPD - MacPro Unit:1
+PackPro,SP-Wooden Chopsticks (Trans Asia hotel),4892105000062896137,PackPro,1,1,only unit,3,5,OPD - PackPro Unit:5
+PackPro,SH-Greaseproof Paper 28X38cm,4892105000002690001,PackPro,1,1,only unit,3,5,OPD - PackPro Unit:4;OPD - MacPro Unit:1
+PackPro,SP-Kraft Paper Bag (S) 240x140x80mm (Karabu),4892105000011664413,PackPro,1,1,only unit,3,5,OPD - PackPro Unit:5
+PackPro,SH-White Greaseproof Paper 6x6 inches,4892105000064272001,PackPro,1,1,only unit,3,5,OPD - PackPro Unit:5
+PackPro,SP-500m Salad Bowl With Sleeve (Dig In Desserts),4892105000000546573,PackPro,1,1,only unit,3,5,OPD - PackPro Unit:5
+PackPro,SP-Fries Deal Pouch(Pizza Hut),4892105000004629627,PackPro,1,1,only unit,3,5,OPD - PackPro Unit:5
+PackPro,SP-Taco Box 13x14.5 inches (Taco Bell),4892105000100660035,PackPro,1,1,only unit,3,5,OPD - PackPro Unit:5
+PackPro,SP-White Cake Box (145x145x90) (SHA013) (Finagle),4892105000101133011,PackPro,1,1,only unit,3,5,OPD - PackPro Unit:5
+PackPro,SP-Coaster 3.5x3.5 Green And Pink (Beira Kitchen),4892105000000299145,PackPro,1,1,only unit,3,5,OPD - PackPro Unit:5
+PackPro,Chefs Choice Biodegradable Cling Film 45x10m (BIO),4892105000001034082,PackPro > RWU,1,2,first,4,4,(none):4
+PackPro,SH-White Greaseproof Paper 10x12 inches,4892105000064272368,PackPro,1,1,only unit,4,4,OPD - PackPro Unit:4
+PackPro,PACKSERV - Dental Kit (Kraft) - Toothpaste 6grm/Plastic Toothbrush - Kit Packing,4892105000110898021,PackPro > CPU,1,2,first,4,4,Customized Packing Unit:4
+PackPro,SP-Kraft Paper Bag (L) 300X275X160mm With Die Cut Handle (Wildish),4892105000003487017,PackPro,1,1,only unit,3,4,OPD - PackPro Unit:3;OPD - MacPro Unit:1
+PackPro,SP-Steam Paper 5.5 inch (Haritha Vila),4892105000003645068,PackPro,1,1,only unit,3,4,OPD - PackPro Unit:3;(none):1
+PackPro,SP-Square Cake Board White 10Inch(Dutch Lanka),4892105000004170724,PackPro,1,1,only unit,3,4,OPD - PackPro Unit:3;OPD - MacPro Unit:1
+PackPro,SH-Single Cake Board Square 7x7cm,4892105000049342001,PackPro,1,1,only unit,3,4,OPD - PackPro Unit:3;OPD - MacPro Unit:1
+PackPro,SP-Kraft Paper Bag (M) 210x140x80mm (Crescent),4892105000005112073,PackPro,1,1,only unit,3,4,OPD - PackPro Unit:3;OPD - MacPro Unit:1
+PackPro,SP-Pastry Box 14x14x14cm With Window (MBC),4892105000004419917,SHPS > PackPro,2,2,last,3,4,OPD - PackPro Unit:3;OPD - MacPro Unit:1
+PackPro,SP-Paper Bag With Rope (S)(Baraka),4892105000000544238,PackPro,1,1,only unit,3,4,OPD - PackPro Unit:3;OPD - MacPro Unit:1
+PackPro,SP-Kraft Paper Bag 280x190x120 (Food Print),4892105000002433001,PackPro,1,1,only unit,3,4,OPD - MacPro Unit:2;OPD - PackPro Unit:2
+PackPro,SH-Invoice-Standard Holdings,4892105000000299285,PackPro,1,1,only unit,3,4,OPD - PackPro Unit:3;OPD - MacPro Unit:1
+PackPro,SP- Table Matt (Chanas),4892105000002430151,PackPro,1,1,only unit,3,4,OPD - PackPro Unit:3;OPD - MacPro Unit:1
+PackPro,SP-Note Book (Shangrila),4892105000067066759,PackPro,1,1,only unit,3,4,OPD - MacPro Unit:2;OPD - PackPro Unit:2
+PackPro,SH-Pizza Box 28 x 28 x 4cm (11 inch),4892105000000235133,PackPro,1,1,only unit,3,4,OPD - PackPro Unit:3;OPD - MacPro Unit:1
+PackPro,SP-White Paper Bag With Paper Rope Handel 13x12.5x7 Inch (Hilton Weerawila),4892105000000546061,PackPro,1,1,only unit,3,4,OPD - PackPro Unit:4
+PackPro,SH Kraft Box+Window (150X100X90)mm,4892105000000542609,PackPro,1,1,only unit,3,4,OPD - PackPro Unit:4
+PackPro,SP-Doggy Bag (L) 13x10x5 (Titos),4892105000001555781,PackPro,1,1,only unit,3,4,OPD - PackPro Unit:4
+PackPro,SP-500ml Paper Bowl With Sleeve (Thai Shack),4892105000097295001,PackPro,1,1,only unit,3,4,OPD - PackPro Unit:4
+PackPro,SH-Kraft Box (4x4x2) inch  With Window,4892105000013804233,PackPro,1,1,only unit,2,4,OPD - MacPro Unit:2;OPD - PackPro Unit:2
+PackPro,SP-Kraft Double Cup Holder (Street Burger),4892105000011455652,PackPro,1,1,only unit,2,4,OPD - MacPro Unit:2;OPD - PackPro Unit:2
+PackPro,SP-Kraft Paper Bag 23cm (Finagle),4892105000000543952,PackPro,1,1,only unit,2,4,OPD - PackPro Unit:3;OPD - MacPro Unit:1
+PackPro,SP-Kraft Box Plain 1200 ml (Solis Hotel),4892105000000553174,PackPro,1,1,only unit,2,4,OPD - MacPro Unit:2;MOBA Punching Unit:1;OPD - PackPro Unit:1
+PackPro,SP-Kraft Paper Bag With Die Cut Handle  (M) 280mmx180mmx120mm (Kiri kopi With Boy),4892105000045482346,PackPro,1,1,only unit,2,4,OPD - MacPro Unit:2;OPD - PackPro Unit:2
+PackPro,SP-Black Coaster(Raddison),4892105000003436001,PackPro,1,1,only unit,2,4,OPD - MacPro Unit:2;OPD - PackPro Unit:2
+PackPro,SP-Kraft Paper Bag with Rope Handle (M) 25x25x15.5cm(Fusion Cafe),4892105000004419972,PackPro,1,1,only unit,2,4,OPD - MacPro Unit:2;OPD - PackPro Unit:2
+PackPro,SP-Kraft Paper Bag (XS) 200x120x70mm (Kiri kopi With Girl),4892105000047889418,PackPro,1,1,only unit,2,4,OPD - MacPro Unit:2;OPD - PackPro Unit:2
+PackPro,SP-Kraft Paper Bag (L) 300x275x160mm with Die Cut Handle (Kiri kopi With Boy),4892105000047889133,PackPro,1,1,only unit,2,4,OPD - MacPro Unit:2;OPD - PackPro Unit:2
+PackPro,SP-Kraft Paper Bag (S) 240x140x80mm (Kiri kopi With Boy),4892105000047889256,PackPro,1,1,only unit,2,4,OPD - MacPro Unit:2;OPD - PackPro Unit:2
+PackPro,SP-Kraft Paper Bag (XS) 200x120x70mm (Kiri kopi With Boy),4892105000047889363,PackPro,1,1,only unit,2,4,OPD - MacPro Unit:2;OPD - PackPro Unit:2
+PackPro,SP-White Greaseproof Paper 28X38cm (Meraki),4892105000067274205,PackPro,1,1,only unit,2,4,OPD - MacPro Unit:2;OPD - PackPro Unit:2
+PackPro,SP-Food Wrap Veg (ITC),4892105000000543786,PackPro,1,1,only unit,2,4,OPD - PackPro Unit:3;OPD - MacPro Unit:1
+PackPro,SP-Food Wrap Non Veg (ITC),4892105000000543757,PackPro,1,1,only unit,2,4,OPD - PackPro Unit:3;OPD - MacPro Unit:1
+PackPro,SH-Pizza Box 25 x 25 x 4cm (10 inch),4892105000000298326,PackPro,1,1,only unit,2,4,OPD - MacPro Unit:2;OPD - PackPro Unit:2
+PackPro,SP- Cake Paper Bag Kraft With Rope Handle 10x10x10 inch (Finomenal),4892105000000543448,PackPro,1,1,only unit,2,4,OPD - MacPro Unit:2;OPD - PackPro Unit:2
+PackPro,SP-White Greaseproof Paper 28cmx38cm (Skinny Tom's Deli) ,4892105000057777001,PackPro,1,1,only unit,2,4,OPD - MacPro Unit:2;OPD - PackPro Unit:2
+PackPro,SP-White GreaseProof Paper 28CMX38CM (KIXI),4892105000003527177,PackPro,1,1,only unit,2,4,OPD - MacPro Unit:2;OPD - PackPro Unit:2
+PackPro,SP-Pop Corn Bucket 7x10x6cm (Bokka With Red),4892105000067831571,PackPro,1,1,only unit,2,4,OPD - PackPro Unit:4
+PackPro,SP-White Greaseproof Paper 35.56x40.64cm (The Burger Depot),4892105000068613209,PackPro,1,1,only unit,2,4,OPD - PackPro Unit:4
+PackPro,SP Kraft Box Without Window (165x105x50)mm (Treats),4892105000004419658,PackPro,1,1,only unit,2,4,OPD - PackPro Unit:4
+PackPro,SP-Kraft Paper Bag with Rope Handle (L) 320x250x110mm (Ayla Cafe),4892105000011142560,PackPro,1,1,only unit,2,4,OPD - PackPro Unit:4
+PackPro,SP-White Greaseproof Paper 28CMX38CM (Ayla Cafe),4892105000011142599,PackPro,1,1,only unit,2,4,OPD - PackPro Unit:4
+PackPro,SP-Chocolate Chip Cookies Box 3.5x2x8 inch (Bikkies),4892105000064045547,PackPro,1,1,only unit,2,4,OPD - PackPro Unit:4
+PackPro,SP-Kraft Paper Bag (L) 300mmX275mmX160mm With Die Cut Handle(Joshua's Tree),4892105000005083419,PackPro,1,1,only unit,2,4,OPD - PackPro Unit:4
+PackPro,SP-Kraft Paper Bag With Die Cut Handle 310 x 285 x 140mm(Grillos),4892105000005104482,PackPro,1,1,only unit,2,4,OPD - PackPro Unit:4
+PackPro,SP- Kraft Box 1200ml (180x120x50)mm(Wildish),4892105000004484355,PackPro,1,1,only unit,2,4,OPD - PackPro Unit:4
+PackPro,SH-Aluminium Container Label-Large,4892105000073902326,PackPro,1,1,only unit,2,4,OPD - PackPro Unit:4
+PackPro,SP-Kraft Paper Bag with Rope Handle (L) 320x250x110mm (Ladla),4892105000074072490,PackPro,1,1,only unit,2,4,OPD - PackPro Unit:4
+PackPro,SP-Kraft Paper Bag (L) 300x275x160mm with Die Cut Handle (Mutts),4892105000074492859,PackPro,1,1,only unit,2,4,OPD - PackPro Unit:4
+PackPro,SP-White Greaseproof Paper 15x15cm (The Ruin),4892105000077817508,PackPro,1,1,only unit,2,4,OPD - PackPro Unit:4
+PackPro,SH Kraft 6 Cup Cake Box Holder,4892105000021865001,PackPro,1,1,only unit,2,4,OPD - PackPro Unit:4
+PackPro,SP - Round Coaster 3.5inch (Courtyard By Marriott),4892105000090125430,PackPro,1,1,only unit,2,4,OPD - PackPro Unit:4
+PackPro,SP-White Greaseproof Paper 30cmx38cm (The Blue Water),4892105000097455183,PackPro,1,1,only unit,2,4,OPD - PackPro Unit:4
+PackPro,SP-Kraft Box 21.2x14.5x6cm (Blackpool Resort & Spa),4892105000000543842,PackPro,1,1,only unit,2,4,OPD - PackPro Unit:4
+PackPro,SP-Kraft Paper Cake Bag 7x7x7Inch (Sheraton),4892105000000545858,PackPro,1,1,only unit,2,4,OPD - PackPro Unit:4
+PackPro,SP-Burger Wrap 12x12 inch (Titos),4892105000011658618,PackPro,1,1,only unit,2,4,OPD - PackPro Unit:4
+PackPro,SP-Kraft Cake Bag 11X11X11inch With Rope Handle (MBC),4892105000029091234,PackPro,1,1,only unit,2,4,OPD - PackPro Unit:4
+PackPro,SH-Budget Lunch Box(185x140x45)mm,4892105000011508424,PackPro,1,1,only unit,2,4,OPD - PackPro Unit:4
+PackPro,"Sub.Wooden Fork 16cm Pouch (8""X2"") (Keells)",4892105000000546189,PackPro,1,1,only unit,3,3,OPD - MacPro Unit:2;OPD - PackPro Unit:1
+PackPro,SH-Single Cake Bord Triangle 11.5x7.5cm,4892105000011613544,PackPro,1,1,only unit,3,3,OPD - MacPro Unit:2;OPD - PackPro Unit:1
+PackPro,SP-Kraft Paper Bag (L) 280x180x120mm (Crescent),4892105000005112006,PackPro,1,1,only unit,3,3,OPD - PackPro Unit:2;OPD - MacPro Unit:1
+PackPro,SP-Dine In Plate (Street Burger),4892105000000452434,PackPro,1,1,only unit,3,3,OPD - PackPro Unit:2;OPD - MacPro Unit:1
+PackPro,SH-White Greaseproof Paper 8x8 inches,4892105000064272062,PackPro,1,1,only unit,3,3,OPD - PackPro Unit:3
+PackPro,SH-Chicken Bucket+Lid,4892105000000362009,PackPro,1,1,only unit,3,3,OPD - PackPro Unit:3
+PackPro,SP-Laundry Book(Shangrila),4892105000000625134,PackPro,1,1,only unit,3,3,OPD - PackPro Unit:3
+PackPro,Chefs Choice Cling Film 45cmX30m,4892105000013802023,PackPro > RWU,1,2,first,3,3,Rewinding Unit:3
+PackPro,PACKSERV - Wooden Knife 16cm (A&M Cup Cakes) - Pouch Packing,4892105000110666137,PackPro > CPU,1,2,first,3,3,Customized Packing Unit:3
+PackPro,SH Kraft 6 Cup Cake Box (220x165x80)mm,4892105000000298255,PackPro,1,1,only unit,2,3,OPD - MacPro Unit:2;OPD - PackPro Unit:1
+PackPro,SH Kraft Double Cup Cake Box Holder,4892105000000452317,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:2;OPD - MacPro Unit:1
+PackPro,SH-Kraft 4 Cup Cake Box (156x150x75)mm,4892105000000299026,PackPro,1,1,only unit,2,3,OPD - MacPro Unit:2;OPD - PackPro Unit:1
+PackPro,SH Food Wrap 20x20cm,4892105000064805450,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:2;OPD - MacPro Unit:1
+PackPro,SH-Food Wrap 12x12cm,4892105000064805518,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:2;OPD - MacPro Unit:1
+PackPro,SP-Girls Leakproof Underwear Liner (Jay Jay Mills),4892105000064831311,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:2;OPD - MacPro Unit:1
+PackPro,SH-Stickers (Smart Packaging),4892105000000542823,PackPro,1,1,only unit,2,3,OPD - MacPro Unit:2;OPD - PackPro Unit:1
+PackPro,SH-Stickers-(Standard Holdings),4892105000003808172,PackPro,1,1,only unit,2,3,OPD - MacPro Unit:2;OPD - PackPro Unit:1
+PackPro,SP-Kraft Paper Bag (L) 300x275x160mm (Pounders),4892105000065425177,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:2;OPD - MacPro Unit:1
+PackPro,SP-White Greaseproof Paper 28cmx38cm (Karabu),4892105000012013074,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:2;OPD - MacPro Unit:1
+PackPro,SP-Sub.Wooden Cutlery Pouch(Sheraton Kosgoda),4892105000003569157,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:2;OPD - MacPro Unit:1
+PackPro,SH Kraft Box Window 700ml (150x100x45)mm,4892105000003825407,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:2;OPD - MacPro Unit:1
+PackPro,SP-White Greaseproof Paper 10X12Inch (Cafe Chocolate),4892105000066003763,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:2;OPD - MacPro Unit:1
+PackPro,SP-Sub.Kraft Dental Kit Box(Radh),4892105000004159125,PackPro,1,1,only unit,2,3,OPD - MacPro Unit:2;OPD - PackPro Unit:1
+PackPro,SH-White Greaseproof Paper 8x8 inches (Yumm),4892105000066073338,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:2;OPD - MacPro Unit:1
+PackPro,SP-Kraft Paper Bag (S) 240x140x80mm (Kiri kopi With Girl),4892105000047889201,PackPro,1,1,only unit,2,3,OPD - MacPro Unit:2;OPD - PackPro Unit:1
+PackPro,SH-Single Cake Board Rectangle 10.5x5.5cm,4892105000002956201,PackPro,1,1,only unit,2,3,OPD - MacPro Unit:2;OPD - PackPro Unit:1
+PackPro,SH-Single Cake Board Round 8cm,4892105000001569001,PackPro,1,1,only unit,2,3,OPD - MacPro Unit:2;OPD - PackPro Unit:1
+PackPro,SP-White Greaseproof Paper 12cmX12cm (Teddies),4892105000067774530,PackPro,1,1,only unit,2,3,OPD - MacPro Unit:2;OPD - PackPro Unit:1
+PackPro,SP-White Greaseproof Paper 43cm x 70cm (Moochies),4892105000056415001,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:3
+PackPro,SP-White Greaseproof Paper 35.56cmx35.56cm (Cheese Lover),4892105000067954197,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:3
+PackPro,SP-Kraft Paper Bag With Rope Handle (M) 25x25x15cm (Cheese Lover),4892105000067954364,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:3
+PackPro,SP-Coaster 8X8Cm (Duoble Tree By Hilton),4892105000032256170,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:3
+PackPro,SH Kraft Cake box (10x10x4) Inch,4892105000029675672,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:3
+PackPro,SP-Kraft Paper Bag with Rope Handle (M) 25x25x15.5cm(Arachchi Restaurant  Anuradhapura),4892105000002477074,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:3
+PackPro,SP-Kraft Breakfast Box  22.5x17.5x14.5 inch(KK Collection),4892105000005146326,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:3
+PackPro,SP-White Greaseproof Paper 30.48X35.56cm (Twin Fin),4892105000068909255,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:3
+PackPro,SH Kraft Box+Window (200X105X50)mm,4892105000000542638,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:3
+PackPro,SH Kraft Cake Box (110X110X90)mm,4892105000000542721,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:3
+PackPro,SH Kraft Cake Box (8x8x4) Inch,4892105000000298023,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:3
+PackPro,SP-Doggy Bag(M)10x8x4 (Titos),4892105000001560028,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:3
+PackPro,SP-Laundry Bag (Birds Resort),4892105000000545887,SHPS > PackPro,2,2,last,2,3,OPD - PackPro Unit:3
+PackPro,SH-Pop Corn Bucket,4892105000072736603,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:3
+PackPro,SH-White Greaseproof Paper 10x10 inches,4892105000064272113,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:3
+PackPro,SP-Paper Bag (S) 240x140x80mm(Legacy),4892105000001783001,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:3
+PackPro,SP-Sandwich Take Away Box With Window (Top Shelf),4892105000073790416,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:3
+PackPro,SP-White Greaseproof Paper 28X38cm (Ladla),4892105000074072203,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:3
+PackPro,SP-Kraft Paper Bag (S) 12x9x3.8cm (Hurry Up),4892105000063495527,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:3
+PackPro,SP-A4 Size Food Grade Printed Paper (Hilton Yala),4892105000000543218,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:3
+PackPro,SP-White Greaseproof Paper 30.48cmX30.48cm (Maalu),4892105000097295563,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:3
+PackPro,SP-Paper Bag (30.5x21.5x12.5)cm (Radh),4892105000003282671,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:3
+PackPro,SP-White Greaseproof Paper 15cmX15cm (Maalu),4892105000100968113,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:3
+PackPro,SP-White Paper Bag (M) 280x180x120mm (Finagle),4892105000101133280,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:3
+PackPro,SP-Kraft Paper Cake Bag 13x13x13 Inch (Sheraton),4892105000003301039,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:3
+PackPro,SH-Single Cake Board Long Rectangle 13x5cm,4892105000011233603,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:3
+PackPro,SH Kraft 4 Cup Cake Box Holder,4892105000000452294,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:3
+PackPro,SP-Dine In Tray 3x4x1.5Inch (La Cream),4892105000107611502,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:3
+PackPro,SP-Kraft Paper Bag (S) 240mmX140mmX80mm (MBC),4892105000029091024,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:3
+PackPro,SH-Pizza Box Liner 10.75 x 10.75,4892105000004441163,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:3
+PackPro,SH-A3 Leaflet (Smart Pack),4892105000111163113,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:3
+PackPro,SP-Kraft Paper Bag with Rope Handle (L) 300x275x160mm (Karabu),4892105000011664328,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:3
+PackPro,SP-Kraft Cutlery Pouch Set (Pastamania),4892105000109530289,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:3
+PackPro,SP-White Greaseproof Paper 15x15cm (Kopify),4892105000109892243,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:3
+PackPro,SP-Customize Box 20x7x5 cm (Thai Shack),4892105000013824198,PackPro,1,1,only unit,2,3,OPD - PackPro Unit:3
+PackPro,SP-Kraft Paper Bag (M) 280x180x120mm (The Burger Depot),4892105000068909070,PackPro,1,1,only unit,1,3,OPD - PackPro Unit:3
+PackPro,SH Kraft Single Cup Cake Box (90x100x90)mm,4892105000000298604,PackPro,1,1,only unit,2,2,OPD - MacPro Unit:1;OPD - PackPro Unit:1
+PackPro,SP-White Cake Box 12x12x5Inch With Lamination and Foiling (Raffles),4892105000065362595,PackPro,1,1,only unit,2,2,OPD - MacPro Unit:1;OPD - PackPro Unit:1
+PackPro,SP-Kraft Paper Bag (L) 300X275X160mm With Die Cut Handle (Lamprais),4892105000065440130,PackPro,1,1,only unit,2,2,OPD - MacPro Unit:1;OPD - PackPro Unit:1
+PackPro,SP-Kraft Counter Bag V Bottom (M) 28X12X10cm (Lamprais),4892105000065440191,PackPro,1,1,only unit,2,2,OPD - MacPro Unit:1;OPD - PackPro Unit:1
+PackPro,SP-GRN Book (Chanas),4892105000009904336,PackPro,1,1,only unit,2,2,OPD - MacPro Unit:1;OPD - PackPro Unit:1
+PackPro,SP-Macron Box(6pcs)(Sheraton),4892105000028585728,SHPS > PackPro,2,2,last,2,2,OPD - MacPro Unit:1;OPD - PackPro Unit:1
+PackPro,SH Kraft Box Plain 1600ml (195x140x65)mm,4892105000004146001,PackPro,1,1,only unit,2,2,OPD - MacPro Unit:1;OPD - PackPro Unit:1
+PackPro,SP-White Greaseproof Paper 28cmx38cm (The Trees Cafe),4892105000065707533,PackPro,1,1,only unit,2,2,OPD - MacPro Unit:1;OPD - PackPro Unit:1
+PackPro,SP-White Pannetonne Box 23.5x22.5 (Courtyard),4892105000000546416,PackPro,1,1,only unit,2,2,OPD - MacPro Unit:1;OPD - PackPro Unit:1
+PackPro,CP-White Greaseproof Paper 12x14 inches (Hela Platters),4892105000065835571,PackPro > SHPS,1,2,first,2,2,Screen Printing Unit:2
+PackPro,CP-White Greaseproof Paper 14x16 inches (Hela Platters),4892105000065835746,PackPro > SHPS,1,2,first,2,2,Screen Printing Unit:2
+PackPro,SH-White Greaseproof Paper 10x10 inches  (So Delicious),4892105000066073481,PackPro,1,1,only unit,2,2,OPD - MacPro Unit:1;OPD - PackPro Unit:1
+PackPro,SH-White Greaseproof Paper 10x10 inches (Yumm),4892105000066073562,PackPro,1,1,only unit,2,2,OPD - MacPro Unit:1;OPD - PackPro Unit:1
+PackPro,SH-White Greaseproof Paper 14x14 inches (Yumm),4892105000066078030,PackPro,1,1,only unit,2,2,OPD - MacPro Unit:1;OPD - PackPro Unit:1
+PackPro,SP-750ml Kraft Paper Bowl with Sticker (Solt House Hirikatiya),4892105000002788322,PackPro,1,1,only unit,2,2,OPD - MacPro Unit:1;OPD - PackPro Unit:1
+PackPro,SP-440ml Paper Bowl With Sleeve (Thai Shack),4892105000013824945,PackPro,1,1,only unit,2,2,OPD - MacPro Unit:1;OPD - PackPro Unit:1
+PackPro,SP-530ml Paper Bowl With Sleeve (Thai Shack),4892105000013824984,PackPro,1,1,only unit,2,2,OPD - MacPro Unit:1;OPD - PackPro Unit:1
+PackPro,SP-Sub.Kraft Soap Box (Radh),4892105000004542381,PackPro,1,1,only unit,2,2,OPD - MacPro Unit:1;OPD - PackPro Unit:1
+PackPro,SP-Pop Corn Bucket 4.5x3.5x4.5cm (Bokka With Blue),4892105000067831628,PackPro,1,1,only unit,2,2,OPD - PackPro Unit:2
+PackPro,SP-750ml Kraft RND Paper Bowl+Lid With Sticker (Karabu),4892105000068143117,PackPro,1,1,only unit,2,2,OPD - PackPro Unit:2
+PackPro,SH-White Greaseproof Paper 8x10 inches,4892105000064272317,PackPro,1,1,only unit,2,2,OPD - PackPro Unit:2
+PackPro,SH-White Greaseproof Paper 11x15 inches,4892105000073144313,PackPro,1,1,only unit,2,2,OPD - PackPro Unit:2
+PackPro,SP-Coaster 4 x 4 Inches Black (Hotel Ferola),4892105000073271440,PackPro,1,1,only unit,2,2,OPD - PackPro Unit:2
+PackPro,SP-4oz Kraft Ripple Wall Cup With Sleeve(The Trees Cafe),4892105000002517250,PackPro,1,1,only unit,2,2,OPD - PackPro Unit:2
+PackPro,SP-80ml White Paper Tub With Sleeve (Coco & Cream),4892105000083278344,PackPro,1,1,only unit,2,2,OPD - PackPro Unit:2
+PackPro,SP-Burger Pouch - Without Print (Street Burger),4892105000090125349,PackPro,1,1,only unit,2,2,OPD - PackPro Unit:2
+PackPro,SP-16oz Kraft Soup Cup With Sleeve (Thai Shack),4892105000014170023,PackPro,1,1,only unit,2,2,OPD - PackPro Unit:2
+PackPro,SH-Kraft Cake Bag With Rope Handle 9.5x9.5x9.5 Inch,4892105000004552041,PackPro,1,1,only unit,2,2,OPD - PackPro Unit:2
+PackPro,SH-Kraft Paper Cake Bag With Rope Handle 13x13x13 Inch,4892105000003719643,PackPro,1,1,only unit,2,2,OPD - PackPro Unit:2
+PackPro,SP-Cake Bag 13.5x13.5x12 (Hilton weeravila),4892105000003719596,PackPro,1,1,only unit,2,2,OPD - PackPro Unit:2
+PackPro,SP-Coffee Paste Inner Carton Caramel  (Montado),4892105000000298840,PackPro,1,1,only unit,2,2,OPD - PackPro Unit:2
+PackPro,SP-White Paper Bag (XS) 200x120x70mm (Finagle),4892105000101133185,PackPro,1,1,only unit,2,2,OPD - PackPro Unit:2
+PackPro,SP-White Paper Bag (L) 300X275X160mm with Die Cut Handle (Finagle),4892105000101133363,PackPro,1,1,only unit,2,2,OPD - PackPro Unit:2
+PackPro,SH-Pizza Box 35x35x4cm (14 inch),4892105000101880007,PackPro,1,1,only unit,2,2,OPD - PackPro Unit:2
+PackPro,"SP-Vegetarian 6"" Sticker (ITC)",4892105000000545997,PackPro,1,1,only unit,2,2,OPD - PackPro Unit:2
+PackPro,PACKSERV - 700ml Aluminium Foil Round Container with Lid (10Pcs Packing),4892105000110658926,PackPro > CPU,1,2,first,2,2,Customized Packing Unit:2
+PackPro,PACKSERV - Wooden Fork 16cm (Spar) - Pouch Packing,4892105000110666097,PackPro > CPU,1,2,first,2,2,Customized Packing Unit:2
+PackPro,PACKSERV - Wooden Spoon 16cm (Keells) - Pouch Packing,4892105000110666154,PackPro > CPU,1,2,first,2,2,Customized Packing Unit:2
+PackPro,PACKSERV - 3200ml Aluminium Foil Container with Lid (3Pcs Packing),4892105000110658892,PackPro > CPU,1,2,first,2,2,Customized Packing Unit:2
+PackPro,PACKSERV - Wooden Fork 16cm (Keells) - Pouch Packing,4892105000110666080,PackPro > CPU,1,2,first,2,2,Customized Packing Unit:2
+PackPro,SP-300ml White Tub With Sleeve (Funny Cook),4892105000111180081,PackPro,1,1,only unit,2,2,OPD - PackPro Unit:2
+PackPro,SP-8Oz Kraft Soup Cup With Sleeve And Lid Sticker (Rose Oud),4892105000110972244,PackPro,1,1,only unit,2,2,OPD - PackPro Unit:2
+PackPro,SP-White Paper Bag with Rope Handle (S) 21x19x12cm (Vanni inn),4892105000111690176,PackPro,1,1,only unit,2,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Cake Box 13x13x7cm with Window (Riverside),4892105000066468123,PackPro,1,1,only unit,1,2,OPD - MacPro Unit:2
+PackPro,SP-Dine In Tray 4x4x2.5Inch (La Cream),4892105000067292113,PackPro,1,1,only unit,1,2,OPD - MacPro Unit:2
+PackPro,SP-Kraft Paper Bag (M) 280x180x120mm (Ceylon Stories),4892105000067333247,PackPro,1,1,only unit,1,2,OPD - MacPro Unit:2
+PackPro,SP-Kraft Paper Bag (L) 300x275x160mm with Die Cut Handle (Reecha),4892105000067703021,PackPro,1,1,only unit,1,2,OPD - MacPro Unit:1;OPD - PackPro Unit:1
+PackPro,SP-Dough Artisan Breads Paper Bag (L) (300x275x160)mm(Fernan),4892105000003719837,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Yule Log Box with Window 30x32 Inch (Courtyard),4892105000068025855,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Malai Kaja Box With Window 115x115x80mm Baby Pink (Royal Sweet Meat Mart),4892105000068143233,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Greaseproof Paper 45.72cm x 35.56cm (Taj Hotel),4892105000068248060,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SH-White Box (170x145x50)mm,4892105000000298512,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Cake Box 10x10x5 Inch(Radisson),4892105000004659001,SHPS > PackPro,2,2,last,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Paper Bag (L) 300x275x160mm (The Burger Depot),4892105000068909011,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Double Cup Holder (Twin Fin),4892105000068909190,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Single Cup Holder (Twin Fin),4892105000068909129,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SH Kraft Brownie Box (10x10x2) Inch,4892105000005468060,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SH Kraft Brownie Box (10x10x2) Inch with Window,4892105000006579031,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Doggy Bag (S)8x6x3 (Titos),4892105000001560001,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,Sub-Wooden Knife 16cm Pouch (A&M),4892105000003645001,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Sandwich Take Away Box With Window (Coffee Council),4892105000072736874,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Greaseproof Paper 40cmX45cm (Coffee Council),4892105000072736975,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Double Cup Holder (Ayla Cafe),4892105000011142521,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Desk Calendar 14x17cm (Master Woven Lanka),4892105000073271307,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Pastry Box 7x6x4Inch (MBC),4892105000073271537,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Coffee Paste Inner Carton Hazelnut (Montado),4892105000002608181,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Double  Cup Holder (The Commons Coffee),4892105000063781102,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Single Cup Holder (The Commons Coffee),4892105000063781059,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Greaseproof Paper 28X38cm (Cafe Secret Alley),4892105000073362887,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Double Cup Holder(Legacy),4892105000002477023,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Single Cup Holder(Legacy),4892105000002496168,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Letter Head (30x21)cm (Radh),4892105000004455859,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Single Cup Holder (Top Shelf),4892105000073790608,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Double Cup Holder  (Top Shelf),4892105000073790719,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Paper Bag (S) 240x140x80mm (Top Shelf),4892105000073812503,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Paper Bag (S) 240x140x80mm (Burgerei),4892105000073842710,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Greaseproof Paper 28cmx38cm (Burgerei),4892105000073842803,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Cake Box 145x145x90mm (Burgerei),4892105000073842888,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SH-Aluminium Container Label-Small,4892105000073902265,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Rose Holder (With Love),4892105000004111356,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Box 135x100x75mm (Mr. Hirusha Fernando),4892105000075084533,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Chicken Bucket + Lid (SFC),4892105000003267106,SHPS > PackPro,2,2,last,1,2,OPD - MacPro Unit:1;OPD - PackPro Unit:1
+PackPro,SP-120ml White Paper Tub With Sleeve (Coco & Cream),4892105000083278405,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Double Cup Holder (Donna),4892105000083278528,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Single Cup Holder (Donna),4892105000083854759,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Chocolate Box 9x13x2.5Cm (Hilton Yala),4892105000032256087,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Greaseproof Paper 25cmX17cm (Teddies),4892105000085883367,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Brownie Box  6.5X4.5X2.25 Inch With Window  (The Brownie),4892105000059693794,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Paper Bag (L) 300X275X160mm With Die Cut Handle (Blue Cafe),4892105000092721155,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Greaseproof Paper 25.4cmX30.48cm (Art Studio),4892105000092721258,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP- Kraft Box+Window (150x100x90)mm (Flamingo),4892105000002835001,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Brownie Box 8x8x2 inch(Zoco),4892105000004430030,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Lunch Box 13.4x10x7.6 cm (Kaffi),4892105000000543925,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Tray 900ml (Jagro Foods),4892105000100660162,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Greaseproof Paper Liner 5.5X5.5 Inch (Jagro Foods),4892105000100660251,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Paper Bag (L) 300x275x160mm (Blackpool Resort & Spa),4892105000002270001,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Soap Box 3x2.9x1.1 inch (Bubbles & Beyond),4892105000062269097,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Dine In Tray 4x5x1.5Inch (La Cream),4892105000100853017,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Greaseproof Paper 28cmX38cm (Why House),4892105000100881247,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Paper Bag with Rope Handle 32x25x11cm (Bayside Breeze),4892105000101076060,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White 6 Cup Cake Box (180x165x80mm) With Holder (Finagle),4892105000101133446,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Paper Bag 11X11X11inch With Rope Handle (Finagle),4892105000101133568,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Food Wrap 40cmX45cm (Finagle),4892105000101133686,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Double Cup Holder (Finagle),4892105000101133907,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Wooden Spoon 14cm Pouch (Radh),4892105000003402001,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Sleeve for Ramekin 11x11x6.5cm (The Brownie Station),4892105000063401500,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SH-Key Register Book (Standard Holdings),4892105000101259817,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Food Wrap 10X10inch(Royal Sweet Meat Mart),4892105000000543703,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Food Wrap 10X15inch(Royal Sweet Meat Mart),4892105000000543730,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Greaseproof Paper 28cmX38cm (Tribute),4892105000101475063,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Paper Bag With Rope Handle XL 34x33x16cm (Kaaraikudi  Restaurant),4892105000101709487,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Paper Bag With Rope Handle (M) 25x25x15cm (Kaaraikudi  Restaurant),4892105000101709572,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Hyderabadi Dum Biriyani Stickers (Chanas),4892105000000298558,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,"SP-Wooden Fork 16cm Pouch (7.5""X3"") (Spar SL)",4892105000000168186,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Greaseproof Paper 35x35cm (Biling),4892105000102119241,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Burger Wrap 12X12 Inch Beef Bacon (Titos),4892105000083345206,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Burger Wrap 12x12 Inch Beef Plain (Titos),4892105000102315399,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Burger Wrap 12x12 inch Chicken Plain (Titos),4892105000083733001,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Burger Wrap 12x12 inch Chicken Bacon (Titos),4892105000102327191,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Payment Voucher (Chanas),4892105000102327387,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Greaseproof Paper 28x38cm (The Establishment),4892105000102327472,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Brownie Box  8.75X6.75X2.25 Inch with Window (The Brownie),4892105000059693843,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Cake Box 10x10x4 Inch With Window (MBC),4892105000029091193,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SH-White Box (4x4x2) inch With Window,4892105000021864336,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Cake Box 100mmX65mmX65mm (Pop Cake),4892105000108329159,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Cake Box (145x145x90)mm (Cafe Francais),4892105000108329232,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Ginger Cookies Box 3.5x2x8 inch (Sahana),4892105000108740146,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Oats Cookies Box 3.5x2x8 inch (Sahana),4892105000108740191,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Dates Cookies Box 3.5x2x8 inch (Sahana),4892105000108740236,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Chocolate Chips Cookies Box 3.5x2x8 inch (Sahana),4892105000108740295,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Brownie Cookies Box 3.5x2x8 inch (Sahana),4892105000108740340,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Coaster  85mm With Emboss (Nidro),4892105000108740461,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White 4 Cup Cake Box (156x150x75)mm (MBC),4892105000108974231,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Box (215X145X60)mm (Wok To Walk),4892105000010991989,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SH-Visiting Card,4892105000057663010,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SH Breakfast Box,4892105000004012363,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Food Wrap 7x7inch(Hideaway Restaurant),4892105000001671197,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SH Kraft Single Cup Cake Holder,4892105000005215082,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SH Kraft 12 Cup Cake Box Holder,4892105000005380799,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SH Kraft 20 Cup Cake Box Holder,4892105000002423001,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Paper Bag 145x90x270mm (Sheraton),4892105000000544868,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Greaseproof Paper 36cmx36cm (Master Burger),4892105000109581357,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Greaseproof Paper 38cmx38cm (Kosta Beach),4892105000109581410,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Greaseproof Paper 30cmx46cm (Oriox Xo Tea),4892105000109598006,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Sticker 8x8 Round CBS(Sheraton),4892105000001700337,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Paper Bag (M) 280x180x120mm (Uppuveli Cafe),4892105000003649001,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Paper Bag (S) 240x140x80mm (Uppuveli Cafe),4892105000003649060,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Paper Bag (XS) 200X120X70mm (Uppuveli Cafe),4892105000003645125,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Greaseproof Paper 28x38cm (Cafe Kumbuk),4892105000109882582,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Budget Lunch Box (16x13.5x4.5)cm (The Sizzle),4892105000109954286,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SH-Kraft Straw Pouch 12mmx23cm,4892105000110025087,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Paper Bag with Rope Handle (M) 280x180x120mm (Karabu),4892105000110072006,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Paper Bag with Rope Handle (L) 300x275x160mm (Karabu),4892105000110087038,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Paper Bag (M) 210x140x80mm (Hurry Up),4892105000063495237,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Tray Mat 28x38mm (Hilton Weerawila),4892105000000544756,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Paper Bag With Die Cut Handle (M) 280x180x120mm (Kiri kopi -Without Print),4892105000110254914,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Double Cup Holder (Bunch Cafe),4892105000110293281,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Dine In Tray 5x5x1 Inch (Chanas),4892105000110395052,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Dine In Tray 3x4x1.5 Inch (Chanas),4892105000110395392,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Shawarma Wrap 12x10 Inch (Chanas),4892105000110395439,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Shawarma Wrap 10x8 Inch (Chanas),4892105000110421001,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Food Wrap 40x45cm ((Salt Restaurant),4892105000110468180,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Single Cup Holder (Kiri Kopi),4892105000063401762,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SH-White Cake Box 10X10X6Inch With Window,4892105000021823298,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Paper Bag with Rope Handle (M) 25x25x15.5cm (Salem RR Biriyani),4892105000001807104,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Double Cup Holder (Ruhunu Pub Resort),4892105000110819404,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Single Cup Holder (Ruhunu Pub Resort),4892105000110819425,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Paper Bag (L) 300X275X160mm with Die Cut Handle (Arlo's Hoppers),4892105000110888590,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Cinnamon Roll Box With Window 3.25×6×9Inch (Tasty),4892105000110888659,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Brownie Box With Window 2x2x1.5 Inch(Mrs Rozana),4892105000001902001,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Greaseproof Paper 60x40cm (Double Tree by Hilton),4892105000111018186,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SH-Sandwich Box (Large),4892105000000298466,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Paper Bag Large without Die Cut Handle 300x275x160mm (Qick Foods),4892105000011345170,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Greaseproof Paper 38x38cm (Bayside),4892105000111187003,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Paper Bag (L) 300X275X160mm with Die Cut Handle (Banana Arugambay),4892105000111498043,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Double Cup Holder (Banana Arugambay),4892105000111498143,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Greaseproof Paper 26cmX18cm (Teddies),4892105000111568051,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Double Cup Holder (La Brasserie),4892105000111690127,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Counter Bag Flat Bottom 33.5x12x6.5cm (Madeena),4892105000111850368,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Greaseproof Paper 10x10 Inch (Cafe One Love),4892105000111941080,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Fries Paper Pouch (Pounders),4892105000111941305,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Fries Pouch 3.5x4x3Inch (Dutch Lanka),4892105000112052006,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Soap Box 2x2Inch (Lavanga Beach),4892105000112078236,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Double Cup Holder (ITC Hotel),4892105000112078361,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Laundry Bag 18X24Inch (Stay Golden),4892105000112130006,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Paper Bag (L) 300x275x160mm (Verandah),4892105000112200010,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Paper Bag (S) (240x140x80)mm (Verandah),4892105000112200058,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Paper Bag (M) 280x180x120mm (Verandah),4892105000112200108,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Box (150X100X90)mm (Verandah),4892105000112224001,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Paper Bag with Rope Handle XL 34x33x16cm (Indian Tadka),4892105000112198493,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Paper Bag with Rope Handle (S) 21x19x12cm (Indian Tadka),4892105000112198562,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Paper Bag With Rope Handle (M) 25x25x15cm (Indian Tadka),4892105000112251012,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Cookie Pouch 4X5inch (Hungry Islander),4892105000112487146,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-White Greaseproof Paper 12x14 inch (AN),4892105000112466123,PackPro,1,1,only unit,1,2,OPD - PackPro Unit:2
+PackPro,SP-Kraft Key Card Holder (Radh),4892105000003468035,PackPro,1,1,only unit,1,1,OPD - MacPro Unit:1
+PackPro,SH-A5 Leaflet (Smart Pack),4892105000057663075,PackPro,1,1,only unit,1,1,OPD - MacPro Unit:1
+PackPro,SP-DC Paper 16 x 16cm (Street Burger),4892105000003282738,PackPro,1,1,only unit,1,1,OPD - MacPro Unit:1
+PackPro,SP-16oz S/Wall White Paper Cup With Sleeve (Artisan Diletto With Deer),4892105000067292338,PackPro,1,1,only unit,1,1,OPD - MacPro Unit:1
+PackPro,SP-16oz S/Wall White Paper Cup With Sleeve (Artisan Diletto With Tree),4892105000067292395,PackPro,1,1,only unit,1,1,OPD - MacPro Unit:1
+PackPro,SP-Coffee Paste Inner Carton Limited Edition (Montado),4892105000067680037,PackPro,1,1,only unit,1,1,OPD - MacPro Unit:1
+PackPro,SH-Petty Cash Chit,4892105000067998146,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Yule Log Board (2mm Board)(Courtyard),4892105000068025920,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SH-I.O.U Book (Standard Holdings),4892105000068066617,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Malai Kaja Box 125 x 125 x 90mm (Royal Sweet Meat Mart),4892105000000298886,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-White Greaseproof Paper 38 x 41cm (Pounders Burger),4892105000053776821,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Round Stickers 4.4cm (Hilton Yala),4892105000068597729,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Cake Board Square 11.5Inch (Hilton Yala),4892105000068597796,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Kraft VIP Snack Box With Dividers 27x17.5x9cm (Double Tree By Hilton),4892105000054954261,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Kraft Breakfast Safari Pack 27x18x8.7cm (Double Tree By Hilton),4892105000054954221,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SH-White Cake Box(8x8x4)Inch With Window,4892105000000542900,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SH Kraft Box+Window 220x160x40mm,4892105000000542667,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SH Kraft Brownie Box (8x8x2) Inch with Window,4892105000005104046,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SH Kraft Cake box (12x12x4) Inch with Window,4892105000003499215,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SH Kraft Cake box (14x14x4) Inch with Window,4892105000003301150,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SH White Brownie Box (10x10x2) Inch with Window,4892105000006579383,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Kraft Paper Bag 19cm (Finagle),4892105000000545794,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Customer Material (Crizzpy's Chicken Bucket),4892105000073144542,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-White Greaseproof Paper 20cmx18cm (Cafe Mamba),4892105000073271625,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-260ml Paper Bowl With Sleeve (Dig In Desserts),4892105000000543070,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-White Greaseproof Paper 14cmX14cm (Teddies),4892105000073445053,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-White Greaseproof Paper 50.8cmx38.1cm (Mutts),4892105000073636221,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Paper Tub 120ml White With Sleeve(Grillos),4892105000004849539,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Kraft Paper Bag (L) 300x275x160mm (Top Shelf),4892105000073790806,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Kraft Paper Bag (M) 280x180x120mm (Top Shelf),4892105000073790887,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Letter Head (Ajith Construction),4892105000073976033,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Wihite Cake Box 8x8x4 Inch With Window (MBC),4892105000029091152,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SH Kraft Cake box (16x16x4) Inch,4892105000021864265,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,CP-White Breakfast Box (Cocobay),4892105000009445337,PackPro > SHPS,1,2,first,1,1,Screen Printing Unit:1
+PackPro,SP-Kraft Paper Bag With Black Code (Yala Resort),4892105000000625055,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-16Oz D/Wall White Paper Cup With Sleeve (Chang),4892105000077817324,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SH-Kraft Cake Box (10x10x4) Inch with Window,4892105000000299051,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Kraft Brownie Box (8x8x2) Inch with Window (Karabu),4892105000013824001,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Kraft Paper Cake Bag 13x13x13inch (Skinny Tom's Deli),4892105000003539086,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-4Oz D/Wall Kraft Paper Cup with Sleeve (Tuk Tuk),4892105000085934973,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-White Greaseproof Paper 28cmX38cm (Brew Lounge),4892105000086385365,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SH-Kraft Cutlery Pouch Bag (8x4) inch,4892105000013824277,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SH-Super Pack Cling Film Box 45cm x 20.4m,4892105000065838465,PackPro,1,1,only unit,1,1,OPD - MacPro Unit:1
+PackPro,SP-Coffee Paste Inner Carton Chocolate (Montado),4892105000004616087,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SH-Kraft Paper Pouch 16cm,4892105000095740814,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP- Kraft Box+Window (150X100X90)mm (Karabu),4892105000097369774,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SH-Stantex Lable,4892105000004575064,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Cake box 10 x 10 x 4 inch With gold Foiling and emboss(Dig in desserts ),4892105000003761001,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Kraft Food Wrap 40cmX40cm (Pettah Essence),4892105000099979901,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Twisting Cone (Twisting scoops),4892105000002265349,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-White Greaseproof Paper 25cmX20cm (Bokka-Blue),4892105000100818659,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP- 300ml Paper Cup with Sleeve (Thai Shack),4892105000013802156,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-White Cake Box 10x10x6 Inch With Window (Finagle),4892105000101157060,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Kraft Paper Bag 300x275x160 (Food Print),4892105000045439253,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SH-Vehicle Register Book (Standard Holdings),4892105000004510001,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SH-Visitors Register Book (Standard Holdings),4892105000101292085,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SH-Kraft Corrugated Cake Box 12x12x4.5 Inch,4892105000004012310,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-White Cake Box 12X12Xx5 Inch (Radisson),4892105000101357016,SHPS > PackPro,2,2,last,1,1,OPD - PackPro Unit:1
+PackPro,SP-Cheque Book (Chanas),4892105000101709015,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Kraft Paper Bag with Rope Handle (S) 21x19x12cm (Kaaraikudi  Restaurant),4892105000101709663,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Baggage Tag (The Radh),4892105000011152316,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,PACKSERV - 250ml Aluminium Foil Container with Lid (10pcs Packing) - DEMO,4892105000102116113,PackPro > CPU,1,2,first,1,1,Customized Packing Unit:1
+PackPro,SP-Glove Box 4.3x1.6x6.7 inch (Safety Sure),4892105000061918420,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SH-Glove Box,4892105000004045207,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SH-Single Cake Board Square 10x10cm,4892105000000452340,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SH Kraft Box+Window (165X105X50)mm       008,4892105000003371816,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SH-Security loading Book,4892105000004987046,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SH-Security Unloading Book,4892105000005165024,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,"SP-Non veg 6"" Sticker (ITC)",4892105000000545914,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Kraft Paper Bag With Black Code 16X12X3.5Inch (Barakah),4892105000011380916,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SH Kraft 20 Cup Cake Box (380 x 300 x 80)mm,4892105000002423044,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Paper Bag (L) 300 x 275 x 160 mm With Handle (Eraeliya Villas),4892105000004419715,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Paper Cup 90ml White With Sleeve (Damn Fine),4892105000054379516,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SH-Pizza Box Liner 7.75 x 7.75,4892105000004441074,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Round Coaster 3.5inch (Karabu),4892105000110116103,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Kraft Paper Bag (L) 280x180x120mm (Hurry Up),4892105000063495482,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Manual Delivery Note (Standard Holdings),4892105000002496061,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SH-Sub.Kraft Dental Kit Box,4892105000003984165,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Wooden Chopstick Pouch (Waters Edge),4892105000062785174,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Kraft Paper Bag (L) 300X275X160mm With Die Cut Handle (Salt Restaurant),4892105000110468136,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SH-Single Cake Board Square 3.5X3.5 Inch,4892105000110575038,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-16oz Kraft Soup Cup With Sleeve (Arlo's Hoppers),4892105000110888533,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,PACKSERV - Shaving Kit - Shaving Cream/Gillette-Blue 2 Razor (Radisson) - Kit Packing,4892105000110898066,PackPro > CPU,1,2,first,1,1,Customized Packing Unit:1
+PackPro,SP-80ml White Paper Tub With Sleeve (Verandah),4892105000111107037,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SH-Kraft Cake Bag With Rope Handle 11X11X11 inch,4892105000003993645,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-White Greaseproof Paper 3.5x7.5Inch (Kiri Kopi),4892105000111285098,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-White Greaseproof Paper 8.5x6Inch (Kiri Kopi),4892105000111285146,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Kraft Paper Bag (L) 300X275X160mm with Die Cut Handle (Cafe One Love),4892105000063619336,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,PACKSERV - Wooden Chopstick (Waters Edge) - Pouch Packing,4892105000110666222,PackPro > CPU,1,2,first,1,1,Customized Packing Unit:1
+PackPro,SP-Kraft Food Wrap 40cm x 45cm (Salem RR Biriyani ),4892105000001829111,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,PACKSERV - Dental Kit (Kraft) - Toothpaste 6grm/Wooden Toothbrush - Kit Packing,4892105000111373265,PackPro > CPU,1,2,first,1,1,Customized Packing Unit:1
+PackPro,SP-500ml Kraft Paper Bowl With Sleeve (Vanni inn),4892105000111690207,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,PACKSERV - Wooden Spoon 11cm (Radh) - Pouch Packing,4892105000111734036,PackPro > CPU,1,2,first,1,1,Customized Packing Unit:1
+PackPro,"PACKSERV - Wooden Spoon, Fork, Knife & Tissue (16cm) - Pouch Packing",4892105000111734334,PackPro > CPU,1,2,first,1,1,Customized Packing Unit:1
+PackPro,PACKSERV - Wooden Chopstick 20cm (Trans Asia Hotel) - Pouch Packing,4892105000110666188,PackPro > CPU,1,2,first,1,1,Customized Packing Unit:1
+PackPro,SP-White Paper Bag With Rope Handle 9.5X9.5X9.5inch (Bacuzzi),4892105000111941030,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-White Greaseproof Paper 8x8 Inch (Aprota Villas),4892105000111995006,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Shaving Kit Kraft Pouch Bag 6.5X3Inch (Dharshana Hotel),4892105000111995349,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Vanity Kit Kraft Pouch Bag 4.3X3.1Inch (Dharshana Hotel),4892105000111995402,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,PACKSERV - Wooden Chopstick (Riff Hikkaduwa) - Pouch Packing,4892105000110666205,PackPro > CPU,1,2,first,1,1,Customized Packing Unit:1
+PackPro,PACKSERV - Cinnamon Soap (Radh) - Kit Packing,4892105000110666391,PackPro > CPU,1,2,first,1,1,Customized Packing Unit:1
+PackPro,PACKSERV - Wooden Comb 13.5cm (Radh) - Kit Packing,4892105000110666463,PackPro > CPU,1,2,first,1,1,Customized Packing Unit:1
+PackPro,SH-Laundry Bag 18x24 Inch,4892105000112251105,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,PACKSERV - Shower Loofah 10 x 14cm (Radh) - Kit Packing,4892105000110666449,PackPro > CPU,1,2,first,1,1,Customized Packing Unit:1
+PackPro,SP-750ml Kraft RND Bowl With Sleeve (Vanni inn),4892105000112284001,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-White Box 4x8x6 cm (Shangri-La Hambantota),4892105000000544839,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,PACKSERV - Dental Kit - Toothpaste 6grm/Plastic Toothbrush (Radisson) - Kit Packing,4892105000112562214,PackPro > CPU,1,2,first,1,1,Customized Packing Unit:1
+PackPro,PACKSERV - Dental Kit - Toothpaste 6grm/Plastic Toothbrush (Radh) - Kit Packing,4892105000112562196,PackPro > CPU,1,2,first,1,1,Customized Packing Unit:1
+PackPro,SP-Paper Bag (M) 280x180x120mm(Legacy),4892105000001860013,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-White Greaseproof Paper 15x21cm (The Garden House),4892105000112695364,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,PACKSERV - Wooden Fork 16cm (Flamingo) - Pouch Packing,4892105000112631185,PackPro > CPU,1,2,first,1,1,Customized Packing Unit:1
+PackPro,SP-Kraft Box+Window (150x100x90)mm (Grand Bell Hotel),4892105000007175001,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,PACKSERV - 900ml Aluminium Foil Container with Lid (10Pcs Packing),4892105000110658830,PackPro > CPU,1,2,first,1,1,Customized Packing Unit:1
+PackPro,SP-Cake Box (1000g)(Titos),4892105000002490001,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-White Greaseproof Paper 70x43cm (Roa),4892105000112709390,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Kraft Paper Bag (L) 300X275X160mm With Die Cut Handle (Wildore),4892105000112709716,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,"PACKSERV - Wooden Spoon, Fork, Knife (16cm) - Pouch Packing",4892105000112731503,PackPro > CPU,1,2,first,1,1,Customized Packing Unit:1
+PackPro,SP-Kraft Cake Box 145x145x90mm(SHA013) (Wildore),4892105000112709752,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-White Greaseproof Paper 12x14 inch (Wildore),4892105000112709781,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Kraft Double Cup Holder (Wildore),4892105000112709843,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-1300ml Kraft Paper Bowl With Sleeve (Wildore),4892105000112709874,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Kraft Carrier Cake Box 10 inch (Wildore),4892105000112709935,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Square Cake Board White 10Inch (Wildore),4892105000112709908,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Sandwich Take Away Box With Window (Wildore),4892105000112709965,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Kraft Counter Bag V Bottom (S) 20X12X6cm (Lamprais),4892105000112877032,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Kraft Counter Bag V Bottom (L) 33X18X7cm (Lamprais),4892105000112877201,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-White Paper Bag With Rope Handle (XL) 34x33x16cm (Vanni inn),4892105000112877276,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-White Paper Bag with Rope Handle 22x25x11cm (Vanni inn),4892105000112911001,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-White Greaseproof Paper 12x12Inch (Mambos),4892105000112911048,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Kraft Food Wrap 40cm x 45cm( Mambos),4892105000004258049,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,SP-Kraft Food Wrap 40cmx45cm (Drifter),4892105000112897005,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+PackPro,PACKSERV - Dental Kit - Toothpaste 6grm/Wooden Toothbrush (Radisson) - Kit Packing,4892105000110898051,PackPro > CPU,1,2,first,1,1,Customized Packing Unit:1
+PackPro,SP-Coffee Paste Inner Carton Original (Montado),4892105000000298863,PackPro,1,1,only unit,1,1,OPD - PackPro Unit:1
+SHPS,PRINTSERV-8oz D/Wall Kraft Cup With Print (BYD),4892105000002861461,SHPS,1,1,only unit,11,14,Screen Printing Unit:14
+SHPS,PRINTSERV-12oz Plastic Cup (350ml) With Print (Blendz),4892105000002903023,SHPS,1,1,only unit,10,12,Screen Printing Unit:12
+SHPS,PRINTSERV-Pizza Box 25x25x4cm (10 inch) With Print (My Pizza),4892105000005009153,SHPS,1,1,only unit,8,11,Screen Printing Unit:11
+SHPS,CP-16Oz Plastic Cup (475ml) (Ceylon Coffee Club),4892105000004846643,SHPS,1,1,only unit,9,10,Screen Printing Unit:10
+SHPS,PRINTSERV-12Oz Plastic Cup (350ml) With Print (Dinemore),4892105000004884576,SHPS,1,1,only unit,9,10,Screen Printing Unit:10
+SHPS,PRINTSERV-Kraft Paper Bag (M) 280x180x120mm With Print (Blendz),4892105000002915291,SHPS,1,1,only unit,9,10,Screen Printing Unit:10
+SHPS,PRINTSERV-Kraft Paper Bag (L) 300mm X 275mm X 160mm with Die Cut Handle With Print (Blendz),4892105000003704598,SHPS,1,1,only unit,9,9,Screen Printing Unit:9
+SHPS,PRINTSERV-12oz Plastic Cup (350ml) With Print (Grand Bell Hotel),4892105000003923374,SHPS,1,1,only unit,8,9,Screen Printing Unit:9
+SHPS,PRINTSERV-12Oz Plastic Cup (350ml) With Print (Grind Colombo),4892105000004370136,SHPS,1,1,only unit,8,9,Screen Printing Unit:9
+SHPS,PRINTSERV-16Oz Plastic Cup (475ml) With Print (Blendz),4892105000065701863,SHPS,1,1,only unit,8,9,Screen Printing Unit:9
+SHPS,PRINTSERV- Kraft Cake Box (145X145X90)mm With Print (Blendz Juice Bar),4892105000004846346,SHPS,1,1,only unit,8,9,Screen Printing Unit:9
+SHPS,PRINTSERV-Kraft Box Plain 900ml (110x150x45)mm With Print (Blendz),4892105000004556108,SHPS,1,1,only unit,8,9,Screen Printing Unit:9
+SHPS,CP-12Oz Plastic Cup (350ml) (The Coffee Manor),4892105000002869151,SHPS,1,1,only unit,7,9,Screen Printing Unit:9
+SHPS,PRINTSERV-Pizza Box 30x30x4cm (12 inch) With Print (My Pizza),4892105000004888711,SHPS,1,1,only unit,7,9,Screen Printing Unit:9
+SHPS,CP-16Oz Plastic Cup (475ml) (Island Tea Company),4892105000004704005,SHPS,1,1,only unit,8,8,Screen Printing Unit:8
+SHPS,PRINTSERV-12Oz Plastic Cup (350ml) With Print (Nook Cafe),4892105000002878134,SHPS,1,1,only unit,7,8,Screen Printing Unit:8
+SHPS,PRINTSERV-Pizza Box 20x20x4cm (8 inch) With Print (My Pizza),4892105000004888604,SHPS,1,1,only unit,7,8,Screen Printing Unit:8
+SHPS,SP-Kraft Paper Bag (L) 300X275X160mm With Die Cut Handle (Pappa Rich),4892105000011133001,SHPS > PackPro,1,2,first,6,8,OPD - PackPro Unit:6;OPD - MacPro Unit:2
+SHPS,SP-12/16oz Corrugated Sleeve(Kaffi),4892105000006784144,SHPS > PackPro,1,2,first,5,8,OPD - PackPro Unit:7;OPD - MacPro Unit:1
+SHPS,PRINTSERV-Pizza Box 30 x 30 x 4cm (12 inch) With Print (EAT SO I AM PIZZA),4892105000004930001,SHPS,1,1,only unit,7,7,Screen Printing Unit:7
+SHPS,PRINTSERV-Kraft Paper Pouch Bag W/window 12X20cm With Print (Jetwing Beach),4892105000003822712,SHPS,1,1,only unit,6,7,Screen Printing Unit:7
+SHPS,PRINTSERV-Pizza Box 28x28x4cm (11inch) With Print (Riyal & Sons),4892105000004820117,SHPS,1,1,only unit,6,7,Screen Printing Unit:7
+SHPS,PRINTSERV-12Oz Plastic Cup (350ml) With Print (Kai Coffee With Boy),4892105000063255001,SHPS,1,1,only unit,6,7,Screen Printing Unit:7
+SHPS,SP-8oz Corrugated Sleeve(Kaffi),4892105000006784085,SHPS > PackPro,1,2,first,5,7,OPD - PackPro Unit:6;OPD - MacPro Unit:1
+SHPS,CP-22Oz Plastic Cup (650ml) (Ayla Cafe),4892105000021561066,SHPS,1,1,only unit,5,7,Screen Printing Unit:7
+SHPS,CP-Lid For 900ml AF Container (Maharaja Palace),4892105000064235029,SHPS,1,1,only unit,5,7,Screen Printing Unit:7
+SHPS,CP-Kraft Box Plain 1200ml (180x120x50)mm (Malu Poke),4892105000002883518,SHPS,1,1,only unit,5,7,Screen Printing Unit:7
+SHPS,PRINTSERV-Wooden Coffee Stirrers 15cm With Print (Riff Hikkaduwa),4892105000004622261,SHPS,1,1,only unit,6,6,Screen Printing Unit:6
+SHPS,PRINTSERV-Wooden Coffee Stirrers 18cm With Print (Riff Hikkaduwa),4892105000004513096,SHPS,1,1,only unit,6,6,Screen Printing Unit:6
+SHPS,PRINTSERV-Kraft Paper Bag (XS) 200x120x70mm With Print (Mandalas Cafe),4892105000055412791,SHPS,1,1,only unit,6,6,Screen Printing Unit:6
+SHPS,CP-Pizza Box 30 x 30 x 4cm (12 inch) (Pizza Hub),4892105000004980091,SHPS,1,1,only unit,5,6,Screen Printing Unit:6
+SHPS,PRINTSERV-Kraft Pouch Bag with Window 12x20cm With Print (Jetwing Yala),4892105000064333025,SHPS,1,1,only unit,5,6,Screen Printing Unit:6
+SHPS,CP-Kraft Paper Bag (L) 300x275x160mm with Die Cut Handle (Skinny Tom's Deli),4892105000003286506,SHPS,1,1,only unit,5,6,Screen Printing Unit:6
+SHPS,PRINTSERV-12Oz D/Wall Kraft Cup With Print (Espresso Coffee Italiano),4892105000002926003,SHPS,1,1,only unit,5,6,Screen Printing Unit:6
+SHPS,PRINTSERV-Kraft Paper Bag (L) 300x275x160mm with Die Cut Handle With Print (Canterbury Golf Club),4892105000005071749,SHPS,1,1,only unit,5,6,Screen Printing Unit:6
+SHPS,Printserv-Wooden Coffee Stirrers 18cm With Print (Araliya),4892105000062786066,SHPS,1,1,only unit,5,6,Screen Printing Unit:6
+SHPS,PRINTSERV-12Oz Plastic Cup (350ml) With Print (A&M Cup Cake),4892105000004888784,SHPS,1,1,only unit,5,6,Screen Printing Unit:6
+SHPS,CP-300ml White Paper Cup (Hello Beirut),4892105000073035284,SHPS,1,1,only unit,5,6,Screen Printing Unit:6
+SHPS,CP-12Oz Plastic Cup (350ml) (Amra Leaf),4892105000062013487,SHPS,1,1,only unit,4,6,Screen Printing Unit:6
+SHPS,PRINTSERV-12oz D/Wall Paper Cup White With Print (Canterbury Golf Club),4892105000002878035,SHPS,1,1,only unit,5,5,Screen Printing Unit:5
+SHPS,PRINTSERV-16Oz Plastic Cup (475ml) With Print (Celestial),4892105000049618692,SHPS,1,1,only unit,5,5,Screen Printing Unit:5
+SHPS,PRINTSERV-Kraft Box (215X145X60)mm With Print (Agnus Unawatuna),4892105000004106496,SHPS,1,1,only unit,5,5,Screen Printing Unit:5
+SHPS,PRINTSERV-Kraft Paper Pouch Bag With Window 12x20cm With Print (Jetwin Blue),4892105000003704321,SHPS,1,1,only unit,5,5,Screen Printing Unit:5
+SHPS,PRINTSERV-Kraft Paper Bag with Rope Handle (L) 320x250x110mm With Print (Moochies),4892105000003704427,SHPS,1,1,only unit,5,5,Screen Printing Unit:5
+SHPS,PRINTSERV-Lid For 750ml AF Container With Print (Angel Beach Hotel),4892105000004294037,SHPS,1,1,only unit,5,5,Screen Printing Unit:5
+SHPS,PRINTSERV-12oz Plastic Cup (350ml) With Print (Attha's),4892105000002953197,SHPS,1,1,only unit,5,5,Screen Printing Unit:5
+SHPS,PRINTSERV-12Oz D/Wall Kraft Cup With Print (Malu Poke),4892105000004428060,SHPS,1,1,only unit,4,5,Screen Printing Unit:5
+SHPS,CP-150ml Kraft Dessert Cup (Malu Poke),4892105000004888839,SHPS,1,1,only unit,4,5,Screen Printing Unit:5
+SHPS,CP-12oz Plastic Cup (350ml) (Adra),4892105000002903996,SHPS,1,1,only unit,4,5,Screen Printing Unit:5
+SHPS,CP-Kraft Pouch Bag 18cm X 26cm without window (Colombo Coffee Company) Toscana,4892105000066426017,SHPS,1,1,only unit,4,5,Screen Printing Unit:5
+SHPS,PRINTSERV-12Oz Plastic Cup (350ml) With Print (Ibson's Choice Cafe),4892105000060987038,SHPS,1,1,only unit,4,5,Screen Printing Unit:5
+SHPS,PRINTSERV-16Oz Plastic Cup (475ml) With Print (Espresso Coffee Italiano),4892105000003837351,SHPS,1,1,only unit,4,5,Screen Printing Unit:5
+SHPS,CP-12Oz Plastic Cup (350ml) (Bubble Bee),4892105000067396174,SHPS,1,1,only unit,4,5,Screen Printing Unit:5
+SHPS,PRINTSERV-12oz Plastic Cup (350ml) With Print (KIXI),4892105000002915761,SHPS,1,1,only unit,4,5,Screen Printing Unit:5
+SHPS,CP-Kraft Paper Bag (M) 280x180x120mm (Adra),4892105000003994021,SHPS,1,1,only unit,4,5,Screen Printing Unit:5
+SHPS,PRINTSERV-Pizza Box 33x33x4cm (13 inch) With Print (Riyal and Sons),4892105000029137647,SHPS,1,1,only unit,4,5,Screen Printing Unit:5
+SHPS,PRINTSERV-Pizza Box 35 x 35 x 4cm (14 inch) With Print (Pizza Goddess),4892105000073826494,SHPS,1,1,only unit,4,5,Screen Printing Unit:5
+SHPS,PRINTSERV-White GreaseProof Paper 28CMX38CM With Print (Kiku Colombo),4892105000003822368,SHPS,1,1,only unit,4,5,Screen Printing Unit:5
+SHPS,PRINTSERV-12Oz Plastic Cup (350ml) With Print (Koffieholic),4892105000100275191,SHPS,1,1,only unit,4,5,Screen Printing Unit:5
+SHPS,PRINTSERV-Kraft Paper Bag (L) 300x275x160mm with Die Cut Handle With Print (Beldon),4892105000109229001,SHPS,1,1,only unit,4,5,Screen Printing Unit:5
+SHPS,PRINTSERV-White Box 900ml (165x115x50)mm With Print (Sea Food Club),4892105000067350011,SHPS,1,1,only unit,3,5,Screen Printing Unit:5
+SHPS,CP-Kraft Paper Bag (L) 300x275x160mm with Die Cut Handle (Sky Breeze),4892105000073090143,SHPS,1,1,only unit,3,5,Screen Printing Unit:5
+SHPS,CP-12Oz Plastic Cup (350ml) (Chola Cafe),4892105000073606268,SHPS,1,1,only unit,3,5,Screen Printing Unit:5
+SHPS,CP-12Oz Plastic Cup (350ml) (Sweet Vibes),4892105000003305538,SHPS,1,1,only unit,4,4,Screen Printing Unit:4
+SHPS,CP-16Oz Plastic Cup (475ml) (Buddies),4892105000065991327,SHPS,1,1,only unit,4,4,Screen Printing Unit:4
+SHPS,CP-12oz Plastic Cup (350ml) (Skinny Tom's Deli),4892105000003323035,SHPS,1,1,only unit,4,4,Screen Printing Unit:4
+SHPS,PRINTSERV-8oz D/Wall Black Paper Cup With Print (Julee Cafe),4892105000057182555,SHPS,1,1,only unit,4,4,Screen Printing Unit:4
+SHPS,CP-12oz Plastic Cup (350ml) (Duni's Hoppers),4892105000002883135,SHPS,1,1,only unit,4,4,Screen Printing Unit:4
+SHPS,PRINTSERV-12Oz D/Wall Kraft Cup With Print (Shady Lane Mirissa),4892105000003882129,SHPS,1,1,only unit,4,4,Screen Printing Unit:4
+SHPS,PRINTSERV-8Oz D/Wall Kraft Cup With Print (Shady Lane Mirissa),4892105000005009519,SHPS,1,1,only unit,4,4,Screen Printing Unit:4
+SHPS,PRINTSERV-Wooden Coffee Stirrers 15cm With Print (Araliya),4892105000062786021,SHPS,1,1,only unit,4,4,Screen Printing Unit:4
+SHPS,PRINTSERV-Lid For 750ml AF Container With Print (Beldon),4892105000011310250,SHPS,1,1,only unit,4,4,Screen Printing Unit:4
+SHPS,PRINTSERV-12Oz Plastic Cup (350ml) With Print (Airport City),4892105000060987115,SHPS,1,1,only unit,4,4,Screen Printing Unit:4
+SHPS,PRINTSERV-12Oz Plastic Cup (350ml) With Print (Piccadilly Parlour),4892105000064781011,SHPS,1,1,only unit,4,4,Screen Printing Unit:4
+SHPS,PRINTSERV-Kraft Paper Bag (L) 300x275x160mm with Die Cut Handle With Print (Angel Beach Hotel),4892105000002915070,SHPS,1,1,only unit,4,4,Screen Printing Unit:4
+SHPS,PRINTSERV-12Oz Plastic Cup (350ml) With Print (Crust and Crumble),4892105000100971098,SHPS,1,1,only unit,4,4,Screen Printing Unit:4
+SHPS,CP-Kraft Pouch Bag 25cm X 35cm Without Window (PMD),4892105000003361191,SHPS,1,1,only unit,3,4,Screen Printing Unit:4
+SHPS,CP-12Oz Plastic Cup (350ml) (Bunch Cafe),4892105000065709076,SHPS,1,1,only unit,3,4,Screen Printing Unit:4
+SHPS,PRINTSERV-Kraft Pouch Bag 20cm x 30cm Without Window With Print (Kiyota Coffee),4892105000002926092,SHPS,1,1,only unit,3,4,Screen Printing Unit:4
+SHPS,SP-Pastry Box 14x14x14cm With Window (MBC),4892105000004419917,SHPS > PackPro,1,2,first,3,4,OPD - PackPro Unit:3;OPD - MacPro Unit:1
+SHPS,CP-Kraft Paper Pouch Bag W/window 12X20cm (Team Golden Ridge),4892105000003704476,SHPS,1,1,only unit,3,4,Screen Printing Unit:4
+SHPS,CP-Kraft Paper Pouch Bag W/window 16X22cm Haal Messo Badhum (Sprats Fry),4892105000007173606,SHPS,1,1,only unit,3,4,Screen Printing Unit:4
+SHPS,PRINTSERV-12Oz Plastic Cup (350ml) With Print (Sinhara Company),4892105000067568429,SHPS,1,1,only unit,3,4,Screen Printing Unit:4
+SHPS,CP-Kraft Paper Bag (L) 300x275x160mm with Die Cut Handle (Malu Poke),4892105000002876587,SHPS,1,1,only unit,3,4,Screen Printing Unit:4
+SHPS,CP-120ml White Paper Tub (Araliya),4892105000003882912,SHPS,1,1,only unit,3,4,Screen Printing Unit:4
+SHPS,PRINTSERV-16Oz Plastic Cup (475ml) With Print (Liquati),4892105000004884152,SHPS,1,1,only unit,3,4,Screen Printing Unit:4
+SHPS,PRINTSERV-16oz Plastic Cup (475ml) With Print (Legacy),4892105000055871487,SHPS,1,1,only unit,3,4,Screen Printing Unit:4
+SHPS,CP-Paper Cup 300ml White (One Ocean),4892105000074145815,SHPS,1,1,only unit,3,4,Screen Printing Unit:4
+SHPS,CP-16oz Plastic Cup (The Coffee Manor),4892105000004893001,SHPS,1,1,only unit,3,4,Screen Printing Unit:4
+SHPS,PRINTSERV-8oz D/Wall Kraft Cup With Print (KIXI),4892105000023019315,SHPS,1,1,only unit,3,4,Screen Printing Unit:4
+SHPS,PRINTSERV-Kraft Box 150x100x90mm With Window With Print (Mandalas Cafe),4892105000104394616,SHPS,1,1,only unit,3,4,Screen Printing Unit:4
+SHPS,PRINTSERV-Kraft Paper Bag (M) 280x180x120mm With Print (Muscle bay),4892105000108144176,SHPS,1,1,only unit,3,4,Screen Printing Unit:4
+SHPS,CP-12Oz Plastic Cup (350ml) (Cafe Kumbuk),4892105000003923778,SHPS,1,1,only unit,2,4,Screen Printing Unit:4
+SHPS,CP-Pizza Box 33 x 33 x 4cm (13 inch) (Bacuzzi pizzaeria),4892105000064996977,SHPS,1,1,only unit,3,3,Screen Printing Unit:3
+SHPS,CP-200ml Kraft Dessert Cup (Malu Poke),4892105000002947335,SHPS,1,1,only unit,3,3,Screen Printing Unit:3
+SHPS,PRINTSERV-16Oz S/Wall Kraft Paper Cup With Print (Malu Poke),4892105000004428001,SHPS,1,1,only unit,3,3,Screen Printing Unit:3
+SHPS,CP-Kraft Pouch Bag 25cm x 35cm Without Window (Kiyota Coffee),4892105000002903727,SHPS,1,1,only unit,3,3,Screen Printing Unit:3
+SHPS,CP-12oz Plastic Cup (350ml) (Radicle),4892105000029691036,SHPS,1,1,only unit,3,3,Screen Printing Unit:3
+SHPS,PRINTSERV-White GreaseProof Paper 28CMX38CM With Print (Adra),4892105000066238199,SHPS,1,1,only unit,3,3,Screen Printing Unit:3
+SHPS,CP-Kraft Paper Pouch Bag W/window 16X22cm Lunu Kaju Badhuma (Onion And Chashew Fry),4892105000060834075,SHPS,1,1,only unit,3,3,Screen Printing Unit:3
+SHPS,CP-Kraft Paper Pouch Bag W/window 16X22CM Kesel Muwa Badhuma (Banana Blossom Fry),4892105000066469031,SHPS,1,1,only unit,3,3,Screen Printing Unit:3
+SHPS,CP-12Oz Plastic Cup (350ml) (Moish Bar),4892105000063316055,SHPS,1,1,only unit,3,3,Screen Printing Unit:3
+SHPS,PRINTSERV-16Oz Plastic Cup (475ml) With Print (Ayla Cafe),4892105000063613272,SHPS,1,1,only unit,3,3,Screen Printing Unit:3
+SHPS,PRINTSERV-Pizza Box 33 x 33 x 4cm (13 inch) With Print (Angel Beach Hotel),4892105000004370001,SHPS,1,1,only unit,3,3,Screen Printing Unit:3
+SHPS,CP-12Oz Plastic Cup (350ml) (Cafe Mamba Coffee),4892105000003882967,SHPS,1,1,only unit,3,3,Screen Printing Unit:3
+SHPS,CP-12Oz Plastic Cup (350ml) (Daily Dough),4892105000064185147,SHPS,1,1,only unit,3,3,Screen Printing Unit:3
+SHPS,PRINTSERV-Pizza Box 30 x 30 x 4cm (12 inch) With Print (Milky wave),4892105000072856170,SHPS,1,1,only unit,3,3,Screen Printing Unit:3
+SHPS,CP-8oz D/Wall Kraft Cup (Skinny Tom's Deli),4892105000004680301,SHPS,1,1,only unit,3,3,Screen Printing Unit:3
+SHPS,PRINTSERV-Kraft Pouch Bag 18cm X 26cm without window With Print (Colombo Coffee Company) Hot Chocolate,4892105000003923973,SHPS,1,1,only unit,3,3,Screen Printing Unit:3
+SHPS,PRINTSERV-Pizza Box 28 x 28 x 4cm (11 inch) With Print (Pedlars Inn),4892105000004233001,SHPS,1,1,only unit,3,3,Screen Printing Unit:3
+SHPS,PRINTSERV-Kraft Paper Cake Bag With Rope Handle 13x13x13 Inch With Print (Canterbury Golf Club),4892105000005231001,SHPS,1,1,only unit,3,3,Screen Printing Unit:3
+SHPS,PRINTSERV-Kraft Paper Bag (L) 300x275x160mm with Die Cut Handle With Print (Chill Colombo portcity),4892105000050036180,SHPS,1,1,only unit,3,3,Screen Printing Unit:3
+SHPS,CP-12Oz Plastic Cup (350ml) (Street Barista Crew),4892105000002804051,SHPS,1,1,only unit,3,3,Screen Printing Unit:3
+SHPS,PRINTSERV-White Grease Proof Paper 28X38cm With Print (Diwerse),4892105000083243348,SHPS,1,1,only unit,3,3,Screen Printing Unit:3
+SHPS,CP-12Oz Plastic Cup (350ml) (Cafe Secret Alley),4892105000064855076,SHPS,1,1,only unit,2,3,Screen Printing Unit:3
+SHPS,PRINTSERV-Pizza Box 33 x 33 x 4cm (13 inch) With Print (Koko Beach),4892105000022867163,SHPS,1,1,only unit,2,3,Screen Printing Unit:3
+SHPS,PRINTSERV-Kraft Cake Box (145X145X90)mm With Print (Tuck Shop),4892105000067137011,SHPS,1,1,only unit,2,3,Screen Printing Unit:3
+SHPS,CP-12Oz D/Wall Kraft Cup (Cafe Noir),4892105000011383502,SHPS,1,1,only unit,2,3,Screen Printing Unit:3
+SHPS,CP-120z Plastic Cup (350ml) (Cafe Noir),4892105000011477047,SHPS,1,1,only unit,2,3,Screen Printing Unit:3
+SHPS,CP-Food Wrap 40x45cm (Caffco Cafe),4892105000002915168,SHPS,1,1,only unit,2,3,Screen Printing Unit:3
+SHPS,CP-8oz D/Wall Kraft Cup (Moments),4892105000023406923,SHPS,1,1,only unit,2,3,Screen Printing Unit:3
+SHPS,CP-12Oz D/Wall Kraft Cup (Moments),4892105000067568346,SHPS,1,1,only unit,2,3,Screen Printing Unit:3
+SHPS,CP-12Oz Plastic Cup (350ml) (Arachchi Restaurant Anuradhapura),4892105000002903288,SHPS,1,1,only unit,2,3,Screen Printing Unit:3
+SHPS,SP-Laundry Bag (Birds Resort),4892105000000545887,SHPS > PackPro,1,2,first,2,3,OPD - PackPro Unit:3
+SHPS,CP-Kraft Box Plain 1600ml (195x140x65)mm (Beach and Bills),4892105000003822467,SHPS,1,1,only unit,2,3,Screen Printing Unit:3
+SHPS,CP-12oz Plastic Cup (350ml) (Azuri Bay),4892105000003908041,SHPS,1,1,only unit,2,3,Screen Printing Unit:3
+SHPS,CP-16oz Plastic Cup (475ml) (Bubblees),4892105000073035764,SHPS,1,1,only unit,2,3,Screen Printing Unit:3
+SHPS,PRINTSERV-Breakfast Box With Print (Riff Hikkaduwa),4892105000003822089,SHPS,1,1,only unit,2,3,Screen Printing Unit:3
+SHPS,CP-Kraft Pouch Bag 25cm x 35cm Without Window (Artisonal Hot Chocolate),4892105000003324329,SHPS,1,1,only unit,2,3,Screen Printing Unit:3
+SHPS,CP-12Oz Plastic Cup (350ml) (Eleven Restaurant),4892105000073612130,SHPS,1,1,only unit,2,3,Screen Printing Unit:3
+SHPS,CP-Non-Woven White Laundry Bag with Rope 57cm x 45cm (75gsm) (Radisson),4892105000066185378,SHPS,1,1,only unit,2,3,Screen Printing Unit:3
+SHPS,CP-Kraft Counter Bag Flat Bottom XX Large (40x26x6)cm (Cafe Secret Alley),4892105000057007335,SHPS,1,1,only unit,2,3,Screen Printing Unit:3
+SHPS,CP-Pizza Box 33 x 33 x 4cm (13 inch) (Hawaya Unawatuna),4892105000074145455,SHPS,1,1,only unit,2,3,Screen Printing Unit:3
+SHPS,CP-8oz D/Wall White Cup (Diwerse),4892105000074145958,SHPS,1,1,only unit,2,3,Screen Printing Unit:3
+SHPS,CP-White Greaseproof paper 28x38cm (Cafe Kumbuk),4892105000004171548,SHPS,1,1,only unit,2,3,Screen Printing Unit:3
+SHPS,PRINTSERV-12Oz Plastic Cup (350ml) With Print (Mandalas Cafe),4892105000104394352,SHPS,1,1,only unit,2,3,Screen Printing Unit:3
+SHPS,PRINTSERV-White Greaseproof 12x12 inches With Print (Koko Beach),4892105000104611534,SHPS,1,1,only unit,2,3,Screen Printing Unit:3
+SHPS,PRINTSERV-12Oz Plastic Cup (350ml) With Print (Kitchen J),4892105000104638317,SHPS,1,1,only unit,2,3,Screen Printing Unit:3
+SHPS,CP-12Oz Plastic Cup (350ml) (Steak house),4892105000104638480,SHPS,1,1,only unit,2,3,Screen Printing Unit:3
+SHPS,PRINTSERV-Corrugated Cake Box 12x12x4.5 Inch With Print (Sheraton),4892105000029213237,SHPS,1,1,only unit,2,3,Screen Printing Unit:3
+SHPS,PRINTSERV-Pizza Box 33 x 33 x 4cm (13 inch) With Print (Hangloose Cafe),4892105000109388636,SHPS,1,1,only unit,2,3,Screen Printing Unit:3
+SHPS,PRINTSERV-8Oz D/Wall Kraft Cup With Print (Shady Lane Aruganbay),4892105000109489261,SHPS,1,1,only unit,2,3,Screen Printing Unit:3
+SHPS,PRINTSERV-12Oz D/Wall Kraft Cup With Print (Shady Lane Aruganbay),4892105000109489293,SHPS,1,1,only unit,2,3,Screen Printing Unit:3
+SHPS,PRINTSERV-16oz Plastic Cup (475ml) With Print (Pastamania),4892105000109580136,SHPS,1,1,only unit,2,3,Screen Printing Unit:3
+SHPS,CP-Pizza Box 33 x 33 x 4cm (13 inch) (Smith Kitchen),4892105000065466071,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-12Oz Plastic Cup (350ml) (Kiri Kopi),4892105000055412661,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,SP-Macron Box(6pcs)(Sheraton),4892105000028585728,SHPS > PackPro,1,2,first,2,2,OPD - MacPro Unit:1;OPD - PackPro Unit:1
+SHPS,PRINTSERV-Kraft Paper Cake Bag 30x30x30cm With Print (Dutch Lanka),4892105000002883728,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,PRINTSERV-Non-Woven White Laundry Bag with Rope 57cm x 45cm (75gsm) With Print (Radh),4892105000065764191,SHPS,1,1,only unit,2,2,(none):1;Screen Printing Unit:1
+SHPS,CP-White GreaseProof Paper 28X38cm (Spindrift),4892105000003822181,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-12Oz D/Wall Kraft Cup (Flamingo),4892105000002915450,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-White Greaseproof Paper 12x14 inches (Hela Platters),4892105000065835571,PackPro > SHPS,2,2,last,2,2,Screen Printing Unit:2
+SHPS,CP-White Greaseproof Paper 14x16 inches (Hela Platters),4892105000065835746,PackPro > SHPS,2,2,last,2,2,Screen Printing Unit:2
+SHPS,CP-22Oz Plastic Cup (650ml) (Nook Cafe),4892105000005191008,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-12Oz Plastic Cup (350ml) (Matcha 19C),4892105000011451700,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-12oz D/Wall White Paper Cup (Salt House Hirikatiya),4892105000002816439,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-Kraft Paper Bag 30cm X 30cm X 30cm With Rope Handle (MBC),4892105000002876496,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-Kraft Cake Box (10x10x4) Inch With Window (MBC),4892105000003286019,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-Non-Woven Cream Beige Cake Bag (S) 26.5cm x 29cm x 28.5cm (Mandalas Cafe),4892105000064158157,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-Kraft Paper Pouch Bag W/window 16X22CM Isso Badhuma (Prawn Fry),4892105000003970001,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,PRINTSERV-12Oz Plastic Cup (350ml) With Print (Gafe),4892105000003936387,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,PRINTSERV-12Oz D/Wall Kraft Cup With Print (Gafe),4892105000053056379,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-Kraft Box Plain 900ml (110x150x45)mm (Caffco Cafe),4892105000029275328,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-Kraft Paper Bag (M) 280x180x120mm (Caffco Cafe),4892105000002861791,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-Kraft Pouch Bag 25cm x 35cm without window (UVA Mountain Coffee Powder),4892105000003685255,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-Kraft Paper Bag with Rope Handle (M) 25x25x15.5cm (Mosvold),4892105000067396937,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-Non-Woven Dark Beige Box Bag 25.5cm x 35cm x 12cm (The Garden Fushion),4892105000067416199,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-Kraft Box Without Window (150x100x90)mm (La Cream),4892105000002816894,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-Kraft Pouch Bag 18cm x 26cm without window (UVA Mountain Coffee Powder),4892105000067416332,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-12Oz Plastic Cup (350ml) (Berry lips),4892105000067588535,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-Kraft Paper Bag with Rope Handle (XXL) 400x330x160mm (Food Print),4892105000065176792,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-Kraft Paper Bag with Rope Handle 300x230x150cm (Beldon),4892105000021622175,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-Lid For 450ml AF Container (Beldon),4892105000011310181,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-Kraft Paper Bag with Rope Handle (XL) 340x330x160mm (Best Compliments),4892105000067707298,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,PRINTSERV-White Greaseproof Paper 28x38cm With Print (Cafe la via),4892105000057729751,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,PRINTSERV-12oz Plastic Cup (350ml) With Print (Salem RR Biriyani),4892105000060541086,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-Kraft Paper Bag with Rope Handle (XL) 340x330x160mm (Agnus Unawatuna),4892105000002876001,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-Non-Woven Cream Beige Cake Bag (M) 29cm x 34cm x 31.5cm (Mandalas Cafe),4892105000068094923,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-Kraft Paper Bag (S) 240x140x80mm (Kemara),4892105000002883068,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-16Oz Plastic cup (475ml) (Piccadilly Parlour),4892105000003908490,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-22Oz Plastic Cup (650ml) (Cafe Ora),4892105000003305684,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-16Oz Plastic Cup (475ml) (LLN),4892105000068931482,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-16oz Plastic Cup (475ml) (Thai Shack),4892105000052407092,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,PRINTSERV-Pizza Box 30 x 30 x 4cm (12 inch) With Print (Heritage Cafe & Bistro),4892105000072839837,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-Kraft Box Plain 1200ml (180x120x50)mm (Duni's Hoppers),4892105000003923926,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-Kraft Paper Bag (M) 280x180x120mm (Pedlars Inn),4892105000003837038,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-12Oz Plastic Cup (350ml) (The Burger Depot),4892105000072856754,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-8oz D/Wall Kraft Cup (Azuri Bay),4892105000003908159,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,PRINTSERV-12Oz Plastic Cup (350ml) With Print (Pounders Burgers),4892105000003882449,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-Greaseproof Paper Sh008 (Treats),4892105000021561001,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-Greaseproof Paper Sha014 (Treats),4892105000011451364,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-12oz D/Wall Kraft Cup (Island Tea Company),4892105000002915706,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-12oz D/Wall Kraft Cup (Ceylon Coffee Club),4892105000005071437,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-Kraft Cake Box (12x12x4) Inch (La Cream),4892105000061510962,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-Kraft Corrugated Cake Box 12 x 12 x 4.5 inch (Double Tree Hilton),4892105000002861669,OPD-Offset > SHPS,2,2,last,2,2,Screen Printing Unit:2
+SHPS,CP-Lid For 1400ml AF Round Container (Penta Pizza),4892105000064996906,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,PRINTSERV-Kraft Paper Bag (L) 300x275x160mm with Die Cut Handle With Print (Heritage Cafe),4892105000086393045,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,PRINTSERV-Kraft Pouch Bag 12cm x 20cm Without Window With Print (Kiyota Coffee),4892105000002912158,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,PRINTSERV-16Oz Plastic Cup (475ml) With Print (The brownie Station),4892105000063407248,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,CP-Lid For 750ml AF Container (Highway Fusion),4892105000099975043,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,PRINTSERV-Kraft Pouch Bag 100g With print (Arabica Coffee Beans),4892105000064737499,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,PRINTSERV-16Oz Plastic Cup With Print (Ibsons Choice Cafe),4892105000046784202,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,PRINTSERV-12oz Plastic Cup (350ml) With Print (Jollybeez),4892105000002816366,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,PRINTSERV-16Oz Plastic Cup (475ml) With Print (Julee Cafe),4892105000061540970,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,PRINTSERV-Kraft Paper Bag (L) 300x275x160mm with Die Cut Handle With Print (Muscle bay),4892105000109172288,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,PRINTSERV-White Greaseproof Paper 6x6 inches With Print (Diwerse),4892105000110367042,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,PRINTSERV-12OZ plastic cup (350ml) With Print (Bert & Belle Hiriketiya),4892105000111014128,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,PRINTSERV-12oz Plastic Cup (350ml) With Print (Divide),4892105000111225591,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,PRINTSERV-22oz Plastic Cup (650ml) With Print (Divide),4892105000111259005,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,PRINTSERV-Pizza Box 33 x 33 x 4cm (13 inch) With Print (Bacuzzi Hiriketiyah),4892105000111867832,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,PRINTSERV-Pizza Box 20 x 20 x 4cm (8 inch) With Print (Bacuzzi Hiriketiyah),4892105000111867889,SHPS,1,1,only unit,2,2,Screen Printing Unit:2
+SHPS,SP-White Cake Box 10x10x5 Inch(Radisson),4892105000004659001,SHPS > PackPro,1,2,first,1,2,OPD - PackPro Unit:2
+SHPS,SP-Chicken Bucket + Lid (SFC),4892105000003267106,SHPS > PackPro,1,2,first,1,2,OPD - MacPro Unit:1;OPD - PackPro Unit:1
+SHPS,CP-Kraft pouch bag with Window 10x15cm (Vegi Pot),4892105000004884973,SHPS,1,1,only unit,1,2,Screen Printing Unit:2
+SHPS,CP-12Oz Plastic Cup (350ml) (JAGRO FOODS),4892105000100232011,SHPS,1,1,only unit,1,2,Screen Printing Unit:2
+SHPS,CP-White Glass Cover 9.5 (Blue Water),4892105000101183347,SHPS,1,1,only unit,1,2,Screen Printing Unit:2
+SHPS,CP-12Oz Plastic Cup (350ml) (Malay hotel),4892105000102067344,SHPS,1,1,only unit,1,2,Screen Printing Unit:2
+SHPS,CP-22Oz Plastic Cup (650ml) (Biriyani Darbar),4892105000102117238,SHPS,1,1,only unit,1,2,Screen Printing Unit:2
+SHPS,CP-8oz D/Wall Kraft Cup (Mandalas Cafe),4892105000104394437,SHPS,1,1,only unit,1,2,Screen Printing Unit:2
+SHPS,CP-Kraft Box 165x105x50mm With Window (Mandalas Cafe),4892105000104611030,SHPS,1,1,only unit,1,2,Screen Printing Unit:2
+SHPS,CP-12Oz Plastic Cup (350ml) (Pizza house),4892105000104638544,SHPS,1,1,only unit,1,2,Screen Printing Unit:2
+SHPS,CP-16Oz Plastic cup (475ml) (Sellam Sips),4892105000105411616,SHPS,1,1,only unit,1,2,Screen Printing Unit:2
+SHPS,CP-Kraft Cake Box (8x8x4) Inch (La Creme),4892105000002883601,SHPS,1,1,only unit,1,2,Screen Printing Unit:2
+SHPS,CP-Pizza Box 25 x 25 x 4cm (10 inch) (Hideaway Restaurant),4892105000011379081,SHPS,1,1,only unit,1,2,Screen Printing Unit:2
+SHPS,CP-22Oz Plastic Cup (650ml) (Wolverine Hub),4892105000109407101,SHPS,1,1,only unit,1,2,Screen Printing Unit:2
+SHPS,CP-12Oz Plastic Cup (350ml) (Ceylon Kahawa Cafe),4892105000109519395,SHPS,1,1,only unit,1,2,Screen Printing Unit:2
+SHPS,CP-Kraft Paper Bag with Rope Handle (XL) 340x330x160mm (Bohemian Quest),4892105000003305154,SHPS,1,1,only unit,1,2,Screen Printing Unit:2
+SHPS,CP-16Oz D/Wall Black Paper Cup (Coffee Manor),4892105000064423001,SHPS,1,1,only unit,1,2,Screen Printing Unit:2
+SHPS,CP-Kraft Paper Bag (M) 280X180X120mm (Taru management),4892105000054687176,SHPS,1,1,only unit,1,2,Screen Printing Unit:2
+SHPS,CP-Pizza Box 25 x 25 x 4cm (10 inch) (City Cool Bar),4892105000063988001,SHPS,1,1,only unit,1,2,Screen Printing Unit:2
+SHPS,CP-Kraft Paper Bag with Rope Handle (L) 320x250x110mm (Nami Cafe),4892105000060634252,SHPS,1,1,only unit,1,2,Screen Printing Unit:2
+SHPS,CP-Kraft Pouch Bag 15cm X 21cm Without Window (PMD),4892105000011886325,SHPS,1,1,only unit,1,2,Screen Printing Unit:2
+SHPS,CP-12oz D/Wall Paper Cup Black (The Coffee Manor),4892105000110367449,SHPS,1,1,only unit,1,2,Screen Printing Unit:2
+SHPS,PRINTSERV-12Oz D/Wall Kraft Cup With Print (Fusion 14),4892105000110911457,SHPS,1,1,only unit,1,2,Screen Printing Unit:2
+SHPS,PRINTSERV-16Oz Plastic cup (475ml) With Print (Fusion 14),4892105000110911507,SHPS,1,1,only unit,1,2,Screen Printing Unit:2
+SHPS,CP-Greaseproof Paper Sh023 (Treats),4892105000002869096,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-150ml Kraft Dessert Cup (Piccadilly Parlour),4892105000002876183,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-12Oz Plastic Cup (350ml) (Celestial),4892105000047888425,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-Kraft Paper Bag (L) 300x275x160mm with Die Cut Handle With Print (Pedlars Corner Cafe),4892105000002926200,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Lid For 450ml AF Container (Angel Beach Hotel),4892105000004255228,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,SP-8oz D/Wall Kraft Paper Cup With Sleeve (Aman),4892105000002650111,MOBA-Cup > SHPS > OPD-Offset,2,3,middle,1,1,OPD - MacPro Unit:1
+SHPS,SP-12Oz D/Wall Kraft Paper Cup with Sleeve (Aman),4892105000065616251,MOBA-Cup > SHPS > OPD-Offset,2,3,middle,1,1,OPD - MacPro Unit:1
+SHPS,CP-White Sweet Pack With Dividers 22x21.5x4.5cm (Double Tree By Hilton),4892105000065176735,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-16Oz Plastic Cup (Cafe Lulu's),4892105000010986647,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-16Oz D/Wall White Paper Cup (Bean Box),4892105000065701183,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-8Oz D/Wall White Paper Cup (Bean Box),4892105000065701260,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-12Oz Plastic Cup (350ml) (Liquati),4892105000065722668,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Pouch Bag Square Bottom W/O Window Coffee Model (15x32.5x7.5)cm (Arabica Coffee),4892105000065709617,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,SP-Platter Box With Dividers (Street Burger),4892105000004529205,SHPS > OPD-Offset,1,2,first,1,1,OPD - MacPro Unit:1
+SHPS,CP-12oz Plastic Cup (350ml) (The Quartz 2nd 14),4892105000003351191,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag (L) 300X275X160mm (Hela Platters),4892105000065842651,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag (M) 280x180x120mm (Hela Platters),4892105000004106290,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-White Greaseproof Paper 11x15 inches (Hela Platters),4892105000004106543,OPD-Offset > SHPS,2,2,last,1,1,Screen Printing Unit:1
+SHPS,CP-8Oz D/Wall Kraft Cup (Caffco Cafe),4892105000004556247,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Pizza Box 30 x 30 x 4cm (12 inch) (Club Palm Bay),4892105000065912631,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Pizza Box 30 x 30 x 4cm (12 inch) (The Palms Fort Resorts),4892105000065912704,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Pizza Box 33 x 33 x 4cm (13 inch) (Double Chees),4892105000057139361,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-12oz Plastic Cup (350ml) (Singhai),4892105000011379589,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-12Oz D/Wall Kraft Cup (Caffco Cafe),4892105000067236051,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-8Oz D/Wall White Paper Cup (Salt House Hirikatiya),4892105000066137105,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-12Oz Plastic Cup (350ml) (Mond),4892105000066070017,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag (L) 300x275x160mm (Biriyani Dabba),4892105000038673120,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag (XL) 400x330x150mm (Biriyani Dabba),4892105000038673293,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Cake Box (10x10x4) Inch (City Cake),4892105000013822581,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Cake Bag With Rope Handle 13x13x13 inch (City Cake),4892105000004255540,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Non-Woven White Laundry Bag with Rope 57cm x 45cm (75gsm) (Beldon),4892105000066165103,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-16Oz Plastic Cup (475ml) (Red Cafe),4892105000066185231,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag 300x275x160mm With Die Cut Handle (MBC) ,4892105000004171021,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Box Plain 1200ml (180x120x50)mm (Solis Hotel),4892105000067194091,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag with Rope Handle (L) 320x250x110mm (The Container Store),4892105000067321137,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag with Rope Handle (M) 25x25x15.5cm (The Container Store),4892105000067321230,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag with Rope Handle (S) 21x19x12cm (The Container Store),4892105000067340017,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-16Oz S/Wall Kraft Paper Cup (Solt House Hirikatiya),4892105000067385193,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-12oz Plastic Cup (350ml) (Meraki),4892105000003351283,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-16Oz Plastic Cup (475ml) (Ceylon Stories),4892105000067385328,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-12Oz Plastic Cup (350ml) (The Koththu Factory),4892105000067396031,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Pizza Box 28 x 28 x 4cm (11 inch) (Caffco Cafe),4892105000067473273,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag with Rope Handle (L) 320x250x110mm (Food Print),4892105000065350011,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Lid For 750ml AF Container (Biriyani Darbar),4892105000067643073,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Lid For 660ml AF Container (Biriyani Darbar),4892105000043506611,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-8oz D/Wall Kraft Cup (Coffe Luv),4892105000067643994,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-12oz D/Wall Paper Cup White (Beach Club Induruwa),4892105000067681908,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Non-Woven Dark Beige Box Bag 25.2cm x 20.5cm x 13.5cm (Saravana Bavan),4892105000067707051,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag (L) 300x275x160mm with Die Cut Handle (Thariq & Aysha),4892105000068029011,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag with Diecut Handle 300mmX275mmX160mm (Flow Cafe),4892105000005200788,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Cake Bag 9.5x9.5x9.5 Inch (Moments),4892105000003822964,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag With Rope Handle 280x180x120mm (Kemara),4892105000004556012,OPD-Offset > SHPS,2,2,last,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag (L) 300x275x160mm (Beach Club Induruwa),4892105000068144011,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Lid For 900ml AF Container (Artisan Diletio),4892105000068144580,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Lid For 1200ml AF Container (Artisan Diletio),4892105000068363102,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Pizza Box 33 x 33 x 4cm (13 inch) (The King),4892105000068377133,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-12oz Plastic Cup (350ml) (German Bakery),4892105000027977789,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Pizza Box 30 x 30 x 4cm (12 inch) (The Blue Water),4892105000068600351,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Cake Box (10x10x4) Inch (Hilton Yala),4892105000068600782,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Cake Box (10x10x4) Inch (Blackpool Resort & Spa),4892105000056898314,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-12oz D/Wall Kraft Cup (The Natural Earth),4892105000004078681,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Pizza Box 30x30x4cm (12 Inch) (The Jam House),4892105000072742011,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag (XS) 200x120x70mm (The Jam House),4892105000072747802,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Box Plain 1200ml (180x120x50)mm (The Jam House),4892105000072832235,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag (L) 300x275x160mm with Die Cut Handle (Chill 99),4892105000072856083,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Counter Bag Flat Bottom Medium (28x12x10)cm (The Burger Depot),4892105000072856276,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Counter Bag Flat Bottom Large (37x12x3.5) cm (The Burger Depot),4892105000072856667,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-150ml Paper Cup White (The Burger Depot),4892105000072856839,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-Kraft Paper Bag (L) 300x275x160mm with Die Cut Handle With Print (Birds Resort Hambantota),4892105000034788123,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-16oz S/Wall Kraft Paper Cup (Sky Breeze),4892105000072838412,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-12oz D/Wall Kraft Cup (Sky Breeze),4892105000073035071,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-8oz D/Wall Kraft Cup (Koffilo),4892105000073035375,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-12oz D/Wall Kraft Paper Cup (Koffilo),4892105000073035471,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-12oz Plastic Cup (350ml) (Beldon),4892105000016300564,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Lid For 1400ml AF Round Container (Lebanon Chef Restaurant),4892105000002893418,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Lid For 700ml AF Round Container (Lebanon Chef Restaurant),4892105000002893247,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-12Oz Plastic Cup (350ml) (Damn Fine),4892105000073459720,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag with Rope Handle (L) 320x250x110mm (Radission),4892105000073449229,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-8oz S/Wall White Paper Cup (Cafe Cursor),4892105000073556735,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-12Oz Plastic Cup (350ml) (Latte),4892105000073606143,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-12Oz D/Wall Kraft Cup (Attha's),4892105000003970381,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag With Rope Handle 9.5X9.5X9.5inch (Coffee Council),4892105000073631031,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag with Rope Handle (L) 320x250x110mm (Mamba cafe),4892105000073631514,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag with Rope Handle (M) 25x25x15.5cm (Mamba cafe),4892105000073631591,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag 300X275X160mm With Die Cut Handle (Salt House Hirikatiya),4892105000003822590,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag 300X275X160mm With Die Cut Handle (Duni's Hoppers),4892105000003685432,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Black Pouch Bag W/Window 14X22CM (Cafe Cursor),4892105000073754079,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-16oz Kraft Soup Cup (Duni's Hoppers),4892105000002953160,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-8oz D/Wall Kraft Cup With Print (Seed Cafe),4892105000003361077,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Pizza Box 33 x 33 x 4cm (13 inch) (Grillo's),4892105000073826393,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Cake Bag 9.5 x 9.5 x 9.5 Inch With Rope Handle (Bluechip Leisure),4892105000073826623,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag (S) 240x140x80mm (MBC),4892105000002883190,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-12oz D/Wall Paper Cup Black (The Trees Cafe),4892105000055476770,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-8oz S/Wall White Cup (Beach Club Induruwa),4892105000074226025,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag (XS) 200x120x70mm (Malu Poke),4892105000056042743,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Pizza Box 28 x 28 x 4cm (11 inch) (The King),4892105000076871183,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-White Breakfast Box (Cocobay),4892105000009445337,PackPro > SHPS,2,2,last,1,1,Screen Printing Unit:1
+SHPS,CP-Pizza Box 33 x 33 x 4cm (13 inch) (Cocobay),4892105000076871286,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Box (170x145x50)mm (Kele yala resort),4892105000003685001,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Pizza Box 30 x 30 x 4cm (12 inch) (900 Degrees),4892105000011886008,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-16oz S/Wall Kraft Paper Cup (Muts),4892105000076843617,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-16Oz Plastic Cup (475ml) (Richmo Pizzeria),4892105000063892136,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-16oz Plastic Cup (475ml) (Chang),4892105000073035610,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-22Oz Plastic Cup (650ml) (Chang),4892105000073035681,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-8oz D/Wall Kraft Cup (Flamingo),4892105000005071596,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Pizza Box 30 x 30 x 4cm (12 inch) (Mambo’s Hotel),4892105000004800365,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-12oz D/Wall Kraft Cup (Heritage Cafe),4892105000086393381,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Pouch Bag 15x21cm Without Window (Kiyota Coffee),4892105000003362540,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Lid For 1200ml AF Container (Vally's),4892105000005200024,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Lid For 750ml AF Container (Vally's),4892105000005191817,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag with Rope Handle (L) 320x250x110mm (The Natural Earth),4892105000092720225,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-12oz D/Wall Kraft Cup (Skinny Tom's Deli),4892105000003323139,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-White Box 900ml (150x110x50)mm (Salt House Hirikatiya),4892105000002816130,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-12Oz Plastic Cup (350ml) (Muthu Bar),4892105000093072287,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-12oz Plastic Cup (350ml) (Coco & Date),4892105000052954690,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Cake Bag 13 x 13 x 13Inch (Skinny Tom's Deli),4892105000097346425,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Pouch Bag 25cm x 35cm without window (Colombo Coffee Company) Royal Blend,4892105000097346259,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-8Oz D/Wall Kraft Paper Cup (Denza),4892105000097413114,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Box Without Window (150X100X90)mm (La Creme),4892105000003658120,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag (L) 300x275x160mm (Brew Lounge),4892105000097424701,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag (M) 280x180x120mm (Brew Lounge),4892105000097424784,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-16oz Plastic Cup (475ml) (My Coffee),4892105000097474421,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-12Oz Plastic Cup (350ml) (My Coffee),4892105000099474190,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-Pizza Box 28x28x4cm (11 inch) With Print (Petti Petti Mirissa),4892105000003324533,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Pizza Box 28 x 28 x 4cm (11 inch) (Riff Hikkaduwa),4892105000002893532,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Lid For 900ml AF Container (KMP Restaurant),4892105000099975163,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Pizza Box 33 x 33 x 4cm (13 inch) (Chill Restaurant),4892105000002869011,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Corrugated Cake Box 14x14x4.5 Inch (Double Tree Hilton),4892105000100037440,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-150ml Kraft Dessert Cup (Coco and Cream),4892105000100037517,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-16Oz Plastic Cup (475ml) (The 2D Treat),4892105000100106602,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Box Plain 900ml (110x150x45)mm (Pedlars Corner Cafe),4892105000100209448,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Pizza Box 30x30x4cm (Sahana Urban Pizza),4892105000002893351,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-12Oz Plastic Cup (350ml) (Heritage Cafe),4892105000100238011,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-12oz Plastic Cup (350ml) (Brew Lounge),4892105000056210001,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-8oz D/Wall Kraft Cup (Brew Lounge),4892105000100238116,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-16Oz Plastic Cup (475ml) (Cafe Mamba Coffee),4892105000100238215,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-12Oz Plastic Cup (350ml) (Big Chef),4892105000100275280,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Lid For 750ml AF Container (Solis Hotel),4892105000002912051,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag with Rope Handle (XL) 340x330x160mm (Lost paradise),4892105000004933123,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Pizza Box 28 x 28 x 4cm (11 inch) (Mandara Hotel),4892105000100820734,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-150ml Kraft Dessert Cup (Bowl Cafe),4892105000100971001,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag (L) 300x275x160mm with Die Cut Handle (Mandara Hotels),4892105000101033225,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Lid For 1700ml AF Container (Highway Fusion),4892105000101033324,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Pouch Bag 18cm x 26cm without window (Baraka),4892105000005949075,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,SP-White Cake Box 12X12Xx5 Inch (Radisson),4892105000101357016,SHPS > PackPro,1,2,first,1,1,OPD - PackPro Unit:1
+SHPS,PRINTSERV-12Oz Plastic Cup (350ml) With Print (Finagle),4892105000101384151,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag with Rope Handle (L) 320x250x110mm (Teddies),4892105000101814306,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag (L) 300x275x160mm with Die Cut Handle (Amagi Lagoon Resort & SPA),4892105000002816203,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV - 14Oz Plastic Cup 750ml with Print (Dinemore) - DEMO,4892105000101998220,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-8oz D/Wall Paper Cup Black (Angel Cafe),4892105000102117061,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-16Oz Plastic Cup (475ml) (The Garden Fushion Cafe),4892105000065094363,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Pizza Box 30 x 30 x 4cm (12 inch) (Pharo),4892105000102172285,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Pizza Box 20 x 20 x 4cm (8 inch) (Pharo),4892105000102172366,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Pouch Bag W/window 10X15CM (Hs Ceylon),4892105000104611155,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Cake Box (145X145X90)mm (Regal Burger),4892105000104611233,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Pizza Box 33 x 33 x 4cm (13 inch) (ITC Hotel),4892105000104611434,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Pizza Box 25 x 25 x 4cm (10 inch) (ITC Hotel),4892105000104611477,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Box 145x145x90mm (Cafe Secret Alley),4892105000060634820,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag with Rope Handle (XL) 340x330x160mm (Stay Golden),4892105000105411665,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag with Rope Handle 30x23x15cm (Stay Golden),4892105000105411706,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag with Rope Handle (M) 25x25x15.5cm (Stay Golden),4892105000107607207,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag with Rope Handle (S) 21x19x12cm (Stay Golden),4892105000107607707,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Cake Bag with Rope Handle (11x11x11) inch (Stay Golden),4892105000107607869,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Cake Bag With Rope Handle 13x13x13 Inch (Stay Golden),4892105000107607913,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag (L) With Die Cut Handle 300x275x160mm (Me Colombo),4892105000004222068,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-White Glass Cover 9.5cm (Nuwa),4892105000108206006,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-White Glass Cover 10.5cm (Nuwa),4892105000108206060,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-12oz Plastic Cup (350ml) (Hyve Dessert Bar),4892105000037276164,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-12oz D/wall Kraft Cup (Hyve Dessert Bar),4892105000055671573,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-12oz Plastic Cup (350ml) With Print (Triton),4892105000011324001,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-12Oz Plastic Cup (350ml) (Sponge),4892105000109172957,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Match Box (Teddies),4892105000109345107,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-Kraft Pouch Bag 12cm x 20cm Without Window With Print (UVA Mountain Coffee Powder),4892105000109345154,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Pouch Bag 15cm x 21cm without window (UVA Mountain Coffee Powder),4892105000005048008,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag (M) 280x180x120mm (Bohemian Quest),4892105000109388738,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag (S) 240x140x80mm (Bohemian Quest),4892105000109388781,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-12Oz Plastic Cup (350ml) (Zomoto Restaurant),4892105000109445288,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Pizza Box 30 x 30 x 4cm (12 inch) (Cafe Noir),4892105000109580204,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Pizza Box 28 x 28 x 4cm (11 inch) (City Cool Bar),4892105000064037172,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-8oz D/Wall Kraft Cup (Vintage Restaurant),4892105000109885412,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-12oz Plastic Cup (350ml) (Nami cafe),4892105000046784833,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Pouch Bag 18cm X 26cm without window (PMD),4892105000011614941,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Pizza Box 20 x 20 x 4cm (8 inch) (DAAL PIZZA),4892105000110311904,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Pizza Box 25 x 25 x 4cm (10 inch) (DAAL PIZZA),4892105000110311933,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-12oz Plastic Cup (350ml) (Queensbury),4892105000110311962,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-12oz Plastic Cup (350ml) (Seed Horton Place),4892105000110556526,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-Kraft Paper Bag (L) 300x275x160mm (Caffco Cafe),4892105000002861846,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-12oz Plastic Cup (350ml) (Caffco Cafe),4892105000004536031,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV -12Oz Plastic Cup (350ml) With Print (Verandah),4892105000110803379,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,CP-12OZ plastic cup (350ml) (Zen Sips),4892105000110846004,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-12OZ plastic cup (350ml) With Print (Arlo's Hoppers),4892105000110846086,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-Kraft Paper Bag (L) 300x275x160mm with Die Cut Handle With Print (Kele Yala),4892105000110854006,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-White Greaseproof Paper 12x12 inches With print (Fusion 14),4892105000110911550,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-8oz D/Wall Kraft Cup With Print (Cafe1959),4892105000003908630,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-12oz Plastic Cup (350ml) With Print (Rustic Roast),4892105000111165006,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-Pizza Box 28 x 28 x 4cm (11 inch) With Print (Brizo Paradiso),4892105000111165055,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-Pizza Box 25 x 25 x 4cm (10 inch) With Print (Tenneese),4892105000111212066,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-Pizza Box 30 x 30 x 4cm (12 inch) With Print (Tenneese),4892105000111212116,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-12oz Plastic Cup (350ml) With Print (Tenneese),4892105000111212167,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-16oz Plastic Cup (475ml) With Print (Alata),4892105000111212231,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-Kraft Food Wrap 40cmx45cm With Print (Eight Eight),4892105000111225424,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-Pizza Box 20x20x4cm (8 inch) With Print (Ragha),4892105000111275372,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-12Oz Plastic Cup (350ml) With Print (Cafe1959),4892105000003908575,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-12Oz Plastic Cup (350ml) With Print (Luxx),4892105000064437153,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-12Oz Plastic cup (350ml) With Print (Lumin),4892105000111354212,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-Lid For 660ml AF Container With Print (Banana Arugambay),4892105000111470396,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-12oz Plastic Cup (350ml) With Print (Banana Arugambay),4892105000111470447,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-16oz Plastic Cup (475ml) With Print (Banana Arugambay),4892105000111470551,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-Kraft Paper Cake Bag with Rope Handle 13 x 13 x 13Inch With Print (Sheraton),4892105000002893162,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-Pizza Box 30 x 30 x 4cm (12 inch) With Print (Rose Oud),4892105000110854050,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-Kraft Paper Cake Bag 9.5 x 9.5 x 9.5 Inch With Rope Handle With Print (Bacuzzi Hiriketiyah),4892105000111867936,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-16Oz Plastic Cup (475ml) With Print (Cookiora),4892105000111902066,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-12oz Plastic Cup (350ml) With Print (Breeze Bay),4892105000111902145,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-12oz Plastic Cup (350ml) With Print (Acts 9),4892105000111921022,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-12oz Plastic Cup (350ml) With Print (Brew X),4892105000111921076,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-16oz Plastic Cup (475ml) With Print (Acropol),4892105000111958076,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-Kraft Box 1200ml With Print (Nature Trails Boutique),4892105000003704370,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-Kraft Box 900ml With Print (Nature Trails Boutique),4892105000003822001,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-White Pouch Bag 250g With Print (Arabica Coffee Beans),4892105000112341551,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-Kraft Pouch Bag 500g With Print (Arabica Coffee Beans),4892105000064737813,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-Pizza Box 30 x 30 x 4cm (12 inch) With Print (Kebab),4892105000064520846,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-Kraft Paper Bag (L) 300x275x160mm with Die Cut Handle With Print (YGGO SAS),4892105000112224610,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-Kraft Box Plain 700ml (150x100x45)mm With Print (Kebab),4892105000065135527,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-12Oz D/Wall Kraft Paper Cup With Print (Ibsons Choice cafe),4892105000112320481,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-12oz Plastic Cup (350ml) With Print (Muscle Bay),4892105000112341078,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-16oz Plastic Cup (475ml) With Print (Muscle bay),4892105000112341177,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-22oz Plastic Cup (650ml) With print (Muscle bay),4892105000112341243,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-16oz Plastic Cup (475ml) With Print (The Legends Lounge),4892105000112552422,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-12oz Plastic Cup (350ml) With print (The Legends Lounge),4892105000112552523,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-Kraft Cake Box (10x10x4) Inch With Print (La Cream),4892105000063807615,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-Pizza Box 28 x 28 x 4cm (11 inch) With Print (Milky wave),4892105000112653371,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-Pizza Box 33 x 33 x 4cm (13 inch) With Print (Pizza Goddess),4892105000065011034,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-Kraft Paper Bag (M) 280x180x120mm With Print (Grand Bell Hotel),4892105000002876660,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-22oz Plastic Cup (650ml) With Print (La Brasserie),4892105000112903644,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-Kraft Paper Bag (L) 300x275x160mm With Print (Pedlars Corner Cafe),4892105000112931218,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+SHPS,PRINTSERV-Pizza Box 28 x 28 x 4cm (11 inch) With Print (Daal Pizza),4892105000112931548,SHPS,1,1,only unit,1,1,Screen Printing Unit:1
+MOBA-Cup,BG - 8oz S/Wall White Paper Cup,4892105000023186001,MOBA-Cup,1,1,only unit,14,14,MOBA Unit:14
+MOBA-Cup,SP-12oz D/Wall White Paper Cup (Marriott),4892105000004170829,MOBA-Cup,1,1,only unit,8,14,MOBA Unit:14
+MOBA-Cup,SP-8oz D/wall White Paper Cup (Hut Cafe),4892105000009832050,MOBA-Cup,1,1,only unit,6,11,MOBA Unit:11
+MOBA-Cup,SP-8Oz D/Wall Kraft Paper Cup (Sponge),4892105000064736294,MOBA-Cup,1,1,only unit,6,11,MOBA Unit:11
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Grand Bell Hotel),4892105000003154054,MOBA-Cup,1,1,only unit,6,10,MOBA Unit:10
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Crepe Runner),4892105000003527142,MOBA-Cup,1,1,only unit,6,10,MOBA Unit:10
+MOBA-Cup,SP-8oz D/wall White Paper Cup (Grind Colombo),4892105000002291179,MOBA-Cup,1,1,only unit,5,10,MOBA Unit:10
+MOBA-Cup,SP-8Oz D/Wall Black Paper Cup (Street Barista Crew),4892105000064270723,MOBA-Cup,1,1,only unit,5,10,MOBA Unit:10
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Street Barista Crew),4892105000005287173,MOBA-Cup,1,1,only unit,5,10,MOBA Unit:10
+MOBA-Cup,SP-8oz D/Wall Kraft Paper Cup (Flamingo),4892105000003428013,MOBA-Cup,1,1,only unit,5,10,MOBA Unit:10
+MOBA-Cup,SP-12oz D/Wall White Paper Cup (Hilton Colombo),4892105000060951749,MOBA-Cup,1,1,only unit,5,10,MOBA Unit:10
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Brew),4892105000002650229,MOBA-Cup,1,1,only unit,5,9,MOBA Unit:9
+MOBA-Cup,SP-8oz D/ Wall White Paper Cup(Raddison),4892105000003431001,MOBA-Cup,1,1,only unit,4,8,MOBA Unit:8
+MOBA-Cup,SP-12Oz D/Wall White Paper Cup (Brew),4892105000065748027,MOBA-Cup,1,1,only unit,4,8,MOBA Unit:8
+MOBA-Cup,SP-12Oz D/Wall Kraft Paper Cup (Meridien),4892105000104600447,MOBA-Cup,1,1,only unit,4,8,MOBA Unit:8
+MOBA-Cup,SH-8oz S/Wall White Paper Cup,4892105000003979097,MOBA-Cup,1,1,only unit,7,7,MOBA Unit:7
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Slow Coffee Club),4892105000068459557,MOBA-Cup,1,1,only unit,3,6,MOBA Unit:6
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Coffee and  Waves),4892105000068490019,MOBA-Cup,1,1,only unit,3,6,MOBA Unit:6
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Croissant Coffee),4892105000068490082,MOBA-Cup,1,1,only unit,3,6,MOBA Unit:6
+MOBA-Cup,SP-12Oz D/Wall White Paper Cup (DoubleTree Hilton),4892105000003416829,MOBA-Cup,1,1,only unit,3,6,MOBA Unit:6
+MOBA-Cup,SP-8oz D/W Kraft Paper Cup (Fits Air),4892105000003538001,MOBA-Cup,1,1,only unit,3,6,MOBA Unit:6
+MOBA-Cup,SP-8Oz D/Wall White Paper Cup (Nook Cafe),4892105000064045209,MOBA-Cup,1,1,only unit,3,6,MOBA Unit:6
+MOBA-Cup,SH-12oz S/Wall White Paper Cup,4892105000004336042,MOBA-Cup,1,1,only unit,5,5,MOBA Unit:4;OPD - PackPro Unit:1
+MOBA-Cup,SH-8oz D/Wall Kraft Paper Cup,4892105000003142123,MOBA-Cup,1,1,only unit,4,5,(none):3;MOBA Unit:2
+MOBA-Cup,SP-12oz D/Wall White Paper Cup (TCO),4892105000029091965,MOBA-Cup,1,1,only unit,3,5,MOBA Unit:5
+MOBA-Cup,SP-8Oz D/Wall White Paper Cup (My Coffee),4892105000083278211,MOBA-Cup,1,1,only unit,3,5,MOBA Unit:5
+MOBA-Cup,SP-8Oz D/Wall White Paper Cup (Sponge),4892105000064751059,MOBA-Cup,1,1,only unit,2,4,MOBA Unit:4
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Bunch Cafe),4892105000065176973,MOBA-Cup,1,1,only unit,2,4,MOBA Unit:4
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Damn Fine Coffee),4892105000003909133,MOBA-Cup,1,1,only unit,2,4,MOBA Unit:4
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Radicle),4892105000022870192,MOBA-Cup,1,1,only unit,2,4,MOBA Unit:4
+MOBA-Cup,SP-12oz D/Wall  Black Paper Cup (The Coffee Manor),4892105000005165142,MOBA-Cup,1,1,only unit,2,4,MOBA Unit:4
+MOBA-Cup,Sp-8oz D/Wall White Paper Cup (Mamba Cafe),4892105000003702039,OPD-Offset > MOBA-Cup,2,2,last,2,4,MOBA Unit:4
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Kaffyn),4892105000067519570,MOBA-Cup,1,1,only unit,2,4,MOBA Unit:4
+MOBA-Cup,SP-8oz D/wall White Paper Cup(Twin Fin),4892105000004455763,MOBA-Cup,1,1,only unit,2,4,MOBA Unit:4
+MOBA-Cup,SP-12oz D/Wall White Paper Cup (ULU),4892105000068597922,MOBA-Cup,1,1,only unit,2,4,MOBA Unit:4
+MOBA-Cup,SP-12Oz D/Wall Kraft Paper Cup (Donna),4892105000085529039,MOBA-Cup,1,1,only unit,2,4,MOBA Unit:4
+MOBA-Cup,SP-12Oz D/Wall Kraft Paper Cup (Flamingo),4892105000012013001,MOBA-Cup,1,1,only unit,2,4,MOBA Unit:4
+MOBA-Cup,SP-12oz D/Wall White Paper Cup (Hilton Yala),4892105000004293669,MOBA-Cup,1,1,only unit,2,4,MOBA Unit:4
+MOBA-Cup,SP-8Oz D/Wall White Paper Cup (Malkoha),4892105000100221162,MOBA-Cup,1,1,only unit,2,4,MOBA Unit:4
+MOBA-Cup,SP-12Oz D/ Wall White Paper Cup (Raddison),4892105000101994371,MOBA-Cup,1,1,only unit,2,4,MOBA Unit:4
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Sheraton),4892105000003154016,MOBA-Cup,1,1,only unit,2,4,MOBA Unit:4
+MOBA-Cup,SP-12Oz D/Wall White Paper Cup with Foiling (Jata Brew),4892105000110072052,MOBA-Cup,1,1,only unit,2,4,MOBA Unit:4
+MOBA-Cup,SP-8Oz D/Wall White Paper Cup with Foiling (Jata Brew),4892105000110072108,MOBA-Cup,1,1,only unit,2,4,MOBA Unit:4
+MOBA-Cup,SP-12oz D/Wall White Paper Cup (Hello Hot),4892105000068101061,MOBA-Cup,1,1,only unit,3,3,MOBA Unit:3
+MOBA-Cup,SP-8oz D/Wall Black Paper Cup (The Trees Cafe),4892105000041625405,MOBA-Cup,1,1,only unit,2,3,MOBA Unit:3
+MOBA-Cup,SP-8oz D/Wall Blue Paper Cup (Radicle),4892105000022870241,MOBA-Cup,1,1,only unit,2,3,MOBA Unit:3
+MOBA-Cup,SH-8oz D/Wall Black Paper Cup,4892105000003154035,MOBA-Cup,1,1,only unit,2,3,MOBA Unit:3
+MOBA-Cup,SP-12oz S/Wall Black Paper Cup (The Trees Cafe),4892105000057108481,MOBA-Cup,1,1,only unit,2,3,MOBA Unit:3
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Durdens),4892105000004293608,MOBA-Cup,1,1,only unit,2,3,MOBA Unit:3
+MOBA-Cup,SP-12oz D/Wall Kraft Paper Cup (Island Tea Company),4892105000003416921,MOBA-Cup,1,1,only unit,2,3,MOBA Unit:3
+MOBA-Cup,SP-12oz D/Wall Kraft Paper Cup (Ceylon Coffee Club),4892105000003416944,MOBA-Cup,1,1,only unit,2,3,MOBA Unit:3
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (BARISTA)-Express,4892105000004054228,MOBA-Cup,1,1,only unit,2,3,MOBA Unit:3
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Bert & Belle),4892105000111123389,MOBA-Cup,1,1,only unit,2,3,MOBA Unit:3
+MOBA-Cup,SH-8oz D/Wall White Paper Cup,4892105000011455948,MOBA-Cup > MOBA,1,2,first,2,2,MOBA Unit:2
+MOBA-Cup,SH-12oz D/Wall Kraft Paper Cup,4892105000003142104,MOBA-Cup,1,1,only unit,2,2,MOBA Unit:2
+MOBA-Cup,SP-12Oz D/Wall White Paper Cup (Cinnamon Red With Season's),4892105000067831095,MOBA-Cup,1,1,only unit,2,2,MOBA Unit:2
+MOBA-Cup,SP-12Oz D/Wall White Paper Cup (Cinnamon Red With Santa),4892105000067831156,MOBA-Cup,1,1,only unit,2,2,MOBA Unit:2
+MOBA-Cup,SH-12Oz D/Wall White Paper Cup,4892105000064330239,MOBA-Cup,1,1,only unit,2,2,MOBA Unit:2
+MOBA-Cup,SP-12Oz D/Wall White Paper Cup (Burley's),4892105000002490044,MOBA-Cup,1,1,only unit,2,2,MOBA Unit:2
+MOBA-Cup,BG - 12oz D/Wall White Paper Cup,4892105000110266652,MOBA-Cup,1,1,only unit,2,2,MOBA Unit:2
+MOBA-Cup,SP-12Oz D/Wall White Paper Cup (Bacuzzi Restaurant),4892105000064623440,MOBA-Cup > MOBA,1,2,first,1,2,MOBA Unit:2
+MOBA-Cup,SP-8Oz D/Wall White Paper Cup (Mond),4892105000065921782,MOBA-Cup > PCU(cup),1,2,first,1,2,MOBA Unit:2
+MOBA-Cup,SP-8Oz D/Wall White Paper Cup (Luna Mews),4892105000066196775,MOBA-Cup > PCU(cup),1,2,first,1,2,MOBA Unit:2
+MOBA-Cup,SP-12oz D/Wall White Paper Cup (Flex),4892105000066024487,MOBA-Cup > MOBA,1,2,first,1,2,MOBA Unit:2
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Artisan Diletto With Leaf),4892105000067195291,MOBA-Cup > MOBA,1,2,first,1,2,MOBA Unit:2
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Artisan Diletto With Bubble),4892105000067195356,MOBA-Cup > MOBA,1,2,first,1,2,MOBA Unit:2
+MOBA-Cup,SP-12oz D/Wall White Paper Cup (Artisan Diletto With Bubble),4892105000067195419,MOBA-Cup > MOBA,1,2,first,1,2,MOBA Unit:2
+MOBA-Cup,SP-12oz D/Wall White Paper Cup (Artisan Diletto With Tree),4892105000067195484,MOBA-Cup > MOBA,1,2,first,1,2,MOBA Unit:2
+MOBA-Cup,SP-12oz D/Wall White Paper Cup (Artisan Diletto With Deer),4892105000067195547,MOBA-Cup > MOBA,1,2,first,1,2,MOBA Unit:2
+MOBA-Cup,SP-12oz D/Wall Kraft Paper Cup (Ceylon Stories),4892105000067333119,MOBA-Cup > MOBA,1,2,first,1,2,MOBA Unit:2
+MOBA-Cup,SP-8oz D/wall Kraft Paper Cup (Flow Café),4892105000005104788,MOBA-Cup > PCU(cup),1,2,first,1,2,MOBA Unit:2
+MOBA-Cup,SP-8oz D/Wall Kraft Paper Cup (Hazel),4892105000004054323,MOBA-Cup > PCU(cup),1,2,first,1,2,MOBA Unit:2
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Kiri Kopi With Tricycle),4892105000062912764,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (La Cream),4892105000068006859,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Loulou Lane),4892105000068006974,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8oz D/Wall Kraft Paper Cup (Donna),4892105000068101228,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-12oz D/Wall Kraft Paper Cup (Salty Swamis),4892105000054873070,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-12oz S/Wall Black Paper Cup (Coffee Council),4892105000072736688,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-12oz D/wall White Paper Cup(Twin Fin),4892105000004455726,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Latte Ceylon With Bridge),4892105000073271983,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Latte Ceylon With Coconut Tree),4892105000073313046,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Latte Ceylon With Sea),4892105000073313109,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Latte Ceylon With Logo),4892105000073313172,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8Oz D/Wall White Paper Cup (11-Eleven),4892105000073444079,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-12Oz S/Wall White Paper Cup (Mama's Brownies),4892105000073442205,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8Oz D/W Kraft Paper Cup (Top Shelf),4892105000073636450,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Cafe Chocolate),4892105000073741047,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-12Oz D/W Kraft Paper Cup (Top Shelf),4892105000073790515,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8oz D/Wall Kraft Paper Cup (Salty Swamis),4892105000027757482,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8Oz D/Wall White Paper Cup (Brew Creed),4892105000074170999,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-12Oz D/Wall White Paper Cup (Brew Creed),4892105000074215108,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-12Oz D/Wall Kraft Paper Cup (Mutts),4892105000074492737,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8Oz D/Wall Kraft Paper Cup (Mutts),4892105000074492916,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8Oz D/Wall White Paper Cup (Muthu Bar),4892105000075084711,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Latte Ceylon With Building),4892105000075155643,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8Oz D/Wall White Paper Cup (Coco & Date),4892105000099466772,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8Oz D/Wall White Paper Cup (Tasha),4892105000086385084,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8Oz D/Wall White Paper Cup (Fika Deli With Yellow),4892105000099525681,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Bayside Breeze),4892105000101031711,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8oz D/Wall Black Paper Cup (Cafe Noir),4892105000011233452,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8Oz D/Wall White Paper Cup (Finagle),4892105000101259011,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-12Oz D/Wall White Paper Cup (Finagle),4892105000101259080,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-12Oz D/ Wall White Paper Cup (Cielo),4892105000101671469,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8Oz D/Wall White Paper Cup (Pranaya),4892105000101961259,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Daily Dough),4892105000063816689,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-12oz D/Wall White Paper Cup (Daily Dough),4892105000063816606,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-12oz D/Wall White Paper Cup With Sleeve (ULU),4892105000102119420,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8Oz D/Wall Kraft Paper Cup (Meridien),4892105000104600394,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8Oz D/Wall White Paper Cup (Steak House),4892105000104600493,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8oz D/Wall Kraft Paper Cup (Burley’s),4892105000003416852,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8Oz D/Wall White Paper Cup (Kopify),4892105000107611570,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-12oz D/Wall White Paper Cup (Keells),4892105000004510080,MOBA-Cup,1,1,only unit,1,2,(none):2
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Keells),4892105000004510115,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-12oz D/Wall White Paper Cup (Arachchi Restaurant  Anuradhapura),4892105000003542417,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8Oz D/ Wall White Paper Cup (Cielo),4892105000109077328,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8Oz D/Wall Black Paper Cup (Angel Cafe),4892105000109138186,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP- 12Oz D/Wall White Paper Cup (A&M Cup Cakes),4892105000109453006,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-12Oz D/Wall White Paper Cup (Ceylon Kahawa),4892105000109453058,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8Oz D/Wall White Paper Cup (Ceylon Kahawa),4892105000109453113,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Cafe Omeili),4892105000109530233,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Cafe Kumbuk),4892105000002286007,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8oz D/Wall Kraft Paper Cup (Koha),4892105000109954335,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-12Oz D/Wall White Paper Cup (Torta Cafe),4892105000110156117,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8Oz D/Wall White Paper Cup (Torta Cafe),4892105000110156165,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8Oz D/Wall White Paper Cup (Hazel),4892105000110207664,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Torpedo),4892105000110767006,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-12oz D/Wall White Paper Cup (Verandah),4892105000110228176,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8Oz D/Wall White Paper Cup (Verandah),4892105000110767674,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8Oz D/Wall White Paper Cup (La Brasserie),4892105000110819074,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-12Oz D/Wall White Paper Cup (La Brasserie),4892105000110819127,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-12Oz D/Wall White Paper Cup (Arlo's Hoppers),4892105000110888479,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-12oz D/Wall White Paper Cup (Alata),4892105000110884592,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8Oz D/Wall White Paper Cup (Stay Rustic),4892105000111163194,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8Oz S/Wall White Paper Cup (Funny Cook),4892105000111180026,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-12Oz D/Wall White Paper Cup (Ambewela),4892105000111185704,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8Oz D/Wall White Paper Cup (Ambewela),4892105000111185757,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Salty Swamis),4892105000111018006,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8Oz D/Wall White Paper Cup (Horton Place)-Maroon,4892105000111305726,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8Oz D/Wall White Paper Cup (Horton Place)-Cream,4892105000111305785,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8Oz D/Wall White Paper Cup (Acts 9),4892105000111411247,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8Oz D/Wall White Paper Cup (Banana Arugambay),4892105000111499405,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-12Oz D/Wall White Paper Cup (Banana Arugambay),4892105000111499458,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8Oz D/Wall White Paper Cup (Cafe Plus),4892105000111690006,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-12Oz D/Wall White Paper Cup (Cafe Plus),4892105000111690077,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8Oz D/Wall White Paper Cup (Cookiora),4892105000111850308,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Brewx),4892105000112224334,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (The Legends Lounge),4892105000112466066,MOBA-Cup,1,1,only unit,1,2,MOBA Unit:2
+MOBA-Cup,SP-8oz D/Wall Kraft Paper Cup With Sleeve (Aman),4892105000002650111,MOBA-Cup > SHPS > OPD-Offset,1,3,first,1,1,OPD - MacPro Unit:1
+MOBA-Cup,SP-12Oz D/Wall Kraft Paper Cup with Sleeve (Aman),4892105000065616251,MOBA-Cup > SHPS > OPD-Offset,1,3,first,1,1,OPD - MacPro Unit:1
+MOBA-Cup,SP-8Oz D/Wall White Paper Cup (Red Cafe),4892105000066168603,MOBA-Cup > MOBA,1,2,first,1,1,MOBA Unit:1
+MOBA-Cup,SP-12Oz D/Wall White Paper Cup (Red Cafe),4892105000066168678,MOBA-Cup > MOBA,1,2,first,1,1,MOBA Unit:1
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Kiri Kopi With Tree),4892105000072468870,MOBA-Cup,1,1,only unit,1,1,MOBA Unit:1
+MOBA-Cup,SP-8Oz D/Wall Kraft Paper Cup (Cafe Secret),4892105000077817415,MOBA-Cup,1,1,only unit,1,1,MOBA Unit:1
+MOBA-Cup,SH-12oz D/Wall Black Paper Cup,4892105000005104918,MOBA-Cup,1,1,only unit,1,1,MOBA Unit:1
+MOBA-Cup,SP-12oz D/Wall Black Paper Cup (The Trees Cafe),4892105000057108428,MOBA-Cup,1,1,only unit,1,1,MOBA Unit:1
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Burley’s),4892105000003431181,MOBA-Cup > MOBA,1,2,first,1,1,MOBA Unit:1
+MOBA-Cup,SH-12oz R/Wall Kraft Paper Cup,4892105000011152236,MOBA-Cup,1,1,only unit,1,1,MOBA Unit:1
+MOBA-Cup,BG - 8oz D/Wall White Paper Cup,4892105000110266644,MOBA-Cup,1,1,only unit,1,1,MOBA Unit:1
+MOBA-Cup,SP-12oz D/Wall White Paper Cup (Sheraton),4892105000000298535,MOBA-Cup > PCU(cup),1,2,first,1,1,MOBA Unit:1
+MOBA-Cup,SP-8Oz D/Wall White Paper Cup (Vanni inn),4892105000111690245,MOBA-Cup,1,1,only unit,1,1,MOBA Unit:1
+MOBA-Cup,SP-8oz D/Wall White Paper Cup (Plus Nine Four),4892105000112709165,MOBA-Cup,1,1,only unit,1,1,MOBA Unit:1
+MOBA-Cup,SP-12Oz D/Wall White Paper Cup (Wildore),4892105000112709810,MOBA-Cup,1,1,only unit,1,1,MOBA Unit:1
+MOBA-Cup,SP-8oz D/Wall Black Paper Cup (Cafe A.K.O),4892105000112911094,MOBA-Cup,1,1,only unit,1,1,MOBA Unit:1
+MOBA-Cup,SP-12oz D/Wall Black Paper Cup (Cafe A.K.O),4892105000112911153,MOBA-Cup,1,1,only unit,1,1,MOBA Unit:1
+MOBA-Cup,SP-8oz D/Wall Kraft Paper Cup (Drifter),4892105000112897063,MOBA-Cup,1,1,only unit,1,1,MOBA Unit:1
+MOBA-Cup,SP-12oz D/Wall Kraft Paper Cup (Drifter),4892105000112897107,MOBA-Cup,1,1,only unit,1,1,MOBA Unit:1
+MOBA-Cup,SP-8Oz D/Wall Kraft Paper Cup (Brown Sugar),4892105000112897417,MOBA-Cup,1,1,only unit,1,1,MOBA Unit:1
+MOBA-Cup,SP-12Oz D/Wall Kraft Paper Cup (Brown Sugar),4892105000112897481,MOBA-Cup,1,1,only unit,1,1,MOBA Unit:1
+PSU,Paper White Straw 6mm x 20cm (Packed),4892105000001078081,PSU,1,1,only unit,126,140,Paper Straw Unit:140
+PSU,Paper White Straw 6mm x 20cm Imported (Packed),4892105000001508001,PSU,1,1,only unit,45,45,(none):45
+PSU,Paper Straw White 8mm X 20cm SPS,4892105000003220073,PSU,1,1,only unit,36,43,(none):36;Paper Straw Unit:7
+PSU,Paper Straw White 6mm X 20cm  SPS,4892105000000149003,PSU,1,1,only unit,35,35,Paper Straw Unit:35
+PSU,Flexible White Straw 6mm x 24cm (packed),4892105000001818460,PSU,1,1,only unit,29,29,Paper Straw Unit:29
+PSU,Paper Straw White 8mm X 25cm SPS,4892105000003387502,PSU,1,1,only unit,7,7,(none):7
+PSU,Paper Kraft Straw 6mm x 20cm,4892105000043736554,PSU,1,1,only unit,6,6,Paper Straw Unit:6
+RWU,Chefs Choice Cling Film 45cmX300m (21),4892105000001034369,RWU,1,1,only unit,85,89,(none):89
+RWU,ST-Cling Film 45cmX600m,4892105000001059009,RWU,1,1,only unit,77,79,(none):79
+RWU,Chefs Choice Cling Film 45cmX600m (21),4892105000001034145,RWU,1,1,only unit,17,17,(none):17
+RWU,Chefs Choice Biodegradable Cling Film (45x300) (21),4892105000000983023,RWU,1,1,only unit,9,9,(none):9
+RWU,Chefs Choice Cling Film PE 45CMX300M (21),4892105000001723206,RWU,1,1,only unit,7,7,(none):7
+RWU,Chefs Choice Biodegradable Cling Film 30cm x 10m (21),4892105000001034055,RWU,1,1,only unit,6,6,(none):6
+RWU,SH-Super Pack Cling Film 45cm x 20.4m,4892105000064873645,PackPro > RWU,2,2,last,5,5,Rewinding Unit:5
+RWU,Chefs Choice Biodegradable Cling Film 45x10m (BIO),4892105000001034082,PackPro > RWU,2,2,last,4,4,(none):4
+RWU,ST-Cling Film 45cmX300m,4892105000001931223,RWU,1,1,only unit,4,4,(none):4
+RWU,Chefs Choice Cling Film 45cmX30m,4892105000013802023,PackPro > RWU,2,2,last,3,3,Rewinding Unit:3
+RWU,Chefs Choice Cling Film 30cmX300m (21),4892105000001486001,RWU,1,1,only unit,1,1,Rewinding Unit:1
+MOBA-Punch,SP-Kraft Box 1200ml (180x120x50)mm (Cafe 173),4892105000067119110,MOBA-Punch,1,1,only unit,7,12,MOBA Punching Unit:10;OPD - MacPro Unit:2
+MOBA-Punch,SP-Kraft Box 700ml (150x100x45)mm (Cafe 173),4892105000067119041,MOBA-Punch,1,1,only unit,6,12,MOBA Punching Unit:10;OPD - MacPro Unit:2
+MOBA-Punch,SP-700ml White Box (Thoma),4892105000003267171,MOBA-Punch,1,1,only unit,6,9,MOBA Punching Unit:8;OPD - MacPro Unit:1
+MOBA-Punch,SP-1200 ML Kraft Box (feast),4892105000004376041,MOBA-Punch,1,1,only unit,4,8,MOBA Punching Unit:8
+MOBA-Punch,SP-Kraft Box 900ml (110x150x45)mm(Kahabath Gedara),4892105000000298581,MOBA-Punch,1,1,only unit,4,7,OPD - MacPro Unit:4;MOBA Unit:2;MOBA Punching Unit:1
+MOBA-Punch,SP-Kraft Box 1200ml (180x120x50)mm(Salem RR Biriyani ),4892105000001800015,MOBA-Punch,1,1,only unit,4,7,MOBA Punching Unit:6;OPD - MacPro Unit:1
+MOBA-Punch,SP-White Box 1600ml (195x140x65)mm (Thoma),4892105000097435736,MOBA-Punch,1,1,only unit,4,6,MOBA Punching Unit:6
+MOBA-Punch,SP-Kraft Box 900ml (165x115x50)mm (Chilis),4892105000064775270,MOBA-Punch,1,1,only unit,3,6,OPD - MacPro Unit:4;MOBA Punching Unit:2
+MOBA-Punch,SP-Kraft Box 900ml (TCO),4892105000002077001,MOBA-Punch,1,1,only unit,3,6,MOBA Punching Unit:4;OPD - MacPro Unit:2
+MOBA-Punch,SP-Kraft Box 1200ml (180x120x50)mm (Sinhara Company),4892105000068101337,MOBA-Punch,1,1,only unit,3,6,MOBA Punching Unit:6
+MOBA-Punch,SP-Kraft Box 1200ml (180x120x50)mm (Ladla),4892105000074072399,MOBA-Punch,1,1,only unit,3,5,MOBA Punching Unit:5
+MOBA-Punch,SP-Kraft Box 900ml (165x115x50) mm (Cafe 173),4892105000102177913,MOBA-Punch,1,1,only unit,3,5,MOBA Punching Unit:5
+MOBA-Punch,SP-Kraft Box 1600ml (195x140x65)mm (Delight Full Pack),4892105000064201772,MOBA-Punch,1,1,only unit,3,4,MOBA Punching Unit:3;OPD - MacPro Unit:1
+MOBA-Punch,SP-Kraft Box 1600ml (195x140x65)mm (Cafe 173),4892105000065994087,MOBA-Punch,1,1,only unit,2,4,OPD - MacPro Unit:2;MOBA Punching Unit:2
+MOBA-Punch,SP-Kraft Box 900ml (165x115x50) mm (Little Ceylon),4892105000067554128,MOBA-Punch,1,1,only unit,2,4,OPD - MacPro Unit:2;MOBA Punching Unit:2
+MOBA-Punch,SP-Kraft Box 1200ml (The Lake Hotel),4892105000011152857,MOBA-Punch,1,1,only unit,2,4,MOBA Punching Unit:4
+MOBA-Punch,SP-Kraft Box 1600ml (The Lake Hotel),4892105000011152812,MOBA-Punch,1,1,only unit,2,4,MOBA Punching Unit:4
+MOBA-Punch,SP-Kraft Box Plain 1600ml (195x140x65)mm (Ayla Cafe),4892105000011142709,MOBA-Punch,1,1,only unit,2,4,MOBA Punching Unit:4
+MOBA-Punch,SP- 900ml  Kraft  Box (Cuisine Colombo),4892105000000298232,MOBA-Punch,1,1,only unit,2,4,MOBA Punching Unit:4
+MOBA-Punch,SP-Kraft Box 900ml (165x115x50) (Heritage Cafe & Bistro),4892105000091863093,MOBA-Punch,1,1,only unit,2,4,MOBA Punching Unit:4
+MOBA-Punch,SP-SH Kraft Plain Box 900ml (165X115X50)mm(Chef Master),4892105000003619001,MOBA-Punch,1,1,only unit,2,4,MOBA Punching Unit:4
+MOBA-Punch,SP-Kraft Box Plain 1200 ml (180x120x50)mm (KMP Restaurant),4892105000097295422,MOBA-Punch,1,1,only unit,2,4,MOBA Punching Unit:4
+MOBA-Punch,SP-Kraft Box (215X145X60)mm SHA023 (Highway Fusion),4892105000097420858,MOBA-Punch,1,1,only unit,2,4,MOBA Punching Unit:4
+MOBA-Punch,SP-Kraft Plain Box 900ml (165X115X50)mm (The Sizzle),4892105000110087415,MOBA-Punch,1,1,only unit,2,4,MOBA Punching Unit:4
+MOBA-Punch,SP-Kraft Box 900ml (165x115x50)mm (Kottu Hut),4892105000111180122,MOBA-Punch,1,1,only unit,2,4,MOBA Punching Unit:4
+MOBA-Punch,SP-Kraft Box 1200ml (180x120x50)mm (Kottu Hut),4892105000111180177,MOBA-Punch,1,1,only unit,2,4,MOBA Punching Unit:4
+MOBA-Punch,SP-Kraft Box Plain 1600ml (195x140x65)mm (Cheese Lover),4892105000067954262,MOBA-Punch,1,1,only unit,2,3,MOBA Punching Unit:3
+MOBA-Punch,SP-Kraft Box 900ml (165x115x50)mm (Cheese Lover),4892105000067954313,MOBA-Punch,1,1,only unit,2,3,MOBA Punching Unit:3
+MOBA-Punch,SP-Kraft Box Plain 700 ml(150x100x45)mm(Spar),4892105000000298677,MOBA-Punch,1,1,only unit,2,3,MOBA Punching Unit:3
+MOBA-Punch,SP-Kraft Box 1600ml (195x140x65)mm (Ladla),4892105000074072298,MOBA-Punch,1,1,only unit,2,3,MOBA Punching Unit:2;MOBA Unit:1
+MOBA-Punch,SP-700ML Kraft Box (Pizza),4892105000000543168,MOBA-Punch,1,1,only unit,2,3,MOBA Unit:2;MOBA Punching Unit:1
+MOBA-Punch,SP-Kraft Box  Plain 1200 ml (180x120x50)mm (Chef Master),4892105000003619066,MOBA-Punch,1,1,only unit,2,3,MOBA Punching Unit:3
+MOBA-Punch,SP-Kraft Box Plain 1600ml (195x140x65)mm (KMP Restaurant),4892105000034650069,MOBA-Punch,1,1,only unit,2,3,MOBA Punching Unit:3
+MOBA-Punch,SP-Kraft Box 900ml (165x115x50) mm (Little Lion),4892105000100279387,MOBA-Punch,1,1,only unit,2,3,MOBA Punching Unit:3
+MOBA-Punch,SP-Kraft Box 1200ml (180x120x50)mm (Kebab),4892105000063873885,MOBA-Punch,1,1,only unit,2,3,MOBA Punching Unit:3
+MOBA-Punch,SP-1200ml White Box (180x120x50)mm (Rose Oud),4892105000049836479,MOBA-Punch,1,1,only unit,2,3,MOBA Punching Unit:3
+MOBA-Punch,BG - Kraft Box Plain 1200ml (180x120x50)mm,4892105000110487568,MOBA-Punch,1,1,only unit,2,2,MOBA Punching Unit:2
+MOBA-Punch,BG - Kraft Box Plain 900ml (165x115x50)mm,4892105000110487557,MOBA-Punch,1,1,only unit,2,2,MOBA Punching Unit:2
+MOBA-Punch,SP-Kraft Box 1200ml (180x120x50)mm (Coffee Council),4892105000072736789,MOBA-Punch,1,1,only unit,1,2,MOBA Punching Unit:2
+MOBA-Punch,SP-Kraft Box Plain 1600ml (195x140x65)mm (Coffee Council),4892105000073655027,MOBA-Punch,1,1,only unit,1,2,MOBA Punching Unit:2
+MOBA-Punch,SP-Kraft Box 900ml (165x115x50)mm (Salt Restaurant),4892105000073790095,MOBA-Punch,1,1,only unit,1,2,MOBA Punching Unit:2
+MOBA-Punch,SP-Kraft Box 1200ml (180x120x50)mm (Mutts),4892105000074492802,MOBA-Punch,1,1,only unit,1,2,MOBA Punching Unit:2
+MOBA-Punch,SP-Kraft Box 900ml (165x115x50) mm (Rs Restaurant),4892105000075009011,MOBA-Punch,1,1,only unit,1,2,MOBA Punching Unit:2
+MOBA-Punch,SP-Kraft Box 1200ml (180x120x50)mm (Colom Bay),4892105000090125531,MOBA-Punch,1,1,only unit,1,2,MOBA Punching Unit:2
+MOBA-Punch,SP-Kraft Box Plain 1600ml (195x140x65)mm (Chill Restaurant),4892105000002430031,MOBA-Punch,1,1,only unit,1,2,MOBA Punching Unit:2
+MOBA-Punch,SP-Kraft Box 1200ml (180x120x50)mm (Kaaraikudi  Restaurant),4892105000101709352,MOBA-Punch,1,1,only unit,1,2,MOBA Punching Unit:2
+MOBA-Punch,SP-Kraft Box Plain 900 ml (Riff Hikkaduwa),4892105000002433159,MOBA-Punch,1,1,only unit,1,2,MOBA Punching Unit:2
+MOBA-Punch,SP-Kraft Box 900ml (165x115x50) mm (Thanjai Virunthu),4892105000106372006,MOBA-Punch,1,1,only unit,1,2,MOBA Punching Unit:2
+MOBA-Punch,SP-Kraft Box 900ml (165x115x50)mm (Cafe Noir),4892105000109640038,MOBA-Punch,1,1,only unit,1,2,MOBA Punching Unit:2
+MOBA-Punch,SP-Kraft Box 1200ml (180x120x50)mm (Ayla Cafe),4892105000109640112,MOBA-Punch,1,1,only unit,1,2,MOBA Punching Unit:2
+MOBA-Punch,SP-Kraft Box Plain 700ml (150x100x45)mm (The Sizzle),4892105000110087385,MOBA-Punch,1,1,only unit,1,2,MOBA Punching Unit:2
+MOBA-Punch,SP-Kraft Box 1200ml (180x120x50)mm (Arlo's Hoppers),4892105000110888386,MOBA-Punch,1,1,only unit,1,2,MOBA Punching Unit:2
+MOBA-Punch,SP-Kraft Box 1200ml (180x120x50)mm (Brizo Paradiso),4892105000111123999,MOBA-Punch,1,1,only unit,1,2,MOBA Punching Unit:2
+MOBA-Punch,SP-White Box 700ml (150x100x45)mm (Rose Oud),4892105000111185651,MOBA-Punch,1,1,only unit,1,2,MOBA Punching Unit:2
+MOBA-Punch,SP-Kraft Box Plain 1200 ml (180x120x50)mm (Chill Restaurant),4892105000002432001,MOBA-Punch,1,1,only unit,1,2,MOBA Punching Unit:2
+MOBA-Punch,SP-Kraft Plain Box 900ml (165X115X50)mm (Banana Arugambay),4892105000111498091,MOBA-Punch,1,1,only unit,1,2,MOBA Punching Unit:2
+MOBA-Punch,SP-Kraft Box 900ml (165x115x50)mm (Treatooo),4892105000112695108,MOBA-Punch,1,1,only unit,1,1,MOBA Punching Unit:1
+MOBA-Punch,SP-Kraft Box 1200ml (180x120x50)mm (Treatooo),4892105000112695217,MOBA-Punch,1,1,only unit,1,1,MOBA Punching Unit:1
+MOBA-Punch,SP-Kraft Box 900ml (165x115x50)mm (Lamprais),4892105000112867001,MOBA-Punch,1,1,only unit,1,1,MOBA Punching Unit:1
+OPD-Offset,SP-Chicken Bucket+Lid(Keells),4892105000000298629,OPD-Offset,1,1,only unit,8,12,(none):12
+OPD-Offset,SP-Coaster 3.5x3.5 Inches Black (Lounge),4892105000065548206,OPD-Offset,1,1,only unit,3,6,OPD - MacPro Unit:4;OPD - PackPro Unit:2
+OPD-Offset,Sp-8oz D/Wall White Paper Cup (Mamba Cafe),4892105000003702039,OPD-Offset > MOBA-Cup,1,2,first,2,4,MOBA Unit:4
+OPD-Offset,SH-White Greaseproof Paper 14x16 inches  (So Delicious),4892105000066078992,OPD-Offset,1,1,only unit,2,3,OPD - MacPro Unit:3
+OPD-Offset,SH-White Greaseproof Paper 14x16 inches (Yumm),4892105000066083073,OPD-Offset,1,1,only unit,2,3,OPD - MacPro Unit:3
+OPD-Offset,SP-Kraft Paper Bag (L) 300x275x160mm with Die Cut Handle (Kiri kopi With Girl),4892105000047889080,OPD-Offset,1,1,only unit,2,3,OPD - MacPro Unit:3
+OPD-Offset,PACKSERV - Dental Kit (White) - Toothpaste 6grm/Plastic Toothbrush - Kit Packing,4892105000110898148,OPD-Offset > CPU,1,2,first,2,3,Customized Packing Unit:3
+OPD-Offset,SP-Food Wrap-Green (ITC),4892105000000299099,OPD-Offset,1,1,only unit,2,2,OPD - MacPro Unit:2
+OPD-Offset,SP-Food Wrap-Brown (ITC),4892105000000299076,OPD-Offset,1,1,only unit,2,2,(none):1;OPD - MacPro Unit:1
+OPD-Offset,SP-Sandwich Wrap 10x13Inch(Lebanon Chef Restaurant),4892105000002430088,OPD-Offset,1,1,only unit,2,2,OPD - MacPro Unit:2
+OPD-Offset,CP-Kraft Corrugated Cake Box 12 x 12 x 4.5 inch (Double Tree Hilton),4892105000002861669,OPD-Offset > SHPS,1,2,first,2,2,Screen Printing Unit:2
+OPD-Offset,PACKSERV - Wooden Spoon 16cm (Spar) - Pouch Packing,4892105000110898004,OPD-Offset > CPU,1,2,first,2,2,Customized Packing Unit:2
+OPD-Offset,PACKSERV - Shaving Kit (White) - Shaving Cream/Gillette-Blue 2 Razor - Kit Packing,4892105000110898169,OPD-Offset > CPU,1,2,first,2,2,Customized Packing Unit:2
+OPD-Offset,PACKSERV - Shaving Kit (Kraft) - Shaving Cream/Gillette-Blue 2 Razor - Kit Packing,4892105000110898036,OPD-Offset > CPU,1,2,first,2,2,Customized Packing Unit:2
+OPD-Offset,SP-Chicken Bucket+Lid (Spar),4892105000000298792,OPD-Offset,1,1,only unit,2,2,(none):2
+OPD-Offset,SP-White Greaseproof Paper 28cmx38cm (Baked With Benefits),4892105000064588579,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SP-Kraft Cake Box 145x145x90mm(SHA013)(Wildish),4892105000003431030,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SP-Kraft Box 700ml Dessert 150x100x45  (Aromyst Iqe),4892105000064797583,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SP-Kraft Box (165x105x50)mm (Treats),4892105000000298209,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SP-Kraft Box (215X145X60)mm (Treats),4892105000034650136,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SH-2 Slot Cup Holder,4892105000008402311,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SP-Kraft Single Cup Holder (Smash Burger),4892105000065057527,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SP-Kraft Double Cup Holder (Smash Burger),4892105000065057580,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SP-SH Kraft Plain Box 900ml (165X115X50)mm(Lebanon Chef Restaurant),4892105000002516176,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SP- Kraft Box 700ml (150x100x45)mm (Lamprais),4892105000065440314,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SP-Kraft Box Plain 1200 ml (180x120x50)mm (Chillis),4892105000000298746,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SP-White Box (215X145X60)mm (Thariq & Aysha),4892105000065921449,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SP-Sub.Kraft Shower Cap(Radh),4892105000004159235,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SP-Kraft Sanitary Box (Radh),4892105000066099080,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SP-White Box (200X105X50)mm (Teezee),4892105000001692312,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SP-Kraft Paper Bag (L) 300X275X160mm With Die Cut Handle (Linea),4892105000066099845,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SH-Letter Head (Standard Holdings),4892105000011380414,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SH-Letter Head (Smart Packaging Solutions Pvt Ltd),4892105000011380383,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SP-Burger Pouch 30.1cmx17.3cm (Takbucks),4892105000066497035,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SP-White Paper Bag 11X11X11inch With Rope Handle (Mama's pot bakery),4892105000067008665,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SP-White Paper Bag (L) 300X275X160mm with Die Cut Handle (Rose Oud),4892105000052333214,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SP-Kraft Food Wrap 40cmx45cm (Linea),4892105000067292281,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SP-Kraft Food Wrap 40cmx40cm (Ceylon Stories),4892105000067333190,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SP-Kraft Paper Bag With Rope Handle (M) 25x25x15cm (Meraki),4892105000067333308,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SP-Kraft Paper Bag with Rope Handle (S) 21x19x12cm (Meraki),4892105000067333367,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SP-Kraft Paper Bag (XL) 400x330x150mm (iherbs),4892105000067445143,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SP-Kraft Paper Bag (L) 300x275x160mm (iherbs),4892105000067445208,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SP-Kraft Paper Bag 240x140x80mm(La Prestige ),4892105000004271942,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SP-Kraft Paper Bag 280x180x120mm(La Prestige ),4892105000004271427,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SP-Kraft Paper Bag  300x275x160mm without handle(La Prestige ),4892105000004271610,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SP-Kraft Paper Bag 400x330x150mm (La Prestige ),4892105000004271765,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SP-Kraft Box 900ml (La Prestige ),4892105000004258138,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SP-White Greaseproof Paper 28X38cm (Street Barista Crew),4892105000067554302,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SH-Single Cake Board Round 10cm,4892105000015459030,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SP-White Greaseproof Paper 38cmX33cm (Heritage Cafe),4892105000067603180,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SP-Sandwich Take Away Box With Window (Beira Kitchen),4892105000004301792,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SP-Kraft Cake Carrier Box 25x25x10Inch (Tea Avenue),4892105000067680702,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,SP-Kraft Cake Box (170x145x50)mm (G.M.T),4892105000067709569,OPD-Offset,1,1,only unit,1,2,OPD - MacPro Unit:2
+OPD-Offset,CP- Pizza Box 28 x 28 x 4cm (11 inch) (Grandeeza),4892105000056268369,OPD-Offset,1,1,only unit,1,2,(none):1;Screen Printing Unit:1
+OPD-Offset,SP-Wooden Cutlery Pouch (Qick Food),4892105000064588349,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-Kraft Paper Pouch 16cm,4892105000064588664,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-Envelope 13.8X11.5 Inch (HMS Maldives),4892105000064831213,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-Ladies Leakproof Underwear Liner (Jay Jay Mills),4892105000064831372,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-White Board 12X18Inch (Minutes),4892105000064797642,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-Tray Underlines 297x210mm (Adventure Zone),4892105000037371001,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-Book Cover with Magnet With Handle (Amangalle Resort),4892105000064873236,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-White Greaseproof Paper 28x38cm (Yellow Bees),4892105000064976066,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-White Greaseproof Paper 28cmX38cm (Mohim),4892105000064963118,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-White Greaseproof Paper 11x15Inch (Kiri Kopi),4892105000064976234,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-Sticker 12X21Inch (Minutes),4892105000064963014,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-Lid For 900ml Container (Sponge),4892105000065080011,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-Sleeve for 150ml Kraft Dessert Cup (Messed),4892105000065097077,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-Fries Pouch 3.5x4x3Inch (Street Burger),4892105000045976049,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-Burger Pouch 30.1cmx17.3cm (Mohim),4892105000064173263,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SH Kraft Double Cup Cake Box (165 x 85 x 85mm),4892105000003651001,OPD-Offset,1,1,only unit,1,1,(none):1
+OPD-Offset,SP-White Cake Box 10x10x4.5Inch With Lamination and Foiling  (Raffles),4892105000065362636,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-White Paper Bag (L) 300mmX275mmX160mm(Lebanon Chef Restaurant),4892105000004301861,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SH-White Greaseproof Paper 15.7x17.7 Inches,4892105000065548095,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-Food Wrap 12x18 Inch (Mankind),4892105000006803097,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-8oz D/Wall Kraft Paper Cup With Sleeve (Aman),4892105000002650111,MOBA-Cup > SHPS > OPD-Offset,3,3,last,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-12Oz D/Wall Kraft Paper Cup with Sleeve (Aman),4892105000065616251,MOBA-Cup > SHPS > OPD-Offset,3,3,last,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-White Burger Box Tray (Nihonbashi),4892105000065749001,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SH Kraft 12 Cup Cake Box (330x240x85)mm,4892105000005380645,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-Platter Box With Dividers (Street Burger),4892105000004529205,SHPS > OPD-Offset,2,2,last,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-Kraft Food Wrap 5x5inch (Clive),4892105000065849355,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-Transparent Sticker (High Rise Brief),4892105000065904624,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,CP-White Greaseproof Paper 11x15 inches (Hela Platters),4892105000004106543,OPD-Offset > SHPS,1,2,first,1,1,Screen Printing Unit:1
+OPD-Offset,SH-White Greaseproof Paper 6x6 inches (So Delicious),4892105000066073034,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SH-White Greaseproof Paper 6x6 inches (Yumm),4892105000066073129,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SH-White Greaseproof Paper 8x8 inches  (So Delicious),4892105000066073257,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SH-White Greaseproof Paper 12x12 inches  (So Delicious),4892105000066073717,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SH-White Greaseproof Paper 12x12 inches (Yumm),4892105000066073798,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SH-White Greaseproof Paper 14x14 inches  (So Delicious),4892105000066073935,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SH-White Greaseproof Paper 6x8 inches  (So Delicious),4892105000066078336,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SH-White Greaseproof Paper 6x8 inches (Yumm),4892105000066078417,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SH-White Greaseproof Paper 8x10 inches  (So Delicious),4892105000066078546,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SH-White Greaseproof Paper 8x10 inches (Yumm),4892105000066078641,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SH-White Greaseproof Paper 10x12 inches (So Delicious),4892105000066078788,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SH-White Greaseproof Paper 10x12 inches (Yumm),4892105000066078869,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SH-White Greaseproof Paper 12x14 inches  (So Delicious),4892105000066083557,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SH-White Greaseproof Paper 12x14 inches (Yumm),4892105000066083652,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SH-Chemical information File,4892105000066099009,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-White Box 900ml (165x115x50)mm (Sea Food Club),4892105000062202435,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-White Greaseproof Paper 450x400mm (Linea),4892105000066099948,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-White Cutlery Pouch 19X16.5cm (Lamprais),4892105000066168416,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-Dough Artisan Breads (280x180x120)mm(Fernan),4892105000000625452,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-White Paper Pouch for 40cmX16.1cm Wooden Stirrer (Lamprais),4892105000066222199,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-White Paper Pouch for 6mm x 20cm Straw (Lamprais),4892105000066222270,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SH-Invoice-Smart Pack,4892105000000299308,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-White Greaseproof Paper 8X8Inch (Chameleon Ahangma),4892105000066423011,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-White Greaseproof Paper 25x25cm (Cafe On Set),4892105000067008606,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-White Greaseproof Paper 20x20cm (The Oyster House),4892105000067114039,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SH-Kraft Paper Bag 280x190x120mm,4892105000067278265,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-Ghewar Box - Octogan Shape,4892105000021864001,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-500ml Kraft Paper Bowl with Sticker (Meraki),4892105000067333424,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-White Box 900ml (165x115x50)mm (Wok Meals),4892105000064491127,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP- Round Gloss Sticker 1.5Inch (Meraki),4892105000067392066,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SH Kraft Box Plain 700ml (150x100x45)mm,4892105000003649208,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-Kraft Paper Bag (L) 300x275x160mm (The Valampuri),4892105000064560304,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-Shawarma Box 20.3x7.6x6.4cm (NGB),4892105000054982779,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-750ml Kraft Rectangle Paper Bowl  With Sticker (Meraki),4892105000067680942,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP- Cake Paper Bag Kraft With Rope Handle 14x14x14 inch (Finomenal),4892105000002270038,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,CP-Kraft Paper Bag With Rope Handle 280x180x120mm (Kemara),4892105000004556012,OPD-Offset > SHPS,1,2,first,1,1,Screen Printing Unit:1
+OPD-Offset,SH Kraft Cake box (14x14x4) Inch,4892105000003282025,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-Chicken Bucket+Lid(Toscana),4892105000004894709,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-4Oz D/Wall Kraft Paper Cup with Sleeve (Muthu Bar),4892105000063986001,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-Customer Materials (Vesak Lanterns),4892105000004316528,OPD-Offset,1,1,only unit,1,1,OPD - MacPro Unit:1
+OPD-Offset,SP-Acknowledgement for Medical Service Form (Ajial school),4892105000000543305,OPD-Offset,1,1,only unit,1,1,(none):1
+OPD-Offset,PACKSERV - Wooden Knife 16cm (Keells) - Pouch Packing,4892105000110666120,OPD-Offset > CPU,1,2,first,1,1,Customized Packing Unit:1
+OPD-Offset,PACKSERV - Kraft Disposable Shower Cap - Kit Packing,4892105000111181209,OPD-Offset > CPU,1,2,first,1,1,Customized Packing Unit:1
+OPD-Offset,PACKSERV - Vanity Kit - Kit Packing,4892105000110666477,OPD-Offset > CPU,1,2,first,1,1,Customized Packing Unit:1
+OPD-Offset,PACKSERV - Shampoo Bottle - Packing,4892105000111181246,OPD-Offset > CPU,1,2,first,1,1,Customized Packing Unit:1
+OPD-Offset,PACKSERV - Shower Gel Bottle - Packing,4892105000111181260,OPD-Offset > CPU,1,2,first,1,1,Customized Packing Unit:1
+OPD-Offset,PACKSERV - Body Lotion Bottle - Packing,4892105000111181288,OPD-Offset > CPU,1,2,first,1,1,Customized Packing Unit:1
+OPD-Offset,PACKSERV - Conditioner Bottle - Packing,4892105000111181274,OPD-Offset > CPU,1,2,first,1,1,Customized Packing Unit:1
+OPD-Offset,PACKSERV - Khomba Soap - Kit Packing,4892105000111916034,OPD-Offset > CPU,1,2,first,1,1,Customized Packing Unit:1
+OPD-Offset,"PACKSERV - Wooden Spoon, Fork & Tissue (Sheraton Kosgoda) - Pouch Packing",4892105000110666239,OPD-Offset > CPU,1,2,first,1,1,Customized Packing Unit:1
+OPD-Offset,PACKSERV - Disposable Shower Cap (Radh) - Kit Packing,4892105000110666420,OPD-Offset > CPU,1,2,first,1,1,Customized Packing Unit:1
+OPD-Offset,PACKSERV - Wooden Knife 16cm (Flamingo) - Pouch Packing,4892105000112631145,OPD-Offset > CPU,1,2,first,1,1,Customized Packing Unit:1
+OPD-Offset,PACKSERV - Wooden Spoon 16cm (Flamingo) - Pouch Packing,4892105000112631165,OPD-Offset > CPU,1,2,first,1,1,Customized Packing Unit:1
+CPU,PACKSERV - 750ml Aluminium Foil Container with Lid (10Pcs Packing),4892105000110658805,PackPro > CPU,2,2,last,10,11,Customized Packing Unit:11
+CPU,PACKSERV - 450ml Aluminium Foil Container with Lid (10Pcs Packing),4892105000110658771,PackPro > CPU,2,2,last,10,10,Customized Packing Unit:10
+CPU,PACKSERV - 750ml Plastic Rectangle Container with Lid (5Pcs Packing),4892105000110658960,CPU,1,1,only unit,10,10,Customized Packing Unit:10
+CPU,PACKSERV - 660ml Aluminium Foil Container with Lid (10Pcs Packing),4892105000110658788,PackPro > CPU,2,2,last,8,9,Customized Packing Unit:9
+CPU,PACKSERV - 1200ml Aluminium Foil Container with Lid (10Pcs Packing),4892105000110658847,PackPro > CPU,2,2,last,8,8,Customized Packing Unit:8
+CPU,PACKSERV - 430ml Aluminium Foil Round Container with Lid (10Pcs Packing),4892105000110658909,PackPro > CPU,2,2,last,7,8,Customized Packing Unit:8
+CPU,PACKSERV - 1400ml Aluminium Foil Round Container with Lid (10Pcs Packing),4892105000110658943,PackPro > CPU,2,2,last,7,8,Customized Packing Unit:8
+CPU,PACKSERV - 250ml Aluminium Foil Container with Lid (10pcs Packing),4892105000110658748,PackPro > CPU,2,2,last,7,7,Customized Packing Unit:7
+CPU,PACKSERV - 1900ml Aluminium Foil Container with Lid (10Pcs Packing),4892105000110658875,PackPro > CPU,2,2,last,6,7,Customized Packing Unit:7
+CPU,PACKSERV - 700ml Kraft Lunch Box (5Pcs Packing),4892105000110658975,CPU,1,1,only unit,6,7,Customized Packing Unit:7
+CPU,PACKSERV - Wooden Stirrer 14cm - 100pcs Packing,4892105000110666323,CPU,1,1,only unit,4,4,Customized Packing Unit:4
+CPU,PACKSERV - Dental Kit (Kraft) - Toothpaste 6grm/Plastic Toothbrush - Kit Packing,4892105000110898021,PackPro > CPU,2,2,last,4,4,Customized Packing Unit:4
+CPU,PACKSERV - Wooden Knife 16cm (A&M Cup Cakes) - Pouch Packing,4892105000110666137,PackPro > CPU,2,2,last,3,3,Customized Packing Unit:3
+CPU,PACKSERV - Dental Kit (White) - Toothpaste 6grm/Plastic Toothbrush - Kit Packing,4892105000110898148,OPD-Offset > CPU,2,2,last,2,3,Customized Packing Unit:3
+CPU,PACKSERV - 700ml Aluminium Foil Round Container with Lid (10Pcs Packing),4892105000110658926,PackPro > CPU,2,2,last,2,2,Customized Packing Unit:2
+CPU,PACKSERV - Wooden Fork 16cm (Spar) - Pouch Packing,4892105000110666097,PackPro > CPU,2,2,last,2,2,Customized Packing Unit:2
+CPU,PACKSERV - Wooden Spoon 16cm (Keells) - Pouch Packing,4892105000110666154,PackPro > CPU,2,2,last,2,2,Customized Packing Unit:2
+CPU,PACKSERV - Wooden Spoon 16cm (Spar) - Pouch Packing,4892105000110898004,OPD-Offset > CPU,2,2,last,2,2,Customized Packing Unit:2
+CPU,PACKSERV - 3200ml Aluminium Foil Container with Lid (3Pcs Packing),4892105000110658892,PackPro > CPU,2,2,last,2,2,Customized Packing Unit:2
+CPU,PACKSERV - Shaving Kit (White) - Shaving Cream/Gillette-Blue 2 Razor - Kit Packing,4892105000110898169,OPD-Offset > CPU,2,2,last,2,2,Customized Packing Unit:2
+CPU,PACKSERV - Wooden Fork 16cm (Keells) - Pouch Packing,4892105000110666080,PackPro > CPU,2,2,last,2,2,Customized Packing Unit:2
+CPU,PACKSERV - Plastic Sharp End Drinking Straw 12mm x 23cm - 1pcs Packing,4892105000110666337,CPU,1,1,only unit,2,2,Customized Packing Unit:2
+CPU,PACKSERV - Shaving Kit (Kraft) - Shaving Cream/Gillette-Blue 2 Razor - Kit Packing,4892105000110898036,OPD-Offset > CPU,2,2,last,2,2,Customized Packing Unit:2
+CPU,PACKSERV - 250ml Aluminium Foil Container with Lid (10pcs Packing) - DEMO,4892105000102116113,PackPro > CPU,2,2,last,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Wooden Knife 16cm (Keells) - Pouch Packing,4892105000110666120,OPD-Offset > CPU,2,2,last,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Shaving Kit - Shaving Cream/Gillette-Blue 2 Razor (Radisson) - Kit Packing,4892105000110898066,PackPro > CPU,2,2,last,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Ecoware 750ml 3 Compartment Box (5pcs Packing),4892105000110666065,CPU,1,1,only unit,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Ecoware Lunch Box 9x6'' (5pcs Packing),4892105000110666035,CPU,1,1,only unit,1,1,Customized Packing Unit:1
+CPU,"PACKSERV - Wooden Spoon, Fork, Knife & Tissue (Valampuri) - Pouch Packing",4892105000111090216,CPU,1,1,only unit,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Ecoware 10inch Round Plate (10pcs Packing),4892105000110666020,CPU,1,1,only unit,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Ecoware 6inch Hamburger Box (5pcs Packing),4892105000110666050,CPU,1,1,only unit,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Ecoware 9inch Round Plate (10pcs Packing),4892105000110666005,CPU,1,1,only unit,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Kraft Disposable Shower Cap - Kit Packing,4892105000111181209,OPD-Offset > CPU,2,2,last,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Vanity Kit - Kit Packing,4892105000110666477,OPD-Offset > CPU,2,2,last,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Shampoo Bottle - Packing,4892105000111181246,OPD-Offset > CPU,2,2,last,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Shower Gel Bottle - Packing,4892105000111181260,OPD-Offset > CPU,2,2,last,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Body Lotion Bottle - Packing,4892105000111181288,OPD-Offset > CPU,2,2,last,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Conditioner Bottle - Packing,4892105000111181274,OPD-Offset > CPU,2,2,last,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Wooden Popstick 114mm - (50pcs Packing),4892105000111373325,CPU,1,1,only unit,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Wooden Chopstick (Waters Edge) - Pouch Packing,4892105000110666222,PackPro > CPU,2,2,last,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Dental Kit (Kraft) - Toothpaste 6grm/Wooden Toothbrush - Kit Packing,4892105000111373265,PackPro > CPU,2,2,last,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Wooden Spoon 11cm (Radh) - Pouch Packing,4892105000111734036,PackPro > CPU,2,2,last,1,1,Customized Packing Unit:1
+CPU,"PACKSERV - Wooden Spoon, Fork, Knife & Tissue (16cm) - Pouch Packing",4892105000111734334,PackPro > CPU,2,2,last,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Ecoware 7inch Round Plate (10pcs Packing),4892105000110658990,CPU,1,1,only unit,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Wooden Chopstick 20cm (Trans Asia Hotel) - Pouch Packing,4892105000110666188,PackPro > CPU,2,2,last,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Khomba Soap - Kit Packing,4892105000111916034,OPD-Offset > CPU,2,2,last,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Toothpick - 100pcs Packing,4892105000111962020,CPU,1,1,only unit,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Wooden Chopstick (Riff Hikkaduwa) - Pouch Packing,4892105000110666205,PackPro > CPU,2,2,last,1,1,Customized Packing Unit:1
+CPU,PACKSERV - 500ml White Paper Tub with Lid (10pcs packing),4892105000112118677,CPU,1,1,only unit,1,1,Customized Packing Unit:1
+CPU,PACKSERV - 200ml White Paper Tub with Lid (10pcs packing),4892105000112118691,CPU,1,1,only unit,1,1,Customized Packing Unit:1
+CPU,PACKSERV - 300ml White Paper Tub with Lid (10pcs packing),4892105000112118705,CPU,1,1,only unit,1,1,Customized Packing Unit:1
+CPU,PACKSERV - 7oz GPPS CUP with Lid (10pcs packing),4892105000112118719,CPU,1,1,only unit,1,1,Customized Packing Unit:1
+CPU,"PACKSERV - Wooden Spoon, Fork & Tissue (Sheraton Kosgoda) - Pouch Packing",4892105000110666239,OPD-Offset > CPU,2,2,last,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Cinnamon Soap (Radh) - Kit Packing,4892105000110666391,PackPro > CPU,2,2,last,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Disposable Shower Cap (Radh) - Kit Packing,4892105000110666420,OPD-Offset > CPU,2,2,last,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Wooden Comb 13.5cm (Radh) - Kit Packing,4892105000110666463,PackPro > CPU,2,2,last,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Shower Loofah 10 x 14cm (Radh) - Kit Packing,4892105000110666449,PackPro > CPU,2,2,last,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Wooden Spoon 11cm - (25pcs Packing),4892105000112377041,CPU,1,1,only unit,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Wooden Spoon 16cm - (25pcs Packing),4892105000112377010,CPU,1,1,only unit,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Wooden Fork 16cm - (25pcs Packing),4892105000112377027,CPU,1,1,only unit,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Dental Kit - Toothpaste 6grm/Plastic Toothbrush (Radisson) - Kit Packing,4892105000112562214,PackPro > CPU,2,2,last,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Dental Kit - Toothpaste 6grm/Plastic Toothbrush (Radh) - Kit Packing,4892105000112562196,PackPro > CPU,2,2,last,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Wooden Knife 16cm (Flamingo) - Pouch Packing,4892105000112631145,OPD-Offset > CPU,2,2,last,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Wooden Fork 16cm (Flamingo) - Pouch Packing,4892105000112631185,PackPro > CPU,2,2,last,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Wooden Spoon 16cm (Flamingo) - Pouch Packing,4892105000112631165,OPD-Offset > CPU,2,2,last,1,1,Customized Packing Unit:1
+CPU,PACKSERV - 900ml Aluminium Foil Container with Lid (10Pcs Packing),4892105000110658830,PackPro > CPU,2,2,last,1,1,Customized Packing Unit:1
+CPU,"PACKSERV - Wooden Spoon, Fork, Knife (16cm) - Pouch Packing",4892105000112731503,PackPro > CPU,2,2,last,1,1,Customized Packing Unit:1
+CPU,SH - Polythene Bag 30x55cm,4892105000112877318,CPU,1,1,only unit,1,1,Customized Packing Unit:1
+CPU,PACKSERV - Dental Kit - Toothpaste 6grm/Wooden Toothbrush (Radisson) - Kit Packing,4892105000110898051,PackPro > CPU,2,2,last,1,1,Customized Packing Unit:1
+PCU(cup),SH-Black (Plastic Lid – PS6) for 8oz Paper Cup (M),4892105000003142231,PCU(cup),1,1,only unit,30,30,MOBA Unit:30
+PCU(cup),BG - 12oz S/Wall White Paper Cup,4892105000023186014,PCU(cup),1,1,only unit,17,17,MOBA Unit:17
+PCU(cup),BG - 12oz D/Wall Kraft Paper Cup,4892105000023186047,PCU(cup),1,1,only unit,15,15,MOBA Unit:15
+PCU(cup),BG - 8oz D/Wall Kraft Paper Cup,4892105000023186034,PCU(cup),1,1,only unit,14,14,MOBA Unit:14
+PCU(cup),SH-White (Plastic Lid - PS6) for 8oz Paper Cup (M),4892105000003142216,PCU(cup),1,1,only unit,3,3,MOBA Unit:3
+PCU(cup),SP-8Oz D/Wall White Paper Cup (Mond),4892105000065921782,MOBA-Cup > PCU(cup),2,2,last,1,2,MOBA Unit:2
+PCU(cup),SP-8Oz D/Wall White Paper Cup (Luna Mews),4892105000066196775,MOBA-Cup > PCU(cup),2,2,last,1,2,MOBA Unit:2
+PCU(cup),SP-8oz D/wall Kraft Paper Cup (Flow Café),4892105000005104788,MOBA-Cup > PCU(cup),2,2,last,1,2,MOBA Unit:2
+PCU(cup),SP-8oz D/Wall Kraft Paper Cup (Hazel),4892105000004054323,MOBA-Cup > PCU(cup),2,2,last,1,2,MOBA Unit:2
+PCU(cup),SP-12oz D/Wall White Paper Cup (Sheraton),4892105000000298535,MOBA-Cup > PCU(cup),2,2,last,1,1,MOBA Unit:1
+FPP,FP - Sugar Pillow White,4892105000010084514,FPP,1,1,only unit,6,7,Food Product Processing Unit:7
+FPP,FP-Sugar Pillow White (The Valampuri),4892105000055748022,FPP,1,1,only unit,4,5,Food Product Processing Unit:5
+FPP,FP - Uplift Brew Coffee Sachet 1.5g Conversion Service (Montado),4892105000109982014,FPP,1,1,only unit,4,5,Food Product Processing Unit:5
+FPP,FP - Sugar Pillow Brown,4892105000020943676,FPP,1,1,only unit,4,4,Food Product Processing Unit:4
+FPP,FP - Sugar Tube White,4892105000059539305,FPP,1,1,only unit,2,3,Food Product Processing Unit:3
+FPP,FP-Sugar Tube Brown (SkinnyTom's),4892105000064164001,FPP,1,1,only unit,2,2,Food Product Processing Unit:2
+FPP,FP - Wind Down Brew Coffee Sachet 1.5g Conversion Service (Montado),4892105000109982066,FPP,1,1,only unit,2,2,Food Product Processing Unit:2
+FPP,FP-Sugar Tube White (Radisson Collection),4892105000064164059,FPP,1,1,only unit,1,1,Food Product Processing Unit:1
+FPP,FP-Sugar Pillow White (Lamprais),4892105000066382405,FPP,1,1,only unit,1,1,Food Product Processing Unit:1
+FPP,FP - Sugar Tube Brown,4892105000059539334,FPP,1,1,only unit,1,1,Food Product Processing Unit:1
+FPP,FP-Sugar Pillow White (Hotel Sangiliyan),4892105000111761108,FPP,1,1,only unit,1,1,Food Product Processing Unit:1
+MOBA,SH-White Round Cup Cake Wrapper 14cm,4892105000004301499,MOBA,1,1,only unit,2,3,MOBA Unit:3
+MOBA,SH-8oz D/Wall White Paper Cup,4892105000011455948,MOBA-Cup > MOBA,2,2,last,2,2,MOBA Unit:2
+MOBA,SP-12Oz D/Wall White Paper Cup (Bacuzzi Restaurant),4892105000064623440,MOBA-Cup > MOBA,2,2,last,1,2,MOBA Unit:2
+MOBA,SP-12oz D/Wall White Paper Cup (Flex),4892105000066024487,MOBA-Cup > MOBA,2,2,last,1,2,MOBA Unit:2
+MOBA,SH-Brown Round Cup Cake Wrapper 7.5cm,4892105000067119157,MOBA,1,1,only unit,1,2,MOBA Unit:2
+MOBA,SP-Kraft Box 10x5x4 Inch (Mama's Pot Bakery),4892105000067148557,MOBA,1,1,only unit,1,2,OPD - MacPro Unit:2
+MOBA,SP-8oz D/Wall White Paper Cup (Artisan Diletto With Leaf),4892105000067195291,MOBA-Cup > MOBA,2,2,last,1,2,MOBA Unit:2
+MOBA,SP-8oz D/Wall White Paper Cup (Artisan Diletto With Bubble),4892105000067195356,MOBA-Cup > MOBA,2,2,last,1,2,MOBA Unit:2
+MOBA,SP-12oz D/Wall White Paper Cup (Artisan Diletto With Bubble),4892105000067195419,MOBA-Cup > MOBA,2,2,last,1,2,MOBA Unit:2
+MOBA,SP-12oz D/Wall White Paper Cup (Artisan Diletto With Tree),4892105000067195484,MOBA-Cup > MOBA,2,2,last,1,2,MOBA Unit:2
+MOBA,SP-12oz D/Wall White Paper Cup (Artisan Diletto With Deer),4892105000067195547,MOBA-Cup > MOBA,2,2,last,1,2,MOBA Unit:2
+MOBA,SP-12oz D/Wall Kraft Paper Cup (Ceylon Stories),4892105000067333119,MOBA-Cup > MOBA,2,2,last,1,2,MOBA Unit:2
+MOBA,SP-8Oz D/Wall White Paper Cup (Red Cafe),4892105000066168603,MOBA-Cup > MOBA,2,2,last,1,1,MOBA Unit:1
+MOBA,SP-12Oz D/Wall White Paper Cup (Red Cafe),4892105000066168678,MOBA-Cup > MOBA,2,2,last,1,1,MOBA Unit:1
+MOBA,SP-8oz D/Wall White Paper Cup (Burley’s),4892105000003431181,MOBA-Cup > MOBA,2,2,last,1,1,MOBA Unit:1
+MOBA-Plate,SH - Paper Plate 7 Inch,4892105000003808049,MOBA-Plate,1,1,only unit,5,6,MOBA Unit:5;OPD - MacPro Unit:1
+MOBA-Plate,SH - Paper Plate 9 Inch,4892105000002368015,MOBA-Plate,1,1,only unit,2,4,OPD - MacPro Unit:2;MOBA Unit:2
+MOBA-Cake,SH-Brown Round Cup Cake Wrapper 10.5cm,4892105000067774334,MOBA-Cake,1,1,only unit,2,3,MOBA Unit:3
+MOBA-Cake,SH-Brown Cup Cake Liner 9.5cm,4892105000067774307,MOBA-Cake,1,1,only unit,1,1,MOBA Unit:1
+MOBA-Cake,SH-Brown Cup Cake Liner 11.5cm,4892105000067066589,MOBA-Cake,1,1,only unit,1,1,MOBA Unit:1
+MOBA-Cake,SH-White Round Cup Cake Wrapper 11.5cm,4892105000110712010,MOBA-Cake,1,1,only unit,1,1,MOBA Unit:1

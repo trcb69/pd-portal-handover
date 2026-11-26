@@ -1,0 +1,7 @@
+# Fact-check (self-checks; no independent second reviewer ran)
+1. Reproduction: xlsx window gives 4,559 lines / 3,362 SOs / 333 untagged / MacPro 464 / OPD split 1,451-462-93-23, identical to `/root/Project Management/reports/2026-09-29-division-flow-questions/README.md`. (That README says OPD lines MOBA 93; I split it MOBA 59 + Punching 34 = 93, consistent.)
+2. Live vs export: line-tag fill 93.8% on 275 live lines vs 92.7% over 12 months; both within the 88-96% monthly band.
+3. Pull integrity: every list has unique ids equal to rows (packages 56,000, shipments 12,000, invoices 6,000, pick lists 6,000, SO 3,800; SO modified list 8,571 = Zoho total). Shipments list stopped at 12,000 rows (Jan 2025 reached), enough for 12 m. Pull pages reach before 1 Oct 2025.
+4. A bug was found and fixed: the first Part B run keyed packages/shipments by `salesorder_id`, collapsing them to ~3.6k; after keying by their own ids packages = 54,989 (Sep 2026 = 2,781, matches `daily_counts.csv`). All Part B numbers in README are from the fixed run.
+5. Known limits: "modified" is last-modification only; invoices mapped to an SO by `reference_number` (5,867 of 5,914 mapped); package/pick list SO mapping uses `salesorder_id`/first number; the dashboard's real SO-detail calls and a possible V4 behaviour (does a package move the SO's `last_modified_time`?) were not tested; comments feed has no field-level audit; bundles data ends 18 Sep; item history not opened.
+6. A guess at three audit endpoints returned 404 "Invalid URL Passed" (no effect).

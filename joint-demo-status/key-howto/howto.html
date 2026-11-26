@@ -1,0 +1,53 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+:root{--navy:#1f3a5f;--blue:#2f6fb2;--soft:#eaf1f9;--line:#cdd9e8;--ink:#1d2733;--mute:#5b6b7f;--ok:#2e7d5b;--warn:#a5651b}
+*{box-sizing:border-box}
+body{margin:0;background:#f6f8fb;font-family:"Segoe UI",Inter,Arial,sans-serif;color:var(--ink);width:1080px}
+.wrap{padding:44px 52px 34px}
+h1{margin:0;color:var(--navy);font-size:34px}
+.sub{color:var(--mute);font-size:18px;margin:6px 0 26px}
+.step{display:flex;gap:20px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 24px;margin-bottom:16px}
+.n{flex:0 0 46px;height:46px;border-radius:50%;background:var(--navy);color:#fff;font-weight:700;font-size:22px;display:flex;align-items:center;justify-content:center}
+.t{font-size:21px;font-weight:650;color:var(--navy);margin:4px 0 8px}
+.d{font-size:17px;line-height:1.5;color:var(--ink)}
+code,.code{font-family:Consolas,"Cascadia Mono",monospace;background:var(--soft);border:1px solid var(--line);border-radius:6px;padding:2px 7px;font-size:15.5px;color:#163152}
+.code{display:block;padding:10px 14px;margin:8px 0 4px;white-space:pre-wrap;word-break:break-all}
+.tag{display:inline-block;background:#fff4e5;color:var(--warn);border:1px solid #f0d3a8;border-radius:20px;padding:2px 12px;font-size:15px;font-weight:600;margin-left:8px}
+.ok{color:var(--ok);font-weight:650}
+.note{background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:16px 22px;font-size:16.5px;line-height:1.55;margin-top:6px}
+.note b{color:var(--navy)}
+.foot{color:var(--mute);font-size:14px;margin-top:18px;text-align:right}
+</style></head><body><div class="wrap">
+<h1>Add the SPS read key (demo gateway)</h1>
+<div class="sub">About 3 minutes. Steps 2 and 3 must happen within 10 minutes of each other.</div>
+
+<div class="step"><div class="n">1</div><div>
+<div class="t">Open the Self Client</div>
+<div class="d">Go to <code>api-console.zoho.com</code>, signed in as <b>itexe@</b> (SmartPack), and open <b>Self Client</b>.<br>
+On the <b>Client Secret</b> tab, keep the <b>Client ID</b> and <b>Client Secret</b> ready to copy.</div></div></div>
+
+<div class="step"><div class="n">2</div><div>
+<div class="t">Generate a code <span class="tag">10-minute timer starts</span></div>
+<div class="d">Open the <b>Generate Code</b> tab. In <b>Scope</b>, paste exactly:
+<span class="code">ZohoInventory.salesorders.READ,ZohoInventory.items.READ,ZohoInventory.compositeitems.READ</span>
+Time duration: <b>10 minutes</b>. Description: <code>demo gateway read</code>. Click <b>Create</b>, choose <b>SmartPack</b>, and copy the code.</div></div></div>
+
+<div class="step"><div class="n">3</div><div>
+<div class="t">Run the setup in your own SSH terminal</div>
+<div class="d">Use PuTTY or Terminal. Don't use the Claude prompt, because the script asks questions.
+<span class="code">bash /root/tools/demo-key/set-read-key.sh</span>
+Paste the <b>Client ID</b>, the <b>Client Secret</b> and the <b>code</b> when it asks. The last two stay hidden while you paste.</div></div></div>
+
+<div class="step"><div class="n">4</div><div>
+<div class="t">Check the answer</div>
+<div class="d"><span class="ok">“Saved … Now tell Claude: fixed”</span>: done. Tell Claude <b>fixed</b>.<br>
+<b>“invalid_code”</b>: the code expired or was used already. Go back to step 2.<br>
+<b>“invalid_client”</b>: the Client ID or Client Secret was mistyped. Run step 3 again.</div></div></div>
+
+<div class="note"><b>Why the 10 minutes doesn’t matter later:</b> the code is used only once. The script trades it for a <b>refresh token</b> that doesn’t expire.
+The script rewrites the key file with the right names, adds fresh demo-only values, and locks the file. Nothing secret is printed.
+<br><b>Never</b> paste the secret or the code into the Claude chat.</div>
+
+<div class="foot">Prepared by Abdul Hadhee | IT Executive · 27 Oct 2026</div>
+</div></body></html>

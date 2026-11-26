@@ -1,0 +1,13 @@
+cf_manufacturing_division,Customized Order,Ex Stock,Internal SH Order,Make to Order (MTO),all
+Offset Printing Division (OPD),2765,721,352,30,3868
+Screen Printing Division (SHPS),2378,0,0,0,2378
+Paper Straw Unit (PSU),0,775,3,0,778
+Rewinding Unit (RWU),0,565,1,0,566
+Paper Cup Unit (PCU),416,15,75,0,506
+Customized Packing Unit (CPU),148,1,39,0,188
+MOBA Punching Unit,105,0,0,0,105
+Paper Cup Lid Unit,2,55,23,1,81
+Food Product Processing (FPP),13,25,0,6,44
+Digital Printing Unit (DPU),22,0,0,0,22
+Paper Plate Unit,0,2,7,0,9
+Cake Wrapper Unit,0,3,4,0,7

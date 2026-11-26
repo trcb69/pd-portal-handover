@@ -1,0 +1,14 @@
+cf_manufacturing_division,jobs_12m,per_week_avg,per_workday_mean,median,p95,max
+ALL,3724.0,71.42,11.78,11.0,24.0,33.0
+Offset Printing Division (OPD),1410.0,27.04,4.49,4.0,11.0,20.0
+Screen Printing Division (SHPS),1053.0,20.2,3.31,3.0,10.0,21.0
+Paper Cup Unit (PCU),326.0,6.25,1.03,0.0,4.0,9.0
+Paper Straw Unit (PSU),317.0,6.08,1.01,1.0,3.0,14.0
+Rewinding Unit (RWU),233.0,4.47,0.74,1.0,2.0,4.0
+Customized Packing Unit (CPU),188.0,3.61,0.58,0.0,4.4,12.0
+MOBA Punching Unit,105.0,2.01,0.33,0.0,2.0,6.0
+Paper Cup Lid Unit,35.0,0.67,0.11,0.0,1.0,3.0
+Food Product Processing (FPP),26.0,0.5,0.08,0.0,1.0,3.0
+Digital Printing Unit (DPU),21.0,0.4,0.07,0.0,0.0,5.0
+Paper Plate Unit,6.0,0.12,0.02,0.0,0.0,2.0
+Cake Wrapper Unit,4.0,0.08,0.01,0.0,0.0,2.0

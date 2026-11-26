@@ -1,0 +1,213 @@
+rank,ik,item,customer_top,lines,orders,qty,scope,ranked_by
+1,paperwhitestraw6mmx20cmpacked,Paper White Straw 6mm x 20cm (Packed),Standard Holdings (Pvt) Ltd,141,139,1924902,all divisions,lines
+2,chefschoiceclingfilm45cmx300m21,Chefs Choice Cling Film 45cmX300m (21),Standard Holdings (Pvt) Ltd,96,92,8998,all divisions,lines
+3,stclingfilm45cmx600m,ST-Cling Film 45cmX600m,Standard Holdings (Pvt) Ltd,83,81,6488,all divisions,lines
+4,paperstrawwhite6mmx20cmsps,Paper Straw White 6mm X 20cm  SPS,Standard Holdings (Pvt) Ltd,57,57,385454,all divisions,lines
+5,paperstrawwhite8mmx20cmsps,Paper Straw White 8mm X 20cm SPS,Standard Holdings (Pvt) Ltd,41,36,230100,all divisions,lines
+6,paperwhitestraw6mmx20cmimportedpacked,Paper White Straw 6mm x 20cm Imported (Packed),Standard Holdings (Pvt) Ltd,35,35,593100,all divisions,lines
+7,flexiblewhitestraw6mmx24cmpacked,Flexible White Straw 6mm x 24cm (packed),Standard Holdings (Pvt) Ltd,34,34,435600,all divisions,lines
+8,shblackplasticlidps6for8ozpapercupm,SH-Black (Plastic Lid – PS6) for 8oz Paper Cup (M),Standard Holdings (Pvt) Ltd,18,18,139700,all divisions,lines
+9,chefschoiceclingfilm45cmx600m21,Chefs Choice Cling Film 45cmX600m (21),Standard Holdings (Pvt) Ltd,17,17,853,all divisions,lines
+10,bg12ozswallwhitepapercup,BG - 12oz S/Wall White Paper Cup,Standard Holdings (Pvt) Ltd,16,16,48000,all divisions,lines
+11,spkraftfoodwrap10x10tacobell,SP-Kraft Food Wrap(10 X 10 ) (Taco Bell),Taco Bell,14,9,258162,all divisions,lines
+12,spsmallwhitewrappertacobell,SP-Small White Wrapper (Taco Bell),Taco Bell,14,9,243214,all divisions,lines
+13,spkraftfoodwrap12x12tacobell,SP-Kraft Food Wrap (12 X 12 ) (Taco Bell),Taco Bell,14,8,227412,all divisions,lines
+14,bg8ozswallwhitepapercup,BG - 8oz S/Wall White Paper Cup,Standard Holdings (Pvt) Ltd,13,13,36000,all divisions,lines
+15,bg8ozdwallkraftpapercup,BG - 8oz D/Wall Kraft Paper Cup,Standard Holdings (Pvt) Ltd,13,13,14500,all divisions,lines
+16,bg12ozdwallkraftpapercup,BG - 12oz D/Wall Kraft Paper Cup,Standard Holdings (Pvt) Ltd,13,13,15000,all divisions,lines
+17,shkraftdoublecupholderwithcoating,SH Kraft Double Cup Holder With Coating,Standard Holdings (Pvt) Ltd,12,7,222346,all divisions,lines
+18,packserv750mlaluminiumfoilcontainerwithlid10pcspacking,PACKSERV - 750ml Aluminium Foil Container with Lid (10Pcs Packing),Spar,12,11,1164,all divisions,lines
+19,sp12ozdwallwhitepapercupmarriott,SP-12oz D/Wall White Paper Cup (Marriott),Marriott,12,7,19111,all divisions,lines
+20,spchopsticpouchriffhikkaduwa,SP-Chopstic pouch(Riff Hikkaduwa),Riff Hikkaduwa,12,7,28587,all divisions,lines
+1,paperwhitestraw6mmx20cmpacked,Paper White Straw 6mm x 20cm (Packed),Standard Holdings (Pvt) Ltd,141,139,1924902,all divisions,qty
+2,sh8ozswallwhitepapercup,SH-8oz S/Wall White Paper Cup,Standard Holdings (Pvt) Ltd,7,7,1100000,all divisions,qty
+3,shwhiteroundcupcakewrapper14cm,SH-White Round Cup Cake Wrapper 14cm,Standard Holdings (Pvt) Ltd,3,2,1026000,all divisions,qty
+4,packservwoodenspoon16cmkeellspouchpacking,PACKSERV - Wooden Spoon 16cm (Keells) - Pouch Packing,Keells,7,5,1009278,all divisions,qty
+5,shbrowncupcakeliner105cm,SH-Brown Cup Cake Liner 10.5cm,Standard Holdings (Pvt) Ltd,2,2,983000,all divisions,qty
+6,packservwoodenfork16cmkeellspouchpacking,PACKSERV - Wooden Fork 16cm (Keells) - Pouch Packing,Keells,5,5,780524,all divisions,qty
+7,sh12ozswallwhitepapercup,SH-12oz S/Wall White Paper Cup,Standard Holdings (Pvt) Ltd,5,5,769948,all divisions,qty
+8,sh8ozdwallkraftpapercup,SH-8oz D/Wall Kraft Paper Cup,Standard Holdings (Pvt) Ltd,5,4,654919,all divisions,qty
+9,paperwhitestraw6mmx20cmimportedpacked,Paper White Straw 6mm x 20cm Imported (Packed),Standard Holdings (Pvt) Ltd,35,35,593100,all divisions,qty
+10,shbrownroundcupcakewrapper75cm,SH-Brown Round Cup Cake Wrapper 7.5cm,Standard Holdings (Pvt) Ltd,1,1,501000,all divisions,qty
+11,shbrowncupcakeliner95cm,SH-Brown Cup Cake Liner 9.5cm,Standard Holdings (Pvt) Ltd,1,1,500000,all divisions,qty
+12,shbrowncupcakeliner115cm,SH-Brown Cup Cake Liner 11.5cm,Standard Holdings (Pvt) Ltd,1,1,500000,all divisions,qty
+13,shbrowncupcakeliner75cm,SH-Brown Cup Cake Liner 7.5cm,Standard Holdings (Pvt) Ltd,1,1,490000,all divisions,qty
+14,sh12ozdwallkraftpapercup,SH-12oz D/Wall Kraft Paper Cup,Standard Holdings (Pvt) Ltd,3,3,447425,all divisions,qty
+15,flexiblewhitestraw6mmx24cmpacked,Flexible White Straw 6mm x 24cm (packed),Standard Holdings (Pvt) Ltd,34,34,435600,all divisions,qty
+16,paperstrawwhite6mmx20cmsps,Paper Straw White 6mm X 20cm  SPS,Standard Holdings (Pvt) Ltd,57,57,385454,all divisions,qty
+17,shkraftboxplain900ml110x150x45mm,SH Kraft Box Plain 900ml (110x150x45)mm,Standard Holdings (Pvt) Ltd,6,4,370996,all divisions,qty
+18,spburgerbagwaxcoatedstreetburger,SP-Burger Bag Wax Coated (Street Burger),Street Burger,9,7,352010,all divisions,qty
+19,shkraftboxplain1200ml180x120x50mm,SH - Kraft Box Plain 1200ml (180x120x50)mm,Standard Holdings (Pvt) Ltd,5,4,268802,all divisions,qty
+20,spburgerpouchstreetburger,SP-Burger Pouch (Street Burger),Street Burger,6,5,258773,all divisions,qty
+1,shbrowncupcakeliner105cm,SH-Brown Cup Cake Liner 10.5cm,Standard Holdings (Pvt) Ltd,2,2,983000,Cake Wrapper Unit,lines
+2,shwhiteroundcupcakewrapper14cm,SH-White Round Cup Cake Wrapper 14cm,Standard Holdings (Pvt) Ltd,2,1,526000,Cake Wrapper Unit,lines
+3,shbrowncupcakeliner95cm,SH-Brown Cup Cake Liner 9.5cm,Standard Holdings (Pvt) Ltd,1,1,500000,Cake Wrapper Unit,lines
+4,shbrownroundcupcakewrapper105cm,SH-Brown Round Cup Cake Wrapper 10.5cm,Standard Holdings (Pvt) Ltd,1,1,220000,Cake Wrapper Unit,lines
+1,shbrowncupcakeliner105cm,SH-Brown Cup Cake Liner 10.5cm,Standard Holdings (Pvt) Ltd,2,2,983000,Cake Wrapper Unit,qty
+2,shwhiteroundcupcakewrapper14cm,SH-White Round Cup Cake Wrapper 14cm,Standard Holdings (Pvt) Ltd,2,1,526000,Cake Wrapper Unit,qty
+3,shbrowncupcakeliner95cm,SH-Brown Cup Cake Liner 9.5cm,Standard Holdings (Pvt) Ltd,1,1,500000,Cake Wrapper Unit,qty
+4,shbrownroundcupcakewrapper105cm,SH-Brown Round Cup Cake Wrapper 10.5cm,Standard Holdings (Pvt) Ltd,1,1,220000,Cake Wrapper Unit,qty
+1,packserv750mlaluminiumfoilcontainerwithlid10pcspacking,PACKSERV - 750ml Aluminium Foil Container with Lid (10Pcs Packing),Spar,12,11,1164,Customized Packing Unit (CPU),lines
+2,packserv450mlaluminiumfoilcontainerwithlid10pcspacking,PACKSERV - 450ml Aluminium Foil Container with Lid (10Pcs Packing),Spar,11,11,940,Customized Packing Unit (CPU),lines
+3,packserv750mlplasticrectanglecontainerwithlid5pcspacking,PACKSERV - 750ml Plastic Rectangle Container with Lid (5Pcs Packing),Spar,11,11,592,Customized Packing Unit (CPU),lines
+4,packserv660mlaluminiumfoilcontainerwithlid10pcspacking,PACKSERV - 660ml Aluminium Foil Container with Lid (10Pcs Packing),Spar,10,9,636,Customized Packing Unit (CPU),lines
+5,packserv1200mlaluminiumfoilcontainerwithlid10pcspacking,PACKSERV - 1200ml Aluminium Foil Container with Lid (10Pcs Packing),Spar,9,9,624,Customized Packing Unit (CPU),lines
+6,packserv1400mlaluminiumfoilroundcontainerwithlid10pcspacking,PACKSERV - 1400ml Aluminium Foil Round Container with Lid (10Pcs Packing),Spar,9,8,468,Customized Packing Unit (CPU),lines
+7,packserv250mlaluminiumfoilcontainerwithlid10pcspacking,PACKSERV - 250ml Aluminium Foil Container with Lid (10pcs Packing),Spar,9,9,708,Customized Packing Unit (CPU),lines
+8,packserv1900mlaluminiumfoilcontainerwithlid10pcspacking,PACKSERV - 1900ml Aluminium Foil Container with Lid (10Pcs Packing),Spar,8,7,348,Customized Packing Unit (CPU),lines
+9,packserv700mlkraftlunchbox5pcspacking,PACKSERV - 700ml Kraft Lunch Box (5Pcs Packing),Spar,8,7,336,Customized Packing Unit (CPU),lines
+10,packserv430mlaluminiumfoilroundcontainerwithlid10pcspacking,PACKSERV - 430ml Aluminium Foil Round Container with Lid (10Pcs Packing),Spar,8,7,384,Customized Packing Unit (CPU),lines
+1,packservwoodenspoon16cmkeellspouchpacking,PACKSERV - Wooden Spoon 16cm (Keells) - Pouch Packing,Keells,2,2,200000,Customized Packing Unit (CPU),qty
+2,packservwoodenfork16cmkeellspouchpacking,PACKSERV - Wooden Fork 16cm (Keells) - Pouch Packing,Keells,2,2,150000,Customized Packing Unit (CPU),qty
+3,packservplasticsharpenddrinkingstraw12mmx23cm1pcspacking,PACKSERV - Plastic Sharp End Drinking Straw 12mm x 23cm - 1pcs Packing,Standard Holdings (Pvt) Ltd,2,2,40000,Customized Packing Unit (CPU),qty
+4,packservwoodenknife16cmkeellspouchpacking,PACKSERV - Wooden Knife 16cm (Keells) - Pouch Packing,Keells,1,1,20000,Customized Packing Unit (CPU),qty
+5,packservwoodenspoon16cmsparpouchpacking,PACKSERV - Wooden Spoon 16cm (Spar) - Pouch Packing,Spar,2,2,16600,Customized Packing Unit (CPU),qty
+6,packservwoodenfork16cmsparpouchpacking,PACKSERV - Wooden Fork 16cm (Spar) - Pouch Packing,Spar,2,2,15000,Customized Packing Unit (CPU),qty
+7,packservwoodenchopstickwatersedgepouchpacking,PACKSERV - Wooden Chopstick (Waters Edge) - Pouch Packing,Waters Edge Limited,1,1,10000,Customized Packing Unit (CPU),qty
+8,packservwoodenspoonforktissues16cmpastamaniapouchpacking,"PACKSERV - Wooden Spoon, Fork & Tissues (16cm) (Pastamania) - Pouch Packing",Pastamania,1,1,10000,Customized Packing Unit (CPU),qty
+9,packservwoodenknife16cmamcupcakespouchpacking,PACKSERV - Wooden Knife 16cm (A&M Cup Cakes) - Pouch Packing,A&M Cup Cake,3,3,7000,Customized Packing Unit (CPU),qty
+10,packservdentalkitkrafttoothpaste6grmwoodentoothbrushkitpacking,PACKSERV - Dental Kit (Kraft) - Toothpaste 6grm/Wooden Toothbrush - Kit Packing,Standard Holdings (Pvt) Ltd,3,3,5000,Customized Packing Unit (CPU),qty
+1,fpupliftbrewcoffeesachet15gconversionservicemontado,FP - Uplift Brew Coffee Sachet 1.5g Conversion Service (Montado),Montado (Pvt) Ltd,5,4,35330,Food Product Processing (FPP),lines
+2,fpsugarsachetwhitepillowthevalampuri,FP-Sugar Sachet White (Pillow) (The Valampuri),Standard Holdings (Pvt) Ltd,4,4,158750,Food Product Processing (FPP),lines
+3,fpsugarsachetbrownpillow,FP - Sugar Sachet Brown (Pillow),Standard Holdings (Pvt) Ltd,4,4,107500,Food Product Processing (FPP),lines
+4,shfppsugarsachetwhitepillow,SH-FPP - Sugar Sachet White (Pillow),Standard Holdings (Pvt) Ltd,4,4,100000,Food Product Processing (FPP),lines
+5,fpsugartubewhite,FP - Sugar Tube White,Standard Holdings (Pvt) Ltd,3,2,89100,Food Product Processing (FPP),lines
+6,fpsugartubebrownskinnytoms,FP-Sugar Tube Brown (SkinnyTom's),Skinny Tom's Deli,2,2,6000,Food Product Processing (FPP),lines
+7,fpwinddownbrewcoffeesachet15gconversionservicemontado,FP - Wind Down Brew Coffee Sachet 1.5g Conversion Service (Montado),Montado (Pvt) Ltd,2,2,16500,Food Product Processing (FPP),lines
+8,fpsugarpillowwhite,FP - Sugar Pillow White,Standard Holdings (Pvt) Ltd,2,2,32500,Food Product Processing (FPP),lines
+9,fpsugarpillowwhitethevalampuri,FP-Sugar Pillow White (The Valampuri),Standard Holdings (Pvt) Ltd,1,1,900,Food Product Processing (FPP),lines
+10,fpsugarpillowwhitelamprais,FP-Sugar Pillow White (Lamprais),The Lamprais,1,1,10000,Food Product Processing (FPP),lines
+1,fpsugarsachetwhitepillowthevalampuri,FP-Sugar Sachet White (Pillow) (The Valampuri),Standard Holdings (Pvt) Ltd,4,4,158750,Food Product Processing (FPP),qty
+2,fpsugarsachetbrownpillow,FP - Sugar Sachet Brown (Pillow),Standard Holdings (Pvt) Ltd,4,4,107500,Food Product Processing (FPP),qty
+3,shfppsugarsachetwhitepillow,SH-FPP - Sugar Sachet White (Pillow),Standard Holdings (Pvt) Ltd,4,4,100000,Food Product Processing (FPP),qty
+4,fpsugartubewhite,FP - Sugar Tube White,Standard Holdings (Pvt) Ltd,3,2,89100,Food Product Processing (FPP),qty
+5,fpsugartubebrown,FP - Sugar Tube Brown,Standard Holdings (Pvt) Ltd,1,1,50000,Food Product Processing (FPP),qty
+6,fpupliftbrewcoffeesachet15gconversionservicemontado,FP - Uplift Brew Coffee Sachet 1.5g Conversion Service (Montado),Montado (Pvt) Ltd,5,4,35330,Food Product Processing (FPP),qty
+7,fpsugarpillowwhite,FP - Sugar Pillow White,Standard Holdings (Pvt) Ltd,2,2,32500,Food Product Processing (FPP),qty
+8,fpsugarpillowwhitehotelsangiliyan,FP-Sugar Pillow White (Hotel Sangiliyan),Standard Holdings (Pvt) Ltd,1,1,25000,Food Product Processing (FPP),qty
+9,fpwinddownbrewcoffeesachet15gconversionservicemontado,FP - Wind Down Brew Coffee Sachet 1.5g Conversion Service (Montado),Montado (Pvt) Ltd,2,2,16500,Food Product Processing (FPP),qty
+10,fpsugarpillowwhitelamprais,FP-Sugar Pillow White (Lamprais),The Lamprais,1,1,10000,Food Product Processing (FPP),qty
+1,spkraftbox1200ml180x120x50mmcafe173,SP-Kraft Box 1200ml (180x120x50)mm (Cafe 173),CAFE 173,8,5,8426,MOBA Punching Unit,lines
+2,spkraftbox700ml150x100x45mmcafe173,SP-Kraft Box 700ml (150x100x45)mm (Cafe 173),CAFE 173,8,4,6031,MOBA Punching Unit,lines
+3,sp700mlwhiteboxthoma,SP-700ml White Box (Thoma),THOMA,6,5,9450,MOBA Punching Unit,lines
+4,sp1200mlkraftboxfeast,SP-1200 ML Kraft Box (feast),Feast,6,3,13250,MOBA Punching Unit,lines
+5,spkraftbox1200ml180x120x50mmladla,SP-Kraft Box 1200ml (180x120x50)mm (Ladla),Ladla,5,3,3167,MOBA Punching Unit,lines
+6,spkraftbox1200ml180x120x50mmsinharacompany,SP-Kraft Box 1200ml (180x120x50)mm (Sinhara Company),Sinhara Company,5,3,15020,MOBA Punching Unit,lines
+7,spkraftbox900ml165x115x50mmcafe173,SP-Kraft Box 900ml (165x115x50) mm (Cafe 173),CAFE 173,5,3,5713,MOBA Punching Unit,lines
+8,sp900mlkraftboxcuisinecolombo,SP- 900ml  Kraft  Box (Cuisine Colombo),Cuisine Colombo,5,3,2616,MOBA Punching Unit,lines
+9,spwhitebox1600ml195x140x65mmthoma,SP-White Box 1600ml (195x140x65)mm (Thoma),THOMA,5,4,7885,MOBA Punching Unit,lines
+10,spkraftbox1200mlthelakehotel,SP-Kraft Box 1200ml (The Lake Hotel),The Lake Hotel,4,2,1140,MOBA Punching Unit,lines
+1,sp700mlkraftboxpizza,SP-700ML Kraft Box (Pizza),Pizza Hut,4,3,60246,MOBA Punching Unit,qty
+2,spkraftbox900ml165x115x50mmlittlelion,SP-Kraft Box 900ml (165x115x50) mm (Little Lion),Little Lion Association,3,2,21726,MOBA Punching Unit,qty
+3,spkraftboxplain700ml150x100x45mmspar,SP-Kraft Box Plain 700 ml(150x100x45)mm(Spar),Spar,2,1,20314,MOBA Punching Unit,qty
+4,spkraftbox1200ml180x120x50mmsinharacompany,SP-Kraft Box 1200ml (180x120x50)mm (Sinhara Company),Sinhara Company,5,3,15020,MOBA Punching Unit,qty
+5,spkraftbox900ml110x150x45mmkahabathgedara,SP-Kraft Box 900ml (110x150x45)mm(Kahabath Gedara),Kahabath Gedara,1,1,15000,MOBA Punching Unit,qty
+6,sp1200mlkraftboxfeast,SP-1200 ML Kraft Box (feast),Feast,6,3,13250,MOBA Punching Unit,qty
+7,spkraftbox900ml165x115x50mmthanjaivirunthu,SP-Kraft Box 900ml (165x115x50) mm (Thanjai Virunthu),Thanjai Virunthu,2,1,9978,MOBA Punching Unit,qty
+8,sp700mlwhiteboxthoma,SP-700ml White Box (Thoma),THOMA,6,5,9450,MOBA Punching Unit,qty
+9,spkraftbox1200ml180x120x50mmcafe173,SP-Kraft Box 1200ml (180x120x50)mm (Cafe 173),CAFE 173,8,5,8426,MOBA Punching Unit,qty
+10,spwhitebox1600ml195x140x65mmthoma,SP-White Box 1600ml (195x140x65)mm (Thoma),THOMA,5,4,7885,MOBA Punching Unit,qty
+1,spkraftfoodwrap10x10tacobell,SP-Kraft Food Wrap(10 X 10 ) (Taco Bell),Taco Bell,14,9,258162,Offset Printing Division (OPD),lines
+2,spkraftfoodwrap12x12tacobell,SP-Kraft Food Wrap (12 X 12 ) (Taco Bell),Taco Bell,14,8,227412,Offset Printing Division (OPD),lines
+3,spsmallwhitewrappertacobell,SP-Small White Wrapper (Taco Bell),Taco Bell,14,9,243214,Offset Printing Division (OPD),lines
+4,spchopsticpouchriffhikkaduwa,SP-Chopstic pouch(Riff Hikkaduwa),Riff Hikkaduwa,12,7,28587,Offset Printing Division (OPD),lines
+5,shkraftdoublecupholderwithcoating,SH Kraft Double Cup Holder With Coating,Standard Holdings (Pvt) Ltd,12,7,222346,Offset Printing Division (OPD),lines
+6,spkraftcookibagdoubletreehilton,SP- Kraft Cooki Bag(Doubletree Hilton),Double Tree Hilton,11,7,43102,Offset Printing Division (OPD),lines
+7,spchickenbucketlidkeells,SP-Chicken Bucket+Lid(Keells),Keells,11,7,222139,Offset Printing Division (OPD),lines
+8,shkrafttray700ml,SH-Kraft Tray 700ml,Standard Holdings (Pvt) Ltd,11,7,46021,Offset Printing Division (OPD),lines
+9,shwhitegreaseproofpaper15x13inches,SH-White Greaseproof Paper 15x13 inches,Standard Holdings (Pvt) Ltd,11,7,54518,Offset Printing Division (OPD),lines
+10,spbudgetboxwoktowalksha125,SP-Budget Box (Wok To Walk)-(SHA125),Wok to Walk,11,8,99040,Offset Printing Division (OPD),lines
+1,packservwoodenspoon16cmkeellspouchpacking,PACKSERV - Wooden Spoon 16cm (Keells) - Pouch Packing,Keells,5,3,809278,Offset Printing Division (OPD),qty
+2,packservwoodenfork16cmkeellspouchpacking,PACKSERV - Wooden Fork 16cm (Keells) - Pouch Packing,Keells,3,3,630524,Offset Printing Division (OPD),qty
+3,shbrownroundcupcakewrapper75cm,SH-Brown Round Cup Cake Wrapper 7.5cm,Standard Holdings (Pvt) Ltd,1,1,501000,Offset Printing Division (OPD),qty
+4,shwhiteroundcupcakewrapper14cm,SH-White Round Cup Cake Wrapper 14cm,Standard Holdings (Pvt) Ltd,1,1,500000,Offset Printing Division (OPD),qty
+5,shbrowncupcakeliner115cm,SH-Brown Cup Cake Liner 11.5cm,Standard Holdings (Pvt) Ltd,1,1,500000,Offset Printing Division (OPD),qty
+6,shbrowncupcakeliner75cm,SH-Brown Cup Cake Liner 7.5cm,Standard Holdings (Pvt) Ltd,1,1,490000,Offset Printing Division (OPD),qty
+7,shkraftboxplain900ml110x150x45mm,SH Kraft Box Plain 900ml (110x150x45)mm,Standard Holdings (Pvt) Ltd,6,4,370996,Offset Printing Division (OPD),qty
+8,spburgerbagwaxcoatedstreetburger,SP-Burger Bag Wax Coated (Street Burger),Street Burger,9,7,352010,Offset Printing Division (OPD),qty
+9,shkraftboxplain1200ml180x120x50mm,SH - Kraft Box Plain 1200ml (180x120x50)mm,Standard Holdings (Pvt) Ltd,5,4,268802,Offset Printing Division (OPD),qty
+10,spburgerpouchstreetburger,SP-Burger Pouch (Street Burger),Street Burger,6,5,258773,Offset Printing Division (OPD),qty
+1,shblackplasticlidps6for8ozpapercupm,SH-Black (Plastic Lid – PS6) for 8oz Paper Cup (M),Standard Holdings (Pvt) Ltd,18,18,139700,Paper Cup Lid Unit,lines
+2,shblacklidfor8ozpapercupm,SH-Black Lid for 8oz Paper Cup (M),Standard Holdings (Pvt) Ltd,7,7,55500,Paper Cup Lid Unit,lines
+3,shwhitelidfor8ozpapercupm,SH-White Lid for 8oz Paper Cup (M),Standard Holdings (Pvt) Ltd,3,3,22500,Paper Cup Lid Unit,lines
+1,shblackplasticlidps6for8ozpapercupm,SH-Black (Plastic Lid – PS6) for 8oz Paper Cup (M),Standard Holdings (Pvt) Ltd,18,18,139700,Paper Cup Lid Unit,qty
+2,shblacklidfor8ozpapercupm,SH-Black Lid for 8oz Paper Cup (M),Standard Holdings (Pvt) Ltd,7,7,55500,Paper Cup Lid Unit,qty
+3,shwhitelidfor8ozpapercupm,SH-White Lid for 8oz Paper Cup (M),Standard Holdings (Pvt) Ltd,3,3,22500,Paper Cup Lid Unit,qty
+1,bg12ozswallwhitepapercup,BG - 12oz S/Wall White Paper Cup,Standard Holdings (Pvt) Ltd,16,16,48000,Paper Cup Unit (PCU),lines
+2,bg12ozdwallkraftpapercup,BG - 12oz D/Wall Kraft Paper Cup,Standard Holdings (Pvt) Ltd,13,13,15000,Paper Cup Unit (PCU),lines
+3,bg8ozdwallkraftpapercup,BG - 8oz D/Wall Kraft Paper Cup,Standard Holdings (Pvt) Ltd,13,13,14500,Paper Cup Unit (PCU),lines
+4,bg8ozswallwhitepapercup,BG - 8oz S/Wall White Paper Cup,Standard Holdings (Pvt) Ltd,13,13,36000,Paper Cup Unit (PCU),lines
+5,sp12ozdwallwhitepapercupmarriott,SP-12oz D/Wall White Paper Cup (Marriott),Marriott,12,7,19111,Paper Cup Unit (PCU),lines
+6,sp12ozdwallkraftpapercupmeridien,SP-12Oz D/Wall Kraft Paper Cup (Meridien),Nidro Supply Pvt Ltd (Meridien),10,5,6809,Paper Cup Unit (PCU),lines
+7,sp8ozdwallblackpapercupstreetbaristacrew,SP-8Oz D/Wall Black Paper Cup (Street Barista Crew),Street Barista Crew,9,5,3707,Paper Cup Unit (PCU),lines
+8,sp8ozdwallwhitepapercupcreperunner,SP-8oz D/Wall White Paper Cup (Crepe Runner),Crepe Runner (Private) Limited,9,5,25302,Paper Cup Unit (PCU),lines
+9,sp8ozdwallkraftpapercupsponge,SP-8Oz D/Wall Kraft Paper Cup (Sponge),Sponge,9,6,36054,Paper Cup Unit (PCU),lines
+10,sp8ozdwallwhitepapercuphutcafe,SP-8oz D/wall White Paper Cup (Hut Cafe),HUT CAFE,8,5,18839,Paper Cup Unit (PCU),lines
+1,sh8ozswallwhitepapercup,SH-8oz S/Wall White Paper Cup,Standard Holdings (Pvt) Ltd,6,6,900000,Paper Cup Unit (PCU),qty
+2,sh8ozdwallkraftpapercup,SH-8oz D/Wall Kraft Paper Cup,Standard Holdings (Pvt) Ltd,5,4,654919,Paper Cup Unit (PCU),qty
+3,sh12ozswallwhitepapercup,SH-12oz S/Wall White Paper Cup,Standard Holdings (Pvt) Ltd,4,4,649948,Paper Cup Unit (PCU),qty
+4,sh12ozdwallkraftpapercup,SH-12oz D/Wall Kraft Paper Cup,Standard Holdings (Pvt) Ltd,3,3,447425,Paper Cup Unit (PCU),qty
+5,bg12ozswallwhitepapercup,BG - 12oz S/Wall White Paper Cup,Standard Holdings (Pvt) Ltd,16,16,48000,Paper Cup Unit (PCU),qty
+6,sp8ozdwallkraftpapercupsponge,SP-8Oz D/Wall Kraft Paper Cup (Sponge),Sponge,9,6,36054,Paper Cup Unit (PCU),qty
+7,bg8ozswallwhitepapercup,BG - 8oz S/Wall White Paper Cup,Standard Holdings (Pvt) Ltd,13,13,36000,Paper Cup Unit (PCU),qty
+8,sp8ozdwallwhitepapercupcreperunner,SP-8oz D/Wall White Paper Cup (Crepe Runner),Crepe Runner (Private) Limited,9,5,25302,Paper Cup Unit (PCU),qty
+9,sh8ozdwallblackpapercup,SH-8oz D/Wall Black Paper Cup,Standard Holdings (Pvt) Ltd,3,2,23339,Paper Cup Unit (PCU),qty
+10,sh12ozrwallkraftpapercup,SH-12oz R/Wall Kraft Paper Cup,Standard Holdings (Pvt) Ltd,1,1,20000,Paper Cup Unit (PCU),qty
+1,shpaperplate7inch,SH - Paper Plate 7 Inch,Standard Holdings (Pvt) Ltd,3,3,106843,Paper Plate Unit,lines
+1,shpaperplate7inch,SH - Paper Plate 7 Inch,Standard Holdings (Pvt) Ltd,3,3,106843,Paper Plate Unit,qty
+1,paperwhitestraw6mmx20cmpacked,Paper White Straw 6mm x 20cm (Packed),Standard Holdings (Pvt) Ltd,141,139,1924902,Paper Straw Unit (PSU),lines
+2,paperstrawwhite6mmx20cmsps,Paper Straw White 6mm X 20cm  SPS,Standard Holdings (Pvt) Ltd,57,57,385454,Paper Straw Unit (PSU),lines
+3,paperstrawwhite8mmx20cmsps,Paper Straw White 8mm X 20cm SPS,Standard Holdings (Pvt) Ltd,41,36,230100,Paper Straw Unit (PSU),lines
+4,paperwhitestraw6mmx20cmimportedpacked,Paper White Straw 6mm x 20cm Imported (Packed),Standard Holdings (Pvt) Ltd,35,35,593100,Paper Straw Unit (PSU),lines
+5,flexiblewhitestraw6mmx24cmpacked,Flexible White Straw 6mm x 24cm (packed),Standard Holdings (Pvt) Ltd,34,34,435600,Paper Straw Unit (PSU),lines
+6,paperstrawwhite8mmx25cmsps,Paper Straw White 8mm X 25cm SPS,Standard Holdings (Pvt) Ltd,7,7,35600,Paper Straw Unit (PSU),lines
+7,paperkraftstraw6mmx20cm,Paper Kraft Straw 6mm x 20cm,Standard Holdings (Pvt) Ltd,6,6,37100,Paper Straw Unit (PSU),lines
+8,paperstrawwhite6mmx25cmsps,Paper Straw White 6mm x 25cm SPS,Standard Holdings (Pvt) Ltd,3,3,21904,Paper Straw Unit (PSU),lines
+1,paperwhitestraw6mmx20cmpacked,Paper White Straw 6mm x 20cm (Packed),Standard Holdings (Pvt) Ltd,141,139,1924902,Paper Straw Unit (PSU),qty
+2,paperwhitestraw6mmx20cmimportedpacked,Paper White Straw 6mm x 20cm Imported (Packed),Standard Holdings (Pvt) Ltd,35,35,593100,Paper Straw Unit (PSU),qty
+3,flexiblewhitestraw6mmx24cmpacked,Flexible White Straw 6mm x 24cm (packed),Standard Holdings (Pvt) Ltd,34,34,435600,Paper Straw Unit (PSU),qty
+4,paperstrawwhite6mmx20cmsps,Paper Straw White 6mm X 20cm  SPS,Standard Holdings (Pvt) Ltd,57,57,385454,Paper Straw Unit (PSU),qty
+5,paperstrawwhite8mmx20cmsps,Paper Straw White 8mm X 20cm SPS,Standard Holdings (Pvt) Ltd,41,36,230100,Paper Straw Unit (PSU),qty
+6,paperkraftstraw6mmx20cm,Paper Kraft Straw 6mm x 20cm,Standard Holdings (Pvt) Ltd,6,6,37100,Paper Straw Unit (PSU),qty
+7,paperstrawwhite8mmx25cmsps,Paper Straw White 8mm X 25cm SPS,Standard Holdings (Pvt) Ltd,7,7,35600,Paper Straw Unit (PSU),qty
+8,paperstrawwhite6mmx25cmsps,Paper Straw White 6mm x 25cm SPS,Standard Holdings (Pvt) Ltd,3,3,21904,Paper Straw Unit (PSU),qty
+1,chefschoiceclingfilm45cmx300m21,Chefs Choice Cling Film 45cmX300m (21),Standard Holdings (Pvt) Ltd,96,92,8998,Rewinding Unit (RWU),lines
+2,stclingfilm45cmx600m,ST-Cling Film 45cmX600m,Standard Holdings (Pvt) Ltd,83,81,6488,Rewinding Unit (RWU),lines
+3,chefschoiceclingfilm45cmx600m21,Chefs Choice Cling Film 45cmX600m (21),Standard Holdings (Pvt) Ltd,17,17,853,Rewinding Unit (RWU),lines
+4,chefschoicebiodegradableclingfilm45x30021,Chefs Choice Biodegradable Cling Film (45x300) (21),Standard Holdings (Pvt) Ltd,10,10,882,Rewinding Unit (RWU),lines
+5,stclingfilm45cmx300m,ST-Cling Film 45cmX300m,Standard Holdings (Pvt) Ltd,7,7,783,Rewinding Unit (RWU),lines
+6,chefschoiceclingfilmpe45cmx300m21,Chefs Choice Cling Film PE 45CMX300M (21),Standard Holdings (Pvt) Ltd,7,7,518,Rewinding Unit (RWU),lines
+7,chefschoicebiodegradableclingfilm30cmx10mbio,Chefs Choice Biodegradable Cling Film 30cm x 10m (BIO),Standard Holdings (Pvt) Ltd,6,6,1617,Rewinding Unit (RWU),lines
+8,shsuperpackclingfilm45cmx204m,SH-Super Pack Cling Film 45cm x 20.4m,Standard Holdings (Pvt) Ltd,4,4,985,Rewinding Unit (RWU),lines
+9,chefschoiceclingfilm45cmx30m,Chefs Choice Cling Film 45cmX30m,Standard Holdings (Pvt) Ltd,3,3,614,Rewinding Unit (RWU),lines
+10,chefschoicebiodegradableclingfilm45x10m,Chefs Choice Biodegradable Cling Film 45x10m,Standard Holdings (Pvt) Ltd,2,2,226,Rewinding Unit (RWU),lines
+1,chefschoiceclingfilm45cmx300m21,Chefs Choice Cling Film 45cmX300m (21),Standard Holdings (Pvt) Ltd,96,92,8998,Rewinding Unit (RWU),qty
+2,stclingfilm45cmx600m,ST-Cling Film 45cmX600m,Standard Holdings (Pvt) Ltd,83,81,6488,Rewinding Unit (RWU),qty
+3,chefschoicebiodegradableclingfilm30cmx10mbio,Chefs Choice Biodegradable Cling Film 30cm x 10m (BIO),Standard Holdings (Pvt) Ltd,6,6,1617,Rewinding Unit (RWU),qty
+4,shsuperpackclingfilm45cmx204m,SH-Super Pack Cling Film 45cm x 20.4m,Standard Holdings (Pvt) Ltd,4,4,985,Rewinding Unit (RWU),qty
+5,chefschoicebiodegradableclingfilm45x30021,Chefs Choice Biodegradable Cling Film (45x300) (21),Standard Holdings (Pvt) Ltd,10,10,882,Rewinding Unit (RWU),qty
+6,chefschoiceclingfilm45cmx600m21,Chefs Choice Cling Film 45cmX600m (21),Standard Holdings (Pvt) Ltd,17,17,853,Rewinding Unit (RWU),qty
+7,stclingfilm45cmx300m,ST-Cling Film 45cmX300m,Standard Holdings (Pvt) Ltd,7,7,783,Rewinding Unit (RWU),qty
+8,chefschoicebiodegradableclingfilm45x10mbio,Chefs Choice Biodegradable Cling Film 45x10m (BIO),Standard Holdings (Pvt) Ltd,2,2,634,Rewinding Unit (RWU),qty
+9,chefschoiceclingfilm45cmx30m,Chefs Choice Cling Film 45cmX30m,Standard Holdings (Pvt) Ltd,3,3,614,Rewinding Unit (RWU),qty
+10,chefschoiceclingfilmpe45cmx300m21,Chefs Choice Cling Film PE 45CMX300M (21),Standard Holdings (Pvt) Ltd,7,7,518,Rewinding Unit (RWU),qty
+1,cp16ozplasticcup475mlceyloncoffeeclub,CP-16Oz Plastic Cup (475ml) (Ceylon Coffee Club),CEYLON COFFE,8,8,16400,Screen Printing Division (SHPS),lines
+2,cp12ozplasticcup350mldinemore,CP-12Oz Plastic Cup (350ml) (Dinemore),Dinemore (Pvt) Ltd,7,7,12000,Screen Printing Division (SHPS),lines
+3,cp12ozplasticcup350mlblends,CP-12oz Plastic Cup (350ml) (Blends),Blends,7,7,3500,Screen Printing Division (SHPS),lines
+4,cp16ozplasticcup475mlislandteacompany,CP-16Oz Plastic Cup (475ml) (Island Tea Company),ISLAND TEA,7,7,15400,Screen Printing Division (SHPS),lines
+5,cp8ozdwallkraftcupbyd,CP-8oz D/Wall Kraft Cup (BYD),BYD,7,7,36187,Screen Printing Division (SHPS),lines
+6,cpkraftboxplain900ml110x150x45mmblends,CP-Kraft Box Plain 900ml (110x150x45)mm (Blends),Blends,6,6,3000,Screen Printing Division (SHPS),lines
+7,cppizzabox30x30x4cm12inchmypizza,CP-Pizza Box 30x30x4cm (12 inch) (My Pizza),MY PIZZA,6,6,800,Screen Printing Division (SHPS),lines
+8,cp12ozplasticcup350mlthecoffeemanor,CP-12Oz Plastic Cup (350ml) (The Coffee Manor),The Coffee Manor,6,6,8000,Screen Printing Division (SHPS),lines
+9,cpkraftpaperbagl300mmx275mmx160mmwithdiecuthandleblends,CP-Kraft Paper Bag (L) 300mm X 275mm X 160mm with Die Cut Handle (Blends),Blends,6,6,3000,Screen Printing Division (SHPS),lines
+10,cpkraftpaperbagm280x180x120mmblends,CP-Kraft Paper Bag (M) 280x180x120mm (Blends),Blends,6,6,3000,Screen Printing Division (SHPS),lines
+1,cp8ozdwallkraftcupbyd,CP-8oz D/Wall Kraft Cup (BYD),BYD,7,7,36187,Screen Printing Division (SHPS),qty
+2,printserv8ozdwallkraftcupwithprintbyd,PRINTSERV-8oz D/Wall Kraft Cup With Print (BYD),BYD,5,5,35000,Screen Printing Division (SHPS),qty
+3,cp16ozplasticcup475mlceyloncoffeeclub,CP-16Oz Plastic Cup (475ml) (Ceylon Coffee Club),CEYLON COFFE,8,8,16400,Screen Printing Division (SHPS),qty
+4,cp16ozplasticcup475mlislandteacompany,CP-16Oz Plastic Cup (475ml) (Island Tea Company),ISLAND TEA,7,7,15400,Screen Printing Division (SHPS),qty
+5,printserv12ozplasticcup350mlwithprintkaicoffeewithboy,PRINTSERV-12Oz Plastic Cup (350ml) With Print (Kai Coffee With Boy),Artreum Leisure Pvt Ltd - Kai Colombo,3,3,14700,Screen Printing Division (SHPS),qty
+6,cpkraftpaperpouchbagwwindow12x20cmteamgoldenridge,CP-Kraft Paper Pouch Bag W/window 12X20cm (Team Golden Ridge),Team Golden Ridge,3,3,13050,Screen Printing Division (SHPS),qty
+7,cpkraftpaperpouchbagwithwindow12x20cmjetwinblue,CP-Kraft Paper Pouch Bag With Window 12x20cm (Jetwin Blue),Jetwin Blue,3,3,13000,Screen Printing Division (SHPS),qty
+8,cpkraftpouchbagwithwindow12x20cmjetwingyala,CP-Kraft Pouch Bag with Window 12x20cm (Jetwing Yala),Jetwing Yala,5,5,12996,Screen Printing Division (SHPS),qty
+9,cp12ozplasticcup350mldinemore,CP-12Oz Plastic Cup (350ml) (Dinemore),Dinemore (Pvt) Ltd,7,7,12000,Screen Printing Division (SHPS),qty
+10,cp12ozplasticcup350mlgrindcolombo,CP-12Oz Plastic Cup (350ml) (Grind Colombo),Grind Colombo,5,5,12000,Screen Printing Division (SHPS),qty
