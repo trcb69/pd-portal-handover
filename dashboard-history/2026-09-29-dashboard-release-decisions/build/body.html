@@ -1,0 +1,247 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<title>Managers' dashboard - decisions needed to release it</title>
+<link rel="stylesheet" href="theme.css"><link rel="stylesheet" href="extra.css"></head><body>
+
+<!-- PAGE 1 -->
+<section class="page">
+  <div class="hd"><div class="brand"><i>SH</i>Standard<span>&nbsp;Holdings</span></div>
+    <div class="meta">IT &middot; 29 Sep 2026</div></div>
+  <div>
+    <div class="eyebrow">SmartPack production dashboard</div>
+    <h1>What I need decided<br>to start building</h1>
+    <p class="lead">The design is finished and checked. Nothing is built yet, and that is deliberate:
+    three decisions sit inside the parts I would build first, so starting before they are made means
+    building the wrong thing and doing it twice. None of them takes long. This page is what they are;
+    the rest is what to ask each manager.</p>
+  </div>
+
+  <h2>Where the dashboard is today</h2>
+  <div class="two">
+    <div class="qbox"><h3>Done</h3>
+      <ul class="q">
+        <li>The design document passed <b>nine rounds</b> of independent review.</li>
+        <li><b>175 tests</b> are written and failing on purpose - they are the definition of "finished",
+        so the moment the code does the right thing they go green.</li>
+        <li>The foundation built earlier (login, roles, database) still passes its own 136 tests.</li>
+      </ul></div>
+    <div class="qbox"><h3>Not started</h3>
+      <ul class="q">
+        <li>No dashboard code is written. No database change is applied. Nothing is deployed.</li>
+        <li>The Zoho connection does not exist yet, so nothing has been read from the live system.</li>
+        <li>No manager has seen a screen.</li>
+      </ul></div>
+  </div>
+  <p class="note">Every review round found real problems in the design - a single bad record that would
+  have blanked every manager's screen with no way to recover, a data mismatch that would have thrown on
+  the very first live order, and a nightly job that could eat the next day's Zoho allowance. Those were
+  found on paper, which is where they are cheap.</p>
+
+  <h2>The three decisions, and what waiting costs</h2>
+  <table class="dv">
+    <tr><th>Decision</th><th>Who</th><th>Effort</th><th>What it costs to wait</th></tr>
+    <tr class="warn"><td><b>1. Read-only Zoho access for SmartPack</b><br><small>an API client I can read with, plus the real daily call limit</small></td>
+        <td>You<br><small>(Zoho admin)</small></td><td class="num">~10 min</td>
+        <td>Blocks <b>two</b> builds, not one. The dashboard cannot verify four settings it must get right,
+        and the inventory system needs the same answers. One sitting unblocks both.</td></tr>
+    <tr class="warn"><td><b>2. Which field decides a job's division</b><br><small>the tag on the item line, or the field on the order</small></td>
+        <td>You, with the managers</td><td class="num">one meeting</td>
+        <td>Four tests cannot be written. More importantly, it decides <b>who sees which job</b> - get it
+        wrong and a manager silently never sees work that is theirs.</td></tr>
+    <tr class="warn"><td><b>3. How the screen decides its data is trustworthy</b><br><small>one nightly full check, or continuous with a weekly sweep</small></td>
+        <td>You<br><small>(my recommendation below)</small></td><td class="num">a yes / no</td>
+        <td>It sits in the middle of the first thing I would build. Decide it late and three tests plus
+        that part of the build are done twice.</td></tr>
+  </table>
+
+  <div class="script"><b>If all three are answered, building starts immediately</b> and the first thing
+  the managers see is a working "my jobs" screen on real Zoho data. If only the Zoho access is answered,
+  I can still start most of it - but not the part that decides trustworthiness.</div>
+
+  <div class="ft"><span>Managers' dashboard - decisions to release it</span><span>Page 1 of 5</span></div>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page">
+  <div class="hd"><div class="brand"><i>SH</i>Standard<span>&nbsp;Holdings</span></div>
+    <div class="meta">The three decisions, in detail</div></div>
+
+  <div class="qbox hot"><h3>1. Read-only Zoho access for SmartPack &mdash; an admin action, not a discussion</h3>
+    <p class="lead">A "Self Client" in Zoho's API console: credentials that let the dashboard <b>read</b>
+    SmartPack's sales orders and assemblies every few minutes, and never write anything back. Full steps
+    are written out at <b>dev/production-dashboard/docs/zoho-self-client-setup.md</b>.</p>
+    <ul class="q">
+      <li><b>Watch one thing:</b> at the last step Zoho asks which company - pick <b>SmartPack</b>. Picking
+      Standard Holdings is the usual mistake and the system would then read the wrong company's orders.</li>
+      <li>The secret goes straight into the server file. Never into a chat, a report or an email.</li>
+      <li><b>Second half, a lookup in Zoho settings:</b> what is the <b>real</b> daily API call limit on
+      SmartPack's plan? We have been planning against 1,000 a day and that figure is unverified. Three
+      things will share it. If the real number is lower, I size the system down now rather than after it
+      breaks.</li>
+    </ul>
+    <p class="note">What it unblocks: twelve read-only checks that settle four settings which are guesses
+    today - including one that, if wrong, would stop every job loading on the first day.</p></div>
+
+  <div class="qbox hot"><h3>2. Which field decides a job's division</h3>
+    <p class="lead">Zoho stores the division twice: once on the order, once on each item line. On a full
+    year of orders they disagree far more than anyone expected.</p>
+    <ul class="q">
+      <li><b>My recommendation:</b> the <b>item line tag decides</b>; the order field is used only when the
+      line has no tag; and where the two disagree the job is marked so somebody can fix Zoho.</li>
+      <li><b>Why:</b> the order field is a bucket, not a division. Of 2,029 lines whose order says
+      "Offset Printing Division", the line tags say PackPro 1,451, MacPro 462, MOBA 93.</li>
+      <li><b>And:</b> 333 lines carry no tag at all - 215 of Rewinding's 224 - so the order field has to
+      stay as the fallback. It cannot simply be replaced.</li>
+    </ul></div>
+
+  <div class="qbox hot"><h3>3. How the screen decides its data is trustworthy &mdash; my recommendation: change it</h3>
+    <p class="lead"><b>Today's design:</b> every night at 2am the system re-reads the entire order list, and
+    that nightly run is what tells the screen its data is good.</p>
+    <p class="lead"><b>The problem:</b> if that one run fails - Zoho rate-limits us, a token expires, the
+    connection drops - nothing retries it. Two failed nights and <b>every manager's screen goes blank</b>:
+    no counters, no flags, just a grey banner, and nobody can fix it at 2am.</p>
+    <p class="lead"><b>What I recommend:</b> judge freshness from the small continuous updates instead, and
+    run the full sweep <b>weekly</b>, only to catch deleted orders. If the weekly sweep is overdue, that
+    shows on my admin screen - never as a blank screen for a manager.</p>
+    <ul class="q">
+      <li><b>Gains:</b> removes one of the design's worst failure modes, and frees about 43 Zoho calls a
+      day - turning a daily budget that currently lands exactly on the limit into one with room.</li>
+      <li><b>Costs:</b> one kind of quantity refresh happens continuously instead of nightly. The design
+      already prevents that from raising a false alarm.</li>
+      <li>This is a technical call, not a business one. It needs your yes or no, not the managers'.</li>
+    </ul></div>
+
+  <div class="ft"><span>Managers' dashboard - decisions to release it</span><span>Page 2 of 5</span></div>
+</section>
+
+<!-- PAGE 3 -->
+<section class="page">
+  <div class="hd"><div class="brand"><i>SH</i>Standard<span>&nbsp;Holdings</span></div>
+    <div class="meta">Not blocking today, but soon</div></div>
+  <h2>Six more that will bite if they are left</h2>
+  <p class="lead">None of these stops me starting. Each has a point after which it becomes expensive or
+  impossible to change, and that point is given.</p>
+
+  <table class="dv">
+    <tr><th>What</th><th>Why it matters</th><th>Needed by</th></tr>
+    <tr class="warn"><td><b>Who owns MacPro?</b></td>
+      <td>A unit doing <b>333 orders and 2.5 million units a year</b> that is in no system of ours and has
+      no manager. Until someone owns it, those jobs appear on nobody's screen.</td>
+      <td>before the managers see the screen</td></tr>
+    <tr><td><b>Paper cups, lids, plates, cake wrappers &rarr; Ranga?</b></td>
+      <td>Every one of those orders carries the <b>MOBA</b> tag at line level. If that is right, four of the
+      five "units with no manager" are simply Ranga's and the problem disappears.</td>
+      <td>same meeting as decision 2</td></tr>
+    <tr><td><b>Retire Digital Printing Unit?</b></td>
+      <td>Zero orders in twelve months. It is the only unit that is genuinely unused.</td>
+      <td>whenever convenient</td></tr>
+    <tr><td><b>Database change numbering</b></td>
+      <td>Three separate pieces of work each assume they own the same "change 005". Whoever ships first
+      takes it and the other two must be renumbered. I propose dashboard 005, security 006, portal 007.</td>
+      <td>before the portal work starts</td></tr>
+    <tr><td><b>Order portal step OP-05</b></td>
+      <td>It narrowed its own scope assuming the dashboard would ship job creation. The dashboard preview
+      is view-only, so that work has to come back somewhere.</td>
+      <td>before OP-05 is built</td></tr>
+    <tr class="warn"><td><b>Inventory: the 228 open jobs</b></td>
+      <td>For the inventory system to say what can be promised to a customer, the open jobs must be in the
+      system. Nobody has been asked to re-enter them. If they are not, that calculation ships half-blind
+      in January - and we cannot claim it prevents double ordering.</td>
+      <td><b>owner needed before 19 Oct</b></td></tr>
+    <tr class="warn"><td><b>Inventory: raw material in the WIP store</b></td>
+      <td>As designed, the system would count the same stock as <b>available</b> and flag it as <b>in the
+      wrong place</b> at the same time. One of those has to give.</td>
+      <td>before 4 Nov</td></tr>
+  </table>
+
+  <div class="qbox"><h3>Two technical blocks on the inventory side I am handling, for your awareness</h3>
+    <ul class="q">
+      <li>The purchase-order sync is budgeted as one Zoho call when the real list is about ten pages - as
+      written it would fail every run. Fixed once the live API check records the real page count.</li>
+      <li>If that sync fails repeatedly, availability reads <b>too high</b> - the one direction the system
+      exists to prevent. Needs a warning value added <b>before</b> a later step ships, because that kind of
+      value cannot be added afterwards.</li>
+    </ul></div>
+
+  <div class="ft"><span>Managers' dashboard - decisions to release it</span><span>Page 3 of 5</span></div>
+</section>
+
+<!-- PAGE 4 -->
+<section class="page">
+  <div class="hd"><div class="brand"><i>SH</i>Standard<span>&nbsp;Holdings</span></div>
+    <div class="meta">Questions for the managers</div></div>
+  <h2>What to ask each manager, to release the dashboard</h2>
+  <p class="lead">These are the answers that change what gets built. Everything else can be adjusted in
+  settings afterwards.</p>
+
+  <div class="qbox hot"><h3>Ishan &mdash; PackPro, Paper Straw, Rewinding (and MacPro?)</h3>
+    <ol class="q">
+      <li><b>PackPro and MacPro - what is the difference, and who runs MacPro?</b> Both are tagged
+      "OPD - ..." and both make Taco Bell wraps and kraft boxes. The same item appears under both tags in
+      the same year. This is the single biggest unknown.</li>
+      <li><b>Rewinding: 215 of 224 order lines carry no division tag at all.</b> Is the tag simply not used
+      for cling film work? Those jobs can only be routed by the order field.</li>
+      <li>Paper Straw: 88 of 305 lines also have no tag. Does that matter to you?</li>
+      <li>Straw has only 7 different items and every order is for Standard Holdings - is it effectively
+      made to stock rather than to order? It changes what "late" means on the screen.</li>
+    </ol></div>
+
+  <div class="qbox hot"><h3>Mubeena &mdash; Screen Printing</h3>
+    <ol class="q">
+      <li>Your division is the cleanest data in the company - <b>1,078 of 1,080 lines tagged correctly</b>,
+      not one disagreement. Whatever is being done here, I would like the others to copy it. What is it?</li>
+      <li><b>At what point in your day do you know a screen or plate is ready?</b> That is the thing the
+      dashboard should show you first, and it is not recorded anywhere today.</li>
+      <li>560 different items across 950 orders - does a repeat customer get a new item code each time?</li>
+      <li>When a print job has to be redone, how does that show up in Zoho today?</li>
+      <li><b>What would make you open this screen every morning</b> rather than use it because IT asked?</li>
+    </ol></div>
+
+  <div class="ft"><span>Managers' dashboard - decisions to release it</span><span>Page 4 of 5</span></div>
+</section>
+
+<!-- PAGE 5 -->
+<section class="page">
+  <div class="hd"><div class="brand"><i>SH</i>Standard<span>&nbsp;Holdings</span></div>
+    <div class="meta">Questions for the managers</div></div>
+
+  <div class="qbox hot"><h3>Ranga &mdash; MOBA, Customized Packing, Food Product Processing</h3>
+    <ol class="q">
+      <li><b>Does MOBA really make the paper cups?</b> 518 order lines say the order is Paper Cup Unit work
+      while the line tag says MOBA. Same for every cup <b>lid</b> (33), every <b>cake wrapper</b> (6) and
+      every <b>paper plate</b> (3).</li>
+      <li><b>Is MOBA the whole job, or only the punching step</b> inside a job that starts elsewhere? If it
+      is one step of several, the screen needs to know who owns the rest.</li>
+      <li>Your top items by order count are <b>B-grade cups</b> on orders numbered BGRADE... with job number
+      "NA". What is a B-grade order - rework, seconds, or stock? Should it appear on the screen at all?</li>
+      <li>Cup work carries OPD-series job numbers while lids carry PCL-series. What decides the series?</li>
+    </ol></div>
+
+  <div class="qbox hot"><h3>Mr. Samitha &mdash; General Manager</h3>
+    <ol class="q">
+      <li><b>Who owns MacPro?</b> (333 orders, 2.5 m units, no manager named.)</li>
+      <li>If cups, lids, plates and wrappers are MOBA work, can I record all four as Ranga's?</li>
+      <li><b>Should the division tag be made mandatory</b> on the Zoho order line? Today 333 lines have none.</li>
+      <li>Who is allowed to <b>correct</b> a wrong tag once the screen flags it?</li>
+      <li>Does SmartPack pack, ship or invoice on <b>Saturdays</b>? It changes how lateness is counted -
+      a settings change, not code.</li>
+      <li>Flag a missing <b>package after 2 working days, shipment after 3, invoice after 2</b> - too tight?</li>
+      <li>Of roughly 1,400 open orders, 170 date from 2024. Live, or should they be closed?</li>
+      <li><b>ClickUp:</b> the production lists are updated daily and this screen overlaps them. Switch off
+      per division at go-live, or run both for a period?</li>
+      <li>Shall I create coordinator accounts for Nirmani, Umanda and Madushi now?</li>
+    </ol></div>
+
+  <div class="script"><b>Order I would suggest:</b> settle MacPro and the paper-cup question with Ishan and
+  Ranga first - they change who sees what, and they are the only answers the build genuinely waits on.
+  Saturdays, the thresholds and the old open orders can all be changed later in settings without touching
+  any code.</div>
+
+  <p class="note">Backing detail: the full 12-month division analysis, with real order numbers for every
+  claim, is in <b>Project Management/reports/2026-09-29-division-flow-questions/</b>. The design document
+  and its nine review rounds are in <b>wiki/specs/2026-09-28-pd-manager-preview.md</b>.</p>
+  <p class="note"><b>Abdul Hadhee | IT Exec | Standard-Holdings</b></p>
+
+  <div class="ft"><span>Managers' dashboard - decisions to release it</span><span>Page 5 of 5</span></div>
+</section>
+
+</body></html>

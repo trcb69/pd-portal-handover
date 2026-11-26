@@ -1,0 +1,241 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>How SH and SmartPack Really Run</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F3F4F2; --surface:#FCFCFB; --ink:#0B0B0B; --ink-2:#52514E; --ink-3:#7A7974; --rule:#DEDDD7;
+  --sh:#9A5B08; --sh-tint:#FBEFD9; --sps:#0D6A71; --sps-tint:#DFF0F0; --bad:#B3261E; --bad-tint:#FBE9E7; --wa:#1F7A44; --wa-tint:#E4F3EA;
+  --display:"Archivo","Helvetica Neue",Arial,sans-serif; --body:"IBM Plex Sans","Segoe UI",Roboto,sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --ground:#121211; --surface:#1A1A19; --ink:#FFFFFF; --ink-2:#C3C2B7; --ink-3:#8E8D86; --rule:#33332F;
+  --sh:#E3A452; --sh-tint:#2B2213; --sps:#56BAC1; --sps-tint:#0F2A2C; --bad:#F08A80; --bad-tint:#321A18; --wa:#6CC592; --wa-tint:#12281B;
+}}
+:root[data-theme="dark"]{
+  --ground:#121211; --surface:#1A1A19; --ink:#FFFFFF; --ink-2:#C3C2B7; --ink-3:#8E8D86; --rule:#33332F;
+  --sh:#E3A452; --sh-tint:#2B2213; --sps:#56BAC1; --sps-tint:#0F2A2C; --bad:#F08A80; --bad-tint:#321A18; --wa:#6CC592; --wa-tint:#12281B;
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font:15px/1.6 var(--body);margin:0}
+.wrap{max-width:1140px;margin:0 auto;padding-inline:20px;padding-block:28px 64px;display:grid;gap:30px}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.15;text-wrap:balance}
+h1{font-size:clamp(28px,4.2vw,42px);font-weight:800;letter-spacing:-.015em}
+h2{font-size:23px;font-weight:700} h3{font-size:16px;font-weight:600}
+p{margin:0;max-width:72ch}
+.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+header{display:grid;gap:10px}
+.lede{color:var(--ink-2);font-size:16.5px}
+nav{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:14px}
+nav a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--rule)}
+a:focus-visible{outline:2px solid var(--sps);outline-offset:2px}
+section{display:grid;gap:14px}
+.panel{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:14px;overflow-x:auto}
+.panel svg{display:block;width:100%;min-width:820px;height:auto;font-family:var(--body)}
+svg .sh{fill:var(--sh-tint);stroke:var(--sh);stroke-width:1.5} svg .sps{fill:var(--sps-tint);stroke:var(--sps);stroke-width:1.5}
+svg .in{fill:var(--surface);stroke:var(--rule)}
+svg .bt{font:700 14px var(--display);fill:var(--ink)} svg .bs{font:12px var(--body);fill:var(--ink-2)}
+svg .ar{fill:none;stroke-width:2} svg .ar.a{stroke:var(--sh)} svg .ar.b{stroke:var(--sps)}
+svg .mk-a{fill:var(--sh)} svg .mk-b{fill:var(--sps)}
+svg .al{font:600 12.5px var(--body);fill:var(--ink)} svg .as{font:11.5px var(--body);fill:var(--ink-2)}
+figcaption{font-size:13px;color:var(--ink-2);max-width:90ch}
+figure{margin:0;display:grid;gap:10px}
+.tablebox{background:var(--surface);border:1px solid var(--rule);border-radius:10px;overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:760px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--rule)}
+th{font:600 11.5px var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3)}
+td.n{font-variant-numeric:tabular-nums;white-space:nowrap;font-family:var(--mono);font-size:13px}
+code{font-family:var(--mono);font-size:.9em}
+.where{display:inline-block;font:500 11.5px/1.7 var(--mono);padding:0 8px;border-radius:4px;border:1px solid;white-space:nowrap}
+.where.wa{color:var(--wa);border-color:var(--wa);background:var(--wa-tint)}
+.where.paper,.where.mail{color:var(--bad);border-color:var(--bad);background:var(--bad-tint)}
+.where.zoho{color:var(--sps);border-color:var(--sps);background:var(--sps-tint)}
+.flaws{display:grid;gap:12px;counter-reset:f}
+.flaw{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:14px 16px;display:grid;grid-template-columns:36px 1fr;gap:4px 12px;counter-increment:f}
+.flaw::before{content:counter(f);grid-row:span 3;font:700 15px var(--display);width:30px;height:30px;border-radius:50%;display:grid;place-items:center;color:var(--bad);border:1.5px solid var(--bad)}
+.flaw .ev{font-size:13.5px;color:var(--ink-2)} .flaw .fix{font-size:13.5px}
+.flaw .fix b{color:var(--sps)}
+.mermaid{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:14px;margin:0;overflow-x:auto}
+.note{font-size:13px;color:var(--ink-2);border-left:3px solid var(--rule);padding-left:12px;max-width:90ch}
+footer{font-size:12.5px;color:var(--ink-3);border-top:1px solid var(--rule);padding-top:14px;display:grid;gap:4px}
+@media (max-width:640px){.wrap{padding-inline:16px}.flaw{grid-template-columns:30px 1fr}}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Standard Holdings + SmartPack · what the Zoho records and files show · 19 Sep 2026</div>
+  <h1>How SH and SmartPack really run</h1>
+  <p class="lede">Read from 71,982 SH sales orders, 33,694 bills, 25,565 files in SH's Zoho document inbox, printed Zoho documents and SmartPack's records. Zoho holds the documents, but most decisions are made in WhatsApp, on paper or by email and only photographed into Zoho afterwards.</p>
+  <nav aria-label="Sections"><a href="#loop">The two companies</a><a href="#decisions">Where decisions happen</a><a href="#o2c">Order to cash</a><a href="#codes">Document codes</a><a href="#flaws">Where it breaks</a><a href="#pending">Still to add</a></nav>
+</header>
+
+<section id="loop">
+  <div class="eyebrow">1 · The two companies</div>
+  <h2>Goods and money go both ways</h2>
+  <p>SmartPack isn't just SH's supplier. SH owns stock inside the factory, sells it materials, buys back the finished goods, and sells stock to SmartPack's own retail accounts.</p>
+  <figure><div class="panel"><svg viewBox="0 0 1100 470" role="img" aria-label="Money and goods between Standard Holdings and SmartPack: blanks and materials go to the factory, finished goods and invoices come back, and SmartPack retail buys from SH."><defs><marker id="m-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="mk-a"/></marker><marker id="m-b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="mk-b"/></marker></defs><rect x="40" y="40" width="330" height="390" rx="10" class="sh"/><text x="205.0" y="66" text-anchor="middle" class="bt">STANDARD HOLDINGS</text><text x="205.0" y="86" text-anchor="middle" class="bs">trading company · 10 locations</text><text x="205.0" y="102" text-anchor="middle" class="bs">sells to every customer</text><rect x="730" y="40" width="330" height="390" rx="10" class="sps"/><text x="895.0" y="66" text-anchor="middle" class="bt">SMARTPACK (SPS)</text><text x="895.0" y="86" text-anchor="middle" class="bs">the factory · 3 warehouses</text><text x="895.0" y="102" text-anchor="middle" class="bs">sells ~99.9% to SH</text><rect x="70" y="110" width="270" height="70" rx="10" class="in"/><text x="205.0" y="136" text-anchor="middle" class="bt">SH stock at SPS Kohalwila</text><text x="205.0" y="156" text-anchor="middle" class="bs">SH-owned blanks inside the factory</text><rect x="70" y="330" width="270" height="70" rx="10" class="in"/><text x="205.0" y="356" text-anchor="middle" class="bt">SH stock · 10 locations</text><text x="205.0" y="376" text-anchor="middle" class="bs">Head Office, branches, warehouses</text><rect x="760" y="110" width="270" height="70" rx="10" class="in"/><text x="895.0" y="136" text-anchor="middle" class="bt">SPS Work In Progress</text><text x="895.0" y="156" text-anchor="middle" class="bs">printing, forming, packing</text><rect x="760" y="330" width="270" height="70" rx="10" class="in"/><text x="895.0" y="356" text-anchor="middle" class="bt">SPS retail accounts</text><text x="895.0" y="376" text-anchor="middle" class="bs">buy back from SH</text><path d="M340,130 L760,130" class="ar a" marker-end="url(#m-a)"/><text x="550" y="86" text-anchor="middle" class="al">1 · Blanks moved for printing</text><text x="550" y="101" text-anchor="middle" class="as">SH transfer order to "SPS Work in Progress WIP"</text><text x="550" y="116" text-anchor="middle" class="as">requested by WhatsApp (e.g. JN-4865, 8,000 cups)</text><path d="M760,215 L340,215" class="ar b" marker-end="url(#m-b)"/><text x="550" y="238" text-anchor="middle" class="al">2 · Finished goods + invoice (ITN)</text><text x="550" y="253" text-anchor="middle" class="as">SPS invoices SH: LKR 298M in 12 months</text><text x="550" y="268" text-anchor="middle" class="as">SH bills "Smart Pack Internal Purchase": LKR 299M (5,568 bills)</text><path d="M340,285 L760,285" class="ar a" marker-end="url(#m-a)"/><text x="550" y="306" text-anchor="middle" class="al">3 · Materials sold to the factory</text><text x="550" y="321" text-anchor="middle" class="as">SH internal-transfer orders: 1,122 in 12 months</text><text x="550" y="336" text-anchor="middle" class="as">invoiced LKR 143.8M to "Smart Pack Internal Sales"</text><path d="M340,365 L760,365" class="ar a" marker-end="url(#m-a)"/><text x="550" y="390" text-anchor="middle" class="al">4 · Stock sold to SmartPack retail</text><text x="550" y="405" text-anchor="middle" class="as">LKR 61.5M (Retail) + 10.2M (South Retail)</text><text x="550" y="455" text-anchor="middle" class="as">Also seen: a customer payment to SmartPack's bank account filed as an SH customer payment (to confirm with finance)</text></svg></div>
+    <figcaption>Last 12 months (Sep 2025 – Aug 2026). The two sides of flow 2 agree to within LKR 1M: SmartPack invoiced SH LKR 298M and SH recorded LKR 299M of bills from "Smart Pack Internal Purchase".</figcaption></figure>
+</section>
+
+<section id="decisions">
+  <div class="eyebrow">2 · Where decisions happen</div>
+  <h2>Decided outside Zoho, photographed in afterwards</h2>
+  <p>Last 12 months: 17,221 files were added to SH's Zoho, and 5,354 of them are WhatsApp screenshots.</p>
+  <div class="tablebox"><table>
+    <thead><tr><th>Decision</th><th>Where it is made</th><th>What lands in Zoho</th><th>Files, 12 months</th><th>WhatsApp share</th></tr></thead>
+    <tbody>
+      <tr><td>A customer places an order</td><td><span class="where wa">WhatsApp</span> or the customer's PO</td><td>Photo or PDF of the PO or message, on the <b>invoice</b> or sales order</td><td class="n">6,400 invoice · 3,994 order</td><td class="n">16% · 31%</td></tr>
+      <tr><td>Move stock between locations (e.g. blanks to SPS WIP)</td><td><span class="where wa">WhatsApp</span> (e.g. Mubeena → Jayanthi)</td><td>Screenshot on the transfer order</td><td class="n">2,037</td><td class="n">40%</td></tr>
+      <tr><td>Adjust stock (conversion, damage)</td><td><span class="where paper">paper form</span>, signed</td><td>Photo of the form (e.g. "Product Conversion" RPSV-1297, "pending approval")</td><td class="n">860</td><td class="n">91%</td></tr>
+      <tr><td>Create a new item and set its price</td><td><span class="where wa">WhatsApp group</span> "SPS – Approval for Item creation"</td><td>Screenshot on the item or the intercompany bill</td><td class="n">1,164 item</td><td class="n">77%</td></tr>
+      <tr><td>Issue a credit note (return)</td><td><span class="where mail">email</span> to Hazeem</td><td>Screenshot of the approving email</td><td class="n">163</td><td class="n">1%</td></tr>
+      <tr><td>Record a customer payment</td><td>bank confirmation</td><td>Photo of the transfer slip (Rifaz)</td><td class="n">694</td><td class="n">24%</td></tr>
+      <tr><td>South Branch inter-branch requests</td><td><span class="where wa">WhatsApp</span></td><td>Screenshot on the IBR</td><td class="n">44</td><td class="n">98%</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">SmartPack keeps almost nothing in Zoho: 3 attachments across more than 20,000 orders and invoices, and none on its 1,874 purchase orders or 2,186 goods receipts. Its evidence lives in the paper job file.</p>
+</section>
+
+<section id="o2c">
+  <div class="eyebrow">3 · Order to cash at SH</div>
+  <h2>The document chain, and who touches it</h2>
+<pre class="mermaid">
+flowchart LR
+  A[Request<br/>WhatsApp · phone · customer PO] --> B[Sales order<br/>HTX / STX / ATX …<br/>Senuri, Arshard, Abdullah]
+  B --> C[Picklist<br/>warehouse + assignee<br/>e.g. Farhan, Ranaviru]
+  C --> D[Package]
+  D --> E[Shipment<br/>route e.g. GUARD ROOM]
+  E --> F[Invoice<br/>order proof attached HERE]
+  F --> G[Payment<br/>bank slip photo]
+  F -.-> H[Credit note<br/>email approval screenshot]
+  B -.->|customised item| S[SmartPack job<br/>paper file]
+  S -.->|finished goods + ITN| C
+</pre>
+</section>
+
+<section id="codes">
+  <div class="eyebrow">4 · Document codes</div>
+  <h2>Reading an SH order number</h2>
+  <p>The prefix tells you the desk, the tax type and the kind of order. From 70,597 sales orders since April 2024:</p>
+  <div class="tablebox"><table>
+    <thead><tr><th>Prefix</th><th>Location · type (from the data)</th><th>Unit</th><th class="n">Orders</th></tr></thead>
+    <tbody>
+      <tr><td><code>HTXSO</code> · <code>HNTSO</code></td><td>Head Office · VAT / tax-inclusive</td><td>mostly Packaging</td><td class="n">15,657 · 13,657</td></tr>
+      <tr><td><code>STXSO</code> · <code>SNTSO</code></td><td>South Branch · VAT / tax-inclusive</td><td>Packaging</td><td class="n">7,699 · 6,163</td></tr>
+      <tr><td><code>CTXSO</code> · <code>CNTSO</code></td><td>Central Branch · VAT / tax-inclusive</td><td>Packaging</td><td class="n">749 · 1,478</td></tr>
+      <tr><td><code>ATXSO</code> · <code>KTXSO</code></td><td>Head Office · VAT (two separate desks, letters to confirm)</td><td>Packaging</td><td class="n">5,184 · 2,680</td></tr>
+      <tr><td><code>RTXSO</code> · <code>RNTSO</code></td><td>Head Office · VAT / tax-inclusive</td><td>Specialities</td><td class="n">2,970 · 1,212</td></tr>
+      <tr><td><code>HSMSO</code> · <code>RSMSO</code> · <code>KSMSO</code></td><td>Sample notes</td><td>mostly Specialities</td><td class="n">2,704 · 2,257 · 165</td></tr>
+      <tr><td><code>RILSO</code> · <code>HILSO</code></td><td>Inventory loans</td><td>Specialities</td><td class="n">459 · 204</td></tr>
+      <tr><td><code>INTSO</code></td><td>Internal transfers (SH ↔ SmartPack)</td><td>Packaging</td><td class="n">3,906</td></tr>
+      <tr><td><code>FPTSO</code> · <code>EXPSO</code> · <code>SCRNSO</code> · <code>HEXSO</code></td><td>Freeport · export · screen printing · exchange</td><td>Specialities</td><td class="n">1,935 · 505 · 1,748 · 154</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="flaws">
+  <div class="eyebrow">5 · Where it breaks</div>
+  <h2>Ten problems the records show</h2>
+  <div class="flaws">
+    <div class="flaw"><h3>The order's proof arrives last</h3><p class="ev">The customer's PO or WhatsApp message is attached to the invoice (6,400 files in 12 months) more often than to the sales order (3,994). Nobody can check an order against what the customer asked for until it has shipped.</p><p class="fix"><b>Fix:</b> the order portal records the request, with its file and time, before the sales order exists.</p></div>
+    <div class="flaw"><h3>Approvals happen in WhatsApp, on paper and by email</h3><p class="ev">New items and prices are approved in a WhatsApp group; stock adjustments on signed paper ("pending approval"); credit notes by email. Zoho gets a picture, not a decision with a name and a time.</p><p class="fix"><b>Fix:</b> approval steps in our software (credit hold, item and price approval, adjustment approval), each recording who and when.</p></div>
+    <div class="flaw"><h3>Orders are never closed</h3><p class="ev">2,928 SH sales orders are open more than 60 days (LKR 230M); 302 are over a year old. SmartPack has 1,626 open over 60 days.</p><p class="fix"><b>Fix:</b> a daily "old open orders" list to each order owner; close or cancel.</p></div>
+    <div class="flaw"><h3>Stock is reserved that doesn't exist</h3><p class="ev">869 SH items and 686 SmartPack items have more stock reserved by open orders than on hand; 165 SH items show negative stock.</p><p class="fix"><b>Fix:</b> clearing old orders releases the reservations; the stock system flags negatives daily.</p></div>
+    <div class="flaw"><h3>The factory's warehouses aren't used</h3><p class="ev">SmartPack has raw-material, WIP and finished-goods warehouses but works in WIP: 47 transfer orders in 13 months, 23 items negative in WIP, 721 finished items sitting in WIP.</p><p class="fix"><b>Fix:</b> issue by transfer order, finish into Finished Goods (stock procedure page).</p></div>
+    <div class="flaw"><h3>Units don't match, so margins lie</h3><p class="ev">Items bought in one unit and sold in another show impossible margins (e.g. −23,414% on a paste). About 4.5% of SH sales (LKR 98M) has no reliable cost.</p><p class="fix"><b>Fix:</b> correct the units in Zoho; the dashboard lists them.</p></div>
+    <div class="flaw"><h3>Samples and loans have no recorded value</h3><p class="ev">2,436 sample notes in 12 months total LKR 0.5M (about LKR 200 each); 419 inventory loans were recorded at zero on the order. What the samples cost is invisible.</p><p class="fix"><b>Fix:</b> value samples at cost; track loans until returned or invoiced.</p></div>
+    <div class="flaw"><h3>Goods-in is recorded late</h3><p class="ev">SmartPack records purchase receives a median 2 days after arrival (up to 14), so stock looks short while it's on the shelf.</p><p class="fix"><b>Fix:</b> same-day receiving, checked daily.</p></div>
+    <div class="flaw"><h3>Money crosses between companies informally</h3><p class="ev">A customer payment into SmartPack's bank account was filed as an SH customer payment. One example so far; it needs checking with finance before it's called a pattern.</p><p class="fix"><b>Fix:</b> confirm the rule with finance; flag payments whose bank account doesn't match the company.</p></div>
+    <div class="flaw"><h3>The factory's evidence is paper-only</h3><p class="ev">No goods receipts, POs or job records carry files in SmartPack's Zoho; the job file travels desk to desk, and "where is the file?" is the status.</p><p class="fix"><b>Fix:</b> the production dashboard (file location, stages, output, taps on the day).</p></div>
+  </div>
+</section>
+
+<section id="pending">
+  <div class="eyebrow">6 · Still to add</div>
+  <h2>Being downloaded now</h2>
+  <p>SH invoices, picklists, shipments, packages, credit notes and returns are downloading again (a restart lost the first pull). When they're in, this page adds: why goods come back (every credit note's reason), how long orders take from order to shipment, how much each picker handles, and whether invoiced amounts differ from ordered amounts.</p>
+</section>
+
+<footer>
+  <div>Sources: SH Zoho (rizwan@, all 10 locations) pulled 19 Sep 2026: sales orders, bills, the document inbox with its record links, printed documents and sample attachments; SmartPack Zoho pulled the same day. Counts are Zoho records; nothing here was changed in Zoho.</div>
+</footer>
+</div>
+
+<!--claude-mermaid-runtime-begin:3477-->
+<style>.mermaid-diagram{margin-block:4px}.mermaid-diagram svg{display:block;margin:0 auto;max-width:100%;height:auto}</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.16.1/dist/mermaid.min.js"></script>
+<script>(function(){
+var CFG={"palettes":{"light":{"surface":"#f4efe4","text":"#42392e","line":"#8a7f6d","border":"#7a6c52","bg":"#fffdf8"},"dark":{"surface":"#262b34","text":"#f2f3f5","line":"#a8adb8","border":"#9aa4b8","bg":"#1f232b"}}};
+if(typeof mermaid==='undefined')return;
+var pres=Array.prototype.slice.call(document.querySelectorAll('pre.mermaid')).filter(function(p){if(p.hasAttribute('data-claude-mermaid-claimed'))return false;p.setAttribute('data-claude-mermaid-claimed','1');return true;});
+if(!pres.length)return;
+var mq=window.matchMedia?window.matchMedia('(prefers-color-scheme: dark)'):null;
+var root=document.documentElement;
+var items=pres.map(function(pre){
+var mount=document.createElement('div');mount.className='mermaid-diagram';
+return {pre:pre,mount:mount,src:pre.textContent||''};
+});
+var seq=0;
+var renderGen=0;
+var lastKey='';
+function pageBg(fallback){
+var els=[document.body,document.documentElement];
+for(var i=0;i<els.length;i++){
+var c=els[i]&&getComputedStyle(els[i]).backgroundColor;
+if(c&&c!=='transparent'&&c!=='rgba(0, 0, 0, 0)')return c;
+}
+return fallback;
+}
+function render(){
+var theme=root.getAttribute('data-theme');
+var dark=theme==='dark'||(!!(mq&&mq.matches)&&theme!=='light');
+var pal=dark?CFG.palettes.dark:CFG.palettes.light;
+var bg=pageBg(pal.bg);
+var key=(dark?'d':'l')+'|'+bg;
+if(key===lastKey)return;
+lastKey=key;
+var gen=++renderGen;
+var font=getComputedStyle(document.body).fontFamily||'sans-serif';
+var nat={useMaxWidth:false};
+mermaid.initialize({
+startOnLoad:false,securityLevel:'strict',theme:'base',
+flowchart:nat,sequence:nat,er:nat,state:nat,class:nat,pie:nat,
+gantt:nat,journey:nat,timeline:nat,gitGraph:nat,mindmap:nat,xyChart:nat,
+quadrantChart:nat,sankey:nat,c4:nat,requirement:nat,block:nat,
+packet:nat,kanban:nat,architecture:nat,radar:nat,
+themeVariables:{background:bg,mainBkg:pal.surface,primaryColor:pal.surface,
+primaryTextColor:pal.text,lineColor:pal.line,primaryBorderColor:pal.border,
+nodeBorder:pal.border,clusterBorder:pal.border,edgeLabelBackground:bg,
+clusterBkg:'rgba(127,127,127,0.07)',titleColor:pal.text,
+darkMode:dark,rowOdd:bg,rowEven:'rgba(127,127,127,0.07)',
+attributeBackgroundColorOdd:bg,attributeBackgroundColorEven:'rgba(127,127,127,0.07)',
+fontSize:'16px',fontFamily:font},
+themeCSS:'.node rect, .node circle, .node polygon, .node path, .cluster rect { stroke-width: 2px; }'
+});
+items.forEach(function(it){
+var id='claude-mermaid-'+seq++;
+mermaid.render(id,it.src).then(function(r){
+if(gen!==renderGen)return;
+var prev=it.pre.previousElementSibling;
+if(prev&&prev.className==='mermaid-diagram'&&prev!==it.mount)return;
+it.mount.innerHTML=r.svg;
+if(!it.mount.parentNode)it.pre.parentNode.insertBefore(it.mount,it.pre);
+it.pre.style.display='none';
+},function(){
+var scratch=document.getElementById(id);
+if(scratch)scratch.parentNode.removeChild(scratch);
+scratch=document.getElementById('d'+id);
+if(scratch)scratch.parentNode.removeChild(scratch);
+if(gen!==renderGen)return;
+if(it.mount.parentNode)it.mount.parentNode.removeChild(it.mount);
+it.pre.style.display='';
+});
+});
+}
+render();
+if(mq&&mq.addEventListener)mq.addEventListener('change',render);
+if(typeof MutationObserver!=='undefined')new MutationObserver(render).observe(root,{attributes:true,attributeFilter:['data-theme']});
+})();</script>
+<!--claude-mermaid-runtime-end-->
+
+</body></html>

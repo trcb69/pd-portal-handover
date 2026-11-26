@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>COO Talk Notes</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;600&display=swap">
+<style>
+:root{--ink:#12202c;--muted:#56667a;--line:#d3dce6;--panel:#eff2f6;--accent:#1f5fbf;--accent-soft:#e4ecfa;--warm:#a2561d;--warm-soft:#f7ebe0}
+*{box-sizing:border-box}
+@page{size:A4;margin:10mm 11mm}
+body{margin:0;background:#fff;color:var(--ink);font:9.6pt/1.38 "IBM Plex Sans",system-ui,sans-serif}
+h1,h2{font-family:Archivo,sans-serif;margin:0}
+h1{font-size:17pt;line-height:1.1}
+h2{font-size:10.5pt;display:flex;align-items:baseline;gap:6px}
+h2 .t{font:500 7.5pt "IBM Plex Mono",monospace;color:var(--muted);letter-spacing:.06em}
+p{margin:0}
+ul{margin:0;padding-left:14px;display:flex;flex-direction:column;gap:2.5px}
+.top{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;border-bottom:2px solid var(--ink);padding-bottom:5px;margin-bottom:7px}
+.top .sub{font:500 7.5pt "IBM Plex Mono",monospace;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.rules{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:7px}
+.rules div{background:var(--panel);padding:5px 8px;font-size:8.8pt}
+.rules b{font-family:Archivo,sans-serif}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.col{display:flex;flex-direction:column;gap:7px}
+.blk{display:flex;flex-direction:column;gap:3px}
+.say{border-left:3px solid var(--accent);padding:3px 7px;background:var(--accent-soft);font-style:italic}
+.key{border:1.5px solid var(--accent);padding:6px 8px;display:flex;flex-direction:column;gap:3px}
+.me{border:1.5px solid var(--warm);background:var(--warm-soft);padding:6px 8px;display:flex;flex-direction:column;gap:3px}
+.qa b{font-weight:600}
+.small{font-size:8.4pt;color:var(--muted)}
+.num{font-family:Archivo,sans-serif;font-weight:700}
+</style>
+</head>
+<body>
+<div class="top">
+  <div><div class="sub">Casual 30 min with the COO · production dashboard + analysis</div><h1>Talk notes: tell stories, make one ask</h1></div>
+  <div class="sub">Don't read · skim before</div>
+</div>
+
+<div class="rules">
+  <div><b>Stories, not features.</b> "Made in 7 hours, shipped in 4 months" sticks.</div>
+  <div><b>One decision, one ask.</b> Everything else is background.</div>
+  <div><b>Let the work market you.</b> Scope beats hours. Hours once, tied to a request.</div>
+</div>
+
+<div class="cols">
+<div class="col">
+  <div class="blk"><h2>Open <span class="t">2 MIN</span></h2>
+    <p class="say">"Quick picture of where the dashboard and the analysis are, and your view on one decision that shapes the next part."</p></div>
+
+  <div class="blk"><h2>What I found <span class="t">8 MIN · PICK 2–3</span></h2>
+    <ul>
+      <li><b>Time isn't lost on machines.</b> A Screen Printing job was made in <span class="num">7 hours</span>, but took about <span class="num">4 months</span> from order to shipment. <span class="num">31%</span> of Screen Printing jobs are blocked waiting for raw material.</li>
+      <li><b>Cash:</b> customers owe SH <span class="num">LKR 324M</span>, <span class="num">225M</span> of it overdue. <span class="num">2,928</span> orders are open over 60 days (≈ LKR 230M).</li>
+      <li><b>Order value is unreliable:</b> <span class="num">41%</span> of orders are invoiced for a different amount; <span class="num">29%</span> are keyed with no price.</li>
+      <li><b>Returns:</b> credit notes were LKR 241M, and <span class="num">197M</span> is typed "Other", so the reason is unknown.</li>
+      <li><b>Surprise:</b> a lot of SH stock sits at the SmartPack factory in SH's books; Galle and Kandy are supplied from it.</li>
+    </ul></div>
+
+  <div class="blk"><h2>What's built <span class="t">5 MIN</span></h2>
+    <p class="say">"I learned the full process of both companies, WhatsApp order to invoice, and pulled every record from both Zoho accounts: over 400,000. There's a Command Centre demo for you, the CEO and both GMs. The dashboard foundation is built and tested (136 automated checks, plus separate code, security and database reviews), and it's ready to go live privately this week."</p></div>
+
+  <div class="blk qa"><h2>If the COO asks… <span class="t">ANSWERS</span></h2>
+    <ul>
+      <li><b>When is it usable?</b> The foundation goes live this week. The next release, the order portal and the digital job file, is when people see orders move.</li>
+      <li><b>Will staff resist?</b> The pilot starts with IT keying the data. Managers get four taps only: receive, output, blocker, send back.</li>
+      <li><b>Cost?</b> Our own server. Only the floor devices and people's time during the pilot.</li>
+      <li><b>Why not just Zoho?</b> Zoho sees the order, then the shipment. The four months in between happen on paper.</li>
+    </ul></div>
+</div>
+
+<div class="col">
+  <div class="key"><h2>The decision <span class="t">8 MIN · THE HEART</span></h2>
+    <p class="say">"Mr. Samitha's brief was to cut documentation time and keep it accurate. That only works if the coordinator's job file goes paperless: created once, and every step after is a tap, timed automatically."</p>
+    <p class="say">"Keep the paper file, and people fill in the paper, the Excel sheet <u>and</u> the dashboard. That's more documentation, the opposite of the brief. Only 4 of 17 features fully work."</p>
+    <p class="say">"My suggestion: a two-week pilot in Screen Printing, with IT keying at first so nobody does double work. What do you think?"</p>
+    <p class="small"><b>Then stop and listen.</b> The answer here matters more than anything else in the meeting.</p>
+  </div>
+
+  <div class="blk"><h2>What I need <span class="t">5 MIN · CASUAL</span></h2>
+    <ul>
+      <li>Go-ahead for the paperless pilot (Screen Printing, 2 weeks).</li>
+      <li>A phone or tablet for the managers on the floor.</li>
+      <li>SH Zoho admin rights (still pending).</li>
+      <li>Zoho Books read-only access, for the automatic credit check.</li>
+      <li>A decision on ClickUp: connect it or not.</li>
+    </ul></div>
+
+  <div class="me"><h2>The marketing line <span class="t">SAY IT ONCE</span></h2>
+    <p class="say" style="background:transparent;border-color:var(--warm)">"Honestly, I've been putting in very long hours, many nights until 2 or 4 am, because I think this can really change how both companies run. To keep that pace sustainable, [one ask]."</p>
+    <ul>
+      <li>Confirm that this project is mine to lead, and that decisions come through me.</li>
+      <li>A helper for the pilot's data entry, or a floor contact.</li>
+      <li>A regular 30-minute slot with you, so decisions don't wait.</li>
+    </ul>
+    <p class="small">Not "I don't sleep" as a badge; that reads as burnout or poor planning. The scale of the work is the proof.</p>
+  </div>
+
+  <div class="blk"><h2>Close <span class="t">2 MIN</span></h2>
+    <p class="say">"I'll send the 4-page summary after this. Can I take it we pilot in Screen Printing?"</p>
+    <p class="small">Send afterwards: <b>paperless-job-file.pdf</b> + the list of needs in one message.<br>File: <b>/root/Production Dashboard/paperless-job-file.pdf</b><br>If BI or "Zoho already has reports" comes up: <b>/root/Production Dashboard/business-intelligence-explained.pdf</b></p></div>
+</div>
+</div>
+</body>
+</html>

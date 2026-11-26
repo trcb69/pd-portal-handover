@@ -1,0 +1,374 @@
+{
+ "so_lines": 10596,
+ "so_max_order_date": "2026-09-25",
+ "window_12m_start": "2025-09-25",
+ "sps_items_total": 3928,
+ "sps_items_customized": 2708,
+ "so_lines_unmatched_to_item_master": 13,
+ "so_lines_on_customized_items": 7819,
+ "ordertype_x_itemtype": {
+  "Make to Order (MTO) | Customized": 28,
+  "Make to Order (MTO) | Non Customized": 12,
+  "Ex Stock | Customized": 254,
+  "Customized Order | Customized": 7411,
+  "Ex Stock | Non Customized": 2064,
+  "Customized Order | Non Customized": 94,
+  "Make to Order (MTO) | NA": 2,
+  "Customized Order | NA": 5,
+  "Internal SH Order | Non Customized": 480,
+  "Ex Stock | NA": 10,
+  "Internal SH Order | NA": 97,
+  "Internal SH Order | Customized": 126,
+  "Customized Order | NOT_IN_MASTER": 13
+ },
+ "lines_with_package_match": 9734,
+ "lines_with_invoice_match": 10213,
+ "history_customized_items_by_order_type": {
+  "Customized Order": {
+   "lines": 7411,
+   "orders": 5667,
+   "items": 2004,
+   "units": 17758167.0,
+   "lines_with_pack": 7110,
+   "pack_days_median": 10.0,
+   "pack_days_p80": 23,
+   "pack_same_day_pct": 24.2,
+   "pack_le1d_pct": 26.2,
+   "pack_le3d_pct": 31.5,
+   "lines_with_invoice": 7167,
+   "invoice_days_median": 12,
+   "invoice_days_p80": 24,
+   "invoice_le1d_pct": 22.8
+  },
+  "Ex Stock": {
+   "lines": 254,
+   "orders": 222,
+   "items": 112,
+   "units": 689556.0,
+   "lines_with_pack": 249,
+   "pack_days_median": 0,
+   "pack_days_p80": 26,
+   "pack_same_day_pct": 59.8,
+   "pack_le1d_pct": 62.2,
+   "pack_le3d_pct": 63.5,
+   "lines_with_invoice": 248,
+   "invoice_days_median": 0.0,
+   "invoice_days_p80": 26,
+   "invoice_le1d_pct": 61.3
+  },
+  "Make to Order (MTO)": {
+   "lines": 28,
+   "orders": 26,
+   "items": 23,
+   "units": 82768.0,
+   "lines_with_pack": 18,
+   "pack_days_median": 0.0,
+   "pack_days_p80": 0,
+   "pack_same_day_pct": 88.9,
+   "pack_le1d_pct": 94.4,
+   "pack_le3d_pct": 94.4,
+   "lines_with_invoice": 18,
+   "invoice_days_median": 0.0,
+   "invoice_days_p80": 0,
+   "invoice_le1d_pct": 94.4
+  },
+  "Internal SH Order": {
+   "lines": 126,
+   "orders": 103,
+   "items": 67,
+   "units": 379628.0,
+   "lines_with_pack": 103,
+   "pack_days_median": 21,
+   "pack_days_p80": 47,
+   "pack_same_day_pct": 5.8,
+   "pack_le1d_pct": 5.8,
+   "pack_le3d_pct": 12.6,
+   "lines_with_invoice": 108,
+   "invoice_days_median": 21.0,
+   "invoice_days_p80": 49,
+   "invoice_le1d_pct": 5.6
+  }
+ },
+ "by_year_customized_items": {
+  "2023": {
+   "Customized Order": 2
+  },
+  "2024": {
+   "Ex Stock": 213,
+   "Customized Order": 1631
+  },
+  "2025": {
+   "Ex Stock": 40,
+   "Customized Order": 3207
+  },
+  "2026": {
+   "Customized Order": 2571,
+   "Ex Stock": 1
+  }
+ },
+ "history_noncustomized_exstock": {
+  "lines": 2064,
+  "pack_days_median": 0,
+  "pack_same_day_pct": 61.7
+ },
+ "customized_items_ever_ordered": 2088,
+ "items_only_exstock": 39,
+ "items_both_exstock_and_customized": 56,
+ "items_only_customized_order": 1919,
+ "last12m_customized_item_lines": {
+  "Customized Order": 3422,
+  "Internal SH Order": 103,
+  "Make to Order (MTO)": 1,
+  "Ex Stock": 1
+ },
+ "csv_rows": 2708,
+ "customized_active": 2532,
+ "customized_tracked": 2480,
+ "sh_match": {
+  "exact_name_normalised": 1413,
+  "none": 1070,
+  "name_punct_stripped": 225
+ },
+ "sh_match_active": {
+  "exact_name_normalised": 1381,
+  "none": 929,
+  "name_punct_stripped": 222
+ },
+ "sh_match_note": {
+  "unique": 1637,
+  "ambiguous_2": 1
+ },
+ "ordered_items": 2088,
+ "ordered_items_last12m": 1269,
+ "sh_match_ordered_last12m": {
+  "none": 243,
+  "exact_name_normalised": 945,
+  "name_punct_stripped": 81
+ },
+ "sps_class_all": {
+  "FULL_UNKNOWN_QTY": 103,
+  "NONE": 2049,
+  "PARTIAL": 268,
+  "FULL": 60,
+  "UNKNOWN": 228
+ },
+ "sps_class_ordered12m": {
+  "NONE": 1033,
+  "PARTIAL": 219,
+  "FULL": 17
+ },
+ "sh_class_all": {
+  "FULL_UNKNOWN_QTY": 24,
+  "UNKNOWN": 1071,
+  "NONE": 1189,
+  "FULL": 133,
+  "PARTIAL": 291
+ },
+ "sh_class_ordered12m": {
+  "UNKNOWN": 243,
+  "FULL": 96,
+  "NONE": 750,
+  "PARTIAL": 180
+ },
+ "cross_sps_sh_class_ordered12m": {
+  "SH=UNKNOWN | SPS=NONE": 178,
+  "SH=FULL | SPS=NONE": 86,
+  "SH=NONE | SPS=NONE": 603,
+  "SH=UNKNOWN | SPS=PARTIAL": 55,
+  "SH=NONE | SPS=PARTIAL": 145,
+  "SH=UNKNOWN | SPS=FULL": 10,
+  "SH=PARTIAL | SPS=NONE": 166,
+  "SH=PARTIAL | SPS=PARTIAL": 14,
+  "SH=FULL | SPS=PARTIAL": 5,
+  "SH=FULL | SPS=FULL": 5,
+  "SH=NONE | SPS=FULL": 2
+ },
+ "lines12m_by_sh_class_pct": {
+  "NONE": 55.3,
+  "PARTIAL": 14.0,
+  "UNKNOWN": 20.1,
+  "FULL": 10.6
+ },
+ "lines12m_by_sps_class_pct": {
+  "PARTIAL": 17.9,
+  "FULL": 1.9,
+  "NONE": 80.1
+ },
+ "lines12m_total_customized_items": 3527,
+ "sps_stock_location": {
+  "wip": {
+   "items_with_positive": 594,
+   "items_negative": 6,
+   "units_positive": 1506077.577731
+  },
+  "rm": {
+   "items_with_positive": 1,
+   "items_negative": 0,
+   "units_positive": 1760
+  },
+  "fg": {
+   "items_with_positive": 0,
+   "items_negative": 1,
+   "units_positive": 0
+  }
+ },
+ "so_line_warehouse": {
+  "SPS Work In Progress": 10577,
+  "Finished Goods": 19
+ },
+ "sh_stock_by_location_matched_customized": {
+  "SPS Kohalwila Factory (Warehouse)": {
+   "items": 453,
+   "units": 1595577.0
+  },
+  "Southern Warehouse (Warehouse)": {
+   "items": 111,
+   "units": 98493.0
+  },
+  "3PL Warehouse (DWW)": {
+   "items": 11,
+   "units": 246875.0
+  },
+  "Central Warehouse (Warehouse)": {
+   "items": 40,
+   "units": 30741.0
+  },
+  "SPS Work in Progress WIP": {
+   "items": 25,
+   "units": 16975.0
+  },
+  "SH Ranaviru Warehouse (Warehouse)": {
+   "items": 1,
+   "units": 100.0
+  }
+ },
+ "sh_matched_with_positive_stock": 543,
+ "sps_snapshot_date": "2026-09-19",
+ "sh_snapshot_date": "2026-09-28 (last_modified max 2026-09-28T16:06)",
+ "routing_simulation_last12m_lines": {
+  "A_SH_full": {
+   "items": 96,
+   "lines": 374,
+   "pct": 10.6
+  },
+  "B_SPS_full_SH_not": {
+   "items": 12,
+   "lines": 45,
+   "pct": 1.3
+  },
+  "C_partial_somewhere": {
+   "items": 380,
+   "lines": 1079,
+   "pct": 30.6
+  },
+  "D_SH_unknown_SPS_none": {
+   "items": 178,
+   "lines": 520,
+   "pct": 14.7
+  },
+  "E_no_stock_either": {
+   "items": 603,
+   "lines": 1509,
+   "pct": 42.8
+  }
+ },
+ "unknown_sh_reason_last12m": {
+  "no_sh_item_match": 243
+ },
+ "routing_lines_basis": {
+  "production_type_lines_customized_items_all": 7439,
+  "last12m": 3423
+ },
+ "lines12m_to_no_manager_pct": 12.9,
+ "lines12m_by_status_pct": {
+  "DRAFT_PAIR": 87.1,
+  "NO_MANAGER": 12.2,
+  "UNRESOLVED": 0.6
+ },
+ "assumed_tag_aliases_lines": 42,
+ "tag_conflict_lines": 40,
+ "customized_order_pack_lag_all_time": {
+  "lines": 7411,
+  "no_package_found": 301,
+  "negative_lag": 0,
+  "buckets": {
+   "0 days": 1724,
+   "4-7 days": 800,
+   "15-30 days": 2156,
+   "8-14 days": 1233,
+   "31+ days": 680,
+   "1 day": 137,
+   "2-3 days": 380
+  }
+ },
+ "customized_order_pack_lag_last12m": {
+  "lines": 3422,
+  "no_package_found": 255,
+  "negative_lag": 0,
+  "buckets": {
+   "15-30 days": 1427,
+   "0 days": 32,
+   "8-14 days": 721,
+   "1 day": 36,
+   "31+ days": 435,
+   "4-7 days": 367,
+   "2-3 days": 149
+  }
+ },
+ "last12m_customized_order_packed_le1d_by_job_nature": {
+  "Reorder ": {
+   "lines": 2321,
+   "packed_le1d_pct": 2.1
+  },
+  "New Order ": {
+   "lines": 822,
+   "packed_le1d_pct": 2.3
+  },
+  "Reorder With New Design": {
+   "lines": 22,
+   "packed_le1d_pct": 0.0
+  },
+  "Rework": {
+   "lines": 2,
+   "packed_le1d_pct": 0.0
+  }
+ },
+ "psu_rwu_tag_lines_by_item_type": {
+  "Paper Straw Unit": {
+   "Non Customized": 610
+  },
+  "Rewinding Unit": {
+   "Non Customized": 17
+  },
+  "Digital Printing Unit": {
+   "Customized": 28
+  }
+ },
+ "quick_lines_item_has_sps_stock_today_pct": null,
+ "customized_order_pack_lag_by_year": {
+  "2023": {
+   "lines": 2,
+   "median_days": 390.5,
+   "p80_days": 458,
+   "packed_le1d_pct": 0.0
+  },
+  "2024": {
+   "lines": 1599,
+   "median_days": 0,
+   "p80_days": 17,
+   "packed_le1d_pct": 66.4
+  },
+  "2025": {
+   "lines": 3176,
+   "median_days": 8.0,
+   "p80_days": 21,
+   "packed_le1d_pct": 23.5
+  },
+  "2026": {
+   "lines": 2333,
+   "median_days": 17,
+   "p80_days": 27,
+   "packed_le1d_pct": 2.4
+  }
+ }
+}

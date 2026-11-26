@@ -1,0 +1,545 @@
+<meta charset="utf-8">
+<title>SmartPack and SH Stock Update</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+/* Single light look, matching the IT Conduit / Scalefusion offer sheet */
+:root{
+  color-scheme:light;
+  --bg:#ececec; --page:#ffffff; --ink:#111111; --ink2:#3a3a3a; --muted:#6b6b6b;
+  --line:#d6d6d6; --soft:#f4f4f4; --bar:#d9d9d9;
+  --acc:#e8431f; --acc-soft:#fdebe6;
+  --ok:#1a7f3c; --ok-soft:#e6f4ea;
+  --amber:#b8650f; --amber-soft:#fcf1e3;
+  --disp:"Space Grotesk","Segoe UI",Arial,sans-serif;
+  --body:"Inter",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:13px/1.45 var(--body);margin:0;padding-block:24px;padding-inline:16px}
+.page{max-width:794px;margin:0 auto 24px;background:var(--page);padding:40px 48px 30px;display:flex;flex-direction:column;gap:18px}
+.page > *{flex-shrink:0}
+h1,h2,h3,.disp{font-family:var(--disp);margin:0;text-wrap:balance}
+p{margin:0}
+.num{font-variant-numeric:tabular-nums}
+
+/* header / footer, as on the offer sheet */
+.hd{display:flex;justify-content:space-between;align-items:center;padding-bottom:14px;border-bottom:1px solid var(--ink2)}
+.brand{display:flex;align-items:center;gap:10px;font:600 19px var(--disp)}
+.brand i{width:30px;height:30px;border-radius:7px;background:var(--ink);border:2px solid var(--acc);color:#fff;font:700 15px var(--disp);font-style:normal;display:grid;place-items:center}
+.brand span{color:var(--acc)}
+.hd .meta{color:var(--muted);font-size:13px}
+.ft{margin-top:auto;display:flex;justify-content:space-between;color:var(--muted);font-size:11.5px;padding-top:8px}
+
+.eyebrow{font:500 14px var(--disp);color:var(--ink2)}
+.hero{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:start}
+.hero h1{font-size:46px;line-height:1.02;letter-spacing:-.02em;font-weight:700}
+.hero h1 em{font-style:normal;color:var(--acc);display:block}
+.hero .sub{font-size:15px;color:var(--ink2);margin-top:8px;max-width:44ch}
+.stamp{border:2px solid var(--acc);border-radius:12px;padding:10px 18px;text-align:center}
+.stamp small{display:block;color:var(--acc);font-weight:600;font-size:12.5px}
+.stamp b{font:600 22px var(--disp)}
+
+/* project cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.card{border:1px solid var(--line);border-radius:14px;padding:16px 16px 12px;display:flex;flex-direction:column;gap:6px;position:relative}
+.card.hot{border:2px solid var(--acc)}
+.tag{position:absolute;top:-11px;left:14px;background:var(--acc);color:#fff;font:600 11.5px var(--body);padding:2px 9px;border-radius:5px}
+.card h3{font-size:16px;line-height:1.2}
+.card .who{font-size:11.5px;color:var(--muted)}
+.card .big{font:700 26px var(--disp);letter-spacing:-.01em;line-height:1.1;margin-top:2px}
+.card.hot .big{color:var(--acc)}
+.card .big.hold{color:var(--amber)}
+.card .big.half{color:var(--ok)}
+.rows{border-top:1px solid var(--line);margin-top:6px;padding-top:6px;display:grid;gap:3px}
+.rows div{display:flex;justify-content:space-between;gap:8px;font-size:12px}
+.rows div span{color:var(--ink2)}
+.rows div b{font-weight:600;text-align:right}
+
+/* sections and figures */
+.sec{display:flex;justify-content:space-between;align-items:baseline}
+.sec h2{font-size:21px;font-weight:600}
+.sec small{color:var(--muted);font-size:12px}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.tile{background:var(--soft);border-radius:12px;padding:12px 14px}
+.tile b{display:block;font:700 28px var(--disp);letter-spacing:-.01em}
+.tile span{font-size:12px;color:var(--ink2)}
+.verify{display:inline-block;font:600 10px var(--body);color:var(--amber);background:var(--amber-soft);padding:1px 6px;border-radius:4px;vertical-align:middle;margin-left:4px;text-transform:uppercase;letter-spacing:.04em}
+
+/* black panel */
+.panel{background:var(--ink);color:#fff;border-radius:16px;padding:18px 24px;display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:center}
+.panel .div{width:1px;align-self:stretch;background:#444}
+.panel small{color:#bdbdbd;font-size:12.5px;display:block}
+.panel b{font:600 21px var(--disp);line-height:1.2}
+.panel b em{font-style:normal;color:var(--acc)}
+.panel .r{text-align:right}
+
+/* flowcharts */
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:11.5px;color:var(--ink2)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:14px;height:14px;border-radius:4px;display:inline-block}
+.k-auto{background:var(--acc-soft);border:1.5px solid var(--acc)}
+.k-tap{background:#fff;border:1.5px solid var(--ink)}
+.k-zoho{background:var(--ink)}
+.k-pain{background:var(--soft);border:1.5px dashed #9a9a9a}
+.flowlabel{font:600 13px var(--disp);display:flex;align-items:center;gap:8px}
+.flowlabel .chip{font:600 10.5px var(--body);padding:2px 8px;border-radius:99px;text-transform:uppercase;letter-spacing:.05em}
+.chip.now{background:var(--soft);color:var(--ink2)}
+.chip.new{background:var(--acc);color:#fff}
+.flow{display:flex;align-items:stretch;gap:0}
+.flow + .flow{margin-top:8px}
+.st{flex:1 1 0;min-width:0;border-radius:10px;padding:8px 9px 8px;display:flex;flex-direction:column;gap:2px;font-size:11px;line-height:1.3}
+.st b{font:600 12.5px/1.2 var(--disp)}
+.st .by{font-size:10.5px;color:var(--muted)}
+.st.auto{background:var(--acc-soft);border:1.5px solid var(--acc)}
+.st.auto .by{color:var(--acc);font-weight:600}
+.st.tap{background:#fff;border:1.5px solid var(--ink)}
+.st.zoho{background:var(--ink);color:#fff;border:1.5px solid var(--ink)}
+.st.zoho .by{color:#bdbdbd}
+.st.pain{background:var(--soft);border:1.5px dashed #9a9a9a}
+.st.done{background:var(--ok-soft);border:1.5px solid var(--ok)}
+.st.done .by{color:var(--ok);font-weight:600}
+.st .x{margin-top:auto;padding-top:4px;font-size:10.5px;font-weight:600;color:var(--acc)}
+.st .br{margin-top:auto;padding-top:5px;border-top:1px dashed var(--acc);font-size:10.5px;color:var(--ink2)}
+.st.zoho .br{border-color:#666;color:#ddd}
+.ar{flex:0 0 18px;display:grid;place-items:center;color:var(--ink2);font:700 14px var(--disp)}
+.cont{font-size:11px;color:var(--muted);margin:4px 0 0 2px}
+.loop{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--ink2);margin-top:6px}
+.loop b{color:var(--acc);font-family:var(--disp)}
+.box{border:1px solid var(--line);border-radius:14px;padding:14px 14px 12px;display:flex;flex-direction:column;gap:8px}
+
+/* tables and grids */
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:11.5px}
+th,td{text-align:left;vertical-align:top;padding:6px 8px;border-bottom:1px solid var(--line)}
+th{font:600 11px var(--body);color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+td.k{font-weight:600;white-space:nowrap}
+.ask{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ask .box h3{font-size:15px}
+.roles{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.role{background:var(--soft);border-radius:10px;padding:9px 10px;font-size:11px;display:flex;flex-direction:column;gap:3px}
+.role b{font:600 13px var(--disp)}
+.role s{color:var(--muted);text-decoration-color:var(--acc)}
+.role em{font-style:normal;font-weight:600}
+.grow{display:grid;grid-template-columns:200px 1fr;gap:14px;align-items:start}
+.asked{background:var(--ink);color:#fff;border-radius:14px;padding:14px}
+.asked small{color:#bdbdbd;font-size:11.5px}
+.asked ul{margin:8px 0 0;padding-left:16px;font:500 13px/1.35 var(--disp);display:grid;gap:6px}
+.adds{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.add{border:1px solid var(--line);border-radius:10px;padding:7px 10px;font-size:11px}
+.add b{font:600 12.5px var(--disp);display:block}
+.add span{color:var(--ink2)}
+.caps{display:flex;flex-wrap:wrap;gap:6px}
+.caps span{border:1.5px solid var(--ink);border-radius:99px;padding:4px 11px;font:500 12px var(--disp)}
+
+
+/* release plan */
+.pilot{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-left:66px;padding:7px 12px;border:1.5px dashed var(--acc);border-radius:10px;font-size:11.5px;background:var(--acc-soft)}
+.pilot b{font:700 12px var(--disp);color:#fff;background:var(--acc);border-radius:5px;padding:1px 8px}
+.ar2{color:var(--acc);font-weight:700}
+@media print{.rr .body{padding:6px 12px}.rel{gap:6px}.rr .n{font-size:22px}}
+
+.rel{display:grid;gap:10px}
+.rr{display:grid;grid-template-columns:54px 1fr;gap:12px;align-items:stretch}
+.rr .n{background:var(--ink);color:#fff;border-radius:12px;display:grid;place-items:center;font:700 26px var(--disp)}
+.rr.base .n{background:var(--ok)}
+.rr.first .n{background:var(--acc)}
+.rr .body{border:1px solid var(--line);border-radius:12px;padding:10px 14px;display:grid;grid-template-columns:1.1fr 1.5fr 1fr;gap:12px}
+.rr.first .body{border:2px solid var(--acc)}
+.rr .body h3{font-size:16px;line-height:1.15}
+.rr .body .who{font-size:11px;color:var(--muted);margin-top:2px}
+.rr .body ul{margin:0;padding-left:15px;font-size:11px;display:grid;gap:2px}
+.rr .body .lab{font:600 10px var(--body);text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:3px}
+.rr .body .needs{font-size:11px;color:var(--ink2);display:grid;gap:4px}
+.rr .body .needs b{color:var(--ink)}
+.rr .when{display:inline-block;margin-top:6px;font:600 10.5px var(--body);background:var(--soft);border-radius:5px;padding:2px 7px}
+.later{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:11.5px}
+.later b{font-family:var(--disp)}
+.later span{border:1.5px dashed #9a9a9a;border-radius:99px;padding:3px 10px;background:var(--soft)}
+@media (max-width:720px){.rr .body{grid-template-columns:1fr}.pilot{margin-left:0}}
+@media (max-width:720px){
+  .page{padding:24px 16px}
+  .hero{grid-template-columns:1fr}
+  .hero h1{font-size:36px}
+  .cards,.tiles,.ask,.adds,.grow{grid-template-columns:1fr}
+  .roles{grid-template-columns:1fr 1fr}
+  .panel{grid-template-columns:1fr}
+  .panel .div{display:none}
+  .panel .r{text-align:left}
+  .flow{flex-direction:column}
+  .ar{flex-basis:16px;transform:rotate(90deg)}
+  }
+@media print{
+  body{background:#fff;padding:0}
+  .page{max-width:none;margin:0;padding:10mm 12mm 7mm;height:296mm;overflow:hidden;break-after:page;gap:11px}
+  .box{padding:10px 12px 9px;gap:6px}
+  .hero h1{font-size:42px}
+  .tile{padding:8px 12px}
+  .tile b{font-size:23px}
+  .box + .box{margin-top:-2px}
+  th,td{padding:4px 7px}
+}
+@page{size:A4;margin:0}
+</style>
+
+<!-- ============ PAGE 1 · OVERVIEW ============ -->
+<section class="page">
+  <header class="hd">
+    <div class="brand"><i>I</i>IT<span>Conduit</span></div>
+    <div class="meta">22 Sep 2026 · Management update</div>
+  </header>
+
+  <div class="hero">
+    <div>
+      <p class="eyebrow">SmartPack dashboard + SH stock</p>
+      <h1>Three projects. <em>One foundation.</em></h1>
+      <p class="sub">Only the production dashboard was requested. The two stock projects are my own initiatives. All three read Zoho and never change it.</p>
+    </div>
+    <div class="stamp"><small>Go-ahead from the COO</small><b>Continuing</b><small style="color:var(--muted);font-weight:500">dashboard advised by Mr. Samitha</small></div>
+  </div>
+
+  <div class="cards">
+    <div class="card hot">
+      <span class="tag">Requested build</span>
+      <h3>Production dashboard</h3>
+      <p class="who">SmartPack · asked for by Mr. Samitha, GM</p>
+      <p class="big">Base built</p>
+      <div class="rows">
+        <div><span>Automated checks</span><b class="num">143 pass</b></div>
+        <div><span>Independent reviews</span><b>3 of 3 passed</b></div>
+        <div><span>Design reviews</span><b>7 rounds</b></div>
+        <div><span>Next</span><b>Private go-live</b></div>
+      </div>
+    </div>
+    <div class="card">
+      <span class="tag" style="background:var(--amber)">On hold · 20 Sep</span>
+      <h3>Key-customer stock</h3>
+      <p class="who">My initiative · for Abdullah</p>
+      <p class="big hold">Preview ready</p>
+      <div class="rows">
+        <div><span>Customer groups</span><b class="num">7</b></div>
+        <div><span>Items in preview</span><b class="num">150</b></div>
+        <div><span>SH items with a reorder level</span><b class="num">116 of 12,006</b></div>
+        <div><span>Next</span><b>Restart, stock read from Zoho</b></div>
+      </div>
+    </div>
+    <div class="card">
+      <span class="tag" style="background:var(--ok)">Half done</span>
+      <h3>SH stock data + procedure</h3>
+      <p class="who">My initiative · Rizwan's department</p>
+      <p class="big half">Data + procedure</p>
+      <div class="rows">
+        <div><span>Zoho records pulled</span><b class="num">400,000+</b></div>
+        <div><span>SH locations covered</span><b class="num">10 of 10</b></div>
+        <div><span>Steps to confirm</span><b class="num">6</b></div>
+        <div><span>Next</span><b>Review with Rizwan</b></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec"><h2>What today's records show</h2><small>SmartPack Zoho + September job sheet</small></div>
+  <div class="tiles" style="grid-template-columns:repeat(2,1fr)">
+    <div class="tile"><b class="num">≈57%</b><span>customised orders on time (Jul–Aug 2026)</span></div>
+    <div class="tile"><b class="num">31%</b><span>Screen Printing jobs waiting on raw material (Sep)</span></div>
+    <div class="tile"><b class="num">67<span class="verify">to verify</span></b><span>jobs past their delivery date, not marked done</span></div>
+    <div class="tile"><b class="num">&lt;1%</b><span>daily rows that say why a target was missed</span></div>
+  </div>
+
+  <div class="panel">
+    <div><small>What this means</small><b>Jobs wait. <em>Nobody can see why.</em></b></div>
+    <div class="div"></div>
+    <div class="r"><small>Then, in order</small><b>Order portal, then managers<br>see their jobs</b></div>
+  </div>
+
+  <footer class="ft"><span>Zoho data to 15 Sep 2026 · SH and SmartPack figures never added together</span><span>Abdul Hadhee | IT Exec | Standard-Holdings</span></footer>
+</section>
+
+<!-- ============ PAGE 2 · RELEASE PLAN ============ -->
+<section class="page">
+  <header class="hd">
+    <div class="brand"><i>I</i>IT<span>Conduit</span></div>
+    <div class="meta">Project 1 · Release plan</div>
+  </header>
+
+  <div>
+    <p class="eyebrow">Production dashboard · release order</p>
+    <h1 style="font-size:34px;line-height:1.05;letter-spacing:-.02em">Show it first. <span style="color:var(--acc)">Then scale it.</span></h1>
+    <p class="sub" style="font-size:13.5px;color:var(--ink2);margin-top:6px;max-width:70ch">Small releases on today's office PCs. Each goes live when it's ready. Tablets are requested only once it works.</p>
+  </div>
+
+  <div class="rel">
+    <div class="pilot" style="margin-left:0"><b>Preview</b><span>Floor Board demo, real orders, 20 min with Mr. Samitha + managers</span><span class="ar2">→</span><span>shapes release 2</span></div>
+    <div class="rr base">
+      <div class="n">0</div>
+      <div class="body">
+        <div><h3>Foundation</h3><p class="who">IT · built and reviewed</p><span class="when">Ready for private go-live</span></div>
+        <div><p class="lab">What they get</p><ul><li>Sign-in, roles, full audit trail</li><li>Daily Zoho import, read-only</li><li>Backups</li></ul></div>
+        <div class="needs"><p class="lab">Status</p><span><b>143</b> automated checks pass</span><span>Code, security, database reviews passed</span></div>
+      </div>
+    </div>
+    <div class="rr first">
+      <div class="n">1</div>
+      <div class="body">
+        <div><h3>Order portal</h3><p class="who">Whoever places orders · triage</p><span class="when">Everyone</span></div>
+        <div><p class="lab">What they get</p><ul><li>Every order gets a number and a start time</li><li>Credit check runs automatically</li><li>The person who ordered sees its status</li></ul></div>
+        <div class="needs"><p class="lab">Needs first</p><span>Who accepts orders</span><span>WhatsApp order group: off or in parallel</span><span>An email account for notices</span></div>
+      </div>
+    </div>
+    <div class="rr">
+      <div class="n">2</div>
+      <div class="body">
+        <div><h3>Managers' job list</h3><p class="who">3 managers · Mr. Samitha</p><span class="when">Everyone</span></div>
+        <div><p class="lab">What they get</p><ul><li>Their open jobs from Zoho, across divisions</li><li>Overdue and at-risk deliveries</li><li>Jobs waiting on SH's order (676 today)</li></ul></div>
+        <div class="needs"><p class="lab">Needs first</p><span>Nothing new</span><span>Office PCs as they are</span></div>
+      </div>
+    </div>
+    <div class="rr">
+      <div class="n">3</div>
+      <div class="body">
+        <div><h3>Where is the file?</h3><p class="who">Coordinators · managers</p><span class="when">Screen Printing 1st</span></div>
+        <div><p class="lab">What they get</p><ul><li>One click when a file is sent and received</li><li>File location, and days at each desk</li><li>The paper file still travels, with a QR cover sheet</li></ul></div>
+        <div class="needs"><p class="lab">Needs first</p><span>Office PCs</span><span>Coordinators and managers agree to click</span></div>
+      </div>
+    </div>
+    <div class="rr">
+      <div class="n">4</div>
+      <div class="body">
+        <div><h3>Why jobs are stuck</h3><p class="who">Managers</p><span class="when">Screen Printing 1st</span></div>
+        <div><p class="lab">What they get</p><ul><li>Blocker with a reason, an owner and an age</li><li>Raw-material shortages shown before production</li></ul></div>
+        <div class="needs"><p class="lab">Needs first</p><span>Who owns a raw-material shortage</span></div>
+      </div>
+    </div>
+    <div class="rr">
+      <div class="n">5</div>
+      <div class="body">
+        <div><h3>Mr. Samitha's view</h3><p class="who">SmartPack GM</p><span class="when">After 4 weeks</span></div>
+        <div><p class="lab">What they get</p><ul><li>7 am work list</li><li>Where the time goes, desk by desk</li><li>The evidence for the tablets</li></ul></div>
+        <div class="needs"><p class="lab">Needs first</p><span><b>4 weeks</b> of real data from releases 2–4</span></div>
+      </div>
+    </div>
+    <div class="pilot"><b>Decision</b><span>Tablets for production, backed by 4 weeks of results</span><span class="ar2">→</span><span>only then the floor goes digital</span></div>
+    <div class="rr">
+      <div class="n">6</div>
+      <div class="body">
+        <div><h3>Job file goes digital</h3><p class="who">Floor · IT enters data at first</p><span class="when">Division by division</span></div>
+        <div><p class="lab">What they get</p><ul><li>Output recorded on the floor, on the day</li><li>Job cards inside the file; paper and Excel retired</li></ul></div>
+        <div class="needs"><p class="lab">Needs first</p><span><b>Tablets approved</b></span><span>FPP, MOBA, Packpro forms</span><span>QA: digital sign-off or paper</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="later"><b>After that, one at a time:</b><span>Stores + invoicing</span><span>COO reports</span><span>Key-customer stock tool</span></div>
+
+  <footer class="ft"><span>Office PCs until tablets are approved · no fixed dates: each release goes live when ready</span><span>Abdul Hadhee | IT Exec | Standard-Holdings</span></footer>
+</section>
+
+<!-- ============ PAGE 3 · PRODUCTION DASHBOARD FLOW ============ -->
+<section class="page">
+  <header class="hd">
+    <div class="brand"><i>I</i>IT<span>Conduit</span></div>
+    <div class="meta">Project 1 · How a job will move</div>
+  </header>
+
+  <div>
+    <p class="eyebrow">How a SmartPack job moves</p>
+    <h1 style="font-size:34px;line-height:1.05;letter-spacing:-.02em">Typed once. <span style="color:var(--acc)">Timed by every tap.</span></h1>
+  </div>
+
+  <div class="legend">
+    <span><i class="k-auto"></i>The system does it</span>
+    <span><i class="k-tap"></i>One tap by a person</span>
+    <span><i class="k-zoho"></i>Recorded in Zoho</span>
+    <span><i class="k-pain"></i>Problem today</span>
+  </div>
+
+  <div class="box">
+    <p class="flowlabel"><span class="chip now">Today</span>Five records, typed again by hand, one paper file</p>
+    <div class="flow">
+      <div class="st pain"><b>WhatsApp message</b><span class="by">customer / sales</span><span class="x">No start time</span></div><span class="ar">→</span>
+      <div class="st pain"><b>Excel sheet</b><span class="by">manager types it</span><span class="x">Typed #1</span></div><span class="ar">→</span>
+      <div class="st pain"><b>Paper file + Zoho order</b><span class="by">coordinator</span><span class="x">Typed #2, #3</span></div><span class="ar">→</span>
+      <div class="st pain"><b>File carried by hand</b><span class="by">desk to desk</span><span class="x">"Who has the file?"</span></div>
+    </div>
+    <div class="flow">
+      <div class="st pain"><b>Production on paper</b><span class="by">job card</span><span class="x">Short of material? Found here</span></div><span class="ar">→</span>
+      <div class="st pain"><b>Reference sheet</b><span class="by">3 people, afterwards</span><span class="x">Dates written later</span></div><span class="ar">→</span>
+      <div class="st zoho"><b>Shipment</b><span class="by">Ilham, stores</span></div><span class="ar">→</span>
+      <div class="st zoho"><b>Invoice to SH</b><span class="by">Darshani</span></div>
+    </div>
+  </div>
+
+  <div class="box" style="border:2px solid var(--acc)">
+    <p class="flowlabel"><span class="chip new">With the system</span>One digital job file from order to invoice</p>
+    <div class="flow">
+      <div class="st auto"><b>Order in the portal</b><span class="by">Time recorded</span><span class="br">Gets an order number at once</span></div><span class="ar">→</span>
+      <div class="st auto"><b>Credit check</b><span class="by">Automatic</span><span class="br">Over the limit → on hold</span></div><span class="ar">→</span>
+      <div class="st tap"><b>Order accepted</b><span class="by">triage</span></div><span class="ar">→</span>
+      <div class="st tap"><b>Digital job file</b><span class="by">coordinator, once</span><span class="br">Zoho order linked, never retyped</span></div>
+    </div>
+    <p class="cont">then ↓</p>
+    <div class="flow">
+      <div class="st auto"><b>Raw-material check</b><span class="by">From the recipe</span><span class="br">Short → blocker with owner and age</span></div><span class="ar">→</span>
+      <div class="st tap"><b>Manager receives</b><span class="by">1 tap</span><span class="br">File location known</span></div><span class="ar">→</span>
+      <div class="st tap"><b>Output + blockers</b><span class="by">taps on the day</span><span class="br">Reason buttons only on a miss</span></div><span class="ar">→</span>
+      <div class="st tap"><b>Back to coordinator</b><span class="by">1 tap</span></div>
+    </div>
+    <p class="cont">then ↓</p>
+    <div class="flow">
+      <div class="st zoho"><b>Shipment</b><span class="by">Ilham · 1 reference number</span><span class="br">Zoho confirms it</span></div><span class="ar">→</span>
+      <div class="st zoho"><b>Invoice to SH</b><span class="by">Darshani · 1 reference number</span><span class="br">Zoho confirms it</span></div><span class="ar">→</span>
+      <div class="st auto"><b>Reports</b><span class="by">No spreadsheets</span><span class="br">7 am list for the GM, weekly for the COO</span></div>
+    </div>
+  </div>
+
+  <div class="sec"><h2>Who works differently</h2><small>in the pilot, IT enters the data first</small></div>
+  <div class="roles">
+    <div class="role"><b>Requesters</b><s>WhatsApp + phone calls</s><em>Portal, live status</em></div>
+    <div class="role"><b>Coordinators</b><s>Excel + paper + Zoho</s><em>Create the file once</em></div>
+    <div class="role"><b>Managers</b><s>Daily Excel tab</s><em>4 clicks; a tablet later</em></div>
+    <div class="role"><b>Stores · Ilham</b><s>Paper slips, late goods-in</s><em>Same-day in Zoho</em></div>
+    <div class="role"><b>Invoicing · Darshani</b><s>Reference sheet</s><em>1 reference number</em></div>
+    <div class="role"><b>QA</b><s>—</s><em>Forms stay on paper for now</em></div>
+    <div class="role"><b>Order desk</b><s>Rebuilds from 6 registers</s><em>Reports made for them</em></div>
+    <div class="role"><b>Floor</b><s>—</s><em>Tablets once approved</em></div>
+  </div>
+
+  <footer class="ft"><span>The end state, reached release by release (page 2); the floor part needs tablets</span><span>Abdul Hadhee | IT Exec | Standard-Holdings</span></footer>
+</section>
+
+<!-- ============ PAGE 3 · STOCK FLOWS ============ -->
+<section class="page">
+  <header class="hd">
+    <div class="brand"><i>I</i>IT<span>Conduit</span></div>
+    <div class="meta">Projects 2 and 3 · SH stock</div>
+  </header>
+
+  <div>
+    <p class="eyebrow">Rizwan's department · my initiatives</p>
+    <h1 style="font-size:34px;line-height:1.05;letter-spacing:-.02em">Stock read from Zoho. <span style="color:var(--acc)">Nobody types it twice.</span></h1>
+  </div>
+
+  <div class="legend">
+    <span><i class="k-auto"></i>The system does it</span>
+    <span><i class="k-tap"></i>A person decides</span>
+    <span><i class="k-zoho"></i>Recorded in Zoho</span>
+    <span><i class="k-pain"></i>Today</span>
+  </div>
+
+  <div class="box">
+    <p class="flowlabel"><span class="chip new">Project 2</span>Key-customer buffer stock and reordering</p>
+    <div class="flow">
+      <div class="st zoho"><b>SH stock</b><span class="by">All 10 locations</span><span class="br">Read every day</span></div><span class="ar">→</span>
+      <div class="st auto"><b>Compare with buffer</b><span class="by">Per key customer</span></div><span class="ar">→</span>
+      <div class="st auto"><b>Reorder list</b><span class="by">Built for you</span><span class="br">Buffer − stock − on order</span></div><span class="ar">→</span>
+      <div class="st tap"><b>Rizwan checks</b><span class="by">approve / change</span></div>
+    </div>
+    <p class="cont">then ↓</p>
+    <div class="flow">
+      <div class="st zoho"><b>Purchase order</b><span class="by">Nazmi, in Zoho</span></div><span class="ar">→</span>
+      <div class="st zoho"><b>Approval</b><span class="by">COO, in Zoho</span></div><span class="ar">→</span>
+      <div class="st zoho"><b>Goods received</b><span class="by">Abdullah, same day</span></div><span class="ar">→</span>
+      <div class="st auto"><b>Back into stock</b><span class="by">Picked up next morning</span></div>
+    </div>
+    <p class="loop"><b>↻</b> Today: the list is built by hand in Excel, and only 116 of 12,006 SH items have a reorder level in Zoho.</p>
+  </div>
+
+  <div class="box">
+    <p class="flowlabel"><span class="chip new">Project 3</span>The daily "doesn't add up" list</p>
+    <div class="flow">
+      <div class="st zoho"><b>Both Zoho accounts</b><span class="by">SH + SmartPack</span><span class="br">Read overnight</span></div><span class="ar">→</span>
+      <div class="st auto"><b>Checks run</b><span class="by">Automatic</span><span class="br">Negative stock · late goods-in · orders open too long</span></div><span class="ar">→</span>
+      <div class="st auto"><b>Short list per person</b><span class="by">About 20 items a day</span></div><span class="ar">→</span>
+      <div class="st tap"><b>Fix in Zoho</b><span class="by">Abdullah / Ilham</span><span class="br">Find the missing document first</span></div><span class="ar">→</span>
+      <div class="st auto"><b>Off the list</b><span class="by">Next morning</span></div>
+    </div>
+    <div class="tiles" style="margin-top:4px">
+      <div class="tile"><b class="num">2,928</b><span>SH orders open over 60 days, still holding stock</span></div>
+      <div class="tile"><b class="num">721 <span style="font-size:15px;color:var(--muted)">vs</span> 4</b><span>SmartPack finished items in work-in-progress vs finished goods</span></div>
+      <div class="tile"><b class="num">2 days</b><span>median delay before SmartPack goods-in is recorded</span></div>
+    </div>
+  </div>
+
+  <div class="box">
+    <p class="flowlabel"><span class="chip now">Progress</span>SH stock work, step by step</p>
+    <div class="flow">
+      <div class="st done"><b>Data pulled</b><span class="by">✓ Done</span><span class="br">400,000+ records</span></div><span class="ar">→</span>
+      <div class="st done"><b>Stock procedure</b><span class="by">✓ Done</span><span class="br">Stock Flow Rulebook</span></div><span class="ar">→</span>
+      <div class="st done"><b>Both sides mapped</b><span class="by">✓ Done</span><span class="br">IBR, retail, consumption</span></div><span class="ar">→</span>
+      <div class="st tap"><b>Confirm 6 steps</b><span class="by">Next</span><span class="br">Rizwan, Abdullah, Ilham</span></div><span class="ar">→</span>
+      <div class="st pain"><b>One stock tool</b><span class="by">Then</span><span class="br">Projects 2 + 3 combined</span></div>
+    </div>
+  </div>
+
+  <div class="sec"><h2>Zoho, and what each project adds</h2></div>
+  <div class="tw">
+  <table>
+    <thead><tr><th></th><th>Zoho Inventory</th><th>Production dashboard</th><th>Key-customer stock</th><th>SH stock data + procedure</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Does</td><td>Orders, stock, bundles, shipments, invoices</td><td colspan="3">Replaces none of it. Reads Zoho, never writes.</td></tr>
+      <tr><td class="k">Can't</td><td>See between order and shipment; link SH to SmartPack</td><td>No production stages</td><td>No buffer per customer</td><td>One company at a time</td></tr>
+      <tr><td class="k">Adds</td><td>—</td><td>Start time, file location, blockers, reports</td><td>Buffer, auto reorder list</td><td>Daily exception list</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <footer class="ft"><span>SH figures from Zoho, all 10 locations, pulled 19 Sep 2026 · SmartPack from 19 Sep pull</span><span>Abdul Hadhee | IT Exec | Standard-Holdings</span></footer>
+</section>
+
+<!-- ============ PAGE 4 · SCOPE, NEEDS, CAPABILITY ============ -->
+<section class="page">
+  <header class="hd">
+    <div class="brand"><i>I</i>IT<span>Conduit</span></div>
+    <div class="meta">Scope · what's needed · what we gained</div>
+  </header>
+
+  <div class="sec"><h2>Why the scope grew</h2><small>each addition solves a problem found in our own records</small></div>
+  <div class="grow">
+    <div class="asked"><small>Mr. Samitha asked for</small>
+      <ul><li>Better efficiency</li><li>Less double entry</li><li>Every job page one click from the next</li></ul>
+    </div>
+    <div class="adds">
+      <div class="add"><b>Order portal</b><span>No order has a start time; typed up to 3 times</span></div>
+      <div class="add"><b>Digital job file</b><span>With paper, only 4 of 17 features work</span></div>
+      <div class="add"><b>Checkpoints + blockers</b><span>Under 1% of daily rows say why a target was missed</span></div>
+      <div class="add"><b>Raw-material check</b><span>Shortages found on the floor; 2,456 recipes ready</span></div>
+      <div class="add"><b>Stock habits in Zoho</b><span>23 items negative; 47 transfers in 13 months</span></div>
+      <div class="add"><b>Quality / ISO</b><span>Controlled forms can't become a simple tick</span></div>
+      <div class="add"><b>GM + COO views</b><span>My addition, beyond the request; Zoho can't link SH to SmartPack</span></div>
+      <div class="add"><b>Security + audit</b><span>Every step records who and when, automatically</span></div>
+    </div>
+  </div>
+
+  <div class="ask">
+    <div class="box">
+      <h3>Production dashboard: deciding next, with Mr. Samitha</h3>
+      <table>
+        <tbody>
+          <tr><td class="k">Pilot division</td><td>Recommended: Screen Printing first</td></tr>
+          <tr><td class="k">Who accepts orders</td><td>Triage owner for the portal</td></tr>
+          <tr><td class="k">WhatsApp order group</td><td>Close on launch day, or run in parallel</td></tr>
+          <tr><td class="k">14-day promise</td><td>Starts at the message or at the Zoho order</td></tr>
+          <tr><td class="k">Shortages</td><td>Who owns a raw-material shortage, and who buys</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="box">
+      <h3>Needed from others</h3>
+      <table>
+        <thead><tr><th>What</th><th>Who</th><th>Needed before</th></tr></thead>
+        <tbody>
+          <tr><td>Tablets for production</td><td>Purchase approval</td><td>Release 6</td></tr>
+          <tr><td>Digital sign-off on quality forms?</td><td>QA / ISO lead</td><td>Release 6</td></tr>
+          <tr><td>FPP, MOBA, Packpro forms</td><td>Ranga, Ishan</td><td>Release 6</td></tr>
+          <tr><td>Confirm the stock procedure</td><td>Rizwan's team</td><td>Stock tool</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="sec"><h2>Capability the company gained</h2></div>
+  <div class="caps">
+    <span>Business intelligence</span><span>Zoho data in full, past its export limits</span><span>Process mapping, both companies</span><span>Checking the numbers</span><span>AI-assisted development, independently reviewed</span><span>Stock control in Zoho</span>
+  </div>
+
+  <footer class="ft"><span>"To verify" = confirm with managers first · Updates weekly from now on</span><span>Abdul Hadhee | IT Exec | Standard-Holdings</span></footer>
+</section>

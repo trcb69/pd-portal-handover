@@ -1,0 +1,70 @@
+[
+  {
+    "salesorder_number": "JOBORDER-08597",
+    "salesorder_id": "4892105000113028131",
+    "date": "2026-09-16",
+    "status": "confirmed",
+    "customer_name": "Standard Holdings (Pvt) Ltd",
+    "order_received_from": "TCO",
+    "cf_job_no": "OPD6704",
+    "cf_manufacturing_division": "Paper Cup Unit (PCU)",
+    "cf_order_type": "Customized Order",
+    "cf_clickup_link": "https://app.clickup.com/t/3355641/86eyx4d2g",
+    "line_items": [
+      {
+        "line_item_id": "4892105000113028139",
+        "item_name": "SP-12oz D/Wall White Paper Cup (TCO)",
+        "item_type": "inventory",
+        "is_combo_product": true,
+        "combo_type": "assembly",
+        "quantity": 500,
+        "quantity_packed": 0,
+        "quantity_shipped": 0,
+        "project_name": "OPD6704",
+        "tags": [
+          {
+            "tag_option_id": "4892105000000168119",
+            "is_tag_mandatory": false,
+            "tag_name": "Division",
+            "tag_id": "4892105000000000333",
+            "tag_option_name": "MOBA Unit"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "salesorder_number": "JOBORDER-08592",
+    "salesorder_id": "4892105000113028068",
+    "date": "2026-09-16",
+    "status": "confirmed",
+    "customer_name": "Standard Holdings (Pvt) Ltd",
+    "order_received_from": "Standard Holdings (Pvt) Ltd",
+    "cf_job_no": "OPD6705",
+    "cf_manufacturing_division": "Paper Cup Unit (PCU)",
+    "cf_order_type": "Internal SH Order",
+    "cf_clickup_link": "https://app.clickup.com/t/3355641/86eyx40m3",
+    "line_items": [
+      {
+        "line_item_id": "4892105000113028076",
+        "item_name": "SH-12oz S/Wall White Paper Cup",
+        "item_type": "inventory",
+        "is_combo_product": true,
+        "combo_type": "assembly",
+        "quantity": 80000,
+        "quantity_packed": 0,
+        "quantity_shipped": 0,
+        "project_name": "OPD6705",
+        "tags": [
+          {
+            "tag_option_id": "4892105000000168119",
+            "is_tag_mandatory": false,
+            "tag_name": "Division",
+            "tag_id": "4892105000000000333",
+            "tag_option_name": "MOBA Unit"
+          }
+        ]
+      }
+    ]
+  }
+]

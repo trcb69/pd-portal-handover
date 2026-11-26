@@ -1,0 +1,938 @@
+{
+ "dates": {
+  "last_order_in_file": "2026-09-25",
+  "cut24": "2024-09-25",
+  "cut12": "2025-09-25"
+ },
+ "item_master": {
+  "rows": 3914,
+  "unique_ids": 3913,
+  "dup_ids": [
+   "4892105000000146105"
+  ],
+  "type": {
+   "NA": 900,
+   "": 15,
+   "Non Customized": 303,
+   "Customized": 2695
+  },
+  "customized_active": 2519,
+  "customized_inactive": 176
+ },
+ "catalogue": {
+  "items": 2537,
+  "active": 2519,
+  "inactive_but_ordered_24m": 18,
+  "active_never_ordered": 486,
+  "active_not_ordered_24m_but_ordered_before": 220,
+  "live_12m": 1257,
+  "ordered_24m_not_12m": 574,
+  "ordered_once_lines": 684,
+  "ordered_once_ever_items_with_1_so": 1022,
+  "ge10_lines": 187,
+  "ge25_lines": 19,
+  "lines_total": 7765,
+  "top10_share_lines": 0.047,
+  "top20_share_lines": 0.081,
+  "top50_share_lines": 0.156,
+  "top100_share_lines": 0.252,
+  "top200_share_lines": 0.388
+ },
+ "kind_all": {
+  "SP": 1135,
+  "CP": 633,
+  "SH": 39,
+  "PRINTSERV": 187,
+  "SUB": 19,
+  "OTHER": 74,
+  "PACKSERV": 81,
+  "DP": 21,
+  "RTP": 121,
+  "SERVICE": 227
+ },
+ "kind_live": {
+  "SP": 695,
+  "CP": 302,
+  "SH": 18,
+  "PRINTSERV": 154,
+  "SUB": 3,
+  "OTHER": 17,
+  "PACKSERV": 68
+ },
+ "product_type": {
+  "goods": 2309,
+  "service": 228
+ },
+ "product_type_live": {
+  "goods": 1257
+ },
+ "service_with_orders": 0,
+ "tag_present_live": 1186,
+ "live_goods": 1257,
+ "live_by_division": {
+  "Offset Printing Division (OPD)": 554,
+  "Screen Printing Division (SHPS)": 457,
+  "Paper Cup Unit (PCU)": 138,
+  "MOBA Punching Unit": 34,
+  "Customized Packing Unit (CPU)": 69,
+  "Food Product Processing (FPP)": 5
+ },
+ "cat_by_bu": {
+  "OPD": 609,
+  "SHP": 952,
+  "PACPRO": 560,
+  "MOBA PUNCHING": 60,
+  "MOBA - PAPER CUP": 147,
+  "PCU": 19,
+  "CUSTOMIZED PACKING UNIT": 84,
+  "FPP": 13,
+  "MOBA": 53,
+  "DPU": 23,
+  "MACPRO": 16,
+  "RWU": 1
+ },
+ "missing": {
+  "sku": 2417,
+  "unit": 12,
+  "cf_bu": 0,
+  "item_division": 181,
+  "manufacturing_division": 486,
+  "base_material": 487,
+  "finished_good_nature": 0,
+  "finished_good_category": 0
+ },
+ "missing_live": {
+  "sku": 1216,
+  "unit": 5,
+  "cf_bu": 0,
+  "item_division": 3,
+  "manufacturing_division": 0,
+  "base_material": 1
+ },
+ "live_units": {
+  "nos": 62,
+  "pcs": 935,
+  "box": 227,
+  "Pks": 28,
+  "": 5
+ },
+ "mfg_div_conflicts": 94,
+ "dup_names_in_catalogue": [],
+ "name_prefix": [
+  [
+   "SP-",
+   1135
+  ],
+  [
+   "CP-",
+   633
+  ],
+  [
+   "Service",
+   227
+  ],
+  [
+   "PRINTSERV-",
+   185
+  ],
+  [
+   "RTP",
+   121
+  ],
+  [
+   "PACKSERV",
+   81
+  ],
+  [
+   "SH-",
+   39
+  ],
+  [
+   "DP-",
+   21
+  ],
+  [
+   "Sub",
+   18
+  ],
+  [
+   "SH",
+   14
+  ],
+  [
+   "(none)",
+   11
+  ],
+  [
+   "Kraft",
+   8
+  ]
+ ],
+ "name_oddities": {
+  "leading_trailing_space": 3,
+  "double_space": 39,
+  "len_gt_90": 60
+ },
+ "lines": {
+  "total": 10596,
+  "by_item_type": {
+   "Customized": 7806,
+   "Non Customized": 2650,
+   "NA": 114,
+   "NOT IN MASTER": 26
+  },
+  "order_type_x_item_type": {
+   "Make to Order (MTO) | Customized": 28,
+   "Make to Order (MTO) | Non Customized": 12,
+   "Ex Stock | Customized": 254,
+   "Customized Order | Customized": 7399,
+   "Ex Stock | Non Customized": 2064,
+   "Customized Order | Non Customized": 94,
+   "Make to Order (MTO) | NA": 2,
+   "Customized Order | NA": 5,
+   "Internal SH Order | Non Customized": 480,
+   "Ex Stock | NA": 10,
+   "Internal SH Order | NA": 97,
+   "Internal SH Order | Customized": 125,
+   "Customized Order | NOT IN MASTER": 25,
+   "Internal SH Order | NOT IN MASTER": 1
+  },
+  "not_in_master_names": [
+   [
+    "PRINTSERV-Kraft Paper Cake Bag 9.5 x 9.5 x 9.5 Inch With Rope Handle With Print (AN) Sri Lanka",
+    1
+   ],
+   [
+    "PRINTSERV-12oz Plastic Cup (350ml) With Print (Brown Sugar)",
+    1
+   ],
+   [
+    "PRINTSERV-12Oz Plastic Cup (350ml) With Print (Plus Nine Four)",
+    1
+   ],
+   [
+    "PRINTSERV-12Oz Plastic Cup (350ml) With Print (Wildore)",
+    1
+   ],
+   [
+    "PRINTSERV-12Oz Plastic Cup (350ml) With Print (Drifter)",
+    1
+   ],
+   [
+    "PRINTSERV-12oz Plastic Cup (350ml) With Print (Mr berry Ambewela)",
+    1
+   ],
+   [
+    "PRINTSERV-Kraft Paper Bag (M) 280x180x120mm With Print (Mr Berry Ambewela)",
+    1
+   ],
+   [
+    "PRINTSERV-16oz D/Wall Paper Cup Black With Print (The Coffee Manor)",
+    1
+   ],
+   [
+    "PRINTSERV-16oz Plastic Cup (475ml) With Print (Cravz)",
+    1
+   ],
+   [
+    "PRINTSERV-Kraft Paper Bag with Rope Handle (L) 320x250x110mm With Print (Cravz)",
+    1
+   ],
+   [
+    "PRINTSERV-Pizza Box 30 x 30 x 4cm (12 inch) With Print (Cravz)",
+    1
+   ],
+   [
+    "PRINTSERV-Kraft Cake Box (10x10x4) Inch without Window With Print (Angel Beach Hotel)",
+    1
+   ],
+   [
+    "PACKSERV - 1700ml Rectangle AF Container with Lid (10Pcs Packing)",
+    1
+   ],
+   [
+    "SP-White Greaseproof Paper 14.5x12Inch (Cravz)",
+    1
+   ],
+   [
+    "PRINTSERV-16oz Plastic Cup (475ml) With Print (Coffee Bean)",
+    1
+   ],
+   [
+    "PRINTSERV-12oz Plastic Cup (350ml) With Print (Coffee bean)",
+    1
+   ],
+   [
+    "SP-White Greaseproof Paper 14X14 Inches (Skinny Suddha)",
+    1
+   ],
+   [
+    "SP-750ml Kraft Paper Bowl with Sleeve (Stay Golden)",
+    1
+   ],
+   [
+    "SP-1000ml Kraft Paper Bowl with Sleeve (Stay Golden)",
+    1
+   ],
+   [
+    "PRINTSERV-Pizza Box 33 x 33 x 4cm (13 inch) With Print (Pedlars Corner Cafe)",
+    1
+   ],
+   [
+    "SP-White Paper Bag (XS) 200x120x70mm (Kiri Kopi)",
+    1
+   ],
+   [
+    "SP-White Paper Bag (S) 240x140x80mm (Kiri Kopi)",
+    1
+   ],
+   [
+    "SP-White Paper Bag With Die Cut Handle  (M) 280mmx180mmx120mm (Kiri Kopi)",
+    1
+   ],
+   [
+    "SP-White Paper Bag (L) 300x275x160mm with Die Cut Handle (Kiri Kopi)",
+    1
+   ],
+   [
+    "PRINTSERV-12oz Plastic Cup (350ml) With Print (The Nuga House)",
+    1
+   ],
+   [
+    "PRINTSERV-16oz Plastic Cup (475ml) (Tailslide Surf House)",
+    1
+   ]
+  ],
+  "customized_cancelled_lines": 1429,
+  "customized_lines": 7806,
+  "custom_item_exstock_lines": 254
+ },
+ "fill_all": {
+  "Item (Product ID)": [
+   7806,
+   7806,
+   100.0
+  ],
+  "Quantity ordered": [
+   7806,
+   7806,
+   100.0
+  ],
+  "Usage unit": [
+   7788,
+   7806,
+   99.8
+  ],
+  "Expected Shipment Date": [
+   5118,
+   7806,
+   65.6
+  ],
+  "Expected ship date differs from order date": [
+   4502,
+   7806,
+   57.7
+  ],
+  "CF.Order Received from (end customer)": [
+   7806,
+   7806,
+   100.0
+  ],
+  "CF.Base Material to be Used": [
+   7793,
+   7806,
+   99.8
+  ],
+  "CF.Additional Other Material": [
+   482,
+   7806,
+   6.2
+  ],
+  "CF.SH Sales Order Ref": [
+   7806,
+   7806,
+   100.0
+  ],
+  "CF.Job No": [
+   7802,
+   7806,
+   99.9
+  ],
+  "CF.Order Type": [
+   7806,
+   7806,
+   100.0
+  ],
+  "CF.Manufacturing Division": [
+   7806,
+   7806,
+   100.0
+  ],
+  "CF.Clickup Link": [
+   1187,
+   7806,
+   15.2
+  ],
+  "Artwork (merged old bool + new text)": [
+   7804,
+   7806,
+   100.0
+  ],
+  "Dye cutter (merged)": [
+   7805,
+   7806,
+   100.0
+  ],
+  "Screen/plate (merged)": [
+   7805,
+   7806,
+   100.0
+  ],
+  "CF.Job Nature": [
+   7548,
+   7806,
+   96.7
+  ],
+  "Division (SO line)": [
+   6754,
+   7806,
+   86.5
+  ],
+  "PurchaseOrder (customer PO ref)": [
+   7775,
+   7806,
+   99.6
+  ],
+  "Sales Person": [
+   1368,
+   7806,
+   17.5
+  ],
+  "Notes": [
+   1,
+   7806,
+   0.0
+  ],
+  "Item Desc": [
+   11,
+   7806,
+   0.1
+  ],
+  "Delivery Method": [
+   1364,
+   7806,
+   17.5
+  ],
+  "Sales Channel": [
+   7806,
+   7806,
+   100.0
+  ],
+  "Shipping Address": [
+   1,
+   7806,
+   0.0
+  ],
+  "Item Price": [
+   7588,
+   7806,
+   97.2
+  ]
+ },
+ "fill_2026": {
+  "Item (Product ID)": [
+   2639,
+   2639,
+   100.0
+  ],
+  "Quantity ordered": [
+   2639,
+   2639,
+   100.0
+  ],
+  "Usage unit": [
+   2634,
+   2639,
+   99.8
+  ],
+  "Expected Shipment Date": [
+   2624,
+   2639,
+   99.4
+  ],
+  "Expected ship date differs from order date": [
+   2624,
+   2639,
+   99.4
+  ],
+  "CF.Order Received from (end customer)": [
+   2639,
+   2639,
+   100.0
+  ],
+  "CF.Base Material to be Used": [
+   2637,
+   2639,
+   99.9
+  ],
+  "CF.Additional Other Material": [
+   5,
+   2639,
+   0.2
+  ],
+  "CF.SH Sales Order Ref": [
+   2639,
+   2639,
+   100.0
+  ],
+  "CF.Job No": [
+   2639,
+   2639,
+   100.0
+  ],
+  "CF.Order Type": [
+   2639,
+   2639,
+   100.0
+  ],
+  "CF.Manufacturing Division": [
+   2639,
+   2639,
+   100.0
+  ],
+  "CF.Clickup Link": [
+   1181,
+   2639,
+   44.8
+  ],
+  "Artwork (merged old bool + new text)": [
+   2639,
+   2639,
+   100.0
+  ],
+  "Dye cutter (merged)": [
+   2639,
+   2639,
+   100.0
+  ],
+  "Screen/plate (merged)": [
+   2639,
+   2639,
+   100.0
+  ],
+  "CF.Job Nature": [
+   2639,
+   2639,
+   100.0
+  ],
+  "Division (SO line)": [
+   2623,
+   2639,
+   99.4
+  ],
+  "PurchaseOrder (customer PO ref)": [
+   2637,
+   2639,
+   99.9
+  ],
+  "Sales Person": [
+   0,
+   2639,
+   0.0
+  ],
+  "Notes": [
+   0,
+   2639,
+   0.0
+  ],
+  "Item Desc": [
+   3,
+   2639,
+   0.1
+  ],
+  "Delivery Method": [
+   0,
+   2639,
+   0.0
+  ],
+  "Sales Channel": [
+   2639,
+   2639,
+   100.0
+  ],
+  "Shipping Address": [
+   0,
+   2639,
+   0.0
+  ],
+  "Item Price": [
+   2582,
+   2639,
+   97.8
+  ]
+ },
+ "fill_custtype": {
+  "Item (Product ID)": [
+   7399,
+   7399,
+   100.0
+  ],
+  "Quantity ordered": [
+   7399,
+   7399,
+   100.0
+  ],
+  "Usage unit": [
+   7381,
+   7399,
+   99.8
+  ],
+  "Expected Shipment Date": [
+   4783,
+   7399,
+   64.6
+  ],
+  "Expected ship date differs from order date": [
+   4326,
+   7399,
+   58.5
+  ],
+  "CF.Order Received from (end customer)": [
+   7399,
+   7399,
+   100.0
+  ],
+  "CF.Base Material to be Used": [
+   7389,
+   7399,
+   99.9
+  ],
+  "CF.Additional Other Material": [
+   393,
+   7399,
+   5.3
+  ],
+  "CF.SH Sales Order Ref": [
+   7399,
+   7399,
+   100.0
+  ],
+  "CF.Job No": [
+   7395,
+   7399,
+   99.9
+  ],
+  "CF.Order Type": [
+   7399,
+   7399,
+   100.0
+  ],
+  "CF.Manufacturing Division": [
+   7399,
+   7399,
+   100.0
+  ],
+  "CF.Clickup Link": [
+   1123,
+   7399,
+   15.2
+  ],
+  "Artwork (merged old bool + new text)": [
+   7397,
+   7399,
+   100.0
+  ],
+  "Dye cutter (merged)": [
+   7398,
+   7399,
+   100.0
+  ],
+  "Screen/plate (merged)": [
+   7398,
+   7399,
+   100.0
+  ],
+  "CF.Job Nature": [
+   7268,
+   7399,
+   98.2
+  ],
+  "Division (SO line)": [
+   6576,
+   7399,
+   88.9
+  ],
+  "PurchaseOrder (customer PO ref)": [
+   7370,
+   7399,
+   99.6
+  ],
+  "Sales Person": [
+   1130,
+   7399,
+   15.3
+  ],
+  "Notes": [
+   1,
+   7399,
+   0.0
+  ],
+  "Item Desc": [
+   10,
+   7399,
+   0.1
+  ],
+  "Delivery Method": [
+   1126,
+   7399,
+   15.2
+  ],
+  "Sales Channel": [
+   7399,
+   7399,
+   100.0
+  ],
+  "Shipping Address": [
+   1,
+   7399,
+   0.0
+  ],
+  "Item Price": [
+   7195,
+   7399,
+   97.2
+  ]
+ },
+ "values": {
+  "_art": [
+   [
+    "Available",
+    7178
+   ],
+   [
+    "Not Available",
+    523
+   ],
+   [
+    "Not Applicable",
+    103
+   ],
+   [
+    "",
+    2
+   ]
+  ],
+  "_dye": [
+   [
+    "Available",
+    6475
+   ],
+   [
+    "Not Avaialble",
+    1330
+   ],
+   [
+    "",
+    1
+   ]
+  ],
+  "_scr": [
+   [
+    "Available",
+    7161
+   ],
+   [
+    "Not Available",
+    541
+   ],
+   [
+    "Not Applicable",
+    103
+   ],
+   [
+    "",
+    1
+   ]
+  ],
+  "_nature": [
+   [
+    "Reorder",
+    5621
+   ],
+   [
+    "New Order",
+    1892
+   ],
+   [
+    "",
+    258
+   ],
+   [
+    "Reorder With New Design",
+    33
+   ],
+   [
+    "Rework",
+    2
+   ]
+  ],
+  "CF.Order Type": [
+   [
+    "Customized Order",
+    7399
+   ],
+   [
+    "Ex Stock",
+    254
+   ],
+   [
+    "Internal SH Order",
+    125
+   ],
+   [
+    "Make to Order (MTO)",
+    28
+   ]
+  ],
+  "Sales Person": [
+   [
+    "",
+    6438
+   ],
+   [
+    "Internal for  SH",
+    1368
+   ]
+  ],
+  "Delivery Method": [
+   [
+    "",
+    6442
+   ],
+   [
+    "INTERNAL",
+    1363
+   ],
+   [
+    "Internal",
+    1
+   ]
+  ],
+  "Sales Channel": [
+   [
+    "direct_sales",
+    7806
+   ]
+  ],
+  "Status": [
+   [
+    "invoiced",
+    6279
+   ],
+   [
+    "partially_invoiced",
+    1280
+   ],
+   [
+    "confirmed",
+    247
+   ]
+  ],
+  "Warehouse Name": [
+   [
+    "SPS Work In Progress",
+    7806
+   ]
+  ],
+  "artwork_bool_true_text_empty": 256,
+  "text_empty_rows_by_year": {
+   "2024": 258
+  },
+  "rows_by_year": {
+   "2024": 1874,
+   "2023": 2,
+   "2025": 3291,
+   "2026": 2639
+  },
+  "qty_unit_mismatch": 2
+ },
+ "end_customers": {
+  "distinct": 640,
+  "lines_with_value": 10596,
+  "normalised_groups_gt1": 8,
+  "names_in_normalised_groups": 16,
+  "names_with_near_variants": 42,
+  "single_order": 116,
+  "ge10_lines": 166,
+  "top10_share": 0.558,
+  "active_12m": 487,
+  "top10": [
+   [
+    "Standard Holdings (Pvt) Ltd",
+    5075
+   ],
+   [
+    "Spar SL (Private ) Limited",
+    138
+   ],
+   [
+    "Street Burger (Private) Limited",
+    117
+   ],
+   [
+    "TACO BELL",
+    109
+   ],
+   [
+    "Blends",
+    103
+   ],
+   [
+    "Kiri Kopi",
+    101
+   ],
+   [
+    "Keells Super",
+    86
+   ],
+   [
+    "Malu Poke",
+    68
+   ],
+   [
+    "GRAND BELL HOTEL",
+    57
+   ],
+   [
+    "Flamingo",
+    56
+   ]
+  ],
+  "top_custom_share": {},
+  "lines_total_all_types": 10596,
+  "customer_name_is_SH_lines": 10594,
+  "by_order_type_filled": {
+   "Customized Order": [
+    7523,
+    7523,
+    100.0
+   ],
+   "Ex Stock": [
+    2328,
+    2328,
+    100.0
+   ],
+   "Internal SH Order": [
+    703,
+    703,
+    100.0
+   ],
+   "Make to Order (MTO)": [
+    42,
+    42,
+    100.0
+   ]
+  },
+  "blank_on_customized_lines": 0
+ }
+}

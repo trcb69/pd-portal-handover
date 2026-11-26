@@ -1,0 +1,541 @@
+<meta charset="utf-8">
+<title>SmartPack Floor Board</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#f3f5f3; --surface:#ffffff; --sunk:#eaeeeb; --ink:#18201d; --ink2:#4a5752; --muted:#6c7974;
+  --line:#dbe1dd; --line2:#c6cec9; --accent:#1f5bb8; --accent-soft:#e3ecfa; --accent-ink:#ffffff;
+  --crit:#d03b3b; --crit-soft:#fbe9e9; --crit-ink:#a62828;
+  --warn:#fab219; --warn-soft:#fdf2d8; --warn-ink:#8a5a00;
+  --good:#0ca30c; --good-soft:#e2f4e2; --good-ink:#0a6b0a;
+  --serious:#ec835a; --serious-soft:#fcebe3; --serious-ink:#a24a24;
+  --sim:#8b6fc0;
+  --display:"Barlow Semi Condensed","Arial Narrow",system-ui,sans-serif;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#111513; --surface:#191e1c; --sunk:#141917; --ink:#e6ebe8; --ink2:#b3bdb9; --muted:#8d9994;
+    --line:#2a322f; --line2:#38423e; --accent:#7ea6ee; --accent-soft:#1d2a40; --accent-ink:#0d1422;
+    --crit-soft:#3a1d1d; --crit-ink:#f19a9a; --warn-soft:#3a2f14; --warn-ink:#f5c860;
+    --good-soft:#15301a; --good-ink:#7fd67f; --serious-soft:#3a2419; --serious-ink:#f3a887; --sim:#b39ce6;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#111513; --surface:#191e1c; --sunk:#141917; --ink:#e6ebe8; --ink2:#b3bdb9; --muted:#8d9994;
+  --line:#2a322f; --line2:#38423e; --accent:#7ea6ee; --accent-soft:#1d2a40; --accent-ink:#0d1422;
+  --crit-soft:#3a1d1d; --crit-ink:#f19a9a; --warn-soft:#3a2f14; --warn-ink:#f5c860;
+  --good-soft:#15301a; --good-ink:#7fd67f; --serious-soft:#3a2419; --serious-ink:#f3a887; --sim:#b39ce6;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:14px/1.45 var(--sans);margin:0}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:16px;padding-block:0 48px}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.mono{font-family:var(--mono);font-size:12.5px}
+.muted{color:var(--muted)}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:.01em}
+h1{font-size:30px;font-weight:700;line-height:1.1}
+h2{font-size:20px;font-weight:600}
+h3{font-size:16px;font-weight:600}
+.eyebrow{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:600}
+
+/* top bar */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding-block:10px}
+.brand{display:flex;align-items:baseline;gap:8px;margin-right:auto}
+.brand b{font-family:var(--display);font-size:20px;font-weight:700;letter-spacing:.02em}
+.people{display:flex;flex-wrap:wrap;gap:6px}
+.person{border:1px solid var(--line2);background:var(--surface);border-radius:999px;padding:5px 12px;cursor:pointer;display:flex;gap:6px;align-items:baseline}
+.person small{color:var(--muted);font-size:11px}
+.person[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.person[aria-pressed="true"] small{color:inherit;opacity:.7}
+.demo-note{font-size:12px;color:var(--ink2);padding-block:8px;display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center}
+.simtag{display:inline-flex;align-items:center;gap:4px;color:var(--sim);font-size:11px;font-weight:600;letter-spacing:.02em}
+.simtag::before{content:"";width:8px;height:8px;border-radius:50%;border:1.5px dashed var(--sim)}
+
+/* heading block */
+.head{display:flex;flex-wrap:wrap;align-items:flex-end;gap:8px 24px;padding-block:20px 14px}
+.head .sub{color:var(--ink2);max-width:70ch}
+
+/* counters */
+.counters{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.counter{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px;text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:2px;position:relative}
+.counter .n{font-size:28px;font-weight:600;line-height:1.1}
+.counter .l{font-size:12.5px;color:var(--ink2);display:flex;align-items:center;gap:6px}
+.counter[aria-pressed="true"]{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.counter.static{cursor:default}
+.dot{width:9px;height:9px;border-radius:50%;flex:none;background:var(--muted)}
+.dot.crit{background:var(--crit)} .dot.warn{background:var(--warn)} .dot.serious{background:var(--serious)}
+.dot.good{background:var(--good)} .dot.info{background:var(--accent)}
+
+/* toolbar */
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
+.chip{border:1px solid var(--line2);background:transparent;border-radius:6px;padding:4px 10px;cursor:pointer;font-size:13px}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.search{margin-left:auto;border:1px solid var(--line2);background:var(--surface);border-radius:6px;padding:5px 10px;min-width:0;width:220px;max-width:100%;font:inherit;color:var(--ink)}
+
+/* job list */
+.list{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.lhead,.row{display:grid;grid-template-columns:118px minmax(170px,1.3fr) minmax(210px,1.4fr) 132px 110px 22px;gap:12px;align-items:center;padding:10px 14px}
+.lhead{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:600;border-bottom:1px solid var(--line);background:var(--sunk)}
+.row{border-bottom:1px solid var(--line);cursor:pointer;width:100%;background:none;border-left:0;border-right:0;border-top:0;text-align:left}
+.row:hover{background:var(--sunk)}
+.item:last-child .row{border-bottom:0}
+.pill{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;border-radius:999px;padding:2px 9px 2px 7px;white-space:nowrap}
+.pill.crit{background:var(--crit-soft);color:var(--crit-ink)}
+.pill.warn{background:var(--warn-soft);color:var(--warn-ink)}
+.pill.serious{background:var(--serious-soft);color:var(--serious-ink)}
+.pill.good{background:var(--good-soft);color:var(--good-ink)}
+.pill.info{background:var(--accent-soft);color:var(--accent)}
+.pill.plain{background:var(--sunk);color:var(--ink2)}
+.jobid b{display:block;font-weight:600}
+.cust{overflow:hidden}
+.cust .c{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500}
+.cust .m{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.track{display:flex;flex-direction:column;gap:4px}
+.dots{display:flex;gap:3px;align-items:center}
+.sd{width:14px;height:14px;border-radius:50%;border:1.5px solid var(--line2);flex:none;position:relative}
+.sd.done{background:var(--accent);border-color:var(--accent)}
+.sd.done.sim{background:transparent;border:1.5px dashed var(--sim)}
+.sd.done.sim::after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--sim)}
+.sd.next{border:2px solid var(--ink);box-shadow:0 0 0 2px var(--surface),0 0 0 3px var(--ink)}
+.sd.gap{margin-left:6px}
+.track .t{font-size:12px;color:var(--ink2)}
+.qty{display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--ink2)}
+.bar{height:6px;border-radius:3px;background:var(--sunk);overflow:hidden;border:1px solid var(--line)}
+.bar i{display:block;height:100%;background:var(--accent);border-radius:3px}
+.due b{display:block;font-weight:600}
+.due span{font-size:12px}
+.late{color:var(--crit-ink)}
+.soon{color:var(--warn-ink)}
+.chev{color:var(--muted);transition:transform .15s}
+.row[aria-expanded="true"] .chev{transform:rotate(90deg)}
+.detail{padding:4px 14px 18px;border-bottom:1px solid var(--line);background:var(--sunk);display:grid;grid-template-columns:minmax(260px,1.2fr) minmax(220px,1fr);gap:18px}
+.stagelist{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.stagelist li{display:grid;grid-template-columns:18px 1fr auto;gap:8px;align-items:center;padding:4px 0;border-bottom:1px dashed var(--line)}
+.stagelist .src{font-size:11px;color:var(--muted)}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin:0}
+.kv dt{color:var(--muted)} .kv dd{margin:0}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.btn{border:1px solid var(--line2);background:var(--surface);border-radius:8px;padding:7px 12px;cursor:pointer;font-weight:500}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.empty{padding:28px;text-align:center;color:var(--muted)}
+.more{display:block;width:100%;padding:10px;border:0;border-top:1px solid var(--line);background:var(--sunk);cursor:pointer;color:var(--accent);font-weight:600}
+
+/* panels / grids for GM + COO */
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:14px;margin-top:14px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;min-width:0}
+.panel h2{margin-bottom:2px}
+.panel .cap{color:var(--muted);font-size:12.5px;margin:0 0 10px}
+.tscroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+th{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600;text-align:right;padding:6px 8px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+td.l,th.l{text-align:left}
+tr:last-child td{border-bottom:0}
+.cellbar{display:flex;align-items:center;gap:8px;justify-content:flex-end}
+.cellbar i{display:block;height:8px;border-radius:0 4px 4px 0;background:var(--accent)}
+.zero{color:var(--line2)}
+.hero{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:flex-end}
+.hero .big{font-size:52px;font-weight:600;line-height:1}
+.note{border-left:3px solid var(--warn);background:var(--warn-soft);color:var(--ink);padding:10px 12px;border-radius:0 8px 8px 0;font-size:13px;margin-top:12px}
+.note b{color:var(--warn-ink)}
+svg text{fill:var(--muted);font:11px var(--sans)}
+svg .lbl{fill:var(--ink);font-weight:600}
+.tip{position:fixed;z-index:50;pointer-events:none;background:var(--ink);color:var(--bg);padding:6px 9px;border-radius:6px;font-size:12px;max-width:260px;box-shadow:0 4px 14px rgb(0 0 0/.2)}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:8px;z-index:60;max-width:calc(100% - 32px)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px;color:var(--ink2);align-items:center}
+.legend span{display:inline-flex;align-items:center;gap:5px}
+.legend .sd{width:11px;height:11px}
+
+@media (max-width:860px){
+  .lhead{display:none}
+  .row{grid-template-columns:1fr auto;grid-template-areas:"id due" "cust cust" "track track" "qty qty";row-gap:8px}
+  .row>.jobid{grid-area:id} .row>.cust{grid-area:cust} .row>.track{grid-area:track}
+  .row>.qty{grid-area:qty} .row>.due{grid-area:due;text-align:right} .row>.chev{display:none}
+  .detail{grid-template-columns:1fr}
+  .search{margin-left:0;width:100%}
+  .grid2{grid-template-columns:1fr}
+  h1{font-size:25px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand"><b>Floor Board</b><span class="muted">SmartPack production</span></div>
+    <nav class="people" id="people" aria-label="View as"></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="demo-note">
+    <span><b>Demo.</b> Real SmartPack Zoho orders dated 1 Jul – 15 Sep 2026, as of 17 Sep 2026.</span>
+    <span class="simtag">simulated in the demo</span>
+    <span class="muted">Manual checklist ticks, pick lists, inventory adjustments, SH purchase bills, file location and Ranga/Ishan split on Offset jobs are made up; buttons don't save.</span>
+  </div>
+  <div id="view"></div>
+</main>
+<div class="tip" id="tip" hidden></div>
+<div class="toast" id="toast" hidden role="status"></div>
+
+<script>
+const DATA = /*DATA*/null;
+const TODAY = new Date(DATA.today + 'T00:00:00');
+const DIVNAME = {OPD:'Offset', SHPS:'Screen Printing', PSU:'Paper Straw', RWU:'Rewinding', MOBA:'MOBA Punching', FPP:'FPP', CPU:'Customized Packing'};
+const PEOPLE = [
+  {id:'Mubeena', role:'Manager'}, {id:'Ranga', role:'Manager'}, {id:'Ishan', role:'Manager'},
+  {id:'GM', label:'Production GM', role:''}, {id:'COO', label:'COO', role:''},
+  {id:'Ilham', role:'Stores'}, {id:'Darshani', role:'Invoicing'},
+];
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmt = n => Number(n || 0).toLocaleString('en-US');
+const days = iso => iso ? Math.round((TODAY - new Date(iso + 'T00:00:00')) / 864e5) : null;
+const dshort = iso => iso ? new Date(iso + 'T00:00:00').toLocaleDateString('en-GB', {day:'numeric', month:'short'}) : '—';
+
+const jobs = DATA.jobs.map(j => {
+  const open = j.bucket !== 'shipped';
+  const due = j.expShip ? -days(j.expShip) : null;         // days until expected ship (negative = late)
+  const readyStores = open && j.packed > j.shipped;
+  const waitInvoice = ['shipped','fulfilled','partially_shipped'].includes(j.shippedStatus) && j.invoicedStatus !== 'invoiced';
+  let status, rank;
+  if (!open) { status = ['good','Shipped']; rank = 9; }
+  else if (j.blockers.length) { status = ['crit','Blocked']; rank = 0; }
+  else if (j.overdue) { status = ['serious','Overdue']; rank = 1; }
+  else if (j.atRisk) { status = ['warn','Due soon']; rank = 2; }
+  else if (j.bucket === 'incoming') { status = ['info','Not received']; rank = 3; }
+  else if (readyStores) { status = ['plain','For Stores']; rank = 4; }
+  else { status = ['plain','In production']; rank = 5; }
+  return {...j, open, due, readyStores, waitInvoice, status, rank};
+});
+const shippedLast7 = j => { const s = j.stages.find(x => x.id === 8); return s && s.date && days(s.date) >= 0 && days(s.date) <= 7; };
+
+const state = {person: 'Ishan', filter: 'all', div: 'all', q: '', open: new Set(), limit: 40};
+try { const p = localStorage.getItem('fb-person'); if (p && PEOPLE.some(x => x.id === p)) state.person = p; } catch (e) {}
+
+function renderPeople() {
+  $('#people').innerHTML = PEOPLE.map(p => `<button class="person" aria-pressed="${p.id === state.person}" data-p="${p.id}">${esc(p.label || p.id)}${p.role ? `<small>${p.role}</small>` : ''}</button>`).join('');
+}
+$('#people').addEventListener('click', e => {
+  const b = e.target.closest('[data-p]'); if (!b) return;
+  Object.assign(state, {person: b.dataset.p, filter: 'all', div: 'all', q: '', open: new Set(), limit: 40});
+  try { localStorage.setItem('fb-person', state.person); } catch (e) {}
+  render(); window.scrollTo({top: 0});
+});
+
+function toast(msg) {
+  const t = $('#toast'); t.textContent = msg; t.hidden = false;
+  clearTimeout(toast.h); toast.h = setTimeout(() => t.hidden = true, 2600);
+}
+
+/* ---------- shared job list ---------- */
+function stageDots(j) {
+  const order = DATA.divisionOrder[j.div];
+  const byId = Object.fromEntries(j.stages.map(s => [s.id, s]));
+  const nextId = order.find(id => !byId[id]?.date);
+  return `<div class="dots" aria-label="${order.filter(id => byId[id]?.date).length} of ${order.length} checklist stages recorded">` +
+    order.map((id, i) => {
+      const s = byId[id] || {};
+      const cls = ['sd', s.date ? 'done' : '', s.date && s.sim ? 'sim' : '', id === nextId ? 'next' : '', id === 4 && i ? 'gap' : ''].join(' ');
+      return `<span class="${cls}" data-tip="${esc(DATA.stageCatalog[id-1])}: ${s.date ? dshort(s.date) + (s.sim ? ' (simulated)' : '') : 'not yet'}"></span>`;
+    }).join('') + '</div>';
+}
+function nextLabel(j) {
+  const order = DATA.divisionOrder[j.div];
+  const byId = Object.fromEntries(j.stages.map(s => [s.id, s]));
+  const n = order.find(id => !byId[id]?.date);
+  const done = order.filter(id => byId[id]?.date).length;
+  return n ? `${done}/${order.length} · next: <b>${DATA.stageCatalog[n-1]}</b>` : `${done}/${order.length} · checklist complete`;
+}
+function dueCell(j) {
+  if (!j.expShip) return '<div class="due"><b>—</b><span class="muted">no ship date</span></div>';
+  if (!j.open) return `<div class="due"><b>${dshort(j.expShip)}</b><span class="muted">expected ship</span></div>`;
+  const d = j.due;
+  const txt = d < 0 ? `${-d} day${d === -1 ? '' : 's'} late` : d === 0 ? 'due today' : `in ${d} day${d === 1 ? '' : 's'}`;
+  return `<div class="due"><b>${dshort(j.expShip)}</b><span class="${d < 0 ? 'late' : d <= 3 ? 'soon' : 'muted'}">${txt}</span></div>`;
+}
+function rowHTML(j) {
+  const pct = j.qty ? Math.min(100, Math.round(j.packed / j.qty * 100)) : 0;
+  const ex = state.open.has(j.so);
+  return `<div class="item">
+  <button class="row" aria-expanded="${ex}" data-so="${j.so}">
+    <div class="jobid"><span class="pill ${j.status[0]}"><span class="dot ${j.status[0] === 'plain' ? '' : j.status[0]}"></span>${j.status[1]}</span>
+      <b class="mono" style="margin-top:4px">${esc(j.job)}</b><span class="mono muted">${esc(j.so)}</span></div>
+    <div class="cust"><div class="c">${esc(j.customer || '—')}</div>
+      <div class="m">${esc(DIVNAME[j.div])} · ${esc(j.type)}${j.nature ? ' · ' + esc(j.nature) : ''}</div>
+      ${j.blockers.length ? `<div class="m" style="color:var(--crit-ink)">${j.blockers.map(esc).join(' · ')} — ${days(j.orderDate)}d since order</div>` : `<div class="m">File with ${esc(j.fileWith)} <span class="simtag" style="font-size:10px"></span></div>`}</div>
+    <div class="track">${stageDots(j)}<div class="t">${nextLabel(j)}</div></div>
+    <div class="qty"><span><b>${fmt(j.packed)}</b> / ${fmt(j.qty)} packed</span><div class="bar"><i style="width:${pct}%"></i></div></div>
+    ${dueCell(j)}
+    <span class="chev" aria-hidden="true">›</span>
+  </button>
+  ${ex ? detailHTML(j) : ''}
+  </div>`;
+}
+function detailHTML(j) {
+  const order = DATA.divisionOrder[j.div];
+  const byId = Object.fromEntries(j.stages.map(s => [s.id, s]));
+  const items = order.map(id => {
+    const s = byId[id] || {};
+    const mark = s.date ? `<span class="sd done ${s.sim ? 'sim' : ''}" style="width:12px;height:12px"></span>` : '<span class="sd" style="width:12px;height:12px"></span>';
+    return `<li>${mark}<span>${DATA.stageCatalog[id-1]} <span class="src">${s.sim ? '· simulated' : id <= 3 ? '· manual tick' : '· from Zoho'}</span></span><span class="mono">${s.date ? dshort(s.date) : '—'}</span></li>`;
+  }).join('');
+  const g = j.gates || {};
+  return `<div class="detail">
+    <div><h3 style="margin:10px 0 6px">File checklist — ${esc(DIVNAME[j.div])} order</h3><ul class="stagelist">${items}</ul></div>
+    <div>
+      <h3 style="margin:10px 0 6px">Job</h3>
+      <dl class="kv">
+        <dt>Material</dt><dd>${esc(j.material || '—')}</dd>
+        <dt>Ordered</dt><dd>${dshort(j.orderDate)} · ${days(j.orderDate)} days ago</dd>
+        <dt>Readiness</dt><dd>Artwork ${esc(g.artwork || '—')} · Dye cutter ${esc(g.dyeCutter || '—')} · Screen plate ${esc(g.screenPlate || '—')}</dd>
+        <dt>SH SO ref</dt><dd class="mono">${esc(j.shRef || '—')}</dd>
+        <dt>Coordinator</dt><dd>${esc(j.coordinator)} (file created by ${esc(j.creator)})</dd>
+        <dt>Shipped</dt><dd>${fmt(j.shipped)} of ${fmt(j.qty)} · invoice ${esc(j.invoicedStatus.replace('_', ' '))}</dd>
+      </dl>
+      <div class="actions">
+        ${j.bucket === 'incoming' ? `<button class="btn primary" data-act="Marked ${esc(j.job)} as received">Receive file</button>` : `<button class="btn primary" data-act="Next stage ticked on ${esc(j.job)}">Tick next stage</button>`}
+        <button class="btn" data-act="Output recorded on ${esc(j.job)}">Record output</button>
+        <button class="btn" data-act="${j.blockers.length ? 'Blocker closed' : 'Blocker opened'} on ${esc(j.job)}">${j.blockers.length ? 'Close blocker' : 'Report blocker'}</button>
+      </div>
+    </div>
+  </div>`;
+}
+function listBlock(list, emptyMsg) {
+  const shown = list.slice(0, state.limit);
+  return `<div class="list" id="joblist">
+    <div class="lhead"><span>Status · job</span><span>Customer</span><span>File checklist</span><span>Packed</span><span>Ship by</span><span></span></div>
+    ${shown.length ? shown.map(rowHTML).join('') : `<div class="empty">${emptyMsg}</div>`}
+    ${list.length > shown.length ? `<button class="more" data-more>Show ${Math.min(40, list.length - shown.length)} more of ${list.length - shown.length}</button>` : ''}
+  </div>`;
+}
+const sortJobs = l => l.slice().sort((a, b) => a.rank - b.rank || (a.due ?? 999) - (b.due ?? 999));
+const matchesQ = j => !state.q || (j.job + ' ' + j.so + ' ' + j.customer).toLowerCase().includes(state.q.toLowerCase());
+const legend = `<div class="legend" style="margin:8px 2px 0">
+  <span><span class="sd done"></span>recorded</span><span><span class="sd done sim"></span>simulated</span>
+  <span><span class="sd next"></span>next stage</span><span><span class="sd"></span>not yet</span>
+  <span class="muted">First three dots are manual ticks, the rest come from Zoho.</span></div>`;
+
+/* ---------- manager ---------- */
+const COUNTERS = [
+  {k:'blocked', l:'Blocked', c:'crit', f:j => j.blockers.length > 0},
+  {k:'overdue', l:'Past ship date', c:'serious', f:j => j.overdue},
+  {k:'soon', l:'Due in 3 days', c:'warn', f:j => j.atRisk && !j.overdue},
+  {k:'incoming', l:'Not received yet', c:'info', f:j => j.bucket === 'incoming'},
+  {k:'stores', l:'Packed, waiting on Stores', c:'', f:j => j.readyStores},
+];
+function manager(name) {
+  const mine = jobs.filter(j => j.manager === name);
+  const open = mine.filter(j => j.open);
+  const divs = [...new Set(mine.map(j => j.div))];
+  const inDiv = open.filter(j => state.div === 'all' || j.div === state.div);
+  const cf = COUNTERS.find(c => c.k === state.filter);
+  const list = sortJobs(inDiv.filter(j => (!cf || cf.f(j)) && matchesQ(j)));
+  const shipped7 = mine.filter(shippedLast7).length;
+  return `<section class="head">
+      <div><div class="eyebrow">Manager · ${divs.map(d => DIVNAME[d]).join(', ')}</div><h1>${name}'s floor</h1></div>
+      <p class="sub">${open.length} open jobs · ${shipped7} shipped in the last 7 days. Everything you're responsible for is on this one list, most urgent first. Tap a job to see its checklist and act on it.</p>
+    </section>
+    <div class="counters">
+      ${COUNTERS.map(c => { const n = inDiv.filter(c.f).length;
+        return `<button class="counter" aria-pressed="${state.filter === c.k}" data-f="${c.k}"><span class="n">${n}</span><span class="l"><span class="dot ${c.c}"></span>${c.l}</span></button>`; }).join('')}
+    </div>
+    <div class="toolbar">
+      ${divs.length > 1 ? ['all', ...divs].map(d => `<button class="chip" aria-pressed="${state.div === d}" data-d="${d}">${d === 'all' ? 'All divisions' : DIVNAME[d]} <span class="muted">${d === 'all' ? open.length : open.filter(j => j.div === d).length}</span></button>`).join('') : ''}
+      ${state.filter !== 'all' ? `<button class="chip" data-f="all">Clear filter ✕</button>` : ''}
+      <input class="search" id="q" type="search" placeholder="Find job, SO or customer" value="${esc(state.q)}" aria-label="Find job">
+    </div>
+    ${listBlock(list, 'Nothing here — no jobs match.')}
+    ${legend}`;
+}
+
+/* ---------- Stores / Invoicing ---------- */
+function desk(name) {
+  const isStores = name === 'Ilham';
+  const list = sortJobs(jobs.filter(j => (isStores ? j.readyStores : j.waitInvoice) && matchesQ(j)));
+  const oldest = list.reduce((m, j) => Math.max(m, days(j.orderDate)), 0);
+  return `<section class="head">
+      <div><div class="eyebrow">${isStores ? 'Stores' : 'Invoicing'}</div><h1>Waiting on ${name}</h1></div>
+      <p class="sub">${isStores ? 'Jobs with packed goods that have no shipment yet. Your one input is the shipment reference.' : 'Jobs shipped in Zoho that are not fully invoiced yet. Your one input is the ITN / invoice reference.'}</p>
+    </section>
+    <div class="counters">
+      <div class="counter static"><span class="n">${list.length}</span><span class="l"><span class="dot info"></span>waiting on you</span></div>
+      <div class="counter static"><span class="n">${oldest}</span><span class="l">days since the oldest order</span></div>
+    </div>
+    <div class="toolbar"><input class="search" id="q" type="search" placeholder="Find job, SO or customer" value="${esc(state.q)}" aria-label="Find job"></div>
+    ${listBlock(list, 'Nothing waiting on you.')}
+    ${legend}`;
+}
+
+/* ---------- GM ---------- */
+function gm() {
+  const open = jobs.filter(j => j.open);
+  const divs = ['OPD', 'SHPS', 'CPU', 'PSU', 'RWU', 'MOBA', 'FPP'];
+  const cols = [
+    ['Open', j => j.open], ['Not received', j => j.open && j.bucket === 'incoming'],
+    ['In production', j => j.open && j.bucket !== 'incoming' && !j.readyStores], ['For Stores', j => j.readyStores],
+    ['Blocked', j => j.open && j.blockers.length > 0], ['Past ship date', j => j.overdue], ['Shipped, 7 days', shippedLast7],
+  ];
+  const mat = divs.map(d => cols.map(([, f]) => jobs.filter(j => j.div === d && f(j)).length));
+  const colMax = cols.map((_, i) => Math.max(...mat.map(r => r[i])));
+  const reasons = {};
+  open.forEach(j => j.blockers.forEach(r => (reasons[r] ||= []).push(j)));
+  const blocked = sortJobs(open.filter(j => j.blockers.length)).sort((a, b) => days(b.orderDate) - days(a.orderDate));
+  const overdue = open.filter(j => j.overdue).sort((a, b) => a.due - b.due);
+  const rmax = Math.max(...Object.values(reasons).map(v => v.length));
+  const cf = COUNTERS.find(c => c.k === state.filter);
+  const list = sortJobs(open.filter(j => (!cf || cf.f(j)) && (state.div === 'all' || j.div === state.div) && matchesQ(j)));
+  return `<section class="head">
+      <div><div class="eyebrow">Production GM · 7:00 work list</div><h1>All divisions today</h1></div>
+      <p class="sub">What needs a decision this morning, across Mubeena, Ranga and Ishan. Totals are by division and process only — never by individual staff.</p>
+    </section>
+    <div class="counters">
+      ${COUNTERS.map(c => `<button class="counter" aria-pressed="${state.filter === c.k}" data-f="${c.k}"><span class="n">${open.filter(c.f).length}</span><span class="l"><span class="dot ${c.c}"></span>${c.l}</span></button>`).join('')}
+    </div>
+    <div class="panel">
+      <h2>Pipeline by division</h2><p class="cap">Open jobs from orders dated 1 Jul – 15 Sep. Bars compare divisions within each column.</p>
+      <div class="tscroll"><table>
+        <thead><tr><th>Division</th>${cols.map(c => `<th>${c[0]}</th>`).join('')}</tr></thead>
+        <tbody>${divs.map((d, r) => `<tr><td><button class="chip" aria-pressed="${state.div === d}" data-d="${d}">${DIVNAME[d]}</button></td>${mat[r].map((v, i) =>
+          `<td><div class="cellbar">${v ? `<i style="width:${Math.round(v / colMax[i] * 44)}px;${i === 4 ? 'background:var(--crit)' : i === 5 ? 'background:var(--serious)' : ''}"></i>` : ''}<span class="${v ? '' : 'zero'}">${v}</span></div></td>`).join('')}</tr>`).join('')}</tbody>
+      </table></div>
+    </div>
+    <div class="grid2">
+      <div class="panel">
+        <h2>What jobs are blocked on</h2><p class="cap">From the readiness fields on the Zoho sales order. Dye cutter and plate are counted only for customised jobs with nothing packed.</p>
+        <table><tbody>${Object.entries(reasons).sort((a, b) => b[1].length - a[1].length).map(([r, l]) =>
+          `<tr><td class="l">${esc(r)}</td><td><div class="cellbar"><i style="width:${Math.round(l.length / rmax * 120)}px;background:var(--crit)"></i><span>${l.length}</span></div></td></tr>`).join('')}</tbody></table>
+        <p class="cap" style="margin-top:10px">Longest waiting: ${blocked.slice(0, 3).map(j => `<b class="mono">${esc(j.job)}</b> (${DIVNAME[j.div]}, ${days(j.orderDate)} days)`).join(', ')}</p>
+      </div>
+      <div class="panel">
+        <h2>Furthest past ship date</h2><p class="cap">Late either in delivery or in record-keeping — check before chasing.</p>
+        <table><thead><tr><th class="l">Job</th><th class="l">Division</th><th>Packed</th><th>Late by</th></tr></thead>
+        <tbody>${overdue.slice(0, 6).map(j => `<tr><td class="l mono">${esc(j.job)}</td><td class="l">${DIVNAME[j.div]}</td><td>${fmt(j.packed)} / ${fmt(j.qty)}</td><td class="late">${-j.due} days</td></tr>`).join('')}</tbody></table>
+      </div>
+    </div>
+    <div class="head" style="padding-top:26px"><div><h2>All open jobs</h2></div>
+      <p class="sub">Same list the managers see. Use the counters or a division above to narrow it.</p></div>
+    <div class="toolbar">
+      ${state.div !== 'all' || state.filter !== 'all' ? `<button class="chip" data-clear>Clear filters ✕</button>` : ''}
+      <input class="search" id="q" type="search" placeholder="Find job, SO or customer" value="${esc(state.q)}" aria-label="Find job">
+    </div>
+    ${listBlock(list, 'No jobs match.')}
+    ${legend}`;
+}
+
+/* ---------- COO ---------- */
+function coo() {
+  const T = DATA.trends;
+  const months = [...new Set(T.ontime.map(r => r.month))];
+  const pct = (m, t) => { const r = T.ontime.find(x => x.month === m && x.type === t); return r && r.n ? {p: Math.round(r.on / r.n * 100), ...r} : null; };
+  const lastFull = months[months.length - 2];
+  const cust = pct(lastFull, 'Customised'), ex = pct(lastFull, 'Ex stock');
+  const open = jobs.filter(j => j.open);
+  const wk = T.weekly.slice(-12);
+  const avg = Math.round(wk.reduce((s, w) => s + w.n, 0) / wk.length);
+
+  // line: on-time % by month, customised
+  const pts = months.map(m => pct(m, 'Customised')).filter(Boolean);
+  const W = 560, H = 220, L = 40, R = 16, Tp = 16, B = 30;
+  const x = i => L + i * (W - L - R) / Math.max(1, pts.length - 1);
+  const y = v => Tp + (100 - v) / 100 * (H - Tp - B);
+  const path = pts.map((p, i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)},${y(p.p).toFixed(1)}`).join('');
+  const area = path + `L${x(pts.length - 1)},${y(0)}L${x(0)},${y(0)}Z`;
+  const mon = m => new Date(m + '-01T00:00:00').toLocaleDateString('en-GB', {month: 'short'});
+  const line = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="On-time shipment rate for customised orders by month">
+    ${[0, 25, 50, 75, 100].map(v => `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)" /><text x="${L - 8}" y="${y(v) + 4}" text-anchor="end">${v}%</text>`).join('')}
+    <path d="${area}" fill="var(--accent)" fill-opacity=".10"/>
+    <path d="${path}" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"/>
+    ${pts.map((p, i) => `<text x="${x(i)}" y="${H - 10}" text-anchor="middle">${mon(p.month)}${p.month === months[months.length - 1] ? '*' : ''}</text>
+      <circle cx="${x(i)}" cy="${y(p.p)}" r="${i === pts.length - 1 ? 5 : 3.5}" fill="${i === pts.length - 1 ? 'var(--surface)' : 'var(--accent)'}" stroke="var(--accent)" stroke-width="2"/>
+      <rect x="${x(i) - 22}" y="${Tp}" width="44" height="${H - Tp - B}" fill="transparent" data-tip="${mon(p.month)} 2026: ${p.p}% on time (${p.on} of ${p.n} customised orders)${p.month === months[months.length - 1] ? ' — month in progress' : ''}"/>`).join('')}
+    <text class="lbl" x="${x(pts.length - 2)}" y="${y(pts[pts.length - 2].p) - 10}" text-anchor="middle">${pts[pts.length - 2].p}%</text>
+  </svg>`;
+
+  // throughput bars
+  const BW = 560, BH = 170, bmax = Math.max(...wk.map(w => w.n)), bw = (BW - 40) / wk.length;
+  const by = v => 12 + (1 - v / bmax) * (BH - 40);
+  const bars = `<svg viewBox="0 0 ${BW} ${BH}" width="100%" role="img" aria-label="Orders shipped per week">
+    <line x1="30" x2="${BW}" y1="${by(0)}" y2="${by(0)}" stroke="var(--line2)"/>
+    <line x1="30" x2="${BW}" y1="${by(avg)}" y2="${by(avg)}" stroke="var(--muted)" stroke-dasharray="3 4"/>
+    <text x="26" y="${by(avg) + 4}" text-anchor="end">${avg}</text>
+    ${wk.map((w, i) => { const hgt = by(0) - by(w.n); const xx = 34 + i * bw;
+      return `<path d="M${xx + 3},${by(0)} v${-(hgt - 4)} q0,-4 4,-4 h${bw - 14} q4,0 4,4 v${hgt - 4} z" fill="var(--accent)" fill-opacity="${i === wk.length - 1 ? 1 : .55}"/>
+      <rect x="${xx}" y="8" width="${bw}" height="${BH - 30}" fill="transparent" data-tip="Week of ${dshort(w.week)}: ${w.n} orders shipped"/>
+      ${i % 2 === wk.length % 2 || i === wk.length - 1 ? `<text x="${xx + bw / 2}" y="${BH - 10}" text-anchor="middle">${dshort(w.week)}</text>` : ''}`; }).join('')}
+  </svg>`;
+
+  // where time goes
+  const steps = ['Sales order', 'Bundle', 'Package', 'Shipment', 'Sales invoice to SH'].slice(0, 4).map((a, i, arr) => a + ' \u2192 ' + ['Bundle', 'Package', 'Shipment', 'Sales invoice to SH'][i]);
+  const stepLbl = ['Order → production recorded', 'Recorded → packed', 'Packed → shipped', 'Shipped → invoiced'];
+  const rowsDef = [['OPD', 'Customised'], ['SHPS', 'Customised'], ['CPU', 'Customised'], ['MOBA', 'Customised'], ['PSU', 'Ex stock'], ['RWU', 'Ex stock']];
+  const dw = (s, d, t) => DATA.dwell.find(r => r.step === s && r.div === d && r.type === t);
+  const dmax = Math.max(...DATA.dwell.filter(r => r.n >= 20).map(r => r.median));
+  const blockedN = open.filter(j => j.blockers.length).length;
+  const avgBlocked = Math.round(open.filter(j => j.blockers.length).reduce((s, j) => s + days(j.orderDate), 0) / Math.max(1, blockedN));
+
+  return `<section class="head">
+      <div><div class="eyebrow">COO · weekly</div><h1>Is it capacity, or readiness?</h1></div>
+      <p class="sub">The question this system exists to answer. Built here from Zoho history for 2026. The live weekly report waits for four weeks of floor data.</p>
+    </section>
+    <div class="panel">
+      <div class="hero">
+        <div><div class="eyebrow">Customised orders shipped on time, ${mon(lastFull)}</div><div class="big">${cust.p}%</div></div>
+        <div><div class="eyebrow">Ex-stock, same month</div><div style="font-size:28px;font-weight:600">${ex.p}%</div></div>
+        <div><div class="eyebrow">Open jobs past ship date</div><div style="font-size:28px;font-weight:600">${open.filter(j => j.overdue).length}</div></div>
+        <div><div class="eyebrow">Blocked now · average age</div><div style="font-size:28px;font-weight:600">${blockedN} <span class="muted" style="font-size:16px">· ${avgBlocked} days</span></div></div>
+        <div><div class="eyebrow">Shipped per week, 12-wk avg</div><div style="font-size:28px;font-weight:600">${avg}</div></div>
+      </div>
+      <p class="cap" style="margin-top:10px">On time = first shipment on or before the expected shipment date on the sales order. Ex-stock and customised are never averaged together.</p>
+    </div>
+    <div class="panel" style="margin-top:14px">
+      <h2>Where the order cycle goes</h2>
+      <p class="cap">Median days between Zoho documents, orders dated 1 Jan – 15 Sep 2026. Longer bar = longer wait.</p>
+      <div class="tscroll"><table>
+        <thead><tr><th class="l">Division</th>${stepLbl.map(s => `<th>${s}</th>`).join('')}<th>Orders</th></tr></thead>
+        <tbody>${rowsDef.map(([d, t]) => { const n = dw(steps[0], d, t)?.n || 0;
+          return `<tr><td class="l"><b>${DIVNAME[d]}</b> <span class="muted">${t}</span></td>${steps.map(s => { const r = dw(s, d, t);
+            return `<td><div class="cellbar" data-tip="${DIVNAME[d]}, ${stepLbl[steps.indexOf(s)]}: median ${r?.median ?? '—'} days, 90th percentile ${r?.p90 ?? '—'} days (${r?.n ?? 0} orders)">${r && r.median ? `<i style="width:${Math.max(8, Math.round(r.median / dmax * 90))}px"></i>` : ''}<span class="${r && r.median ? '' : 'zero'}">${r ? r.median + 'd' : '—'}</span></div></td>`; }).join('')}<td class="muted">${fmt(n)}</td></tr>`; }).join('')}</tbody>
+      </table></div>
+      <div class="note"><b>What this says.</b> Once production is recorded, packing, shipping and invoicing all happen within about a day. For customised Offset and Screen Printing orders, the wait is before that point: a median of ${dw(steps[0], 'OPD', 'Customised').median} and ${dw(steps[0], 'SHPS', 'Customised').median} days. That includes readiness (artwork, dye cutters, plates, the SH order) as well as machine time. Only the stage timestamps in phase 2 can separate the two.
+      <br><b>Caveat.</b> These are the dates things were entered in Zoho, not the dates they happened. From March 2025 the shipment date and the entry date match on 98–100% of shipments.</div>
+    </div>
+    <div class="grid2">
+      <div class="panel"><h2>On-time rate, customised orders</h2><p class="cap">By month shipped. * month in progress.</p>${line}</div>
+      <div class="panel"><h2>Orders shipped per week</h2><p class="cap">Last 12 weeks, all seven divisions. Dashed line = average.</p>${bars}</div>
+    </div>`;
+}
+
+/* ---------- render + events ---------- */
+function render() {
+  renderPeople();
+  const p = state.person;
+  $('#view').innerHTML = p === 'GM' ? gm() : p === 'COO' ? coo() : (p === 'Ilham' || p === 'Darshani') ? desk(p) : manager(p);
+  const q = $('#q');
+  if (q) q.addEventListener('input', e => { state.q = e.target.value; state.limit = 40; const pos = e.target.selectionStart; render(); const n = $('#q'); n.focus(); n.setSelectionRange(pos, pos); });
+}
+$('#view').addEventListener('click', e => {
+  const t = e.target;
+  const act = t.closest('[data-act]'); if (act) { toast(act.dataset.act + ' — demo only, not saved'); return; }
+  const f = t.closest('[data-f]'); if (f) { state.filter = state.filter === f.dataset.f ? 'all' : f.dataset.f; state.limit = 40; render(); return; }
+  const d = t.closest('[data-d]'); if (d) { state.div = state.div === d.dataset.d && state.person === 'GM' ? 'all' : d.dataset.d; state.limit = 40; render(); if (state.person === 'GM') $('#joblist')?.scrollIntoView({block: 'start'}); return; }
+  if (t.closest('[data-clear]')) { state.div = 'all'; state.filter = 'all'; render(); return; }
+  if (t.closest('[data-more]')) { state.limit += 40; render(); return; }
+  const r = t.closest('.row'); if (r) { const so = r.dataset.so; state.open.has(so) ? state.open.delete(so) : state.open.add(so); render(); }
+});
+const tip = $('#tip');
+document.addEventListener('pointermove', e => {
+  const el = e.target.closest && e.target.closest('[data-tip]');
+  if (!el) { tip.hidden = true; return; }
+  tip.textContent = el.dataset.tip; tip.hidden = false;
+  const x = Math.min(e.clientX + 14, innerWidth - tip.offsetWidth - 8);
+  tip.style.left = x + 'px'; tip.style.top = (e.clientY + 16) + 'px';
+});
+render();
+</script>

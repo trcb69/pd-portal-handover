@@ -1,0 +1,1770 @@
+{
+ "so_lines": 10596,
+ "so_count": 8427,
+ "date_range": [
+  "2023-03-18",
+  "2026-09-25"
+ ],
+ "order_type_lines": {
+  "Make to Order (MTO)": 42,
+  "Ex Stock": 2328,
+  "Customized Order": 7523,
+  "Internal SH Order": 703
+ },
+ "order_type_sos": {
+  "Make to Order (MTO)": 38,
+  "Ex Stock": 2133,
+  "Customized Order": 5762,
+  "Internal SH Order": 494
+ },
+ "fgtype_lines": {
+  "Customized": 7806,
+  "Non Customized": 2650,
+  "NA": 114,
+  "(not in item master)": 26
+ },
+ "xtab_ordertype_fgtype": {
+  "Make to Order (MTO)": {
+   "Customized": 28,
+   "Non Customized": 12,
+   "NA": 2
+  },
+  "Ex Stock": {
+   "Customized": 254,
+   "Non Customized": 2064,
+   "NA": 10
+  },
+  "Customized Order": {
+   "Customized": 7399,
+   "Non Customized": 94,
+   "NA": 5,
+   "(not in item master)": 25
+  },
+  "Internal SH Order": {
+   "Non Customized": 480,
+   "NA": 97,
+   "Customized": 125,
+   "(not in item master)": 1
+  }
+ },
+ "item_join": {
+  "matched": 10570,
+  "total": 10596
+ },
+ "months": [
+  "2024-10",
+  "2024-11",
+  "2024-12",
+  "2025-01",
+  "2025-02",
+  "2025-03",
+  "2025-04",
+  "2025-05",
+  "2025-06",
+  "2025-07",
+  "2025-08",
+  "2025-09",
+  "2025-10",
+  "2025-11",
+  "2025-12",
+  "2026-01",
+  "2026-02",
+  "2026-03",
+  "2026-04",
+  "2026-05",
+  "2026-06",
+  "2026-07",
+  "2026-08",
+  "2026-09"
+ ],
+ "monthly_customized_all": {
+  "2024-10": [
+   192,
+   174
+  ],
+  "2024-11": [
+   210,
+   171
+  ],
+  "2024-12": [
+   192,
+   170
+  ],
+  "2025-01": [
+   300,
+   245
+  ],
+  "2025-02": [
+   243,
+   180
+  ],
+  "2025-03": [
+   272,
+   210
+  ],
+  "2025-04": [
+   205,
+   148
+  ],
+  "2025-05": [
+   282,
+   195
+  ],
+  "2025-06": [
+   196,
+   134
+  ],
+  "2025-07": [
+   265,
+   180
+  ],
+  "2025-08": [
+   423,
+   313
+  ],
+  "2025-09": [
+   242,
+   185
+  ],
+  "2025-10": [
+   248,
+   204
+  ],
+  "2025-11": [
+   265,
+   192
+  ],
+  "2025-12": [
+   309,
+   218
+  ],
+  "2026-01": [
+   369,
+   251
+  ],
+  "2026-02": [
+   306,
+   224
+  ],
+  "2026-03": [
+   309,
+   198
+  ],
+  "2026-04": [
+   264,
+   163
+  ],
+  "2026-05": [
+   236,
+   140
+  ],
+  "2026-06": [
+   270,
+   168
+  ],
+  "2026-07": [
+   321,
+   231
+  ],
+  "2026-08": [
+   310,
+   240
+  ],
+  "2026-09": [
+   222,
+   203
+  ]
+ },
+ "monthly_all_all": {
+  "2024-10": [
+   283,
+   257
+  ],
+  "2024-11": [
+   309,
+   265
+  ],
+  "2024-12": [
+   281,
+   258
+  ],
+  "2025-01": [
+   397,
+   337
+  ],
+  "2025-02": [
+   353,
+   272
+  ],
+  "2025-03": [
+   396,
+   311
+  ],
+  "2025-04": [
+   349,
+   274
+  ],
+  "2025-05": [
+   373,
+   277
+  ],
+  "2025-06": [
+   297,
+   222
+  ],
+  "2025-07": [
+   397,
+   284
+  ],
+  "2025-08": [
+   541,
+   413
+  ],
+  "2025-09": [
+   348,
+   259
+  ],
+  "2025-10": [
+   349,
+   295
+  ],
+  "2025-11": [
+   351,
+   252
+  ],
+  "2025-12": [
+   396,
+   288
+  ],
+  "2026-01": [
+   471,
+   335
+  ],
+  "2026-02": [
+   382,
+   288
+  ],
+  "2026-03": [
+   378,
+   257
+  ],
+  "2026-04": [
+   394,
+   252
+  ],
+  "2026-05": [
+   343,
+   227
+  ],
+  "2026-06": [
+   386,
+   262
+  ],
+  "2026-07": [
+   441,
+   336
+  ],
+  "2026-08": [
+   381,
+   304
+  ],
+  "2026-09": [
+   284,
+   264
+  ]
+ },
+ "custom_by_div_24m": {
+  "Offset Printing Division (OPD)": [
+   3331,
+   2149
+  ],
+  "Paper Cup Unit (PCU)": [
+   697,
+   380
+  ],
+  "Screen Printing Division (SHPS)": [
+   2087,
+   1955
+  ],
+  "Digital Printing Unit (DPU)": [
+   15,
+   15
+  ],
+  "Food Product Processing (FPP)": [
+   14,
+   13
+  ],
+  "MOBA Punching Unit": [
+   173,
+   96
+  ],
+  "Paper Cup Lid Unit": [
+   1,
+   1
+  ],
+  "Customized Packing Unit (CPU)": [
+   133,
+   128
+  ]
+ },
+ "perday": {
+  "window": "2025-09-01..2026-08-31",
+  "mon_sat_days": 313,
+  "days_with_orders": 270,
+  "sos": 2414,
+  "mean_sos_per_day": 7.71,
+  "median_sos_per_day": 6,
+  "p95_sos": 20,
+  "max_sos": 35,
+  "mean_lines_per_day": 11.02,
+  "p95_lines": 31,
+  "max_lines": 51,
+  "weekday_dist": {
+   "0": 633,
+   "1": 465,
+   "2": 374,
+   "3": 403,
+   "5": 137,
+   "4": 402
+  },
+  "busiest": [
+   [
+    "2026-02-18",
+    35
+   ],
+   [
+    "2026-08-24",
+    34
+   ],
+   [
+    "2026-08-03",
+    32
+   ]
+  ],
+  "all_types_mean_sos_per_day": 10.72
+ },
+ "lines_per_so": {
+  "Make to Order (MTO)": {
+   "n": 38,
+   "mean": 1.11,
+   "median": 1.0,
+   "p80": 1.0,
+   "p95": 2,
+   "max": 2,
+   "single_line_pct": 89.5
+  },
+  "Ex Stock": {
+   "n": 2133,
+   "mean": 1.09,
+   "median": 1,
+   "p80": 1.0,
+   "p95": 2,
+   "max": 6,
+   "single_line_pct": 91.9
+  },
+  "Customized Order": {
+   "n": 5762,
+   "mean": 1.31,
+   "median": 1.0,
+   "p80": 2.0,
+   "p95": 2,
+   "max": 5,
+   "single_line_pct": 70.2
+  },
+  "Internal SH Order": {
+   "n": 494,
+   "mean": 1.42,
+   "median": 1.0,
+   "p80": 2.0,
+   "p95": 2,
+   "max": 6,
+   "single_line_pct": 65.0
+  }
+ },
+ "lines_per_so_cust_by_div": {
+  "Customized Packing Unit (CPU)": {
+   "n": 128,
+   "mean": 1.04,
+   "median": 1.0,
+   "p80": 1.0,
+   "p95": 1,
+   "max": 2,
+   "single_line_pct": 96.1
+  },
+  "Digital Printing Unit (DPU)": {
+   "n": 22,
+   "mean": 1.0,
+   "median": 1.0,
+   "p80": 1.0,
+   "p95": 1,
+   "max": 1,
+   "single_line_pct": 100.0
+  },
+  "Food Product Processing (FPP)": {
+   "n": 13,
+   "mean": 1.08,
+   "median": 1,
+   "p80": 1.0,
+   "p95": 1,
+   "max": 2,
+   "single_line_pct": 92.3
+  },
+  "MOBA Punching Unit": {
+   "n": 100,
+   "mean": 1.77,
+   "median": 2.0,
+   "p80": 2.0,
+   "p95": 2,
+   "max": 2,
+   "single_line_pct": 23.0
+  },
+  "Offset Printing Division (OPD)": {
+   "n": 2736,
+   "mean": 1.44,
+   "median": 1.0,
+   "p80": 2.0,
+   "p95": 2,
+   "max": 5,
+   "single_line_pct": 57.2
+  },
+  "Paper Cup Lid Unit": {
+   "n": 2,
+   "mean": 1.0,
+   "median": 1.0,
+   "p80": 1.0,
+   "p95": 1,
+   "max": 1,
+   "single_line_pct": 100.0
+  },
+  "Paper Cup Unit (PCU)": {
+   "n": 404,
+   "mean": 1.78,
+   "median": 2.0,
+   "p80": 2.0,
+   "p95": 2,
+   "max": 3,
+   "single_line_pct": 22.0
+  },
+  "Screen Printing Division (SHPS)": {
+   "n": 2357,
+   "mean": 1.07,
+   "median": 1,
+   "p80": 1.0,
+   "p95": 2,
+   "max": 5,
+   "single_line_pct": 93.7
+  }
+ },
+ "jobnature_cust": {
+  "Reorder": 4252,
+  "(blank)": 132,
+  "New Order": 1352,
+  "Reorder With New Design": 25,
+  "Rework": 1
+ },
+ "qty_per_line_cust": {
+  "median": 500.0,
+  "p20": 130.0,
+  "p80": 2000.0,
+  "p95": 10000.0
+ },
+ "distinct_items_cust": 2074,
+ "distinct_endcust_cust": 637,
+ "items_cust_ordered_once": 738,
+ "items_cust_ordered_2plus": 1336,
+ "cust_lines_on_items_ordered_2plus": 6785,
+ "joins": {
+  "pkg": {
+   "rows": 67039,
+   "rows_with_so": 67039,
+   "distinct_so": 7603,
+   "matched": 7603,
+   "rows_in_so_set": 67039,
+   "date_min": "2024-04-01",
+   "date_max": "2026-09-15"
+  },
+  "shp": {
+   "rows": 65957,
+   "rows_with_so": 65957,
+   "distinct_so": 7559,
+   "matched": 7559,
+   "rows_in_so_set": 65957,
+   "date_min": "2024-04-01",
+   "date_max": "2026-09-15"
+  },
+  "inv": {
+   "rows": 13990,
+   "rows_with_so": 13942,
+   "distinct_so": 8083,
+   "matched": 8083,
+   "rows_in_so_set": 13942,
+   "date_min": "2024-04-01",
+   "date_max": "2026-09-25",
+   "po_equals_so": 13928
+  }
+ },
+ "cohort_n": 7840,
+ "cohort_coverage": {
+  "package": 92.6,
+  "shipment": 92.1,
+  "invoice": 97.4
+ },
+ "so_pre_2024_04": 19,
+ "pkg_by_so_status": {
+  "invoiced": {
+   "true": 6500,
+   "false": 469
+  },
+  "partially_invoiced": {
+   "true": 1060,
+   "false": 35
+  },
+  "confirmed": {
+   "false": 320,
+   "true": 24
+  }
+ },
+ "pkg_shp_join": {
+  "pkg_numbers": 66144,
+  "shp_numbers": 65957,
+  "shp_in_pkg": 65957,
+  "pkg_in_shp": 65957
+ },
+ "pkg_status": {
+  "delivered": 51324,
+  "shipped": 15522,
+  "not_shipped": 193
+ },
+ "shp_status": {
+  "delivered": 51022,
+  "shipped": 14935
+ },
+ "lt_rows": [
+  {
+   "order_type": "Customized Order",
+   "manufacturing_division": "ALL",
+   "cohort": "orders 2024-04-01..2026-07-31",
+   "so_n": 5312,
+   "first_package_median_d": 8,
+   "first_package_p80_d": 22.0,
+   "first_shipment_median_d": 9,
+   "first_shipment_p80_d": 23.0,
+   "first_invoice_median_d": 9,
+   "first_invoice_p80_d": 23.0,
+   "last_shipment_median_d": 11,
+   "last_shipment_p80_d": 28.0,
+   "first_shipment_pct_of_so": 98.1,
+   "exp_date_fill_pct": 59.9,
+   "planned_lead_median_d": 16.0,
+   "first_ship_vs_expected_median_d": 0,
+   "first_ship_on_or_before_expected_pct": 58.7,
+   "first_ship_vs_expected_n": 3097
+  },
+  {
+   "order_type": "Customized Order",
+   "manufacturing_division": "Customized Packing Unit (CPU)",
+   "cohort": "orders 2024-04-01..2026-07-31",
+   "so_n": 46,
+   "first_package_median_d": 6.0,
+   "first_package_p80_d": 18.0,
+   "first_shipment_median_d": 7.0,
+   "first_shipment_p80_d": 19.0,
+   "first_invoice_median_d": 8.0,
+   "first_invoice_p80_d": 20.0,
+   "last_shipment_median_d": 7.0,
+   "last_shipment_p80_d": 29.4,
+   "first_shipment_pct_of_so": 95.7,
+   "exp_date_fill_pct": 100.0,
+   "planned_lead_median_d": 14.0,
+   "first_ship_vs_expected_median_d": -7.0,
+   "first_ship_on_or_before_expected_pct": 72.7,
+   "first_ship_vs_expected_n": 44
+  },
+  {
+   "order_type": "Customized Order",
+   "manufacturing_division": "Digital Printing Unit (DPU)",
+   "cohort": "orders 2024-04-01..2026-07-31",
+   "so_n": 22,
+   "first_package_median_d": 0.0,
+   "first_package_p80_d": 0.0,
+   "first_shipment_median_d": 0.0,
+   "first_shipment_p80_d": 0.0,
+   "first_invoice_median_d": 0.0,
+   "first_invoice_p80_d": 0.0,
+   "last_shipment_median_d": 0.0,
+   "last_shipment_p80_d": 0.0,
+   "first_shipment_pct_of_so": 100.0,
+   "exp_date_fill_pct": 0.0,
+   "planned_lead_median_d": null,
+   "first_ship_vs_expected_median_d": null,
+   "first_ship_on_or_before_expected_pct": null,
+   "first_ship_vs_expected_n": 0
+  },
+  {
+   "order_type": "Customized Order",
+   "manufacturing_division": "Food Product Processing (FPP)",
+   "cohort": "orders 2024-04-01..2026-07-31",
+   "so_n": 12,
+   "first_package_median_d": 2.0,
+   "first_package_p80_d": 11.0,
+   "first_shipment_median_d": 3.0,
+   "first_shipment_p80_d": 11.2,
+   "first_invoice_median_d": 3.0,
+   "first_invoice_p80_d": 12.0,
+   "last_shipment_median_d": 52.5,
+   "last_shipment_p80_d": 297.4,
+   "first_shipment_pct_of_so": 100.0,
+   "exp_date_fill_pct": 8.3,
+   "planned_lead_median_d": 15,
+   "first_ship_vs_expected_median_d": 34,
+   "first_ship_on_or_before_expected_pct": 0.0,
+   "first_ship_vs_expected_n": 1
+  },
+  {
+   "order_type": "Customized Order",
+   "manufacturing_division": "MOBA Punching Unit",
+   "cohort": "orders 2024-04-01..2026-07-31",
+   "so_n": 80,
+   "first_package_median_d": 19.0,
+   "first_package_p80_d": 30.2,
+   "first_shipment_median_d": 19.5,
+   "first_shipment_p80_d": 31.0,
+   "first_invoice_median_d": 20,
+   "first_invoice_p80_d": 31.4,
+   "last_shipment_median_d": 20.5,
+   "last_shipment_p80_d": 32.4,
+   "first_shipment_pct_of_so": 100.0,
+   "exp_date_fill_pct": 91.2,
+   "planned_lead_median_d": 16,
+   "first_ship_vs_expected_median_d": 4,
+   "first_ship_on_or_before_expected_pct": 31.5,
+   "first_ship_vs_expected_n": 73
+  },
+  {
+   "order_type": "Customized Order",
+   "manufacturing_division": "Offset Printing Division (OPD)",
+   "cohort": "orders 2024-04-01..2026-07-31",
+   "so_n": 2569,
+   "first_package_median_d": 13.0,
+   "first_package_p80_d": 26.4,
+   "first_shipment_median_d": 14.0,
+   "first_shipment_p80_d": 27.0,
+   "first_invoice_median_d": 14.0,
+   "first_invoice_p80_d": 28.0,
+   "last_shipment_median_d": 17.0,
+   "last_shipment_p80_d": 35.0,
+   "first_shipment_pct_of_so": 97.3,
+   "exp_date_fill_pct": 69.0,
+   "planned_lead_median_d": 16,
+   "first_ship_vs_expected_median_d": 0,
+   "first_ship_on_or_before_expected_pct": 58.3,
+   "first_ship_vs_expected_n": 1713
+  },
+  {
+   "order_type": "Customized Order",
+   "manufacturing_division": "Paper Cup Lid Unit",
+   "cohort": "orders 2024-04-01..2026-07-31",
+   "so_n": 2,
+   "first_package_median_d": 0.0,
+   "first_package_p80_d": 0.0,
+   "first_shipment_median_d": 0.0,
+   "first_shipment_p80_d": 0.0,
+   "first_invoice_median_d": 0.0,
+   "first_invoice_p80_d": 0.0,
+   "last_shipment_median_d": 0.0,
+   "last_shipment_p80_d": 0.0,
+   "first_shipment_pct_of_so": 100.0,
+   "exp_date_fill_pct": 0.0,
+   "planned_lead_median_d": null,
+   "first_ship_vs_expected_median_d": null,
+   "first_ship_on_or_before_expected_pct": null,
+   "first_ship_vs_expected_n": 0
+  },
+  {
+   "order_type": "Customized Order",
+   "manufacturing_division": "Paper Cup Unit (PCU)",
+   "cohort": "orders 2024-04-01..2026-07-31",
+   "so_n": 367,
+   "first_package_median_d": 15,
+   "first_package_p80_d": 23.6,
+   "first_shipment_median_d": 15,
+   "first_shipment_p80_d": 24.0,
+   "first_invoice_median_d": 15,
+   "first_invoice_p80_d": 25.0,
+   "last_shipment_median_d": 16,
+   "last_shipment_p80_d": 25.6,
+   "first_shipment_pct_of_so": 98.9,
+   "exp_date_fill_pct": 62.9,
+   "planned_lead_median_d": 16,
+   "first_ship_vs_expected_median_d": 4.0,
+   "first_ship_on_or_before_expected_pct": 37.3,
+   "first_ship_vs_expected_n": 228
+  },
+  {
+   "order_type": "Customized Order",
+   "manufacturing_division": "Screen Printing Division (SHPS)",
+   "cohort": "orders 2024-04-01..2026-07-31",
+   "so_n": 2214,
+   "first_package_median_d": 0.0,
+   "first_package_p80_d": 14.6,
+   "first_shipment_median_d": 3.0,
+   "first_shipment_p80_d": 16.0,
+   "first_invoice_median_d": 3,
+   "first_invoice_p80_d": 16.0,
+   "last_shipment_median_d": 4.0,
+   "last_shipment_p80_d": 18.0,
+   "first_shipment_pct_of_so": 98.8,
+   "exp_date_fill_pct": 47.8,
+   "planned_lead_median_d": 14.0,
+   "first_ship_vs_expected_median_d": 0.0,
+   "first_ship_on_or_before_expected_pct": 65.4,
+   "first_ship_vs_expected_n": 1038
+  },
+  {
+   "order_type": "Ex Stock",
+   "manufacturing_division": "ALL",
+   "cohort": "orders 2024-04-01..2026-07-31",
+   "so_n": 2040,
+   "first_package_median_d": 0,
+   "first_package_p80_d": 4.0,
+   "first_shipment_median_d": 1,
+   "first_shipment_p80_d": 5.0,
+   "first_invoice_median_d": 1,
+   "first_invoice_p80_d": 4.0,
+   "last_shipment_median_d": 1,
+   "last_shipment_p80_d": 8.4,
+   "first_shipment_pct_of_so": 76.9,
+   "exp_date_fill_pct": 39.3,
+   "planned_lead_median_d": 0.0,
+   "first_ship_vs_expected_median_d": 0.0,
+   "first_ship_on_or_before_expected_pct": 92.5,
+   "first_ship_vs_expected_n": 708
+  },
+  {
+   "order_type": "Ex Stock",
+   "manufacturing_division": "Cake Wrapper Unit",
+   "cohort": "orders 2024-04-01..2026-07-31",
+   "so_n": 3,
+   "first_package_median_d": 5,
+   "first_package_p80_d": 144.2,
+   "first_shipment_median_d": 10,
+   "first_shipment_p80_d": 146.8,
+   "first_invoice_median_d": 10,
+   "first_invoice_p80_d": 146.8,
+   "last_shipment_median_d": 10,
+   "last_shipment_p80_d": 146.8,
+   "first_shipment_pct_of_so": 100.0,
+   "exp_date_fill_pct": 0.0,
+   "planned_lead_median_d": null,
+   "first_ship_vs_expected_median_d": null,
+   "first_ship_on_or_before_expected_pct": null,
+   "first_ship_vs_expected_n": 0
+  },
+  {
+   "order_type": "Ex Stock",
+   "manufacturing_division": "Customized Packing Unit (CPU)",
+   "cohort": "orders 2024-04-01..2026-07-31",
+   "so_n": 1,
+   "first_package_median_d": 0,
+   "first_package_p80_d": 0.0,
+   "first_shipment_median_d": 0,
+   "first_shipment_p80_d": 0.0,
+   "first_invoice_median_d": 0,
+   "first_invoice_p80_d": 0.0,
+   "last_shipment_median_d": 0,
+   "last_shipment_p80_d": 0.0,
+   "first_shipment_pct_of_so": 100.0,
+   "exp_date_fill_pct": 0.0,
+   "planned_lead_median_d": null,
+   "first_ship_vs_expected_median_d": null,
+   "first_ship_on_or_before_expected_pct": null,
+   "first_ship_vs_expected_n": 0
+  },
+  {
+   "order_type": "Ex Stock",
+   "manufacturing_division": "Food Product Processing (FPP)",
+   "cohort": "orders 2024-04-01..2026-07-31",
+   "so_n": 23,
+   "first_package_median_d": 0,
+   "first_package_p80_d": 9.2,
+   "first_shipment_median_d": 1,
+   "first_shipment_p80_d": 9.2,
+   "first_invoice_median_d": 3,
+   "first_invoice_p80_d": 9.2,
+   "last_shipment_median_d": 14,
+   "last_shipment_p80_d": 42.0,
+   "first_shipment_pct_of_so": 100.0,
+   "exp_date_fill_pct": 17.4,
+   "planned_lead_median_d": 14.0,
+   "first_ship_vs_expected_median_d": 2.5,
+   "first_ship_on_or_before_expected_pct": 50.0,
+   "first_ship_vs_expected_n": 4
+  },
+  {
+   "order_type": "Ex Stock",
+   "manufacturing_division": "Offset Printing Division (OPD)",
+   "cohort": "orders 2024-04-01..2026-07-31",
+   "so_n": 721,
+   "first_package_median_d": 0,
+   "first_package_p80_d": 21.0,
+   "first_shipment_median_d": 0,
+   "first_shipment_p80_d": 22.4,
+   "first_invoice_median_d": 0.0,
+   "first_invoice_p80_d": 20.0,
+   "last_shipment_median_d": 2,
+   "last_shipment_p80_d": 36.0,
+   "first_shipment_pct_of_so": 90.0,
+   "exp_date_fill_pct": 72.0,
+   "planned_lead_median_d": 0,
+   "first_ship_vs_expected_median_d": 0.0,
+   "first_ship_on_or_before_expected_pct": 93.1,
+   "first_ship_vs_expected_n": 450
+  },
+  {
+   "order_type": "Ex Stock",
+   "manufacturing_division": "Paper Cup Lid Unit",
+   "cohort": "orders 2024-04-01..2026-07-31",
+   "so_n": 55,
+   "first_package_median_d": 0,
+   "first_package_p80_d": 0.0,
+   "first_shipment_median_d": 1,
+   "first_shipment_p80_d": 2.0,
+   "first_invoice_median_d": 1.0,
+   "first_invoice_p80_d": 2.0,
+   "last_shipment_median_d": 1,
+   "last_shipment_p80_d": 2.0,
+   "first_shipment_pct_of_so": 96.4,
+   "exp_date_fill_pct": 1.8,
+   "planned_lead_median_d": 14,
+   "first_ship_vs_expected_median_d": -14,
+   "first_ship_on_or_before_expected_pct": 100.0,
+   "first_ship_vs_expected_n": 1
+  },
+  {
+   "order_type": "Ex Stock",
+   "manufacturing_division": "Paper Cup Unit (PCU)",
+   "cohort": "orders 2024-04-01..2026-07-31",
+   "so_n": 15,
+   "first_package_median_d": 9.0,
+   "first_package_p80_d": 23.0,
+   "first_shipment_median_d": 10.0,
+   "first_shipment_p80_d": 23.0,
+   "first_invoice_median_d": 10.0,
+   "first_invoice_p80_d": 23.0,
+   "last_shipment_median_d": 49.5,
+   "last_shipment_p80_d": 111.0,
+   "first_shipment_pct_of_so": 80.0,
+   "exp_date_fill_pct": 0.0,
+   "planned_lead_median_d": null,
+   "first_ship_vs_expected_median_d": null,
+   "first_ship_on_or_before_expected_pct": null,
+   "first_ship_vs_expected_n": 0
+  },
+  {
+   "order_type": "Ex Stock",
+   "manufacturing_division": "Paper Plate Unit",
+   "cohort": "orders 2024-04-01..2026-07-31",
+   "so_n": 2,
+   "first_package_median_d": 6.0,
+   "first_package_p80_d": 6.6,
+   "first_shipment_median_d": 6.0,
+   "first_shipment_p80_d": 6.6,
+   "first_invoice_median_d": 6.0,
+   "first_invoice_p80_d": 6.6,
+   "last_shipment_median_d": 21.5,
+   "last_shipment_p80_d": 23.6,
+   "first_shipment_pct_of_so": 100.0,
+   "exp_date_fill_pct": 0.0,
+   "planned_lead_median_d": null,
+   "first_ship_vs_expected_median_d": null,
+   "first_ship_on_or_before_expected_pct": null,
+   "first_ship_vs_expected_n": 0
+  },
+  {
+   "order_type": "Ex Stock",
+   "manufacturing_division": "Paper Straw Unit (PSU)",
+   "cohort": "orders 2024-04-01..2026-07-31",
+   "so_n": 710,
+   "first_package_median_d": 0,
+   "first_package_p80_d": 1.0,
+   "first_shipment_median_d": 1,
+   "first_shipment_p80_d": 2.0,
+   "first_invoice_median_d": 1.0,
+   "first_invoice_p80_d": 2.0,
+   "last_shipment_median_d": 1,
+   "last_shipment_p80_d": 2.0,
+   "first_shipment_pct_of_so": 70.0,
+   "exp_date_fill_pct": 24.6,
+   "planned_lead_median_d": 13,
+   "first_ship_vs_expected_median_d": -12,
+   "first_ship_on_or_before_expected_pct": 90.8,
+   "first_ship_vs_expected_n": 153
+  },
+  {
+   "order_type": "Ex Stock",
+   "manufacturing_division": "Rewinding Unit (RWU)",
+   "cohort": "orders 2024-04-01..2026-07-31",
+   "so_n": 510,
+   "first_package_median_d": 0,
+   "first_package_p80_d": 1.0,
+   "first_shipment_median_d": 0,
+   "first_shipment_p80_d": 1.0,
+   "first_invoice_median_d": 0.0,
+   "first_invoice_p80_d": 2.0,
+   "last_shipment_median_d": 0,
+   "last_shipment_p80_d": 1.0,
+   "first_shipment_pct_of_so": 64.5,
+   "exp_date_fill_pct": 20.2,
+   "planned_lead_median_d": 14,
+   "first_ship_vs_expected_median_d": -13.0,
+   "first_ship_on_or_before_expected_pct": 94.0,
+   "first_ship_vs_expected_n": 100
+  },
+  {
+   "order_type": "Internal SH Order",
+   "manufacturing_division": "ALL",
+   "cohort": "orders 2024-04-01..2026-07-31",
+   "so_n": 452,
+   "first_package_median_d": 10,
+   "first_package_p80_d": 35.6,
+   "first_shipment_median_d": 11,
+   "first_shipment_p80_d": 35.6,
+   "first_invoice_median_d": 13,
+   "first_invoice_p80_d": 39.2,
+   "last_shipment_median_d": 15,
+   "last_shipment_p80_d": 63.0,
+   "first_shipment_pct_of_so": 91.4,
+   "exp_date_fill_pct": 58.8,
+   "planned_lead_median_d": 16.0,
+   "first_ship_vs_expected_median_d": 0,
+   "first_ship_on_or_before_expected_pct": 51.1,
+   "first_ship_vs_expected_n": 237
+  },
+  {
+   "order_type": "Internal SH Order",
+   "manufacturing_division": "Cake Wrapper Unit",
+   "cohort": "orders 2024-04-01..2026-07-31",
+   "so_n": 4,
+   "first_package_median_d": 104.0,
+   "first_package_p80_d": 153.2,
+   "first_shipment_median_d": 104.0,
+   "first_shipment_p80_d": 153.2,
+   "first_invoice_median_d": 104.0,
+   "first_invoice_p80_d": 153.2,
+   "last_shipment_median_d": 158.5,
+   "last_shipment_p80_d": 221.2,
+   "first_shipment_pct_of_so": 50.0,
+   "exp_date_fill_pct": 50.0,
+   "planned_lead_median_d": 16.5,
+   "first_ship_vs_expected_median_d": 6,
+   "first_ship_on_or_before_expected_pct": 0.0,
+   "first_ship_vs_expected_n": 1
+  },
+  {
+   "order_type": "Internal SH Order",
+   "manufacturing_division": "Customized Packing Unit (CPU)",
+   "cohort": "orders 2024-04-01..2026-07-31",
+   "so_n": 21,
+   "first_package_median_d": 6.0,
+   "first_package_p80_d": 14.0,
+   "first_shipment_median_d": 6.0,
+   "first_shipment_p80_d": 14.0,
+   "first_invoice_median_d": 8,
+   "first_invoice_p80_d": 17.2,
+   "last_shipment_median_d": 6.0,
+   "last_shipment_p80_d": 18.0,
+   "first_shipment_pct_of_so": 76.2,
+   "exp_date_fill_pct": 100.0,
+   "planned_lead_median_d": 14,
+   "first_ship_vs_expected_median_d": -8.0,
+   "first_ship_on_or_before_expected_pct": 81.2,
+   "first_ship_vs_expected_n": 16
+  },
+  {
+   "order_type": "Internal SH Order",
+   "manufacturing_division": "Offset Printing Division (OPD)",
+   "cohort": "orders 2024-04-01..2026-07-31",
+   "so_n": 325,
+   "first_package_median_d": 15,
+   "first_package_p80_d": 46.0,
+   "first_shipment_median_d": 16,
+   "first_shipment_p80_d": 46.0,
+   "first_invoice_median_d": 16.0,
+   "first_invoice_p80_d": 47.0,
+   "last_shipment_median_d": 21,
+   "last_shipment_p80_d": 70.0,
+   "first_shipment_pct_of_so": 92.6,
+   "exp_date_fill_pct": 65.8,
+   "planned_lead_median_d": 16.0,
+   "first_ship_vs_expected_median_d": 1,
+   "first_ship_on_or_before_expected_pct": 48.7,
+   "first_ship_vs_expected_n": 197
+  },
+  {
+   "order_type": "Internal SH Order",
+   "manufacturing_division": "Paper Cup Lid Unit",
+   "cohort": "orders 2024-04-01..2026-07-31",
+   "so_n": 23,
+   "first_package_median_d": 0,
+   "first_package_p80_d": 1.0,
+   "first_shipment_median_d": 0,
+   "first_shipment_p80_d": 2.0,
+   "first_invoice_median_d": 0,
+   "first_invoice_p80_d": 2.0,
+   "last_shipment_median_d": 1,
+   "last_shipment_p80_d": 2.6,
+   "first_shipment_pct_of_so": 100.0,
+   "exp_date_fill_pct": 17.4,
+   "planned_lead_median_d": 14.0,
+   "first_ship_vs_expected_median_d": -13.5,
+   "first_ship_on_or_before_expected_pct": 100.0,
+   "first_ship_vs_expected_n": 4
+  },
+  {
+   "order_type": "Internal SH Order",
+   "manufacturing_division": "Paper Cup Unit (PCU)",
+   "cohort": "orders 2024-04-01..2026-07-31",
+   "so_n": 69,
+   "first_package_median_d": 0,
+   "first_package_p80_d": 24.0,
+   "first_shipment_median_d": 0,
+   "first_shipment_p80_d": 24.0,
+   "first_invoice_median_d": 0,
+   "first_invoice_p80_d": 30.0,
+   "last_shipment_median_d": 0,
+   "last_shipment_p80_d": 56.0,
+   "first_shipment_pct_of_so": 88.4,
+   "exp_date_fill_pct": 27.5,
+   "planned_lead_median_d": 16,
+   "first_ship_vs_expected_median_d": 19,
+   "first_ship_on_or_before_expected_pct": 30.8,
+   "first_ship_vs_expected_n": 13
+  },
+  {
+   "order_type": "Internal SH Order",
+   "manufacturing_division": "Paper Plate Unit",
+   "cohort": "orders 2024-04-01..2026-07-31",
+   "so_n": 7,
+   "first_package_median_d": 8,
+   "first_package_p80_d": 21.2,
+   "first_shipment_median_d": 8,
+   "first_shipment_p80_d": 21.2,
+   "first_invoice_median_d": 9,
+   "first_invoice_p80_d": 21.2,
+   "last_shipment_median_d": 25,
+   "last_shipment_p80_d": 38.4,
+   "first_shipment_pct_of_so": 100.0,
+   "exp_date_fill_pct": 42.9,
+   "planned_lead_median_d": 16,
+   "first_ship_vs_expected_median_d": 7,
+   "first_ship_on_or_before_expected_pct": 33.3,
+   "first_ship_vs_expected_n": 3
+  },
+  {
+   "order_type": "Internal SH Order",
+   "manufacturing_division": "Paper Straw Unit (PSU)",
+   "cohort": "orders 2024-04-01..2026-07-31",
+   "so_n": 2,
+   "first_package_median_d": 0.0,
+   "first_package_p80_d": 0.0,
+   "first_shipment_median_d": 1.0,
+   "first_shipment_p80_d": 1.0,
+   "first_invoice_median_d": 3.0,
+   "first_invoice_p80_d": 3.0,
+   "last_shipment_median_d": 1.0,
+   "last_shipment_p80_d": 1.0,
+   "first_shipment_pct_of_so": 100.0,
+   "exp_date_fill_pct": 100.0,
+   "planned_lead_median_d": 14.0,
+   "first_ship_vs_expected_median_d": -13.0,
+   "first_ship_on_or_before_expected_pct": 100.0,
+   "first_ship_vs_expected_n": 2
+  },
+  {
+   "order_type": "Internal SH Order",
+   "manufacturing_division": "Rewinding Unit (RWU)",
+   "cohort": "orders 2024-04-01..2026-07-31",
+   "so_n": 1,
+   "first_package_median_d": 2,
+   "first_package_p80_d": 2.0,
+   "first_shipment_median_d": 2,
+   "first_shipment_p80_d": 2.0,
+   "first_invoice_median_d": 2,
+   "first_invoice_p80_d": 2.0,
+   "last_shipment_median_d": 2,
+   "last_shipment_p80_d": 2.0,
+   "first_shipment_pct_of_so": 100.0,
+   "exp_date_fill_pct": 100.0,
+   "planned_lead_median_d": 2,
+   "first_ship_vs_expected_median_d": 0,
+   "first_ship_on_or_before_expected_pct": 100.0,
+   "first_ship_vs_expected_n": 1
+  },
+  {
+   "order_type": "Make to Order (MTO)",
+   "manufacturing_division": "ALL",
+   "cohort": "orders 2024-04-01..2026-07-31",
+   "so_n": 36,
+   "first_package_median_d": 0,
+   "first_package_p80_d": 1.0,
+   "first_shipment_median_d": 0,
+   "first_shipment_p80_d": 1.0,
+   "first_invoice_median_d": 0,
+   "first_invoice_p80_d": 1.2,
+   "last_shipment_median_d": 0,
+   "last_shipment_p80_d": 3.4,
+   "first_shipment_pct_of_so": 69.4,
+   "exp_date_fill_pct": 83.3,
+   "planned_lead_median_d": 0.0,
+   "first_ship_vs_expected_median_d": 0,
+   "first_ship_on_or_before_expected_pct": 90.5,
+   "first_ship_vs_expected_n": 21
+  },
+  {
+   "order_type": "Make to Order (MTO)",
+   "manufacturing_division": "Food Product Processing (FPP)",
+   "cohort": "orders 2024-04-01..2026-07-31",
+   "so_n": 5,
+   "first_package_median_d": 1,
+   "first_package_p80_d": 3.0,
+   "first_shipment_median_d": 3,
+   "first_shipment_p80_d": 3.4,
+   "first_invoice_median_d": 3,
+   "first_invoice_p80_d": 3.4,
+   "last_shipment_median_d": 5,
+   "last_shipment_p80_d": 18.4,
+   "first_shipment_pct_of_so": 100.0,
+   "exp_date_fill_pct": 40.0,
+   "planned_lead_median_d": 14.0,
+   "first_ship_vs_expected_median_d": -11.0,
+   "first_ship_on_or_before_expected_pct": 100.0,
+   "first_ship_vs_expected_n": 2
+  },
+  {
+   "order_type": "Make to Order (MTO)",
+   "manufacturing_division": "Offset Printing Division (OPD)",
+   "cohort": "orders 2024-04-01..2026-07-31",
+   "so_n": 30,
+   "first_package_median_d": 0.0,
+   "first_package_p80_d": 0.0,
+   "first_shipment_median_d": 0.0,
+   "first_shipment_p80_d": 0.0,
+   "first_invoice_median_d": 0.0,
+   "first_invoice_p80_d": 0.0,
+   "last_shipment_median_d": 0.0,
+   "last_shipment_p80_d": 0.2,
+   "first_shipment_pct_of_so": 66.7,
+   "exp_date_fill_pct": 93.3,
+   "planned_lead_median_d": 0.0,
+   "first_ship_vs_expected_median_d": 0,
+   "first_ship_on_or_before_expected_pct": 89.5,
+   "first_ship_vs_expected_n": 19
+  },
+  {
+   "order_type": "Make to Order (MTO)",
+   "manufacturing_division": "Paper Cup Lid Unit",
+   "cohort": "orders 2024-04-01..2026-07-31",
+   "so_n": 1,
+   "first_package_median_d": null,
+   "first_package_p80_d": null,
+   "first_shipment_median_d": null,
+   "first_shipment_p80_d": null,
+   "first_invoice_median_d": null,
+   "first_invoice_p80_d": null,
+   "last_shipment_median_d": null,
+   "last_shipment_p80_d": null,
+   "first_shipment_pct_of_so": 0.0,
+   "exp_date_fill_pct": 0.0,
+   "planned_lead_median_d": null,
+   "first_ship_vs_expected_median_d": null,
+   "first_ship_on_or_before_expected_pct": null,
+   "first_ship_vs_expected_n": 0
+  },
+  {
+   "order_type": "Customized Order",
+   "manufacturing_division": "ALL",
+   "cohort": "orders 2025-08-01..2026-07-31",
+   "so_n": 2487,
+   "first_package_median_d": 17,
+   "first_package_p80_d": 27.0,
+   "first_shipment_median_d": 18,
+   "first_shipment_p80_d": 28.0,
+   "first_invoice_median_d": 18.0,
+   "first_invoice_p80_d": 28.0,
+   "last_shipment_median_d": 20,
+   "last_shipment_p80_d": 32.0,
+   "first_shipment_pct_of_so": 97.9,
+   "exp_date_fill_pct": 90.6,
+   "planned_lead_median_d": 16.0,
+   "first_ship_vs_expected_median_d": 2,
+   "first_ship_on_or_before_expected_pct": 45.3,
+   "first_ship_vs_expected_n": 2201
+  },
+  {
+   "order_type": "Customized Order",
+   "manufacturing_division": "Customized Packing Unit (CPU)",
+   "cohort": "orders 2025-08-01..2026-07-31",
+   "so_n": 46,
+   "first_package_median_d": 6.0,
+   "first_package_p80_d": 18.0,
+   "first_shipment_median_d": 7.0,
+   "first_shipment_p80_d": 19.0,
+   "first_invoice_median_d": 8.0,
+   "first_invoice_p80_d": 20.0,
+   "last_shipment_median_d": 7.0,
+   "last_shipment_p80_d": 29.4,
+   "first_shipment_pct_of_so": 95.7,
+   "exp_date_fill_pct": 100.0,
+   "planned_lead_median_d": 14.0,
+   "first_ship_vs_expected_median_d": -7.0,
+   "first_ship_on_or_before_expected_pct": 72.7,
+   "first_ship_vs_expected_n": 44
+  },
+  {
+   "order_type": "Customized Order",
+   "manufacturing_division": "Food Product Processing (FPP)",
+   "cohort": "orders 2025-08-01..2026-07-31",
+   "so_n": 11,
+   "first_package_median_d": 2,
+   "first_package_p80_d": 13.0,
+   "first_shipment_median_d": 3,
+   "first_shipment_p80_d": 13.0,
+   "first_invoice_median_d": 3,
+   "first_invoice_p80_d": 14.0,
+   "last_shipment_median_d": 49,
+   "last_shipment_p80_d": 337.0,
+   "first_shipment_pct_of_so": 100.0,
+   "exp_date_fill_pct": 9.1,
+   "planned_lead_median_d": 15,
+   "first_ship_vs_expected_median_d": 34,
+   "first_ship_on_or_before_expected_pct": 0.0,
+   "first_ship_vs_expected_n": 1
+  },
+  {
+   "order_type": "Customized Order",
+   "manufacturing_division": "MOBA Punching Unit",
+   "cohort": "orders 2025-08-01..2026-07-31",
+   "so_n": 73,
+   "first_package_median_d": 20,
+   "first_package_p80_d": 31.0,
+   "first_shipment_median_d": 20,
+   "first_shipment_p80_d": 31.0,
+   "first_invoice_median_d": 20.5,
+   "first_invoice_p80_d": 32.8,
+   "last_shipment_median_d": 22,
+   "last_shipment_p80_d": 34.6,
+   "first_shipment_pct_of_so": 100.0,
+   "exp_date_fill_pct": 100.0,
+   "planned_lead_median_d": 16,
+   "first_ship_vs_expected_median_d": 4,
+   "first_ship_on_or_before_expected_pct": 31.5,
+   "first_ship_vs_expected_n": 73
+  },
+  {
+   "order_type": "Customized Order",
+   "manufacturing_division": "Offset Printing Division (OPD)",
+   "cohort": "orders 2025-08-01..2026-07-31",
+   "so_n": 1080,
+   "first_package_median_d": 20.0,
+   "first_package_p80_d": 30.0,
+   "first_shipment_median_d": 21.0,
+   "first_shipment_p80_d": 31.0,
+   "first_invoice_median_d": 21.0,
+   "first_invoice_p80_d": 31.0,
+   "last_shipment_median_d": 25.0,
+   "last_shipment_p80_d": 42.0,
+   "first_shipment_pct_of_so": 97.6,
+   "exp_date_fill_pct": 93.0,
+   "planned_lead_median_d": 16.0,
+   "first_ship_vs_expected_median_d": 5.0,
+   "first_ship_on_or_before_expected_pct": 34.5,
+   "first_ship_vs_expected_n": 978
+  },
+  {
+   "order_type": "Customized Order",
+   "manufacturing_division": "Paper Cup Unit (PCU)",
+   "cohort": "orders 2025-08-01..2026-07-31",
+   "so_n": 240,
+   "first_package_median_d": 20,
+   "first_package_p80_d": 26.0,
+   "first_shipment_median_d": 20,
+   "first_shipment_p80_d": 26.0,
+   "first_invoice_median_d": 21,
+   "first_invoice_p80_d": 26.0,
+   "last_shipment_median_d": 21,
+   "last_shipment_p80_d": 26.8,
+   "first_shipment_pct_of_so": 98.8,
+   "exp_date_fill_pct": 96.2,
+   "planned_lead_median_d": 16,
+   "first_ship_vs_expected_median_d": 4.0,
+   "first_ship_on_or_before_expected_pct": 37.3,
+   "first_ship_vs_expected_n": 228
+  },
+  {
+   "order_type": "Customized Order",
+   "manufacturing_division": "Screen Printing Division (SHPS)",
+   "cohort": "orders 2025-08-01..2026-07-31",
+   "so_n": 1037,
+   "first_package_median_d": 12.0,
+   "first_package_p80_d": 22.0,
+   "first_shipment_median_d": 14.0,
+   "first_shipment_p80_d": 24.0,
+   "first_invoice_median_d": 14.0,
+   "first_invoice_p80_d": 25.0,
+   "last_shipment_median_d": 15.0,
+   "last_shipment_p80_d": 25.0,
+   "first_shipment_pct_of_so": 98.0,
+   "exp_date_fill_pct": 86.5,
+   "planned_lead_median_d": 14,
+   "first_ship_vs_expected_median_d": -1,
+   "first_ship_on_or_before_expected_pct": 59.3,
+   "first_ship_vs_expected_n": 877
+  }
+ ],
+ "neg_pkg_before_order": 0,
+ "exp_before_order": 0,
+ "exp_fill_by_year_cust": {
+  "2023": 100.0,
+  "2024": 57.6,
+  "2025": 38.9,
+  "2026": 99.3
+ },
+ "cancel_by_type": {
+  "Make to Order (MTO)": {
+   "lines": 42,
+   "lines_with_cancel": 5,
+   "lines_with_cancel_pct": 11.9,
+   "lines_fully_cancelled": 0,
+   "cancelled_qty_pct_of_ordered": 0.0,
+   "lines_status_partially_invoiced": 7,
+   "lines_status_partially_invoiced_pct": 16.7,
+   "invoiced_lines_short_vs_ordered": 0,
+   "over_invoiced_lines": 0
+  },
+  "Ex Stock": {
+   "lines": 2328,
+   "lines_with_cancel": 595,
+   "lines_with_cancel_pct": 25.6,
+   "lines_fully_cancelled": 17,
+   "cancelled_qty_pct_of_ordered": 2.5,
+   "lines_status_partially_invoiced": 250,
+   "lines_status_partially_invoiced_pct": 10.7,
+   "invoiced_lines_short_vs_ordered": 0,
+   "over_invoiced_lines": 0
+  },
+  "Customized Order": {
+   "lines": 7523,
+   "lines_with_cancel": 1385,
+   "lines_with_cancel_pct": 18.4,
+   "lines_fully_cancelled": 203,
+   "cancelled_qty_pct_of_ordered": 1.1,
+   "lines_status_partially_invoiced": 1226,
+   "lines_status_partially_invoiced_pct": 16.3,
+   "invoiced_lines_short_vs_ordered": 0,
+   "over_invoiced_lines": 0
+  },
+  "Internal SH Order": {
+   "lines": 703,
+   "lines_with_cancel": 168,
+   "lines_with_cancel_pct": 23.9,
+   "lines_fully_cancelled": 8,
+   "cancelled_qty_pct_of_ordered": 1.2,
+   "lines_status_partially_invoiced": 124,
+   "lines_status_partially_invoiced_pct": 17.6,
+   "invoiced_lines_short_vs_ordered": 0,
+   "over_invoiced_lines": 0
+  }
+ },
+ "cancel_cust_by_div": {
+  "Customized Packing Unit (CPU)": {
+   "lines": 133,
+   "lines_with_cancel": 3,
+   "lines_with_cancel_pct": 2.3,
+   "lines_fully_cancelled": 0,
+   "cancelled_qty_pct_of_ordered": 0.1,
+   "lines_status_partially_invoiced": 2,
+   "lines_status_partially_invoiced_pct": 1.5,
+   "invoiced_lines_short_vs_ordered": 0,
+   "over_invoiced_lines": 0
+  },
+  "Digital Printing Unit (DPU)": {
+   "lines": 22,
+   "lines_with_cancel": 0,
+   "lines_with_cancel_pct": 0.0,
+   "lines_fully_cancelled": 0,
+   "cancelled_qty_pct_of_ordered": 0.0,
+   "lines_status_partially_invoiced": 0,
+   "lines_status_partially_invoiced_pct": 0.0,
+   "invoiced_lines_short_vs_ordered": 0,
+   "over_invoiced_lines": 0
+  },
+  "Food Product Processing (FPP)": {
+   "lines": 14,
+   "lines_with_cancel": 2,
+   "lines_with_cancel_pct": 14.3,
+   "lines_fully_cancelled": 0,
+   "cancelled_qty_pct_of_ordered": 0.4,
+   "lines_status_partially_invoiced": 5,
+   "lines_status_partially_invoiced_pct": 35.7,
+   "invoiced_lines_short_vs_ordered": 0,
+   "over_invoiced_lines": 0
+  },
+  "MOBA Punching Unit": {
+   "lines": 177,
+   "lines_with_cancel": 58,
+   "lines_with_cancel_pct": 32.8,
+   "lines_fully_cancelled": 5,
+   "cancelled_qty_pct_of_ordered": 1.4,
+   "lines_status_partially_invoiced": 65,
+   "lines_status_partially_invoiced_pct": 36.7,
+   "invoiced_lines_short_vs_ordered": 0,
+   "over_invoiced_lines": 0
+  },
+  "Offset Printing Division (OPD)": {
+   "lines": 3943,
+   "lines_with_cancel": 859,
+   "lines_with_cancel_pct": 21.8,
+   "lines_fully_cancelled": 32,
+   "cancelled_qty_pct_of_ordered": 1.1,
+   "lines_status_partially_invoiced": 858,
+   "lines_status_partially_invoiced_pct": 21.8,
+   "invoiced_lines_short_vs_ordered": 0,
+   "over_invoiced_lines": 0
+  },
+  "Paper Cup Lid Unit": {
+   "lines": 2,
+   "lines_with_cancel": 0,
+   "lines_with_cancel_pct": 0.0,
+   "lines_fully_cancelled": 0,
+   "cancelled_qty_pct_of_ordered": 0.0,
+   "lines_status_partially_invoiced": 0,
+   "lines_status_partially_invoiced_pct": 0.0,
+   "invoiced_lines_short_vs_ordered": 0,
+   "over_invoiced_lines": 0
+  },
+  "Paper Cup Unit (PCU)": {
+   "lines": 721,
+   "lines_with_cancel": 268,
+   "lines_with_cancel_pct": 37.2,
+   "lines_fully_cancelled": 40,
+   "cancelled_qty_pct_of_ordered": 3.6,
+   "lines_status_partially_invoiced": 261,
+   "lines_status_partially_invoiced_pct": 36.2,
+   "invoiced_lines_short_vs_ordered": 0,
+   "over_invoiced_lines": 0
+  },
+  "Screen Printing Division (SHPS)": {
+   "lines": 2511,
+   "lines_with_cancel": 195,
+   "lines_with_cancel_pct": 7.8,
+   "lines_fully_cancelled": 126,
+   "cancelled_qty_pct_of_ordered": 0.3,
+   "lines_status_partially_invoiced": 35,
+   "lines_status_partially_invoiced_pct": 1.4,
+   "invoiced_lines_short_vs_ordered": 0,
+   "over_invoiced_lines": 0
+  }
+ },
+ "so_status_cust": {
+  "invoiced": 4743,
+  "partially_invoiced": 802,
+  "confirmed": 217
+ },
+ "cancel_cust_by_year": {
+  "2023": 0.0,
+  "2024": 11.8,
+  "2025": 17.1,
+  "2026": 24.3
+ },
+ "shipments_per_so_cust": {
+  "1": 4129,
+  "2": 563,
+  "5": 223,
+  "4": 103,
+  "3": 193
+ },
+ "multi_ship_pct_cust": 20.8,
+ "confirmed_total_lines": 361,
+ "confirmed_by_type": {
+  "Ex Stock": 67,
+  "Make to Order (MTO)": 11,
+  "Customized Order": 229,
+  "Internal SH Order": 54
+ },
+ "confirmed_cust_lines": 229,
+ "confirmed_cust_sos": 217,
+ "confirmed_cust_by_div": {
+  "Customized Packing Unit (CPU)": [
+   11,
+   11
+  ],
+  "MOBA Punching Unit": [
+   10,
+   10
+  ],
+  "Offset Printing Division (OPD)": [
+   138,
+   126
+  ],
+  "Paper Cup Unit (PCU)": [
+   22,
+   22
+  ],
+  "Screen Printing Division (SHPS)": [
+   48,
+   48
+  ]
+ },
+ "confirmed_cust_age": {
+  "0-14d": 69,
+  "15-30d": 46,
+  "31-60d": 12,
+  "61-90d": 7,
+  "91-180d": 5,
+  "181-365d": 36,
+  ">365d": 54
+ },
+ "confirmed_cust_age_oldest": 905,
+ "confirmed_cust_age_median": 24,
+ "confirmed_cust_overdue": {
+  "with_expected": 208,
+  "past_expected": 121
+ },
+ "confirmed_cust_qty": {
+  "ordered": 977059.0,
+  "packed": 65788.0,
+  "invoiced": 0.0,
+  "cancelled": 10.0
+ },
+ "confirmed_cust_lines_any_packed": 13,
+ "confirmed_cust_lines_with_package_row_by_so": 11,
+ "confirmed_cust_by_year": {
+  "2024": 34,
+  "2025": 38,
+  "2026": 157
+ },
+ "confirmed_cust_job_nature": {
+  "(blank)": 11,
+  "Reorder": 134,
+  "New Order": 79,
+  "Reorder With New Design": 5
+ },
+ "channel": {
+  "Customized Order": {
+   "lines": 7523,
+   "sales_person": {
+    "Internal for  SH": 1149,
+    "(blank)": 6374
+   },
+   "source": {
+    "1": 7523
+   },
+   "template": {
+    "JOB WORK ORDER": 5302,
+    "Standard Template": 2221
+   },
+   "sales_channel": {
+    "direct_sales": 7523
+   },
+   "po_ref_fill": 99.6,
+   "sh_so_ref_fill": 100.0,
+   "job_no_fill": 99.9,
+   "sh_ref_equals_job": 51.0,
+   "sh_ref_equals_po_field": 53.1,
+   "received_from_fill": 100.0,
+   "clickup_fill": 15.4,
+   "notes_fill": 0.0,
+   "base_material_fill": 99.9,
+   "addl_material_fill": 5.3,
+   "artwork_fill": 100.0,
+   "dye_fill": 100.0,
+   "screen_fill": 100.0,
+   "job_nature_fill": 98.2,
+   "sample_job_no": [
+    "OPD2446F",
+    "OPD2563 A",
+    "OPD2551 C"
+   ]
+  },
+  "ALL": {
+   "lines": 10596,
+   "sales_person": {
+    "Internal for  SH": 1801,
+    "(blank)": 8795
+   },
+   "source": {
+    "1": 10596
+   },
+   "template": {
+    "JOB WORK ORDER": 8130,
+    "Standard Template": 2466
+   },
+   "sales_channel": {
+    "direct_sales": 10596
+   },
+   "po_ref_fill": 99.6,
+   "sh_so_ref_fill": 100.0,
+   "job_no_fill": 99.9,
+   "sh_ref_equals_job": 57.4,
+   "sh_ref_equals_po_field": 60.6,
+   "received_from_fill": 100.0,
+   "clickup_fill": 14.5,
+   "notes_fill": 1.8,
+   "base_material_fill": 99.9,
+   "addl_material_fill": 5.6,
+   "artwork_fill": 100.0,
+   "dye_fill": 100.0,
+   "screen_fill": 100.0,
+   "job_nature_fill": 95.5,
+   "sample_job_no": [
+    "OPD2432",
+    "OPD2121C",
+    "OPD2407"
+   ]
+  },
+  "cust_by_year": {
+   "2023": {
+    "lines": 3,
+    "template": {
+     "JOB WORK ORDER": 3
+    },
+    "sales_person_filled": 100.0,
+    "clickup_fill": 0.0,
+    "artwork_fill": 100.0
+   },
+   "2024": {
+    "lines": 1663,
+    "template": {
+     "JOB WORK ORDER": 1661,
+     "Standard Template": 2
+    },
+    "sales_person_filled": 60.9,
+    "clickup_fill": 0.1,
+    "artwork_fill": 100.0
+   },
+   "2025": {
+    "lines": 3250,
+    "template": {
+     "JOB WORK ORDER": 2448,
+     "Standard Template": 802
+    },
+    "sales_person_filled": 4.1,
+    "clickup_fill": 0.1,
+    "artwork_fill": 100.0
+   },
+   "2026": {
+    "lines": 2607,
+    "template": {
+     "Standard Template": 1417,
+     "JOB WORK ORDER": 1190
+    },
+    "sales_person_filled": 0.0,
+    "clickup_fill": 44.3,
+    "artwork_fill": 100.0
+   }
+  },
+  "template_by_type": {
+   "Make to Order (MTO)": {
+    "JOB WORK ORDER": 41,
+    "Standard Template": 1
+   },
+   "Ex Stock": {
+    "JOB WORK ORDER": 2200,
+    "Standard Template": 128
+   },
+   "Customized Order": {
+    "JOB WORK ORDER": 5302,
+    "Standard Template": 2221
+   },
+   "Internal SH Order": {
+    "JOB WORK ORDER": 587,
+    "Standard Template": 116
+   }
+  },
+  "customer_by_type_cust": {
+   "Standard Holdings (Pvt) Ltd": 7521,
+   "Spar SL (Private ) Limited": 1,
+   "Banana Arugambay": 1
+  },
+  "sales_person_by_type": {
+   "Make to Order (MTO)": {
+    "Internal for  SH": 31,
+    "(blank)": 11
+   },
+   "Ex Stock": {
+    "Internal for  SH": 621,
+    "(blank)": 1707
+   },
+   "Customized Order": {
+    "Internal for  SH": 1149,
+    "(blank)": 6374
+   },
+   "Internal SH Order": {
+    "(blank)": 703
+   }
+  }
+ },
+ "top_end_customers_cust": [
+  [
+   "Standard Holdings (Pvt) Ltd",
+   2034
+  ],
+  [
+   "Spar SL (Private ) Limited",
+   136
+  ],
+  [
+   "Street Burger (Private) Limited",
+   117
+  ],
+  [
+   "Blends",
+   103
+  ],
+  [
+   "Kiri Kopi",
+   101
+  ],
+  [
+   "TACO BELL",
+   101
+  ],
+  [
+   "Keells Super",
+   86
+  ],
+  [
+   "Malu Poke",
+   68
+  ],
+  [
+   "GRAND BELL HOTEL",
+   57
+  ],
+  [
+   "Flamingo",
+   56
+  ],
+  [
+   "Titos",
+   55
+  ],
+  [
+   "MBC",
+   52
+  ],
+  [
+   "Skinny Tom's Deli",
+   51
+  ],
+  [
+   "MY PIZZA",
+   50
+  ],
+  [
+   "Sheraton",
+   48
+  ]
+ ],
+ "end_cust_top15_share": 41.4
+}

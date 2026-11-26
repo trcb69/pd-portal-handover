@@ -1,0 +1,418 @@
+{
+ "snapshot": "SH items 28 Sep 2026; SPS stock not used",
+ "definitions": {
+  "sh_own": "name_key == 'standard holdings (pvt) ltd'",
+  "unit_alias": "pcs==nos only; items absent from the catalogue count as UNIT_MISMATCH",
+  "fields": {
+   "main": "location_actual_available_for_sale_stock",
+   "old_for_comparison": "location_available_for_sale_stock"
+  },
+  "sets": {
+   "a": [
+    "Southern Warehouse (Warehouse)",
+    "Central Warehouse (Warehouse)",
+    "3PL Warehouse (DWW)"
+   ],
+   "b": [
+    "Southern Warehouse (Warehouse)",
+    "Central Warehouse (Warehouse)",
+    "3PL Warehouse (DWW)",
+    "SPS Kohalwila Factory (Warehouse)"
+   ],
+   "c": [
+    "SPS Kohalwila Factory (Warehouse)"
+   ]
+  }
+ },
+ "basis_before_dropping_SH_own": {
+  "lines": 3527,
+  "items": 1269
+ },
+ "sh_own_lines_dropped": 106,
+ "items_with_sh_own_lines": 58,
+ "basis_after": {
+  "lines": 3421,
+  "items": 1221
+ },
+ "identity_check": {
+  "formula": "location_stock_on_hand - location_actual_committed_stock == location_actual_available_for_sale_stock (tol 1e-9), all SH location rows",
+  "rows": 113670,
+  "mismatch_rows": 0,
+  "by_location": {
+   "SPS Kohalwila Factory (Warehouse)": {
+    "rows": 11367,
+    "mismatch": 0
+   },
+   "SH Ranaviru Warehouse (Warehouse)": {
+    "rows": 11367,
+    "mismatch": 0
+   },
+   "Freeport Katunayake (Warehouse)": {
+    "rows": 11367,
+    "mismatch": 0
+   },
+   "Southern Warehouse (Warehouse)": {
+    "rows": 11367,
+    "mismatch": 0
+   },
+   "Central Warehouse (Warehouse)": {
+    "rows": 11367,
+    "mismatch": 0
+   },
+   "Head Office": {
+    "rows": 11367,
+    "mismatch": 0
+   },
+   "South Branch": {
+    "rows": 11367,
+    "mismatch": 0
+   },
+   "Central Branch": {
+    "rows": 11367,
+    "mismatch": 0
+   },
+   "3PL Warehouse (DWW)": {
+    "rows": 11367,
+    "mismatch": 0
+   },
+   "SPS Work in Progress WIP": {
+    "rows": 11367,
+    "mismatch": 0
+   }
+  },
+  "max_abs_diff": 0.0,
+  "examples": []
+ },
+ "results": {
+  "a": {
+   "MAIN_actual_SHown_dropped_alias_ON": {
+    "FULL": {
+     "lines": 69,
+     "pct": 2.0,
+     "items": 18
+    },
+    "NONE": {
+     "lines": 2029,
+     "pct": 59.3,
+     "items": 752
+    },
+    "PARTIAL": {
+     "lines": 56,
+     "pct": 1.6,
+     "items": 25
+    },
+    "UNIT_MISMATCH": {
+     "lines": 597,
+     "pct": 17.5,
+     "items": 198
+    },
+    "UNKNOWN": {
+     "lines": 670,
+     "pct": 19.6,
+     "items": 228
+    }
+   },
+   "old_field_SHown_dropped_alias_ON": {
+    "FULL": {
+     "lines": 69,
+     "pct": 2.0,
+     "items": 18
+    },
+    "NONE": {
+     "lines": 2029,
+     "pct": 59.3,
+     "items": 752
+    },
+    "PARTIAL": {
+     "lines": 56,
+     "pct": 1.6,
+     "items": 25
+    },
+    "UNIT_MISMATCH": {
+     "lines": 597,
+     "pct": 17.5,
+     "items": 198
+    },
+    "UNKNOWN": {
+     "lines": 670,
+     "pct": 19.6,
+     "items": 228
+    }
+   },
+   "actual_SHown_dropped_alias_OFF": {
+    "FULL": {
+     "lines": 38,
+     "pct": 1.1,
+     "items": 9
+    },
+    "NONE": {
+     "lines": 1057,
+     "pct": 30.9,
+     "items": 421
+    },
+    "PARTIAL": {
+     "lines": 44,
+     "pct": 1.3,
+     "items": 18
+    },
+    "UNIT_MISMATCH": {
+     "lines": 1612,
+     "pct": 47.1,
+     "items": 545
+    },
+    "UNKNOWN": {
+     "lines": 670,
+     "pct": 19.6,
+     "items": 228
+    }
+   },
+   "actual_SHown_KEPT_alias_ON": {
+    "FULL": {
+     "lines": 69,
+     "pct": 2.0,
+     "items": 18
+    },
+    "NONE": {
+     "lines": 2051,
+     "pct": 58.2,
+     "items": 767
+    },
+    "PARTIAL": {
+     "lines": 64,
+     "pct": 1.8,
+     "items": 28
+    },
+    "UNIT_MISMATCH": {
+     "lines": 635,
+     "pct": 18.0,
+     "items": 213
+    },
+    "UNKNOWN": {
+     "lines": 708,
+     "pct": 20.1,
+     "items": 243
+    }
+   }
+  },
+  "b": {
+   "MAIN_actual_SHown_dropped_alias_ON": {
+    "FULL": {
+     "lines": 264,
+     "pct": 7.7,
+     "items": 67
+    },
+    "NONE": {
+     "lines": 1495,
+     "pct": 43.7,
+     "items": 590
+    },
+    "PARTIAL": {
+     "lines": 395,
+     "pct": 11.5,
+     "items": 138
+    },
+    "UNIT_MISMATCH": {
+     "lines": 597,
+     "pct": 17.5,
+     "items": 198
+    },
+    "UNKNOWN": {
+     "lines": 670,
+     "pct": 19.6,
+     "items": 228
+    }
+   },
+   "old_field_SHown_dropped_alias_ON": {
+    "FULL": {
+     "lines": 264,
+     "pct": 7.7,
+     "items": 67
+    },
+    "NONE": {
+     "lines": 1495,
+     "pct": 43.7,
+     "items": 590
+    },
+    "PARTIAL": {
+     "lines": 395,
+     "pct": 11.5,
+     "items": 138
+    },
+    "UNIT_MISMATCH": {
+     "lines": 597,
+     "pct": 17.5,
+     "items": 198
+    },
+    "UNKNOWN": {
+     "lines": 670,
+     "pct": 19.6,
+     "items": 228
+    }
+   },
+   "actual_SHown_dropped_alias_OFF": {
+    "FULL": {
+     "lines": 112,
+     "pct": 3.3,
+     "items": 28
+    },
+    "NONE": {
+     "lines": 759,
+     "pct": 22.2,
+     "items": 325
+    },
+    "PARTIAL": {
+     "lines": 268,
+     "pct": 7.8,
+     "items": 95
+    },
+    "UNIT_MISMATCH": {
+     "lines": 1612,
+     "pct": 47.1,
+     "items": 545
+    },
+    "UNKNOWN": {
+     "lines": 670,
+     "pct": 19.6,
+     "items": 228
+    }
+   },
+   "actual_SHown_KEPT_alias_ON": {
+    "FULL": {
+     "lines": 271,
+     "pct": 7.7,
+     "items": 70
+    },
+    "NONE": {
+     "lines": 1513,
+     "pct": 42.9,
+     "items": 603
+    },
+    "PARTIAL": {
+     "lines": 400,
+     "pct": 11.3,
+     "items": 140
+    },
+    "UNIT_MISMATCH": {
+     "lines": 635,
+     "pct": 18.0,
+     "items": 213
+    },
+    "UNKNOWN": {
+     "lines": 708,
+     "pct": 20.1,
+     "items": 243
+    }
+   }
+  },
+  "c": {
+   "MAIN_actual_SHown_dropped_alias_ON": {
+    "FULL": {
+     "lines": 213,
+     "pct": 6.2,
+     "items": 53
+    },
+    "NONE": {
+     "lines": 1567,
+     "pct": 45.8,
+     "items": 617
+    },
+    "PARTIAL": {
+     "lines": 374,
+     "pct": 10.9,
+     "items": 125
+    },
+    "UNIT_MISMATCH": {
+     "lines": 597,
+     "pct": 17.5,
+     "items": 198
+    },
+    "UNKNOWN": {
+     "lines": 670,
+     "pct": 19.6,
+     "items": 228
+    }
+   },
+   "old_field_SHown_dropped_alias_ON": {
+    "FULL": {
+     "lines": 213,
+     "pct": 6.2,
+     "items": 53
+    },
+    "NONE": {
+     "lines": 1567,
+     "pct": 45.8,
+     "items": 617
+    },
+    "PARTIAL": {
+     "lines": 374,
+     "pct": 10.9,
+     "items": 125
+    },
+    "UNIT_MISMATCH": {
+     "lines": 597,
+     "pct": 17.5,
+     "items": 198
+    },
+    "UNKNOWN": {
+     "lines": 670,
+     "pct": 19.6,
+     "items": 228
+    }
+   },
+   "actual_SHown_dropped_alias_OFF": {
+    "FULL": {
+     "lines": 81,
+     "pct": 2.4,
+     "items": 21
+    },
+    "NONE": {
+     "lines": 819,
+     "pct": 23.9,
+     "items": 344
+    },
+    "PARTIAL": {
+     "lines": 239,
+     "pct": 7.0,
+     "items": 83
+    },
+    "UNIT_MISMATCH": {
+     "lines": 1612,
+     "pct": 47.1,
+     "items": 545
+    },
+    "UNKNOWN": {
+     "lines": 670,
+     "pct": 19.6,
+     "items": 228
+    }
+   },
+   "actual_SHown_KEPT_alias_ON": {
+    "FULL": {
+     "lines": 220,
+     "pct": 6.2,
+     "items": 56
+    },
+    "NONE": {
+     "lines": 1585,
+     "pct": 44.9,
+     "items": 630
+    },
+    "PARTIAL": {
+     "lines": 379,
+     "pct": 10.7,
+     "items": 127
+    },
+    "UNIT_MISMATCH": {
+     "lines": 635,
+     "pct": 18.0,
+     "items": 213
+    },
+    "UNKNOWN": {
+     "lines": 708,
+     "pct": 20.1,
+     "items": 243
+    }
+   }
+  }
+ }
+}

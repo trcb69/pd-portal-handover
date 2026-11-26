@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paperless Job File</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;600&display=swap">
+<style>
+:root{
+  --ground:#ffffff; --panel:#eff2f6; --panel-2:#e3e9f0; --line:#d3dce6; --line-strong:#b6c4d2;
+  --ink:#12202c; --muted:#5b6c7c;
+  --digital:#1f5fbf; --digital-soft:#e4ecfa;
+  --paper:#a2561d; --paper-soft:#f7ebe0;
+  --yes:#12734f; --yes-soft:#e0f0e8;
+  --no:#b3261e; --no-soft:#fbe9e7;
+  --part:#8a6100; --part-soft:#fbf1d6;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0d141b; --panel:#161f29; --panel-2:#1d2833; --line:#27333f; --line-strong:#3a4855;
+    --ink:#e6edf4; --muted:#9bacba;
+    --digital:#5c9cf5; --digital-soft:#152538;
+    --paper:#d98745; --paper-soft:#2a1f16;
+    --yes:#2fa878; --yes-soft:#11261f;
+    --no:#f08a80; --no-soft:#321a18;
+    --part:#e0b24a; --part-soft:#2a2310;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0d141b; --panel:#161f29; --panel-2:#1d2833; --line:#27333f; --line-strong:#3a4855;
+  --ink:#e6edf4; --muted:#9bacba;
+  --digital:#5c9cf5; --digital-soft:#152538;
+  --paper:#d98745; --paper-soft:#2a1f16;
+  --yes:#2fa878; --yes-soft:#11261f;
+  --no:#f08a80; --no-soft:#321a18;
+  --part:#e0b24a; --part-soft:#2a2310;
+}
+*{box-sizing:border-box}
+body{margin:0; background:var(--ground); color:var(--ink); font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif; font-size:15.5px; line-height:1.55; padding-block:0 48px; padding-left:16px; padding-right:16px}
+.wrap{max-width:900px; margin:0 auto}
+h1,h2,h3{font-family:Archivo,system-ui,sans-serif; text-wrap:balance; margin:0}
+h1{font-size:clamp(28px,4.6vw,40px); font-weight:700; line-height:1.1; letter-spacing:-.01em}
+h2{font-size:clamp(21px,3vw,25px); font-weight:700; line-height:1.2}
+h3{font-size:16px; font-weight:700}
+p{margin:0}
+.eyebrow{font-family:"IBM Plex Mono",monospace; font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)}
+.doc{font-family:"IBM Plex Mono",monospace; font-size:.9em; background:var(--panel); border:1px solid var(--line); border-radius:4px; padding:0 5px; white-space:nowrap}
+header.top{border-bottom:2px solid var(--ink); padding-block:34px 18px; display:flex; flex-direction:column; gap:10px}
+header.top .sub{color:var(--muted); max-width:66ch; font-size:16.5px}
+.meta{display:flex; flex-wrap:wrap; gap:6px 20px; font-size:12.5px; color:var(--muted); font-family:"IBM Plex Mono",monospace}
+section{padding-block:28px; border-bottom:1px solid var(--line); display:flex; flex-direction:column; gap:14px}
+section:last-of-type{border-bottom:0}
+.lede{font-size:17px; max-width:70ch}
+ul.points{margin:0; padding-left:20px; display:flex; flex-direction:column; gap:7px}
+.verdict{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+.verdict article{padding:14px 16px; border:1px solid var(--line); display:flex; flex-direction:column; gap:6px}
+.verdict .d{border-top:4px solid var(--digital); background:var(--digital-soft)}
+.verdict .p{border-top:4px solid var(--paper); background:var(--paper-soft)}
+.verdict .big{font-family:Archivo,sans-serif; font-weight:700; font-size:30px; line-height:1; font-variant-numeric:tabular-nums}
+.verdict .k{font-size:13.5px; color:var(--muted)}
+.rail{display:flex; flex-wrap:wrap; gap:8px; align-items:stretch}
+.step{flex:1 1 118px; min-width:0; background:var(--panel); border:1px solid var(--line); border-top:3px solid var(--line-strong); padding:9px 10px; display:flex; flex-direction:column; gap:3px}
+.step .t{font-family:Archivo,sans-serif; font-weight:700; font-size:13.5px; line-height:1.25}
+.step .d{font-size:12.5px; color:var(--muted); line-height:1.4}
+.rail.paper .step{border-top-color:var(--paper)}
+.rail.digital .step{border-top-color:var(--digital)}
+.step.dark{border-top-color:var(--no); background:var(--no-soft)}
+.flowgrp{display:flex; flex-direction:column; gap:8px}
+.railhead{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap}
+.tag{font-family:"IBM Plex Mono",monospace; font-size:11.5px; padding:1px 8px; border-radius:99px; white-space:nowrap}
+.tag.paper{background:var(--paper-soft); color:var(--paper)}
+.tag.digital{background:var(--digital-soft); color:var(--digital)}
+.scroll{overflow-x:auto; border:1px solid var(--line)}
+table{border-collapse:collapse; width:100%; font-size:14px}
+th,td{text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top}
+th{font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); font-weight:500; background:var(--panel-2)}
+tr:last-child td{border-bottom:0}
+td.c{white-space:nowrap}
+.mk{display:inline-block; font-family:"IBM Plex Mono",monospace; font-size:11.5px; padding:1px 8px; border-radius:99px; white-space:nowrap}
+.mk.yes{background:var(--yes-soft); color:var(--yes)}
+.mk.no{background:var(--no-soft); color:var(--no)}
+.mk.part{background:var(--part-soft); color:var(--part)}
+.grp td{background:var(--panel); font-family:Archivo,sans-serif; font-weight:700; font-size:13px}
+.two{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+.box{border:1px solid var(--line); padding:13px 15px; display:flex; flex-direction:column; gap:8px}
+.box.d{border-left:4px solid var(--digital)} .box.p{border-left:4px solid var(--paper)}
+.box ul{margin:0; padding-left:18px; display:flex; flex-direction:column; gap:5px; font-size:14.5px}
+.facts{display:grid; grid-template-columns:repeat(4,1fr); gap:8px}
+.fact{border:1px solid var(--line); padding:10px 12px; display:flex; flex-direction:column; gap:2px}
+.fact .v{font-family:Archivo,sans-serif; font-weight:700; font-size:22px; font-variant-numeric:tabular-nums; line-height:1.1}
+.fact .k{font-size:12.5px; color:var(--muted); line-height:1.35}
+ol.plan{margin:0; padding-left:22px; display:flex; flex-direction:column; gap:7px}
+ol.plan li::marker{font-family:"IBM Plex Mono",monospace; color:var(--muted); font-size:13px}
+.note{font-size:13.5px; color:var(--muted); border-left:3px solid var(--line-strong); padding-left:12px; max-width:78ch}
+footer{padding-top:24px; font-size:12.5px; color:var(--muted); display:flex; flex-direction:column; gap:4px}
+@media (max-width:640px){.verdict,.two{grid-template-columns:1fr}.facts{grid-template-columns:1fr 1fr}}
+@page{size:A4; margin:14mm 13mm}
+@media print{
+  :root{--ground:#fff}
+  body{padding:0; font-size:12.5px}
+  header.top{padding-block:0 12px}
+  section{padding-block:12px; break-inside:auto}
+  footer{padding-top:10px}
+  .verdict article,.box,.fact,.step,tr,.rail,.railhead,.flowgrp{break-inside:avoid}
+  h2,h3{break-after:avoid}
+  .scroll{overflow:visible}
+  table{font-size:11.5px}
+  .pb{break-before:page}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <span class="eyebrow">SmartPack production dashboard · decision paper · 23 Sep 2026</span>
+  <h1>The job file: paperless, or paper as now?</h1>
+  <p class="sub">The production dashboard is designed and its foundation is built. How much it can show depends on one decision: whether the coordinator's job file moves into the dashboard, or stays a paper file carried from desk to desk. This paper compares the two, feature by feature.</p>
+  <div class="meta"><span>For: CEO · COO · Production GM · managers and coordinators</span><span>Sources: SmartPack Zoho, September 2026 job sheet, the approved design (Rev 7.3)</span></div>
+</header>
+
+<section>
+  <span class="eyebrow">The answer first</span>
+  <div class="verdict">
+    <article class="d"><span class="tag digital">Paperless job file</span><span class="big">17 of 17</span><span class="k">dashboard features work, tracked from the order to the invoice</span></article>
+    <article class="p"><span class="tag paper">Paper file as now</span><span class="big">4 of 17</span><span class="k">work fully (all read from Zoho, a day late); 3 work in part; 10 are lost</span></article>
+  </div>
+  <p class="lede">With the paper file, the dashboard only sees what Zoho sees: a sales order, then the packing, shipping and invoicing documents. <strong>Everything between the order and the shipment happens on paper, so the dashboard can't see it</strong> — and that is exactly where the time goes.</p>
+</section>
+
+<section>
+  <span class="eyebrow">1 · How a job moves</span>
+  <h2>The same job, two ways</h2>
+  <div class="flowgrp"><div class="railhead"><span class="tag paper">As now</span><span class="note" style="border:0;padding:0">five records, re-typed, one physical file</span></div>
+  <div class="rail paper">
+    <div class="step"><span class="t">WhatsApp order</span><span class="d">Arrival time recorded nowhere</span></div>
+    <div class="step"><span class="t">Excel sheet</span><span class="d">Manager adds the job</span></div>
+    <div class="step"><span class="t">Paper file + Zoho SO</span><span class="d">Coordinator types it again</span></div>
+    <div class="step dark"><span class="t">Carried by hand</span><span class="d">Status = whoever holds the file</span></div>
+    <div class="step dark"><span class="t">Production on paper</span><span class="d">Job card, inspection, then the Excel tab</span></div>
+    <div class="step dark"><span class="t">File returns</span><span class="d">Reference sheet filled after the fact</span></div>
+    <div class="step"><span class="t">Ilham, Darshani</span><span class="d">Shipment, invoice to SH</span></div>
+  </div></div>
+  <div class="flowgrp"><div class="railhead"><span class="tag digital">Paperless</span><span class="note" style="border:0;padding:0">one digital job file; every step is a tap, timed by the system</span></div>
+  <div class="rail digital">
+    <div class="step"><span class="t">Order in the portal</span><span class="d">Time recorded on arrival</span></div>
+    <div class="step"><span class="t">Coordinator creates the file</span><span class="d">Once, in the dashboard; Zoho SO linked</span></div>
+    <div class="step"><span class="t">Send to production</span><span class="d">One tap; the manager sees it as incoming</span></div>
+    <div class="step"><span class="t">Manager receives</span><span class="d">One tap; the location is known</span></div>
+    <div class="step"><span class="t">Output + blockers</span><span class="d">Taps on the day, with a reason on a miss</span></div>
+    <div class="step"><span class="t">Back to coordinator</span><span class="d">Reference sheet filled live</span></div>
+    <div class="step"><span class="t">Ilham, Darshani</span><span class="d">One reference number each; Zoho confirms</span></div>
+  </div></div>
+  <p class="note">Dark red steps are invisible to any system today. They are the steps the dashboard exists to measure.</p>
+</section>
+
+<section>
+  <span class="eyebrow">2 · Feature by feature</span>
+  <h2>What works, what is lost</h2>
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Feature</th><th>Paperless</th><th>Paper as now</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr class="grp"><td colspan="4">Knowing where every job is</td></tr>
+        <tr><td>True start time of the order (the 14-day promise)</td><td class="c"><span class="mk yes">yes</span></td><td class="c"><span class="mk no">lost</span></td><td>Only the portal or the digital file records when the order arrived; paper and WhatsApp don't.</td></tr>
+        <tr><td>Where the file is right now</td><td class="c"><span class="mk yes">yes</span></td><td class="c"><span class="mk no">lost</span></td><td>Send and receive taps give the location. Paper: "who has the file?"</td></tr>
+        <tr><td>Days spent at each desk</td><td class="c"><span class="mk yes">yes</span></td><td class="c"><span class="mk no">lost</span></td><td>Needs a time on every handover.</td></tr>
+        <tr><td>Incoming work, before it arrives</td><td class="c"><span class="mk yes">yes</span></td><td class="c"><span class="mk no">lost</span></td><td>The manager sees files sent but not yet received.</td></tr>
+        <tr><td>Jobs with no Zoho sales order (14% today)</td><td class="c"><span class="mk yes">yes</span></td><td class="c"><span class="mk no">lost</span></td><td>The digital file exists before the SO and is flagged "SO pending". Paper-only jobs never appear.</td></tr>
+        <tr class="grp"><td colspan="4">Production</td></tr>
+        <tr><td>Blocked jobs with reason, owner and age</td><td class="c"><span class="mk yes">yes</span></td><td class="c"><span class="mk no">lost</span></td><td>Raw material, die cutter, artwork, waiting on SH: tapped as a blocker. On paper, fewer than 1% of rows give a reason.</td></tr>
+        <tr><td>Ordered vs produced, live</td><td class="c"><span class="mk yes">yes</span></td><td class="c"><span class="mk part">late</span></td><td>Paper: known only when the file returns and the bundle is keyed into Zoho.</td></tr>
+        <tr><td>Over-production and short-delivery flags</td><td class="c"><span class="mk yes">yes</span></td><td class="c"><span class="mk part">late</span></td><td>FPP-011: 9,500 ordered, 17,200 made. Paper catches it after the fact, if at all.</td></tr>
+        <tr><td>Labour minutes per job (real standard minutes)</td><td class="c"><span class="mk yes">yes</span></td><td class="c"><span class="mk no">lost</span></td><td>Needs job cards captured as data, not paper.</td></tr>
+        <tr><td>Checklist stages with who and when</td><td class="c"><span class="mk yes">yes</span></td><td class="c"><span class="mk part">8 of 11</span></td><td>Paper: the 8 stages detected from Zoho documents have dates (sales order, bundle, packing, shipment, invoice…); the 3 manual ones (artwork image, item photo, job card) and every "who" are lost.</td></tr>
+        <tr class="grp"><td colspan="4">From Zoho (works either way)</td></tr>
+        <tr><td>Sales order, bundle, picklist, package, shipment, invoice dates</td><td class="c"><span class="mk yes">yes</span></td><td class="c"><span class="mk yes">yes</span></td><td>Read from Zoho; a day old until the automatic sync.</td></tr>
+        <tr><td>Overdue against the expected ship date</td><td class="c"><span class="mk yes">yes</span></td><td class="c"><span class="mk yes">yes</span></td><td>From the Zoho order date and ship date.</td></tr>
+        <tr><td>Waiting on SH's sales order (676 today)</td><td class="c"><span class="mk yes">yes</span></td><td class="c"><span class="mk yes">yes</span></td><td>A Zoho field.</td></tr>
+        <tr><td>Stock reserved by open orders</td><td class="c"><span class="mk yes">yes</span></td><td class="c"><span class="mk yes">yes</span></td><td>From Zoho.</td></tr>
+        <tr class="grp"><td colspan="4">Reports and the big question</td></tr>
+        <tr><td>GM's 7 am work list, COO's weekly trend</td><td class="c"><span class="mk yes">yes</span></td><td class="c"><span class="mk no">lost</span></td><td>Both need the production and blocker data. Without it the analyst keeps rebuilding them by hand from six registers.</td></tr>
+        <tr><td>The monthly Excel sheet retired</td><td class="c"><span class="mk yes">yes</span></td><td class="c"><span class="mk no">no</span></td><td>With paper, the sheet stays, and the dashboard becomes a second job.</td></tr>
+        <tr><td>Is the problem machine capacity or readiness?</td><td class="c"><span class="mk yes">yes</span></td><td class="c"><span class="mk no">lost</span></td><td>The purpose of phase 1. It needs handover times and blocker reasons.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">"Late": the figure appears only once the file is back and the paperwork is keyed, days or weeks after the event, which is too late to act on.</p>
+</section>
+
+<section>
+  <span class="eyebrow">3 · Why it matters</span>
+  <h2>What today's records already show</h2>
+  <div class="facts">
+    <div class="fact"><span class="v">≈57%</span><span class="k">customised orders on time (Jul–Aug 2026)</span></div>
+    <div class="fact"><span class="v">67</span><span class="k">jobs past delivery date, not marked done (Sep sheet)</span></div>
+    <div class="fact"><span class="v">31%</span><span class="k">Screen Printing jobs blocked on raw material</span></div>
+    <div class="fact"><span class="v">&lt;1%</span><span class="k">daily rows that say why a target was missed</span></div>
+  </div>
+  <p>One screen-printing pizza-box job was <strong>produced in 7 hours</strong>, inside a cycle of about four months from order to shipment. If that pattern holds, the time is lost <strong>before and after production</strong>: waiting for material, artwork and dies, and moving paper between desks. Those are exactly the steps a paper file hides.</p>
+</section>
+
+<section>
+  <span class="eyebrow">4 · What changes for people</span>
+  <h2>Who does what</h2>
+  <div class="two">
+    <div class="box d">
+      <h3>Paperless</h3>
+      <ul>
+        <li><strong>Coordinator:</strong> creates the file once in the dashboard, instead of paper + Excel + retyping; taps "send"; fills the reference sheet as things happen.</li>
+        <li><strong>Manager:</strong> four actions only: receive, record output (preset quantity buttons), open or close a blocker, send back.</li>
+        <li><strong>Ilham, Darshani:</strong> one reference number each, matched to Zoho automatically.</li>
+        <li><strong>Analyst:</strong> stops rebuilding reports by hand.</li>
+      </ul>
+    </div>
+    <div class="box p">
+      <h3>Paper as now</h3>
+      <ul>
+        <li><strong>Coordinator:</strong> same paper file, same Excel row, same Zoho order.</li>
+        <li><strong>Manager:</strong> nothing new to enter, and nothing new to see beyond Zoho.</li>
+        <li><strong>Everyone:</strong> "where is my order?" is still answered by a phone call.</li>
+        <li><strong>Analyst:</strong> still rebuilds the reports from six registers each month.</li>
+      </ul>
+    </div>
+  </div>
+  <h3>What paperless needs</h3>
+  <ul class="points">
+    <li><strong>A device on the floor.</strong> Managers need a phone or tablet where the work happens. If they walk to an office PC for the 12:20 check, they will batch at day's end and the timestamps mean nothing.</li>
+    <li><strong>The quality forms stay on paper at first.</strong> The inline inspection and QC visual checklists are controlled documents with numbers, revisions and signatures. They go digital only with a proper approval record, after the rest is stable.</li>
+    <li><strong>A pilot before rollout.</strong> Screen Printing first: the highest pain and only 59 jobs. IT keys in the data for the first two weeks, so no one carries double entry while problems surface.</li>
+    <li><strong>A transition with a printed cover.</strong> Until a division is fully paperless, the dashboard prints a cover sheet with a QR code for the file that still travels. The paper and the record stay linked, and nothing is lost in between.</li>
+  </ul>
+</section>
+
+<section>
+  <span class="eyebrow">5 · Recommendation</span>
+  <h2>Go paperless, one division at a time</h2>
+  <ol class="plan">
+    <li><strong>Now:</strong> the foundation is built, reviewed and ready to deploy privately. It reads Zoho and gives the admin screens. <em>This is the "paper as now" level.</em></li>
+    <li><strong>Next release:</strong> the order portal and the coordinator's digital job file, with send and receive taps. From here the file's location and the order's true start are known.</li>
+    <li><strong>Then:</strong> the manager workspace: blockers, output, incoming work, the 7 am list.</li>
+    <li><strong>Pilot:</strong> Screen Printing, two weeks, IT keying; then hand over to its manager; then one division at a time.</li>
+    <li><strong>Last:</strong> Stores and invoicing screens, the GM and COO reports, and the floor tablets.</li>
+  </ol>
+  <p class="lede">Keeping the paper file keeps today's blind spot. The dashboard would show the Zoho paperwork faster, but not the four months between the order and the shipment, which is the part everyone is asking about.</p>
+</section>
+
+<footer>
+  <p>Sources: SmartPack Zoho Inventory (pulled 16–19 Sep 2026); September 2026 job sheet (470 jobs, 2,006 daily rows); the production dashboard brief and approved design, Rev 7.3; the digital job file specification. On-time figure from the Jul–Aug 2026 Zoho exports.</p>
+</footer>
+
+</div>
+</body>
+</html>

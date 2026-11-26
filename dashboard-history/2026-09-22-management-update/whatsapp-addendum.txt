@@ -1,0 +1,15 @@
+*How the work was done*
+The brief sets out the planned and approved scope of all three projects, and what each one will give the business.
+
+I took every part through the same engineering process that professional software teams use:
+1. *Understand:* mapped both companies' processes, division by division, and analysed 400,000+ Zoho records before designing anything.
+2. *Specify:* wrote a full specification with clear acceptance criteria.
+3. *Critique:* challenged the design before building it. The dashboard design passed after 7 review rounds.
+4. *Test first:* wrote 143 automated checks that the system must pass.
+5. *Build:* built the foundation against those checks.
+6. *Review:* separate code, security and database reviews, each passed after the fixes they raised.
+7. *Release:* private go-live first, then one release at a time.
+
+I set up and ran the AI-assisted tooling for this myself, and used it across every stage as an engineering tool, well beyond summaries and emails.
+
+Abdul Hadhee | IT Exec | Standard-Holdings

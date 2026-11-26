@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SH and SmartPack Working Flow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;600&display=swap">
+<style>
+:root{
+  --ground:#ffffff; --panel:#eff2f6; --panel-2:#e3e9f0; --line:#d3dce6; --line-strong:#b6c4d2;
+  --ink:#12202c; --muted:#5b6c7c;
+  --move:#1f5fbf; --move-soft:#e4ecfa;
+  --internal:#a2561d; --internal-soft:#f7ebe0;
+  --done:#12734f; --done-soft:#e0f0e8;
+  --warn:#9a3412;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0d141b; --panel:#161f29; --panel-2:#1d2833; --line:#27333f; --line-strong:#3a4855;
+    --ink:#e6edf4; --muted:#9bacba;
+    --move:#5c9cf5; --move-soft:#152538;
+    --internal:#d98745; --internal-soft:#2a1f16;
+    --done:#2fa878; --done-soft:#11261f;
+    --warn:#f0a377;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0d141b; --panel:#161f29; --panel-2:#1d2833; --line:#27333f; --line-strong:#3a4855;
+  --ink:#e6edf4; --muted:#9bacba;
+  --move:#5c9cf5; --move-soft:#152538;
+  --internal:#d98745; --internal-soft:#2a1f16;
+  --done:#2fa878; --done-soft:#11261f;
+  --warn:#f0a377;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,Segoe UI,sans-serif;
+  font-size:17px; line-height:1.6;
+  padding-block:0 64px; padding-left:16px; padding-right:16px;
+}
+.wrap{max-width:880px; margin:0 auto}
+h1,h2,h3{font-family:Archivo,system-ui,sans-serif; text-wrap:balance; margin:0}
+h1{font-size:clamp(30px,5.2vw,44px); font-weight:700; line-height:1.1; letter-spacing:-.01em}
+h2{font-size:clamp(22px,3.4vw,28px); font-weight:700; line-height:1.2}
+h3{font-size:18px; font-weight:700}
+p{margin:0}
+code,.doc{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:.92em}
+.doc{background:var(--panel); border:1px solid var(--line); border-radius:4px; padding:1px 6px; white-space:nowrap}
+.eyebrow{font-family:"IBM Plex Mono",monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)}
+header.top{border-bottom:2px solid var(--ink); padding-block:40px 20px; display:flex; flex-direction:column; gap:12px}
+header.top .sub{color:var(--muted); max-width:62ch}
+.meta{display:flex; flex-wrap:wrap; gap:8px 22px; font-size:13px; color:var(--muted); font-family:"IBM Plex Mono",monospace}
+section{padding-block:38px; border-bottom:1px solid var(--line); display:flex; flex-direction:column; gap:18px}
+section:last-of-type{border-bottom:0}
+.lede{font-size:19px}
+ol.points,ul.points{margin:0; padding-left:22px; display:flex; flex-direction:column; gap:10px}
+ul.points li::marker{color:var(--muted)}
+.answer{background:var(--panel); border-left:4px solid var(--move); padding:16px 18px; display:flex; flex-direction:column; gap:8px}
+.answer.internal{border-left-color:var(--internal)}
+.answer.same{border-left-color:var(--done)}
+.answer h3{font-size:16px}
+/* step rail */
+.rail{display:flex; flex-wrap:wrap; gap:10px; align-items:stretch}
+.step{flex:1 1 150px; min-width:0; background:var(--panel); border:1px solid var(--line); border-top:3px solid var(--line-strong); padding:12px 13px; display:flex; flex-direction:column; gap:5px}
+.step .n{font-family:"IBM Plex Mono",monospace; font-size:11px; color:var(--muted); letter-spacing:.1em}
+.step .t{font-family:Archivo,sans-serif; font-weight:700; font-size:15px; line-height:1.25}
+.step .d{font-size:13.5px; color:var(--muted); line-height:1.45}
+.step.move{border-top-color:var(--move)}
+.step.internal{border-top-color:var(--internal)}
+.step.done{border-top-color:var(--done)}
+.step.none{border-top-color:var(--line-strong); opacity:.75}
+/* journey */
+.journey{border:1px solid var(--line); background:var(--panel)}
+.journey > header{padding:14px 16px; border-bottom:1px solid var(--line); background:var(--panel-2); display:flex; flex-wrap:wrap; gap:6px 16px; align-items:baseline}
+.journey > header .who{font-family:Archivo,sans-serif; font-weight:700}
+.journey > header .where{font-size:13px; color:var(--muted); font-family:"IBM Plex Mono",monospace}
+.hops{list-style:none; margin:0; padding:6px 16px 16px; display:flex; flex-direction:column}
+.hops li{display:grid; grid-template-columns:76px 1fr; gap:14px; padding-top:12px; position:relative}
+.hops li::before{content:""; position:absolute; left:83px; top:0; bottom:0; width:1px; background:var(--line-strong)}
+.hops li:first-child::before{top:18px}
+.hops li:last-child::before{bottom:auto; height:18px}
+.hops .clock{font-family:"IBM Plex Mono",monospace; font-size:13px; color:var(--muted); text-align:right; font-variant-numeric:tabular-nums; padding-top:1px}
+.hops .what{display:flex; flex-direction:column; gap:3px; padding-left:16px; position:relative}
+.hops .what::before{content:""; position:absolute; left:-5px; top:7px; width:9px; height:9px; border-radius:50%; background:var(--move); outline:3px solid var(--panel)}
+.hops li.internal .what::before{background:var(--internal)}
+.hops li.end .what::before{background:var(--done)}
+.hops .label{font-weight:600; font-size:15px}
+.hops .note{font-size:13.5px; color:var(--muted)}
+/* figures */
+.figs{display:flex; flex-wrap:wrap; gap:10px}
+.fig{flex:1 1 150px; border:1px solid var(--line); padding:12px 14px; display:flex; flex-direction:column; gap:2px}
+.fig .v{font-family:Archivo,sans-serif; font-weight:700; font-size:24px; font-variant-numeric:tabular-nums; line-height:1.1}
+.fig .k{font-size:13px; color:var(--muted); line-height:1.35}
+table{border-collapse:collapse; width:100%; font-size:14.5px}
+.scroll{overflow-x:auto; border:1px solid var(--line)}
+th,td{text-align:left; padding:9px 12px; border-bottom:1px solid var(--line); vertical-align:top}
+th{font-family:"IBM Plex Mono",monospace; font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); font-weight:500; background:var(--panel-2)}
+tr:last-child td{border-bottom:0}
+td .tag{font-size:12.5px; font-family:"IBM Plex Mono",monospace; padding:1px 7px; border-radius:99px; white-space:nowrap}
+.tag.move{background:var(--move-soft); color:var(--move)}
+.tag.internal{background:var(--internal-soft); color:var(--internal)}
+.tag.done{background:var(--done-soft); color:var(--done)}
+.watch{display:flex; flex-direction:column; gap:14px}
+.watch article{display:grid; grid-template-columns:auto 1fr; gap:4px 12px; align-items:baseline}
+.watch .mark{font-family:Archivo,sans-serif; font-weight:700; color:var(--warn); font-size:15px}
+.watch h3{grid-column:2; font-size:16px}
+.watch p{grid-column:2; font-size:15px; color:var(--muted)}
+footer{padding-top:34px; font-size:13.5px; color:var(--muted); display:flex; flex-direction:column; gap:6px}
+@media (max-width:520px){
+  .hops li{grid-template-columns:64px 1fr; gap:10px}
+  .hops li::before{left:69px}
+}
+/* join map */
+.map{display:flex; flex-direction:column; gap:10px; border:1px solid var(--line); padding:14px}
+.map-head,.link{display:grid; grid-template-columns:1fr 1.15fr 1fr; gap:10px; align-items:center}
+.map-head span{font-family:"IBM Plex Mono",monospace; font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted)}
+.map-head span:nth-child(2){text-align:center}
+.node{padding:10px 12px; border:1px solid var(--line); background:var(--panel); font-weight:600; font-size:14.5px; line-height:1.35}
+.node small{display:block; font-weight:400; color:var(--muted); font-size:12.5px; margin-top:2px}
+.node.sh{border-left:4px solid var(--move)}
+.node.sps{border-left:4px solid var(--internal)}
+.node.mid{border-left:4px solid var(--done); background:var(--done-soft)}
+.node.muted{background:transparent; border-style:dashed; font-weight:400; color:var(--muted)}
+.edge{display:flex; flex-direction:column; align-items:center; text-align:center; gap:1px}
+.edge::before{font-size:30px; line-height:.9; color:var(--muted); font-family:"IBM Plex Sans",system-ui,sans-serif}
+.edge.right::before{content:"\27F6"}
+.edge.left::before{content:"\27F5"}
+.edge .lbl{font-size:13.5px; font-weight:600}
+.edge .cnt{font-size:12px; color:var(--muted); font-family:"IBM Plex Mono",monospace; line-height:1.4}
+/* question list */
+ol.qs{margin:0; padding-left:30px; display:flex; flex-direction:column; gap:9px; font-variant-numeric:tabular-nums}
+ol.qs li{padding-left:4px}
+ol.qs li::marker{color:var(--muted); font-family:"IBM Plex Mono",monospace; font-size:13px}
+ol.qs .tag{margin-right:6px}
+.tag{font-size:12px; font-family:"IBM Plex Mono",monospace; padding:1px 7px; border-radius:99px; white-space:nowrap}
+section h3{margin-top:6px}
+@media (max-width:640px){
+  .map-head{display:none}
+  .link{grid-template-columns:1fr}
+  .edge.right::before{content:"\2193"}
+  .edge.left::before{content:"\2191"}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <span class="eyebrow">Standard Holdings + SmartPack · 21 Sep 2026</span>
+  <h1>How the factory and Rizwan's department work together</h1>
+  <p class="sub">The working flow of each side, the one map that joins them, and every question still open. Built from the team chart, the approved spec and the Zoho data of both companies.</p>
+  <div class="meta">
+    <span>SmartPack = the factory (SPS)</span><span>Rizwan's department = SH Food Packaging</span><span>Zoho: two separate organisations</span>
+  </div>
+</header>
+
+<section>
+  <span class="eyebrow">Side A · the factory</span>
+  <h2>SmartPack: how a customised job runs today</h2>
+  <p class="lede">SmartPack makes the printed and customised items. <strong>99.9% of what it invoices goes to SH</strong>; the real end customer is written on the SPS order in the field “Order Received from”.</p>
+  <div class="rail">
+    <div class="step move"><span class="t">Order arrives</span><span class="d">In the one WhatsApp order group, or by phone.</span></div>
+    <div class="step move"><span class="t">Triage picks it</span><span class="d">The team decides what goes to production.</span></div>
+    <div class="step move"><span class="t">Job is born</span><span class="d">The division manager writes it in the monthly Excel sheet.</span></div>
+    <div class="step move"><span class="t">File + Zoho order</span><span class="d">A coordinator makes the paper file and the SPS sales order, same day.</span></div>
+  </div>
+  <div class="rail">
+    <div class="step internal"><span class="t">Production</span><span class="d">File carried by hand. Job card, processing order, inline inspection.</span></div>
+    <div class="step internal"><span class="t">File returns</span><span class="d">Coordinator records assemblies, picklists and stock adjustments in Zoho.</span></div>
+    <div class="step done"><span class="t">Ilham ships</span><span class="d">Stores writes the shipment reference.</span></div>
+    <div class="step done"><span class="t">Darshani invoices</span><span class="d">Invoice (ITN) to SH. SH now owns the goods.</span></div>
+  </div>
+  <ul class="points">
+    <li><strong>The coordinator pairs:</strong> Ranga + Nirmani, Ishan + Umanda, Mubeena with Nimesha and Madushi. Offset jobs go to either pair, chosen per job.</li>
+    <li><strong>Ex-stock is different:</strong> paper straws and rewinding start inside Ishan's own area, often made before the file exists.</li>
+    <li><strong>Where it hurts:</strong> no start time is recorded anywhere; the paper file's location is the only status; customised jobs are on time only about 57% of the time; in September 31% of screen-printing jobs were blocked because the raw material was not there.</li>
+    <li><strong>Stock in SPS's own Zoho:</strong> almost everything sits in the work-in-progress warehouse. 721 finished items are in WIP against 4 in the finished-goods store, 23 items show negative stock, and only 47 transfer orders were made in 13 months, so issuing to the floor is done on paper.</li>
+  </ul>
+</section>
+
+<section>
+  <span class="eyebrow">Side B · the trading and distribution side</span>
+  <h2>Rizwan's department: three teams, three routes</h2>
+  <p class="lede">SH Food Packaging takes every order, picks and packs it, and ships it. Every order starts in Team 03 and leaves through Team 02.</p>
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Team</th><th>Lead</th><th>What it owns</th></tr></thead>
+      <tbody>
+        <tr><td>01 Inventory &amp; stock</td><td>Abdullah</td><td>Re-orders, the 3PL warehouse, stock corrections, goods-in paperwork, key-customer buffer stock</td></tr>
+        <tr><td>02 Checking, packing, shipment</td><td>Saman Kumara</td><td>Key-customer orders, checking, packing, the Zoho package and shipment</td></tr>
+        <tr><td>03 Orders &amp; branch distribution</td><td>Senuri Wasana</td><td>Creating sales orders, printing picklists, arranging items, stickers, inter-branch requests (IBR)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <h3>Route 1 · a normal customer order</h3>
+  <div class="rail">
+    <div class="step move"><span class="t">Request</span><span class="d">Salesperson, COO, CEO or branch, by WhatsApp or phone.</span></div>
+    <div class="step move"><span class="t">Senuri</span><span class="d">Creates the Zoho sales order, prints the picklist.</span></div>
+    <div class="step move"><span class="t">Kavinda</span><span class="d">Arranges the items against the picklist.</span></div>
+    <div class="step move"><span class="t">Saman's team</span><span class="d">Checks and packs.</span></div>
+    <div class="step done"><span class="t">Pasindu, then ship</span><span class="d">Packaging slip on every package; shipment and invoice in Zoho.</span></div>
+  </div>
+  <h3>Route 2 · consumption and the “retail chain”</h3>
+  <div class="rail">
+    <div class="step internal"><span class="t">Team 03</span><span class="d">Creates the order, same steps as Route 1. Consumption goes to a pretend customer, “… Warehouse (Consumption)”.</span></div>
+    <div class="step internal"><span class="t">Rashaad</span><span class="d">Arranges the order.</span></div>
+    <div class="step done"><span class="t">Saman's team</span><span class="d">Takes it from there: pack, ship on the INTERNAL or GUARD ROOM route, invoice.</span></div>
+  </div>
+  <h3>Route 3 · stock for Galle and Kandy (IBR)</h3>
+  <div class="rail">
+    <div class="step move"><span class="t">Branch asks</span><span class="d">Galle writes IBR numbers; Kandy writes none.</span></div>
+    <div class="step move"><span class="t">Team 03</span><span class="d">Creates the transfer order in Zoho.</span></div>
+    <div class="step move"><span class="t">Rashaad, Saman</span><span class="d">Arrange and check.</span></div>
+    <div class="step done"><span class="t">Transfer arrives</span><span class="d">Branch stock goes up; the branch then sells it as Route 1.</span></div>
+  </div>
+  <h3>The stock loop behind all three routes</h3>
+  <div class="rail">
+    <div class="step internal"><span class="t">Abdullah</span><span class="d">Keeps the re-order list in Excel.</span></div>
+    <div class="step internal"><span class="t">Rizwan</span><span class="d">Checks the list.</span></div>
+    <div class="step internal"><span class="t">Nazmi</span><span class="d">Raises the purchase order in Zoho SH.</span></div>
+    <div class="step internal"><span class="t">COO</span><span class="d">Approves the PO in Zoho.</span></div>
+    <div class="step done"><span class="t">Abdullah</span><span class="d">Records the goods arriving.</span></div>
+  </div>
+  <ul class="points">
+    <li><strong>In numbers (SH Zoho):</strong> 71,982 sales orders; 68% ship the day the order is keyed; 2,928 orders are still open after 60 days.</li>
+    <li><strong>Coming, agreed on 20 Sep:</strong> orders placed in our portal first; Hazeem's credit check before Senuri creates the Zoho order.</li>
+  </ul>
+</section>
+
+<section>
+  <span class="eyebrow">The join</span>
+  <h2>One map: where the two sides touch</h2>
+  <p class="lede">Seven links, each a real Zoho document or a real money flow. The middle column is the surprise: <strong>SH's own Zoho holds warehouses named after the SPS factory</strong>, and SH's branch stock ships from there.</p>
+  <div class="map" role="list">
+    <div class="map-head"><span>SH · Rizwan's department</span><span>SPS site, in SH's Zoho</span><span>SmartPack · factory</span></div>
+
+    <div class="link" role="listitem">
+      <div class="node sh">Team 03 sales order for a customised item</div>
+      <div class="edge right"><span class="lbl">order for the job</span><span class="cnt">676 SPS orders still say “SH ref: to be received”</span></div>
+      <div class="node sps">SPS sales order + job <small>field: SH Sales Order Ref</small></div>
+    </div>
+
+    <div class="link" role="listitem">
+      <div class="node sh">Goods received, sold to the customer <small>Team 02 packs and ships</small></div>
+      <div class="edge left"><span class="lbl">finished goods + invoice (ITN)</span><span class="cnt">LKR 298 M in 12 months; SH bills LKR 299 M</span></div>
+      <div class="node sps">Ilham ships, Darshani invoices SH</div>
+    </div>
+
+    <div class="link" role="listitem">
+      <div class="node sh">SH sells raw materials</div>
+      <div class="edge right"><span class="lbl">materials, invoiced</span><span class="cnt">LKR 144 M in 12 months</span></div>
+      <div class="node sps">SPS production uses them</div>
+    </div>
+
+    <div class="link" role="listitem">
+      <div class="node sh">SH trading stock</div>
+      <div class="edge left"><span class="lbl">SPS retail buys from SH</span><span class="cnt">LKR 72 M in 12 months</span></div>
+      <div class="node sps">SmartPack's retail unit</div>
+    </div>
+
+    <div class="link three" role="listitem">
+      <div class="node sh">Ranaviru warehouse</div>
+      <div class="node mid">SPS Kohalwila Factory <small>433 transfers “Material for Screen Process” in</small></div>
+      <div class="node sps">SPS Work in Progress <small>313 returns “SPS Service Complete”</small></div>
+    </div>
+
+    <div class="link three" role="listitem">
+      <div class="node sh">Galle and Kandy stores</div>
+      <div class="node mid">SPS Kohalwila Factory <small>2,676 transfers to Galle, 661 to Kandy</small></div>
+      <div class="node sps muted">— <small>SH's stock, physically at the factory site</small></div>
+    </div>
+
+    <div class="link" role="listitem">
+      <div class="node sh">Customer payment</div>
+      <div class="edge left"><span class="lbl">paid into SPS's bank, filed as an SH payment</span><span class="cnt">1 case seen; is it normal?</span></div>
+      <div class="node sps">SPS bank account</div>
+    </div>
+  </div>
+  <p><strong>Read it simply:</strong> SH sells, SPS makes. SH hands SPS the order and some of the material; SPS hands back finished goods and a bill. And a good part of SH's own stock lives at the SPS site under SH's name.</p>
+</section>
+
+<section>
+  <span class="eyebrow">Everything still open</span>
+  <h2>All the questions, in one list</h2>
+  <p class="lede">Grouped by who can answer. <span class="tag move">open</span> waits on an answer, <span class="tag internal">paused</span> is on hold by your decision, <span class="tag done">new</span> comes from this week's data.</p>
+
+  <h3>Rizwan's department</h3>
+  <ol class="qs">
+    <li><span class="tag move">open</span> Which SH locations actually ship to customers? The data shows sales orders at only three: Head Office, South and Central.</li>
+    <li><span class="tag move">open</span> What do the desk letters A, K and R in order numbers stand for?</li>
+    <li><span class="tag move">open</span> Route 1: who makes the Zoho package and shipment? The team chart lists both under Team 02 but draws Route 1 without Team 02.</li>
+    <li><span class="tag move">open</span> Who triages orders in the portal? Suggested: Senuri.</li>
+    <li><span class="tag move">open</span> On portal launch day, is the WhatsApp order group switched off or run in parallel, and who keys orders that still arrive by WhatsApp?</li>
+    <li><span class="tag move">open</span> Hazeem's detailed credit-limit rules, and the backup Finance names for him.</li>
+    <li><span class="tag move">open</span> Does the CEO get a requester account plus the COO view?</li>
+    <li><span class="tag done">new</span> Why do only Galle's transfers carry IBR numbers? Should Kandy use them too, and where is the IBR request itself kept?</li>
+    <li><span class="tag done">new</span> What is consumed on “consumption” orders, who approves them, and why did 41 leave through the guard room instead of the internal route?</li>
+    <li><span class="tag done">new</span> 29% of orders are keyed with no price and priced at invoicing. Is that the intended way to work?</li>
+    <li><span class="tag done">new</span> 41% of priced orders are invoiced for a different amount. Partial deliveries, price changes, or several orders on one invoice?</li>
+    <li><span class="tag done">new</span> What is the rule for the pick-type tag? 330 consumption orders and 56 chain orders are tagged “Retail”.</li>
+    <li><span class="tag done">new</span> Who cleans up the 17 orders numbered “NOTTOBEUSED” and the order dated in 1831?</li>
+  </ol>
+
+  <h3>SmartPack</h3>
+  <ol class="qs" start="14">
+    <li><span class="tag move">open</span> The 14-day promise: counted from the WhatsApp message, the Zoho order, or the project link?</li>
+    <li><span class="tag move">open</span> Are standard minutes filled in on Offset job cards today?</li>
+    <li><span class="tag move">open</span> Rewinding job card: one per job, or one per shift covering several jobs?</li>
+    <li><span class="tag move">open</span> “Make to Order” jobs: treat as customised, or as their own type?</li>
+    <li><span class="tag move">open</span> The five small divisions (paper cup, cup lid, digital print, paper plate, cake wrapper): who manages each, and what are their stages?</li>
+    <li><span class="tag move">open</span> Manager day plans: optional, or dropped?</li>
+    <li><span class="tag move">open</span> Who approves the Stores and invoice (ITN) entries, and which GM, COO and analyst accounts are needed?</li>
+    <li><span class="tag move">open</span> Is Saturday a working day?</li>
+    <li><span class="tag internal">paused</span> Who raises and approves SPS purchase orders?</li>
+    <li><span class="tag internal">paused</span> Does Ilham record goods-in, into the raw-material store, the same day?</li>
+    <li><span class="tag internal">paused</span> Is material issued to the floor on paper slips?</li>
+    <li><span class="tag internal">paused</span> Above what value does a stock correction need approval, and who approves?</li>
+  </ol>
+
+  <h3>Between the two</h3>
+  <ol class="qs" start="26">
+    <li><span class="tag move">open</span> When raw material runs short for a customised job, what happens today, and who buys it?</li>
+    <li><span class="tag move">open</span> Does SPS wait for SH's sales order before starting? 676 SPS orders still say “SH ref: to be received”.</li>
+    <li><span class="tag internal">paused</span> How does SH take SPS goods into its stock in Zoho: a purchase receive against the SPS invoice, or something else?</li>
+    <li><span class="tag done">new</span> “SPS Kohalwila Factory” is a warehouse in SH's Zoho. Is that SH stock physically kept at the SPS site, and who counts it?</li>
+    <li><span class="tag done">new</span> Screen-process loop: 433 transfers of SH material went to the factory and 313 came back as “SPS Service Complete”. Is anything still waiting there, and does SPS invoice the service separately?</li>
+    <li><span class="tag done">new</span> What is SmartPack's retail unit, and why does it buy LKR 72 M a year from SH?</li>
+    <li><span class="tag move">open</span> A customer paid into SPS's bank but it was filed as an SH payment. Normal by agreement, or a mistake?</li>
+  </ol>
+
+  <h3>Decisions only you can make</h3>
+  <ol class="qs" start="33">
+    <li><span class="tag move">open</span> Confirm the security list for the portal: two-step sign-in, staging copy, secrets store, roles.</li>
+    <li><span class="tag move">open</span> Approve two new packages: an email sender and a two-step sign-in library.</li>
+    <li><span class="tag move">open</span> Notifications: their own table, kept separate from the frozen Zoho write-back queue? Recommended: yes.</li>
+    <li><span class="tag move">open</span> Approve the Zoho form helper spec. Build the copy-button page first? Recommended: yes.</li>
+    <li><span class="tag move">open</span> Once SH admin rights arrive: create the “Portal Order No” field on SH sales orders.</li>
+    <li><span class="tag move">open</span> Command Centre demo: real names, logos, key numbers, who sees which seat.</li>
+    <li><span class="tag move">open</span> ClickUp: connect it or not?</li>
+    <li><span class="tag internal">paused</span> When to lift the pause on the stock system for Abdullah and Ilham.</li>
+  </ol>
+</section>
+
+<footer>
+  <p>Sources: Food Packaging team chart; production dashboard brief and spec (Rev 7.3); open-questions answers of 20 Sep; SH and SPS Zoho Inventory, read-only pulls of 16–19 Sep 2026. Money flows are 12 months to Aug 2026.</p>
+  <p>Files: /root/Production Dashboard/ · data in /root/exports/zoho/native/</p>
+</footer>
+
+</div>
+</body>
+</html>

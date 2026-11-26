@@ -1,0 +1,530 @@
+{
+ "snapshot": "SH items 28 Sep 2026 raw batch_*.json: STALE, shape only. SPS stock not used; SH and SPS never summed.",
+ "basis": {
+  "items": 1269,
+  "lines": 3527,
+  "window": "2025-09-25 < Order Date <= 2026-09-25",
+  "item_set_source": "customized-stock.csv rows with lines_last12m>0",
+  "items_whose_line_count_differs_from_csv": 0,
+  "lines_with_end_customer_SH_own": 106,
+  "end_customer_field": "CF.Order Received from",
+  "sh_own_string": "Standard Holdings (Pvt) Ltd"
+ },
+ "sps_to_sh_match": {
+  "method": "stock_routing.py match(): exact normalised name (casefold, whitespace) then punctuation-stripped name; unique or unique-active candidate only",
+  "methods_items": {
+   "none": 243,
+   "exact_name_normalised": 945,
+   "name_punct_stripped": 81
+  },
+  "matched_items": 1026,
+  "match_rate_items_pct": 80.9,
+  "lines_unmatched": 708
+ },
+ "fields": {
+  "free_stock": "location_actual_available_for_sale_stock",
+  "on_hand": "location_stock_on_hand",
+  "committed": "location_actual_committed_stock",
+  "unit": "item.unit (item level)",
+  "typical_qty": "customized-stock.csv typical_order_qty_median (production-type lines in window; catalogue CSV has median_qty, not this name)",
+  "location_row_keys": [
+   "batches",
+   "default_storage",
+   "initial_stock",
+   "initial_stock_rate",
+   "is_general_location",
+   "is_item_mapped",
+   "is_primary",
+   "is_primary_location",
+   "is_storage_location_enabled",
+   "location_actual_available_for_sale_stock",
+   "location_actual_available_stock",
+   "location_actual_committed_stock",
+   "location_asset_value",
+   "location_available_for_sale_stock",
+   "location_available_stock",
+   "location_committed_stock",
+   "location_id",
+   "location_name",
+   "location_quantity_in_transit",
+   "location_stock_on_hand",
+   "sales_channels",
+   "serial_number_details",
+   "serial_numbers",
+   "status",
+   "storages"
+  ],
+  "sh_unit_present_items": "11804/12081"
+ },
+ "locations_in_data": {
+  "SPS Kohalwila Factory (Warehouse)": 11367,
+  "SH Ranaviru Warehouse (Warehouse)": 11367,
+  "Freeport Katunayake (Warehouse)": 11367,
+  "Southern Warehouse (Warehouse)": 11367,
+  "Central Warehouse (Warehouse)": 11367,
+  "Head Office": 11367,
+  "South Branch": 11367,
+  "Central Branch": 11367,
+  "3PL Warehouse (DWW)": 11367,
+  "SPS Work in Progress WIP": 11367
+ },
+ "sets": {
+  "a": [
+   "Southern Warehouse (Warehouse)",
+   "Central Warehouse (Warehouse)",
+   "3PL Warehouse (DWW)"
+  ],
+  "b": [
+   "Southern Warehouse (Warehouse)",
+   "Central Warehouse (Warehouse)",
+   "3PL Warehouse (DWW)",
+   "SPS Kohalwila Factory (Warehouse)"
+  ]
+ },
+ "alias_table": [
+  "each",
+  "nos",
+  "pcs",
+  "piece",
+  "pieces"
+ ],
+ "identity_check_soh_minus_committed_eq_afs": {
+  "rows": 113670,
+  "fail": 0,
+  "fail_in_sets": 0,
+  "rows_in_sets": 45468,
+  "examples": [],
+  "fail_alt_nonactual": 0,
+  "missing_field_rows": 0
+ },
+ "results": {
+  "set_a_strict": {
+   "items": {
+    "UNKNOWN": 243,
+    "UNIT_MISMATCH": 561,
+    "NONE": 425,
+    "FULL": 9,
+    "PARTIAL": 20,
+    "NO_CATALOGUE_UNIT": 11
+   },
+   "without_rule2": {
+    "UNKNOWN": {
+     "lines": 708,
+     "pct": 20.07
+    },
+    "UNIT_MISMATCH": {
+     "lines": 1656,
+     "pct": 46.95
+    },
+    "NO_CATALOGUE_UNIT": {
+     "lines": 11,
+     "pct": 0.31
+    },
+    "FULL": {
+     "lines": 38,
+     "pct": 1.08
+    },
+    "PARTIAL": {
+     "lines": 49,
+     "pct": 1.39
+    },
+    "NONE": {
+     "lines": 1065,
+     "pct": 30.2
+    }
+   },
+   "with_rule2_pct_of_all_lines": {
+    "UNKNOWN": {
+     "lines": 670,
+     "pct": 19.0
+    },
+    "UNIT_MISMATCH": {
+     "lines": 1601,
+     "pct": 45.39
+    },
+    "NO_CATALOGUE_UNIT": {
+     "lines": 11,
+     "pct": 0.31
+    },
+    "FULL": {
+     "lines": 38,
+     "pct": 1.08
+    },
+    "PARTIAL": {
+     "lines": 44,
+     "pct": 1.25
+    },
+    "NONE": {
+     "lines": 1057,
+     "pct": 29.97
+    },
+    "PRODUCTION_RULE2": {
+     "lines": 106,
+     "pct": 3.01
+    }
+   },
+   "rule2_detail": {
+    "forced_production_lines": 106,
+    "forced_pct": 3.01,
+    "classes_of_remaining_lines": {
+     "UNKNOWN": {
+      "lines": 670,
+      "pct": 19.58
+     },
+     "UNIT_MISMATCH": {
+      "lines": 1601,
+      "pct": 46.8
+     },
+     "NO_CATALOGUE_UNIT": {
+      "lines": 11,
+      "pct": 0.32
+     },
+     "FULL": {
+      "lines": 38,
+      "pct": 1.11
+     },
+     "PARTIAL": {
+      "lines": 44,
+      "pct": 1.29
+     },
+     "NONE": {
+      "lines": 1057,
+      "pct": 30.9
+     }
+    },
+    "remaining_lines": 3421,
+    "sh_stores_FULL_lines_after_rule2": 38,
+    "sh_stores_FULL_pct_of_all_lines_after_rule2": 1.08
+   },
+   "unit_pairs_among_mismatches_items": {
+    "pcs -> nos": 210,
+    "pcs -> Nos": 123,
+    "box -> nos": 89,
+    "box -> pcs": 51,
+    "nos -> PCS": 25,
+    "Pks -> PACK": 19,
+    "box -> Nos": 16,
+    "Pks -> PCS": 9,
+    "pcs -> box": 7,
+    "nos -> PACK": 6,
+    " -> pcs": 3,
+    " -> Nos": 2,
+    "nos -> pcs": 1
+   }
+  },
+  "set_a_alias": {
+   "items": {
+    "UNKNOWN": 243,
+    "FULL": 18,
+    "NONE": 767,
+    "UNIT_MISMATCH": 202,
+    "PARTIAL": 28,
+    "NO_CATALOGUE_UNIT": 11
+   },
+   "without_rule2": {
+    "UNKNOWN": {
+     "lines": 708,
+     "pct": 20.07
+    },
+    "UNIT_MISMATCH": {
+     "lines": 624,
+     "pct": 17.69
+    },
+    "NO_CATALOGUE_UNIT": {
+     "lines": 11,
+     "pct": 0.31
+    },
+    "FULL": {
+     "lines": 69,
+     "pct": 1.96
+    },
+    "PARTIAL": {
+     "lines": 64,
+     "pct": 1.81
+    },
+    "NONE": {
+     "lines": 2051,
+     "pct": 58.15
+    }
+   },
+   "with_rule2_pct_of_all_lines": {
+    "UNKNOWN": {
+     "lines": 670,
+     "pct": 19.0
+    },
+    "UNIT_MISMATCH": {
+     "lines": 586,
+     "pct": 16.61
+    },
+    "NO_CATALOGUE_UNIT": {
+     "lines": 11,
+     "pct": 0.31
+    },
+    "FULL": {
+     "lines": 69,
+     "pct": 1.96
+    },
+    "PARTIAL": {
+     "lines": 56,
+     "pct": 1.59
+    },
+    "NONE": {
+     "lines": 2029,
+     "pct": 57.53
+    },
+    "PRODUCTION_RULE2": {
+     "lines": 106,
+     "pct": 3.01
+    }
+   },
+   "rule2_detail": {
+    "forced_production_lines": 106,
+    "forced_pct": 3.01,
+    "classes_of_remaining_lines": {
+     "UNKNOWN": {
+      "lines": 670,
+      "pct": 19.58
+     },
+     "UNIT_MISMATCH": {
+      "lines": 586,
+      "pct": 17.13
+     },
+     "NO_CATALOGUE_UNIT": {
+      "lines": 11,
+      "pct": 0.32
+     },
+     "FULL": {
+      "lines": 69,
+      "pct": 2.02
+     },
+     "PARTIAL": {
+      "lines": 56,
+      "pct": 1.64
+     },
+     "NONE": {
+      "lines": 2029,
+      "pct": 59.31
+     }
+    },
+    "remaining_lines": 3421,
+    "sh_stores_FULL_lines_after_rule2": 69,
+    "sh_stores_FULL_pct_of_all_lines_after_rule2": 1.96
+   },
+   "unit_pairs_among_mismatches_items": null
+  },
+  "set_b_strict": {
+   "items": {
+    "UNKNOWN": 243,
+    "UNIT_MISMATCH": 561,
+    "NONE": 329,
+    "PARTIAL": 97,
+    "FULL": 28,
+    "NO_CATALOGUE_UNIT": 11
+   },
+   "without_rule2": {
+    "UNKNOWN": {
+     "lines": 708,
+     "pct": 20.07
+    },
+    "UNIT_MISMATCH": {
+     "lines": 1656,
+     "pct": 46.95
+    },
+    "NO_CATALOGUE_UNIT": {
+     "lines": 11,
+     "pct": 0.31
+    },
+    "FULL": {
+     "lines": 112,
+     "pct": 3.18
+    },
+    "PARTIAL": {
+     "lines": 273,
+     "pct": 7.74
+    },
+    "NONE": {
+     "lines": 767,
+     "pct": 21.75
+    }
+   },
+   "with_rule2_pct_of_all_lines": {
+    "UNKNOWN": {
+     "lines": 670,
+     "pct": 19.0
+    },
+    "UNIT_MISMATCH": {
+     "lines": 1601,
+     "pct": 45.39
+    },
+    "NO_CATALOGUE_UNIT": {
+     "lines": 11,
+     "pct": 0.31
+    },
+    "FULL": {
+     "lines": 112,
+     "pct": 3.18
+    },
+    "PARTIAL": {
+     "lines": 268,
+     "pct": 7.6
+    },
+    "NONE": {
+     "lines": 759,
+     "pct": 21.52
+    },
+    "PRODUCTION_RULE2": {
+     "lines": 106,
+     "pct": 3.01
+    }
+   },
+   "rule2_detail": {
+    "forced_production_lines": 106,
+    "forced_pct": 3.01,
+    "classes_of_remaining_lines": {
+     "UNKNOWN": {
+      "lines": 670,
+      "pct": 19.58
+     },
+     "UNIT_MISMATCH": {
+      "lines": 1601,
+      "pct": 46.8
+     },
+     "NO_CATALOGUE_UNIT": {
+      "lines": 11,
+      "pct": 0.32
+     },
+     "FULL": {
+      "lines": 112,
+      "pct": 3.27
+     },
+     "PARTIAL": {
+      "lines": 268,
+      "pct": 7.83
+     },
+     "NONE": {
+      "lines": 759,
+      "pct": 22.19
+     }
+    },
+    "remaining_lines": 3421,
+    "sh_stores_FULL_lines_after_rule2": 112,
+    "sh_stores_FULL_pct_of_all_lines_after_rule2": 3.18
+   },
+   "unit_pairs_among_mismatches_items": {
+    "pcs -> nos": 210,
+    "pcs -> Nos": 123,
+    "box -> nos": 89,
+    "box -> pcs": 51,
+    "nos -> PCS": 25,
+    "Pks -> PACK": 19,
+    "box -> Nos": 16,
+    "Pks -> PCS": 9,
+    "pcs -> box": 7,
+    "nos -> PACK": 6,
+    " -> pcs": 3,
+    " -> Nos": 2,
+    "nos -> pcs": 1
+   }
+  },
+  "set_b_alias": {
+   "items": {
+    "UNKNOWN": 243,
+    "FULL": 70,
+    "NONE": 603,
+    "PARTIAL": 140,
+    "UNIT_MISMATCH": 202,
+    "NO_CATALOGUE_UNIT": 11
+   },
+   "without_rule2": {
+    "UNKNOWN": {
+     "lines": 708,
+     "pct": 20.07
+    },
+    "UNIT_MISMATCH": {
+     "lines": 624,
+     "pct": 17.69
+    },
+    "NO_CATALOGUE_UNIT": {
+     "lines": 11,
+     "pct": 0.31
+    },
+    "FULL": {
+     "lines": 271,
+     "pct": 7.68
+    },
+    "PARTIAL": {
+     "lines": 400,
+     "pct": 11.34
+    },
+    "NONE": {
+     "lines": 1513,
+     "pct": 42.9
+    }
+   },
+   "with_rule2_pct_of_all_lines": {
+    "UNKNOWN": {
+     "lines": 670,
+     "pct": 19.0
+    },
+    "UNIT_MISMATCH": {
+     "lines": 586,
+     "pct": 16.61
+    },
+    "NO_CATALOGUE_UNIT": {
+     "lines": 11,
+     "pct": 0.31
+    },
+    "FULL": {
+     "lines": 264,
+     "pct": 7.49
+    },
+    "PARTIAL": {
+     "lines": 395,
+     "pct": 11.2
+    },
+    "NONE": {
+     "lines": 1495,
+     "pct": 42.39
+    },
+    "PRODUCTION_RULE2": {
+     "lines": 106,
+     "pct": 3.01
+    }
+   },
+   "rule2_detail": {
+    "forced_production_lines": 106,
+    "forced_pct": 3.01,
+    "classes_of_remaining_lines": {
+     "UNKNOWN": {
+      "lines": 670,
+      "pct": 19.58
+     },
+     "UNIT_MISMATCH": {
+      "lines": 586,
+      "pct": 17.13
+     },
+     "NO_CATALOGUE_UNIT": {
+      "lines": 11,
+      "pct": 0.32
+     },
+     "FULL": {
+      "lines": 264,
+      "pct": 7.72
+     },
+     "PARTIAL": {
+      "lines": 395,
+      "pct": 11.55
+     },
+     "NONE": {
+      "lines": 1495,
+      "pct": 43.7
+     }
+    },
+    "remaining_lines": 3421,
+    "sh_stores_FULL_lines_after_rule2": 264,
+    "sh_stores_FULL_pct_of_all_lines_after_rule2": 7.49
+   },
+   "unit_pairs_among_mismatches_items": null
+  }
+ }
+}

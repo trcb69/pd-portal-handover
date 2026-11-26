@@ -1,0 +1,403 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Stock Flow Rulebook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F4F6F7; --surface:#FFFFFF; --ink:#16202A; --muted:#566370; --rule:#D5DCE1;
+  --sh:#9A5B08; --sh-tint:#FBEFD9; --sps:#0D6A71; --sps-tint:#DFF0F0;
+  --rec:#6B4FA0; --rec-tint:#EFEAF8; --bad:#B3261E; --bad-tint:#FBE9E7; --ok:#2E7A4C;
+  --display:"Archivo","Helvetica Neue",Arial,sans-serif; --body:"IBM Plex Sans","Segoe UI",Roboto,sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --ground:#0E1418; --surface:#162027; --ink:#E4EAEE; --muted:#9AA8B3; --rule:#2C3942;
+  --sh:#E3A452; --sh-tint:#2B2213; --sps:#56BAC1; --sps-tint:#0F2A2C;
+  --rec:#B9A2E8; --rec-tint:#241C35; --bad:#F08A80; --bad-tint:#321A18; --ok:#6CC592;
+}}
+:root[data-theme="dark"]{
+  --ground:#0E1418; --surface:#162027; --ink:#E4EAEE; --muted:#9AA8B3; --rule:#2C3942;
+  --sh:#E3A452; --sh-tint:#2B2213; --sps:#56BAC1; --sps-tint:#0F2A2C;
+  --rec:#B9A2E8; --rec-tint:#241C35; --bad:#F08A80; --bad-tint:#321A18; --ok:#6CC592;
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font:15px/1.6 var(--body);margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:20px;padding-block:28px 64px}
+h1,h2,h3{font-family:var(--display);line-height:1.2;text-wrap:balance;margin:0}
+h1{font-size:clamp(28px,4.4vw,40px);font-weight:700;letter-spacing:-.01em}
+h2{font-size:24px;font-weight:700;margin-top:8px}
+h3{font-size:17px;font-weight:600}
+p{margin:0;max-width:68ch}
+.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+header{display:grid;gap:12px;padding-bottom:20px;border-bottom:1px solid var(--rule)}
+.lede{font-size:17px;color:var(--muted)}
+nav{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px}
+nav a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--rule)}
+nav a:hover,nav a:focus-visible{border-color:var(--ink)}
+a:focus-visible{outline:2px solid var(--sps);outline-offset:2px}
+section{display:grid;gap:16px;padding-block:36px 8px}
+.key{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:13px;color:var(--muted)}
+.key span{display:inline-flex;align-items:center;gap:8px}
+.sw{width:22px;height:12px;border-radius:3px;border:1.5px solid}
+.sw.sh{background:var(--sh-tint);border-color:var(--sh)} .sw.sps{background:var(--sps-tint);border-color:var(--sps)}
+.sw.rec{background:var(--rec-tint);border-color:var(--rec);border-style:dashed}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+figure{margin:0;display:grid;gap:10px}
+figcaption{font-size:13px;color:var(--muted);max-width:80ch}
+.map{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:10px}
+.map svg{display:block;width:100%;min-width:1000px;height:auto;color:var(--ink);font-family:var(--body)}
+.map .lane{stroke-width:1} .map .lane.sh{fill:var(--sh-tint);stroke:var(--sh)} .map .lane.sps{fill:var(--sps-tint);stroke:var(--sps)}
+.map .lt{font:600 12px var(--mono);letter-spacing:.06em} .map .lt.sh{fill:var(--sh)} .map .lt.sps{fill:var(--sps)}
+.map .side{fill:var(--surface);stroke:var(--rule)}
+.map .st{font:700 15px var(--display);fill:var(--ink)}
+.map .n rect{fill:var(--surface);stroke-width:1.5}
+.map .n.sh rect{stroke:var(--sh)} .map .n.sps rect{stroke:var(--sps)}
+.map .n.wh rect{fill:var(--sps-tint);stroke-width:2.5}
+.map .n.gap rect{stroke:var(--rec);fill:var(--rec-tint)}
+.map .n:hover rect,.map .n:focus rect{stroke-width:3}
+.map .t1{font:600 13px var(--body);fill:var(--ink)} .map .t2{font:400 11px var(--body);fill:var(--muted)}
+.map .e{fill:none;stroke:currentColor;stroke-width:1.4} .map .e.soft{stroke:var(--muted);stroke-dasharray:3 3;stroke-width:1}
+.map .el{font:500 11px var(--mono);fill:var(--muted)}
+.map .sys{fill:var(--surface);stroke:var(--ink);stroke-width:1.5;stroke-dasharray:6 4}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:18px;display:grid;gap:10px;align-content:start}
+.card.sh{border-top:4px solid var(--sh)} .card.sps{border-top:4px solid var(--sps)}
+.mermaid{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:14px;margin:0;overflow-x:auto;font-size:13px}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:720px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--rule)}
+th{font:600 12px var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted);background:var(--surface)}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.tablebox{background:var(--surface);border:1px solid var(--rule);border-radius:10px;overflow-x:auto}
+code,.mono{font-family:var(--mono);font-size:.92em}
+.pill{display:inline-block;font:500 11px/1.6 var(--mono);padding:0 7px;border-radius:99px;border:1px solid;white-space:nowrap}
+.pill.bad{color:var(--bad);background:var(--bad-tint);border-color:var(--bad)}
+.pill.rec{color:var(--rec);background:var(--rec-tint);border-color:var(--rec)}
+.pill.ok{color:var(--ok);border-color:var(--ok)}
+.steps{counter-reset:s;list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.steps>li{counter-increment:s;display:grid;grid-template-columns:34px 1fr;gap:4px 12px;scroll-margin-top:16px}
+.steps>li::before{content:counter(s);grid-row:span 3;font:700 15px var(--display);width:28px;height:28px;border-radius:50%;display:grid;place-items:center;border:1.5px solid currentColor}
+.steps.sh>li::before{color:var(--sh)} .steps.sps>li::before{color:var(--sps)}
+.steps .rule{font-size:14px}
+.steps .why{font-size:13px;color:var(--muted)}
+.steps li:target{background:var(--rec-tint);border-radius:8px}
+ul.plain{margin:0;padding-left:18px;display:grid;gap:6px}
+.note{border-left:3px solid var(--rec);padding:4px 0 4px 14px;color:var(--ink);max-width:80ch}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--rule);font-size:13px;color:var(--muted);display:grid;gap:6px}
+@media (max-width:640px){.wrap{padding-inline:16px}.steps>li{grid-template-columns:28px 1fr}}
+@media print{nav{display:none}.map svg{min-width:0}section{break-inside:auto}.card,.steps>li,figure{break-inside:avoid}body{font-size:12.5px}}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">SmartPack + Standard Holdings · stock control · 19 Sep 2026</div>
+  <h1>How stock should move, and who records each step</h1>
+  <p class="lede">One map of stock from supplier to customer across both companies, the procedure for Abdullah (SH stock) and Ilham (SPS stores), and the checks our stock system runs every day. The stock system is our own software built on top of Zoho, like the production dashboard: it reads Zoho, never writes to it, and gives Abdullah and Ilham their own screens.</p>
+  <nav aria-label="Sections">
+    <a href="#map">The whole map</a><a href="#zoho-moves">When Zoho moves stock</a><a href="#today">What Zoho shows today</a><a href="#flows">Flowcharts</a><a href="#abdullah">Abdullah's procedure</a><a href="#ilham">Ilham's procedure</a><a href="#checks">Daily checks</a><a href="#open">Still to confirm</a>
+  </nav>
+</header>
+
+<section id="map">
+  <div class="eyebrow">1 · The whole map</div>
+  <h2>Two companies, one stock chain</h2>
+  <p>Stock enters from suppliers on the left and leaves to customers on the right. SmartPack makes the customised items and sends them to SH; SH sells everything to the customer. Every arrow is a Zoho document. Click a box to jump to its rule.</p>
+  <div class="key"><span><i class="sw sh"></i>SH · Rizwan's department</span><span><i class="sw sps"></i>SPS factory (thick = a Zoho warehouse)</span><span><i class="sw rec"></i>Recommended: not confirmed as today's practice</span></div>
+  <figure>
+    <div class="map scroll"><svg viewBox="0 0 1440 700" role="img" aria-label="Stock flow across Standard Holdings and SmartPack: buying, goods-in, warehouses, production, dispatch to SH, and the daily stock check."><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs><rect x="166" y="40" width="1104" height="310" rx="10" class="lane sh"/><text x="182" y="62" class="lt sh">STANDARD HOLDINGS · Food Packaging division (Rizwan)</text><rect x="166" y="428" width="1104" height="252" rx="10" class="lane sps"/><text x="182" y="450" class="lt sps">SMARTPACK (SPS) · factory</text><rect x="16" y="40" width="130" height="640" rx="10" class="side"/><text x="81" y="356" text-anchor="middle" class="st">Suppliers</text><text x="81" y="374" text-anchor="middle" class="t2">paper, board, film,</text><text x="81" y="388" text-anchor="middle" class="t2">trading stock</text><rect x="1290" y="40" width="134" height="640" rx="10" class="side"/><text x="1357" y="356" text-anchor="middle" class="st">Customers</text><text x="1357" y="374" text-anchor="middle" class="t2">restaurants, retail,</text><text x="1357" y="388" text-anchor="middle" class="t2">branches</text><a href="#ab-reorder" class="n sh"><rect x="190" y="76" width="150" height="50" rx="6"/><text x="265.0" y="97" text-anchor="middle" class="t1">Reorder list</text><text x="265.0" y="114" text-anchor="middle" class="t2">Abdullah · Excel</text></a><a href="#ab-reorder" class="n sh"><rect x="402" y="76" width="150" height="50" rx="6"/><text x="477.0" y="97" text-anchor="middle" class="t1">Check list</text><text x="477.0" y="114" text-anchor="middle" class="t2">Rizwan</text></a><a href="#ab-reorder" class="n sh"><rect x="614" y="76" width="150" height="50" rx="6"/><text x="689.0" y="97" text-anchor="middle" class="t1">Raise PO</text><text x="689.0" y="114" text-anchor="middle" class="t2">Nazmi · Zoho SH</text></a><a href="#ab-reorder" class="n sh"><rect x="826" y="76" width="150" height="50" rx="6"/><text x="901.0" y="97" text-anchor="middle" class="t1">Approve PO</text><text x="901.0" y="114" text-anchor="middle" class="t2">COO · Zoho SH</text></a><path d="M340,101 L402,101" class="e" marker-end="url(#ah)"/><text x="371" y="95" text-anchor="middle" class="el">list</text><path d="M552,101 L614,101" class="e" marker-end="url(#ah)"/><text x="583" y="95" text-anchor="middle" class="el">checked</text><path d="M764,101 L826,101" class="e" marker-end="url(#ah)"/><text x="795" y="95" text-anchor="middle" class="el">draft</text><path d="M901,76 L901,24 L146,24" class="e" marker-end="url(#ah)"/><text x="560" y="18" text-anchor="middle" class="el">approved PO goes to the supplier</text><a href="#ab-receive" class="n sh"><rect x="190" y="176" width="150" height="50" rx="6"/><text x="265.0" y="197" text-anchor="middle" class="t1">Goods-in</text><text x="265.0" y="214" text-anchor="middle" class="t2">Abdullah · receive</text></a><a href="#ab-count" class="n sh"><rect x="402" y="176" width="150" height="50" rx="6"/><text x="477.0" y="197" text-anchor="middle" class="t1">SH stock</text><text x="477.0" y="214" text-anchor="middle" class="t2">10 locations</text></a><a href="#ab-orders" class="n sh"><rect x="614" y="176" width="150" height="50" rx="6"/><text x="689.0" y="197" text-anchor="middle" class="t1">Sales order + picklist</text><text x="689.0" y="214" text-anchor="middle" class="t2">Team 03 · Senuri</text></a><a href="#ab-orders" class="n sh"><rect x="826" y="176" width="150" height="50" rx="6"/><text x="901.0" y="197" text-anchor="middle" class="t1">Arrange, check, pack</text><text x="901.0" y="214" text-anchor="middle" class="t2">Teams 03 + 02</text></a><a href="#ab-orders" class="n sh"><rect x="1038" y="176" width="150" height="50" rx="6"/><text x="1113.0" y="197" text-anchor="middle" class="t1">Ship + invoice</text><text x="1113.0" y="214" text-anchor="middle" class="t2">Team 02</text></a><a href="#ab-sps" class="n sh gap"><rect x="1038" y="276" width="150" height="50" rx="6" stroke-dasharray="5 4"/><text x="1113.0" y="297" text-anchor="middle" class="t1">Receive from SPS</text><text x="1113.0" y="314" text-anchor="middle" class="t2">Abdullah · recommended</text></a><path d="M146,201 L190,201" class="e" marker-end="url(#ah)"/><text x="168" y="195" text-anchor="middle" class="el">goods</text><path d="M340,201 L402,201" class="e" marker-end="url(#ah)"/><text x="371" y="195" text-anchor="middle" class="el">stock +</text><path d="M552,201 L614,201" class="e" marker-end="url(#ah)"/><text x="583" y="195" text-anchor="middle" class="el">stock</text><path d="M764,201 L826,201" class="e" marker-end="url(#ah)"/><text x="795" y="195" text-anchor="middle" class="el">pick</text><path d="M976,201 L1038,201" class="e" marker-end="url(#ah)"/><text x="1007" y="195" text-anchor="middle" class="el">packed</text><path d="M1188,201 L1290,201" class="e" marker-end="url(#ah)"/><text x="1239" y="194" text-anchor="middle" class="el">shipment</text><path d="M477,176 L477,152 L265,152 L265,126" class="e" marker-end="url(#ah)"/><text x="370" y="147" text-anchor="middle" class="el">below buffer</text><path d="M1038,301 L901,301 L901,226" class="e" marker-end="url(#ah)"/><text x="970" y="295" text-anchor="middle" class="el">for the order</text><rect x="190" y="366" width="362" height="46" rx="23" class="sys"/><text x="371" y="386" text-anchor="middle" class="t1">Our stock system</text><text x="371" y="403" text-anchor="middle" class="t2">built on top of Zoho · reads both orgs · never writes</text><path d="M280,366 L280,350" class="e soft"/><path d="M280,412 L280,428" class="e soft"/><text x="288" y="360" class="el">error lists</text><a href="#il-receive" class="n sps gap"><rect x="190" y="468" width="150" height="50" rx="6" stroke-dasharray="5 4"/><text x="265.0" y="489" text-anchor="middle" class="t1">Raise PO</text><text x="265.0" y="506" text-anchor="middle" class="t2">purchasing · recommended</text></a><a href="#il-count" class="n sps"><rect x="402" y="468" width="150" height="50" rx="6"/><text x="477.0" y="489" text-anchor="middle" class="t1">Count + correct</text><text x="477.0" y="506" text-anchor="middle" class="t2">Ilham · daily list</text></a><a href="#il-dispatch" class="n sps"><rect x="1038" y="468" width="150" height="50" rx="6"/><text x="1113.0" y="489" text-anchor="middle" class="t1">Invoice (ITN) to SH</text><text x="1113.0" y="506" text-anchor="middle" class="t2">Darshani</text></a><path d="M190,493 L146,493" class="e" marker-end="url(#ah)"/><text x="168" y="487" text-anchor="middle" class="el">PO</text><a href="#il-receive" class="n sps gap"><rect x="190" y="600" width="150" height="50" rx="6" stroke-dasharray="5 4"/><text x="265.0" y="621" text-anchor="middle" class="t1">Goods-in</text><text x="265.0" y="638" text-anchor="middle" class="t2">Ilham · recommended</text></a><a href="#il-issue" class="n sps wh"><rect x="402" y="600" width="150" height="50" rx="6"/><text x="477.0" y="621" text-anchor="middle" class="t1">Raw Material WH</text><text x="477.0" y="638" text-anchor="middle" class="t2">Zoho warehouse</text></a><a href="#il-produce" class="n sps wh"><rect x="614" y="600" width="150" height="50" rx="6"/><text x="689.0" y="621" text-anchor="middle" class="t1">Production (WIP)</text><text x="689.0" y="638" text-anchor="middle" class="t2">bundles · coordinators</text></a><a href="#il-finish" class="n sps wh"><rect x="826" y="600" width="150" height="50" rx="6"/><text x="901.0" y="621" text-anchor="middle" class="t1">Finished Goods WH</text><text x="901.0" y="638" text-anchor="middle" class="t2">Zoho warehouse</text></a><a href="#il-dispatch" class="n sps"><rect x="1038" y="600" width="150" height="50" rx="6"/><text x="1113.0" y="621" text-anchor="middle" class="t1">Package + shipment</text><text x="1113.0" y="638" text-anchor="middle" class="t2">Ilham</text></a><path d="M146,625 L190,625" class="e" marker-end="url(#ah)"/><text x="168" y="619" text-anchor="middle" class="el">goods</text><path d="M340,625 L402,625" class="e" marker-end="url(#ah)"/><text x="371" y="619" text-anchor="middle" class="el">stock +</text><path d="M552,625 L614,625" class="e" marker-end="url(#ah)"/><text x="583" y="619" text-anchor="middle" class="el">issue</text><path d="M764,625 L826,625" class="e" marker-end="url(#ah)"/><text x="795" y="619" text-anchor="middle" class="el">finished</text><path d="M976,625 L1038,625" class="e" marker-end="url(#ah)"/><text x="1007" y="619" text-anchor="middle" class="el">pick</text><path d="M1113,600 L1113,518" class="e" marker-end="url(#ah)"/><text x="1121" y="568" text-anchor="start" class="el">shipped</text><path d="M1113,468 L1113,326" class="e" marker-end="url(#ah)"/><text x="1121" y="400" text-anchor="start" class="el">goods + ITN to SH</text><path d="M477,518 L477,600" class="e soft"/><path d="M477,518 L689,600" class="e soft"/><path d="M477,518 L901,600" class="e soft"/><path d="M689,226 L689,600" class="e" marker-end="url(#ah)"/><text x="697.0" y="306" class="el">customised item</text><text x="697.0" y="320" class="el">→ SPS job</text><text x="462" y="592" class="el">transfer order</text></svg></div>
+    <figcaption>Stock is counted in five places: SH's locations and SPS's three warehouses (Raw Material, Work In Progress, Finished Goods). Our stock system sits between the companies. It only reads Zoho, and gives each person a daily list of what doesn't tally.</figcaption>
+  </figure>
+</section>
+
+<section id="zoho-moves">
+  <div class="eyebrow">2 · When Zoho moves stock</div>
+  <h2>A sales order reserves stock. A shipment takes it away.</h2>
+  <p>Zoho keeps two stock figures. <b>Physical stock</b> goes up on a purchase receive and down on a shipment. <b>Accounting stock</b> goes up on a bill and down on an invoice. Each organisation chooses which one its screens show (Settings → Preferences → Items). Our stock system compares shelf counts with <b>physical</b> stock, because that is what a count can check.</p>
+  <div class="grid2">
+    <div class="tablebox"><table style="min-width:0">
+      <thead><tr><th>Stock out (sales)</th><th>Effect in Zoho</th></tr></thead>
+      <tbody>
+        <tr><td>Sales order</td><td>Reserves stock ("committed"). The shelf count is unchanged; "available for sale" drops</td></tr>
+        <tr><td>Picklist</td><td>Nothing</td></tr>
+        <tr><td>Package</td><td>Nothing</td></tr>
+        <tr><td><b>Shipment</b></td><td><b>− physical stock</b>, when the shipment is created</td></tr>
+        <tr><td>Invoice</td><td>− accounting stock</td></tr>
+        <tr><td>Marked delivered</td><td>Nothing (a status; the shipment already deducted)</td></tr>
+      </tbody>
+    </table></div>
+    <div class="tablebox"><table style="min-width:0">
+      <thead><tr><th>Stock in (buying)</th><th>Effect in Zoho</th></tr></thead>
+      <tbody>
+        <tr><td>Purchase order</td><td>Nothing (shows as "on order")</td></tr>
+        <tr><td><b>Purchase receive</b></td><td><b>+ physical stock</b></td></tr>
+        <tr><td>Bill</td><td>+ accounting stock</td></tr>
+        <tr><td>Transfer order</td><td>Moves stock between warehouses; total unchanged</td></tr>
+        <tr><td>Bundle (assembly)</td><td>− components, + finished item</td></tr>
+        <tr><td>Adjustment</td><td>+ or − directly</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+  <h3>Where a cancelled order breaks stock</h3>
+  <div class="tablebox"><table>
+    <thead><tr><th>Cancelled after</th><th>What Zoho shows</th><th>What must be done</th></tr></thead>
+    <tbody>
+      <tr><td>Sales order only</td><td>Shelf count right, but the stock stays <b>reserved</b> until the order is voided or closed</td><td>Void or close the sales order</td></tr>
+      <tr><td>Package</td><td>Same; the package blocks the void</td><td>Delete the package, then void the order</td></tr>
+      <tr><td><b>Shipment</b></td><td><span class="pill bad">error</span> Shelf count <b>already reduced</b>, but the goods are still in the store. Voiding the order does not bring them back</td><td>Goods never left: delete the shipment. Goods came back: sales return + receive</td></tr>
+      <tr><td>Invoice</td><td>Accounting stock reduced</td><td>Credit note as well</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Seen in SmartPack's Zoho on 19 Sep 2026: 1,807 sales orders are still open, 1,626 of them older than 60 days. They keep stock reserved, so 686 items show more reserved than on the shelf (12oz white paper cup: 106,520 on hand, 921,628 reserved). 88 items have physical and accounting stock that disagree (invoiced but not shipped, or the reverse). SH not yet checked.</p>
+</section>
+
+<section id="today">
+  <div class="eyebrow">3 · What Zoho shows today (SPS, pulled 19 Sep 2026)</div>
+  <h2>SPS has three warehouses but uses one</h2>
+  <p>SmartPack's Zoho has a Raw Material, a Work In Progress and a Finished Goods warehouse, but nearly all movement happens inside Work In Progress. So Zoho can't say where material physically is, and shortages show up as negative stock.</p>
+  <div class="tablebox"><table>
+    <thead><tr><th>What we measured</th><th>Figure</th><th>What it means</th></tr></thead>
+    <tbody>
+      <tr><td>Items holding stock in each warehouse</td><td class="num">Raw Material 105 · WIP 1,101 · Finished Goods 4</td><td>Material is received and used up in WIP; finished goods are rarely moved to Finished Goods.</td></tr>
+      <tr><td>Raw-material items (423) by where their stock sits</td><td class="num">WIP only 266 · RM only 49 · both 56 · none 51</td><td>Most raw material never enters the raw-material store in Zoho.</td></tr>
+      <tr><td>Transfer orders ever made</td><td class="num">47 (Aug 2025 – Sep 2026)</td><td>The step "issue material to production" is on paper, not in Zoho.</td></tr>
+      <tr><td>Items negative inside WIP</td><td class="num">23 <span class="pill bad">error</span></td><td>E.g. White Paper 40gsm PE −25,568 sheets, Kraft Board 300gsm −12,140 sheets: used on the floor while Zoho still has them in the raw-material store.</td></tr>
+      <tr><td>Items negative overall</td><td class="num">7 <span class="pill bad">error</span></td><td>E.g. Wooden Fork Pouch (Spar SL) −16,000 pcs: shipped before it was assembled or received.</td></tr>
+      <tr><td>Goods-in entry delay (purchase receives, last 12 months)</td><td class="num">median 2 days · 90% within 5 · max 14</td><td>For 2–5 days, Zoho shows less stock than the shelf holds, so a raw-material check could report a shortage that isn't real.</td></tr>
+      <tr><td>Reorder levels set in Zoho</td><td class="num">SPS 7 of 3,331 · SH 116 of 12,006</td><td>Buffer limits live in Abdullah's Excel, not in Zoho, so no system can raise the reorder list automatically.</td></tr>
+      <tr><td>Stock adjustments, last 12 months</td><td class="num">2,910: damaged 2,278 · stock count 364 · packing reinstatement 187 · B-grade 73</td><td>373 have no job number. Stock-count corrections come in bursts (133 in Jul 2026), not as routine counts. 215 of 364 counts found <em>more</em> stock than Zoho: movements are going unrecorded.</td></tr>
+      <tr><td>Open purchase orders</td><td class="num">68, of which 27 older than 60 days</td><td>Either goods never arrived or the receive was never recorded.</td></tr>
+      <tr><td>Recipes (BOMs)</td><td class="num">2,456; 762 active ones use an inactive component</td><td>A production check against these recipes would ask for material nobody stocks any more.</td></tr>
+      <tr><td>Production records (bundles, last 12 months)</td><td class="num">5,712; 90% entered within 1 day</td><td>Bundles are recorded on time, by the coordinators (Umanda, Nirmani, Madushi, Nimesha). This is the step that works.</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">SH figures are limited: the SH Zoho login we use sees only Head Office (1 of 10 locations). SH checks start fully once an SH admin grants access to all locations.</p>
+</section>
+
+<section id="flows">
+  <div class="eyebrow">4 · Flowcharts</div>
+  <h2>Each process, step by step</h2>
+  <div class="grid2">
+    <figure><h3>A · SH buying (Rizwan's department)</h3>
+<pre class="mermaid">
+flowchart TD
+  A[Zoho: items at or below reorder level<br/>SH stock, all locations] --> B[Abdullah: reorder list<br/>qty = buffer limit minus stock]
+  B --> C{Rizwan checks}
+  C -->|changes| B
+  C -->|ok| D[Nazmi raises PO in Zoho SH]
+  D --> E{COO approves in Zoho}
+  E -->|rejected| B
+  E -->|approved| F[PO sent to supplier]
+  F --> G[Goods arrive at SH location]
+  G --> H[Abdullah: count against PO,<br/>purchase receive same day]
+  H --> I[SH stock +]
+</pre><figcaption>Recommended change: keep the buffer limits as Zoho reorder levels, so step A is a Zoho list instead of a hand-built Excel.</figcaption></figure>
+    <figure><h3>B · SPS buying and goods-in</h3>
+<pre class="mermaid">
+flowchart TD
+  A[Zoho SPS: raw material at or below reorder level] --> B[Ilham: reorder list]
+  B --> C{Production GM checks}
+  C -->|ok| D[Purchasing raises PO in Zoho SPS]
+  D --> E{Approval in Zoho}
+  E -->|approved| F[Supplier delivers]
+  F --> G[Ilham: count against PO]
+  G -->|short or damaged| X[Record the difference on the receive,<br/>note to purchasing]
+  G --> H[Purchase receive into<br/>Raw Material Warehouse, same day]
+  X --> H
+</pre><figcaption>Recommended: SPS copies the SH approval pattern. Today SPS buys directly (mostly from Ranhiru: 1,098 receives), and who raises its POs isn't confirmed.</figcaption></figure>
+    <figure><h3>C · Issuing material to production</h3>
+<pre class="mermaid">
+flowchart TD
+  A[Job released to production<br/>recipe × qty = material needed] --> B{Enough stock in<br/>Raw Material WH?}
+  B -->|no| S[Blocker: raw material short<br/>shown to manager + Ilham]
+  S --> R[Reorder or substitute] --> B
+  B -->|yes| C[Ilham issues material]
+  C --> D[Transfer order RM → WIP,<br/>reference = job number, same day]
+  D --> E[Material on the floor]
+  E -->|left over| F[Transfer WIP → RM<br/>return to store]
+</pre><figcaption>Today this step is paper, inferred from the data: only 47 transfers exist, and 23 items are negative in WIP. The transfer order is what makes WIP stock real.</figcaption></figure>
+    <figure><h3>D · Production and finished goods (SPS)</h3>
+<pre class="mermaid">
+flowchart TD
+  A[Production runs the job] --> B[Coordinator records bundle in Zoho<br/>consumes recipe material from WIP]
+  A -->|damage| C[Adjustment: reason + job number<br/>+ what happened]
+  A -->|B-grade| D[Adjustment: Damaged to B-grade]
+  B --> E[Finished goods leave the floor]
+  E --> F[Transfer WIP → Finished Goods WH]
+  F --> G[Ilham: package + shipment<br/>from Finished Goods]
+  G --> H[Darshani: invoice ITN to SH]
+</pre><figcaption>Bundles already work well: 90% are recorded within a day. Missing today: the move to Finished Goods (721 finished items sit in WIP, only 4 in Finished Goods).</figcaption></figure>
+    <figure><h3>E · SPS to SH, and on to the customer</h3>
+<pre class="mermaid">
+flowchart TD
+  A[SH order needs a customised item] --> B[SPS job<br/>SH sales order ref on the SPS SO]
+  B --> C[SPS produces and ships to SH<br/>shipment + ITN invoice]
+  C --> D[Abdullah: receive SPS goods<br/>into SH stock, same day]
+  D --> E[Abdullah arranges the order<br/>for processing]
+  E --> F[Team 03: sales order + picklist]
+  F --> G[Arrange items: Kavinda / Rashaad]
+  G --> H[Team 02: check, pack, ship<br/>Pasindu: stickers]
+  H --> I[Invoice to customer]
+</pre><figcaption>Check: every SPS invoice to SH must have a matching SH receipt. A gap means goods left SPS but never arrived in SH's Zoho.</figcaption></figure>
+    <figure><h3>F · Count and correct (both companies)</h3>
+<pre class="mermaid">
+flowchart TD
+  A[Our stock system picks today's count list<br/>flagged items + fast movers] --> B[Ilham / Abdullah count on the shelf]
+  B --> C{Matches Zoho?}
+  C -->|yes| OK[Mark counted]
+  C -->|no| D[Look for the missing document first<br/>receive, transfer, bundle, shipment]
+  D -->|found| E[Record the missing document]
+  D -->|not found| F{Difference above<br/>value limit?}
+  F -->|no| G[Stock-count adjustment<br/>with reason]
+  F -->|yes| H[Approval: Rizwan for SH,<br/>Production GM for SPS] --> G
+</pre><figcaption>The rule: a count difference is a missing document until proven otherwise. An adjustment is the last step, never the first.</figcaption></figure>
+  </div>
+</section>
+
+<section id="abdullah">
+  <div class="eyebrow">5 · Procedure</div>
+  <h2>Abdullah: SH stock (Rizwan's department)</h2>
+  <ol class="steps sh">
+    <li id="ab-reorder"><h3>Reorder from buffer limits, weekly</h3><p class="rule">Every item's buffer limit is its <b>reorder level in Zoho SH</b>. Each week, take the list of items at or below it, set each quantity to <i>buffer limit − stock on hand − quantity already on open POs</i>, and send it to Rizwan. Nazmi raises the PO in Zoho; the COO approves it in Zoho.</p><p class="why">Today the list is a hand-built Excel, and only 116 of 12,006 SH items have a reorder level. With the levels in Zoho, our stock system builds the list. <span class="pill rec">recommended</span></p></li>
+    <li id="ab-receive"><h3>Record goods-in the same day</h3><p class="rule">Count the delivery against the PO. Record the purchase receive in Zoho on the day the goods arrive, at the location they physically went to. Record short or damaged deliveries on the receive, not later as an adjustment.</p><p class="why">A late receive makes stock look short for days; at SPS the median delay is 2 days.</p></li>
+    <li id="ab-sps"><h3>Receive SmartPack goods into SH stock</h3><p class="rule">When SPS ships to SH (SPS shipment + ITN invoice), record the receipt into SH stock the same day, quoting the SPS invoice number. Then arrange the order for processing: Team 03 sales order and picklist.</p><p class="why">Every SPS invoice to SH must have a matching SH receipt. Our stock system lists unmatched ones daily. <span class="pill rec">recommended owner: Abdullah</span></p></li>
+    <li id="ab-orders"><h3>Stock leaves only against a picklist</h3><p class="rule">Items leave SH stock only through a sales order → picklist → package → shipment (or an IBR for branches). There is no "take now, record later".</p><p class="why">Negative stock is the signal that something left without a document.</p></li>
+    <li id="ab-count"><h3>Count daily, correct with approval</h3><p class="rule">Count the day's list (about 20 items the system flags) at each location. For a difference, look for the missing document first. Only then adjust, with a reason. Differences above the value limit need Rizwan's approval.</p><p class="why">Small daily counts replace the big monthly bursts. The value limit is for Rizwan and the COO to set. <span class="pill rec">recommended</span></p></li>
+  </ol>
+</section>
+
+<section id="ilham">
+  <div class="eyebrow">6 · Procedure</div>
+  <h2>Ilham: SPS stores</h2>
+  <ol class="steps sps">
+    <li id="il-receive"><h3>Goods-in to the Raw Material Warehouse, same day</h3><p class="rule">Count against the PO. Record the purchase receive <b>into Raw Material Warehouse</b> (not WIP) on the day of arrival. Note shortages or damage on the receive.</p><p class="why">Today raw material is received straight into WIP, so the raw-material store has no real stock figure. <span class="pill rec">recommended owner: Ilham</span></p></li>
+    <li id="il-issue"><h3>Issue material only with a transfer order</h3><p class="rule">Every issue to the floor is a Zoho <b>transfer order Raw Material → WIP</b>, with the job number as the reference, made the same day. If a paper slip stays for signatures, its number goes on the transfer order. Material returned from the floor is a transfer back.</p><p class="why">This one step removes the negative WIP stock (23 items) and makes "is the raw material available?" answerable.</p></li>
+    <li id="il-produce"><h3>Production records (coordinators)</h3><p class="rule">Coordinators keep recording bundles on the day. Every damage adjustment carries the reason, the job number and a short description. None blank.</p><p class="why">373 adjustments in 12 months have no job number, so their loss can't be traced to a job or division.</p></li>
+    <li id="il-finish"><h3>Finished goods into the Finished Goods Warehouse</h3><p class="rule">When goods leave the floor, transfer <b>WIP → Finished Goods</b>, or bundle straight into Finished Goods. Pack and ship only from Finished Goods.</p><p class="why">Today 721 finished items hold stock in WIP and 4 in Finished Goods, so "ready to ship" can't be seen.</p></li>
+    <li id="il-dispatch"><h3>Dispatch to SH</h3><p class="rule">Package and shipment from Finished Goods on the day goods leave. Darshani raises the ITN invoice to SH. The SH side records the receipt (Abdullah).</p><p class="why">The shipment date must be the day the goods left, not the day the paperwork was done.</p></li>
+    <li id="il-count"><h3>Count daily, correct with approval</h3><p class="rule">Count the system's daily list in all three warehouses. Look for the missing document first; adjust with a reason only after. Differences above the value limit need the Production GM's approval.</p><p class="why">In 215 of 364 stock counts, more stock was found than Zoho showed, which points to unrecorded receipts and returns. <span class="pill rec">recommended approver</span></p></li>
+  </ol>
+</section>
+
+<section id="checks">
+  <div class="eyebrow">7 · Our stock system</div>
+  <h2>What it checks every morning, and who fixes it</h2>
+  <p>The system reads both Zoho organisations once a day (and on demand), never writes to them, and gives each person a short list. A problem stays on the list until the fix shows up in Zoho.</p>
+  <div class="tablebox"><table>
+    <thead><tr><th>Check</th><th>Finds</th><th>Goes to</th><th>SPS today</th></tr></thead>
+    <tbody>
+      <tr><td>Negative stock, per warehouse</td><td>Goods used or shipped without a document</td><td>Ilham / Abdullah</td><td class="num">23 in WIP, 4 in FG, 7 overall</td></tr>
+      <tr><td>Used in WIP but still in the store</td><td>Material issued on paper with no transfer order</td><td>Ilham</td><td class="num">included in the 23</td></tr>
+      <tr><td>Late goods-in</td><td>Receive recorded more than 1 day after arrival</td><td>Ilham / Abdullah</td><td class="num">half of receives take ≥ 2 days</td></tr>
+      <tr><td>Old open purchase orders</td><td>POs not received after 30 days</td><td>Purchasing (Nazmi)</td><td class="num">68 open, 27 over 60 days</td></tr>
+      <tr><td>Adjustment without job number or reason text</td><td>Losses that can't be traced</td><td>The person who made it</td><td class="num">373 in 12 months</td></tr>
+      <tr><td>Large adjustment without approval</td><td>A correction above the value limit</td><td>Rizwan / Production GM</td><td class="num">limit to be set</td></tr>
+      <tr><td>Backdated records</td><td>Bundles or receives dated more than 2 days before entry</td><td>Coordinators / Ilham</td><td class="num">52 bundles over 7 days</td></tr>
+      <tr><td>Finished goods left in WIP</td><td>Finished items not moved to Finished Goods</td><td>Ilham</td><td class="num">721 items</td></tr>
+      <tr><td>Below reorder level, no open PO</td><td>Items heading for a shortage</td><td>Abdullah / Ilham</td><td class="num">needs reorder levels in Zoho</td></tr>
+      <tr><td>Recipe uses an inactive item</td><td>Recipes that can't be produced as written</td><td>Coordinators / admin</td><td class="num">762 active recipes</td></tr>
+      <tr><td>Raw material for open jobs</td><td>Recipe × order qty vs Raw Material stock</td><td>Production manager + Ilham</td><td class="num">sheet ready for top-20 customers</td></tr>
+      <tr><td>SPS → SH match</td><td>SPS invoice to SH with no SH receipt</td><td>Abdullah</td><td class="num">needs SH access to all locations</td></tr>
+      <tr><td>Old open sales orders</td><td>Orders open over 30 days that still reserve stock</td><td>Team 03 / order owner</td><td class="num">1,626 open over 60 days</td></tr>
+      <tr><td>Cancelled order with a shipment</td><td>Void or cancelled order whose shipment still deducts stock</td><td>Abdullah / Ilham</td><td class="num">to run</td></tr>
+      <tr><td>Invoiced ≠ shipped</td><td>Items whose physical and accounting stock disagree</td><td>Darshani / Ilham</td><td class="num">88 items</td></tr>
+      <tr><td>Count vs Zoho</td><td>Shelf count differs from Zoho</td><td>Ilham / Abdullah</td><td class="num">starts with daily counts</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="open">
+  <div class="eyebrow">8 · Still to confirm</div>
+  <h2>Recommended, not yet confirmed</h2>
+  <p>Where the current practice wasn't known, this page recommends what works best for the software. Confirm or correct these:</p>
+  <ul class="plain">
+    <li>Who raises SPS purchase orders, and who approves them (recommended: Ilham lists, Production GM checks, purchasing raises, approval in Zoho).</li>
+    <li>That Ilham records SPS goods-in, and that Abdullah records SPS goods arriving into SH stock.</li>
+    <li>That material is issued to production on paper today (the data suggests so: 47 transfer orders in 13 months).</li>
+    <li>The value limit above which a stock correction needs approval, and the approvers (recommended: Rizwan for SH, Production GM for SPS).</li>
+    <li>Whether SH receives SPS goods by purchase receive or by another document.</li>
+    <li>SH Zoho access for all 10 locations, so SH checks cover all its stock.</li>
+  </ul>
+</section>
+
+<footer>
+  <div>Source: SmartPack Zoho Inventory, read-only pull 19 Sep 2026 (items, stock per warehouse, 2,456 recipes, 7,446 adjustments, 47 transfer orders, 1,874 POs, 2,186 receives, 11,898 bundles); SH items 19 Sep 2026; Food Packaging team chart. Figures are counts of Zoho records at the time of the pull.</div>
+  <div>Files: <span class="mono">/root/exports/zoho/native/2026-09-19/sps/</span></div>
+</footer>
+</div>
+
+<!--claude-mermaid-runtime-begin:3477-->
+<style>.mermaid-diagram{margin-block:4px}.mermaid-diagram svg{display:block;margin:0 auto;max-width:100%;height:auto}</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.16.1/dist/mermaid.min.js"></script>
+<script>(function(){
+var CFG={"palettes":{"light":{"surface":"#f4efe4","text":"#42392e","line":"#8a7f6d","border":"#7a6c52","bg":"#fffdf8"},"dark":{"surface":"#262b34","text":"#f2f3f5","line":"#a8adb8","border":"#9aa4b8","bg":"#1f232b"}}};
+if(typeof mermaid==='undefined')return;
+var pres=Array.prototype.slice.call(document.querySelectorAll('pre.mermaid')).filter(function(p){if(p.hasAttribute('data-claude-mermaid-claimed'))return false;p.setAttribute('data-claude-mermaid-claimed','1');return true;});
+if(!pres.length)return;
+var mq=window.matchMedia?window.matchMedia('(prefers-color-scheme: dark)'):null;
+var root=document.documentElement;
+var items=pres.map(function(pre){
+var mount=document.createElement('div');mount.className='mermaid-diagram';
+return {pre:pre,mount:mount,src:pre.textContent||''};
+});
+var seq=0;
+var renderGen=0;
+var lastKey='';
+function pageBg(fallback){
+var els=[document.body,document.documentElement];
+for(var i=0;i<els.length;i++){
+var c=els[i]&&getComputedStyle(els[i]).backgroundColor;
+if(c&&c!=='transparent'&&c!=='rgba(0, 0, 0, 0)')return c;
+}
+return fallback;
+}
+function render(){
+var theme=root.getAttribute('data-theme');
+var dark=theme==='dark'||(!!(mq&&mq.matches)&&theme!=='light');
+var pal=dark?CFG.palettes.dark:CFG.palettes.light;
+var bg=pageBg(pal.bg);
+var key=(dark?'d':'l')+'|'+bg;
+if(key===lastKey)return;
+lastKey=key;
+var gen=++renderGen;
+var font=getComputedStyle(document.body).fontFamily||'sans-serif';
+var nat={useMaxWidth:false};
+mermaid.initialize({
+startOnLoad:false,securityLevel:'strict',theme:'base',
+flowchart:nat,sequence:nat,er:nat,state:nat,class:nat,pie:nat,
+gantt:nat,journey:nat,timeline:nat,gitGraph:nat,mindmap:nat,xyChart:nat,
+quadrantChart:nat,sankey:nat,c4:nat,requirement:nat,block:nat,
+packet:nat,kanban:nat,architecture:nat,radar:nat,
+themeVariables:{background:bg,mainBkg:pal.surface,primaryColor:pal.surface,
+primaryTextColor:pal.text,lineColor:pal.line,primaryBorderColor:pal.border,
+nodeBorder:pal.border,clusterBorder:pal.border,edgeLabelBackground:bg,
+clusterBkg:'rgba(127,127,127,0.07)',titleColor:pal.text,
+darkMode:dark,rowOdd:bg,rowEven:'rgba(127,127,127,0.07)',
+attributeBackgroundColorOdd:bg,attributeBackgroundColorEven:'rgba(127,127,127,0.07)',
+fontSize:'16px',fontFamily:font},
+themeCSS:'.node rect, .node circle, .node polygon, .node path, .cluster rect { stroke-width: 2px; }'
+});
+items.forEach(function(it){
+var id='claude-mermaid-'+seq++;
+mermaid.render(id,it.src).then(function(r){
+if(gen!==renderGen)return;
+var prev=it.pre.previousElementSibling;
+if(prev&&prev.className==='mermaid-diagram'&&prev!==it.mount)return;
+it.mount.innerHTML=r.svg;
+if(!it.mount.parentNode)it.pre.parentNode.insertBefore(it.mount,it.pre);
+it.pre.style.display='none';
+},function(){
+var scratch=document.getElementById(id);
+if(scratch)scratch.parentNode.removeChild(scratch);
+scratch=document.getElementById('d'+id);
+if(scratch)scratch.parentNode.removeChild(scratch);
+if(gen!==renderGen)return;
+if(it.mount.parentNode)it.mount.parentNode.removeChild(it.mount);
+it.pre.style.display='';
+});
+});
+}
+render();
+if(mq&&mq.addEventListener)mq.addEventListener('change',render);
+if(typeof MutationObserver!=='undefined')new MutationObserver(render).observe(root,{attributes:true,attributeFilter:['data-theme']});
+})();</script>
+<!--claude-mermaid-runtime-end-->
+
+</body></html>

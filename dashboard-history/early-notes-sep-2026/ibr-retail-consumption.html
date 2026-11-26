@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IBR, Retail and Consumption</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;600&display=swap">
+<style>
+:root{
+  --ground:#ffffff; --panel:#eff2f6; --panel-2:#e3e9f0; --line:#d3dce6; --line-strong:#b6c4d2;
+  --ink:#12202c; --muted:#5b6c7c;
+  --move:#1f5fbf; --move-soft:#e4ecfa;
+  --internal:#a2561d; --internal-soft:#f7ebe0;
+  --done:#12734f; --done-soft:#e0f0e8;
+  --warn:#9a3412;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0d141b; --panel:#161f29; --panel-2:#1d2833; --line:#27333f; --line-strong:#3a4855;
+    --ink:#e6edf4; --muted:#9bacba;
+    --move:#5c9cf5; --move-soft:#152538;
+    --internal:#d98745; --internal-soft:#2a1f16;
+    --done:#2fa878; --done-soft:#11261f;
+    --warn:#f0a377;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0d141b; --panel:#161f29; --panel-2:#1d2833; --line:#27333f; --line-strong:#3a4855;
+  --ink:#e6edf4; --muted:#9bacba;
+  --move:#5c9cf5; --move-soft:#152538;
+  --internal:#d98745; --internal-soft:#2a1f16;
+  --done:#2fa878; --done-soft:#11261f;
+  --warn:#f0a377;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,Segoe UI,sans-serif;
+  font-size:17px; line-height:1.6;
+  padding-block:0 64px; padding-left:16px; padding-right:16px;
+}
+.wrap{max-width:880px; margin:0 auto}
+h1,h2,h3{font-family:Archivo,system-ui,sans-serif; text-wrap:balance; margin:0}
+h1{font-size:clamp(30px,5.2vw,44px); font-weight:700; line-height:1.1; letter-spacing:-.01em}
+h2{font-size:clamp(22px,3.4vw,28px); font-weight:700; line-height:1.2}
+h3{font-size:18px; font-weight:700}
+p{margin:0}
+code,.doc{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:.92em}
+.doc{background:var(--panel); border:1px solid var(--line); border-radius:4px; padding:1px 6px; white-space:nowrap}
+.eyebrow{font-family:"IBM Plex Mono",monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)}
+header.top{border-bottom:2px solid var(--ink); padding-block:40px 20px; display:flex; flex-direction:column; gap:12px}
+header.top .sub{color:var(--muted); max-width:62ch}
+.meta{display:flex; flex-wrap:wrap; gap:8px 22px; font-size:13px; color:var(--muted); font-family:"IBM Plex Mono",monospace}
+section{padding-block:38px; border-bottom:1px solid var(--line); display:flex; flex-direction:column; gap:18px}
+section:last-of-type{border-bottom:0}
+.lede{font-size:19px}
+ol.points,ul.points{margin:0; padding-left:22px; display:flex; flex-direction:column; gap:10px}
+ul.points li::marker{color:var(--muted)}
+.answer{background:var(--panel); border-left:4px solid var(--move); padding:16px 18px; display:flex; flex-direction:column; gap:8px}
+.answer.internal{border-left-color:var(--internal)}
+.answer.same{border-left-color:var(--done)}
+.answer h3{font-size:16px}
+/* step rail */
+.rail{display:flex; flex-wrap:wrap; gap:10px; align-items:stretch}
+.step{flex:1 1 150px; min-width:0; background:var(--panel); border:1px solid var(--line); border-top:3px solid var(--line-strong); padding:12px 13px; display:flex; flex-direction:column; gap:5px}
+.step .n{font-family:"IBM Plex Mono",monospace; font-size:11px; color:var(--muted); letter-spacing:.1em}
+.step .t{font-family:Archivo,sans-serif; font-weight:700; font-size:15px; line-height:1.25}
+.step .d{font-size:13.5px; color:var(--muted); line-height:1.45}
+.step.move{border-top-color:var(--move)}
+.step.internal{border-top-color:var(--internal)}
+.step.done{border-top-color:var(--done)}
+.step.none{border-top-color:var(--line-strong); opacity:.75}
+/* journey */
+.journey{border:1px solid var(--line); background:var(--panel)}
+.journey > header{padding:14px 16px; border-bottom:1px solid var(--line); background:var(--panel-2); display:flex; flex-wrap:wrap; gap:6px 16px; align-items:baseline}
+.journey > header .who{font-family:Archivo,sans-serif; font-weight:700}
+.journey > header .where{font-size:13px; color:var(--muted); font-family:"IBM Plex Mono",monospace}
+.hops{list-style:none; margin:0; padding:6px 16px 16px; display:flex; flex-direction:column}
+.hops li{display:grid; grid-template-columns:76px 1fr; gap:14px; padding-top:12px; position:relative}
+.hops li::before{content:""; position:absolute; left:83px; top:0; bottom:0; width:1px; background:var(--line-strong)}
+.hops li:first-child::before{top:18px}
+.hops li:last-child::before{bottom:auto; height:18px}
+.hops .clock{font-family:"IBM Plex Mono",monospace; font-size:13px; color:var(--muted); text-align:right; font-variant-numeric:tabular-nums; padding-top:1px}
+.hops .what{display:flex; flex-direction:column; gap:3px; padding-left:16px; position:relative}
+.hops .what::before{content:""; position:absolute; left:-5px; top:7px; width:9px; height:9px; border-radius:50%; background:var(--move); outline:3px solid var(--panel)}
+.hops li.internal .what::before{background:var(--internal)}
+.hops li.end .what::before{background:var(--done)}
+.hops .label{font-weight:600; font-size:15px}
+.hops .note{font-size:13.5px; color:var(--muted)}
+/* figures */
+.figs{display:flex; flex-wrap:wrap; gap:10px}
+.fig{flex:1 1 150px; border:1px solid var(--line); padding:12px 14px; display:flex; flex-direction:column; gap:2px}
+.fig .v{font-family:Archivo,sans-serif; font-weight:700; font-size:24px; font-variant-numeric:tabular-nums; line-height:1.1}
+.fig .k{font-size:13px; color:var(--muted); line-height:1.35}
+table{border-collapse:collapse; width:100%; font-size:14.5px}
+.scroll{overflow-x:auto; border:1px solid var(--line)}
+th,td{text-align:left; padding:9px 12px; border-bottom:1px solid var(--line); vertical-align:top}
+th{font-family:"IBM Plex Mono",monospace; font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); font-weight:500; background:var(--panel-2)}
+tr:last-child td{border-bottom:0}
+td .tag{font-size:12.5px; font-family:"IBM Plex Mono",monospace; padding:1px 7px; border-radius:99px; white-space:nowrap}
+.tag.move{background:var(--move-soft); color:var(--move)}
+.tag.internal{background:var(--internal-soft); color:var(--internal)}
+.tag.done{background:var(--done-soft); color:var(--done)}
+.watch{display:flex; flex-direction:column; gap:14px}
+.watch article{display:grid; grid-template-columns:auto 1fr; gap:4px 12px; align-items:baseline}
+.watch .mark{font-family:Archivo,sans-serif; font-weight:700; color:var(--warn); font-size:15px}
+.watch h3{grid-column:2; font-size:16px}
+.watch p{grid-column:2; font-size:15px; color:var(--muted)}
+footer{padding-top:34px; font-size:13.5px; color:var(--muted); display:flex; flex-direction:column; gap:6px}
+@media (max-width:520px){
+  .hops li{grid-template-columns:64px 1fr; gap:10px}
+  .hops li::before{left:69px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <span class="eyebrow">Standard Holdings · read from Zoho, 19 Sep 2026</span>
+  <h1>IBR, retail and consumption, in plain words</h1>
+  <p class="sub">Three things that look like sales but are not the same thing. Every number and document below comes from the SH Zoho data, and three real orders are tracked from keyboard to invoice.</p>
+  <div class="meta">
+    <span>71,982 sales orders</span><span>4,903 transfer orders</span><span>81,866 invoices</span><span>Locations: Head Office · South (Galle) · Central (Kandy)</span>
+  </div>
+</header>
+
+<section>
+  <span class="eyebrow">Question 1</span>
+  <h2>What is an IBR?</h2>
+  <p class="lede"><strong>IBR = Inter-Branch Requisition.</strong> It is a branch asking head office for stock. Galle writes “send me these items”, and head office moves the stock from the factory store to the Galle store.</p>
+  <div class="answer">
+    <h3>The short version</h3>
+    <ul class="points">
+      <li><strong>It is not a sale.</strong> No customer, no price, no invoice. Only stock moving between our own warehouses.</li>
+      <li><strong>In Zoho it is a Transfer Order</strong>, numbered like <span class="doc">TOS-260973-GALLE</span>, with the reason <span class="doc">Interbranch</span>.</li>
+      <li><strong>The IBR number is the branch's own request number</strong>, typed into the transfer order's description: <span class="doc">IBR1070SOU</span>. <em>SOU</em> = South, that is Galle.</li>
+      <li><strong>Only after the transfer arrives</strong> can Galle sell that stock to its own customers, as a normal sales order.</li>
+    </ul>
+  </div>
+  <div class="rail">
+    <div class="step move"><span class="t">Galle asks</span><span class="d">Branch raises IBR numbers, e.g. IBR1070SOU. Requested by Mr. Arshard (Galle).</span></div>
+    <div class="step move"><span class="t">Head office keys it</span><span class="d">Transfer order created in Zoho, IBR numbers written in the description.</span></div>
+    <div class="step move"><span class="t">Stock leaves</span><span class="d">From SPS Kohalwila factory store, marked “in transit”.</span></div>
+    <div class="step done"><span class="t">Galle receives</span><span class="d">Status “transferred”. Southern Warehouse stock goes up.</span></div>
+    <div class="step none"><span class="t">No invoice</span><span class="d">Nothing is billed. It is still our own stock.</span></div>
+  </div>
+  <div class="figs">
+    <div class="fig"><span class="v">685</span><span class="k">transfer orders carrying IBR numbers, Aug 2025 – Sep 2026</span></div>
+    <div class="fig"><span class="v">6.70 M</span><span class="k">units moved on those transfers</span></div>
+    <div class="fig"><span class="v">660</span><span class="k">from the SPS Kohalwila factory store to Galle (25 more from Ranaviru)</span></div>
+    <div class="fig"><span class="v">3,977</span><span class="k">transfer orders with reason “Interbranch”, all branches</span></div>
+  </div>
+  <p><strong>Kandy works the same way but writes no IBR number.</strong> All 684 transfers to the Central warehouse say only “Req by Mr. Akshan for Central”. The IBR numbering is a Galle habit, not a company rule.</p>
+</section>
+
+<section>
+  <span class="eyebrow">Question 2</span>
+  <h2>Retail sales, and what “retail chain” means here</h2>
+  <p class="lede">In Zoho, <strong>Retail</strong> is a tick on the sales order called <em>Order Pick Type</em>. It means a small over-the-counter sale, not a supermarket chain.</p>
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Type of sale</th><th>Orders</th><th>Average value</th><th>Who it is</th></tr></thead>
+      <tbody>
+        <tr><td><span class="tag move">Retail</span></td><td>15,731</td><td>LKR 15,613</td><td>Counter and cash sales: “Cash Customer”, staff sales, small repeat buyers</td></tr>
+        <tr><td><span class="tag move">Bulk</span></td><td>37,839</td><td>LKR 50,539</td><td>Ordinary trade orders, delivered</td></tr>
+        <tr><td><span class="tag move">Key Customer</span></td><td>8,003</td><td>LKR 60,668</td><td><strong>The actual chains</strong>: Spar 811 orders, Jaykay (Keells) 562</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul class="points">
+    <li><strong>Retail happens at two places only:</strong> Head Office 13,813 orders and Kandy 1,917. Galle has one.</li>
+    <li><strong>The supermarket chains are not tagged “Retail”.</strong> Spar and Jaykay orders are tagged <em>Key Customer</em>, and they go out on the Katunayake and Kollupitiya delivery routes.</li>
+    <li><strong>A counter sale still becomes a full Zoho order.</strong> Same four documents as any other sale — nothing is skipped.</li>
+    <li><strong>The give-away is the delivery route</strong> <span class="doc">GUARD ROOM</span>: the customer collects at the gate rather than being delivered to.</li>
+  </ul>
+</section>
+
+<section>
+  <span class="eyebrow">Question 3</span>
+  <h2>Consumption: stock we use ourselves</h2>
+  <p class="lede">When a warehouse uses stock instead of selling it, it is booked as a sale to a pretend customer named after the warehouse.</p>
+  <div class="answer internal">
+    <h3>How to recognise it</h3>
+    <ul class="points">
+      <li><strong>Customer name ends in “(Consumption)”</strong>: Kelaniya Warehouse (Consumption) 656 orders, Ranaviru 128, Central 5, South 4.</li>
+      <li><strong>Order number starts <span class="doc">INTSO</span></strong> and the invoice type is <span class="doc">Internal Transfers</span> (776 of 793 orders).</li>
+      <li><strong>The delivery route is <span class="doc">INTERNAL</span></strong> — nothing leaves the premises.</li>
+      <li><strong>Most carry no money:</strong> 494 of 793 orders have a zero value. The rest total LKR 2.2 M.</li>
+    </ul>
+  </div>
+  <p><strong>Why it exists:</strong> it is the only way to take the stock out of Zoho's count. Otherwise Zoho keeps showing goods that were already used up.</p>
+</section>
+
+<section>
+  <span class="eyebrow">Question 4 · the one you asked</span>
+  <h2>Do IBR and consumption behave like a normal order?</h2>
+  <div class="answer same">
+    <h3>Consumption: yes, identical</h3>
+    <p>It runs through exactly the same four Zoho steps as a customer sale — sales order, package, shipment, invoice. Only the customer, the invoice type and the route are different.</p>
+  </div>
+  <div class="answer">
+    <h3>IBR: no, it is a different document</h3>
+    <p>An IBR never becomes a sales order. It is a transfer order, with no customer, no package, no shipment and no invoice. The sale happens later and separately, when the branch sells that stock on.</p>
+  </div>
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Step in Zoho</th><th>Normal sale</th><th>Retail counter sale</th><th>Consumption</th><th>IBR transfer</th></tr></thead>
+      <tbody>
+        <tr><td>Sales order</td><td><span class="tag done">yes</span></td><td><span class="tag done">yes</span></td><td><span class="tag done">yes</span></td><td><span class="tag internal">no</span></td></tr>
+        <tr><td>Picklist</td><td><span class="tag done">yes</span></td><td><span class="tag done">yes</span></td><td><span class="tag done">yes</span></td><td><span class="tag internal">no</span></td></tr>
+        <tr><td>Package</td><td><span class="tag done">yes</span></td><td><span class="tag done">yes</span></td><td><span class="tag done">yes</span></td><td><span class="tag internal">no</span></td></tr>
+        <tr><td>Shipment (route)</td><td>delivery route</td><td>usually GUARD ROOM</td><td>INTERNAL</td><td><span class="tag internal">no</span></td></tr>
+        <tr><td>Invoice</td><td><span class="tag done">yes</span></td><td><span class="tag done">yes</span></td><td>yes, “Internal Transfers”</td><td><span class="tag internal">none</span></td></tr>
+        <tr><td>Stock effect</td><td>leaves the company</td><td>leaves the company</td><td>used up internally</td><td>moves between our warehouses</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <span class="eyebrow">Question 5</span>
+  <h2>Three real orders, tracked</h2>
+  <p class="lede">Read from the Zoho records themselves, with the times each document was created. A second example of each type is checked in the next section.</p>
+
+  <div class="journey">
+    <header>
+      <span class="who">Galle · a bakery buys 1,000 items</span>
+      <span class="where">STXSO26091726 · South Branch · 19 Sep 2026 · LKR 4,130</span>
+    </header>
+    <ol class="hops">
+      <li><span class="clock">09:50</span><span class="what"><span class="label">Sales order keyed by Mohamed Arshard</span><span class="note">Customer Walgama Bake House · salesperson Nimal Devaraj · VAT invoice · delivery</span></span></li>
+      <li><span class="clock">11:00</span><span class="what"><span class="label">Packed — <span class="doc">PKG-147528</span></span><span class="note">Dispatch location: South. All 1,000 items in one package.</span></span></li>
+      <li><span class="clock">11:00</span><span class="what"><span class="label">Shipped — <span class="doc">SHP-79101</span></span><span class="note">Route: SOUTH – TANGALLE</span></span></li>
+      <li class="end"><span class="clock">11:13</span><span class="what"><span class="label">Invoiced — <span class="doc">26SEP_STX_0278</span></span><span class="note">LKR 4,130, due 19 Oct 2026, still unpaid on 19 Sep</span></span></li>
+    </ol>
+  </div>
+
+  <div class="journey">
+    <header>
+      <span class="who">Kandy · a Pizza Hut branch collects at the gate</span>
+      <span class="where">CTXSO26070157 · Central Branch · 27 Jul 2026 · LKR 5,806</span>
+    </header>
+    <ol class="hops">
+      <li><span class="clock">16:48</span><span class="what"><span class="label">Sales order keyed by Malki Hasinika</span><span class="note">Gamma Pizzakraft · their reference “004418 – Kundasale” · tagged Retail</span></span></li>
+      <li><span class="clock">16:50</span><span class="what"><span class="label">Packed — <span class="doc">PKG-138994</span></span><span class="note">Dispatch location: Central</span></span></li>
+      <li class="end"><span class="clock">16:50</span><span class="what"><span class="label">Shipped — <span class="doc">SHP-73150</span></span><span class="note">Route: GUARD ROOM — the customer's driver takes it. Invoiced the same day as <span class="doc">26Jul_CTX_0040</span>.</span></span></li>
+    </ol>
+  </div>
+
+  <div class="journey">
+    <header>
+      <span class="who">Head office · stock consumed by the Ranaviru store</span>
+      <span class="where">INTSO260901985 · Head Office · 18 Sep 2026 · 100 units</span>
+    </header>
+    <ol class="hops">
+      <li class="internal"><span class="clock">18 Sep</span><span class="what"><span class="label">Sales order to “Ranaviru Warehouse (Consumption)”</span><span class="note">Invoice type Internal Transfers · note “Attn. Mr. Farhan”</span></span></li>
+      <li class="internal"><span class="clock">18 Sep</span><span class="what"><span class="label">Packed — <span class="doc">PKG-147350</span></span><span class="note">Handled exactly like a customer package</span></span></li>
+      <li class="internal"><span class="clock">18 Sep</span><span class="what"><span class="label">Shipped — <span class="doc">SHP-78988</span></span><span class="note">Route: INTERNAL</span></span></li>
+      <li class="end"><span class="clock">18 Sep</span><span class="what"><span class="label">Invoiced</span><span class="note">Order value LKR 2,000, but only LKR 500 invoiced — see the watch-outs</span></span></li>
+    </ol>
+  </div>
+
+  <div class="journey">
+    <header>
+      <span class="who">The IBR that fed Galle's shelf</span>
+      <span class="where">TOS-260973-GALLE · 17 Sep 2026 · 16,276 units</span>
+    </header>
+    <ol class="hops">
+      <li><span class="clock">15:16</span><span class="what"><span class="label">Transfer order keyed by Jayanthi Hiripitiya</span><span class="note">Description: “Request by Mr. Arshard for Galle — IBR1070SOU / IBR1110SOU” · reason Interbranch</span></span></li>
+      <li><span class="clock">→</span><span class="what"><span class="label">SPS Kohalwila factory store → Southern Warehouse</span><span class="note">Status: in transit. No customer, no invoice, no money.</span></span></li>
+      <li class="end"><span class="clock">then</span><span class="what"><span class="label">Sold from Galle as a normal order</span><span class="note">Which is where a sale like STXSO26091726 above begins</span></span></li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <span class="eyebrow">Question 6 · the second check</span>
+  <h2>Does it hold for other orders too?</h2>
+  <p class="lede">One order proves nothing, so the same test was run on <strong>every completed order</strong>, and a second real example of each type was tracked. <strong>The four steps hold everywhere.</strong></p>
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Type</th><th>Completed orders</th><th>Missing a package</th><th>Missing a shipment</th><th>Not invoiced</th><th>Packed same day</th></tr></thead>
+      <tbody>
+        <tr><td>Head office</td><td>30,409</td><td>0%</td><td>0%</td><td>0%</td><td>68%</td></tr>
+        <tr><td>Galle branch</td><td>13,292</td><td>0%</td><td>0%</td><td>0%</td><td>62%</td></tr>
+        <tr><td>Retail counter</td><td>14,483</td><td>0%</td><td>0%</td><td>0%</td><td>85%</td></tr>
+        <tr><td>Key Customer (chains)</td><td>7,340</td><td>0%</td><td>0%</td><td>0%</td><td>71%</td></tr>
+        <tr><td>Consumption</td><td>753</td><td>0%</td><td>0%</td><td>0%</td><td>78%</td></tr>
+        <tr><td>Kandy branch</td><td>69</td><td>0%</td><td>0%</td><td>1%</td><td>72%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>So no type has a shortcut of its own. What differs is only <strong>the route</strong> and <strong>how long each step takes</strong>: 8% of head-office orders and 8% of Kandy's are packed more than a week after the order is keyed, against 1% of counter sales.</p>
+
+  <div class="journey">
+    <header><span class="who">Second Galle order, three months earlier</span><span class="where">STXSO26050545 · 27 May 2026 · LKR 3,098</span></header>
+    <ol class="hops">
+      <li><span class="clock">12:20</span><span class="what"><span class="label">Order keyed by Mohamed Arshard</span><span class="note">KDU Adventures · 500 items</span></span></li>
+      <li><span class="clock">13:07</span><span class="what"><span class="label">Packed — <span class="doc">PKG-129867</span></span><span class="note">Dispatch location: South</span></span></li>
+      <li class="end"><span class="clock">same day</span><span class="what"><span class="label">Shipped — <span class="doc">SHP-66907</span></span><span class="note">Route: SOUTH – YALA &amp; EMBILIPITIYA. Same shape as the September order.</span></span></li>
+    </ol>
+  </div>
+
+  <div class="journey">
+    <header><span class="who">Second consumption order</span><span class="where">INTSO260901933 · 8 Sep 2026 · 2,030 units</span></header>
+    <ol class="hops">
+      <li class="internal"><span class="clock">15:24</span><span class="what"><span class="label">Order to “Kelaniya Warehouse (Consumption)”</span><span class="note">Keyed by Jayanthi Hiripitiya · Internal Transfers</span></span></li>
+      <li class="internal"><span class="clock">16:49</span><span class="what"><span class="label">Packed — <span class="doc">PKG-145773</span></span><span class="note">Dispatch location: Kelaniya</span></span></li>
+      <li class="end"><span class="clock">same day</span><span class="what"><span class="label">Shipped — <span class="doc">SHP-77865</span></span><span class="note">Route: INTERNAL. Order says LKR 34,550; LKR 15,904 was invoiced.</span></span></li>
+    </ol>
+  </div>
+
+  <div class="journey">
+    <header><span class="who">A chain order: Jaykay (Keells)</span><span class="where">ATXSO260917260 · 4 Sep 2026 · 17,250 items</span></header>
+    <ol class="hops">
+      <li><span class="clock">4 Sep 09:59</span><span class="what"><span class="label">Order keyed by Senuri Wasana</span><span class="note">Tagged <em>Retail</em>, though Jaykay is a chain — see watch-out 8</span></span></li>
+      <li><span class="clock">7 Sep 09:38</span><span class="what"><span class="label">Packed — <span class="doc">PKG-145395</span></span><span class="note">Three days later, all 17,250 items in one package</span></span></li>
+      <li class="end"><span class="clock">7 Sep</span><span class="what"><span class="label">Shipped — <span class="doc">SHP-77606</span></span><span class="note">Route: KATUNAYAKE. Order LKR 80,045; invoiced LKR 133,075 and still part-invoiced.</span></span></li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <span class="eyebrow">Question 7</span>
+  <h2>What to watch out for</h2>
+  <div class="watch">
+    <article><span class="mark">1</span><h3>IBR numbers live in free text</h3><p>They sit in the transfer order's description, typed by hand. 277 transfers carry two or more IBR numbers at once, and one is typed “IBRNO1084SOU”. Nothing can match an IBR to what was actually sent, so no one can prove a branch got what it asked for.</p></article>
+    <article><span class="mark">2</span><h3>Only Galle uses IBR numbers</h3><p>Kandy's 684 transfers carry no request number at all. Two branches, two habits.</p></article>
+    <article><span class="mark">3</span><h3>Picking cannot be tied to an order</h3><p>Zoho holds 76,855 picklists, but the list carries no order number and no customer — both fields are empty on every single one. So “who picked this order and when” cannot be answered from the data today.</p></article>
+    <article><span class="mark">4</span><h3>Internal invoices sit in the debtors list</h3><p>The consumption warehouses have 802 invoices worth LKR 5.6 M, and 210 of them show as overdue, LKR 1.96 M outstanding. We are chasing ourselves for money, and it inflates the receivables figure.</p></article>
+    <article><span class="mark">5</span><h3>The order value is not the real money — this is the big one</h3><p>Of 47,389 completed orders that carry a price, <strong>19,430 (41%) were invoiced for a different amount</strong>: 12,699 for less, 6,731 for more. Only 115 of them are flagged “partly invoiced”, so the gap is invisible in Zoho. Anyone reporting on order value gets a different answer from anyone reporting on invoices.</p></article>
+    <article><span class="mark">6</span><h3>29% of orders are keyed with no price at all</h3><p>20,638 orders carry a zero value, and only 5,417 of those are samples. <strong>14,028 of them were later invoiced for real money.</strong> The price is decided at invoicing, not at ordering, so the order is not a promise of anything.</p></article>
+    <article><span class="mark">7</span><h3>Documents dated before the goods move</h3><p>Order <span class="doc">NOTTOBEUSED X0008</span> (Kandy, 31 Mar) was invoiced on 31 March but packed and shipped on 30 April, a month later. Seventeen orders are numbered “NOTTOBEUSED”, and one order is dated in the year 1831.</p></article>
+    <article><span class="mark">8</span><h3>The tags are not applied consistently</h3><p>330 of the 793 consumption orders are tagged “Retail”, and 56 chain orders (Spar, Jaykay, Keells) are tagged “Retail” instead of “Key Customer”. Any report split by pick type is therefore approximate.</p></article>
+    <article><span class="mark">9</span><h3>“Internal” consumption sometimes leaves by the gate</h3><p>41 consumption orders were shipped on the GUARD ROOM route rather than INTERNAL, so someone collected them. Whether that is stock used internally or handed out is not recorded.</p></article>
+    <article><span class="mark">10</span><h3>One transfer, one arrival — not checked</h3><p>Of the IBR transfers, 5 are still “in transit” and 1 only “approved”. Nothing alerts anyone when stock stays in transit.</p></article>
+  </div>
+</section>
+
+<footer>
+  <p>Source: Zoho Inventory, Standard Holdings organisation, read-only pull of 19 Sep 2026. Sales orders, transfer orders, packages, shipments and invoices, in full.</p>
+  <p>Invoices were matched to orders by customer, date and amount; where the amounts differ, that is called out rather than guessed.</p>
+</footer>
+
+</div>
+</body>
+</html>

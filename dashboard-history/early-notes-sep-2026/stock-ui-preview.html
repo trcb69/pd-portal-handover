@@ -1,0 +1,882 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Stock &amp; re-order</title>
+<style>
+/* Stock & re-order — a digital stock-take sheet.
+   The quantity is the content, so numbers are set large and tabular, and the
+   only colour in the interface carries stock status. Everything else is grey. */
+
+:root{
+  --paper:#EDF0F3;
+  --sheet:#FFFFFF;
+  --ink:#14232F;
+  --ink-2:#5C6B78;
+  --ink-3:#8A98A4;
+  --rule:#DBE2E8;
+  --navy:#1B3A5C;
+  --navy-soft:#E6EDF4;
+
+  --out:#B42318;
+  --crit:#C2610A;
+  --low:#8A7100;
+  --ok:#067647;
+
+  --pad:16px;
+  --radius:6px;
+  --font:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{
+  font-family:var(--font);
+  font-size:15px;
+  line-height:1.45;
+  color:var(--ink);
+  background:var(--paper);
+  -webkit-text-size-adjust:100%;
+}
+button,input,select,textarea{font:inherit;color:inherit}
+b{font-weight:650}
+
+/* ── Top bar ─────────────────────────────────────────────────────────── */
+.topbar{
+  display:flex;align-items:center;gap:20px;
+  padding:10px var(--pad);
+  background:var(--navy);color:#fff;
+  position:sticky;top:0;z-index:30;
+}
+.brand{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.brand b{display:block;font-size:15px;letter-spacing:.1px}
+.brand small{display:block;font-size:11.5px;color:#A9C0D6}
+.brand-mark{
+  width:22px;height:22px;border-radius:3px;
+  background:linear-gradient(180deg,#fff 0 8px,#7FA6C9 8px 14px,#fff 14px 100%);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.5);
+}
+.search{flex:1 1 auto;max-width:380px}
+.search input{
+  width:100%;padding:8px 12px;border:0;border-radius:var(--radius);
+  background:rgba(255,255,255,.14);color:#fff;
+}
+.search input::placeholder{color:#A9C0D6}
+.search input:focus{outline:2px solid #7FA6C9;outline-offset:1px;background:rgba(255,255,255,.22)}
+
+.tabs{display:flex;gap:2px;margin-left:auto}
+.tab{
+  background:none;border:0;color:#C7D8E7;padding:7px 12px;border-radius:var(--radius);
+  cursor:pointer;white-space:nowrap;
+}
+.tab:hover{background:rgba(255,255,255,.1);color:#fff}
+.tab.is-on{background:#fff;color:var(--navy);font-weight:600}
+.badge{
+  display:inline-block;min-width:19px;padding:0 5px;margin-left:5px;
+  background:var(--out);color:#fff;border-radius:10px;
+  font-size:11.5px;font-weight:650;text-align:center;font-variant-numeric:tabular-nums;
+}
+.tab.is-on .badge{background:var(--out)}
+.who{display:flex;gap:6px;flex:0 0 auto}
+
+.btn{
+  border:1px solid var(--rule);background:var(--sheet);color:var(--ink);
+  padding:8px 14px;border-radius:var(--radius);cursor:pointer;
+}
+.btn:hover{background:#F4F7F9}
+.btn-quiet{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.28);color:#fff}
+.btn-quiet:hover{background:rgba(255,255,255,.24)}
+.btn-primary{background:var(--navy);border-color:var(--navy);color:#fff;font-weight:600}
+.btn-primary:hover{background:#24507E}
+.btn:focus-visible,.tab:focus-visible,.signal:focus-visible,.row:focus-visible{outline:2px solid var(--navy);outline-offset:2px}
+
+/* ── Signal strip ────────────────────────────────────────────────────── */
+.signals{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:1px;
+  background:var(--rule);border-bottom:1px solid var(--rule);
+}
+.signal{
+  background:var(--sheet);border:0;padding:12px var(--pad);text-align:left;cursor:pointer;
+  display:flex;flex-direction:column;gap:1px;border-top:3px solid transparent;
+}
+.signal:hover{background:#F5F8FA}
+.signal em{font-style:normal;font-size:25px;font-weight:650;font-variant-numeric:tabular-nums;line-height:1.1}
+.signal span{font-size:12.5px;color:var(--ink-2)}
+.signal[data-filter="OUT"] em{color:var(--out)}
+.signal[data-filter="CRITICAL"] em{color:var(--crit)}
+.signal[data-filter="stale"] em,.signal[data-filter="LOW"] em{color:var(--low)}
+.signal.is-on{border-top-color:var(--navy);background:var(--navy-soft)}
+
+/* ── Layout ──────────────────────────────────────────────────────────── */
+.layout{display:grid;grid-template-columns:250px minmax(0,1fr);align-items:start}
+.rail{
+  position:sticky;top:118px;max-height:calc(100vh - 118px);overflow:auto;
+  border-right:1px solid var(--rule);background:var(--sheet);padding:8px 0;
+}
+.rail button{
+  display:flex;justify-content:space-between;gap:8px;width:100%;
+  background:none;border:0;text-align:left;padding:7px 14px;cursor:pointer;
+  color:var(--ink);border-left:3px solid transparent;
+}
+.rail button:hover{background:#F2F6F9}
+.rail button.is-on{background:var(--navy-soft);border-left-color:var(--navy);font-weight:600}
+.rail button i{font-style:normal;color:var(--ink-3);font-size:12.5px;font-variant-numeric:tabular-nums}
+.rail-head{padding:10px 14px 4px;font-size:11.5px;color:var(--ink-3);letter-spacing:.3px}
+
+.content{padding:var(--pad);min-height:60vh}
+
+/* ── Item rows: a tally sheet, not a card deck ───────────────────────── */
+.section-head{
+  margin:22px 0 6px;padding-bottom:5px;border-bottom:2px solid var(--ink);
+  font-size:13px;font-weight:650;
+}
+.section-head:first-child{margin-top:0}
+.section-head span{float:right;font-weight:400;color:var(--ink-2)}
+
+.rows{background:var(--sheet);border:1px solid var(--rule);border-radius:var(--radius);overflow:hidden}
+.row{
+  display:grid;grid-template-columns:minmax(0,1fr) 132px 190px 96px;
+  gap:14px;align-items:center;width:100%;
+  padding:11px 14px;background:none;border:0;border-top:1px solid var(--rule);
+  text-align:left;cursor:pointer;
+}
+.row:first-child{border-top:0}
+.row:hover{background:#F5F8FA}
+
+.row .name{min-width:0}
+.row .name b{display:block;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.row .meta{font-size:12px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.row .meta .stale{color:var(--out);font-weight:600}
+
+.qty{text-align:right;font-variant-numeric:tabular-nums}
+.qty b{display:block;font-size:23px;font-weight:600;line-height:1.15}
+.qty span{font-size:11.5px;color:var(--ink-3)}
+
+/* The gauge is the one bold idea here: on-hand against the re-order mark. */
+.gauge{position:relative}
+.gauge .track{height:8px;background:#E9EEF2;border-radius:4px;overflow:hidden}
+.gauge .fill{height:100%;border-radius:4px;background:var(--ok)}
+.gauge .mark{position:absolute;top:-3px;width:2px;height:14px;background:var(--ink);opacity:.55}
+.gauge .cap{margin-top:4px;font-size:11.5px;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.lv-OUT      .fill{background:var(--out)}
+.lv-CRITICAL .fill{background:var(--crit)}
+.lv-LOW      .fill{background:var(--low)}
+.lv-OUT .status{color:var(--out)}
+.lv-CRITICAL .status{color:var(--crit)}
+.lv-LOW .status{color:var(--low)}
+.lv-OK .status{color:var(--ink-3)}
+.status{font-size:12.5px;font-weight:600;text-align:right}
+
+.empty{padding:56px 20px;text-align:center;color:var(--ink-2)}
+.empty b{display:block;font-size:17px;color:var(--ink);margin-bottom:6px}
+
+/* ── Tables (order list, requisitions, activity) ─────────────────────── */
+table{width:100%;border-collapse:collapse;background:var(--sheet);border:1px solid var(--rule);border-radius:var(--radius)}
+th,td{padding:9px 12px;text-align:left;border-top:1px solid var(--rule);vertical-align:top}
+th{background:#F4F7F9;font-size:12.5px;color:var(--ink-2);font-weight:600;border-top:0;position:sticky;top:118px}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+tbody tr:hover{background:#F8FAFB}
+.pill{display:inline-block;padding:1px 8px;border-radius:10px;font-size:11.5px;font-weight:600;background:#EEF1F4;color:var(--ink-2)}
+.pill.OPEN{background:#FDF1E3;color:var(--crit)}
+.pill.PARTIAL{background:#FCF9E4;color:var(--low)}
+.pill.CLOSED{background:#E6F4EC;color:var(--ok)}
+.pill.CANCELLED{background:#EEF1F4;color:var(--ink-3)}
+
+/* ── Slide-in panel ──────────────────────────────────────────────────── */
+.scrim{position:fixed;inset:0;background:rgba(20,35,47,.4);z-index:40}
+.panel{
+  position:fixed;top:0;right:0;bottom:0;width:min(430px,100%);z-index:50;
+  background:var(--sheet);border-left:1px solid var(--rule);
+  box-shadow:-14px 0 40px rgba(20,35,47,.16);
+  display:flex;flex-direction:column;overflow:auto;
+  animation:slide .18s ease-out;
+}
+@keyframes slide{from{transform:translateX(24px);opacity:0}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.panel{animation:none}}
+
+.panel-head{padding:16px var(--pad);border-bottom:1px solid var(--rule)}
+.panel-head .close{float:right;background:none;border:0;font-size:22px;cursor:pointer;color:var(--ink-2);line-height:1}
+.panel-head h2{margin:0 30px 2px 0;font-size:17px;font-weight:600}
+.panel-head p{margin:0;font-size:12.5px;color:var(--ink-3)}
+.panel-body{padding:var(--pad);display:flex;flex-direction:column;gap:16px}
+
+.onhand{display:flex;align-items:baseline;gap:10px}
+.onhand b{font-size:40px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1}
+.onhand span{color:var(--ink-2);font-size:13px}
+
+.kinds{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.kinds button{
+  padding:11px 6px;border:1px solid var(--rule);background:var(--sheet);
+  border-radius:var(--radius);cursor:pointer;font-size:13.5px;
+}
+.kinds button.is-on{background:var(--navy);border-color:var(--navy);color:#fff;font-weight:600}
+.hint{font-size:12.5px;color:var(--ink-2);margin:-8px 0 0}
+
+label{display:block;font-size:12.5px;color:var(--ink-2);margin-bottom:4px}
+.field input,.field select,.field textarea{
+  width:100%;padding:10px 12px;border:1px solid var(--rule);border-radius:var(--radius);background:var(--sheet);
+}
+.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--navy);outline-offset:-1px;border-color:var(--navy)}
+#qtyInput{font-size:26px;font-weight:600;font-variant-numeric:tabular-nums;text-align:right}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.result{font-size:13px;color:var(--ink-2);text-align:right}
+.err{color:var(--out);font-size:13px}
+
+.history{border-top:1px solid var(--rule);padding-top:12px}
+.history h3{font-size:12.5px;color:var(--ink-2);margin:0 0 8px;font-weight:600}
+.history li{list-style:none;display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-top:1px solid var(--rule);font-size:13px}
+.history ul{margin:0;padding:0}
+.history .d{color:var(--ink-3);font-size:11.5px}
+.history .v{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+.toast{
+  position:fixed;left:50%;bottom:24px;transform:translate(-50%,80px);
+  background:var(--ink);color:#fff;padding:11px 18px;border-radius:var(--radius);
+  z-index:60;opacity:0;transition:transform .2s,opacity .2s;pointer-events:none;
+}
+.toast.is-on{transform:translate(-50%,0);opacity:1}
+
+/* ── Narrow screens: the warehouse case ──────────────────────────────── */
+@media (max-width:900px){
+  .topbar{flex-wrap:wrap;gap:10px}
+  .search{order:3;max-width:none;flex-basis:100%}
+  .tabs{margin-left:0;order:4;flex-basis:100%;overflow-x:auto}
+  .signal em{font-size:21px}
+  .layout{grid-template-columns:1fr}
+  /* On a phone the group list becomes a swipeable row of chips so it does
+     not eat half the screen before the stock even appears. */
+  .rail{position:static;display:flex;gap:6px;overflow-x:auto;padding:8px var(--pad);
+        border-right:0;border-bottom:1px solid var(--rule);-webkit-overflow-scrolling:touch}
+  .rail .rail-head{display:none}
+  .rail button{width:auto;flex:0 0 auto;white-space:nowrap;border:1px solid var(--rule);
+               border-left-width:1px;border-radius:16px;padding:5px 12px}
+  .rail button.is-on{border-color:var(--navy)}
+  .rail button i{display:none}
+  th{position:static}
+  .row{grid-template-columns:minmax(0,1fr) auto;gap:8px 12px}
+  .row .gauge{grid-column:1/-1}
+  .row .status{grid-column:1/-1;text-align:left}
+  .panel{width:100%;top:auto;height:92vh;border-left:0;border-radius:12px 12px 0 0}
+}
+
+/* Keep [hidden] authoritative: .panel sets display:flex, which would
+   otherwise beat the browser's own hidden rule and leave an invisible
+   panel swallowing clicks. */
+[hidden]{display:none !important}
+
+
+.preview-note{background:#FCF9E4;border-bottom:1px solid #E6DFB8;color:#5C5322;
+  padding:9px 16px;font-size:12.5px;line-height:1.4}
+</style>
+</head>
+<body>
+<div class="preview-note">
+  Preview of the real interface, running on a slice of your workbook —
+  7 customers, 150 items. Counting, raising and receiving all work; the changes
+  live in this page instead of the database.
+</div>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span>
+      <b>Stock &amp; re-order</b>
+      <small id="company">Standard Holdings</small>
+    </span>
+  </div>
+
+  <div class="search">
+    <input id="search" type="search" placeholder="Search item or SKU" autocomplete="off" aria-label="Search item or SKU">
+  </div>
+
+  <nav class="tabs" role="tablist">
+    <button class="tab is-on" data-view="stock" role="tab">Stock</button>
+    <button class="tab" data-view="order" role="tab">Order list <span class="badge" id="badge-order">0</span></button>
+    <button class="tab" data-view="reqs" role="tab">Requisitions</button>
+    <button class="tab" data-view="activity" role="tab">Activity</button>
+  </nav>
+
+  <div class="who">
+    <button id="export" class="btn btn-quiet" title="Download the Excel report">Excel</button>
+    <button id="whoami" class="btn btn-quiet" aria-label="Change who is signed in">—</button>
+  </div>
+</header>
+
+<!-- The four counts double as filters: tap one to see only those items. -->
+<section class="signals" id="signals" aria-label="Stock position">
+  <button class="signal" data-filter="OUT"><em id="c-out">0</em><span>Out of stock</span></button>
+  <button class="signal" data-filter="CRITICAL"><em id="c-crit">0</em><span>Below re-order level</span></button>
+  <button class="signal" data-filter="LOW"><em id="c-low">0</em><span>Into buffer stock</span></button>
+  <button class="signal" data-filter="stale"><em id="c-stale">0</em><span>Count out of date</span></button>
+  <button class="signal signal-ok" data-filter=""><em id="c-total">0</em><span>All items</span></button>
+</section>
+
+<main class="layout">
+  <aside class="rail" id="rail" aria-label="Customers and groups"></aside>
+  <div class="content" id="content"></div>
+</main>
+
+<!-- Slide-in editor -->
+<div class="scrim" id="scrim" hidden></div>
+<aside class="panel" id="panel" hidden aria-label="Update stock"></aside>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>const SEED = {"groups":[{"id":1,"name":"CRYSTAL SILIKATA S&D","sort_order":0},{"id":2,"name":"BIO - JAYAMOND","sort_order":1},{"id":7,"name":"INFINITI-BURHANI-OTHOR","sort_order":6},{"id":8,"name":"TACO BELL","sort_order":7},{"id":10,"name":"FOOD PRINT","sort_order":9},{"id":16,"name":"KRAFT BOX","sort_order":14},{"id":20,"name":"COURT YARD","sort_order":18}],"items":[{"id":1,"group_id":1,"sku":"HIPS001","name":"30ml Hips Container + Lid","section":"CRYSTAL PACK DATE:11/08/2026","uom":"pcs","qty":25000,"reorder_level":15000,"buffer":30000,"max_stock":null,"counted_at":"2026-08-11 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"CRYSTAL SILIKATA S&D","on_order":50000},{"id":2,"group_id":1,"sku":"HIPS019","name":"50ml Hips Container + Lid","section":"CRYSTAL PACK DATE:11/08/2026","uom":"pcs","qty":0,"reorder_level":10000,"buffer":20000,"max_stock":null,"counted_at":"2026-08-11 00:00:00","counted_by":null,"note":"pending 20,000pcs","archived":0,"created_at":"2026-09-05 17:41:29","group_name":"CRYSTAL SILIKATA S&D","on_order":20000},{"id":3,"group_id":1,"sku":"HIPS003","name":"80ml Hips Container + Lid","section":"CRYSTAL PACK DATE:11/08/2026","uom":"pcs","qty":7000,"reorder_level":20000,"buffer":40000,"max_stock":null,"counted_at":"2026-08-11 00:00:00","counted_by":null,"note":"pending 40,000pcs","archived":0,"created_at":"2026-09-05 17:41:29","group_name":"CRYSTAL SILIKATA S&D","on_order":30000},{"id":4,"group_id":1,"sku":"HIPS004","name":"180ml Hips Container + Lid","section":"CRYSTAL PACK DATE:11/08/2026","uom":"pcs","qty":33500,"reorder_level":12500,"buffer":25000,"max_stock":null,"counted_at":"2026-08-11 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"CRYSTAL SILIKATA S&D","on_order":30000},{"id":5,"group_id":1,"sku":"HIPS005","name":"250ml Hips Container + Lid","section":"CRYSTAL PACK DATE:11/08/2026","uom":"pcs","qty":13000,"reorder_level":10000,"buffer":20000,"max_stock":null,"counted_at":"2026-08-11 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"CRYSTAL SILIKATA S&D","on_order":15000},{"id":6,"group_id":1,"sku":"HIPS006","name":"350ml Hips Container+Lid","section":"CRYSTAL PACK DATE:11/08/2026","uom":"pcs","qty":500,"reorder_level":5000,"buffer":10000,"max_stock":null,"counted_at":"2026-08-11 00:00:00","counted_by":null,"note":"Pending 25,000pcs","archived":0,"created_at":"2026-09-05 17:41:29","group_name":"CRYSTAL SILIKATA S&D","on_order":0},{"id":7,"group_id":1,"sku":"HIPS008","name":"500ml Hips Container + Lid","section":"CRYSTAL PACK DATE:11/08/2026","uom":"pcs","qty":1000,"reorder_level":5000,"buffer":10000,"max_stock":null,"counted_at":"2026-08-11 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"CRYSTAL SILIKATA S&D","on_order":10000},{"id":8,"group_id":1,"sku":"HIPS010","name":"1000ml Hips Container + Lid","section":"CRYSTAL PACK DATE:11/08/2026","uom":"pcs","qty":5000,"reorder_level":2500,"buffer":5000,"max_stock":null,"counted_at":"2026-08-11 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"CRYSTAL SILIKATA S&D","on_order":0},{"id":9,"group_id":1,"sku":"HIPS007","name":"80ml Transparent Cup+Lid","section":"CRYSTAL PACK DATE:11/08/2026","uom":"pcs","qty":29000,"reorder_level":15000,"buffer":30000,"max_stock":null,"counted_at":"2026-08-11 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"CRYSTAL SILIKATA S&D","on_order":20000},{"id":10,"group_id":1,"sku":"HIPS020","name":"180ml Transparent Container+Lid","section":"CRYSTAL PACK DATE:11/08/2026","uom":"pcs","qty":0,"reorder_level":7500,"buffer":15000,"max_stock":null,"counted_at":"2026-08-11 00:00:00","counted_by":null,"note":"pending 10,000pcs","archived":0,"created_at":"2026-09-05 17:41:29","group_name":"CRYSTAL SILIKATA S&D","on_order":7500},{"id":11,"group_id":1,"sku":"HIPS021","name":"250ml Transparent Container+Lid","section":"CRYSTAL PACK DATE:11/08/2026","uom":"pcs","qty":12000,"reorder_level":7500,"buffer":15000,"max_stock":null,"counted_at":"2026-08-11 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"CRYSTAL SILIKATA S&D","on_order":10000},{"id":12,"group_id":1,"sku":"HIPS022","name":"350ml Transparent Container + Lid","section":"CRYSTAL PACK DATE:11/08/2026","uom":"pcs","qty":0,"reorder_level":5000,"buffer":10000,"max_stock":null,"counted_at":"2026-08-11 00:00:00","counted_by":null,"note":"pending 30,000pcs","archived":0,"created_at":"2026-09-05 17:41:29","group_name":"CRYSTAL SILIKATA S&D","on_order":15000},{"id":13,"group_id":1,"sku":"HIPS023","name":"500ml Transparent Container+Lid","section":"CRYSTAL PACK DATE:11/08/2026","uom":"pcs","qty":1000,"reorder_level":5000,"buffer":10000,"max_stock":null,"counted_at":"2026-08-11 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"CRYSTAL SILIKATA S&D","on_order":20000},{"id":14,"group_id":1,"sku":"HIPS024","name":"1000ml Transparent Container+Lid","section":"CRYSTAL PACK DATE:11/08/2026","uom":"pcs","qty":1000,"reorder_level":2500,"buffer":5000,"max_stock":null,"counted_at":"2026-08-11 00:00:00","counted_by":null,"note":"pending 5,000pcs","archived":0,"created_at":"2026-09-05 17:41:29","group_name":"CRYSTAL SILIKATA S&D","on_order":0},{"id":15,"group_id":1,"sku":"PLCB006","name":"7Oz GPPS Cup (NEW MODLE)","section":"CRYSTAL PACK DATE:11/08/2026","uom":"pcs","qty":5000,"reorder_level":15000,"buffer":30000,"max_stock":null,"counted_at":"2026-08-11 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"CRYSTAL SILIKATA S&D","on_order":15000},{"id":16,"group_id":1,"sku":"PLCB006","name":"7Oz GPPS Cup (OLD MODLE)","section":"CRYSTAL PACK DATE:11/08/2026","uom":"pcs","qty":15000,"reorder_level":15000,"buffer":30000,"max_stock":null,"counted_at":"2026-08-11 00:00:00","counted_by":null,"note":"pending 15,000pcs","archived":0,"created_at":"2026-09-05 17:41:29","group_name":"CRYSTAL SILIKATA S&D","on_order":10000},{"id":17,"group_id":1,"sku":"PLCB007","name":"85mm Dome Lid for 7Oz GPPS Cup(NEW MODLE)","section":"CRYSTAL PACK DATE:11/08/2026","uom":"pcs","qty":20000,"reorder_level":15000,"buffer":30000,"max_stock":null,"counted_at":"2026-08-11 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"CRYSTAL SILIKATA S&D","on_order":25000},{"id":18,"group_id":1,"sku":"PLCB007","name":"85mm Dome Lid for 7Oz GPPS Cup(OLD MODLE)","section":"CRYSTAL PACK DATE:11/08/2026","uom":"pcs","qty":20000,"reorder_level":15000,"buffer":30000,"max_stock":null,"counted_at":"2026-08-11 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"CRYSTAL SILIKATA S&D","on_order":25000},{"id":19,"group_id":1,"sku":"PLD011","name":"12Oz Plastic Cup (350ml)","section":"CRYSTAL PACK DATE:11/08/2026","uom":"pcs","qty":44000,"reorder_level":30000,"buffer":60000,"max_stock":null,"counted_at":"2026-08-11 00:00:00","counted_by":null,"note":"pending 50,000pcs","archived":0,"created_at":"2026-09-05 17:41:29","group_name":"CRYSTAL SILIKATA S&D","on_order":40000},{"id":20,"group_id":1,"sku":"PLD015","name":"16Oz Plastic Cup","section":"CRYSTAL PACK DATE:11/08/2026","uom":"pcs","qty":80000,"reorder_level":10000,"buffer":20000,"max_stock":null,"counted_at":"2026-08-11 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"CRYSTAL SILIKATA S&D","on_order":0},{"id":21,"group_id":1,"sku":"PLD043","name":"Dome Lid for 12Oz PP Cup(350ml)","section":"CRYSTAL PACK DATE:11/08/2026","uom":"pcs","qty":73000,"reorder_level":40000,"buffer":80000,"max_stock":null,"counted_at":"2026-08-11 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"CRYSTAL SILIKATA S&D","on_order":0},{"id":22,"group_id":1,"sku":"PLD002","name":"175ml Plastic White Cup","section":"CRYSTAL PACK DATE:11/08/2026","uom":"pcs","qty":0,"reorder_level":7500,"buffer":15000,"max_stock":null,"counted_at":"2026-08-11 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"CRYSTAL SILIKATA S&D","on_order":0},{"id":23,"group_id":1,"sku":"PLD001","name":"175ml Plastic Clear Cup","section":"CRYSTAL PACK DATE:11/08/2026","uom":"pcs","qty":0,"reorder_level":7500,"buffer":15000,"max_stock":null,"counted_at":"2026-08-11 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"CRYSTAL SILIKATA S&D","on_order":0},{"id":24,"group_id":1,"sku":"PLD021","name":"Flat Lid for 12 / 16 /22 Oz Plastic Cups","section":"CRYSTAL PACK DATE:11/08/2026","uom":"pcs","qty":100000,"reorder_level":12500,"buffer":25000,"max_stock":null,"counted_at":"2026-08-11 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"CRYSTAL SILIKATA S&D","on_order":0},{"id":25,"group_id":1,"sku":"HIPS012","name":"Hips Lunch Box - KFC Model","section":"CRYSTAL PACK DATE:11/08/2026","uom":"pcs","qty":0,"reorder_level":4000,"buffer":8000,"max_stock":null,"counted_at":"2026-08-11 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"CRYSTAL SILIKATA S&D","on_order":0},{"id":26,"group_id":1,"sku":"PLCB036","name":"Plastic Cake Cup Holder","section":"CRYSTAL PACK DATE:11/08/2026","uom":"pcs","qty":15000,"reorder_level":5000,"buffer":10000,"max_stock":null,"counted_at":"2026-08-11 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"CRYSTAL SILIKATA S&D","on_order":0},{"id":27,"group_id":1,"sku":"PLD016","name":"22Oz Plastic Cup (650ml)","section":"CRYSTAL PACK DATE:11/08/2026","uom":"pcs","qty":7000,"reorder_level":5000,"buffer":10000,"max_stock":null,"counted_at":"2026-08-11 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"CRYSTAL SILIKATA S&D","on_order":10000},{"id":28,"group_id":1,"sku":null,"name":"CO0037","section":"SILIKATA/S & D/OPD","uom":"pcs","qty":0,"reorder_level":2,"buffer":4,"max_stock":null,"counted_at":"2025-02-05 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"CRYSTAL SILIKATA S&D","on_order":0},{"id":29,"group_id":1,"sku":null,"name":"PO066","section":"SILIKATA/S & D/OPD","uom":"pcs","qty":0,"reorder_level":1500,"buffer":3000,"max_stock":null,"counted_at":"2025-02-05 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"CRYSTAL SILIKATA S&D","on_order":0},{"id":30,"group_id":1,"sku":null,"name":"SHA144","section":"SILIKATA/S & D/OPD","uom":"pcs","qty":0,"reorder_level":5000,"buffer":10000,"max_stock":null,"counted_at":"2025-02-05 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"CRYSTAL SILIKATA S&D","on_order":0},{"id":31,"group_id":1,"sku":null,"name":"PO064","section":"SILIKATA/S & D/OPD","uom":"pcs","qty":0,"reorder_level":2000,"buffer":4000,"max_stock":null,"counted_at":"2025-02-05 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"CRYSTAL SILIKATA S&D","on_order":0},{"id":32,"group_id":1,"sku":null,"name":"SHA143","section":"SILIKATA/S & D/OPD","uom":"pcs","qty":0,"reorder_level":10000,"buffer":20000,"max_stock":null,"counted_at":"2025-02-05 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"CRYSTAL SILIKATA S&D","on_order":0},{"id":33,"group_id":2,"sku":"KPC031","name":"300ml Square Paper Bowl + Clear lid","section":"BIO 17/08/2026","uom":"pcs","qty":6000,"reorder_level":1000,"buffer":2000,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":0},{"id":34,"group_id":2,"sku":"KPC043","name":"500ml Square Paper Bowl + Clear lid","section":"BIO 17/08/2026","uom":"pcs","qty":5000,"reorder_level":1000,"buffer":2000,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":0},{"id":35,"group_id":2,"sku":"KPC029","name":"750ml Square Paper Bowl + Clear lid","section":"BIO 17/08/2026","uom":"pcs","qty":3000,"reorder_level":1500,"buffer":3000,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":0},{"id":36,"group_id":2,"sku":"KPC030","name":"1000ml Square Paper Bowl + Clear lid","section":"BIO 17/08/2026","uom":"pcs","qty":4000,"reorder_level":1500,"buffer":3000,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":0},{"id":37,"group_id":2,"sku":"SHA080","name":"SH White Box 900ml (150x110x50)mm","section":"BIO 17/08/2026","uom":"pcs","qty":25000,"reorder_level":7500,"buffer":15000,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":"pending 5,000","archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":0},{"id":38,"group_id":2,"sku":"PCO020","name":"80ml Paper Tub White","section":"BIO 17/08/2026","uom":"pcs","qty":3000,"reorder_level":5000,"buffer":10000,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":10000},{"id":39,"group_id":2,"sku":"PCO020 (Lid)","name":"80ml Clear Dome Lid","section":"BIO 17/08/2026","uom":"pcs","qty":8000,"reorder_level":5000,"buffer":10000,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":5000},{"id":40,"group_id":2,"sku":"CDS034","name":"Paper Straw White 12mm x 20cm","section":"BIO 17/08/2026","uom":"pcs","qty":10000,"reorder_level":5000,"buffer":10000,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":0},{"id":41,"group_id":2,"sku":"PCO018","name":"Paper Tub 120ml White","section":"BIO 17/08/2026","uom":"pcs","qty":0,"reorder_level":5000,"buffer":10000,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":8000},{"id":42,"group_id":2,"sku":"PCO019","name":"Lid for 120ml Paper Tub","section":"BIO 17/08/2026","uom":"pcs","qty":6000,"reorder_level":5000,"buffer":10000,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":2000},{"id":43,"group_id":2,"sku":"PCO021","name":"200ml White Paper Tub","section":"BIO 17/08/2026","uom":"pcs","qty":0,"reorder_level":2500,"buffer":5000,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":"pending 20,000","archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":0},{"id":44,"group_id":2,"sku":"PCO021 (Lid)","name":"200ml Clear Flat Lid","section":"BIO 17/08/2026","uom":"pcs","qty":4000,"reorder_level":2500,"buffer":5000,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":"pending 10,000","archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":0},{"id":45,"group_id":2,"sku":"PCO016","name":"300ml White Paper Tub","section":"BIO 17/08/2026","uom":"pcs","qty":1250,"reorder_level":2500,"buffer":5000,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":10000},{"id":46,"group_id":2,"sku":"PCO016 (Lid","name":"300ml Clear Flat Lid","section":"BIO 17/08/2026","uom":"pcs","qty":2000,"reorder_level":2500,"buffer":5000,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":10000},{"id":47,"group_id":2,"sku":"PCO017","name":"500ml White Paper Tub","section":"BIO 17/08/2026","uom":"pcs","qty":10000,"reorder_level":2500,"buffer":5000,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":0},{"id":48,"group_id":2,"sku":"PCO022","name":"1000ml White Paper Tub","section":"BIO 17/08/2026","uom":"pcs","qty":5000,"reorder_level":2500,"buffer":5000,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":0},{"id":49,"group_id":2,"sku":"PCO017/022 (Lid)","name":"500ml/1000ml Clear Flat Lid","section":"BIO 17/08/2026","uom":"pcs","qty":15000,"reorder_level":2500,"buffer":5000,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":0},{"id":50,"group_id":2,"sku":"PCUS003","name":"Paper Cup 150ml White","section":"BIO 17/08/2026","uom":"pcs","qty":36000,"reorder_level":10000,"buffer":20000,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":30000},{"id":51,"group_id":2,"sku":"PCUO013","name":"Lid for Paper Cup 150ml White","section":"BIO 17/08/2026","uom":"pcs","qty":50000,"reorder_level":10000,"buffer":20000,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":20000},{"id":52,"group_id":2,"sku":"PCUS018","name":"Paper Cup 200ml White","section":"BIO 17/08/2026","uom":"pcs","qty":0,"reorder_level":7500,"buffer":15000,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":30000},{"id":53,"group_id":2,"sku":"PCUO019","name":"Lid for 200ml Paper Cup","section":"BIO 17/08/2026","uom":"pcs","qty":19000,"reorder_level":7500,"buffer":15000,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":0},{"id":54,"group_id":2,"sku":"PCUS004","name":"Paper Cup 250ml White","section":"BIO 17/08/2026","uom":"pcs","qty":0,"reorder_level":7500,"buffer":15000,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":30000},{"id":55,"group_id":2,"sku":"PCUO009","name":"Lid for 250ml Paper Cup","section":"BIO 17/08/2026","uom":"pcs","qty":33000,"reorder_level":7500,"buffer":15000,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":0},{"id":56,"group_id":2,"sku":"PCUS005","name":"Paper Cup 300ml White","section":"BIO 17/08/2026","uom":"pcs","qty":4000,"reorder_level":10000,"buffer":20000,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":30000},{"id":57,"group_id":2,"sku":"PCUO001","name":"Lid for 300ml Paper Cup","section":"BIO 17/08/2026","uom":"pcs","qty":21000,"reorder_level":10000,"buffer":20000,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":0},{"id":58,"group_id":2,"sku":"PCUS006","name":"Paper Cup 400ML WHITE","section":"BIO 17/08/2026","uom":"pcs","qty":29000,"reorder_level":10000,"buffer":20000,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":10000},{"id":59,"group_id":2,"sku":"PCUO012","name":"Lid for 400ml Paper Cup","section":"BIO 17/08/2026","uom":"pcs","qty":25000,"reorder_level":10000,"buffer":20000,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":15000},{"id":60,"group_id":2,"sku":"PLCB049","name":"Plastic Round Dessert Box 10cm","section":"BIO 17/08/2026","uom":"pcs","qty":0,"reorder_level":2500,"buffer":5000,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":0},{"id":61,"group_id":2,"sku":"CDS013","name":"Paper Black Straw 6mm x 20cm","section":"BIO 17/08/2026","uom":"pcs","qty":0,"reorder_level":100000,"buffer":200000,"max_stock":null,"counted_at":"2025-11-06 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":0},{"id":62,"group_id":2,"sku":"PCUS019","name":"150ml Kraft Paper Cup","section":"BIO 17/08/2026","uom":"pcs","qty":0,"reorder_level":10000,"buffer":20000,"max_stock":null,"counted_at":"2025-06-25 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":0},{"id":63,"group_id":2,"sku":"PCUS020","name":"250ml Kraft Paper Cup","section":"BIO 17/08/2026","uom":"pcs","qty":0,"reorder_level":0,"buffer":0,"max_stock":null,"counted_at":"2025-06-25 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":0},{"id":64,"group_id":2,"sku":"PCUS021","name":"300ml Kraft Paper Cup","section":"BIO 17/08/2026","uom":"pcs","qty":0,"reorder_level":5000,"buffer":10000,"max_stock":null,"counted_at":"2025-06-25 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":0},{"id":65,"group_id":2,"sku":"PCUS022","name":"400ml Kraft Paper Cup","section":"BIO 17/08/2026","uom":"pcs","qty":0,"reorder_level":5000,"buffer":10000,"max_stock":null,"counted_at":"2025-06-25 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":0},{"id":66,"group_id":2,"sku":"CGB017","name":"Garbage Bag X Small 18x24 Inch 100pcs/pack","section":"JAYAMOND/SDS DATE: 15/08/2026","uom":"pcs","qty":40,"reorder_level":15,"buffer":30,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":30},{"id":67,"group_id":2,"sku":"CGB018","name":"Garbage Bag Small 22x24 Inch 100pcs/pack","section":"JAYAMOND/SDS DATE: 15/08/2026","uom":"pcs","qty":100,"reorder_level":15,"buffer":30,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":0},{"id":68,"group_id":2,"sku":"CGB019","name":"Garbage Bag Medium 24x36 Inch 100pcs/pack","section":"JAYAMOND/SDS DATE: 15/08/2026","uom":"pcs","qty":20,"reorder_level":15,"buffer":30,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":50},{"id":69,"group_id":2,"sku":"CGB020","name":"Garbage Bag Large 28x36 Inch 100pcs/pack","section":"JAYAMOND/SDS DATE: 15/08/2026","uom":"pcs","qty":50,"reorder_level":15,"buffer":30,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":0},{"id":70,"group_id":2,"sku":"CGB021","name":"Garbage Bag XL 32x36 Inch 100pcs/pack","section":"JAYAMOND/SDS DATE: 15/08/2026","uom":"pcs","qty":0,"reorder_level":15,"buffer":30,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":100},{"id":71,"group_id":2,"sku":"CGB022","name":"Garbage Bag XXL 34x36 Inch 100pcs/pack","section":"JAYAMOND/SDS DATE: 15/08/2026","uom":"pcs","qty":0,"reorder_level":15,"buffer":30,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":50},{"id":72,"group_id":2,"sku":"CGB023","name":"Garbage Bag XXXL 36x48 Inch 100pcs/pack","section":"JAYAMOND/SDS DATE: 15/08/2026","uom":"pcs","qty":40,"reorder_level":40,"buffer":80,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":100},{"id":73,"group_id":2,"sku":"CGB009","name":"Garbage Bag X Small 18x24 Inch 10pcs/pack","section":"JAYAMOND/SDS DATE: 15/08/2026","uom":"pcs","qty":30,"reorder_level":15,"buffer":30,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":30},{"id":74,"group_id":2,"sku":"CGB010","name":"Garbage Bag Small 22x24 Inch 10pcs/pack","section":"JAYAMOND/SDS DATE: 15/08/2026","uom":"pcs","qty":25,"reorder_level":15,"buffer":30,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":50},{"id":75,"group_id":2,"sku":"CGB011","name":"Garbage Bag Medium 24x36 Inch 10pcs/pack","section":"JAYAMOND/SDS DATE: 15/08/2026","uom":"pcs","qty":70,"reorder_level":15,"buffer":30,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":0},{"id":76,"group_id":2,"sku":"CGB012","name":"Garbage Bag Large 28x36 Inch 10pcs/pack","section":"JAYAMOND/SDS DATE: 15/08/2026","uom":"pcs","qty":30,"reorder_level":15,"buffer":30,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":30},{"id":77,"group_id":2,"sku":"CGB013","name":"Garbage Bag XL 32x36 Inch 10pcs/pack","section":"JAYAMOND/SDS DATE: 15/08/2026","uom":"pcs","qty":0,"reorder_level":15,"buffer":30,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":60},{"id":78,"group_id":2,"sku":"CGB015","name":"Garbage Bag XXL 34x36 Inch 10pcs/pack","section":"JAYAMOND/SDS DATE: 15/08/2026","uom":"pcs","qty":0,"reorder_level":15,"buffer":30,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":60},{"id":79,"group_id":2,"sku":"CGB016","name":"Garbage Bag XXXL 36x48 Inch 10pcs/pack","section":"JAYAMOND/SDS DATE: 15/08/2026","uom":"pcs","qty":40,"reorder_level":15,"buffer":30,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"BIO - JAYAMOND","on_order":0},{"id":221,"group_id":7,"sku":"CO0035","name":"Oil Paper","section":"FINR LINE/KASUN/DISPOWARE/KRISHNA/RMB DATE: 22/01/2026","uom":"pcs","qty":0,"reorder_level":10000,"buffer":20000,"max_stock":null,"counted_at":"2026-01-22 00:00:00","counted_by":null,"note":"pending 40000","archived":0,"created_at":"2026-09-05 17:41:29","group_name":"INFINITI-BURHANI-OTHOR","on_order":40000},{"id":222,"group_id":7,"sku":"CCH004","name":"Chef Hat 8 Inch","section":"FINR LINE/KASUN/DISPOWARE/KRISHNA/RMB DATE: 22/01/2026","uom":"pcs","qty":3700,"reorder_level":3000,"buffer":6000,"max_stock":null,"counted_at":"2026-01-22 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"INFINITI-BURHANI-OTHOR","on_order":4000},{"id":223,"group_id":7,"sku":"CCH005","name":"Chef Hat 9 Inch","section":"FINR LINE/KASUN/DISPOWARE/KRISHNA/RMB DATE: 22/01/2026","uom":"pcs","qty":3100,"reorder_level":1500,"buffer":3000,"max_stock":null,"counted_at":"2026-01-22 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"INFINITI-BURHANI-OTHOR","on_order":1500},{"id":224,"group_id":7,"sku":"CHN006","name":"Boufant Hair Net Blue","section":"FINR LINE/KASUN/DISPOWARE/KRISHNA/RMB DATE: 22/01/2026","uom":"pcs","qty":125000,"reorder_level":25000,"buffer":50000,"max_stock":null,"counted_at":"2026-01-22 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"INFINITI-BURHANI-OTHOR","on_order":0},{"id":225,"group_id":7,"sku":"CHN007","name":"Boufant Hair Net Black","section":"FINR LINE/KASUN/DISPOWARE/KRISHNA/RMB DATE: 22/01/2026","uom":"pcs","qty":130000,"reorder_level":25000,"buffer":50000,"max_stock":null,"counted_at":"2026-01-22 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"INFINITI-BURHANI-OTHOR","on_order":0},{"id":226,"group_id":7,"sku":"CHN008","name":"Boufant Hair Net White","section":"FINR LINE/KASUN/DISPOWARE/KRISHNA/RMB DATE: 22/01/2026","uom":"pcs","qty":130000,"reorder_level":0,"buffer":0,"max_stock":null,"counted_at":"2026-01-22 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"INFINITI-BURHANI-OTHOR","on_order":0},{"id":227,"group_id":7,"sku":"CPB003","name":"Piping Bag 26cm","section":"FINR LINE/KASUN/DISPOWARE/KRISHNA/RMB DATE: 22/01/2026","uom":"pcs","qty":9000,"reorder_level":2500,"buffer":5000,"max_stock":null,"counted_at":"2026-01-22 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"INFINITI-BURHANI-OTHOR","on_order":0},{"id":228,"group_id":7,"sku":"CPB004","name":"Piping Bag 30cm","section":"FINR LINE/KASUN/DISPOWARE/KRISHNA/RMB DATE: 22/01/2026","uom":"pcs","qty":1600,"reorder_level":2500,"buffer":5000,"max_stock":null,"counted_at":"2026-01-22 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"INFINITI-BURHANI-OTHOR","on_order":7000},{"id":229,"group_id":7,"sku":"CPB006","name":"Piping Bag 35cm","section":"FINR LINE/KASUN/DISPOWARE/KRISHNA/RMB DATE: 22/01/2026","uom":"pcs","qty":3000,"reorder_level":2500,"buffer":5000,"max_stock":null,"counted_at":"2026-01-22 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"INFINITI-BURHANI-OTHOR","on_order":10000},{"id":230,"group_id":7,"sku":"CPIZ009","name":"Pizza Stand (Triangle)","section":"FINR LINE/KASUN/DISPOWARE/KRISHNA/RMB DATE: 22/01/2026","uom":"pcs","qty":19000,"reorder_level":10000,"buffer":20000,"max_stock":null,"counted_at":"2026-01-22 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"INFINITI-BURHANI-OTHOR","on_order":20000},{"id":215,"group_id":7,"sku":"CDG010","name":"Latex Powder Free Gloves Medium White","section":"Infinity DATE: 28/01/2026","uom":"pcs","qty":30,"reorder_level":50,"buffer":100,"max_stock":null,"counted_at":"2026-01-28 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"INFINITI-BURHANI-OTHOR","on_order":100},{"id":216,"group_id":7,"sku":"CDG009","name":"Latex Powder Free Gloves Large White","section":"Infinity DATE: 28/01/2026","uom":"pcs","qty":130,"reorder_level":50,"buffer":100,"max_stock":null,"counted_at":"2026-01-28 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"INFINITI-BURHANI-OTHOR","on_order":0},{"id":217,"group_id":7,"sku":"CDG014","name":"Latex Powder Free Gloves Medium Black","section":"Infinity DATE: 28/01/2026","uom":"pcs","qty":150,"reorder_level":25,"buffer":50,"max_stock":null,"counted_at":"2026-01-28 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"INFINITI-BURHANI-OTHOR","on_order":0},{"id":218,"group_id":7,"sku":"CDG013","name":"Latex Powder Free Gloves Large Black","section":"Infinity DATE: 28/01/2026","uom":"pcs","qty":0,"reorder_level":25,"buffer":50,"max_stock":null,"counted_at":"2026-01-28 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"INFINITI-BURHANI-OTHOR","on_order":0},{"id":219,"group_id":7,"sku":"CDG018","name":"Nitrile Powder Free Gloves Medium Blue","section":"Infinity DATE: 28/01/2026","uom":"pcs","qty":1490,"reorder_level":50,"buffer":100,"max_stock":null,"counted_at":"2026-01-28 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"INFINITI-BURHANI-OTHOR","on_order":0},{"id":220,"group_id":7,"sku":"CDG019","name":"Nitrile Powder Free Gloves Large Blue","section":"Infinity DATE: 28/01/2026","uom":"pcs","qty":300,"reorder_level":50,"buffer":100,"max_stock":null,"counted_at":"2026-01-28 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"INFINITI-BURHANI-OTHOR","on_order":400},{"id":238,"group_id":7,"sku":"CPSSC002","name":"Sugar Tube Brown","section":"Paramount DATE: 29/05/2025","uom":"pcs","qty":0,"reorder_level":2500,"buffer":5000,"max_stock":null,"counted_at":"2025-05-29 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"INFINITI-BURHANI-OTHOR","on_order":15000},{"id":239,"group_id":7,"sku":"CPSSC001","name":"Sugar Tube White","section":"Paramount DATE: 29/05/2025","uom":"pcs","qty":0,"reorder_level":2500,"buffer":5000,"max_stock":null,"counted_at":"2025-05-29 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"INFINITI-BURHANI-OTHOR","on_order":10000},{"id":240,"group_id":7,"sku":"CPSSC003","name":"Sugar Sachets Brown","section":"Paramount DATE: 29/05/2025","uom":"pcs","qty":0,"reorder_level":1500,"buffer":3000,"max_stock":null,"counted_at":"2025-05-29 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"INFINITI-BURHANI-OTHOR","on_order":30000},{"id":241,"group_id":7,"sku":"CPSSC004","name":"Sugar Sachets White","section":"Paramount DATE: 29/05/2025","uom":"pcs","qty":0,"reorder_level":1500,"buffer":3000,"max_stock":null,"counted_at":"2025-05-29 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"INFINITI-BURHANI-OTHOR","on_order":5000},{"id":242,"group_id":7,"sku":"CPSSC006","name":"Pepper Sachet 0.5g","section":"Paramount DATE: 29/05/2025","uom":"pcs","qty":0,"reorder_level":0,"buffer":0,"max_stock":null,"counted_at":"2025-05-29 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"INFINITI-BURHANI-OTHOR","on_order":0},{"id":243,"group_id":7,"sku":"CPSSC005","name":"Salt Sachet 1g","section":"Paramount DATE: 29/05/2025","uom":"pcs","qty":0,"reorder_level":0,"buffer":0,"max_stock":null,"counted_at":"2025-05-29 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"INFINITI-BURHANI-OTHOR","on_order":0},{"id":244,"group_id":7,"sku":"CPSSC007","name":"Milk Creamer Sachet 4.5g","section":"Paramount DATE: 29/05/2025","uom":"pcs","qty":0,"reorder_level":0,"buffer":0,"max_stock":null,"counted_at":"2025-05-29 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"INFINITI-BURHANI-OTHOR","on_order":0},{"id":231,"group_id":7,"sku":"CSB005","name":"Shopping Bag King Jumbo","section":null,"uom":"pcs","qty":50,"reorder_level":10,"buffer":20,"max_stock":null,"counted_at":"2026-08-13 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"INFINITI-BURHANI-OTHOR","on_order":0},{"id":232,"group_id":7,"sku":"CSB004","name":"Shopping Bag Jumbo","section":null,"uom":"pcs","qty":20,"reorder_level":10,"buffer":20,"max_stock":null,"counted_at":"2026-08-13 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"INFINITI-BURHANI-OTHOR","on_order":40},{"id":233,"group_id":7,"sku":"CSB003","name":"Shopping Bag Large","section":null,"uom":"pcs","qty":90,"reorder_level":25,"buffer":50,"max_stock":null,"counted_at":"2026-08-13 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"INFINITI-BURHANI-OTHOR","on_order":100},{"id":234,"group_id":7,"sku":"CSB002","name":"Shopping Bag Medium","section":null,"uom":"pcs","qty":10,"reorder_level":25,"buffer":50,"max_stock":null,"counted_at":"2026-08-13 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"INFINITI-BURHANI-OTHOR","on_order":200},{"id":235,"group_id":7,"sku":"CSB001","name":"Shopping Bag Small","section":null,"uom":"pcs","qty":200,"reorder_level":25,"buffer":50,"max_stock":null,"counted_at":"2026-08-13 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"INFINITI-BURHANI-OTHOR","on_order":0},{"id":236,"group_id":7,"sku":"3","name":"3","section":null,"uom":"pcs","qty":3,"reorder_level":3,"buffer":3,"max_stock":null,"counted_at":"2001-03-01 00:00:00","counted_by":null,"note":"3","archived":0,"created_at":"2026-09-05 17:41:29","group_name":"INFINITI-BURHANI-OTHOR","on_order":3},{"id":237,"group_id":7,"sku":"3","name":"3","section":null,"uom":"pcs","qty":3,"reorder_level":3,"buffer":3,"max_stock":null,"counted_at":"2001-03-01 00:00:00","counted_by":null,"note":"3","archived":0,"created_at":"2026-09-05 17:41:29","group_name":"INFINITI-BURHANI-OTHOR","on_order":3},{"id":245,"group_id":8,"sku":null,"name":"SP-Big Bell Box (Taco Bell)","section":null,"uom":"pcs","qty":3250,"reorder_level":1000,"buffer":500,"max_stock":2000,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"TACO BELL","on_order":0},{"id":246,"group_id":8,"sku":"OPS070","name":"SP-Kraft Food Wrap(10 X 10 ) (Taco Bell)","section":null,"uom":"pcs","qty":12500,"reorder_level":20000,"buffer":10000,"max_stock":30000,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":"pending 20,000","archived":0,"created_at":"2026-09-05 17:41:29","group_name":"TACO BELL","on_order":20000},{"id":247,"group_id":8,"sku":"OPS071","name":"SP-Kraft Food Wrap(12x12 ) (Taco Bell)","section":null,"uom":"pcs","qty":24000,"reorder_level":20000,"buffer":10000,"max_stock":30000,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"TACO BELL","on_order":30000},{"id":248,"group_id":8,"sku":"OPS067","name":"SP-Kraft Food Wrap (Chocodilla Pouch) (Taco Bell)","section":null,"uom":"pcs","qty":14000,"reorder_level":12000,"buffer":8000,"max_stock":20000,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":"pending 20,000","archived":0,"created_at":"2026-09-05 17:41:29","group_name":"TACO BELL","on_order":0},{"id":249,"group_id":8,"sku":"OPS066","name":"SP-Kraft Food Wrap (Quesadilla Pouch) (Taco Bell)","section":null,"uom":"pcs","qty":5000,"reorder_level":17000,"buffer":10000,"max_stock":25000,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":"pending 10,000","archived":0,"created_at":"2026-09-05 17:41:29","group_name":"TACO BELL","on_order":5000},{"id":250,"group_id":8,"sku":"OPS068","name":"SP-Kraft Food Wrap (Value Menu Pouch) (Taco Bell)","section":null,"uom":"pcs","qty":12000,"reorder_level":12000,"buffer":8000,"max_stock":20000,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":"pending 5,000","archived":0,"created_at":"2026-09-05 17:41:29","group_name":"TACO BELL","on_order":0},{"id":251,"group_id":8,"sku":"OPS130","name":"SP-Wings Oil Paper","section":null,"uom":"pcs","qty":39000,"reorder_level":12000,"buffer":8000,"max_stock":20000,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"TACO BELL","on_order":0},{"id":252,"group_id":8,"sku":null,"name":"SP-Small White Wrapper (Taco Bell)","section":null,"uom":"pcs","qty":30000,"reorder_level":20000,"buffer":10000,"max_stock":30000,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"TACO BELL","on_order":20000},{"id":253,"group_id":8,"sku":"OPS072","name":"SP-White Paper(Cinnamon Twist pouch) (Taco Bell)","section":null,"uom":"pcs","qty":1500,"reorder_level":17000,"buffer":10000,"max_stock":30000,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":"pending 20,000","archived":0,"created_at":"2026-09-05 17:41:29","group_name":"TACO BELL","on_order":30000},{"id":254,"group_id":8,"sku":"OPS184","name":"SP-Taco Bell Wings Box (4.5 x 3.2 x 1.5)","section":null,"uom":"pcs","qty":6500,"reorder_level":2000,"buffer":1000,"max_stock":3000,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"TACO BELL","on_order":0},{"id":255,"group_id":8,"sku":null,"name":"SP-Frice Deal Pouch (Pizza Hut)","section":null,"uom":"pcs","qty":0,"reorder_level":2000,"buffer":1000,"max_stock":3000,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":"pending 3,000","archived":0,"created_at":"2026-09-05 17:41:29","group_name":"TACO BELL","on_order":5000},{"id":256,"group_id":8,"sku":null,"name":"SP-8oz D/wall White Paper Cup (Hut Cafe)","section":null,"uom":"pcs","qty":1000,"reorder_level":2000,"buffer":1000,"max_stock":3000,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"TACO BELL","on_order":0},{"id":257,"group_id":8,"sku":null,"name":"SP-Taco Box 13x14.5 inches (Taco Bell)","section":null,"uom":"pcs","qty":0,"reorder_level":20000,"buffer":10000,"max_stock":30000,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":"pending 30,000","archived":0,"created_at":"2026-09-05 17:41:29","group_name":"TACO BELL","on_order":0},{"id":258,"group_id":8,"sku":null,"name":"SP-Taco Sleeve 5.4X6.7Inch (Taco Bell)","section":null,"uom":"pcs","qty":11400,"reorder_level":20000,"buffer":10000,"max_stock":30000,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"TACO BELL","on_order":0},{"id":259,"group_id":8,"sku":null,"name":"SP-Crunchwrap Pouch 7.5x6.5 Inch (Taco Bell)","section":null,"uom":"pcs","qty":0,"reorder_level":0,"buffer":0,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"TACO BELL","on_order":0},{"id":260,"group_id":8,"sku":null,"name":"Crunchwrap Baking Paper 6x6 (Taco Bell)","section":null,"uom":"pcs","qty":0,"reorder_level":0,"buffer":0,"max_stock":null,"counted_at":"2026-08-15 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"TACO BELL","on_order":0},{"id":274,"group_id":10,"sku":null,"name":"SP-Kraft Paper Bag 300x275x160mm (Food Print)","section":null,"uom":"pcs","qty":0,"reorder_level":1500,"buffer":500,"max_stock":3000,"counted_at":null,"counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"FOOD PRINT","on_order":1000},{"id":275,"group_id":10,"sku":null,"name":"CP-Kraft Paper Bag with Rope Handle 40mmX33mmX16mm(Food Print)","section":null,"uom":"pcs","qty":700,"reorder_level":1000,"buffer":500,"max_stock":2000,"counted_at":null,"counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"FOOD PRINT","on_order":0},{"id":276,"group_id":10,"sku":null,"name":"CP-Paper Bag With Rope Handle (L) (320x150x110)mm( Food Print)","section":null,"uom":"pcs","qty":900,"reorder_level":1500,"buffer":500,"max_stock":3000,"counted_at":null,"counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"FOOD PRINT","on_order":0},{"id":277,"group_id":10,"sku":null,"name":"CP-Kraft Paper Bag with Rope Handle XL 34x33x16CM(Food Print)","section":null,"uom":"pcs","qty":0,"reorder_level":0,"buffer":0,"max_stock":null,"counted_at":null,"counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"FOOD PRINT","on_order":0},{"id":278,"group_id":10,"sku":null,"name":"SP-Kraft Paper Bag 280x190x120 (Food Print)","section":null,"uom":"pcs","qty":0,"reorder_level":1500,"buffer":500,"max_stock":3000,"counted_at":null,"counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"FOOD PRINT","on_order":5000},{"id":319,"group_id":16,"sku":null,"name":"SH Kraft Box + Window (150x100x90)mm (SHA007)","section":null,"uom":"pcs","qty":1000,"reorder_level":5000,"buffer":3000,"max_stock":10000,"counted_at":null,"counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"KRAFT BOX","on_order":6000},{"id":320,"group_id":16,"sku":null,"name":"SH Kraft Box + Window (165x105x50)mm (SHA008)","section":null,"uom":"pcs","qty":1000,"reorder_level":10000,"buffer":5000,"max_stock":15000,"counted_at":null,"counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"KRAFT BOX","on_order":5000},{"id":321,"group_id":16,"sku":null,"name":"SH Kraft Box + Window (200x105x50)mm (SHA009)","section":null,"uom":"pcs","qty":2000,"reorder_level":5000,"buffer":3000,"max_stock":10000,"counted_at":null,"counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"KRAFT BOX","on_order":5000},{"id":322,"group_id":16,"sku":null,"name":"SH Kraft Cake Box (145x145x90)mm (SHA013)","section":null,"uom":"pcs","qty":1000,"reorder_level":10000,"buffer":5000,"max_stock":15000,"counted_at":null,"counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"KRAFT BOX","on_order":20000},{"id":323,"group_id":16,"sku":null,"name":"SH Kraft Cake Box (170x145x50)mm (SHA014)","section":null,"uom":"pcs","qty":3000,"reorder_level":5000,"buffer":3000,"max_stock":10000,"counted_at":null,"counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"KRAFT BOX","on_order":8000},{"id":324,"group_id":16,"sku":null,"name":"SH Kraft Cake Box (110x110x90)mm (SHA015)","section":null,"uom":"pcs","qty":8000,"reorder_level":5000,"buffer":3000,"max_stock":10000,"counted_at":null,"counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"KRAFT BOX","on_order":0},{"id":325,"group_id":16,"sku":null,"name":"SH Kraft Box + Window (220x160x40)mm (SHA021)","section":null,"uom":"pcs","qty":3000,"reorder_level":5000,"buffer":3000,"max_stock":10000,"counted_at":null,"counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"KRAFT BOX","on_order":0},{"id":326,"group_id":16,"sku":null,"name":"SH Kraft Box (215x145x60mm) SHA023","section":null,"uom":"pcs","qty":7000,"reorder_level":5000,"buffer":3000,"max_stock":10000,"counted_at":null,"counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"KRAFT BOX","on_order":0},{"id":327,"group_id":16,"sku":null,"name":"SH Budget Lunch Box (185x140x45)mm","section":null,"uom":"pcs","qty":3000,"reorder_level":10000,"buffer":5000,"max_stock":15000,"counted_at":null,"counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"KRAFT BOX","on_order":5000},{"id":328,"group_id":16,"sku":null,"name":"SH White Box 4\"x4\"x2\" with Window - (100x100x50)mm - SHA130","section":null,"uom":"pcs","qty":4000,"reorder_level":5000,"buffer":3000,"max_stock":10000,"counted_at":null,"counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"KRAFT BOX","on_order":0},{"id":329,"group_id":16,"sku":null,"name":"SH-Kraft Box 4x4x2 Inch With Window","section":null,"uom":"pcs","qty":5000,"reorder_level":5000,"buffer":3000,"max_stock":10000,"counted_at":null,"counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"KRAFT BOX","on_order":0},{"id":403,"group_id":20,"sku":null,"name":"Single Cake Board Round 8cm","section":null,"uom":"pcs","qty":0,"reorder_level":0,"buffer":0,"max_stock":null,"counted_at":"2026-08-18 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"COURT YARD","on_order":6000},{"id":404,"group_id":20,"sku":null,"name":"SP-Single Cake Board Rectangle 10x6cm (Courtyard Marriott)","section":null,"uom":"pcs","qty":3000,"reorder_level":0,"buffer":0,"max_stock":null,"counted_at":"2026-05-20 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"COURT YARD","on_order":0},{"id":405,"group_id":20,"sku":null,"name":"Single Cake Board Rectangle 10.5x5.5cm","section":null,"uom":"pcs","qty":0,"reorder_level":0,"buffer":0,"max_stock":null,"counted_at":"2026-05-20 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"COURT YARD","on_order":6000},{"id":406,"group_id":20,"sku":null,"name":"Single Cake Board Square 10x10cm","section":null,"uom":"pcs","qty":2000,"reorder_level":0,"buffer":0,"max_stock":null,"counted_at":"2026-05-20 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"COURT YARD","on_order":0},{"id":407,"group_id":20,"sku":null,"name":"Single Cake Board Square 7x7cm","section":null,"uom":"pcs","qty":0,"reorder_level":0,"buffer":0,"max_stock":null,"counted_at":"2026-05-20 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"COURT YARD","on_order":10000},{"id":408,"group_id":20,"sku":null,"name":"Single Cake Board Round 10cm","section":null,"uom":"pcs","qty":0,"reorder_level":0,"buffer":0,"max_stock":null,"counted_at":"2026-05-20 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"COURT YARD","on_order":2000},{"id":409,"group_id":20,"sku":null,"name":"Single Cake Board Long Rectangle 13x5cm","section":null,"uom":"pcs","qty":5000,"reorder_level":0,"buffer":0,"max_stock":null,"counted_at":"2026-05-20 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"COURT YARD","on_order":0},{"id":410,"group_id":20,"sku":null,"name":"Single Cake Board Triangle 11.5x7.5cm","section":null,"uom":"pcs","qty":1500,"reorder_level":0,"buffer":0,"max_stock":null,"counted_at":"2026-05-20 00:00:00","counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"COURT YARD","on_order":2000},{"id":411,"group_id":20,"sku":null,"name":"Single Cake Board Long Rectangle 13x5cm","section":null,"uom":"pcs","qty":2625,"reorder_level":0,"buffer":0,"max_stock":null,"counted_at":null,"counted_by":null,"note":null,"archived":0,"created_at":"2026-09-05 17:41:29","group_name":"COURT YARD","on_order":0}],"txns":[{"id":1,"item_id":1,"kind":"OPENING","qty_before":0,"qty_delta":25000,"qty_after":25000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-11 00:00:00"},{"id":2,"item_id":2,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-11 00:00:00"},{"id":3,"item_id":3,"kind":"OPENING","qty_before":0,"qty_delta":7000,"qty_after":7000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-11 00:00:00"},{"id":4,"item_id":4,"kind":"OPENING","qty_before":0,"qty_delta":33500,"qty_after":33500,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-11 00:00:00"},{"id":5,"item_id":5,"kind":"OPENING","qty_before":0,"qty_delta":13000,"qty_after":13000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-11 00:00:00"},{"id":6,"item_id":6,"kind":"OPENING","qty_before":0,"qty_delta":500,"qty_after":500,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-11 00:00:00"},{"id":7,"item_id":7,"kind":"OPENING","qty_before":0,"qty_delta":1000,"qty_after":1000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-11 00:00:00"},{"id":8,"item_id":8,"kind":"OPENING","qty_before":0,"qty_delta":5000,"qty_after":5000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-11 00:00:00"},{"id":9,"item_id":9,"kind":"OPENING","qty_before":0,"qty_delta":29000,"qty_after":29000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-11 00:00:00"},{"id":10,"item_id":10,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-11 00:00:00"},{"id":11,"item_id":11,"kind":"OPENING","qty_before":0,"qty_delta":12000,"qty_after":12000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-11 00:00:00"},{"id":12,"item_id":12,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-11 00:00:00"},{"id":13,"item_id":13,"kind":"OPENING","qty_before":0,"qty_delta":1000,"qty_after":1000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-11 00:00:00"},{"id":14,"item_id":14,"kind":"OPENING","qty_before":0,"qty_delta":1000,"qty_after":1000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-11 00:00:00"},{"id":15,"item_id":15,"kind":"OPENING","qty_before":0,"qty_delta":5000,"qty_after":5000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-11 00:00:00"},{"id":16,"item_id":16,"kind":"OPENING","qty_before":0,"qty_delta":15000,"qty_after":15000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-11 00:00:00"},{"id":17,"item_id":17,"kind":"OPENING","qty_before":0,"qty_delta":20000,"qty_after":20000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-11 00:00:00"},{"id":18,"item_id":18,"kind":"OPENING","qty_before":0,"qty_delta":20000,"qty_after":20000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-11 00:00:00"},{"id":19,"item_id":19,"kind":"OPENING","qty_before":0,"qty_delta":44000,"qty_after":44000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-11 00:00:00"},{"id":20,"item_id":20,"kind":"OPENING","qty_before":0,"qty_delta":80000,"qty_after":80000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-11 00:00:00"},{"id":21,"item_id":21,"kind":"OPENING","qty_before":0,"qty_delta":73000,"qty_after":73000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-11 00:00:00"},{"id":22,"item_id":22,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-11 00:00:00"},{"id":23,"item_id":23,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-11 00:00:00"},{"id":24,"item_id":24,"kind":"OPENING","qty_before":0,"qty_delta":100000,"qty_after":100000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-11 00:00:00"},{"id":25,"item_id":25,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-11 00:00:00"},{"id":26,"item_id":26,"kind":"OPENING","qty_before":0,"qty_delta":15000,"qty_after":15000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-11 00:00:00"},{"id":27,"item_id":27,"kind":"OPENING","qty_before":0,"qty_delta":7000,"qty_after":7000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-11 00:00:00"},{"id":28,"item_id":28,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2025-02-05 00:00:00"},{"id":29,"item_id":29,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2025-02-05 00:00:00"},{"id":30,"item_id":30,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2025-02-05 00:00:00"},{"id":31,"item_id":31,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2025-02-05 00:00:00"},{"id":32,"item_id":32,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2025-02-05 00:00:00"},{"id":33,"item_id":33,"kind":"OPENING","qty_before":0,"qty_delta":6000,"qty_after":6000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":34,"item_id":34,"kind":"OPENING","qty_before":0,"qty_delta":5000,"qty_after":5000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":35,"item_id":35,"kind":"OPENING","qty_before":0,"qty_delta":3000,"qty_after":3000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":36,"item_id":36,"kind":"OPENING","qty_before":0,"qty_delta":4000,"qty_after":4000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":37,"item_id":37,"kind":"OPENING","qty_before":0,"qty_delta":25000,"qty_after":25000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":38,"item_id":38,"kind":"OPENING","qty_before":0,"qty_delta":3000,"qty_after":3000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":39,"item_id":39,"kind":"OPENING","qty_before":0,"qty_delta":8000,"qty_after":8000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":40,"item_id":40,"kind":"OPENING","qty_before":0,"qty_delta":10000,"qty_after":10000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":41,"item_id":41,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":42,"item_id":42,"kind":"OPENING","qty_before":0,"qty_delta":6000,"qty_after":6000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":43,"item_id":43,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":44,"item_id":44,"kind":"OPENING","qty_before":0,"qty_delta":4000,"qty_after":4000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":45,"item_id":45,"kind":"OPENING","qty_before":0,"qty_delta":1250,"qty_after":1250,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":46,"item_id":46,"kind":"OPENING","qty_before":0,"qty_delta":2000,"qty_after":2000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":47,"item_id":47,"kind":"OPENING","qty_before":0,"qty_delta":10000,"qty_after":10000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":48,"item_id":48,"kind":"OPENING","qty_before":0,"qty_delta":5000,"qty_after":5000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":49,"item_id":49,"kind":"OPENING","qty_before":0,"qty_delta":15000,"qty_after":15000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":50,"item_id":50,"kind":"OPENING","qty_before":0,"qty_delta":36000,"qty_after":36000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":51,"item_id":51,"kind":"OPENING","qty_before":0,"qty_delta":50000,"qty_after":50000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":52,"item_id":52,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":53,"item_id":53,"kind":"OPENING","qty_before":0,"qty_delta":19000,"qty_after":19000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":54,"item_id":54,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":55,"item_id":55,"kind":"OPENING","qty_before":0,"qty_delta":33000,"qty_after":33000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":56,"item_id":56,"kind":"OPENING","qty_before":0,"qty_delta":4000,"qty_after":4000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":57,"item_id":57,"kind":"OPENING","qty_before":0,"qty_delta":21000,"qty_after":21000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":58,"item_id":58,"kind":"OPENING","qty_before":0,"qty_delta":29000,"qty_after":29000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":59,"item_id":59,"kind":"OPENING","qty_before":0,"qty_delta":25000,"qty_after":25000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":60,"item_id":60,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":61,"item_id":61,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2025-11-06 00:00:00"},{"id":62,"item_id":62,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2025-06-25 00:00:00"},{"id":63,"item_id":63,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2025-06-25 00:00:00"},{"id":64,"item_id":64,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2025-06-25 00:00:00"},{"id":65,"item_id":65,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2025-06-25 00:00:00"},{"id":66,"item_id":66,"kind":"OPENING","qty_before":0,"qty_delta":40,"qty_after":40,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":67,"item_id":67,"kind":"OPENING","qty_before":0,"qty_delta":100,"qty_after":100,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":68,"item_id":68,"kind":"OPENING","qty_before":0,"qty_delta":20,"qty_after":20,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":69,"item_id":69,"kind":"OPENING","qty_before":0,"qty_delta":50,"qty_after":50,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":70,"item_id":70,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":71,"item_id":71,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":72,"item_id":72,"kind":"OPENING","qty_before":0,"qty_delta":40,"qty_after":40,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":73,"item_id":73,"kind":"OPENING","qty_before":0,"qty_delta":30,"qty_after":30,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":74,"item_id":74,"kind":"OPENING","qty_before":0,"qty_delta":25,"qty_after":25,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":75,"item_id":75,"kind":"OPENING","qty_before":0,"qty_delta":70,"qty_after":70,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":76,"item_id":76,"kind":"OPENING","qty_before":0,"qty_delta":30,"qty_after":30,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":77,"item_id":77,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":78,"item_id":78,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":79,"item_id":79,"kind":"OPENING","qty_before":0,"qty_delta":40,"qty_after":40,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":215,"item_id":215,"kind":"OPENING","qty_before":0,"qty_delta":30,"qty_after":30,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-01-28 00:00:00"},{"id":216,"item_id":216,"kind":"OPENING","qty_before":0,"qty_delta":130,"qty_after":130,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-01-28 00:00:00"},{"id":217,"item_id":217,"kind":"OPENING","qty_before":0,"qty_delta":150,"qty_after":150,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-01-28 00:00:00"},{"id":218,"item_id":218,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-01-28 00:00:00"},{"id":219,"item_id":219,"kind":"OPENING","qty_before":0,"qty_delta":1490,"qty_after":1490,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-01-28 00:00:00"},{"id":220,"item_id":220,"kind":"OPENING","qty_before":0,"qty_delta":300,"qty_after":300,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-01-28 00:00:00"},{"id":221,"item_id":221,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-01-22 00:00:00"},{"id":222,"item_id":222,"kind":"OPENING","qty_before":0,"qty_delta":3700,"qty_after":3700,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-01-22 00:00:00"},{"id":223,"item_id":223,"kind":"OPENING","qty_before":0,"qty_delta":3100,"qty_after":3100,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-01-22 00:00:00"},{"id":224,"item_id":224,"kind":"OPENING","qty_before":0,"qty_delta":125000,"qty_after":125000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-01-22 00:00:00"},{"id":225,"item_id":225,"kind":"OPENING","qty_before":0,"qty_delta":130000,"qty_after":130000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-01-22 00:00:00"},{"id":226,"item_id":226,"kind":"OPENING","qty_before":0,"qty_delta":130000,"qty_after":130000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-01-22 00:00:00"},{"id":227,"item_id":227,"kind":"OPENING","qty_before":0,"qty_delta":9000,"qty_after":9000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-01-22 00:00:00"},{"id":228,"item_id":228,"kind":"OPENING","qty_before":0,"qty_delta":1600,"qty_after":1600,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-01-22 00:00:00"},{"id":229,"item_id":229,"kind":"OPENING","qty_before":0,"qty_delta":3000,"qty_after":3000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-01-22 00:00:00"},{"id":230,"item_id":230,"kind":"OPENING","qty_before":0,"qty_delta":19000,"qty_after":19000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-01-22 00:00:00"},{"id":231,"item_id":231,"kind":"OPENING","qty_before":0,"qty_delta":50,"qty_after":50,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-13 00:00:00"},{"id":232,"item_id":232,"kind":"OPENING","qty_before":0,"qty_delta":20,"qty_after":20,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-13 00:00:00"},{"id":233,"item_id":233,"kind":"OPENING","qty_before":0,"qty_delta":90,"qty_after":90,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-13 00:00:00"},{"id":234,"item_id":234,"kind":"OPENING","qty_before":0,"qty_delta":10,"qty_after":10,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-13 00:00:00"},{"id":235,"item_id":235,"kind":"OPENING","qty_before":0,"qty_delta":200,"qty_after":200,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-13 00:00:00"},{"id":236,"item_id":236,"kind":"OPENING","qty_before":0,"qty_delta":3,"qty_after":3,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2001-03-01 00:00:00"},{"id":237,"item_id":237,"kind":"OPENING","qty_before":0,"qty_delta":3,"qty_after":3,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2001-03-01 00:00:00"},{"id":238,"item_id":238,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2025-05-29 00:00:00"},{"id":239,"item_id":239,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2025-05-29 00:00:00"},{"id":240,"item_id":240,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2025-05-29 00:00:00"},{"id":241,"item_id":241,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2025-05-29 00:00:00"},{"id":242,"item_id":242,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2025-05-29 00:00:00"},{"id":243,"item_id":243,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2025-05-29 00:00:00"},{"id":244,"item_id":244,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2025-05-29 00:00:00"},{"id":245,"item_id":245,"kind":"OPENING","qty_before":0,"qty_delta":3250,"qty_after":3250,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":246,"item_id":246,"kind":"OPENING","qty_before":0,"qty_delta":12500,"qty_after":12500,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":247,"item_id":247,"kind":"OPENING","qty_before":0,"qty_delta":24000,"qty_after":24000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":248,"item_id":248,"kind":"OPENING","qty_before":0,"qty_delta":14000,"qty_after":14000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":249,"item_id":249,"kind":"OPENING","qty_before":0,"qty_delta":5000,"qty_after":5000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":250,"item_id":250,"kind":"OPENING","qty_before":0,"qty_delta":12000,"qty_after":12000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":251,"item_id":251,"kind":"OPENING","qty_before":0,"qty_delta":39000,"qty_after":39000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":252,"item_id":252,"kind":"OPENING","qty_before":0,"qty_delta":30000,"qty_after":30000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":253,"item_id":253,"kind":"OPENING","qty_before":0,"qty_delta":1500,"qty_after":1500,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":254,"item_id":254,"kind":"OPENING","qty_before":0,"qty_delta":6500,"qty_after":6500,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":255,"item_id":255,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":256,"item_id":256,"kind":"OPENING","qty_before":0,"qty_delta":1000,"qty_after":1000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":257,"item_id":257,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":258,"item_id":258,"kind":"OPENING","qty_before":0,"qty_delta":11400,"qty_after":11400,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":259,"item_id":259,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":260,"item_id":260,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-15 00:00:00"},{"id":274,"item_id":274,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-09-05 17:41:29"},{"id":275,"item_id":275,"kind":"OPENING","qty_before":0,"qty_delta":700,"qty_after":700,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-09-05 17:41:29"},{"id":276,"item_id":276,"kind":"OPENING","qty_before":0,"qty_delta":900,"qty_after":900,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-09-05 17:41:29"},{"id":277,"item_id":277,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-09-05 17:41:29"},{"id":278,"item_id":278,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-09-05 17:41:29"},{"id":307,"item_id":319,"kind":"OPENING","qty_before":0,"qty_delta":1000,"qty_after":1000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-09-05 17:41:29"},{"id":308,"item_id":320,"kind":"OPENING","qty_before":0,"qty_delta":1000,"qty_after":1000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-09-05 17:41:29"},{"id":309,"item_id":321,"kind":"OPENING","qty_before":0,"qty_delta":2000,"qty_after":2000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-09-05 17:41:29"},{"id":310,"item_id":322,"kind":"OPENING","qty_before":0,"qty_delta":1000,"qty_after":1000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-09-05 17:41:29"},{"id":311,"item_id":323,"kind":"OPENING","qty_before":0,"qty_delta":3000,"qty_after":3000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-09-05 17:41:29"},{"id":312,"item_id":324,"kind":"OPENING","qty_before":0,"qty_delta":8000,"qty_after":8000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-09-05 17:41:29"},{"id":313,"item_id":325,"kind":"OPENING","qty_before":0,"qty_delta":3000,"qty_after":3000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-09-05 17:41:29"},{"id":314,"item_id":326,"kind":"OPENING","qty_before":0,"qty_delta":7000,"qty_after":7000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-09-05 17:41:29"},{"id":315,"item_id":327,"kind":"OPENING","qty_before":0,"qty_delta":3000,"qty_after":3000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-09-05 17:41:29"},{"id":316,"item_id":328,"kind":"OPENING","qty_before":0,"qty_delta":4000,"qty_after":4000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-09-05 17:41:29"},{"id":317,"item_id":329,"kind":"OPENING","qty_before":0,"qty_delta":5000,"qty_after":5000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-09-05 17:41:29"},{"id":391,"item_id":403,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-08-18 00:00:00"},{"id":392,"item_id":404,"kind":"OPENING","qty_before":0,"qty_delta":3000,"qty_after":3000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-05-20 00:00:00"},{"id":393,"item_id":405,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-05-20 00:00:00"},{"id":394,"item_id":406,"kind":"OPENING","qty_before":0,"qty_delta":2000,"qty_after":2000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-05-20 00:00:00"},{"id":395,"item_id":407,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-05-20 00:00:00"},{"id":396,"item_id":408,"kind":"OPENING","qty_before":0,"qty_delta":0,"qty_after":0,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-05-20 00:00:00"},{"id":397,"item_id":409,"kind":"OPENING","qty_before":0,"qty_delta":5000,"qty_after":5000,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-05-20 00:00:00"},{"id":398,"item_id":410,"kind":"OPENING","qty_before":0,"qty_delta":1500,"qty_after":1500,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-05-20 00:00:00"},{"id":399,"item_id":411,"kind":"OPENING","qty_before":0,"qty_delta":2625,"qty_after":2625,"note":"Opening balance from workbook","actor":"excel-import","created_at":"2026-09-05 17:41:29"}],"orders":[{"id":1,"item_id":1,"supplier":"Manufactured","qty_ordered":50000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-11 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"30ml Hips Container + Lid","sku":"HIPS001","group_name":"CRYSTAL SILIKATA S&D"},{"id":2,"item_id":2,"supplier":"Manufactured","qty_ordered":20000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-11 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"50ml Hips Container + Lid","sku":"HIPS019","group_name":"CRYSTAL SILIKATA S&D"},{"id":3,"item_id":3,"supplier":"Manufactured","qty_ordered":30000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-11 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"80ml Hips Container + Lid","sku":"HIPS003","group_name":"CRYSTAL SILIKATA S&D"},{"id":4,"item_id":4,"supplier":"Manufactured","qty_ordered":30000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-11 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"180ml Hips Container + Lid","sku":"HIPS004","group_name":"CRYSTAL SILIKATA S&D"},{"id":5,"item_id":5,"supplier":"Manufactured","qty_ordered":15000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-11 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"250ml Hips Container + Lid","sku":"HIPS005","group_name":"CRYSTAL SILIKATA S&D"},{"id":6,"item_id":7,"supplier":"Manufactured","qty_ordered":10000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-11 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"500ml Hips Container + Lid","sku":"HIPS008","group_name":"CRYSTAL SILIKATA S&D"},{"id":7,"item_id":9,"supplier":"Manufactured","qty_ordered":20000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-11 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"80ml Transparent Cup+Lid","sku":"HIPS007","group_name":"CRYSTAL SILIKATA S&D"},{"id":8,"item_id":10,"supplier":"Manufactured","qty_ordered":7500,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-11 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"180ml Transparent Container+Lid","sku":"HIPS020","group_name":"CRYSTAL SILIKATA S&D"},{"id":9,"item_id":11,"supplier":"Manufactured","qty_ordered":10000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-11 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"250ml Transparent Container+Lid","sku":"HIPS021","group_name":"CRYSTAL SILIKATA S&D"},{"id":10,"item_id":12,"supplier":"Manufactured","qty_ordered":15000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-11 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"350ml Transparent Container + Lid","sku":"HIPS022","group_name":"CRYSTAL SILIKATA S&D"},{"id":11,"item_id":13,"supplier":"Manufactured","qty_ordered":20000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-11 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"500ml Transparent Container+Lid","sku":"HIPS023","group_name":"CRYSTAL SILIKATA S&D"},{"id":12,"item_id":15,"supplier":"Manufactured","qty_ordered":15000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-11 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"7Oz GPPS Cup (NEW MODLE)","sku":"PLCB006","group_name":"CRYSTAL SILIKATA S&D"},{"id":13,"item_id":16,"supplier":"Manufactured","qty_ordered":10000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-11 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"7Oz GPPS Cup (OLD MODLE)","sku":"PLCB006","group_name":"CRYSTAL SILIKATA S&D"},{"id":14,"item_id":17,"supplier":"Manufactured","qty_ordered":25000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-11 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"85mm Dome Lid for 7Oz GPPS Cup(NEW MODLE)","sku":"PLCB007","group_name":"CRYSTAL SILIKATA S&D"},{"id":15,"item_id":18,"supplier":"Manufactured","qty_ordered":25000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-11 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"85mm Dome Lid for 7Oz GPPS Cup(OLD MODLE)","sku":"PLCB007","group_name":"CRYSTAL SILIKATA S&D"},{"id":16,"item_id":19,"supplier":"Manufactured","qty_ordered":40000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-11 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"12Oz Plastic Cup (350ml)","sku":"PLD011","group_name":"CRYSTAL SILIKATA S&D"},{"id":17,"item_id":27,"supplier":"Manufactured","qty_ordered":10000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-11 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"22Oz Plastic Cup (650ml)","sku":"PLD016","group_name":"CRYSTAL SILIKATA S&D"},{"id":18,"item_id":38,"supplier":"Manufactured","qty_ordered":10000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-15 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"80ml Paper Tub White","sku":"PCO020","group_name":"BIO - JAYAMOND"},{"id":19,"item_id":39,"supplier":"Manufactured","qty_ordered":5000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-15 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"80ml Clear Dome Lid","sku":"PCO020 (Lid)","group_name":"BIO - JAYAMOND"},{"id":20,"item_id":41,"supplier":"Manufactured","qty_ordered":8000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-15 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Paper Tub 120ml White","sku":"PCO018","group_name":"BIO - JAYAMOND"},{"id":21,"item_id":42,"supplier":"Manufactured","qty_ordered":2000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-15 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Lid for 120ml Paper Tub","sku":"PCO019","group_name":"BIO - JAYAMOND"},{"id":22,"item_id":45,"supplier":"Manufactured","qty_ordered":10000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-15 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"300ml White Paper Tub","sku":"PCO016","group_name":"BIO - JAYAMOND"},{"id":23,"item_id":46,"supplier":"Manufactured","qty_ordered":10000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-15 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"300ml Clear Flat Lid","sku":"PCO016 (Lid","group_name":"BIO - JAYAMOND"},{"id":24,"item_id":50,"supplier":"Manufactured","qty_ordered":30000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-15 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Paper Cup 150ml White","sku":"PCUS003","group_name":"BIO - JAYAMOND"},{"id":25,"item_id":51,"supplier":"Manufactured","qty_ordered":20000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-15 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Lid for Paper Cup 150ml White","sku":"PCUO013","group_name":"BIO - JAYAMOND"},{"id":26,"item_id":52,"supplier":"Manufactured","qty_ordered":30000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-15 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Paper Cup 200ml White","sku":"PCUS018","group_name":"BIO - JAYAMOND"},{"id":27,"item_id":54,"supplier":"Manufactured","qty_ordered":30000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-15 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Paper Cup 250ml White","sku":"PCUS004","group_name":"BIO - JAYAMOND"},{"id":28,"item_id":56,"supplier":"Manufactured","qty_ordered":30000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-15 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Paper Cup 300ml White","sku":"PCUS005","group_name":"BIO - JAYAMOND"},{"id":29,"item_id":58,"supplier":"Manufactured","qty_ordered":10000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-15 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Paper Cup 400ML WHITE","sku":"PCUS006","group_name":"BIO - JAYAMOND"},{"id":30,"item_id":59,"supplier":"Manufactured","qty_ordered":15000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-15 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Lid for 400ml Paper Cup","sku":"PCUO012","group_name":"BIO - JAYAMOND"},{"id":31,"item_id":66,"supplier":"Manufactured","qty_ordered":30,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-15 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Garbage Bag X Small 18x24 Inch 100pcs/pack","sku":"CGB017","group_name":"BIO - JAYAMOND"},{"id":32,"item_id":68,"supplier":"Manufactured","qty_ordered":50,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-15 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Garbage Bag Medium 24x36 Inch 100pcs/pack","sku":"CGB019","group_name":"BIO - JAYAMOND"},{"id":33,"item_id":70,"supplier":"Manufactured","qty_ordered":100,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-15 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Garbage Bag XL 32x36 Inch 100pcs/pack","sku":"CGB021","group_name":"BIO - JAYAMOND"},{"id":34,"item_id":71,"supplier":"Manufactured","qty_ordered":50,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-15 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Garbage Bag XXL 34x36 Inch 100pcs/pack","sku":"CGB022","group_name":"BIO - JAYAMOND"},{"id":35,"item_id":72,"supplier":"Manufactured","qty_ordered":100,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-15 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Garbage Bag XXXL 36x48 Inch 100pcs/pack","sku":"CGB023","group_name":"BIO - JAYAMOND"},{"id":36,"item_id":73,"supplier":"Manufactured","qty_ordered":30,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-15 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Garbage Bag X Small 18x24 Inch 10pcs/pack","sku":"CGB009","group_name":"BIO - JAYAMOND"},{"id":37,"item_id":74,"supplier":"Manufactured","qty_ordered":50,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-15 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Garbage Bag Small 22x24 Inch 10pcs/pack","sku":"CGB010","group_name":"BIO - JAYAMOND"},{"id":38,"item_id":76,"supplier":"Manufactured","qty_ordered":30,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-15 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Garbage Bag Large 28x36 Inch 10pcs/pack","sku":"CGB012","group_name":"BIO - JAYAMOND"},{"id":39,"item_id":77,"supplier":"Manufactured","qty_ordered":60,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-15 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Garbage Bag XL 32x36 Inch 10pcs/pack","sku":"CGB013","group_name":"BIO - JAYAMOND"},{"id":40,"item_id":78,"supplier":"Manufactured","qty_ordered":60,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-15 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Garbage Bag XXL 34x36 Inch 10pcs/pack","sku":"CGB015","group_name":"BIO - JAYAMOND"},{"id":97,"item_id":215,"supplier":"Manufactured","qty_ordered":100,"qty_received":0,"status":"OPEN","ordered_at":"2026-01-28 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Latex Powder Free Gloves Medium White","sku":"CDG010","group_name":"INFINITI-BURHANI-OTHOR"},{"id":98,"item_id":220,"supplier":"Manufactured","qty_ordered":400,"qty_received":0,"status":"OPEN","ordered_at":"2026-01-28 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Nitrile Powder Free Gloves Large Blue","sku":"CDG019","group_name":"INFINITI-BURHANI-OTHOR"},{"id":99,"item_id":221,"supplier":"Manufactured","qty_ordered":40000,"qty_received":0,"status":"OPEN","ordered_at":"2026-01-22 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Oil Paper","sku":"CO0035","group_name":"INFINITI-BURHANI-OTHOR"},{"id":100,"item_id":222,"supplier":"Manufactured","qty_ordered":4000,"qty_received":0,"status":"OPEN","ordered_at":"2026-01-22 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Chef Hat 8 Inch","sku":"CCH004","group_name":"INFINITI-BURHANI-OTHOR"},{"id":101,"item_id":223,"supplier":"Manufactured","qty_ordered":1500,"qty_received":0,"status":"OPEN","ordered_at":"2026-01-22 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Chef Hat 9 Inch","sku":"CCH005","group_name":"INFINITI-BURHANI-OTHOR"},{"id":102,"item_id":228,"supplier":"Manufactured","qty_ordered":7000,"qty_received":0,"status":"OPEN","ordered_at":"2026-01-22 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Piping Bag 30cm","sku":"CPB004","group_name":"INFINITI-BURHANI-OTHOR"},{"id":103,"item_id":229,"supplier":"Manufactured","qty_ordered":10000,"qty_received":0,"status":"OPEN","ordered_at":"2026-01-22 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Piping Bag 35cm","sku":"CPB006","group_name":"INFINITI-BURHANI-OTHOR"},{"id":104,"item_id":230,"supplier":"Manufactured","qty_ordered":20000,"qty_received":0,"status":"OPEN","ordered_at":"2026-01-22 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Pizza Stand (Triangle)","sku":"CPIZ009","group_name":"INFINITI-BURHANI-OTHOR"},{"id":105,"item_id":232,"supplier":"Manufactured","qty_ordered":40,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-13 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Shopping Bag Jumbo","sku":"CSB004","group_name":"INFINITI-BURHANI-OTHOR"},{"id":106,"item_id":233,"supplier":"Manufactured","qty_ordered":100,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-13 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Shopping Bag Large","sku":"CSB003","group_name":"INFINITI-BURHANI-OTHOR"},{"id":107,"item_id":234,"supplier":"Manufactured","qty_ordered":200,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-13 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Shopping Bag Medium","sku":"CSB002","group_name":"INFINITI-BURHANI-OTHOR"},{"id":108,"item_id":236,"supplier":"Manufactured","qty_ordered":3,"qty_received":0,"status":"OPEN","ordered_at":"2001-03-01 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"3","sku":"3","group_name":"INFINITI-BURHANI-OTHOR"},{"id":109,"item_id":237,"supplier":"Manufactured","qty_ordered":3,"qty_received":0,"status":"OPEN","ordered_at":"2001-03-01 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"3","sku":"3","group_name":"INFINITI-BURHANI-OTHOR"},{"id":110,"item_id":238,"supplier":"Manufactured","qty_ordered":15000,"qty_received":0,"status":"OPEN","ordered_at":"2025-05-29 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Sugar Tube Brown","sku":"CPSSC002","group_name":"INFINITI-BURHANI-OTHOR"},{"id":111,"item_id":239,"supplier":"Manufactured","qty_ordered":10000,"qty_received":0,"status":"OPEN","ordered_at":"2025-05-29 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Sugar Tube White","sku":"CPSSC001","group_name":"INFINITI-BURHANI-OTHOR"},{"id":112,"item_id":240,"supplier":"Manufactured","qty_ordered":30000,"qty_received":0,"status":"OPEN","ordered_at":"2025-05-29 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Sugar Sachets Brown","sku":"CPSSC003","group_name":"INFINITI-BURHANI-OTHOR"},{"id":113,"item_id":241,"supplier":"Manufactured","qty_ordered":5000,"qty_received":0,"status":"OPEN","ordered_at":"2025-05-29 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Sugar Sachets White","sku":"CPSSC004","group_name":"INFINITI-BURHANI-OTHOR"},{"id":114,"item_id":246,"supplier":"Manufactured","qty_ordered":20000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-15 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"SP-Kraft Food Wrap(10 X 10 ) (Taco Bell)","sku":"OPS070","group_name":"TACO BELL"},{"id":115,"item_id":247,"supplier":"Manufactured","qty_ordered":30000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-15 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"SP-Kraft Food Wrap(12x12 ) (Taco Bell)","sku":"OPS071","group_name":"TACO BELL"},{"id":116,"item_id":249,"supplier":"Manufactured","qty_ordered":5000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-15 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"SP-Kraft Food Wrap (Quesadilla Pouch) (Taco Bell)","sku":"OPS066","group_name":"TACO BELL"},{"id":117,"item_id":252,"supplier":"Manufactured","qty_ordered":20000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-15 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"SP-Small White Wrapper (Taco Bell)","sku":null,"group_name":"TACO BELL"},{"id":118,"item_id":253,"supplier":"Manufactured","qty_ordered":30000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-15 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"SP-White Paper(Cinnamon Twist pouch) (Taco Bell)","sku":"OPS072","group_name":"TACO BELL"},{"id":119,"item_id":255,"supplier":"Manufactured","qty_ordered":5000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-15 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"SP-Frice Deal Pouch (Pizza Hut)","sku":null,"group_name":"TACO BELL"},{"id":127,"item_id":274,"supplier":"Manufactured","qty_ordered":1000,"qty_received":0,"status":"OPEN","ordered_at":"2026-09-05","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"SP-Kraft Paper Bag 300x275x160mm (Food Print)","sku":null,"group_name":"FOOD PRINT"},{"id":128,"item_id":278,"supplier":"Manufactured","qty_ordered":5000,"qty_received":0,"status":"OPEN","ordered_at":"2026-09-05","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"SP-Kraft Paper Bag 280x190x120 (Food Print)","sku":null,"group_name":"FOOD PRINT"},{"id":152,"item_id":319,"supplier":"Manufactured","qty_ordered":6000,"qty_received":0,"status":"OPEN","ordered_at":"2026-09-05","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"SH Kraft Box + Window (150x100x90)mm (SHA007)","sku":null,"group_name":"KRAFT BOX"},{"id":153,"item_id":320,"supplier":"Manufactured","qty_ordered":5000,"qty_received":0,"status":"OPEN","ordered_at":"2026-09-05","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"SH Kraft Box + Window (165x105x50)mm (SHA008)","sku":null,"group_name":"KRAFT BOX"},{"id":154,"item_id":321,"supplier":"Manufactured","qty_ordered":5000,"qty_received":0,"status":"OPEN","ordered_at":"2026-09-05","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"SH Kraft Box + Window (200x105x50)mm (SHA009)","sku":null,"group_name":"KRAFT BOX"},{"id":155,"item_id":322,"supplier":"Manufactured","qty_ordered":20000,"qty_received":0,"status":"OPEN","ordered_at":"2026-09-05","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"SH Kraft Cake Box (145x145x90)mm (SHA013)","sku":null,"group_name":"KRAFT BOX"},{"id":156,"item_id":323,"supplier":"Manufactured","qty_ordered":8000,"qty_received":0,"status":"OPEN","ordered_at":"2026-09-05","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"SH Kraft Cake Box (170x145x50)mm (SHA014)","sku":null,"group_name":"KRAFT BOX"},{"id":157,"item_id":327,"supplier":"Manufactured","qty_ordered":5000,"qty_received":0,"status":"OPEN","ordered_at":"2026-09-05","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"SH Budget Lunch Box (185x140x45)mm","sku":null,"group_name":"KRAFT BOX"},{"id":196,"item_id":403,"supplier":"Manufactured","qty_ordered":6000,"qty_received":0,"status":"OPEN","ordered_at":"2026-08-18 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Single Cake Board Round 8cm","sku":null,"group_name":"COURT YARD"},{"id":197,"item_id":405,"supplier":"Manufactured","qty_ordered":6000,"qty_received":0,"status":"OPEN","ordered_at":"2026-05-20 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Single Cake Board Rectangle 10.5x5.5cm","sku":null,"group_name":"COURT YARD"},{"id":198,"item_id":407,"supplier":"Manufactured","qty_ordered":10000,"qty_received":0,"status":"OPEN","ordered_at":"2026-05-20 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Single Cake Board Square 7x7cm","sku":null,"group_name":"COURT YARD"},{"id":199,"item_id":408,"supplier":"Manufactured","qty_ordered":2000,"qty_received":0,"status":"OPEN","ordered_at":"2026-05-20 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Single Cake Board Round 10cm","sku":null,"group_name":"COURT YARD"},{"id":200,"item_id":410,"supplier":"Manufactured","qty_ordered":2000,"qty_received":0,"status":"OPEN","ordered_at":"2026-05-20 00:00:00","expected_at":null,"closed_at":null,"note":"Carried over from workbook ORDER QTY column","created_by":"excel-import","item_name":"Single Cake Board Triangle 11.5x7.5cm","sku":null,"group_name":"COURT YARD"}]};</script>
+<script>
+/* ── Preview stand-in ──────────────────────────────────────────────────────
+   Holds the same data the server would return and applies the same rules, so
+   counting stock, raising a requisition and receiving goods all really work
+   here — the changes just live in the page instead of in SQLite.            */
+const DEMO = (() => {
+  const D = SEED;
+  let nextTxn = Math.max(0, ...D.txns.map(t => t.id)) + 1;
+  let nextOrder = Math.max(0, ...D.orders.map(o => o.id)) + 1;
+  const audit = [];
+  const STALE = 30;
+  const now = () => new Date().toISOString().slice(0, 19).replace('T', ' ');
+
+  function statusOf(it) {
+    const q = it.qty ?? 0, reorder = it.reorder_level ?? 0, buffer = it.buffer ?? 0;
+    let level = 'OK';
+    if (q <= 0) level = 'OUT';
+    else if (reorder > 0 && q <= reorder) level = 'CRITICAL';
+    else if (buffer > 0 && q <= buffer) level = 'LOW';
+    const days = it.counted_at ? Math.floor((Date.now() - Date.parse(it.counted_at.replace(' ', 'T') + 'Z')) / 86400000) : null;
+    const target = it.max_stock || buffer || reorder * 2;
+    return { level, days_since_count: days, stale: days === null || days > STALE,
+             suggested_order: level === 'OK' ? 0 : Math.max(0, target - q) };
+  }
+
+  const onOrder = (id) => D.orders.filter(o => o.item_id === id && (o.status === 'OPEN' || o.status === 'PARTIAL'))
+    .reduce((a, o) => a + (o.qty_ordered - o.qty_received), 0);
+  const decorate = (it) => ({ ...it, on_order: onOrder(it.id), ...statusOf(it) });
+
+  function ask(msg, def) {
+    try { const v = window.prompt(msg, def); return v === null ? null : v; }
+    catch (e) { return def; }
+  }
+
+  function log(actor, action, entity, entity_id, before, after) {
+    audit.unshift({ id: audit.length + 1, ts: now(), actor, action, entity, entity_id,
+      before_json: before ? JSON.stringify(before) : null,
+      after_json: after ? JSON.stringify(after) : null, ip: '10.0.0.14' });
+  }
+
+  async function api(path, opts = {}, actor) {
+    const [route, query] = path.split('?');
+    const p = new URLSearchParams(query || '');
+    const body = opts.body ? JSON.parse(opts.body) : {};
+    const method = opts.method || 'GET';
+    await new Promise(r => setTimeout(r, 60)); // feels like the real thing
+
+    if (route === '/bootstrap') {
+      const s = { total: D.items.length, OUT: 0, CRITICAL: 0, LOW: 0, OK: 0, stale: 0 };
+      for (const it of D.items) { const st = statusOf(it); s[st.level]++; if (st.stale) s.stale++; }
+      s.open_orders = D.orders.filter(o => o.status === 'OPEN' || o.status === 'PARTIAL').length;
+      return {
+        groups: D.groups.map(g => ({ ...g, item_count: D.items.filter(i => i.group_id === g.id).length })),
+        company: 'Standard Holdings (Pvt) Ltd', stale_days: STALE, digest_hour: 8,
+        webhook_set: false, summary: s,
+      };
+    }
+
+    if (route === '/items' && method === 'GET') {
+      let out = D.items.map(decorate);
+      if (p.get('group')) out = out.filter(i => i.group_id === Number(p.get('group')));
+      if (p.get('q')) {
+        const q = p.get('q').toLowerCase();
+        out = out.filter(i => i.name.toLowerCase().includes(q) || (i.sku || '').toLowerCase().includes(q));
+      }
+      const st = p.get('status');
+      if (st === 'attention') out = out.filter(i => i.level !== 'OK');
+      else if (st === 'stale') out = out.filter(i => i.stale);
+      else if (st) out = out.filter(i => i.level === st);
+      return out;
+    }
+
+    let m;
+    if ((m = route.match(/^\/items\/(\d+)$/)) && method === 'GET') {
+      const it = D.items.find(i => i.id === Number(m[1]));
+      return { ...decorate(it),
+        history: D.txns.filter(t => t.item_id === it.id).sort((a, b) => b.id - a.id).slice(0, 100),
+        orders: D.orders.filter(o => o.item_id === it.id) };
+    }
+
+    if ((m = route.match(/^\/items\/(\d+)$/)) && method === 'PATCH') {
+      const it = D.items.find(i => i.id === Number(m[1]));
+      const before = { ...it };
+      Object.assign(it, body);
+      log(actor, 'item.update', 'item', it.id, before, { ...it });
+      return decorate(it);
+    }
+
+    if ((m = route.match(/^\/items\/(\d+)\/stock$/))) {
+      const it = D.items.find(i => i.id === Number(m[1]));
+      const { kind, note } = body;
+      const n = Math.round(Number(body.value));
+      if (!Number.isFinite(n)) throw new Error('Enter a number');
+      if (kind !== 'COUNT' && n <= 0) throw new Error('Enter a quantity above zero');
+      const before = it.qty;
+      const after = kind === 'COUNT' ? n : kind === 'IN' ? before + n : before - n;
+      if (after < 0) throw new Error(`Only ${before.toLocaleString()} on hand — cannot issue ${n.toLocaleString()}`);
+      D.txns.push({ id: nextTxn++, item_id: it.id, kind, qty_before: before, qty_delta: after - before,
+        qty_after: after, note: note || null, actor, created_at: now() });
+      it.qty = after;
+      if (kind === 'COUNT') { it.counted_at = now(); it.counted_by = actor; }
+      log(actor, 'stock.' + kind.toLowerCase(), 'item', it.id, { qty: before }, { qty: after, note: note || null });
+      return decorate(it);
+    }
+
+    if (route === '/orders' && method === 'GET') {
+      let out = D.orders.slice();
+      if (p.get('status') === 'open') out = out.filter(o => o.status === 'OPEN' || o.status === 'PARTIAL');
+      return out.sort((a, b) => String(b.ordered_at).localeCompare(String(a.ordered_at)));
+    }
+
+    if (route === '/orders' && method === 'POST') {
+      const it = D.items.find(i => i.id === Number(body.item_id));
+      const o = { id: nextOrder++, item_id: it.id, supplier: body.supplier || 'Manufactured',
+        qty_ordered: Math.round(body.qty_ordered), qty_received: 0, status: 'OPEN',
+        ordered_at: now().slice(0, 10), note: null, created_by: actor,
+        item_name: it.name, sku: it.sku, group_name: it.group_name };
+      D.orders.push(o);
+      log(actor, 'order.create', 'order', o.id, null, { item: it.name, qty: o.qty_ordered });
+      return { id: o.id };
+    }
+
+    if ((m = route.match(/^\/orders\/(\d+)\/receive$/))) {
+      const o = D.orders.find(x => x.id === Number(m[1]));
+      const it = D.items.find(i => i.id === o.item_id);
+      const qty = Math.round(Number(body.qty));
+      if (!(qty > 0)) throw new Error('Enter the quantity received');
+      D.txns.push({ id: nextTxn++, item_id: it.id, kind: 'IN', qty_before: it.qty, qty_delta: qty,
+        qty_after: it.qty + qty, note: 'Received against requisition #' + o.id, actor, created_at: now() });
+      it.qty += qty;
+      const wasStatus = o.status;
+      o.qty_received += qty;
+      o.status = o.qty_received >= o.qty_ordered ? 'CLOSED' : 'PARTIAL';
+      log(actor, 'order.receive', 'order', o.id, { qty_received: o.qty_received - qty, status: wasStatus },
+        { qty_received: o.qty_received, status: o.status });
+      return { order_id: o.id, received: o.qty_received, status: o.status, item_qty: it.qty };
+    }
+
+    if (route === '/audit') return audit.slice(0, Number(p.get('limit')) || 200);
+    if (route === '/alerts') return D.items.map(decorate).filter(i => i.level !== 'OK');
+    throw new Error('Not available in the preview');
+  }
+
+  return { api, ask };
+})();
+</script>
+<script>
+'use strict';
+/* Stock & re-order — front end. No build step: served straight off Express. */
+
+const $ = (s) => document.querySelector(s);
+const fmt = (n) => (n === null || n === undefined ? '—' : Number(n).toLocaleString('en-US'));
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+const state = { view: 'stock', group: null, filter: '', q: '', items: [], groups: [], actor: 'Hadhee' };
+
+async function api(path, opts = {}) {
+  return DEMO.api(path, opts, state.actor);
+}
+
+let toastTimer;
+function toast(msg) {
+  const t = $('#toast');
+  t.textContent = msg;
+  t.classList.add('is-on');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('is-on'), 2600);
+}
+
+/* ── Who is entering this? Every movement is stored against a name. ───── */
+function askWho(force) {
+  if (state.actor && !force) return;
+  const name = DEMO.ask('Your name (stored against everything you enter):', state.actor || '');
+  if (name && name.trim()) {
+    state.actor = name.trim();
+    $('#whoami').textContent = state.actor;
+  } else if (!state.actor) {
+    setTimeout(() => askWho(), 400);
+  }
+}
+
+/* ── Boot ─────────────────────────────────────────────────────────────── */
+async function boot() {
+  const b = await api('/bootstrap');
+  state.groups = b.groups;
+  state.staleDays = b.stale_days;
+  $('#company').textContent = b.company;
+  $('#whoami').textContent = state.actor || 'Sign in';
+  drawRail();
+  applySummary(b.summary);
+  await load();
+}
+
+function applySummary(s) {
+  $('#c-out').textContent = fmt(s.OUT);
+  $('#c-crit').textContent = fmt(s.CRITICAL);
+  $('#c-low').textContent = fmt(s.LOW);
+  $('#c-stale').textContent = fmt(s.stale);
+  $('#c-total').textContent = fmt(s.total);
+  const needs = s.OUT + s.CRITICAL + s.LOW;
+  const badge = $('#badge-order');
+  badge.textContent = fmt(needs);
+  badge.hidden = needs === 0;
+}
+
+function drawRail() {
+  const total = state.groups.reduce((a, g) => a + g.item_count, 0);
+  $('#rail').innerHTML =
+    `<div class="rail-head">Customers and groups</div>` +
+    `<button data-group="" class="${state.group ? '' : 'is-on'}">All items <i>${fmt(total)}</i></button>` +
+    state.groups.map((g) =>
+      `<button data-group="${g.id}" class="${state.group == g.id ? 'is-on' : ''}">${esc(g.name)} <i>${fmt(g.item_count)}</i></button>`).join('');
+}
+
+/* ── Views ────────────────────────────────────────────────────────────── */
+async function load() {
+  const c = $('#content');
+  c.setAttribute('aria-busy', 'true');
+  try {
+    if (state.view === 'stock') await viewStock();
+    else if (state.view === 'order') await viewOrderList();
+    else if (state.view === 'reqs') await viewReqs();
+    else await viewActivity();
+  } catch (e) {
+    c.innerHTML = `<div class="empty"><b>Could not load</b>${esc(e.message)}</div>`;
+  }
+  c.removeAttribute('aria-busy');
+}
+
+function gauge(it) {
+  const target = it.max_stock || it.buffer || it.reorder_level * 2 || Math.max(it.qty, 1);
+  const pct = Math.max(2, Math.min(100, (it.qty / target) * 100));
+  const markPct = target ? Math.min(100, (it.reorder_level / target) * 100) : 0;
+  return `<div class="gauge">
+    <div class="track"><div class="fill" style="width:${pct.toFixed(1)}%"></div></div>
+    ${it.reorder_level ? `<div class="mark" style="left:${markPct.toFixed(1)}%" title="Re-order level"></div>` : ''}
+    <div class="cap">order at ${fmt(it.reorder_level)} · target ${fmt(target)}${it.on_order ? ` · ${fmt(it.on_order)} on order` : ''}</div>
+  </div>`;
+}
+
+const WORD = { OUT: 'Out of stock', CRITICAL: 'Order now', LOW: 'Getting low', OK: 'OK' };
+
+async function viewStock() {
+  const qs = new URLSearchParams();
+  if (state.group) qs.set('group', state.group);
+  if (state.filter) qs.set('status', state.filter);
+  if (state.q) qs.set('q', state.q);
+  const items = (state.items = await api('/items?' + qs));
+
+  if (!items.length) {
+    $('#content').innerHTML = `<div class="empty"><b>Nothing here</b>${
+      state.q ? 'No item matches that search.' : state.filter ? 'No items in this state — good.' : 'Add an item to get started.'}</div>`;
+    return;
+  }
+
+  // Group by customer, then by the sub-tables some sheets used.
+  const buckets = new Map();
+  for (const it of items) {
+    const k = it.group_name + (it.section ? ' — ' + it.section : '');
+    (buckets.get(k) || buckets.set(k, []).get(k)).push(it);
+  }
+
+  $('#content').innerHTML = [...buckets].map(([head, list]) => {
+    const need = list.filter((i) => i.level !== 'OK').length;
+    return `<div class="section-head">${esc(head)}<span>${fmt(list.length)} items${need ? ` · ${need} need ordering` : ''}</span></div>
+    <div class="rows">${list.map((it) => `
+      <button class="row lv-${it.level}" data-item="${it.id}">
+        <span class="name">
+          <b>${esc(it.name)}</b>
+          <span class="meta">${it.sku ? esc(it.sku) + ' · ' : ''}${
+            it.days_since_count === null ? '<span class="stale">never counted</span>'
+            : it.stale ? `<span class="stale">counted ${it.days_since_count} days ago</span>`
+            : `counted ${it.days_since_count === 0 ? 'today' : it.days_since_count + ' days ago'}`}</span>
+        </span>
+        <span class="qty"><b>${fmt(it.qty)}</b><span>${esc(it.uom)} on hand</span></span>
+        ${gauge(it)}
+        <span class="status">${WORD[it.level]}${it.suggested_order ? `<br><span class="meta">order ${fmt(it.suggested_order)}</span>` : ''}</span>
+      </button>`).join('')}</div>`;
+  }).join('');
+}
+
+async function viewOrderList() {
+  const items = (await api('/items?status=attention' + (state.group ? '&group=' + state.group : '')))
+    .filter((i) => i.suggested_order > 0)
+    .sort((a, b) => ['OUT', 'CRITICAL', 'LOW'].indexOf(a.level) - ['OUT', 'CRITICAL', 'LOW'].indexOf(b.level));
+
+  if (!items.length) { $('#content').innerHTML = `<div class="empty"><b>Nothing to order</b>Every item is above its re-order level.</div>`; return; }
+
+  $('#content').innerHTML = `
+    <div class="section-head">What to order now<span>${fmt(items.length)} items</span></div>
+    <table><thead><tr>
+      <th>Item</th><th>Customer</th><th class="n">On hand</th><th class="n">Order at</th>
+      <th class="n">On order</th><th class="n">Order this</th><th>Why</th><th></th>
+    </tr></thead><tbody>
+    ${items.map((i) => `<tr>
+      <td><b>${esc(i.name)}</b>${i.sku ? `<div class="meta">${esc(i.sku)}</div>` : ''}</td>
+      <td>${esc(i.group_name)}</td>
+      <td class="n">${fmt(i.qty)}</td><td class="n">${fmt(i.reorder_level)}</td>
+      <td class="n">${i.on_order ? fmt(i.on_order) : '—'}</td>
+      <td class="n"><b>${fmt(i.suggested_order)}</b></td>
+      <td><span class="pill">${WORD[i.level]}</span></td>
+      <td><button class="btn" data-raise="${i.id}" data-qty="${i.suggested_order}">Raise</button></td>
+    </tr>`).join('')}</tbody></table>`;
+}
+
+async function viewReqs() {
+  const rows = await api('/orders?status=open');
+  if (!rows.length) { $('#content').innerHTML = `<div class="empty"><b>No open requisitions</b>Raise one from the order list.</div>`; return; }
+  $('#content').innerHTML = `
+    <div class="section-head">Open requisitions<span>${fmt(rows.length)}</span></div>
+    <table><thead><tr>
+      <th>Ref</th><th>Raised</th><th>Item</th><th>Supplier</th>
+      <th class="n">Ordered</th><th class="n">Received</th><th class="n">Outstanding</th><th>Status</th><th></th>
+    </tr></thead><tbody>
+    ${rows.map((o) => `<tr>
+      <td>#${o.id}</td><td>${String(o.ordered_at).slice(0, 10)}</td>
+      <td><b>${esc(o.item_name)}</b><div class="meta">${esc(o.group_name)}</div></td>
+      <td>${esc(o.supplier)}</td>
+      <td class="n">${fmt(o.qty_ordered)}</td><td class="n">${fmt(o.qty_received)}</td>
+      <td class="n"><b>${fmt(o.qty_ordered - o.qty_received)}</b></td>
+      <td><span class="pill ${o.status}">${o.status === 'PARTIAL' ? 'Part received' : 'Waiting'}</span></td>
+      <td><button class="btn" data-receive="${o.id}" data-out="${o.qty_ordered - o.qty_received}">Receive</button></td>
+    </tr>`).join('')}</tbody></table>`;
+}
+
+async function viewActivity() {
+  const rows = await api('/audit?limit=300');
+  $('#content').innerHTML = `
+    <div class="section-head">Everything that has been changed<span>latest ${fmt(rows.length)}</span></div>
+    <table><thead><tr><th>When</th><th>Who</th><th>What</th><th>Before</th><th>After</th></tr></thead><tbody>
+    ${rows.map((a) => `<tr>
+      <td>${esc(a.ts)}</td><td>${esc(a.actor)}</td><td>${esc(a.action)}</td>
+      <td class="meta">${esc(a.before_json || '—')}</td><td class="meta">${esc(a.after_json || '—')}</td>
+    </tr>`).join('')}</tbody></table>`;
+}
+
+/* ── Update panel ─────────────────────────────────────────────────────── */
+let panelItem = null, panelKind = 'COUNT';
+
+async function openItem(id) {
+  askWho();
+  const it = (panelItem = await api('/items/' + id));
+  panelKind = 'COUNT';
+  $('#scrim').hidden = false;
+  const p = $('#panel');
+  p.hidden = false;
+  p.className = 'panel lv-' + it.level;
+  p.innerHTML = `
+    <div class="panel-head">
+      <button class="close" aria-label="Close">&times;</button>
+      <h2>${esc(it.name)}</h2>
+      <p>${it.sku ? esc(it.sku) + ' · ' : ''}${esc(it.group_name)}</p>
+    </div>
+    <div class="panel-body">
+      <div class="onhand"><b>${fmt(it.qty)}</b><span>${esc(it.uom)} on hand · ${
+        it.days_since_count === null ? 'never counted' : `counted ${it.days_since_count} days ago${it.counted_by ? ' by ' + esc(it.counted_by) : ''}`}</span></div>
+      ${gauge(it)}
+
+      <div class="kinds" role="group" aria-label="What are you recording?">
+        <button data-kind="COUNT" class="is-on">Counted</button>
+        <button data-kind="IN">Received</button>
+        <button data-kind="OUT">Issued</button>
+      </div>
+      <p class="hint" id="kindHint">Enter the quantity you counted on the shelf. This replaces the figure above.</p>
+
+      <div class="field">
+        <label for="qtyInput" id="qtyLabel">Quantity counted</label>
+        <input id="qtyInput" type="number" inputmode="numeric" min="0" step="1" value="${it.qty}">
+        <div class="result" id="result"></div>
+      </div>
+
+      <div class="field">
+        <label for="noteInput">Note (optional)</label>
+        <input id="noteInput" type="text" placeholder="e.g. counted with Lukshitha, rack B">
+      </div>
+
+      <button class="btn btn-primary" id="saveStock">Save movement</button>
+      <div class="err" id="panelErr"></div>
+
+      <details class="field">
+        <summary style="cursor:pointer;font-size:13px;color:var(--ink-2)">Change re-order levels</summary>
+        <div class="grid2" style="margin-top:10px">
+          <div><label for="lvReorder">Order at</label><input id="lvReorder" type="number" min="0" value="${it.reorder_level}"></div>
+          <div><label for="lvBuffer">Buffer</label><input id="lvBuffer" type="number" min="0" value="${it.buffer}"></div>
+          <div><label for="lvMax">Target level</label><input id="lvMax" type="number" min="0" value="${it.max_stock ?? ''}"></div>
+          <div><label for="lvSku">SKU</label><input id="lvSku" type="text" value="${esc(it.sku || '')}"></div>
+        </div>
+        <button class="btn" id="saveLevels" style="margin-top:10px">Save levels</button>
+      </details>
+
+      <div class="history">
+        <h3>Recent movements</h3>
+        <ul>${it.history.slice(0, 12).map((h) => `<li>
+          <span><b>${({ COUNT: 'Counted', IN: 'Received', OUT: 'Issued', ADJUST: 'Adjusted', OPENING: 'Opening balance' })[h.kind]}</b>
+            <span class="d">${esc(h.created_at)} · ${esc(h.actor)}${h.note ? ' · ' + esc(h.note) : ''}</span></span>
+          <span class="v">${h.qty_delta >= 0 ? '+' : ''}${fmt(h.qty_delta)} → ${fmt(h.qty_after)}</span>
+        </li>`).join('') || '<li>Nothing recorded yet</li>'}</ul>
+      </div>
+    </div>`;
+
+  p.querySelector('.close').onclick = closePanel;
+  p.querySelectorAll('.kinds button').forEach((b) => (b.onclick = () => setKind(b.dataset.kind)));
+  $('#qtyInput').oninput = preview;
+  $('#saveStock').onclick = saveStock;
+  $('#saveLevels').onclick = saveLevels;
+  $('#qtyInput').focus();
+  $('#qtyInput').select();
+  preview();
+}
+
+function setKind(kind) {
+  panelKind = kind;
+  document.querySelectorAll('.kinds button').forEach((b) => b.classList.toggle('is-on', b.dataset.kind === kind));
+  const copy = {
+    COUNT: ['Quantity counted', 'Enter the quantity you counted on the shelf. This replaces the figure above.', panelItem.qty],
+    IN: ['Quantity received', 'Goods coming in. This is added to what is already on hand.', ''],
+    OUT: ['Quantity issued', 'Goods going out to production or dispatch. This is taken off what is on hand.', ''],
+  }[kind];
+  $('#qtyLabel').textContent = copy[0];
+  $('#kindHint').textContent = copy[1];
+  const input = $('#qtyInput');
+  input.value = copy[2];
+  input.focus();
+  input.select();
+  preview();
+}
+
+function preview() {
+  const n = Number($('#qtyInput').value);
+  const before = panelItem.qty;
+  const after = !Number.isFinite(n) ? before : panelKind === 'COUNT' ? n : panelKind === 'IN' ? before + n : before - n;
+  $('#result').textContent = panelKind === 'COUNT' ? '' : `${fmt(before)} → ${fmt(after)}`;
+  $('#result').style.color = after < 0 ? 'var(--out)' : '';
+}
+
+async function saveStock() {
+  const btn = $('#saveStock');
+  btn.disabled = true;
+  $('#panelErr').textContent = '';
+  try {
+    await api(`/items/${panelItem.id}/stock`, {
+      method: 'POST',
+      body: JSON.stringify({ kind: panelKind, value: Number($('#qtyInput').value), note: $('#noteInput').value }),
+    });
+    toast('Saved');
+    closePanel();
+    await refresh();
+  } catch (e) {
+    $('#panelErr').textContent = e.message;
+  }
+  btn.disabled = false;
+}
+
+async function saveLevels() {
+  try {
+    await api('/items/' + panelItem.id, {
+      method: 'PATCH',
+      body: JSON.stringify({
+        reorder_level: Number($('#lvReorder').value) || 0,
+        buffer: Number($('#lvBuffer').value) || 0,
+        max_stock: $('#lvMax').value === '' ? null : Number($('#lvMax').value),
+        sku: $('#lvSku').value.trim() || null,
+      }),
+    });
+    toast('Levels updated');
+    closePanel();
+    await refresh();
+  } catch (e) { $('#panelErr').textContent = e.message; }
+}
+
+function closePanel() {
+  $('#panel').hidden = true;
+  $('#scrim').hidden = true;
+  panelItem = null;
+}
+
+async function refresh() {
+  const b = await api('/bootstrap');
+  state.groups = b.groups;
+  applySummary(b.summary);
+  drawRail();
+  await load();
+}
+
+/* ── Wiring ───────────────────────────────────────────────────────────── */
+document.addEventListener('click', async (e) => {
+  const tab = e.target.closest('.tab');
+  if (tab) {
+    document.querySelectorAll('.tab').forEach((t) => t.classList.toggle('is-on', t === tab));
+    state.view = tab.dataset.view;
+    return load();
+  }
+
+  const sig = e.target.closest('.signal');
+  if (sig) {
+    state.filter = state.filter === sig.dataset.filter ? '' : sig.dataset.filter;
+    document.querySelectorAll('.signal').forEach((s) => s.classList.toggle('is-on', s.dataset.filter === state.filter && state.filter));
+    state.view = 'stock';
+    document.querySelectorAll('.tab').forEach((t) => t.classList.toggle('is-on', t.dataset.view === 'stock'));
+    return load();
+  }
+
+  const g = e.target.closest('[data-group]');
+  if (g) { state.group = g.dataset.group || null; drawRail(); return load(); }
+
+  const row = e.target.closest('[data-item]');
+  if (row) return openItem(row.dataset.item);
+
+  if (e.target.id === 'scrim') return closePanel();
+  if (e.target.id === 'whoami') return askWho(true);
+  if (e.target.id === 'export') {
+    return toast('The real app downloads the Excel report here');
+  }
+
+  const raise = e.target.closest('[data-raise]');
+  if (raise) {
+    askWho();
+    const qty = DEMO.ask('Quantity to order:', raise.dataset.qty);
+    if (!qty) return;
+    try {
+      await api('/orders', { method: 'POST', body: JSON.stringify({ item_id: Number(raise.dataset.raise), qty_ordered: Number(qty) }) });
+      toast('Requisition raised');
+      await refresh();
+    } catch (err) { toast(err.message); }
+  }
+
+  const rec = e.target.closest('[data-receive]');
+  if (rec) {
+    askWho();
+    const qty = DEMO.ask('Quantity received:', rec.dataset.out);
+    if (!qty) return;
+    try {
+      await api(`/orders/${rec.dataset.receive}/receive`, { method: 'POST', body: JSON.stringify({ qty: Number(qty) }) });
+      toast('Received and added to stock');
+      await refresh();
+    } catch (err) { toast(err.message); }
+  }
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && !$('#panel').hidden) closePanel();
+  if (e.key === 'Enter' && !$('#panel').hidden && e.target.id === 'qtyInput') saveStock();
+});
+
+let searchTimer;
+$('#search').addEventListener('input', (e) => {
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(() => { state.q = e.target.value.trim(); state.view = 'stock'; load(); }, 220);
+});
+
+askWho();
+boot().catch((e) => ($('#content').innerHTML = `<div class="empty"><b>Could not start</b>${esc(e.message)}</div>`));
+
+</script>
+</body>
+</html>

@@ -1,0 +1,9299 @@
+{
+ "as_of": "2026-09-15T16:00:00+05:30",
+ "today": "2026-09-15",
+ "source_note": "Order lines, customers, items, quantities ordered and cancelled, due dates and division tags are real rows from the 16 Sep 2026 Zoho sales-order export; bundled, shipped, picked quantities, event times and the checking / sync-problem states are generated for the demo (see each job's demo_fields).",
+ "people": [
+  {
+   "id": "ranga",
+   "name": "Ranga",
+   "role": "manager",
+   "divisions": [
+    "OPD",
+    "MOBA",
+    "FPP",
+    "CPU"
+   ]
+  },
+  {
+   "id": "ishan",
+   "name": "Ishan",
+   "role": "manager",
+   "divisions": [
+    "PSU",
+    "OPD",
+    "PACKPRO",
+    "RWU"
+   ]
+  },
+  {
+   "id": "mubeena",
+   "name": "Mubeena",
+   "role": "manager",
+   "divisions": [
+    "SHPS"
+   ]
+  },
+  {
+   "id": "samitha",
+   "name": "Samitha",
+   "role": "gm",
+   "divisions": "all"
+  },
+  {
+   "id": "admin",
+   "name": "Hadhee (IT)",
+   "role": "admin",
+   "divisions": "all"
+  }
+ ],
+ "divisions": [
+  {
+   "code": "OPD",
+   "name": "Offset Printing",
+   "managers": [
+    "ranga",
+    "ishan"
+   ],
+   "stages": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    5,
+    7,
+    8,
+    9,
+    10,
+    11
+   ]
+  },
+  {
+   "code": "SHPS",
+   "name": "Screen Printing",
+   "managers": [
+    "mubeena"
+   ],
+   "stages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+   ]
+  },
+  {
+   "code": "PSU",
+   "name": "Paper Straw",
+   "managers": [
+    "ishan"
+   ],
+   "stages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    8,
+    9,
+    10,
+    11
+   ]
+  },
+  {
+   "code": "RWU",
+   "name": "Rewinding",
+   "managers": [
+    "ishan"
+   ],
+   "stages": [
+    2,
+    3,
+    4,
+    5,
+    7,
+    8,
+    9,
+    10,
+    11
+   ]
+  },
+  {
+   "code": "MOBA",
+   "name": "MOBA (cups, punching)",
+   "managers": [
+    "ranga"
+   ],
+   "stages": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    5,
+    7,
+    8,
+    9,
+    10,
+    11
+   ]
+  },
+  {
+   "code": "FPP",
+   "name": "Food Product Processing",
+   "managers": [
+    "ranga"
+   ],
+   "stages": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    5,
+    7,
+    8,
+    9,
+    10,
+    11
+   ]
+  },
+  {
+   "code": "CPU",
+   "name": "Customized Packing",
+   "managers": [
+    "ranga"
+   ],
+   "stages": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    5,
+    7,
+    8,
+    9,
+    10,
+    11
+   ]
+  },
+  {
+   "code": "PACKPRO",
+   "name": "Packpro",
+   "managers": [
+    "ishan"
+   ],
+   "stages": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    5,
+    7,
+    8,
+    9,
+    10,
+    11
+   ]
+  },
+  {
+   "code": "PCU",
+   "name": "Paper Cup (no manager)",
+   "managers": [],
+   "stages": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    5,
+    7,
+    8,
+    9,
+    10,
+    11
+   ]
+  },
+  {
+   "code": "CWU",
+   "name": "Cake Wrapper (no manager)",
+   "managers": [],
+   "stages": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    5,
+    7,
+    8,
+    9,
+    10,
+    11
+   ]
+  }
+ ],
+ "stages": [
+  {
+   "id": 1,
+   "name": "Artwork image",
+   "short": "ART",
+   "tracked": false
+  },
+  {
+   "id": 2,
+   "name": "Item photo (in system)",
+   "short": "IMG",
+   "tracked": false
+  },
+  {
+   "id": 3,
+   "name": "Job card",
+   "short": "JC",
+   "tracked": false
+  },
+  {
+   "id": 4,
+   "name": "Sales order",
+   "short": "SO",
+   "tracked": true
+  },
+  {
+   "id": 5,
+   "name": "Bundle (produced)",
+   "short": "BND",
+   "tracked": true
+  },
+  {
+   "id": 6,
+   "name": "Pick list",
+   "short": "PICK",
+   "tracked": true
+  },
+  {
+   "id": 7,
+   "name": "Package",
+   "short": "PKG",
+   "tracked": true
+  },
+  {
+   "id": 8,
+   "name": "Shipment",
+   "short": "SHP",
+   "tracked": true
+  },
+  {
+   "id": 9,
+   "name": "Inventory adjustment",
+   "short": "ADJ",
+   "tracked": false
+  },
+  {
+   "id": 10,
+   "name": "Sales invoice to SH",
+   "short": "INV",
+   "tracked": true
+  },
+  {
+   "id": 11,
+   "name": "Purchase bill from SPS",
+   "short": "BILL",
+   "tracked": false
+  }
+ ],
+ "jobs": [
+  {
+   "id": "4892105000068590313-1",
+   "so": "JOBORDER-05755",
+   "job_no": "OPD5387",
+   "division": null,
+   "division_source": null,
+   "division_conflict": false,
+   "order_type": "internal",
+   "customer": "Standard Holdings (Pvt) Ltd",
+   "item": "SH Kraft Cake box (14x14x4) Inch",
+   "unit": "box",
+   "qty_ordered": 1500,
+   "qty_cancelled": 0,
+   "qty_effective": 1500,
+   "qty_bundled": 1500,
+   "qty_produced": 1500,
+   "qty_packed": 889,
+   "qty_shipped": 889,
+   "qty_invoiced": 889,
+   "created": "2025-12-18",
+   "due_date": "2026-01-03",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2025-12-18T08:18:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-11T10:42:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-09T09:07:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-11T11:25:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "partial",
+     "at": "2026-09-11T13:49:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "partial",
+     "at": "2026-09-12T15:33:00+05:30"
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "unmapped_division"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000072385957-1",
+   "so": "JOBORDER-05794",
+   "job_no": "OPD5406",
+   "division": null,
+   "division_source": null,
+   "division_conflict": false,
+   "order_type": "customised",
+   "customer": "Wok to Walk",
+   "item": "SP-Budget Box (Wok To Walk)-(SHA125)",
+   "unit": "box",
+   "qty_ordered": 10000,
+   "qty_cancelled": 0,
+   "qty_effective": 10000,
+   "qty_bundled": 10000,
+   "qty_produced": 10000,
+   "qty_packed": 10000,
+   "qty_shipped": 10000,
+   "qty_invoiced": 9786,
+   "created": "2025-12-22",
+   "due_date": "2026-01-07",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2025-12-22T08:57:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "done",
+     "at": "2026-09-14T10:50:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-12T09:31:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "done",
+     "at": "2026-09-14T11:09:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "done",
+     "at": "2026-09-14T13:13:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "partial",
+     "at": "2026-09-14T15:36:00+05:30"
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "unmapped_division"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000093135587-1",
+   "so": "JOBORDER-06509",
+   "job_no": "OPD5723",
+   "division": null,
+   "division_source": null,
+   "division_conflict": false,
+   "order_type": "internal",
+   "customer": "Standard Holdings (Pvt) Ltd",
+   "item": "SH-Super Pack Cling Film Box 45cm x 20.4m",
+   "unit": "box",
+   "qty_ordered": 1500,
+   "qty_cancelled": 0,
+   "qty_effective": 1500,
+   "qty_bundled": 1500,
+   "qty_produced": 1500,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-02-17",
+   "due_date": "2026-03-05",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-02-17T08:15:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "done",
+     "at": "2026-09-15T10:23:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-15T09:38:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "unmapped_division"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000111107120-1",
+   "so": "JOBORDER-07881",
+   "job_no": "OPD6377",
+   "division": null,
+   "division_source": null,
+   "division_conflict": false,
+   "order_type": "customised",
+   "customer": "Kiri Kopi",
+   "item": "SP-Kraft Paper Bag (L) 300x275x160mm with Die Cut Handle (Kiri kopi With Girl)",
+   "unit": "pcs",
+   "qty_ordered": 1500,
+   "qty_cancelled": 40,
+   "qty_effective": 1460,
+   "qty_bundled": 438,
+   "qty_produced": 438,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-07-11",
+   "due_date": "2026-07-27",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-07-11T08:59:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-14T09:32:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "unmapped_division"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_ordered",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_invoiced",
+    "qty_packed",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at"
+   ]
+  },
+  {
+   "id": "4892105000111107120-2",
+   "so": "JOBORDER-07881",
+   "job_no": "OPD6377",
+   "division": null,
+   "division_source": null,
+   "division_conflict": false,
+   "order_type": "customised",
+   "customer": "Kiri Kopi",
+   "item": "SP-Kraft Paper Bag (L) 300x275x160mm with Die Cut Handle (Kiri kopi With Girl)",
+   "unit": "pcs",
+   "qty_ordered": 96,
+   "qty_cancelled": 0,
+   "qty_effective": 96,
+   "qty_bundled": 0,
+   "qty_produced": 0,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-07-11",
+   "due_date": "2026-07-27",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-07-11T08:54:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 5,
+     "state": "not_detected",
+     "at": null
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "unmapped_division"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_ordered",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_invoiced",
+    "qty_packed",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at"
+   ]
+  },
+  {
+   "id": "4892105000111052872-2",
+   "so": "JOBORDER-07855",
+   "job_no": "CPU-006",
+   "division": "CPU",
+   "division_source": "tag",
+   "division_conflict": false,
+   "order_type": "internal",
+   "customer": "Standard Holdings (Pvt) Ltd",
+   "item": "PACKSERV - Dental Kit (White) - Toothpaste 6grm/Plastic Toothbrush - Kit Packing",
+   "unit": "nos",
+   "qty_ordered": 100,
+   "qty_cancelled": 0,
+   "qty_effective": 100,
+   "qty_bundled": 100,
+   "qty_produced": 100,
+   "qty_packed": 60,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-07-02",
+   "due_date": "2026-07-16",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-07-02T08:16:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-10T10:37:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-08T09:48:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-10T11:45:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [
+    {
+     "code": "shipment_missing",
+     "stage_id": 8,
+     "since": "2026-09-15"
+    }
+   ],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_ordered",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_invoiced",
+    "qty_packed",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000111645042-1",
+   "so": "JOBORDER-08097",
+   "job_no": "CPU-069",
+   "division": "CPU",
+   "division_source": "tag",
+   "division_conflict": false,
+   "order_type": "internal",
+   "customer": "Standard Holdings (Pvt) Ltd",
+   "item": "PACKSERV - Shaving Kit (Kraft) - Shaving Cream/Gillette-Blue 2 Razor - Kit Packing",
+   "unit": "nos",
+   "qty_ordered": 1000,
+   "qty_cancelled": 0,
+   "qty_effective": 1000,
+   "qty_bundled": 1000,
+   "qty_produced": 1000,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-07-31",
+   "due_date": "2026-08-14",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-07-31T08:25:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-09T09:04:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "sync_problem",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_ordered",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_invoiced",
+    "qty_packed",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at"
+   ]
+  },
+  {
+   "id": "4892105000112660249-1",
+   "so": "JOBORDER-08428",
+   "job_no": "CPU-138",
+   "division": "CPU",
+   "division_source": "tag",
+   "division_conflict": false,
+   "order_type": "customised",
+   "customer": "Perera and Sons Distributors (Private) Limited",
+   "item": "PACKSERV - Wooden Stirrer 14cm - 100pcs Packing",
+   "unit": "nos",
+   "qty_ordered": 300,
+   "qty_cancelled": 0,
+   "qty_effective": 300,
+   "qty_bundled": 300,
+   "qty_produced": 300,
+   "qty_packed": 300,
+   "qty_shipped": 300,
+   "qty_invoiced": 0,
+   "created": "2026-09-04",
+   "due_date": "2026-09-18",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-04T08:56:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "done",
+     "at": "2026-09-09T10:28:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-07T09:25:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "done",
+     "at": "2026-09-09T11:49:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "done",
+     "at": "2026-09-10T13:40:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [
+    {
+     "code": "invoice_missing",
+     "stage_id": 10,
+     "since": "2026-09-14"
+    }
+   ],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000112727319-1",
+   "so": "JOBORDER-08454",
+   "job_no": "CPU-143",
+   "division": "CPU",
+   "division_source": "tag",
+   "division_conflict": false,
+   "order_type": "internal",
+   "customer": "Standard Holdings (Pvt) Ltd",
+   "item": "PACKSERV - 900ml Aluminium Foil Container with Lid (10Pcs Packing)",
+   "unit": "Pks",
+   "qty_ordered": 240,
+   "qty_cancelled": 0,
+   "qty_effective": 240,
+   "qty_bundled": 240,
+   "qty_produced": 240,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-09-04",
+   "due_date": "2026-09-18",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-04T08:08:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "done",
+     "at": "2026-09-14T10:59:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-14T09:16:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_ordered",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_invoiced",
+    "qty_packed",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000112747006-1",
+   "so": "JOBORDER-08456",
+   "job_no": "CPU-144",
+   "division": "CPU",
+   "division_source": "tag",
+   "division_conflict": false,
+   "order_type": "internal",
+   "customer": "Standard Holdings (Pvt) Ltd",
+   "item": "PACKSERV - 700ml Aluminium Foil Round Container with Lid (10Pcs Packing)",
+   "unit": "Pks",
+   "qty_ordered": 120,
+   "qty_cancelled": 0,
+   "qty_effective": 120,
+   "qty_bundled": 120,
+   "qty_produced": 120,
+   "qty_packed": 72,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-09-04",
+   "due_date": "2026-09-18",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-04T08:54:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-08T10:37:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-06T09:41:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-08T11:36:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [
+    {
+     "code": "shipment_missing",
+     "stage_id": 8,
+     "since": "2026-09-11"
+    }
+   ],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_ordered",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_invoiced",
+    "qty_packed",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000112904277-1",
+   "so": "JOBORDER-08532",
+   "job_no": "CPU-151",
+   "division": "CPU",
+   "division_source": "tag",
+   "division_conflict": false,
+   "order_type": "internal",
+   "customer": "Standard Holdings (Pvt) Ltd",
+   "item": "SH - Polythene Bag 30x55cm",
+   "unit": "nos",
+   "qty_ordered": 150,
+   "qty_cancelled": 0,
+   "qty_effective": 150,
+   "qty_bundled": 150,
+   "qty_produced": 150,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-09-11",
+   "due_date": "2026-09-25",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-11T08:10:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-15T09:20:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "strip.at"
+   ]
+  },
+  {
+   "id": "4892105000112904295-1",
+   "so": "JOBORDER-08533",
+   "job_no": "CPU-152",
+   "division": "CPU",
+   "division_source": "tag",
+   "division_conflict": false,
+   "order_type": "customised",
+   "customer": "A&M Cup Cake",
+   "item": "PACKSERV - Wooden Knife 16cm (A&M Cup Cakes) - Pouch Packing",
+   "unit": "nos",
+   "qty_ordered": 2000,
+   "qty_cancelled": 0,
+   "qty_effective": 2000,
+   "qty_bundled": 2000,
+   "qty_produced": 2000,
+   "qty_packed": 2000,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-09-14",
+   "due_date": "2026-09-28",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-14T08:40:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "done",
+     "at": "2026-09-15T10:18:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-14T09:26:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "done",
+     "at": "2026-09-15T11:47:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000112910888-1",
+   "so": "JOBORDER-08552",
+   "job_no": "CPU-154",
+   "division": "CPU",
+   "division_source": "tag",
+   "division_conflict": false,
+   "order_type": "customised",
+   "customer": "Radisson",
+   "item": "PACKSERV - Dental Kit - Toothpaste 6grm/Wooden Toothbrush (Radisson) - Kit Packing",
+   "unit": "nos",
+   "qty_ordered": 1000,
+   "qty_cancelled": 0,
+   "qty_effective": 1000,
+   "qty_bundled": 0,
+   "qty_produced": 0,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-09-14",
+   "due_date": "2026-09-28",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-14T08:39:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 5,
+     "state": "not_detected",
+     "at": null
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "strip.at"
+   ]
+  },
+  {
+   "id": "4892105000112910921-1",
+   "so": "JOBORDER-08555",
+   "job_no": "CPU-155",
+   "division": "CPU",
+   "division_source": "tag",
+   "division_conflict": false,
+   "order_type": "customised",
+   "customer": "Radisson",
+   "item": "PACKSERV - Shaving Kit (White) - Shaving Cream/Gillette-Blue 2 Razor - Kit Packing",
+   "unit": "nos",
+   "qty_ordered": 500,
+   "qty_cancelled": 0,
+   "qty_effective": 500,
+   "qty_bundled": 0,
+   "qty_produced": 0,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-09-14",
+   "due_date": "2026-09-28",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-14T08:22:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 5,
+     "state": "not_detected",
+     "at": null
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "strip.at"
+   ]
+  },
+  {
+   "id": "4892105000112910939-1",
+   "so": "JOBORDER-08558",
+   "job_no": "CPU-156",
+   "division": "CPU",
+   "division_source": "tag",
+   "division_conflict": false,
+   "order_type": "customised",
+   "customer": "A&M Cup Cake",
+   "item": "PACKSERV - Wooden Knife 16cm (A&M Cup Cakes) - Pouch Packing",
+   "unit": "nos",
+   "qty_ordered": 3000,
+   "qty_cancelled": 0,
+   "qty_effective": 3000,
+   "qty_bundled": 0,
+   "qty_produced": 0,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-09-14",
+   "due_date": "2026-09-28",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-14T08:26:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 5,
+     "state": "not_detected",
+     "at": null
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "strip.at"
+   ]
+  },
+  {
+   "id": "4892105000004542027-1",
+   "so": "JOBORDER-01473",
+   "job_no": "OPD3840",
+   "division": "CWU",
+   "division_source": "header",
+   "division_conflict": false,
+   "order_type": "ex_stock",
+   "customer": "Standard Holdings (Pvt) Ltd",
+   "item": "SH-White Round Cup Cake Wrapper 14cm",
+   "unit": "pcs",
+   "qty_ordered": 50000,
+   "qty_cancelled": 0,
+   "qty_effective": 50000,
+   "qty_bundled": 50000,
+   "qty_produced": 50000,
+   "qty_packed": 49000,
+   "qty_shipped": 49000,
+   "qty_invoiced": 49000,
+   "created": "2025-03-01",
+   "due_date": null,
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2025-03-01T08:26:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-06T10:32:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-04T09:10:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-06T11:04:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "partial",
+     "at": "2026-09-06T13:01:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "partial",
+     "at": "2026-09-07T15:46:00+05:30"
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "no_manager"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000110493503-1",
+   "so": "JOBORDER-07706",
+   "job_no": "FPP-036",
+   "division": "FPP",
+   "division_source": "tag",
+   "division_conflict": false,
+   "order_type": "customised",
+   "customer": "Montado (Pvt) Ltd",
+   "item": "FP - Uplift Brew Coffee Sachet 1.5g Conversion Service (Montado)",
+   "unit": "pcs",
+   "qty_ordered": 15000,
+   "qty_cancelled": 0,
+   "qty_effective": 15000,
+   "qty_bundled": 15000,
+   "qty_produced": 15000,
+   "qty_packed": 10000,
+   "qty_shipped": 10000,
+   "qty_invoiced": 10000,
+   "created": "2026-06-22",
+   "due_date": "2026-07-06",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-06-22T08:15:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-08T10:55:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-06T09:29:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-08T11:10:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "partial",
+     "at": "2026-09-08T13:21:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "partial",
+     "at": "2026-09-09T15:09:00+05:30"
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000111983299-1",
+   "so": "JOBORDER-08219",
+   "job_no": "FPP-043",
+   "division": "FPP",
+   "division_source": "tag",
+   "division_conflict": false,
+   "order_type": "customised",
+   "customer": "Standard Holdings (Pvt) Ltd",
+   "item": "FP-Sugar Pillow White (Hotel Sangiliyan)",
+   "unit": "pcs",
+   "qty_ordered": 25000,
+   "qty_cancelled": 0,
+   "qty_effective": 25000,
+   "qty_bundled": 25000,
+   "qty_produced": 25000,
+   "qty_packed": 10000,
+   "qty_shipped": 10000,
+   "qty_invoiced": 10000,
+   "created": "2026-08-12",
+   "due_date": "2026-08-26",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-08-12T08:54:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-11T10:25:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-09T09:26:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-11T11:10:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "partial",
+     "at": "2026-09-11T13:22:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "partial",
+     "at": "2026-09-12T15:27:00+05:30"
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000112019210-1",
+   "so": "JOBORDER-08235",
+   "job_no": "FPP-044",
+   "division": "FPP",
+   "division_source": "tag",
+   "division_conflict": false,
+   "order_type": "customised",
+   "customer": "Montado (Pvt) Ltd",
+   "item": "FP - Uplift Brew Coffee Sachet 1.5g Conversion Service (Montado)",
+   "unit": "pcs",
+   "qty_ordered": 10000,
+   "qty_cancelled": 0,
+   "qty_effective": 10000,
+   "qty_bundled": 10000,
+   "qty_produced": 10000,
+   "qty_packed": 6000,
+   "qty_shipped": 6000,
+   "qty_invoiced": 6000,
+   "created": "2026-08-12",
+   "due_date": "2026-08-26",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-08-12T08:21:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-07T10:49:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-05T09:40:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-07T11:41:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "partial",
+     "at": "2026-09-07T13:14:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "partial",
+     "at": "2026-09-08T15:08:00+05:30"
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000112142164-1",
+   "so": "JOBORDER-08269",
+   "job_no": "FPP-045",
+   "division": "FPP",
+   "division_source": "tag",
+   "division_conflict": false,
+   "order_type": "ex_stock",
+   "customer": "Standard Holdings (Pvt) Ltd",
+   "item": "FP - Sugar Pillow White",
+   "unit": "pcs",
+   "qty_ordered": 30000,
+   "qty_cancelled": 0,
+   "qty_effective": 30000,
+   "qty_bundled": 30000,
+   "qty_produced": 30000,
+   "qty_packed": 26900,
+   "qty_shipped": 26900,
+   "qty_invoiced": 26900,
+   "created": "2026-08-17",
+   "due_date": "2026-08-31",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-08-17T08:24:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-09T10:51:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-07T09:03:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-09T11:02:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "partial",
+     "at": "2026-09-09T13:14:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "partial",
+     "at": "2026-09-10T15:21:00+05:30"
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000112837288-1",
+   "so": "JOBORDER-08509",
+   "job_no": "FPP-041",
+   "division": "FPP",
+   "division_source": "tag",
+   "division_conflict": false,
+   "order_type": "ex_stock",
+   "customer": "Standard Holdings (Pvt) Ltd",
+   "item": "FP - Sugar Tube White",
+   "unit": "pcs",
+   "qty_ordered": 50000,
+   "qty_cancelled": 0,
+   "qty_effective": 50000,
+   "qty_bundled": 50000,
+   "qty_produced": 50000,
+   "qty_packed": 8000,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-09-11",
+   "due_date": "2026-09-25",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-11T08:57:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-14T10:31:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-12T09:05:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-14T11:53:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000108412296-1",
+   "so": "JOBORDER-07259",
+   "job_no": "OPD6067",
+   "division": "MOBA",
+   "division_source": "tag",
+   "division_conflict": true,
+   "order_type": "customised",
+   "customer": "Arachchi Restaurant",
+   "item": "SP-12oz D/Wall White Paper Cup (Arachchi Restaurant  Anuradhapura)",
+   "unit": "pcs",
+   "qty_ordered": 2000,
+   "qty_cancelled": 0,
+   "qty_effective": 2000,
+   "qty_bundled": 2000,
+   "qty_produced": 2000,
+   "qty_packed": 1950,
+   "qty_shipped": 1950,
+   "qty_invoiced": 1950,
+   "created": "2026-05-02",
+   "due_date": "2026-05-18",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-05-02T08:53:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-10T10:47:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-08T09:54:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-10T11:13:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "partial",
+     "at": "2026-09-10T13:05:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "partial",
+     "at": "2026-09-11T15:17:00+05:30"
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "division_conflict"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000110072094-2",
+   "so": "JOBORDER-07564",
+   "job_no": "OPD6210",
+   "division": "MOBA",
+   "division_source": "tag",
+   "division_conflict": true,
+   "order_type": "customised",
+   "customer": "Jata Brew",
+   "item": "SP-12Oz D/Wall White Paper Cup with Foiling (Jata Brew)",
+   "unit": "pcs",
+   "qty_ordered": 108,
+   "qty_cancelled": 0,
+   "qty_effective": 108,
+   "qty_bundled": 108,
+   "qty_produced": 108,
+   "qty_packed": 108,
+   "qty_shipped": 108,
+   "qty_invoiced": 0,
+   "created": "2026-06-08",
+   "due_date": "2026-06-24",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-06-08T08:10:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "done",
+     "at": "2026-09-08T10:31:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-06T09:01:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "done",
+     "at": "2026-09-08T11:04:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "done",
+     "at": "2026-09-09T13:05:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [
+    {
+     "code": "invoice_missing",
+     "stage_id": 10,
+     "since": "2026-09-11"
+    }
+   ],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "division_conflict"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_ordered",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_invoiced",
+    "qty_packed",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000110884499-1",
+   "so": "JOBORDER-07810",
+   "job_no": "OPD6349",
+   "division": "MOBA",
+   "division_source": "tag",
+   "division_conflict": false,
+   "order_type": "customised",
+   "customer": "CAFE 173",
+   "item": "SP-Kraft Box 1200ml (180x120x50)mm (Cafe 173)",
+   "unit": "box",
+   "qty_ordered": 2000,
+   "qty_cancelled": 0,
+   "qty_effective": 2000,
+   "qty_bundled": 2000,
+   "qty_produced": 2000,
+   "qty_packed": 1989,
+   "qty_shipped": 1989,
+   "qty_invoiced": 1989,
+   "created": "2026-07-02",
+   "due_date": "2026-07-18",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-07-02T08:49:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-07T10:51:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-05T09:21:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-07T11:56:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "partial",
+     "at": "2026-09-07T13:08:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "partial",
+     "at": "2026-09-08T15:19:00+05:30"
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000110712035-1",
+   "so": "JOBORDER-07741",
+   "job_no": "OPD6307",
+   "division": "MOBA",
+   "division_source": "tag",
+   "division_conflict": true,
+   "order_type": "internal",
+   "customer": "Standard Holdings (Pvt) Ltd",
+   "item": "SH-White Round Cup Cake Wrapper 11.5cm",
+   "unit": "pcs",
+   "qty_ordered": 85000,
+   "qty_cancelled": 0,
+   "qty_effective": 85000,
+   "qty_bundled": 85000,
+   "qty_produced": 85000,
+   "qty_packed": 51000,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-07-25",
+   "due_date": "2026-08-11",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-07-25T08:34:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-14T10:45:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-12T09:23:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-14T11:36:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "division_conflict"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_ordered",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_invoiced",
+    "qty_packed",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000112508044-1",
+   "so": "JOBORDER-08393",
+   "job_no": "OPD6606",
+   "division": "MOBA",
+   "division_source": "tag",
+   "division_conflict": true,
+   "order_type": "customised",
+   "customer": "Radicle",
+   "item": "SP-8oz D/Wall Blue Paper Cup (Radicle)",
+   "unit": "pcs",
+   "qty_ordered": 2000,
+   "qty_cancelled": 0,
+   "qty_effective": 2000,
+   "qty_bundled": 2000,
+   "qty_produced": 2000,
+   "qty_packed": 1200,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-09-01",
+   "due_date": "2026-09-17",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-01T08:01:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-08T10:26:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-06T09:42:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-08T11:32:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "checking",
+   "unassigned_reasons": [
+    "division_conflict"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_ordered",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_invoiced",
+    "qty_packed",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000112525162-1",
+   "so": "JOBORDER-08396",
+   "job_no": "OPD6610-South",
+   "division": "MOBA",
+   "division_source": "tag",
+   "division_conflict": false,
+   "order_type": "customised",
+   "customer": "Cheese Lover",
+   "item": "SP-Kraft Box 900ml (165x115x50)mm (Cheese Lover)",
+   "unit": "box",
+   "qty_ordered": 1000,
+   "qty_cancelled": 0,
+   "qty_effective": 1000,
+   "qty_bundled": 1000,
+   "qty_produced": 1000,
+   "qty_packed": 600,
+   "qty_shipped": 600,
+   "qty_invoiced": 0,
+   "created": "2026-09-01",
+   "due_date": "2026-09-17",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-01T08:14:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-08T10:12:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-06T09:35:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-08T11:03:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "partial",
+     "at": "2026-09-09T13:50:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [
+    {
+     "code": "invoice_missing",
+     "stage_id": 10,
+     "since": "2026-09-11"
+    }
+   ],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_ordered",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_invoiced",
+    "qty_packed",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000112867036-1",
+   "so": "JOBORDER-08514",
+   "job_no": "OPD6671-South",
+   "division": "MOBA",
+   "division_source": "tag",
+   "division_conflict": false,
+   "order_type": "customised",
+   "customer": "The Lamprais",
+   "item": "SP-Kraft Box 900ml (165x115x50)mm (Lamprais)",
+   "unit": "box",
+   "qty_ordered": 5000,
+   "qty_cancelled": 0,
+   "qty_effective": 5000,
+   "qty_bundled": 0,
+   "qty_produced": 0,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-09-11",
+   "due_date": "2026-09-27",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-11T08:40:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 5,
+     "state": "not_detected",
+     "at": null
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "strip.at"
+   ]
+  },
+  {
+   "id": "4892105000112911140-1",
+   "so": "JOBORDER-08527",
+   "job_no": "OPD6683",
+   "division": "MOBA",
+   "division_source": "tag",
+   "division_conflict": true,
+   "order_type": "customised",
+   "customer": "BrewSymphony (PVT) Ltd (Cafe A.K.O)",
+   "item": "SP-8oz D/Wall Black Paper Cup (Cafe A.K.O)",
+   "unit": "pcs",
+   "qty_ordered": 1000,
+   "qty_cancelled": 0,
+   "qty_effective": 1000,
+   "qty_bundled": 400,
+   "qty_produced": 400,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-09-11",
+   "due_date": "2026-09-27",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-11T08:56:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-15T10:50:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-15T09:24:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "division_conflict"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000112911192-1",
+   "so": "JOBORDER-08528",
+   "job_no": "OPD6684",
+   "division": "MOBA",
+   "division_source": "tag",
+   "division_conflict": true,
+   "order_type": "customised",
+   "customer": "BrewSymphony (PVT) Ltd (Cafe A.K.O)",
+   "item": "SP-12oz D/Wall Black Paper Cup (Cafe A.K.O)",
+   "unit": "pcs",
+   "qty_ordered": 1000,
+   "qty_cancelled": 0,
+   "qty_effective": 1000,
+   "qty_bundled": 700,
+   "qty_produced": 700,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-09-11",
+   "due_date": "2026-09-27",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-11T08:37:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-15T10:31:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-15T09:08:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "division_conflict"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000112897094-1",
+   "so": "JOBORDER-08542",
+   "job_no": "OPD6688-South",
+   "division": "MOBA",
+   "division_source": "tag",
+   "division_conflict": true,
+   "order_type": "customised",
+   "customer": "Drifter cafe and kitchen midigama",
+   "item": "SP-8oz D/Wall Kraft Paper Cup (Drifter)",
+   "unit": "pcs",
+   "qty_ordered": 1000,
+   "qty_cancelled": 0,
+   "qty_effective": 1000,
+   "qty_bundled": 0,
+   "qty_produced": 0,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-09-12",
+   "due_date": "2026-09-30",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-12T08:28:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 5,
+     "state": "not_detected",
+     "at": null
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "division_conflict"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "strip.at"
+   ]
+  },
+  {
+   "id": "4892105000112897145-1",
+   "so": "JOBORDER-08543",
+   "job_no": "OPD6689-South",
+   "division": "MOBA",
+   "division_source": "tag",
+   "division_conflict": true,
+   "order_type": "customised",
+   "customer": "Drifter cafe and kitchen midigama",
+   "item": "SP-12oz D/Wall Kraft Paper Cup (Drifter)",
+   "unit": "pcs",
+   "qty_ordered": 1000,
+   "qty_cancelled": 0,
+   "qty_effective": 1000,
+   "qty_bundled": 300,
+   "qty_produced": 300,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-09-12",
+   "due_date": "2026-09-30",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-12T08:31:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-13T10:52:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-13T09:34:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "division_conflict"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000112897277-1",
+   "so": "JOBORDER-08550",
+   "job_no": "OPD6695",
+   "division": "MOBA",
+   "division_source": "tag",
+   "division_conflict": true,
+   "order_type": "customised",
+   "customer": "HUT CAFE",
+   "item": "SP-8oz D/wall White Paper Cup (Hut Cafe)",
+   "unit": "pcs",
+   "qty_ordered": 5000,
+   "qty_cancelled": 0,
+   "qty_effective": 5000,
+   "qty_bundled": 1500,
+   "qty_produced": 1500,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-09-12",
+   "due_date": "2026-09-30",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-12T08:30:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-12T10:40:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-12T09:42:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "division_conflict"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000112897463-1",
+   "so": "JOBORDER-08556",
+   "job_no": "OPD6700",
+   "division": "MOBA",
+   "division_source": "tag",
+   "division_conflict": true,
+   "order_type": "customised",
+   "customer": "The Base Project (Brown Suger)",
+   "item": "SP-8Oz D/Wall Kraft Paper Cup (Brown Sugar)",
+   "unit": "pcs",
+   "qty_ordered": 500,
+   "qty_cancelled": 0,
+   "qty_effective": 500,
+   "qty_bundled": 0,
+   "qty_produced": 0,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-09-14",
+   "due_date": "2026-09-30",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-14T08:38:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 5,
+     "state": "not_detected",
+     "at": null
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "division_conflict"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "strip.at"
+   ]
+  },
+  {
+   "id": "4892105000112897513-1",
+   "so": "JOBORDER-08559",
+   "job_no": "OPD6702",
+   "division": "MOBA",
+   "division_source": "tag",
+   "division_conflict": true,
+   "order_type": "customised",
+   "customer": "The Base Project (Brown Suger)",
+   "item": "SP-12Oz D/Wall Kraft Paper Cup (Brown Sugar)",
+   "unit": "pcs",
+   "qty_ordered": 500,
+   "qty_cancelled": 0,
+   "qty_effective": 500,
+   "qty_bundled": 0,
+   "qty_produced": 0,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-09-14",
+   "due_date": "2026-09-30",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-14T08:09:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 5,
+     "state": "not_detected",
+     "at": null
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "division_conflict"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "strip.at"
+   ]
+  },
+  {
+   "id": "4892105000065666147-2",
+   "so": "JOBORDER-05071",
+   "job_no": "OPD5035",
+   "division": "OPD",
+   "division_source": "header",
+   "division_conflict": false,
+   "order_type": "internal",
+   "customer": "Standard Holdings (Pvt) Ltd",
+   "item": "SH - Kraft Box Plain 1200ml (180x120x50)mm",
+   "unit": "box",
+   "qty_ordered": 5542,
+   "qty_cancelled": 0,
+   "qty_effective": 5542,
+   "qty_bundled": 5542,
+   "qty_produced": 5542,
+   "qty_packed": 4809,
+   "qty_shipped": 4809,
+   "qty_invoiced": 4809,
+   "created": "2025-10-10",
+   "due_date": "2025-10-26",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2025-10-10T08:24:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-11T10:57:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-09T09:58:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-11T11:54:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "partial",
+     "at": "2026-09-11T13:31:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "partial",
+     "at": "2026-09-12T15:23:00+05:30"
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000102369011-1",
+   "so": "JOBORDER-07058",
+   "job_no": "OPD5991",
+   "division": "OPD",
+   "division_source": "header",
+   "division_conflict": false,
+   "order_type": "customised",
+   "customer": "Keells Super",
+   "item": "SP-Chicken Bucket+Lid(Keells)",
+   "unit": "nos",
+   "qty_ordered": 40000,
+   "qty_cancelled": 761,
+   "qty_effective": 39239,
+   "qty_bundled": 39239,
+   "qty_produced": 39239,
+   "qty_packed": 37750,
+   "qty_shipped": 37750,
+   "qty_invoiced": 37750,
+   "created": "2026-04-08",
+   "due_date": "2026-04-24",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-04-08T08:07:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-11T10:26:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-09T09:55:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-11T11:35:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "partial",
+     "at": "2026-09-11T13:19:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "partial",
+     "at": "2026-09-12T15:18:00+05:30"
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000111499006-1",
+   "so": "JOBORDER-08034",
+   "job_no": "OPD6442",
+   "division": "OPD",
+   "division_source": "header",
+   "division_conflict": false,
+   "order_type": "customised",
+   "customer": "Keells Super",
+   "item": "SP-Chicken Bucket+Lid(Keells)",
+   "unit": "nos",
+   "qty_ordered": 40000,
+   "qty_cancelled": 0,
+   "qty_effective": 40000,
+   "qty_bundled": 40000,
+   "qty_produced": 40000,
+   "qty_packed": 24000,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-07-27",
+   "due_date": "2026-08-12",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-07-27T08:29:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-11T10:47:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-09T09:57:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-11T11:27:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_ordered",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_invoiced",
+    "qty_packed",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000112331748-1",
+   "so": "JOBORDER-08353",
+   "job_no": "OPD6591",
+   "division": "OPD",
+   "division_source": "header",
+   "division_conflict": false,
+   "order_type": "customised",
+   "customer": "Spar SL (Private ) Limited",
+   "item": "SP-Chicken Bucket+Lid (Spar)",
+   "unit": "nos",
+   "qty_ordered": 2000,
+   "qty_cancelled": 0,
+   "qty_effective": 2000,
+   "qty_bundled": 2000,
+   "qty_produced": 2000,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-08-24",
+   "due_date": "2026-09-09",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-08-24T08:50:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-09T09:08:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [
+    {
+     "code": "package_missing",
+     "stage_id": 7,
+     "since": "2026-09-11"
+    }
+   ],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_ordered",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_invoiced",
+    "qty_packed",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at"
+   ]
+  },
+  {
+   "id": "4892105000065362827-1",
+   "so": "JOBORDER-04998",
+   "job_no": "OPD4911",
+   "division": "OPD",
+   "division_source": "header",
+   "division_conflict": false,
+   "order_type": "internal",
+   "customer": "Standard Holdings (Pvt) Ltd",
+   "item": "SH Kraft Double Cup Cake Box (165 x 85 x 85mm)",
+   "unit": "box",
+   "qty_ordered": 5000,
+   "qty_cancelled": 100,
+   "qty_effective": 4900,
+   "qty_bundled": 4900,
+   "qty_produced": 4900,
+   "qty_packed": 4790,
+   "qty_shipped": 4790,
+   "qty_invoiced": 4790,
+   "created": "2025-09-17",
+   "due_date": null,
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2025-09-17T08:16:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-11T10:16:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-09T09:58:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-11T11:42:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "partial",
+     "at": "2026-09-11T13:46:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "partial",
+     "at": "2026-09-12T15:33:00+05:30"
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000108236006-1",
+   "so": "JOBORDER-07220",
+   "job_no": "OPD789",
+   "division": "OPD",
+   "division_source": "header",
+   "division_conflict": false,
+   "order_type": "customised",
+   "customer": "Standard Holdings (Pvt) Ltd",
+   "item": "SP-Acknowledgement for Medical Service Form (Ajial school)",
+   "unit": "nos",
+   "qty_ordered": 500,
+   "qty_cancelled": 0,
+   "qty_effective": 500,
+   "qty_bundled": 500,
+   "qty_produced": 500,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-04-30",
+   "due_date": null,
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-04-30T08:28:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-08T09:46:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [
+    {
+     "code": "package_missing",
+     "stage_id": 7,
+     "since": "2026-09-10"
+    }
+   ],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_ordered",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_invoiced",
+    "qty_packed",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at"
+   ]
+  },
+  {
+   "id": "4892105000108974261-2",
+   "so": "JOBORDER-07292",
+   "job_no": "OPD6085-South",
+   "division": "PACKPRO",
+   "division_source": "tag",
+   "division_conflict": true,
+   "order_type": "customised",
+   "customer": "MBC",
+   "item": "SP-White 4 Cup Cake Box (156x150x75)mm (MBC)",
+   "unit": "pcs",
+   "qty_ordered": 84,
+   "qty_cancelled": 0,
+   "qty_effective": 84,
+   "qty_bundled": 84,
+   "qty_produced": 84,
+   "qty_packed": 83,
+   "qty_shipped": 83,
+   "qty_invoiced": 83,
+   "created": "2026-05-08",
+   "due_date": "2026-05-24",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-05-08T08:15:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-09T10:07:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-07T09:28:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-09T11:50:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "partial",
+     "at": "2026-09-09T13:18:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "partial",
+     "at": "2026-09-10T15:02:00+05:30"
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "division_conflict"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000109494199-1",
+   "so": "JOBORDER-07411",
+   "job_no": "OPD6138",
+   "division": "PACKPRO",
+   "division_source": "tag",
+   "division_conflict": true,
+   "order_type": "internal",
+   "customer": "Standard Holdings (Pvt) Ltd",
+   "item": "SH-Single Cake Board Round 8cm",
+   "unit": "pcs",
+   "qty_ordered": 6000,
+   "qty_cancelled": 0,
+   "qty_effective": 6000,
+   "qty_bundled": 6000,
+   "qty_produced": 6000,
+   "qty_packed": 1500,
+   "qty_shipped": 1500,
+   "qty_invoiced": 1500,
+   "created": "2026-05-20",
+   "due_date": "2026-06-05",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-05-20T08:53:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-05T10:42:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-03T09:55:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-05T11:54:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "partial",
+     "at": "2026-09-05T13:24:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "partial",
+     "at": "2026-09-06T15:46:00+05:30"
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "division_conflict"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000112319589-2",
+   "so": "JOBORDER-08346",
+   "job_no": "OPD6438",
+   "division": "PACKPRO",
+   "division_source": "tag",
+   "division_conflict": true,
+   "order_type": "customised",
+   "customer": "Chanas Restaurant",
+   "item": "SP-White Lunch Box 170X145X50mm(Chanas )",
+   "unit": "box",
+   "qty_ordered": 450,
+   "qty_cancelled": 0,
+   "qty_effective": 450,
+   "qty_bundled": 450,
+   "qty_produced": 450,
+   "qty_packed": 450,
+   "qty_shipped": 150,
+   "qty_invoiced": 150,
+   "created": "2026-07-22",
+   "due_date": "2026-08-07",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-07-22T08:31:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "done",
+     "at": "2026-09-06T10:11:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-05T09:37:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "done",
+     "at": "2026-09-06T11:46:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "partial",
+     "at": "2026-09-06T13:08:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "partial",
+     "at": "2026-09-06T15:08:00+05:30"
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [
+    {
+     "code": "shipment_missing",
+     "stage_id": 8,
+     "since": "2026-09-10"
+    }
+   ],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "division_conflict"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_ordered",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_invoiced",
+    "qty_packed",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000111623024-1",
+   "so": "JOBORDER-08080",
+   "job_no": "OPD6473",
+   "division": "PACKPRO",
+   "division_source": "tag",
+   "division_conflict": true,
+   "order_type": "customised",
+   "customer": "SALEM RR BIRIYANI",
+   "item": "SP-Kraft Food Wrap 40cm x 45cm (Salem RR Biriyani )",
+   "unit": "pcs",
+   "qty_ordered": 2000,
+   "qty_cancelled": 0,
+   "qty_effective": 2000,
+   "qty_bundled": 2000,
+   "qty_produced": 2000,
+   "qty_packed": 1893,
+   "qty_shipped": 1893,
+   "qty_invoiced": 1893,
+   "created": "2026-07-30",
+   "due_date": "2026-08-12",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-07-30T08:00:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-09T10:29:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-07T09:48:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-09T11:25:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "partial",
+     "at": "2026-09-09T13:20:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "partial",
+     "at": "2026-09-10T15:49:00+05:30"
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "division_conflict"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000112130416-1",
+   "so": "JOBORDER-08268",
+   "job_no": "OPD6557",
+   "division": "PACKPRO",
+   "division_source": "tag",
+   "division_conflict": true,
+   "order_type": "internal",
+   "customer": "Standard Holdings (Pvt) Ltd",
+   "item": "SH Kraft Box+Window (150X100X90)mm",
+   "unit": "box",
+   "qty_ordered": 6000,
+   "qty_cancelled": 0,
+   "qty_effective": 6000,
+   "qty_bundled": 6000,
+   "qty_produced": 6000,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-08-17",
+   "due_date": "2026-09-02",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-08-17T08:36:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-08T09:47:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [
+    {
+     "code": "package_missing",
+     "stage_id": 7,
+     "since": "2026-09-10"
+    }
+   ],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "division_conflict"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_ordered",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_invoiced",
+    "qty_packed",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at"
+   ]
+  },
+  {
+   "id": "4892105000112671001-1",
+   "so": "JOBORDER-08420",
+   "job_no": "OPD6612",
+   "division": "PACKPRO",
+   "division_source": "tag",
+   "division_conflict": true,
+   "order_type": "customised",
+   "customer": "Legacy",
+   "item": "SP-Paper Bag (S) 240x140x80mm(Legacy)",
+   "unit": "pcs",
+   "qty_ordered": 1000,
+   "qty_cancelled": 0,
+   "qty_effective": 1000,
+   "qty_bundled": 1000,
+   "qty_produced": 1000,
+   "qty_packed": 600,
+   "qty_shipped": 200,
+   "qty_invoiced": 200,
+   "created": "2026-09-01",
+   "due_date": "2026-09-17",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-01T08:28:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-06T10:27:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-05T09:26:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-06T11:14:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "partial",
+     "at": "2026-09-06T13:33:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "partial",
+     "at": "2026-09-06T15:06:00+05:30"
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [
+    {
+     "code": "shipment_missing",
+     "stage_id": 8,
+     "since": "2026-09-10"
+    }
+   ],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "division_conflict"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_ordered",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_invoiced",
+    "qty_packed",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000112671027-1",
+   "so": "JOBORDER-08421",
+   "job_no": "OPD6613",
+   "division": "PACKPRO",
+   "division_source": "tag",
+   "division_conflict": true,
+   "order_type": "customised",
+   "customer": "Legacy",
+   "item": "SP-Paper Bag (M) 280x180x120mm(Legacy)",
+   "unit": "pcs",
+   "qty_ordered": 1000,
+   "qty_cancelled": 0,
+   "qty_effective": 1000,
+   "qty_bundled": 1000,
+   "qty_produced": 1000,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-09-01",
+   "due_date": "2026-09-17",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-01T08:32:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "done",
+     "at": "2026-09-11T10:18:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-11T09:31:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [
+    {
+     "code": "package_missing",
+     "stage_id": 7,
+     "since": "2026-09-15"
+    }
+   ],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "division_conflict"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_ordered",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_invoiced",
+    "qty_packed",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000112911268-1",
+   "so": "JOBORDER-08531",
+   "job_no": "OPD6682-South",
+   "division": "PACKPRO",
+   "division_source": "tag",
+   "division_conflict": true,
+   "order_type": "customised",
+   "customer": "Shangrila Colombo",
+   "item": "SP-White Box 4x8x6 cm (Shangrila Colombo)",
+   "unit": "box",
+   "qty_ordered": 1000,
+   "qty_cancelled": 0,
+   "qty_effective": 1000,
+   "qty_bundled": 500,
+   "qty_produced": 500,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-09-11",
+   "due_date": "2026-09-27",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-11T08:46:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-14T10:18:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-14T09:24:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "division_conflict"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000112911541-1",
+   "so": "JOBORDER-08538",
+   "job_no": "OPD6685",
+   "division": "PACKPRO",
+   "division_source": "tag",
+   "division_conflict": true,
+   "order_type": "customised",
+   "customer": "Tasty Caterers",
+   "item": "SP-E Flute Tray 14 x 11 x 2.5 Inch(Tasty Caters)",
+   "unit": "pcs",
+   "qty_ordered": 5000,
+   "qty_cancelled": 0,
+   "qty_effective": 5000,
+   "qty_bundled": 0,
+   "qty_produced": 0,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-09-11",
+   "due_date": "2026-09-29",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-11T08:34:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 5,
+     "state": "not_detected",
+     "at": null
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "division_conflict"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "strip.at"
+   ]
+  },
+  {
+   "id": "4892105000112897045-1",
+   "so": "JOBORDER-08541",
+   "job_no": "OPD6687-South",
+   "division": "PACKPRO",
+   "division_source": "tag",
+   "division_conflict": true,
+   "order_type": "customised",
+   "customer": "Drifter cafe and kitchen midigama",
+   "item": "SP-Kraft Food Wrap 40cmx45cm (Drifter)",
+   "unit": "pcs",
+   "qty_ordered": 1000,
+   "qty_cancelled": 0,
+   "qty_effective": 1000,
+   "qty_bundled": 600,
+   "qty_produced": 600,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-09-12",
+   "due_date": "2026-09-30",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-12T08:19:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-15T09:24:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "division_conflict"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "strip.at"
+   ]
+  },
+  {
+   "id": "4892105000112897166-1",
+   "so": "JOBORDER-08545",
+   "job_no": "OPD6690",
+   "division": "PACKPRO",
+   "division_source": "tag",
+   "division_conflict": true,
+   "order_type": "customised",
+   "customer": "TACO BELL",
+   "item": "SP-Kraft Food Wrap(10 X 10 ) (Taco Bell)",
+   "unit": "pcs",
+   "qty_ordered": 30000,
+   "qty_cancelled": 0,
+   "qty_effective": 30000,
+   "qty_bundled": 0,
+   "qty_produced": 0,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-09-12",
+   "due_date": "2026-09-30",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-12T08:30:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 5,
+     "state": "not_detected",
+     "at": null
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "division_conflict"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "strip.at"
+   ]
+  },
+  {
+   "id": "4892105000112897187-1",
+   "so": "JOBORDER-08546",
+   "job_no": "OPD6691",
+   "division": "PACKPRO",
+   "division_source": "tag",
+   "division_conflict": true,
+   "order_type": "customised",
+   "customer": "TACO BELL",
+   "item": "SP-Kraft Food Wrap (12 X 12 ) (Taco Bell)",
+   "unit": "pcs",
+   "qty_ordered": 30000,
+   "qty_cancelled": 0,
+   "qty_effective": 30000,
+   "qty_bundled": 30000,
+   "qty_produced": 30000,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-09-12",
+   "due_date": "2026-09-30",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-12T08:49:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "done",
+     "at": "2026-09-15T10:20:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-15T09:19:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "division_conflict"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000112897211-1",
+   "so": "JOBORDER-08547",
+   "job_no": "OPD6692",
+   "division": "PACKPRO",
+   "division_source": "tag",
+   "division_conflict": true,
+   "order_type": "customised",
+   "customer": "TACO BELL",
+   "item": "SP-Kraft Food Wrap (Quesadilla Pouch) (Taco Bell)",
+   "unit": "pcs",
+   "qty_ordered": 10000,
+   "qty_cancelled": 0,
+   "qty_effective": 10000,
+   "qty_bundled": 0,
+   "qty_produced": 0,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-09-12",
+   "due_date": "2026-09-30",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-12T08:17:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 5,
+     "state": "not_detected",
+     "at": null
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "division_conflict"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "strip.at"
+   ]
+  },
+  {
+   "id": "4892105000112897235-1",
+   "so": "JOBORDER-08548",
+   "job_no": "OPD6693",
+   "division": "PACKPRO",
+   "division_source": "tag",
+   "division_conflict": true,
+   "order_type": "customised",
+   "customer": "TACO BELL",
+   "item": "SP-Small White Wrapper (Taco Bell)",
+   "unit": "pcs",
+   "qty_ordered": 20000,
+   "qty_cancelled": 0,
+   "qty_effective": 20000,
+   "qty_bundled": 0,
+   "qty_produced": 0,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-09-12",
+   "due_date": "2026-09-30",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-12T08:18:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 5,
+     "state": "not_detected",
+     "at": null
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "division_conflict"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "strip.at"
+   ]
+  },
+  {
+   "id": "4892105000112897256-1",
+   "so": "JOBORDER-08549",
+   "job_no": "OPD6694",
+   "division": "PACKPRO",
+   "division_source": "tag",
+   "division_conflict": true,
+   "order_type": "customised",
+   "customer": "TACO BELL",
+   "item": "SP-White Paper(Cinnamon Twist pouch) (Taco Bell)",
+   "unit": "pcs",
+   "qty_ordered": 30000,
+   "qty_cancelled": 0,
+   "qty_effective": 30000,
+   "qty_bundled": 0,
+   "qty_produced": 0,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-09-12",
+   "due_date": "2026-09-30",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-12T08:28:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 5,
+     "state": "not_detected",
+     "at": null
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "division_conflict"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "strip.at"
+   ]
+  },
+  {
+   "id": "4892105000112897301-1",
+   "so": "JOBORDER-08551",
+   "job_no": "OPD6696",
+   "division": "PACKPRO",
+   "division_source": "tag",
+   "division_conflict": true,
+   "order_type": "customised",
+   "customer": "TACO BELL",
+   "item": "SP-Taco Sleeve  5.4X6.7Inch (Taco Bell)",
+   "unit": "pcs",
+   "qty_ordered": 20000,
+   "qty_cancelled": 0,
+   "qty_effective": 20000,
+   "qty_bundled": 0,
+   "qty_produced": 0,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-09-12",
+   "due_date": "2026-09-30",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-12T08:57:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 5,
+     "state": "not_detected",
+     "at": null
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "division_conflict"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "strip.at"
+   ]
+  },
+  {
+   "id": "4892105000112897404-1",
+   "so": "JOBORDER-08553",
+   "job_no": "OPD6701",
+   "division": "PACKPRO",
+   "division_source": "tag",
+   "division_conflict": true,
+   "order_type": "customised",
+   "customer": "Montado (Pvt) Ltd",
+   "item": "SP-Coffee Paste Inner Carton Original (Montado)",
+   "unit": "box",
+   "qty_ordered": 1000,
+   "qty_cancelled": 0,
+   "qty_effective": 1000,
+   "qty_bundled": 1000,
+   "qty_produced": 1000,
+   "qty_packed": 100,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-09-14",
+   "due_date": "2026-09-30",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-14T08:43:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-14T10:09:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-14T09:07:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-14T11:27:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "division_conflict"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000004529043-2",
+   "so": "JOBORDER-01463",
+   "job_no": "OPD3804",
+   "division": "PCU",
+   "division_source": "header",
+   "division_conflict": false,
+   "order_type": "customised",
+   "customer": "Standard Holdings (Pvt) Ltd",
+   "item": "SP-12oz D/Wall White Paper Cup (Artisan Diletio)",
+   "unit": "pcs",
+   "qty_ordered": 30,
+   "qty_cancelled": 0,
+   "qty_effective": 30,
+   "qty_bundled": 30,
+   "qty_produced": 30,
+   "qty_packed": 26,
+   "qty_shipped": 26,
+   "qty_invoiced": 26,
+   "created": "2025-02-28",
+   "due_date": null,
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2025-02-28T08:41:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-11T10:43:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-09T09:12:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-11T11:38:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "partial",
+     "at": "2026-09-11T13:32:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "partial",
+     "at": "2026-09-12T15:16:00+05:30"
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "no_manager"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000008999009-1",
+   "so": "JOBORDER-02123",
+   "job_no": "OPD4168",
+   "division": "PCU",
+   "division_source": "header",
+   "division_conflict": false,
+   "order_type": "ex_stock",
+   "customer": "Standard Holdings (Pvt) Ltd",
+   "item": "SH-8oz D/Wall Kraft Paper Cup",
+   "unit": "pcs",
+   "qty_ordered": 75000,
+   "qty_cancelled": 1718,
+   "qty_effective": 73282,
+   "qty_bundled": 73282,
+   "qty_produced": 73282,
+   "qty_packed": 59050,
+   "qty_shipped": 59050,
+   "qty_invoiced": 59050,
+   "created": "2025-04-24",
+   "due_date": null,
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2025-04-24T08:15:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-06T10:15:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-04T09:20:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-06T11:53:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "partial",
+     "at": "2026-09-06T13:28:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "partial",
+     "at": "2026-09-07T15:34:00+05:30"
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "no_manager"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000023396547-1",
+   "so": "JOBORDER-02822",
+   "job_no": "OPD4404",
+   "division": "PCU",
+   "division_source": "header",
+   "division_conflict": false,
+   "order_type": "ex_stock",
+   "customer": "Standard Holdings (Pvt) Ltd",
+   "item": "SH-8oz D/Wall Kraft Paper Cup",
+   "unit": "pcs",
+   "qty_ordered": 100000,
+   "qty_cancelled": 1039,
+   "qty_effective": 98961,
+   "qty_bundled": 98961,
+   "qty_produced": 98961,
+   "qty_packed": 84050,
+   "qty_shipped": 84050,
+   "qty_invoiced": 84050,
+   "created": "2025-06-13",
+   "due_date": null,
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2025-06-13T08:27:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-05T10:50:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-03T09:25:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-05T11:55:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "partial",
+     "at": "2026-09-05T13:20:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "partial",
+     "at": "2026-09-06T15:15:00+05:30"
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "no_manager"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000112943914-1",
+   "so": "JOBORDER-08557",
+   "job_no": "PSU/BTN/987",
+   "division": "PSU",
+   "division_source": "tag",
+   "division_conflict": false,
+   "order_type": "ex_stock",
+   "customer": "Standard Holdings (Pvt) Ltd",
+   "item": "Paper White Straw 6mm x 20cm (Packed)",
+   "unit": null,
+   "qty_ordered": 15500,
+   "qty_cancelled": 0,
+   "qty_effective": 15500,
+   "qty_bundled": 0,
+   "qty_produced": 0,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-09-15",
+   "due_date": "2026-09-29",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-15T08:02:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "not_detected",
+     "at": null
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "strip.at"
+   ]
+  },
+  {
+   "id": "4892105000068614730-1",
+   "so": "JOBORDER-05720",
+   "job_no": "PSU/BTN/869",
+   "division": "PSU",
+   "division_source": "tag",
+   "division_conflict": false,
+   "order_type": "ex_stock",
+   "customer": "Standard Holdings (Pvt) Ltd",
+   "item": "Paper White Straw 6mm x 20cm (Packed)",
+   "unit": null,
+   "qty_ordered": 13800,
+   "qty_cancelled": 0,
+   "qty_effective": 13800,
+   "qty_bundled": 13800,
+   "qty_produced": 13800,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2025-12-18",
+   "due_date": null,
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2025-12-18T08:26:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-14T09:30:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000073870731-1",
+   "so": "JOBORDER-06066",
+   "job_no": "PSU/6X20/2804/0010",
+   "division": "PSU",
+   "division_source": "header",
+   "division_conflict": false,
+   "order_type": "ex_stock",
+   "customer": "Standard Holdings (Pvt) Ltd",
+   "item": "Paper White Straw 6mm x 20cm Imported (Packed)",
+   "unit": "pcs",
+   "qty_ordered": 15500,
+   "qty_cancelled": 0,
+   "qty_effective": 15500,
+   "qty_bundled": 15500,
+   "qty_produced": 15500,
+   "qty_packed": 15400,
+   "qty_shipped": 15400,
+   "qty_invoiced": 15400,
+   "created": "2026-01-14",
+   "due_date": null,
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-01-14T08:01:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-03T09:28:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-05T11:48:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "partial",
+     "at": "2026-09-05T13:04:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "partial",
+     "at": "2026-09-06T15:08:00+05:30"
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000112930009-1",
+   "so": "JOBORDER-08539",
+   "job_no": "RWU/IMP2973/SUPERPACK/00020",
+   "division": "RWU",
+   "division_source": "header",
+   "division_conflict": false,
+   "order_type": "ex_stock",
+   "customer": "Standard Holdings (Pvt) Ltd",
+   "item": "ST-Cling Film 45cmX600m",
+   "unit": "rl",
+   "qty_ordered": 91,
+   "qty_cancelled": 0,
+   "qty_effective": 91,
+   "qty_bundled": 91,
+   "qty_produced": 91,
+   "qty_packed": 91,
+   "qty_shipped": 91,
+   "qty_invoiced": 0,
+   "created": "2026-09-15",
+   "due_date": "2026-09-27",
+   "strip": [
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-15T08:20:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-15T09:10:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "done",
+     "at": "2026-09-15T11:29:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "done",
+     "at": "2026-09-15T13:50:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000057753159-1",
+   "so": "JOBORDER-03846",
+   "job_no": "RWU/IMP2212/BIO/30X10/0007",
+   "division": "RWU",
+   "division_source": "header",
+   "division_conflict": false,
+   "order_type": "ex_stock",
+   "customer": "Standard Holdings (Pvt) Ltd",
+   "item": "Chefs Choice Biodegradable Cling Film 30cm x 10m (BIO)",
+   "unit": "rl",
+   "qty_ordered": 544,
+   "qty_cancelled": 0,
+   "qty_effective": 544,
+   "qty_bundled": 163,
+   "qty_produced": 163,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2025-07-24",
+   "due_date": null,
+   "strip": [
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2025-07-24T08:41:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-12T09:58:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000059484299-1",
+   "so": "JOBORDER-03950",
+   "job_no": "RWU/IMP2529/SUPERPACK/0019",
+   "division": "RWU",
+   "division_source": "header",
+   "division_conflict": false,
+   "order_type": "ex_stock",
+   "customer": "Standard Holdings (Pvt) Ltd",
+   "item": "ST-Cling Film 45cmX600m",
+   "unit": "rl",
+   "qty_ordered": 55,
+   "qty_cancelled": 0,
+   "qty_effective": 55,
+   "qty_bundled": 55,
+   "qty_produced": 55,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2025-07-29",
+   "due_date": null,
+   "strip": [
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2025-07-29T08:28:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-15T09:05:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000063985827-1",
+   "so": "JOBORDER-04683",
+   "job_no": "RWU/IMP2569/SUPERPACK/006",
+   "division": "RWU",
+   "division_source": "header",
+   "division_conflict": false,
+   "order_type": "ex_stock",
+   "customer": "Standard Holdings (Pvt) Ltd",
+   "item": "ST-Cling Film 45cmX600m",
+   "unit": "rl",
+   "qty_ordered": 40,
+   "qty_cancelled": 0,
+   "qty_effective": 40,
+   "qty_bundled": 40,
+   "qty_produced": 40,
+   "qty_packed": 37,
+   "qty_shipped": 37,
+   "qty_invoiced": 37,
+   "created": "2025-08-30",
+   "due_date": null,
+   "strip": [
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2025-08-30T08:36:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-04T09:16:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-06T11:32:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "partial",
+     "at": "2026-09-06T13:51:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "partial",
+     "at": "2026-09-07T15:05:00+05:30"
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000064365484-2",
+   "so": "JOBORDER-04789",
+   "job_no": null,
+   "division": "RWU",
+   "division_source": "header",
+   "division_conflict": false,
+   "order_type": "ex_stock",
+   "customer": "Standard Holdings (Pvt) Ltd",
+   "item": "Chefs Choice Cling Film PE 45CMX300M (21)",
+   "unit": "rl",
+   "qty_ordered": 2,
+   "qty_cancelled": 0,
+   "qty_effective": 2,
+   "qty_bundled": 2,
+   "qty_produced": 2,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2025-09-10",
+   "due_date": null,
+   "strip": [
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2025-09-10T08:39:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-14T09:47:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "no_job_no"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "item",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "strip.at"
+   ]
+  },
+  {
+   "id": "4892105000064365484-1",
+   "so": "JOBORDER-04789",
+   "job_no": null,
+   "division": "RWU",
+   "division_source": "header",
+   "division_conflict": false,
+   "order_type": "ex_stock",
+   "customer": "Standard Holdings (Pvt) Ltd",
+   "item": "Chefs Choice Cling Film PE 45CMX300M (21)",
+   "unit": "rl",
+   "qty_ordered": 100,
+   "qty_cancelled": 0,
+   "qty_effective": 100,
+   "qty_bundled": 0,
+   "qty_produced": 0,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2025-09-10",
+   "due_date": null,
+   "strip": [
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2025-09-10T08:18:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "not_detected",
+     "at": null
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [
+    "no_job_no"
+   ],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "item",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "strip.at"
+   ]
+  },
+  {
+   "id": "4892105000104638512-1",
+   "so": "JOBORDER-07144",
+   "job_no": "SHP4517",
+   "division": "SHPS",
+   "division_source": "tag",
+   "division_conflict": false,
+   "order_type": "customised",
+   "customer": "Steak house",
+   "item": "CP-12Oz Plastic Cup (350ml) (Steak house)",
+   "unit": "pcs",
+   "qty_ordered": 1000,
+   "qty_cancelled": 0,
+   "qty_effective": 1000,
+   "qty_bundled": 1000,
+   "qty_produced": 1000,
+   "qty_packed": 1000,
+   "qty_shipped": 1000,
+   "qty_invoiced": 995,
+   "created": "2026-04-20",
+   "due_date": "2026-05-04",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-04-20T08:35:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-11T09:45:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "done",
+     "at": "2026-09-13T10:12:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "done",
+     "at": "2026-09-13T11:35:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "done",
+     "at": "2026-09-13T13:58:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "partial",
+     "at": "2026-09-13T15:33:00+05:30"
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000109058340-1",
+   "so": "JOBORDER-07311",
+   "job_no": "SHP4566",
+   "division": "SHPS",
+   "division_source": "tag",
+   "division_conflict": false,
+   "order_type": "customised",
+   "customer": "One Ocean",
+   "item": "CP-Paper Cup 300ml White (One Ocean)",
+   "unit": "pcs",
+   "qty_ordered": 1000,
+   "qty_cancelled": 0,
+   "qty_effective": 1000,
+   "qty_bundled": 1000,
+   "qty_produced": 1000,
+   "qty_packed": 1000,
+   "qty_shipped": 1000,
+   "qty_invoiced": 991,
+   "created": "2026-05-07",
+   "due_date": "2026-05-21",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-05-07T08:03:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-11T09:25:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "done",
+     "at": "2026-09-13T10:56:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "done",
+     "at": "2026-09-13T11:18:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "done",
+     "at": "2026-09-13T13:17:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "partial",
+     "at": "2026-09-13T15:43:00+05:30"
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000109864246-1",
+   "so": "JOBORDER-07499",
+   "job_no": "SHP4618",
+   "division": "SHPS",
+   "division_source": "tag",
+   "division_conflict": false,
+   "order_type": "customised",
+   "customer": "Radisson",
+   "item": "CP-Non-Woven White Laundry Bag with Rope 57cm x 45cm (75gsm) (Radisson)",
+   "unit": "pcs",
+   "qty_ordered": 1000,
+   "qty_cancelled": 0,
+   "qty_effective": 1000,
+   "qty_bundled": 1000,
+   "qty_produced": 1000,
+   "qty_packed": 617,
+   "qty_shipped": 617,
+   "qty_invoiced": 617,
+   "created": "2026-05-28",
+   "due_date": "2026-06-11",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-05-28T08:06:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-05T09:55:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-07T10:29:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-07T11:14:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "partial",
+     "at": "2026-09-07T13:27:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "partial",
+     "at": "2026-09-08T15:12:00+05:30"
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000111700745-1",
+   "so": "JOBORDER-08115",
+   "job_no": "SHP4766",
+   "division": "SHPS",
+   "division_source": "tag",
+   "division_conflict": false,
+   "order_type": "customised",
+   "customer": "Rose Oud",
+   "item": "PRINTSERV-Pizza Box 30 x 30 x 4cm (12 inch) With Print (Rose Oud)",
+   "unit": "box",
+   "qty_ordered": 1000,
+   "qty_cancelled": 0,
+   "qty_effective": 1000,
+   "qty_bundled": 1000,
+   "qty_produced": 1000,
+   "qty_packed": 850,
+   "qty_shipped": 850,
+   "qty_invoiced": 850,
+   "created": "2026-08-03",
+   "due_date": "2026-08-17",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-08-03T08:16:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-04T09:29:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-06T10:45:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-06T11:02:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "partial",
+     "at": "2026-09-06T13:25:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "partial",
+     "at": "2026-09-07T15:42:00+05:30"
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000111958239-1",
+   "so": "JOBORDER-08215",
+   "job_no": "SHP4791",
+   "division": "SHPS",
+   "division_source": "tag",
+   "division_conflict": false,
+   "order_type": "customised",
+   "customer": "RADH",
+   "item": "PRINTSERV-Non-Woven White Laundry Bag with Rope 57cm x 45cm (75gsm) With Print (Radh)",
+   "unit": "pcs",
+   "qty_ordered": 500,
+   "qty_cancelled": 0,
+   "qty_effective": 500,
+   "qty_bundled": 500,
+   "qty_produced": 500,
+   "qty_packed": 300,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-08-10",
+   "due_date": "2026-08-24",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-08-10T08:54:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-07T09:58:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-09T10:28:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-09T11:00:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [
+    {
+     "code": "shipment_missing",
+     "stage_id": 8,
+     "since": "2026-09-14"
+    }
+   ],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_ordered",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_invoiced",
+    "qty_packed",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000111987230-1",
+   "so": "JOBORDER-08218",
+   "job_no": "SHP4796",
+   "division": "SHPS",
+   "division_source": "tag",
+   "division_conflict": false,
+   "order_type": "customised",
+   "customer": "Mandalas Cafe",
+   "item": "PRINTSERV-Kraft Box 150x100x90mm With Window With Print (Mandalas Cafe)",
+   "unit": "pcs",
+   "qty_ordered": 1000,
+   "qty_cancelled": 0,
+   "qty_effective": 1000,
+   "qty_bundled": 1000,
+   "qty_produced": 1000,
+   "qty_packed": 392,
+   "qty_shipped": 392,
+   "qty_invoiced": 392,
+   "created": "2026-08-11",
+   "due_date": "2026-08-25",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-08-11T08:12:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-05T09:33:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-07T10:37:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-07T11:08:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "partial",
+     "at": "2026-09-07T13:39:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "partial",
+     "at": "2026-09-08T15:17:00+05:30"
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000112133009-1",
+   "so": "JOBORDER-08262",
+   "job_no": "SHP4805",
+   "division": "SHPS",
+   "division_source": "tag",
+   "division_conflict": false,
+   "order_type": "customised",
+   "customer": "Pizza Goddess",
+   "item": "PRINTSERV-Pizza Box 35 x 35 x 4cm (14 inch) With Print (Pizza Goddess)",
+   "unit": "pcs",
+   "qty_ordered": 300,
+   "qty_cancelled": 0,
+   "qty_effective": 300,
+   "qty_bundled": 300,
+   "qty_produced": 300,
+   "qty_packed": 0,
+   "qty_shipped": 0,
+   "qty_invoiced": 0,
+   "created": "2026-08-15",
+   "due_date": "2026-08-29",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-08-15T08:10:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-10T09:38:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "done",
+     "at": "2026-09-10T10:26:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 8,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [
+    {
+     "code": "package_missing",
+     "stage_id": 7,
+     "since": "2026-09-14"
+    }
+   ],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_ordered",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_invoiced",
+    "qty_packed",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000112204693-1",
+   "so": "JOBORDER-08305",
+   "job_no": "SHP4809-SOUTH",
+   "division": "SHPS",
+   "division_source": "tag",
+   "division_conflict": false,
+   "order_type": "customised",
+   "customer": "Milky wave",
+   "item": "PRINTSERV-Pizza Box 30 x 30 x 4cm (12 inch) With Print (Milky wave)",
+   "unit": "box",
+   "qty_ordered": 300,
+   "qty_cancelled": 0,
+   "qty_effective": 300,
+   "qty_bundled": 300,
+   "qty_produced": 300,
+   "qty_packed": 180,
+   "qty_shipped": 180,
+   "qty_invoiced": 0,
+   "created": "2026-08-17",
+   "due_date": "2026-08-31",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-08-17T08:23:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-07T09:08:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-09T10:15:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-09T11:19:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "partial",
+     "at": "2026-09-10T13:31:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [
+    {
+     "code": "invoice_missing",
+     "stage_id": 10,
+     "since": "2026-09-14"
+    }
+   ],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_ordered",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_invoiced",
+    "qty_packed",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000112224592-1",
+   "so": "JOBORDER-08318",
+   "job_no": "SHP4823",
+   "division": "SHPS",
+   "division_source": "tag",
+   "division_conflict": false,
+   "order_type": "customised",
+   "customer": "Kebab",
+   "item": "PRINTSERV-Pizza Box 30 x 30 x 4cm (12 inch) With Print (Kebab)",
+   "unit": "box",
+   "qty_ordered": 200,
+   "qty_cancelled": 0,
+   "qty_effective": 200,
+   "qty_bundled": 200,
+   "qty_produced": 200,
+   "qty_packed": 200,
+   "qty_shipped": 200,
+   "qty_invoiced": 0,
+   "created": "2026-08-18",
+   "due_date": "2026-09-01",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-08-18T08:14:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-11T09:23:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "done",
+     "at": "2026-09-13T10:07:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "done",
+     "at": "2026-09-13T11:20:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "done",
+     "at": "2026-09-14T13:09:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_ordered",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_invoiced",
+    "qty_packed",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000112799041-1",
+   "so": "JOBORDER-08489",
+   "job_no": "SHP4833",
+   "division": "SHPS",
+   "division_source": "tag",
+   "division_conflict": false,
+   "order_type": "customised",
+   "customer": "MY PIZZA",
+   "item": "PRINTSERV-Pizza Box 25x25x4cm (10 inch) With Print (My Pizza)",
+   "unit": "box",
+   "qty_ordered": 250,
+   "qty_cancelled": 0,
+   "qty_effective": 250,
+   "qty_bundled": 250,
+   "qty_produced": 250,
+   "qty_packed": 100,
+   "qty_shipped": 100,
+   "qty_invoiced": 100,
+   "created": "2026-08-24",
+   "due_date": "2026-09-07",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-08-24T08:44:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-07T09:26:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-09T10:11:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-09T11:34:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "partial",
+     "at": "2026-09-09T13:46:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "partial",
+     "at": "2026-09-10T15:38:00+05:30"
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000112829139-1",
+   "so": "JOBORDER-08507",
+   "job_no": "SHP4857",
+   "division": "SHPS",
+   "division_source": "tag",
+   "division_conflict": false,
+   "order_type": "customised",
+   "customer": "Jetwing Beach",
+   "item": "PRINTSERV-Kraft Paper Pouch Bag W/window 12X20cm With Print (Jetwing Beach)",
+   "unit": "pcs",
+   "qty_ordered": 5000,
+   "qty_cancelled": 0,
+   "qty_effective": 5000,
+   "qty_bundled": 5000,
+   "qty_produced": 5000,
+   "qty_packed": 3200,
+   "qty_shipped": 3200,
+   "qty_invoiced": 3200,
+   "created": "2026-09-01",
+   "due_date": "2026-09-15",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-01T08:04:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-06T09:36:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "partial",
+     "at": "2026-09-08T10:18:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "partial",
+     "at": "2026-09-08T11:12:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "partial",
+     "at": "2026-09-08T13:01:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "partial",
+     "at": "2026-09-09T15:17:00+05:30"
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "checking",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000112931200-1",
+   "so": "JOBORDER-08544",
+   "job_no": "SHP4874",
+   "division": "SHPS",
+   "division_source": "tag",
+   "division_conflict": false,
+   "order_type": "customised",
+   "customer": "Pedlars Corner Cafe",
+   "item": "PRINTSERV-Kraft Paper Bag (L) 300x275x160mm With Print (Pedlars Corner Cafe)",
+   "unit": "pcs",
+   "qty_ordered": 300,
+   "qty_cancelled": 0,
+   "qty_effective": 300,
+   "qty_bundled": 300,
+   "qty_produced": 300,
+   "qty_packed": 300,
+   "qty_shipped": 300,
+   "qty_invoiced": 0,
+   "created": "2026-09-03",
+   "due_date": "2026-09-21",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-03T08:41:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-11T09:40:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "done",
+     "at": "2026-09-13T10:24:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "done",
+     "at": "2026-09-13T11:12:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "done",
+     "at": "2026-09-14T13:17:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "current",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  },
+  {
+   "id": "4892105000112931577-1",
+   "so": "JOBORDER-08554",
+   "job_no": "SHP4877",
+   "division": "SHPS",
+   "division_source": "tag",
+   "division_conflict": false,
+   "order_type": "customised",
+   "customer": "DAAL PIZZA",
+   "item": "PRINTSERV-Pizza Box 28 x 28 x 4cm (11 inch) With Print (Daal Pizza)",
+   "unit": "box",
+   "qty_ordered": 150,
+   "qty_cancelled": 0,
+   "qty_effective": 150,
+   "qty_bundled": 150,
+   "qty_produced": 150,
+   "qty_packed": 150,
+   "qty_shipped": 150,
+   "qty_invoiced": 0,
+   "created": "2026-09-10",
+   "due_date": "2026-09-26",
+   "strip": [
+    {
+     "stage_id": 1,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 2,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 3,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 4,
+     "state": "done",
+     "at": "2026-09-10T08:48:00+05:30"
+    },
+    {
+     "stage_id": 5,
+     "state": "detected",
+     "at": "2026-09-10T09:27:00+05:30"
+    },
+    {
+     "stage_id": 6,
+     "state": "done",
+     "at": "2026-09-10T10:27:00+05:30"
+    },
+    {
+     "stage_id": 7,
+     "state": "done",
+     "at": "2026-09-10T11:25:00+05:30"
+    },
+    {
+     "stage_id": 8,
+     "state": "done",
+     "at": "2026-09-11T13:59:00+05:30"
+    },
+    {
+     "stage_id": 9,
+     "state": "not_tracked",
+     "at": null
+    },
+    {
+     "stage_id": 10,
+     "state": "not_done",
+     "at": null
+    },
+    {
+     "stage_id": 11,
+     "state": "not_tracked",
+     "at": null
+    }
+   ],
+   "missing": [],
+   "flag_status": "checking",
+   "unassigned_reasons": [],
+   "real_fields": [
+    "created",
+    "customer",
+    "division",
+    "division_conflict",
+    "division_source",
+    "due_date",
+    "item",
+    "job_no",
+    "order_type",
+    "qty_cancelled",
+    "qty_effective",
+    "qty_invoiced",
+    "qty_ordered",
+    "qty_packed",
+    "so",
+    "unit"
+   ],
+   "demo_fields": [
+    "flag_status",
+    "qty_bundled",
+    "qty_produced",
+    "qty_shipped",
+    "strip.at",
+    "strip.pick_list"
+   ]
+  }
+ ]
+}

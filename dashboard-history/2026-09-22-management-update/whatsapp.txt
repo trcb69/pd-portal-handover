@@ -1,0 +1,11 @@
+*Update: SmartPack production dashboard + SH stock work* (22 Sep)
+This update is overdue. Here is where things stand.
+
+*1. SmartPack production dashboard* (requested by Mr. Samitha): the base system is built and has passed independent code, security and database reviews (143 automated checks). It is ready for a private go-live. With the COO's go-ahead, I'm continuing and will take Mr. Samitha's advice on the production side. First I'll show Mr. Samitha and the managers the working demo on real orders. Then I'll release it in small steps on the office PCs we already have: (1) the order portal, (2) managers see their jobs, (3) where each job file is, (4) why jobs are stuck, (5) Mr. Samitha's view. After 4 weeks of real results I'll ask for tablets, and only then does the job file go digital on the floor.
+*2. Key-customer stock (my initiative, for Abdullah)*: on hold since 20 Sep. It will restart with stock read straight from Zoho, so nobody types stock twice.
+*3. SH stock data + procedure (my initiative, for Rizwan's department)*: about half done. 400,000+ records pulled from both Zoho accounts and a stock procedure drafted. Next: confirm 6 steps with Rizwan, Abdullah and Ilham.
+
+*What I need from others:*
+a) QA: can the quality forms be signed off digitally?
+b) Rizwan, Abdullah and Ilham: 30 minutes to confirm the stock procedure
+The brief with the flowcharts is attached. From now on I'll send a short update every week.

@@ -1,0 +1,41 @@
+order_type,manufacturing_division,order_year,so_with_shipment,first_shipment_median_d,first_shipment_p80_d,same_day_pct,within_3d_pct
+Customized Order,ALL,2024,1497,0,16.0,68.2,69.9
+Customized Order,ALL,2025,2370,8.0,21.0,16.5,30.8
+Customized Order,ALL,2026,1344,18.0,29.0,0.8,5.7
+Customized Order,ALL,ALL,5211,9,23.0,27.3,35.5
+Customized Order,Customized Packing Unit (CPU),2026,44,7.0,19.0,0.0,20.5
+Customized Order,Customized Packing Unit (CPU),ALL,44,7.0,19.0,0.0,20.5
+Customized Order,Digital Printing Unit (DPU),2024,20,0.0,0.0,100.0,100.0
+Customized Order,Digital Printing Unit (DPU),ALL,22,0.0,0.0,95.5,95.5
+Customized Order,MOBA Punching Unit,2026,63,20,25.0,0.0,0.0
+Customized Order,MOBA Punching Unit,ALL,80,19.5,31.0,8.8,8.8
+Customized Order,Offset Printing Division (OPD),2024,787,8,25.0,41.3,44.0
+Customized Order,Offset Printing Division (OPD),2025,1164,12.0,24.0,7.9,20.9
+Customized Order,Offset Printing Division (OPD),2026,549,21,31.0,1.6,5.8
+Customized Order,Offset Printing Division (OPD),ALL,2500,14.0,27.0,17.0,24.8
+Customized Order,Paper Cup Unit (PCU),2024,24,0.0,0.0,100.0,100.0
+Customized Order,Paper Cup Unit (PCU),2025,190,11.0,23.0,2.1,10.0
+Customized Order,Paper Cup Unit (PCU),2026,149,21,26.4,0.0,0.7
+Customized Order,Paper Cup Unit (PCU),ALL,363,15,24.0,7.7,12.1
+Customized Order,Screen Printing Division (SHPS),2024,657,0,0.0,97.9,98.5
+Customized Order,Screen Printing Division (SHPS),2025,995,5,16.0,29.4,46.3
+Customized Order,Screen Printing Division (SHPS),2026,536,14.0,25.0,0.4,6.2
+Customized Order,Screen Printing Division (SHPS),ALL,2188,3.0,16.0,42.9,52.1
+Ex Stock,ALL,2024,604,0.0,8.0,61.1,75.2
+Ex Stock,ALL,2025,611,1,9.0,34.4,69.4
+Ex Stock,ALL,2026,354,1.0,2.0,47.7,90.4
+Ex Stock,ALL,ALL,1569,1,5.0,47.7,76.4
+Ex Stock,Food Product Processing (FPP),ALL,23,1,9.2,21.7,60.9
+Ex Stock,Offset Printing Division (OPD),2024,427,0,23.0,67.0,70.3
+Ex Stock,Offset Printing Division (OPD),2025,222,8.0,21.8,17.6,34.7
+Ex Stock,Offset Printing Division (OPD),ALL,649,0,22.4,50.1,58.1
+Ex Stock,Paper Cup Lid Unit,2025,51,1,2.0,43.1,94.1
+Ex Stock,Paper Cup Lid Unit,ALL,53,1,2.0,45.3,94.3
+Ex Stock,Paper Straw Unit (PSU),2024,88,1.0,3.0,37.5,81.8
+Ex Stock,Paper Straw Unit (PSU),2025,210,1.0,2.0,45.2,92.9
+Ex Stock,Paper Straw Unit (PSU),2026,199,1,2.0,33.2,84.9
+Ex Stock,Paper Straw Unit (PSU),ALL,497,1,2.0,39.0,87.7
+Ex Stock,Rewinding Unit (RWU),2024,89,0,1.0,56.2,92.1
+Ex Stock,Rewinding Unit (RWU),2025,95,0,1.0,52.6,96.8
+Ex Stock,Rewinding Unit (RWU),2026,145,0,1.0,68.3,100.0
+Ex Stock,Rewinding Unit (RWU),ALL,329,0,1.0,60.5,97.0
